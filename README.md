@@ -51,12 +51,12 @@ Then extract the folder somewhere in your files.
 
 ** If any words used in the commit log used before the content of the message are unfamilar refer to this key **
 
-feat: A feature that has been added.
-fix: Bug fix.
-docs: Changes relating to documentation.
-style: Formatting, missing code, white space (This only applys to code not CSS for example.)
-refactor: Maintainabilty or a functions method has been altered.
-dep: Dependancies added to the project.
+- feat: A feature that has been added.
+- fix: Bug fix.
+- docs: Changes relating to documentation.
+- style: Formatting, missing code, white space (This doesnt apply to CSS.)
+- refactor: Maintainabilty or a functions method has been altered.
+- dep: Dependancies added to the project.
 
 ## Roadmap
 
