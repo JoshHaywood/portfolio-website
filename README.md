@@ -60,7 +60,7 @@ Then extract the folder somewhere in your files.
 
 - Construct wireframes.
 - Document theming and colour schemes.
-- Create navigation diagram.
+- Create site map diagram.
 - Reference any external assets.
 
 ### Pre Build Creation
