@@ -1,8 +1,64 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* Roboto font import */
+
+:root { /* Project root */
+  font-size: 16px; /* Fontsize specification */
+  font-family: 'Roboto', sans-serif; /* Font family */
+  --text-primary: white; /* Primary text colour */
+  --text-secondary: #4c6bc1; /* Secondary text colour */
+  --bg-primary: #101316; /* Primary background colour */
+  --bg-secondary: #181a1d; /* Secondary background colour */
 }
 
-a {
-  color: #00B7FF;
+body { /* Webpage body */
+  color: black; /* Element colour */
+  background-color: white; /* Background colour */
+  margin: 0; /* Margin */
+  padding: 0; /* Padding */
+}
+
+body::-webkit-scrollbar { /* Scrollbar */
+  width: 0.25rem; /* Width */
+}
+
+body::-webkit-scrollbar-track { /* Scrollbar background */
+  background: #181a1d; /* Background colour */
+}
+
+body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
+  background: #4c6bc1; /* Background colour */
+}
+
+main { /* Main content of body */
+  padding-top: 5rem;
+}
+
+.navbar { /* Navbar class assigned in 'layout.hbs' */
+  height: 5rem; /* Height */
+  min-width: 100vh; /* Minimum width 100% of the viewport */
+  min-width: -webkit-fill-available; /* Prevents error with line above not covering viewport area completely on some browsers */ 
+  position: fixed; /* Fixes position against scrolling */
+  background-color: var(--bg-primary); /* Sets background colour as bg primary varibale */
+}
+
+.navbar-nav {
+  list-style: none; /* Removes bullet points from list items */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+  display: flex; /* Creates flexbox */
+  flex-direction: row; /* Flex child elements in row */
+  align-items: center; /* Align child element center */
+}
+
+.logo{
+  height: auto; /* To maintain aspect ratio */
+  width: 25%; /* Small width to fit within navbar */
+}
+
+.nav-item:first-child {
+  margin-left: 0; /* Removes left margin */
+  margin-right: auto; /* Moves item as far right as possible */
+}
+
+.nav-item {
+  margin: auto; /* Spaces items according to margins */
 }
