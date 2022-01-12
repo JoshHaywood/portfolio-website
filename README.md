@@ -12,6 +12,34 @@ The main target features of the project are:
 - Admin log in system for to add new posts without having to open the project in an IDE.
 - SQLite3 database used for storing the projects in the format: 'Name', 'Description', 'Image', 'Link'. Which using the log in system the admin can edit or delete.
 
+## Repository Layout
+
+### Main
+
+This branch contains:
+
+- Project builds.
+- License.
+- Readme file.
+
+### Application
+
+This branch contains:
+
+- All application related source code both front-end and back-end.
+
+### Documentation
+
+This branch contains:
+
+- Wireframes
+- Site theme
+- Site font
+- Referencing for assets
+- Development log
+- User studys
+- Performance metrics
+
 ## Installation
 
 ### Prerequisites
@@ -57,33 +85,5 @@ Then extract the folder somewhere in your files.
 - style: Formatting, missing code, white space (This doesnt apply to CSS.)
 - refactor: Maintainabilty or a functions method has been altered.
 - dep: Dependancies added to the project.
-
-## Roadmap
-
-** Specific dates cannot be given for the roadmap due to this being a personal and none time dependant project **
-
-### Initial Creation
-
-- Create repo with ignore, license and readme files.
-- Update readme to include all initial information required.
-
-### Documentation
-
-- Construct wireframes.
-- Document theming and colour schemes.
-- Create site map diagram.
-- Reference any external assets.
-
-### Pre Build Creation
-
-- Apply previously mentioned documentation to construct first build of project.
-- User test first build.
-- Apply data from user test.
-- Use metric tools and document.
-- Apply metric data to build.
-
-### Release Build 1.0.0
-
-- Release first build under '1.0.0'.
 
 
