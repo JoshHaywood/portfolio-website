@@ -9,9 +9,12 @@
   --bg-secondary: #181a1d; /* Secondary background colour */
 }
 
+* {
+  box-sizing: border-box; /* Incase browsers do not use border box */
+}
+
 body { /* Webpage body */
-  color: black; /* Element colour */
-  background-color: white; /* Background colour */
+  background-color: var(--bg-primary);
   margin: 0; /* Margin */
   padding: 0; /* Padding */
 }
@@ -29,36 +32,102 @@ body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
 }
 
 main { /* Main content of body */
-  padding-top: 5rem;
+  color: var(--text-primary);
 }
+
+/*#region Navigation Bar*/
 
 .navbar { /* Navbar class assigned in 'layout.hbs' */
-  height: 5rem; /* Height */
-  min-width: 100vh; /* Minimum width 100% of the viewport */
-  min-width: -webkit-fill-available; /* Prevents error with line above not covering viewport area completely on some browsers */ 
-  position: fixed; /* Fixes position against scrolling */
-  background-color: var(--bg-primary); /* Sets background colour as bg primary varibale */
-}
-
-.navbar-nav {
-  list-style: none; /* Removes bullet points from list items */
-  padding: 0; /* Removes padding */
-  margin: 0; /* Removes margin */
+  justify-content: space-between; /* Ensures navigation bar covers entire screen */
+  position: relative; /* Elements space relatively towards navigation bar */
+  background-color: var(--bg-secondary); /* Sets background colour as bg primary varibale */
   display: flex; /* Creates flexbox */
-  flex-direction: row; /* Flex child elements in row */
-  align-items: center; /* Align child element center */
+  justify-content: space-between; /* Moves flex items to opposite ends of the container */
+  align-items: center; /* Align child elements to center */
 }
 
-.logo{
+.navbar img { /* Image used in navbar */
+  width: 250px; /* Image width */
+  height: 100px; /* Image height */
+}
+
+.logo{ /* Logo image assigned in 'layout.hbs' */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
   height: auto; /* To maintain aspect ratio */
-  width: 25%; /* Small width to fit within navbar */
 }
 
-.nav-item:first-child {
-  margin-left: 0; /* Removes left margin */
-  margin-right: auto; /* Moves item as far right as possible */
+.navbar-links { /* Links used in the navbar */
+  height: 100%;
 }
 
-.nav-item {
-  margin: auto; /* Spaces items according to margins */
+.nav-links ul { /* Navbar child elements */
+  margin: 0; /* Removes margin */
+  padding: 0; /* Removes padding */
+  display: flex; /* Creates flexbox to align links in a row rather than column */
 }
+
+.nav-links li { /* Individual navbar element */
+  list-style: none; /* Removes bullet points from list items */
+}
+
+.nav-links li a { /* Navbar element's anchor text */
+  font-size: 1.5rem;
+  text-decoration: none; /* Removes underline */
+  color: white; /* Text colour */
+  padding: 1rem; /* Padding between elements */
+  display: block; /* Prevents content on its left or right unless forced */
+}
+
+.nav-links li a:hover { /* Navbar element's anchor text on hover */
+  color: #4c6bc1; /* Text colour */
+  background-color: #282b30; /* Background colour */
+}
+
+.nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
+  position: absolute; /* To ensure menu is always in the top right of the screen */
+  top: 1.5rem; /* Position away from the top */
+  right: 1rem; /* Position away from the right */
+  display: none; /* Sets display to none by default */
+  flex-direction: column; /* Sets flex direction to correct columns for the bars */
+  justify-content: space-between; /* To ensure that the bars take up the maximum space available */
+  height: 21px; /* Menu height */
+  width: 30px; /* Menu width */
+}
+
+.nav-toggle .bar { /* Bars used in the hamburger menu */
+  height: 3px; /* Bar height */
+  width: 100%; /* Ensures bar width is always the maximum it can be */
+  background-color: white; /* Background colour */
+  border-radius: 10px; /* Round bar edges */
+}
+
+@media (max-width: 800px) {
+  .nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
+    display: flex; /* To show the menu when at this screen size */
+  }
+
+  .nav-links { /* Links used in the navbar */
+    display: flex; /* Hides links when at this screen size */
+    width: 100%; /* Ensures element covers width of screen */
+  }
+
+  .navbar { /* Navbar class assigned in 'layout.hbs' */
+    flex-direction: column; /* Alters flex direction to list items in a column */
+    align-items: flex-start; /* Positions elements at start of flex */
+  }
+
+  .nav-links ul { /* Navbar child elements */
+    width: 100%; /* Ensures element covers width of screen */
+    flex-direction: column; /* Alters flex direction of child elements in the nav bar */
+  }
+
+  .nav-links li { /* Individual navbar element */
+    text-align: center; /* Algins text in center of element */
+  }
+
+  .nav-links.active { /* When links are active */
+    display: flex;  /* Display set to flex */
+  }
+}
+
+/*#endregion*/
