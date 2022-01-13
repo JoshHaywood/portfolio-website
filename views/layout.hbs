@@ -1,59 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Language English -->
 	<head>   
 		<!-- #region Preamble-->
 
 		<title>{{title}}</title>		
 
-		<meta charset="utf-8"/>
-		<meta name="description" content="Portfolio website to showcase proejcts">
-		<meta name="author" content="Josh Haywood">
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<link rel='stylesheet' href='/stylesheets/style.css'/>
+		<meta charset="utf-8"/> <!-- Charset -->
+		<meta name="description" content="Portfolio website to showcase projects"> <!-- Meta description -->
+		<meta name="author" content="Josh Haywood"> <!-- Author -->
+		<meta name="viewport" content="width=device-width, initial-scale=1"/> <!-- Viewport -->
+		<link rel='stylesheet' href='/stylesheets/style.css'/> <!-- style.css stylesheet -->
+		<script type="text/javascript" src="/javascripts/script.js"></script> <!-- script.js javascript -->
 
 		<!-- #endregion -->
+
 	</head>
 
 	<body>
-    <header>
-    	<!-- #region Header -->
+		<header>
+			<!-- #region Header -->
 
-		<!-- Navbar -->
-    	<nav class="navbar"> 
-			<img class="logo" alt="logo" src="images/logo-stock.png"> <!-- Logo image -->
+			<!-- Navbar -->
+			<nav class="navbar"> 
+				<img class="logo" alt="logo" src="images/logo-stock.png"> <!-- Logo image -->
 
-			<!-- Navbar hamburger menu -->
-			<a href="#" class="nav-toggle"> 
-				<span class="bar"></span> <!-- First line used in menu -->
-				<span class="bar"></span> <!-- Second line used in menu -->
-				<span class="bar"></span> <!-- Third line used in menu -->
-			</a>
+				<!-- Navbar hamburger menu -->
+				<a href="#" onclick="ToggleNavLinks()" class="nav-toggle"> <!-- Calls ToggleNavLinks function on click -->
+					<span class="bar"></span> <!-- First line used in menu -->
+					<span class="bar"></span> <!-- Second line used in menu -->
+					<span class="bar"></span> <!-- Third line used in menu -->
+				</a>
 
-			<!-- Links used in the navbar -->
-			<div class="nav-links">
-				<ul>
-					<li> <!-- Each item in the bar -->
-						<a href="#">Home</a> <!-- Link to home page -->
-					</li>
-					<li> <!-- Each item in the bar -->
-						<a href="#">Projects</a> <!-- Link to projects page -->
-					</li>
-					<li> <!-- Each item in the bar -->
-						<a href="#">Contact</a> <!-- Link to contact page -->
-					</li>
-				</ul>
-			</div>
-		</nav>
+				<!-- Links used in the navbar -->
+				<div class="nav-links" id="navLinks"> <!-- ID set navLinks for ToggleNavLinks function -->
+					<ul>
+						<li> <!-- Each item in the bar -->
+							<a href="#">Home</a> <!-- Link to home page -->
+						</li>
+						<li> <!-- Each item in the bar -->
+							<a href="#">Projects</a> <!-- Link to projects page -->
+						</li>
+						<li> <!-- Each item in the bar -->
+							<a href="#">Contact</a> <!-- Link to contact page -->
+						</li>
+					</ul>
+				</div>
+			</nav>
 
-    	<!-- #endregion -->
-    </header>
-    
-	<!-- #region Body -->
-	<div>
-		{{{body}}} 
-	</div>
-    
-	<!-- #endregion -->
+			<!-- #endregion -->
+		</header>
+		
+		<!-- #region Body -->
+		<div>
+			{{{body}}} 
+		</div>
+		
+		<!-- #endregion -->
 
 	</body>
 </html>

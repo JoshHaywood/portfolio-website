@@ -107,7 +107,7 @@ main { /* Main content of body */
   }
 
   .nav-links { /* Links used in the navbar */
-    display: flex; /* Hides links when at this screen size */
+    display: none; /* Hides links when at this screen size */
     width: 100%; /* Ensures element covers width of screen */
   }
 
@@ -129,5 +129,6 @@ main { /* Main content of body */
     display: flex;  /* Display set to flex */
   }
 }
+
 
 /*#endregion*/
