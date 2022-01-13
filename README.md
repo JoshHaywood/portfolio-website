@@ -4,6 +4,19 @@ This project is a portfolio website to showcase my previous, current and future 
 The project features a website to present these projects.
 The project is created using Express.js back-end and a Handlebars layout for a HTML front-end.
 
+## Contents
+
+- [Main Features](#main-features)
+- [Repository Layout](#repository-layout)
+  - [Main](#main)
+  - [Application](#application)
+  - [Documentation](#documentation)
+- [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+  - [User Guide](#user-guide)
+- [Commit Message Key](#commit-message-key)
+
+
 ## Main Features
 
 The main target features of the project are: 
@@ -37,6 +50,7 @@ This branch contains:
 - Site font
 - Referencing for assets
 - Development log
+- Application Documentation
 - User studys
 - Performance metrics
 
@@ -85,5 +99,6 @@ Then extract the folder somewhere in your files.
 - style: Formatting, missing code, white space (This doesnt apply to CSS.)
 - refactor: Maintainabilty or a functions method has been altered.
 - dep: Dependancies added to the project.
+- del: Deleted or removed unused code, files or other assets.
 
 
