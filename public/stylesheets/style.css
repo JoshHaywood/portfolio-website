@@ -38,8 +38,8 @@ main { /* Main content of body */
 /*#region Navigation Bar*/
 
 .navbar { /* Navbar class assigned in 'layout.hbs' */
-  justify-content: space-between; /* Ensures navigation bar covers entire screen */
   position: relative; /* Elements space relatively towards navigation bar */
+  padding: 1rem;
   background-color: var(--bg-secondary); /* Sets background colour as bg primary varibale */
   display: flex; /* Creates flexbox */
   justify-content: space-between; /* Moves flex items to opposite ends of the container */
@@ -47,50 +47,38 @@ main { /* Main content of body */
 }
 
 .navbar img { /* Image used in navbar */
-  width: 250px; /* Image width */
-  height: 100px; /* Image height */
+  height: 60px; /* Image height */
+  width: 260px; /* Image width */
 }
 
 .logo{ /* Logo image assigned in 'layout.hbs' */
+  height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
+}
+
+.navbar svg { /* SVG used in navigation bar */
+  position: absolute; /* To ensure menu is always in the top right of the screen */
+  top: 2.3rem; /* Position away from the top */
+  right: 2rem; /* Position away from the right */
+  height: 24px; /* Svg height */
+  width: 24px; /* Svg width */
+  color: white;
+}
+
+.theme-toggle { /* Theme toggle class assigned in 'layout.hbs' */
   max-width: 100%; /* Sets max width to prevent image upscaling */
   height: auto; /* To maintain aspect ratio */
 }
 
-.navbar-links { /* Links used in the navbar */
-  height: 100%;
-}
-
-.nav-links ul { /* Navbar child elements */
-  margin: 0; /* Removes margin */
-  padding: 0; /* Removes padding */
-  display: flex; /* Creates flexbox to align links in a row rather than column */
-}
-
-.nav-links li { /* Individual navbar element */
-  list-style: none; /* Removes bullet points from list items */
-}
-
-.nav-links li a { /* Navbar element's anchor text */
-  font-size: 1.5rem;
-  text-decoration: none; /* Removes underline */
-  color: white; /* Text colour */
-  padding: 1rem; /* Padding between elements */
-  display: block; /* Prevents content on its left or right unless forced */
-}
-
-.nav-links li a:hover { /* Navbar element's anchor text on hover */
-  color: #4c6bc1; /* Text colour */
-}
-
 .nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
   position: absolute; /* To ensure menu is always in the top right of the screen */
-  top: 1.5rem; /* Position away from the top */
+  top: 2.3rem; /* Position away from the top */
   right: 1rem; /* Position away from the right */
   display: none; /* Sets display to none by default */
   flex-direction: column; /* Sets flex direction to correct columns for the bars */
   justify-content: space-between; /* To ensure that the bars take up the maximum space available */
-  height: 21px; /* Menu height */
-  width: 30px; /* Menu width */
+  height: 22px; /* Menu height */
+  width: 22px; /* Menu width */
 }
 
 .nav-toggle:hover { /* Hamdburger menu on mouse hover */
@@ -104,19 +92,51 @@ main { /* Main content of body */
   border-radius: 10px; /* Round bar edges */
 }
 
+.navbar-links { /* Links used in the navbar */
+  height: 100%;
+}
+
+.nav-links ul { /* Navbar child elements */
+  margin: 0 3.5rem; /* Removes margin Y, margin x used to space away from theme toggler */
+  padding: 0; /* Removes padding */
+  display: flex; /* Creates flexbox to align links in a row rather than column */
+}
+
+.nav-links li { /* Individual navbar element */
+  list-style: none; /* Removes bullet points from list items */
+}
+
+.nav-links li a { /* Navbar element's anchor text */
+  font-size: 1.5rem; /* Sets font size */
+  text-decoration: none; /* Removes underline */
+  color: white; /* Text colour */
+  padding: 1rem; /* Padding between elements */
+  display: block; /* Prevents content on its left or right unless forced */
+}
+
+.nav-links li a:hover { /* Navbar element's anchor text on hover */
+  color: #4c6bc1; /* Text colour */
+}
+
 @media (max-width: 800px) {
+  .navbar { /* Navbar class assigned in 'layout.hbs' */
+    flex-direction: column; /* Alters flex direction to list items in a column */
+    align-items: flex-start; /* Positions elements at start of flex */
+  }
+
+  .navbar svg { /* SVG used in navigation bar */
+    right: 4rem; /* Position away from the right */
+    color: white;
+  }
+
   .nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
     display: flex; /* To show the menu when at this screen size */
   }
 
   .nav-links { /* Links used in the navbar */
     display: none; /* Hides links when at this screen size */
-    width: 100%; /* Ensures element covers width of screen */
-  }
-
-  .navbar { /* Navbar class assigned in 'layout.hbs' */
-    flex-direction: column; /* Alters flex direction to list items in a column */
-    align-items: flex-start; /* Positions elements at start of flex */
+    width: 100%;
+    padding-top: 0.3rem; /* Padding to move links away from top of navbar */
   }
 
   .nav-links ul { /* Navbar child elements */
@@ -125,7 +145,15 @@ main { /* Main content of body */
   }
 
   .nav-links li { /* Individual navbar element */
+    padding: 0.2rem 1rem; /* Padds elements so background hover works more effectively */
     text-align: center; /* Algins text in center of element */
+    
+  }
+
+  .nav-links li a:hover { /* Navbar element's anchor text on hover */
+    background-color: #2d3136; /* Background colour */
+    border-radius: 10px; /* Smooths border edges */
+    transition: all 0.5s ease-out;
   }
 
   .nav-links.active { /* When links are active */
