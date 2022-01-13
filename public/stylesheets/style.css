@@ -153,7 +153,7 @@ main { /* Main content of body */
   .nav-links li a:hover { /* Navbar element's anchor text on hover */
     background-color: #2d3136; /* Background colour */
     border-radius: 10px; /* Smooths border edges */
-    transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
   }
 
   .nav-links.active { /* When links are active */
