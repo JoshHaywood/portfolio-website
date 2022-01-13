@@ -80,7 +80,6 @@ main { /* Main content of body */
 
 .nav-links li a:hover { /* Navbar element's anchor text on hover */
   color: #4c6bc1; /* Text colour */
-  background-color: #282b30; /* Background colour */
 }
 
 .nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
@@ -92,6 +91,10 @@ main { /* Main content of body */
   justify-content: space-between; /* To ensure that the bars take up the maximum space available */
   height: 21px; /* Menu height */
   width: 30px; /* Menu width */
+}
+
+.nav-toggle:hover { /* Hamdburger menu on mouse hover */
+  cursor: pointer; /* Sets cursor type to pointer */
 }
 
 .nav-toggle .bar { /* Bars used in the hamburger menu */
