@@ -229,11 +229,18 @@ h1, a, p {
   height: 276px; /* Image height */
   width: 459px; /* Image width */
   align-items: center; /* Align image in center of space */
+  box-shadow: 20px -20px #181a1d; /* Box shadow behind image */
 }
 
 .portrait { /* Portrait image used in hero */
   height: auto; /* To maintain aspect ratio */
   width: 100%; /* Sets max width to prevent image upscaling */
+}
+
+@media (max-width: 1300px) { /* At max-width of 1300px */
+  .hero-image { /* Image used in hero */
+    box-shadow: none; /* Removes box shadow as it becomes larger than the image */
+  }
 }
 
 @media (max-width: 1000px) { /* At max-width of 1000px */
@@ -252,10 +259,11 @@ h1, a, p {
 }
 
 @media (max-width: 800px) { /* At max-width of 800px */
-  .hero-content {
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
+  .hero-content { /* Content section of hero */
+    flex-direction: column; /* Changes flex direction to column */
+    justify-content: center; /* Centers content vertically */
+    margin: auto; /* Centers content horizontally */
+    
   }
 
   .hero-text { /* Text section of hero */
