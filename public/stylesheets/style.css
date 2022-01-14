@@ -81,8 +81,8 @@ h1, a, p {
   width: 22px; /* Menu width */
 }
 
-.nav-toggle:hover .bar {
-  width: 28px;
+.nav-toggle:hover .bar { /* Navtoggle hover and bar */
+  width: 28px; /* To set the size of the x in the animation of the hamburger sign */
 }
 
 .nav-toggle:hover { /* Hamdburger menu on mouse hover */
@@ -141,7 +141,7 @@ h1, a, p {
   color: #4c6bc1; /* Text colour */
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px) { /* At max-width of 800px */
   .navbar { /* Navbar class assigned in 'layout.hbs' */
     flex-direction: column; /* Alters flex direction to list items in a column */
     align-items: flex-start; /* Positions elements at start of flex */
@@ -184,6 +184,12 @@ h1, a, p {
   }
 }
 
+@media (max-width: 370px) { /* At max-width of 370px */
+  .navbar img { /* Image used in navbar */
+    width: 200px; /* Altered width for small phone screens */
+  }
+}
+
 /*#endregion*/
 
 /*#region Hero */
@@ -212,22 +218,54 @@ h1, a, p {
 }
 
 .hero-text h1 { /* H1 of text section */
-  font-size: 3rem; /* Increased size of font */
+  font-size: 6vh; /* Increased size of font */
 }
 
 .hero-text p { /* P of text section */
-  font-size: 2rem; /* Increased size of font */
+  font-size: 3vh; /* Increased size of font */
 }
 
-.hero-image {
+.hero-image { /* Image used in hero */
   height: 276px; /* Image height */
   width: 459px; /* Image width */
   align-items: center; /* Align image in center of space */
 }
 
-.portrait {
+.portrait { /* Portrait image used in hero */
   height: auto; /* To maintain aspect ratio */
   width: 100%; /* Sets max width to prevent image upscaling */
+}
+
+@media (max-width: 1000px) { /* At max-width of 1000px */
+  .hero-text h1 { /* H1 of text section */
+    font-size: 4vh; /* Smaller font size for smaller screen size */
+  }
+  
+  .hero-text p { /* P of text section */
+    font-size: 2vh; /* Smaller font size for smaller screen size */
+  }
+
+  .hero-image { /* Image used in hero */
+    height: 138px; /* Decreased image height */
+    width: 229px; /* Decreased image width */
+  }
+}
+
+@media (max-width: 800px) { /* At max-width of 800px */
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .hero-text { /* Text section of hero */
+    order: 2; /* Re orders flex box to make text appear below image */
+    margin: 0 2rem; /* Prevents text from reaching page edge on smaller screen sizes */
+  }
+
+  .hero-image { /* Image used in hero */
+    order: 1; /* Orders image above text */
+  }
 }
 
 /*#endregion*/
