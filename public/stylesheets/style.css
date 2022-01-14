@@ -222,8 +222,7 @@ h1, a, p {
 .hero-image {
   height: 276px; /* Image height */
   width: 459px; /* Image width */
-  align-items: center;
-  flex-shrink: 0;
+  align-items: center; /* Align image in center of space */
 }
 
 .portrait {
