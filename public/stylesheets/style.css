@@ -31,10 +31,15 @@ body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
   background: #4c6bc1; /* Background colour */
 }
 
+h1, a, p {
+  color: var(--text-primary);
+}
+
 /*#region Navigation Bar*/
 
 .navbar { /* Navbar class assigned in 'layout.hbs' */
-  position: relative; /* Elements space relatively towards navigation bar */
+  position: fixed; /* Elements space relatively towards navigation bar */
+  width: 100%;
   padding: 1rem;
   display: flex; /* Creates flexbox */
   justify-content: space-between; /* Moves flex items to opposite ends of the container */
@@ -55,8 +60,8 @@ body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
   position: absolute; /* To ensure menu is always in the top right of the screen */
   top: 2.15rem; /* Position away from the top */
   right: 2rem; /* Position away from the right */
-  height: 24px; /* Svg height */
-  width: 24px; /* Svg width */
+  height: 24px; /* SVG height */
+  width: 24px; /* SVG width */
   color: white;
 }
 
@@ -179,5 +184,44 @@ body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
   }
 }
 
+/*#endregion*/
+
+/*#region Hero */
+
+.hero { /* Hero section */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/stock.png"); /* Stock image used with gradient to give a darker image colour */
+  height: 80vh; /* Height is 80% of the viewport */
+  background-position: center; /* Centers background image */
+  background-repeat: no-repeat; /* Prevents image from repeating */
+  background-size: cover; /* Covers entire space given */
+  position: relative; /* Relative to other elements */
+  z-index: -1; /* Prevents navbar from disappearing */
+}
+
+.hero-content { /* Content section of hero */
+  position: relative; /* Relative to other elements */
+  display: flex; /* Flex items into row */
+  top: 50%; /* Spaces content to middle of Y axis */
+  left: 50%; /* Spaces content to middle of X axis */
+  width: 100%; /* Covers 80% of space */
+  transform: translate(-50%, -50%);
+}
+
+.hero-text { /* Text section of hero */
+  flex-direction: column; /* Flexes heading and text to column instead of row */
+  margin: 1rem 8% 0 auto; /* Uses maximum of left margin, top to space to center of image, right to move text away from image */
+}
+
+.hero-text h1 { /* H1 of text section */
+  font-size: 3rem; /* Increased size of font */
+}
+
+.hero-text p { /* P of text section */
+  font-size: 2rem; /* Increased size of font */
+}
+
+.hero-image { /* Non background image used in hero */
+  margin-right: auto; /* Uses maximum space of right margin */
+}
 
 /*#endregion*/
