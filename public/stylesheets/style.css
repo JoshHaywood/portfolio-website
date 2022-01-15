@@ -234,15 +234,31 @@ h1, a, p {
 .hero-text svg { /* SVGs used in hero */
   height: 24px; /* SVG height */
   width: 24px; /* SVG width */
-  margin: 1rem;
-  color: white;
-  flex-direction: column;
+  margin: 1rem; /* To space SVGs apart */
+  color: white; /* Sets colour of SVG */
 }
 
-.hero-text svg:hover {
-  color: #181a1d;
+.hero-text svg:hover { /* Hero text's svg on hover */
+  color: #181a1d; /* Changes SVG colour */
   transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
 }
+
+.hero-text h1, .hero-text p, .github-icon, .envelope-icon { /* All items in hero section, listed individually as the parent element wouldnt apply the effect */
+  animation: fadeInUp 3s; /* Text fades and moves up */
+}
+
+@keyframes fadeInUp { /* Fade in and up animatio */
+  0% { /* Start of animation */
+     opacity:0; /* Elements are transparent */
+     transform:translate3d(0, 100%, 0); /* Translates elements up Y vector */
+  }
+  
+  100% { /* End of animation */
+     opacity:1; /* Elements become opaque */
+     transform:none; /* Stops transform */
+  }
+}
+
 
 .github-icon .envelope-icon { /* Theme toggle class assigned in 'layout.hbs' */
   max-width: 100%; /* Sets max width to prevent image upscaling */
