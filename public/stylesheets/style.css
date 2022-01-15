@@ -35,7 +35,7 @@ h1, a, p {
   color: var(--text-primary);
 }
 
-/*#region Navigation Bar*/
+/* #region Navigation Bar */
 
 .navbar { /* Navbar class assigned in 'layout.hbs' */
   position: fixed; /* Elements space relatively towards navigation bar */
@@ -197,13 +197,13 @@ h1, a, p {
   }
 }
 
-/*#endregion*/
+/* #endregion */
 
-/*#region Hero */
+/* #region Hero */
 
 .hero { /* Hero section */
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/background.png"); /* Background image used with gradient to give a darker image colour */
-  height: 80vh; /* Height is 80% of the viewport */
+  height: 100vh; /* Height is 80% of the viewport */
   background-position: center; /* Centers background image */
   background-repeat: no-repeat; /* Prevents image from repeating */
   background-size: cover; /* Covers entire space given */
@@ -214,7 +214,7 @@ h1, a, p {
   display: flex; /* Sets display to flex to align image and text */
   justify-content: space-between; /* To give maximum distance between text and image */
   align-items: center; /* Aligns images in center of flex box */
-  height: 80vh; /* Set to the same height as the background image */
+  height: 100vh; /* Set to the same height as the background image */
   width: 93%; /* To move the image closer to the center */
 }
 
@@ -328,4 +328,30 @@ h1, a, p {
   }
 }
 
-/*#endregion*/
+/* #endregion */
+
+/* #region About */
+
+.about-text ul { /* Unordered list used in the text of the about section */
+  display: flex; /* Set display to flex to create rows */
+  justify-content: center; /* Centers the 3 rows */
+  list-style: none; /* Removes bullet points from list */
+}
+
+.about-text li { /* Individual list items used in about text section */
+  width: 33%; /* Sets width to a third of the screen in order to create 3 rows */
+}
+
+.about-text h1 { /* Headings used in about-text */
+  font-size: 5vh; /* Sets relative font size */
+  text-align: center; /* Centers headings */
+  text-decoration: underline #4c6bc1; /* Underlines with colour */
+}
+
+@media (max-width: 1000px) { /* At max-width of 1000px */
+  .about-text h1 { /* H1 of text section */
+    font-size: 4vh; /* Smaller font size for smaller screen size */
+  }
+}
+
+/* #endregion */
