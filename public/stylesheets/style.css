@@ -332,25 +332,37 @@ h1, a, p {
 
 /* #region About */
 
-.about-text ul { /* Unordered list used in the text of the about section */
+.about-text { /* Unordered list used in the text of the about section */
   display: flex; /* Set display to flex to create rows */
-  justify-content: center; /* Centers the 3 rows */
   list-style: none; /* Removes bullet points from list */
+  margin: auto; /* To space content in center */
+  width: 80%; /* Width is 80% of page */
 }
 
-.about-text li { /* Individual list items used in about text section */
+.about-item { /* Individual list items used in about text section */
   width: 33%; /* Sets width to a third of the screen in order to create 3 rows */
 }
 
 .about-text h1 { /* Headings used in about-text */
-  font-size: 5vh; /* Sets relative font size */
+  font-size: 4vh; /* Sets relative font size */
   text-align: center; /* Centers headings */
   text-decoration: underline #4c6bc1; /* Underlines with colour */
 }
 
 @media (max-width: 1000px) { /* At max-width of 1000px */
   .about-text h1 { /* H1 of text section */
-    font-size: 4vh; /* Smaller font size for smaller screen size */
+    font-size: 3vh; /* Smaller font size for smaller screen size */
+  }
+}
+
+@media (max-width: 500px) { /* At max-width of 500px */
+  .about-text { /* H1 of text section */
+    flex-direction: column; /* Changes flex direction to column */
+    text-align: center; /* Aligns all text to center */
+  }
+
+  .about-item { /* Individual list items used in about text section */
+    width: 100%; /* Sets width back to 100% to create one column */
   }
 }
 
