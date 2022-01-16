@@ -402,7 +402,7 @@ h1, a, p {
 }
 
 .projects-item { /* Items used in the projects list */
-  margin: 2rem 0; /* Margin used to space items away content */
+  margin: 5rem 0; /* Margin used to space items away content */
 }
 
 .projects-item a { /* Anchor text in project-item */
@@ -413,6 +413,17 @@ h1, a, p {
 .projects-image { /* Thumbnails used in project section */
   width: 459px; /* Sets width */
   height: 293px; /* Sets height */
+}
+
+.projects-image:hover { /* Thumbnails used in project section on mouse hover */
+  animation: popOut 1s; /* Triggers animation for 1 second */
+  animation-fill-mode: forwards; /* Prevents animation from restarting */
+}
+
+@keyframes popOut { /* Fade in animation */  
+  100% { /* End of animation */
+    transform: scale(1.03); /* Increases element scale slightly */
+  }
 }
 
 .projects-thumbnail { /* Image tag used for thumbnails */
