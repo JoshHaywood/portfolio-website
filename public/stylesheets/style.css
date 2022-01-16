@@ -102,7 +102,6 @@ h1, a, p {
   background-color: white; /* Background colour */
   border-radius: 10px; /* Round bar edges */
   transition: all 100ms ease-in-out;
-  
 }
 
 .nav-toggle:hover .bar:nth-of-type(1){ /* First child element of bar */
@@ -381,10 +380,12 @@ h1, a, p {
 
 .projects { /* Projects section */
   margin-top: 4rem; /* To space project section away from previous section */
+  background: #15171a; /* Background colour */
 }
 
 .projects h1 { /* Main heading in projects */
   text-align: center; /* Aligns text center */
+  padding-top: 4rem;
   font-size: 4vh; /* Font size */
   text-decoration: underline #4c6bc1; /* Underlines with colour */
 }
@@ -392,8 +393,6 @@ h1, a, p {
 .projects-content { /* Content of the project section */
   display: flex; /* Display set to flex to align thumbnails side by side */
   justify-content: space-evenly; /* Creates even spacing between the two thumbnails and the edge of the page */
-  margin-top: 3rem; /* Spaces thumbnails away from heading  */
-  background: #181a1d; /* Background colour */
 }
 
 .projects-content h1 { /* Headings used in the content section  */
@@ -408,6 +407,10 @@ h1, a, p {
 .projects-item a { /* Anchor text in project-item */
   text-decoration: none; /* Removes underline */
   color: #4c6bc1; /* Text colour */
+}
+
+.projects-item h1 {
+  margin-top: 1rem;
 }
 
 .projects-image { /* Thumbnails used in project section */
@@ -450,6 +453,64 @@ h1, a, p {
 
   .projects-item { /* Items used in the projects list */ 
     margin: 3rem 1rem; /* Moves text away from thumbnails and screen edge */
+  }
+}
+
+/* #endregion */
+
+/* #region Contact */
+
+.contact h1 { /* Heading used in contact section */
+  text-align: center; /* Aligns text center */
+  padding: 3rem 0; /* Pads heading away from previous section and form */
+  font-size: 4vh; /* Font size */
+  text-decoration: underline #4c6bc1; /* Underlines with colour */
+}
+
+.contact-form { /* Form uses in contact section */
+  display: flex; /* Sets display to flex */
+  justify-content: center; /* Aligns form to center */
+  margin: auto; /* Algins form to center */
+  width: 60%; /* Makes form section 60% of page width */
+}
+
+.contact-form input, textarea { /* Input and textareas used in contact form */
+  font-family: 'Roboto', sans-serif;  /* Override default font */
+  font-size: 3vh; /* Font size */
+  width: 100%; /* Width is 100% of the area given */
+  margin: 1rem; /* Spaces individual form fields away from eachother */
+}
+
+.contact-form textarea { /* Text area in form */
+  height: 100%; /* Sets height to 100% of area */
+}
+
+.contact-form button { /* Button used in contact form */
+  margin: 0 auto; /* Overrides margin auto */
+  display: block; /* Changes display from flex to align to center */
+  width: 15%; /* Sets width */
+  padding: 1rem; /* Padding to make button larger */
+}
+
+@media (max-width: 800px) { /* At max-width of 800px */
+  .contact-form button { /* Button used in contact form */
+    width: 20%; /* Button made larger to prevent button element becoming smaller than the text */
+  }
+
+  .contact-form input, textarea { /* Input and textareas used in contact form */
+    font-size: 2vh; /* Font size decreased for smaller screens */
+  }
+}
+
+@media (max-width: 600px) { /* At max-width of 600px */
+  .contact-form button { /* Button used in contact form */
+    width: 30%; /* Button made larger to prevent button element becoming smaller than the text */
+  }
+}
+
+@media (max-width: 400px) { /* At max-width of 400px */
+  .contact-form button { /* Button used in contact form */
+    width: 40%; /* Button made larger to prevent button element becoming smaller than the text */
   }
 }
 
