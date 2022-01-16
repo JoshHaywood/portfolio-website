@@ -287,7 +287,7 @@ h1, a, p {
 
 .portrait { /* Portrait image used in hero */
   height: auto; /* To maintain aspect ratio */
-  width: 100%; /* Sets max width to prevent image upscaling */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
 @media (max-width: 1300px) { /* At max-width of 1300px */
@@ -338,7 +338,7 @@ h1, a, p {
   list-style: none; /* Removes bullet points from list */
   margin: auto; /* To space content in center */
   width: 80%; /* Width is 75% of page */
-  margin-top: 5rem;
+  margin-top: 5rem; /* Spaces text away from hero */
 }
 
 .about-item { /* Individual list items used in about text section */
@@ -350,10 +350,6 @@ h1, a, p {
   font-size: 4vh; /* Sets relative font size */
   text-align: center; /* Centers headings */
   text-decoration: underline #4c6bc1; /* Underlines with colour */
-}
-
-.about-text h1 { /* Heading of text section */
-  font-size: 4vh; /* Font size */
 }
 
 .about-text p { /* Paragraph of text section */
@@ -376,6 +372,73 @@ h1, a, p {
 
   .about-item { /* Individual list items used in about text section */
     width: 100%; /* Sets width back to 100% to create one column */
+  }
+}
+
+/* #endregion */
+
+/* #region Projects */
+
+.projects { /* Projects section */
+  margin-top: 4rem; /* To space project section away from previous section */
+}
+
+.projects h1 { /* Main heading in projects */
+  text-align: center; /* Aligns text center */
+  font-size: 4vh; /* Font size */
+  text-decoration: underline #4c6bc1; /* Underlines with colour */
+}
+
+.projects-content { /* Content of the project section */
+  display: flex; /* Display set to flex to align thumbnails side by side */
+  justify-content: space-evenly; /* Creates even spacing between the two thumbnails and the edge of the page */
+  margin-top: 3rem; /* Spaces thumbnails away from heading  */
+  background: #181a1d; /* Background colour */
+}
+
+.projects-content h1 { /* Headings used in the content section  */
+  text-align: left; /* Aligns text to left */
+  font-size: 2vh;
+}
+
+.projects-item { /* Items used in the projects list */
+  margin: 2rem 0; /* Margin used to space items away content */
+}
+
+.projects-item a { /* Anchor text in project-item */
+  text-decoration: none; /* Removes underline */
+  color: #4c6bc1; /* Text colour */
+}
+
+.projects-image { /* Thumbnails used in project section */
+  width: 459px; /* Sets width */
+  height: 293px; /* Sets height */
+}
+
+.projects-thumbnail { /* Image tag used for thumbnails */
+  height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
+}
+
+@media (max-width: 500px) { /* At max-width of 500px */
+  .projects-image { /* Thumbnails used in project section */
+    height: 138px; /* Decreased image height */
+    width: 229px; /* Decreased image width */
+    margin: auto; /* Spaces images in the center */
+  }
+
+  .projects-item h1 { /* Headings used in project items */
+    margin-top: 3rem; /* Spaces headings away from thumbnails */
+  }
+}
+@media (max-width: 1000px) { /* At max-width of 1000px */
+  .projects-content { /* Content of the project section */
+    flex-direction: column; /* Changes flex direction to column from row */
+    align-items: center; /* Aligns images in center */
+  }
+
+  .projects-item { /* Items used in the projects list */ 
+    margin: 3rem 1rem; /* Moves text away from thumbnails and screen edge */
   }
 }
 
