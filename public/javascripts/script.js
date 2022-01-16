@@ -16,11 +16,11 @@ window.addEventListener('scroll', function() {; //Event listener for mouse scrol
 
     var navBar = document.getElementsByClassName("navbar")[0]; //Gets first instance of class name
 
-    if(scrollY >= 850){ //If user scroll value is greater than 850 (The area the hero takes up)
+    if(scrollY >= 1){ //If user scrolls 1 pixel
         navBar.style.background = "#181a1d"; //Sets background colour to secondary
     }
 
-    if (scrollY < 850) { //If user scroll value is less than 850 (User has gone back to the hero section)
+    if (scrollY < 1) { //If user scroll back to the point of no scroll
         navBar.style.background = "none"; //Sets background colour back to none
     }   
 });

@@ -45,6 +45,7 @@ h1, a, p {
   justify-content: space-between; /* Moves flex items to opposite ends of the container */
   align-items: center; /* Align child elements to center */
   z-index: 1; /* Prevents navbar from disappearing */
+  transition: all 300ms ease-in-out; /* Transition for 300ms with slow start and finish */
 }
 
 .navbar img { /* Image used in navbar */
@@ -357,12 +358,9 @@ h1, a, p {
 
 .about-text p { /* Paragraph of text section */
   font-size: 2vh; /* Font size */
-  text-align: justify; /* To make text fit entire container */
   white-space: pre-line; /* Seperates text at a full stop */
-  margin: 3rem 0;
+  margin: 3rem 0; /* Margin used to space paragraphs away from headings */
 }
-
-
 
 @media (max-width: 1000px) { /* At max-width of 1000px */
   .about-text h1 { /* H1 of text section */
