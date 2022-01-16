@@ -336,11 +336,13 @@ h1, a, p {
   display: flex; /* Set display to flex to create rows */
   list-style: none; /* Removes bullet points from list */
   margin: auto; /* To space content in center */
-  width: 80%; /* Width is 80% of page */
+  width: 80%; /* Width is 75% of page */
+  margin-top: 5rem;
 }
 
 .about-item { /* Individual list items used in about text section */
   width: 33%; /* Sets width to a third of the screen in order to create 3 rows */
+  margin: 0 1rem; /* Margin to space headers and paragraph text */
 }
 
 .about-text h1 { /* Headings used in about-text */
@@ -348,6 +350,19 @@ h1, a, p {
   text-align: center; /* Centers headings */
   text-decoration: underline #4c6bc1; /* Underlines with colour */
 }
+
+.about-text h1 { /* Heading of text section */
+  font-size: 4vh; /* Font size */
+}
+
+.about-text p { /* Paragraph of text section */
+  font-size: 2vh; /* Font size */
+  text-align: justify; /* To make text fit entire container */
+  white-space: pre-line; /* Seperates text at a full stop */
+  margin: 3rem 0;
+}
+
+
 
 @media (max-width: 1000px) { /* At max-width of 1000px */
   .about-text h1 { /* H1 of text section */
