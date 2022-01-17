@@ -224,7 +224,9 @@ h1, a, p {
 }
 
 .hero-text h1 { /* H1 of text section */
-  font-size: 6vh; /* Increased size of font */
+  font-size: 10vh; /* Increased size of font */
+  font-weight: 900; /* Makes font bolder */
+  margin: 2rem 0; /* Spaces heading from paragraph text */
 }
 
 .hero-text p { /* P of text section */
@@ -236,10 +238,11 @@ h1, a, p {
   width: 24px; /* SVG width */
   margin: 1rem; /* To space SVGs apart */
   color: white; /* Sets colour of SVG */
+  margin-left: 0; /* No margin on left so svgs are inline with text */
 }
 
 .hero-text svg:hover { /* Hero text's svg on hover */
-  color: #181a1d; /* Changes SVG colour */
+  color: #9e9e9e; /* Changes SVG colour */
   transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
 }
 
@@ -265,11 +268,18 @@ h1, a, p {
 }
 
 .hero-image { /* Image used in hero */
-  height: 276px; /* Image height */
-  width: 459px; /* Image width */
+  height: 601px; /* Image height */
+  width: 451px; /* Image width */
   align-items: center; /* Align image in center of space */
-  box-shadow: 20px -20px #181a1d; /* Box shadow behind image */
   animation: fadeIn 3s; /* Image fades in to match text */
+  display: flex; /* changes display to flex */
+  justify-content: center; /* Aligns image to center of container */
+}
+
+.portrait { /* Portrait image used in hero */
+  height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
+  box-shadow: 20px -20px #181a1d; /* Box shadow behind image */
 }
 
 @keyframes fadeIn { /* Fade in animation */
@@ -284,29 +294,24 @@ h1, a, p {
   }
 }
 
-.portrait { /* Portrait image used in hero */
-  height: auto; /* To maintain aspect ratio */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
-}
-
-@media (max-width: 1300px) { /* At max-width of 1300px */
-  .hero-image { /* Image used in hero */
-    box-shadow: none; /* Removes box shadow as it becomes larger than the image */
+@media (max-width: 1400px) { /* At max-width of 1400px */
+  .hero-text h1 { /* H1 of text section */
+    font-size: 9vh; /* Smaller font size for smaller screen size */
   }
-}
+
+@media (max-width: 1100px) { /* At max-width of 1100px */
+  .hero-text h1 { /* H1 of text section */
+    font-size: 8vh; /* Smaller font size for smaller screen size */
+  }
 
 @media (max-width: 1000px) { /* At max-width of 1000px */
-  .hero-text h1 { /* H1 of text section */
-    font-size: 4vh; /* Smaller font size for smaller screen size */
-  }
-  
   .hero-text p { /* P of text section */
     font-size: 2vh; /* Smaller font size for smaller screen size */
   }
 
   .hero-image { /* Image used in hero */
-    height: 138px; /* Decreased image height */
-    width: 229px; /* Decreased image width */
+    height: 480px; /* Decreased image height */
+    width: 360px; /* Decreased image width */
   }
 }
 
@@ -315,7 +320,6 @@ h1, a, p {
     flex-direction: column; /* Changes flex direction to column */
     justify-content: center; /* Centers content vertically */
     margin: auto; /* Centers content horizontally */
-    
   }
 
   .hero-text { /* Text section of hero */
@@ -323,10 +327,29 @@ h1, a, p {
     margin: 0 2rem; /* Prevents text from reaching page edge on smaller screen sizes */
   }
 
+  .hero-text h1 { /* H1 of text section */
+    font-size: 6vh; /* Smaller font size for smaller screen size */
+  }
+
   .hero-image { /* Image used in hero */
     order: 1; /* Orders image above text */
+    margin: 2rem 0; /* To space hero image away from text on smaller screens */
+  }
+
+  .portrait { /* Portrait image used in hero */
+    box-shadow: none; /* Removes box shadow at smaller screens */
   }
 }
+
+@media (max-width: 400px) { /* At max-width of 400px */
+  .hero-text h1 { /* H1 of text section */
+    font-size: 5vh; /* Smaller font size for smaller screen size */
+  }
+
+  .hero-image { /* Image used in hero */
+    height: 382px; /* Decreased image height */
+    width: 284px; /* Decreased image width */
+  }
 
 /* #endregion */
 
@@ -462,7 +485,7 @@ h1, a, p {
 
 .contact h1 { /* Heading used in contact section */
   text-align: center; /* Aligns text center */
-  padding: 3rem 0; /* Pads heading away from previous section and form */
+  padding: 2rem 0; /* Pads heading away from previous section and form */
   font-size: 4vh; /* Font size */
   text-decoration: underline #4c6bc1; /* Underlines with colour */
 }
@@ -474,7 +497,7 @@ h1, a, p {
   width: 60%; /* Makes form section 60% of page width */
 }
 
-.contact-form input, textarea { /* Input and textareas used in contact form */
+.contact-form input, .contact-form textarea { /* Input and textareas used in contact form */
   font-family: 'Roboto', sans-serif;  /* Override default font */
   font-size: 3vh; /* Font size */
   width: 100%; /* Width is 100% of the area given */
