@@ -298,11 +298,13 @@ h1, a, p {
   .hero-text h1 { /* H1 of text section */
     font-size: 9vh; /* Smaller font size for smaller screen size */
   }
+}
 
 @media (max-width: 1100px) { /* At max-width of 1100px */
   .hero-text h1 { /* H1 of text section */
     font-size: 8vh; /* Smaller font size for smaller screen size */
   }
+}
 
 @media (max-width: 1000px) { /* At max-width of 1000px */
   .hero-text p { /* P of text section */
@@ -350,6 +352,7 @@ h1, a, p {
     height: 382px; /* Decreased image height */
     width: 284px; /* Decreased image width */
   }
+}
 
 /* #endregion */
 
