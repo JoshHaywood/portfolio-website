@@ -3,7 +3,7 @@
 :root { /* Project root */
   font-size: 16px; /* Fontsize specification */
   font-family: 'Roboto', sans-serif; /* Font family */
-  --text-primary: white; /* Primary text colour */
+  --text-primary: #ffffff; /* Primary text colour */
   --text-secondary: #4c6bc1; /* Secondary text colour */
   --bg-primary: #101316; /* Primary background colour */
   --bg-secondary: #181a1d; /* Secondary background colour */
@@ -31,7 +31,7 @@ body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
   background: #4c6bc1; /* Background colour */
 }
 
-h1, a, p {
+h1, h4, a, p {
   color: var(--text-primary);
 }
 
@@ -64,7 +64,7 @@ h1, a, p {
   right: 2rem; /* Position away from the right */
   height: 24px; /* SVG height */
   width: 24px; /* SVG width */
-  color: white;
+  color: #ffffff;
 }
 
 .navbar svg:hover { /* SVG used in navigation bar on hover */
@@ -99,7 +99,7 @@ h1, a, p {
 .nav-toggle .bar { /* Bars used in the hamburger menu */
   height: 3px; /* Bar height */
   width: 100%; /* Ensures bar width is always the maximum it can be */
-  background-color: white; /* Background colour */
+  background-color: #ffffff; /* Background colour */
   border-radius: 10px; /* Round bar edges */
   transition: all 100ms ease-in-out;
 }
@@ -138,7 +138,7 @@ h1, a, p {
 .nav-links li a { /* Navbar element's anchor text */
   font-size: 1.5rem; /* Sets font size */
   text-decoration: none; /* Removes underline */
-  color: white; /* Text colour */
+  color: #ffffff; /* Text colour */
   padding: 1rem; /* Padding between elements */
   display: block; /* Prevents content on its left or right unless forced */
 }
@@ -156,7 +156,7 @@ h1, a, p {
 
   .navbar svg { /* SVG used in navigation bar */
     right: 4rem; /* Position away from the right */
-    color: white;
+    color: #ffffff;
   }
 
   .nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
@@ -199,6 +199,60 @@ h1, a, p {
 
 /* #endregion */
 
+/* #region Footer */
+  .footer {
+    left:0px;
+    bottom:0px;
+    width: 100%;
+    background-color: #181a1d;
+    
+  }
+
+  .footer-headings {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2vh;
+    width: 60%;
+    margin: auto;
+  }
+
+  .footer-headings h4 {
+    color: #9e9e9e;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2vh;
+    width: 60%;
+    margin: auto;
+  }
+
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .footer-item a {
+    text-decoration: none;
+    color: #9e9e9e;
+  }
+
+  .footer-item a:hover {
+    color: #ffffff;
+  }
+
+  .footnote {
+    margin-top: 2rem;
+    padding: 5px 0;
+    background-color: #4c6bc1;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+/* #endregion */
+
 /* #region Hero */
 
 .hero { /* Hero section */
@@ -237,7 +291,7 @@ h1, a, p {
   height: 24px; /* SVG height */
   width: 24px; /* SVG width */
   margin: 1rem; /* To space SVGs apart */
-  color: white; /* Sets colour of SVG */
+  color: #ffffff; /* Sets colour of SVG */
   margin-left: 0; /* No margin on left so svgs are inline with text */
 }
 
@@ -498,6 +552,7 @@ h1, a, p {
   justify-content: center; /* Aligns form to center */
   margin: auto; /* Algins form to center */
   width: 60%; /* Makes form section 60% of page width */
+  margin-bottom: 18rem; /* Space footer away from contact form */
 }
 
 .contact-form input, .contact-form textarea { /* Input and textareas used in contact form */
