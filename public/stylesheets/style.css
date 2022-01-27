@@ -31,11 +31,11 @@ body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
   background: #4c6bc1; /* Background colour */
 }
 
-h1, h4, a, p {
+h1, h2, h3, h4, h5, h6, a, p {
   color: var(--text-primary);
 }
 
-/* #region Navigation Bar */
+/* #region Header */
 
 .navbar { /* Navbar class assigned in 'layout.hbs' */
   position: fixed; /* Elements space relatively towards navigation bar */
@@ -252,6 +252,40 @@ h1, h4, a, p {
   }
   
 /* #endregion */
+
+/* #region Error */
+
+.error-content {
+  text-align: center;
+  margin-left: 1rem; /* Moves text away from edge of page */
+  padding: 8rem 0; /* To space text away from the header */
+  font-size: 1.5rem;
+}
+
+.error-content h1 {
+  font-size: 5rem;
+}
+
+.error-content button {
+  width: 15%;
+  padding: 1rem; /* Button away from text */
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  background-color: #4c6bc1;
+}
+
+.error-content a {
+  text-decoration: none; /* Removes anchor text underline */
+  color: #101316;
+}
+
+.error-content button:hover {
+  background-color: #597de0;
+}
+
+/* #endregion */
+
+/* #region Index */
 
 /* #region Hero */
 
@@ -594,5 +628,7 @@ h1, h4, a, p {
     width: 40%; /* Button made larger to prevent button element becoming smaller than the text */
   }
 }
+
+/* #endregion */
 
 /* #endregion */
