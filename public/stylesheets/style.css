@@ -262,13 +262,13 @@ h1, h2, h3, h4, h5, h6, a, p {
   background-color: #4c6bc1;
 }
 
+.error-content button:hover {
+  background-color: #597de0;
+}
+
 .error-content a {
   text-decoration: none; /* Removes anchor text underline */
   color: #101316;
-}
-
-.error-content button:hover {
-  background-color: #597de0;
 }
 
 /* #endregion */
