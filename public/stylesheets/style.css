@@ -2,7 +2,7 @@
 
 :root { /* Project root */
   font-size: 16px; /* Fontsize specification */
-  font-family: 'Roboto', sans-serif; /* Font family */
+  font-family: 'Roboto', sans-serif;
   --text-primary: #ffffff; /* Primary text colour */
   --text-secondary: #4c6bc1; /* Secondary text colour */
   --bg-primary: #101316; /* Primary background colour */
@@ -20,15 +20,15 @@ body { /* Webpage body */
 }
 
 body::-webkit-scrollbar { /* Scrollbar */
-  width: 0.25rem; /* Width */
+  width: 0.25rem;
 }
 
 body::-webkit-scrollbar-track { /* Scrollbar background */
-  background: #181a1d; /* Background colour */
+  background: #181a1d;
 }
 
 body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
-  background: #4c6bc1; /* Background colour */
+  background: #4c6bc1;
 }
 
 h1, h2, h3, h4, h5, h6, a, p {
@@ -37,71 +37,70 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Header */
 
-.navbar { /* Navbar class assigned in 'layout.hbs' */
-  position: fixed; /* Elements space relatively towards navigation bar */
+.navbar { /* Navbar*/
+  position: fixed; /* So navbar is superimposed over the rest of the page content */
   width: 100%;
   padding: 1rem;
-  display: flex; /* Creates flexbox */
-  justify-content: space-between; /* Moves flex items to opposite ends of the container */
-  align-items: center; /* Align child elements to center */
+  display: flex;
+  justify-content: space-between;
   z-index: 1; /* Prevents navbar from disappearing */
   transition: all 300ms ease-in-out; /* Transition for 300ms with slow start and finish */
 }
 
-.navbar img { /* Image used in navbar */
-  height: 60px; /* Image height */
-  width: 260px; /* Image width */
+.navbar img {
+  height: 60px;
+  width: 260px;
 }
 
-.logo{ /* Logo image assigned in 'layout.hbs' */
+.logo{ /* Logo used in navbar*/
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
-.navbar svg { /* SVG used in navigation bar */
+.navbar svg {
   position: absolute; /* To ensure menu is always in the top right of the screen */
-  top: 2.15rem; /* Position away from the top */
-  right: 2rem; /* Position away from the right */
-  height: 24px; /* SVG height */
-  width: 24px; /* SVG width */
+  top: 2.15rem;
+  right: 2rem;
+  height: 24px;
+  width: 24px;
   color: #ffffff;
 }
 
-.navbar svg:hover { /* SVG used in navigation bar on hover */
-  color: #4c6bc1; /* Change colour */
+.navbar svg:hover {
+  color: #4c6bc1;
   transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
 }
 
-.theme-toggle { /* Theme toggle class assigned in 'layout.hbs' */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
+.theme-toggle { /* Navbar themetoggler */
   height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
-.nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
+.nav-toggle { /* Navbar hamburger menu */
   position: absolute; /* To ensure menu is always in the top right of the screen */
-  top: 2.2rem; /* Position away from the top */
-  right: 1rem; /* Position away from the right */
-  display: none; /* Sets display to none by default */
-  flex-direction: column; /* Sets flex direction to correct columns for the bars */
-  justify-content: space-between; /* To ensure that the bars take up the maximum space available */
-  height: 22px; /* Menu height */
-  width: 22px; /* Menu width */
+  top: 2.2rem;
+  right: 1rem;
+  display: none; /* Sets display to none by default for javascript function */
+  flex-direction: column; /* Sets flex direction to prevent bars from aligning to row */
+  justify-content: space-between; /* To ensure even distance between bars */
+  height: 22px;
+  width: 22px;
 }
 
-.nav-toggle:hover .bar { /* Navtoggle hover and bar */
-  width: 28px; /* To set the size of the x in the animation of the hamburger sign */
+.nav-toggle:hover .bar {
+  width: 28px; 
 }
 
-.nav-toggle:hover { /* Hamdburger menu on mouse hover */
+.nav-toggle:hover {
   cursor: pointer; /* Sets cursor type to pointer */
 }
 
-.nav-toggle .bar { /* Bars used in the hamburger menu */
-  height: 3px; /* Bar height */
-  width: 100%; /* Ensures bar width is always the maximum it can be */
-  background-color: #ffffff; /* Background colour */
-  border-radius: 10px; /* Round bar edges */
-  transition: all 100ms ease-in-out;
+.nav-toggle .bar { 
+  height: 3px; 
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  transition: all 100ms ease-in-out; /* Transition for all elements for 0.1 seconds, slowing at the beginning and end. */
 }
 
 .nav-toggle:hover .bar:nth-of-type(1){ /* First child element of bar */
@@ -121,56 +120,49 @@ h1, h2, h3, h4, h5, h6, a, p {
   transform-origin: bottom left; /* Moves to bottom-left */
 }
 
-.navbar-links { /* Links used in the navbar */
-  height: 100%; /* Ensures links are full height */
-}
-
-.nav-links ul { /* Navbar child elements */
-  margin: 0 3.5rem; /* Removes margin Y, margin x used to space away from theme toggler */
-  padding: 0; /* Removes padding */
+.nav-links ul {
+  margin: 0 3.5rem;
   display: flex; /* Creates flexbox to align links in a row rather than column */
 }
 
-.nav-links li { /* Individual navbar element */
+.nav-links li {
   list-style: none; /* Removes bullet points from list items */
 }
 
-.nav-links li a { /* Navbar element's anchor text */
-  font-size: 1.5rem; /* Sets font size */
+.nav-links li a {
+  font-size: 1.5rem;
   text-decoration: none; /* Removes underline */
-  color: #ffffff; /* Text colour */
-  padding: 1rem; /* Padding between elements */
-  display: block; /* Prevents content on its left or right unless forced */
+  color: #ffffff;
+  padding: 1rem;
+  display: block; /* Centers links */
 }
 
-.nav-links li a:hover { /* Navbar element's anchor text on hover */
-  color: #4c6bc1; /* Text colour */
+.nav-links li a:hover { 
+  color: #4c6bc1;
   transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
 }
 
-@media (max-width: 800px) { /* At max-width of 800px */
-  .navbar { /* Navbar class assigned in 'layout.hbs' */
+@media (max-width: 800px) {
+  .navbar { /* Navbar */
     flex-direction: column; /* Alters flex direction to list items in a column */
-    align-items: flex-start; /* Positions elements at start of flex */
   }
 
-  .navbar svg { /* SVG used in navigation bar */
-    right: 4rem; /* Position away from the right */
+  .navbar svg { 
+    right: 4rem;
     color: #ffffff;
   }
 
-  .nav-toggle { /* The hamburger menu used in the navigation bar assigned in 'layout.hbs' */
+  .nav-toggle { /* Navbar hamburger menu */
     display: flex; /* To show the menu when at this screen size */
   }
 
-  .nav-links { /* Links used in the navbar */
+  .nav-links {
     display: none; /* Hides links when at this screen size */
-    width: 100%; /* Ensures element covers width of screen */
-    padding-top: 0.3rem; /* Padding to move links away from top of navbar */
+    padding-top: 0.3rem;
   }
 
-  .nav-links ul { /* Navbar child elements */
-    width: 100%; /* Ensures element covers width of screen */
+  .nav-links ul {
+    width: 100%; /* Ensures elements are centered */
     flex-direction: column; /* Alters flex direction of child elements in the nav bar */
   }
 
@@ -180,71 +172,67 @@ h1, h2, h3, h4, h5, h6, a, p {
     
   }
 
-  .nav-links li a:hover { /* Navbar element's anchor text on hover */
-    background-color: #2d3136; /* Background colour */
-    border-radius: 10px; /* Smooths border edges */
+  .nav-links li a:hover { 
+    background-color: #2d3136;
+    border-radius: 10px; 
     transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
-  }
-
-  .nav-links.active { /* When links are active */
-    display: flex;  /* Display set to flex */
   }
 }
 
-@media (max-width: 370px) { /* At max-width of 370px */
-  .navbar img { /* Image used in navbar */
-    width: 200px; /* Altered width for small phone screens */
+@media (max-width: 370px) { 
+  .navbar img { 
+    width: 200px;
   }
 }
 
 /* #endregion */
 
 /* #region Footer */
-  .footer {
-    left:0px;
-    bottom:0px;
+
+  .footer { /* Footer */
+    left: 0px;
+    bottom: 0px; /* To position footer at the bottom of the page */
     width: 100%;
     background-color: #181a1d;
-    
   }
 
-  .footer-headings {
+  .footer-headings { /* Footer headings */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* Creates equal spacing between headings */
     font-size: 2vh;
     width: 60%;
-    margin: auto;
+    margin: auto; /* Aligns headings to center */
   }
 
   .footer-headings h4 {
     color: #9e9e9e;
   }
 
-  .footer-content {
+  .footer-content { /* Content of footer */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-evenly; /* Creates equal spacing between columns */
     font-size: 2vh;
     width: 60%;
-    margin: auto;
+    margin: auto; /* Aligns columns to center */
   }
 
-  .footer-item {
+  .footer-column { /* Columns used in footer */
     display: flex;
-    flex-direction: column;
-    margin: auto;
+    flex-direction: column; /* Creates columns rather than rows */
+    margin: auto; /* spaces columns more evenly */
   }
 
-  .footer-item a {
-    text-decoration: none;
+  .footer-column a {
+    text-decoration: none; /* Removes underline */
     color: #9e9e9e;
   }
 
-  .footer-item a:hover {
+  .footer-column a:hover {
     color: #ffffff;
   }
 
-  .footnote {
-    margin-top: 2rem;
+  .footnote { /* Footer footnote */
+    margin-top: 2rem; /* Prevents footnote overlapping footer */
     padding: 5px 0;
     background-color: #4c6bc1;
     color: #ffffff;
@@ -255,7 +243,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Error */
 
-.error-content {
+.error-content { /* Content area of error page */
   text-align: center;
   margin-left: 1rem; /* Moves text away from edge of page */
   padding: 8rem 0; /* To space text away from the header */
@@ -290,47 +278,46 @@ h1, h2, h3, h4, h5, h6, a, p {
 /* #region Hero */
 
 .hero { /* Hero section */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/background.png"); /* Background image used with gradient to give a darker image colour */
-  height: 100vh; /* Height is 80% of the viewport */
-  background-position: center; /* Centers background image */
-  background-repeat: no-repeat; /* Prevents image from repeating */
-  background-size: cover; /* Covers entire space given */
-  position: relative; /* Relative to other elements */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/background.png"); /* Gradient to give a darker image colour */
+  height: 100vh; /* Hero is full screen size on page load */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
 }
 
-.hero-content { /* Content section of hero */
-  display: flex; /* Sets display to flex to align image and text */
-  justify-content: space-between; /* To give maximum distance between text and image */
-  align-items: center; /* Aligns images in center of flex box */
+.hero-content { /* Content area of hero */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
   height: 100vh; /* Set to the same height as the background image */
-  width: 93%; /* To move the image closer to the center */
+  width: 93%;
 }
 
 .hero-text { /* Text section of hero */
   flex-direction: column; /* Flexes heading and text to column instead of row */
-  margin: 0 4rem; /* Prevents text from reaching page edge on smaller screen sizes */
+  margin: 0 4rem;
 }
 
-.hero-text h1 { /* H1 of text section */
-  font-size: 10vh; /* Increased size of font */
-  font-weight: 900; /* Makes font bolder */
-  margin: 2rem 0; /* Spaces heading from paragraph text */
+.hero-text h1 { 
+  font-size: 10vh;
+  font-weight: 900;
+  margin: 2rem 0;
 }
 
-.hero-text p { /* P of text section */
-  font-size: 3vh; /* Increased size of font */
+.hero-text p { 
+  font-size: 3vh; 
 }
 
-.hero-text svg { /* SVGs used in hero */
-  height: 24px; /* SVG height */
-  width: 24px; /* SVG width */
-  margin: 1rem; /* To space SVGs apart */
-  color: #ffffff; /* Sets colour of SVG */
+.hero-text svg { 
+  height: 24px;
+  width: 24px;
+  margin: 1rem; 
+  color: #ffffff; 
   margin-left: 0; /* No margin on left so svgs are inline with text */
 }
 
-.hero-text svg:hover { /* Hero text's svg on hover */
-  color: #9e9e9e; /* Changes SVG colour */
+.hero-text svg:hover { 
+  color: #9e9e9e; 
   transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
 }
 
@@ -339,73 +326,89 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @keyframes fadeInUp { /* Fade in and up animation */
-  0% { /* Start of animation */
-     opacity:0; /* Elements are transparent */
+  0% { 
+     opacity: 0; 
      transform:translate3d(0, 100%, 0); /* Translates elements up Y vector */
   }
   
-  100% { /* End of animation */
-     opacity:1; /* Elements become opaque */
-     transform:none; /* Stops transform */
+  100% { 
+     opacity: 1; 
+     transform: none;
   }
 }
 
-.github-icon .envelope-icon { /* Theme toggle class assigned in 'layout.hbs' */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
+.github-icon .envelope-icon {
   height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
 .hero-image { /* Image used in hero */
-  height: 601px; /* Image height */
-  width: 451px; /* Image width */
-  align-items: center; /* Align image in center of space */
+  height: 601px;
+  width: 451px;
+  align-items: center;
   animation: fadeIn 3s; /* Image fades in to match text */
-  display: flex; /* changes display to flex */
-  justify-content: center; /* Aligns image to center of container */
 }
 
 .portrait { /* Portrait image used in hero */
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
-  box-shadow: 20px -20px #181a1d; /* Box shadow behind image */
+  box-shadow: 20px -20px #181a1d;
 }
 
 @keyframes fadeIn { /* Fade in animation */
-  0% { /* Start of animation */
-     opacity:0; /* Elements are transparent */
+  0% { 
+     opacity:0; 
      transform:translate3d(0, 20%, 0); /* Translates elements up Y vector at a reduced rate as image has larger dimesions and therefore moves further */
   }
   
-  100% { /* End of animation */
-     opacity:1; /* Elements become opaque */
-     transform:none; /* Stops transform */
+  100% { 
+     opacity: 1;
+     transform:none;
   }
 }
 
-@media (max-width: 1400px) { /* At max-width of 1400px */
-  .hero-text h1 { /* H1 of text section */
-    font-size: 9vh; /* Smaller font size for smaller screen size */
+@media (max-width: 2560px) { 
+  .hero-content {
+    width: 87%; /* Re-centers image */
   }
 }
 
-@media (max-width: 1100px) { /* At max-width of 1100px */
-  .hero-text h1 { /* H1 of text section */
-    font-size: 8vh; /* Smaller font size for smaller screen size */
+@media (max-width: 2100px) { 
+  .hero-content {
+    width: 90%; /* Re-centers image */
   }
 }
 
-@media (max-width: 1000px) { /* At max-width of 1000px */
-  .hero-text p { /* P of text section */
-    font-size: 2vh; /* Smaller font size for smaller screen size */
+@media (max-width: 1920px) { 
+  .hero-content {
+    width: 93%; /* Reverts to pre-assigned value */
+  }
+}
+
+@media (max-width: 1400px) { 
+  .hero-text h1 { 
+    font-size: 9vh; 
+  }
+}
+
+@media (max-width: 1100px) { 
+  .hero-text h1 { 
+    font-size: 8vh; 
   }
 
+  .hero-text p { 
+    font-size: 2vh;
+  }
+}
+
+@media (max-width: 1000px) { 
   .hero-image { /* Image used in hero */
-    height: 480px; /* Decreased image height */
-    width: 360px; /* Decreased image width */
+    height: 480px;
+    width: 360px;
   }
 }
 
-@media (max-width: 800px) { /* At max-width of 800px */
+@media (max-width: 800px) {
   .hero-content { /* Content section of hero */
     flex-direction: column; /* Changes flex direction to column */
     justify-content: center; /* Centers content vertically */
@@ -414,31 +417,31 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .hero-text { /* Text section of hero */
     order: 2; /* Re orders flex box to make text appear below image */
-    margin: 0 2rem; /* Prevents text from reaching page edge on smaller screen sizes */
+    margin: 0 2rem;
   }
 
-  .hero-text h1 { /* H1 of text section */
-    font-size: 6vh; /* Smaller font size for smaller screen size */
+  .hero-text h1 { 
+    font-size: 6vh; 
   }
 
   .hero-image { /* Image used in hero */
     order: 1; /* Orders image above text */
-    margin: 2rem 0; /* To space hero image away from text on smaller screens */
+    margin: 2rem 0;
   }
 
   .portrait { /* Portrait image used in hero */
-    box-shadow: none; /* Removes box shadow at smaller screens */
+    box-shadow: none;
   }
 }
 
-@media (max-width: 400px) { /* At max-width of 400px */
+@media (max-width: 400px) {
   .hero-text h1 { /* H1 of text section */
-    font-size: 5vh; /* Smaller font size for smaller screen size */
+    font-size: 5vh;
   }
 
   .hero-image { /* Image used in hero */
-    height: 382px; /* Decreased image height */
-    width: 284px; /* Decreased image width */
+    height: 382px;
+    width: 284px;
   }
 }
 
@@ -446,45 +449,45 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region About */
 
-.about-text { /* Unordered list used in the text of the about section */
-  display: flex; /* Set display to flex to create rows */
+.about-text { /* Text section of about */
+  display: flex;
   list-style: none; /* Removes bullet points from list */
   margin: auto; /* To space content in center */
-  width: 80%; /* Width is 75% of page */
-  margin-top: 5rem; /* Spaces text away from hero */
+  width: 80%;
+  margin-top: 5rem;
 }
 
-.about-item { /* Individual list items used in about text section */
-  width: 33%; /* Sets width to a third of the screen in order to create 3 rows */
-  margin: 0 1rem; /* Margin to space headers and paragraph text */
+.about-item { /* Columns used in about section */
+  width: 33%; /* Sets width to a third of the screen in order to create 3 columns */
+  margin: 0 1rem;
 }
 
-.about-text h1 { /* Headings used in about-text */
-  font-size: 4vh; /* Sets relative font size */
-  text-align: center; /* Centers headings */
-  text-decoration: underline #4c6bc1; /* Underlines with colour */
+.about-text h1 { 
+  font-size: 4vh; 
+  text-align: center; 
+  text-decoration: underline #4c6bc1;
 }
 
-.about-text p { /* Paragraph of text section */
-  font-size: 2vh; /* Font size */
+.about-text p { 
+  font-size: 2vh; 
   white-space: pre-line; /* Seperates text at a full stop */
-  margin: 3rem 0; /* Margin used to space paragraphs away from headings */
+  margin: 3rem 0; 
 }
 
-@media (max-width: 1000px) { /* At max-width of 1000px */
-  .about-text h1 { /* H1 of text section */
-    font-size: 3vh; /* Smaller font size for smaller screen size */
+@media (max-width: 1000px) { 
+  .about-text h1 {
+    font-size: 3vh;
   }
 }
 
-@media (max-width: 500px) { /* At max-width of 500px */
-  .about-text { /* H1 of text section */
-    flex-direction: column; /* Changes flex direction to column */
-    text-align: center; /* Aligns all text to center */
+@media (max-width: 500px) { 
+  .about-text {
+    flex-direction: column; 
+    text-align: center;
   }
 
   .about-item { /* Individual list items used in about text section */
-    width: 100%; /* Sets width back to 100% to create one column */
+    width: 100%; /* Creates 3 rows instead of columns */
   }
 }
 
@@ -493,34 +496,34 @@ h1, h2, h3, h4, h5, h6, a, p {
 /* #region Projects */
 
 .projects { /* Projects section */
-  margin-top: 4rem; /* To space project section away from previous section */
-  background: #15171a; /* Background colour */
+  margin-top: 4rem; 
+  background: #15171a; 
 }
 
-.projects h1 { /* Main heading in projects */
-  text-align: center; /* Aligns text center */
+.projects h1 { 
+  text-align: center; 
   padding-top: 4rem;
-  font-size: 4vh; /* Font size */
-  text-decoration: underline #4c6bc1; /* Underlines with colour */
+  font-size: 4vh; 
+  text-decoration: underline #4c6bc1; 
 }
 
 .projects-content { /* Content of the project section */
-  display: flex; /* Display set to flex to align thumbnails side by side */
-  justify-content: space-evenly; /* Creates even spacing between the two thumbnails and the edge of the page */
+  display: flex; 
+  justify-content: space-evenly;
 }
 
-.projects-content h1 { /* Headings used in the content section  */
-  text-align: left; /* Aligns text to left */
+.projects-content h1 { 
+  text-align: left;
   font-size: 2vh;
 }
 
 .projects-item { /* Items used in the projects list */
-  margin: 5rem 0; /* Margin used to space items away content */
+  margin: 5rem 0;
 }
 
-.projects-item a { /* Anchor text in project-item */
+.projects-item a { 
   text-decoration: none; /* Removes underline */
-  color: #4c6bc1; /* Text colour */
+  color: #4c6bc1;
 }
 
 .projects-item h1 {
@@ -528,18 +531,18 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .projects-image { /* Thumbnails used in project section */
-  width: 459px; /* Sets width */
-  height: 293px; /* Sets height */
+  width: 459px; 
+  height: 293px;
 }
 
-.projects-image:hover { /* Thumbnails used in project section on mouse hover */
+.projects-image:hover { 
   animation: popOut 1s; /* Triggers animation for 1 second */
   animation-fill-mode: forwards; /* Prevents animation from restarting */
 }
 
 @keyframes popOut { /* Fade in animation */  
-  100% { /* End of animation */
-    transform: scale(1.03); /* Increases element scale slightly */
+  100% {
+    transform: scale(1.03); /* Increases scale slightly */
   }
 }
 
@@ -548,25 +551,24 @@ h1, h2, h3, h4, h5, h6, a, p {
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
-@media (max-width: 500px) { /* At max-width of 500px */
+@media (max-width: 500px) { 
   .projects-image { /* Thumbnails used in project section */
-    height: 138px; /* Decreased image height */
-    width: 229px; /* Decreased image width */
-    margin: auto; /* Spaces images in the center */
+    height: 138px;
+    width: 229px;
+    margin: auto; /* Prevents images from breaking alignment */
   }
 
-  .projects-item h1 { /* Headings used in project items */
-    margin-top: 3rem; /* Spaces headings away from thumbnails */
+  .projects-item h1 { 
+    margin-top: 3rem; 
   }
 }
-@media (max-width: 1000px) { /* At max-width of 1000px */
+@media (max-width: 1000px) { 
   .projects-content { /* Content of the project section */
     flex-direction: column; /* Changes flex direction to column from row */
-    align-items: center; /* Aligns images in center */
   }
 
   .projects-item { /* Items used in the projects list */ 
-    margin: 3rem 1rem; /* Moves text away from thumbnails and screen edge */
+    margin: 3rem 1rem;
   }
 }
 
@@ -574,56 +576,63 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Contact */
 
-.contact h1 { /* Heading used in contact section */
-  text-align: center; /* Aligns text center */
-  padding: 2rem 0; /* Pads heading away from previous section and form */
-  font-size: 4vh; /* Font size */
-  text-decoration: underline #4c6bc1; /* Underlines with colour */
+.contact h1 { 
+  text-align: center; 
+  padding: 2rem 0; 
+  font-size: 4vh; 
+  text-decoration: underline #4c6bc1;
 }
 
 .contact-form { /* Form uses in contact section */
-  display: flex; /* Sets display to flex */
-  justify-content: center; /* Aligns form to center */
-  margin: auto; /* Algins form to center */
-  width: 60%; /* Makes form section 60% of page width */
+  display: flex;
+  margin: auto;
+  width: 60%; 
   margin-bottom: 18rem; /* Space footer away from contact form */
 }
 
 .contact-form input, .contact-form textarea { /* Input and textareas used in contact form */
-  font-family: 'Roboto', sans-serif;  /* Override default font */
-  font-size: 3vh; /* Font size */
-  width: 100%; /* Width is 100% of the area given */
-  margin: 1rem; /* Spaces individual form fields away from eachother */
+  font-family: 'Roboto', sans-serif;
+  font-size: 3vh; 
+  width: 100%;
+  margin: 1rem; 
 }
 
 .contact-form textarea { /* Text area in form */
-  height: 100%; /* Sets height to 100% of area */
+  height: 100%;
 }
 
 .contact-form button { /* Button used in contact form */
   margin: 0 auto; /* Overrides margin auto */
   display: block; /* Changes display from flex to align to center */
-  width: 15%; /* Sets width */
-  padding: 1rem; /* Padding to make button larger */
+  width: 15%;
+  padding: 1rem; 
 }
 
-@media (max-width: 800px) { /* At max-width of 800px */
+@media (max-width: 800px) {
+  .contact-form {
+    margin-bottom: 13rem; /* To prevent too large a space between footer and contact form */
+  }
   .contact-form button { /* Button used in contact form */
     width: 20%; /* Button made larger to prevent button element becoming smaller than the text */
   }
 
-  .contact-form input, textarea { /* Input and textareas used in contact form */
-    font-size: 2vh; /* Font size decreased for smaller screens */
+  .contact-form input { /* Input and textareas used in contact form */
+    font-size: 2vh;
+  }
+
+  .contact-form textarea { /* Text area in form */
+    font-size: 2vh;
+    height: 70%;
   }
 }
 
-@media (max-width: 600px) { /* At max-width of 600px */
+@media (max-width: 600px) { 
   .contact-form button { /* Button used in contact form */
     width: 30%; /* Button made larger to prevent button element becoming smaller than the text */
   }
 }
 
-@media (max-width: 400px) { /* At max-width of 400px */
+@media (max-width: 400px) {
   .contact-form button { /* Button used in contact form */
     width: 40%; /* Button made larger to prevent button element becoming smaller than the text */
   }
