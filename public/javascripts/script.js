@@ -1,3 +1,5 @@
+// #region Header
+
 function ToggleNavLinks() { //Function to toggle navigation links display
     var navLink = document.getElementsByClassName("nav-links")[0]; //Gets first instance of class name
     var navBar = document.getElementsByClassName("navbar")[0]; //Gets first instance of class name
@@ -10,7 +12,7 @@ function ToggleNavLinks() { //Function to toggle navigation links display
         navLink.style.display = "none"; //Else leave display as none
         navBar.style.background = "none"; //Sets background back to none
     }
-}
+};
 
 window.addEventListener('scroll', function() {; //Event listener for mouse scroll
 
@@ -24,3 +26,13 @@ window.addEventListener('scroll', function() {; //Event listener for mouse scrol
         navBar.style.background = "none"; //Sets background colour back to none
     }   
 });
+
+// #endregion
+
+// #region Footer
+
+function ScrollTop() { //Function to scroll to top of the page
+    document.documentElement.scrollTop = 0; //Sets scroll top value to 0
+};
+
+// #endregion

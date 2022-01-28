@@ -198,33 +198,39 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .footer-headings { /* Footer headings */
     display: flex;
-    justify-content: space-evenly; /* Creates equal spacing between headings */
     font-size: 2vh;
-    width: 60%;
-    margin: auto; /* Aligns headings to center */
+    justify-content: space-between;
+    margin: auto;
+    width: 70%;
   }
 
-  .footer-headings h4 {
+  .footer-headings h2 {
+    margin-top: 3rem;
     color: #9e9e9e;
+  }
+
+  .footer-headings :nth-of-type(2) {
+    width: 53%; /* Reduced width to align heading to second column */
   }
 
   .footer-content { /* Content of footer */
     display: flex;
-    justify-content: space-evenly; /* Creates equal spacing between columns */
+    justify-content: space-between;
+    margin: auto;
+    padding-bottom: 3rem;
+    width: 70%;
     font-size: 2vh;
-    width: 60%;
-    margin: auto; /* Aligns columns to center */
   }
 
   .footer-column { /* Columns used in footer */
     display: flex;
     flex-direction: column; /* Creates columns rather than rows */
-    margin: auto; /* spaces columns more evenly */
   }
 
   .footer-column a {
     text-decoration: none; /* Removes underline */
     color: #9e9e9e;
+    margin: 5px 0;
   }
 
   .footer-column a:hover {
@@ -232,11 +238,24 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 
   .footnote { /* Footer footnote */
-    margin-top: 2rem; /* Prevents footnote overlapping footer */
-    padding: 5px 0;
-    background-color: #4c6bc1;
+    display: flex;
     color: #ffffff;
-    text-align: center;
+    padding: 1px 0;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    border-top: 1px solid #4c6bc1;
+  }
+
+  .footer button {
+    background-color: Transparent;
+    border: none;
+    color: #9e9e9e;
+    font-size: 1rem;
+  }
+
+  .footer button:hover {
+    color: #ffffff;
   }
   
 /* #endregion */
@@ -341,7 +360,6 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .hero-image { /* Image used in hero */
-  justify-content: center;
   animation: fadeInUp 3s; /* Text fades and moves up */
 }
 
@@ -363,7 +381,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 @media (max-width: 1920px) { 
   .hero-content {
-    width: 94%; /* Re-centers image */
+    width: 97%; /* Re-centers image */
   }
 
   .portrait { /* Portrait image used in hero */
@@ -587,6 +605,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   font-size: 3vh; 
   width: 100%;
   margin: 1rem; 
+  border-radius: 5px;
 }
 
 .contact-form textarea { /* Text area in form */
