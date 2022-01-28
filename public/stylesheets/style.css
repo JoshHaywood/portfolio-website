@@ -625,7 +625,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 .contact-form { /* Form uses in contact section */
   display: flex;
   margin: auto;
-  width: 60%; 
+  width: 50%; 
   margin-bottom: 18rem; /* Space footer away from contact form */
 }
 
@@ -639,13 +639,13 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .contact-form textarea { /* Text area in form */
-  height: 80%;
+  height: 70%;
 }
 
 .contact-form button { /* Button used in contact form */
   margin: auto; /* Overrides margin auto */
   display: block; /* Changes display from flex to align to center */
-  width: 60%;
+  width: 50%;
   margin-top: 1rem;
   padding: 1rem; 
   border-radius: 10px;
