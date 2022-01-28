@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 @media (max-width: 370px) { 
   .navbar img { 
-    width: 200px;
+    width: 170px;
   }
 }
 
@@ -471,6 +471,10 @@ h1, h2, h3, h4, h5, h6, a, p {
   .hero-text h1 { /* H1 of text section */
     font-size: 5vh;
   }
+
+  .hero-text p {
+    font-size: 2vh;
+  }
 }
 
 /* #endregion */
@@ -516,6 +520,12 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .about-item { /* Individual list items used in about text section */
     width: 100%; /* Creates 3 rows instead of columns */
+  }
+}
+
+@media (max-width: 400px) {
+  .about-text {
+    margin-right: 3rem;
   }
 }
 
@@ -624,25 +634,25 @@ h1, h2, h3, h4, h5, h6, a, p {
   width: 100%;
   margin: 1rem; 
   border-radius: 5px;
+  padding: 5px;
 }
 
 .contact-form textarea { /* Text area in form */
-  height: 100%;
+  height: 80%;
 }
 
 .contact-form button { /* Button used in contact form */
-  margin: 0 auto; /* Overrides margin auto */
+  margin: auto; /* Overrides margin auto */
   display: block; /* Changes display from flex to align to center */
-  width: 15%;
+  width: 60%;
+  margin-top: 1rem;
   padding: 1rem; 
+  border-radius: 10px;
 }
 
 @media (max-width: 800px) {
   .contact-form {
     margin-bottom: 13rem; /* To prevent too large a space between footer and contact form */
-  }
-  .contact-form button { /* Button used in contact form */
-    width: 20%; /* Button made larger to prevent button element becoming smaller than the text */
   }
 
   .contact-form input { /* Input and textareas used in contact form */
@@ -651,19 +661,21 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .contact-form textarea { /* Text area in form */
     font-size: 2vh;
-    height: 70%;
-  }
-}
-
-@media (max-width: 600px) { 
-  .contact-form button { /* Button used in contact form */
-    width: 30%; /* Button made larger to prevent button element becoming smaller than the text */
+    height: 60%;
   }
 }
 
 @media (max-width: 400px) {
+  .contact-form { /* Form used in contact section */
+    margin-right: 5rem;
+  }
+
+  .contact-form textarea { /* Text area in form */
+    height: 50%;
+  }
+
   .contact-form button { /* Button used in contact form */
-    width: 40%; /* Button made larger to prevent button element becoming smaller than the text */
+    margin-right: 1.4rem;
   }
 }
 
