@@ -16,4 +16,9 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
 
+/* GET Message-sent page */
+router.get('/message-sent', function(req, res, next) {
+  res.render('message-sent', { title: 'Message Sent' });
+});
+
 module.exports = router;

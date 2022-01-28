@@ -297,6 +297,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin: 2rem 0;
   font-size: 1.2rem;
   background-color: #4c6bc1;
+  border: none;
 }
 
 .error-content button:hover {
@@ -680,5 +681,38 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 /* #endregion */
+
+/* #endregion */
+
+/* #region Message-sent */
+
+.message-content { /* Content area of message-sent page */
+  text-align: center;
+  margin-left: 1rem; /* Moves text away from edge of page */
+  padding: 8rem 0; /* To space text away from the header */
+  font-size: 1.5rem;
+}
+
+.message-content h1 {
+  font-size: 5rem;
+}
+
+.message-content button {
+  width: 15%;
+  padding: 1rem; /* Button away from text */
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  background-color: #4c6bc1;
+  border: none;
+}
+
+.message-content button:hover {
+  background-color: #597de0;
+}
+
+.message-content a {
+  text-decoration: none; /* Removes anchor text underline */
+  color: #101316;
+}
 
 /* #endregion */
