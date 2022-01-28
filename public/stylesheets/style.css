@@ -264,15 +264,25 @@ h1, h2, h3, h4, h5, h6, a, p {
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 700px) {
+    .footer-headings h2 {
+      font-size: 2vh;
+    }
+
     .footer-headings :nth-of-type(2) {
-      width: 57%; /* Increased width to keep heading aligned*/
+      width: 59%; /* Increased width to keep heading aligned*/
     }
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 500px) {
+    .footer-column a {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 300px) {
     .footer-headings :nth-of-type(2) {
-      width: 59%; /* Increased width to keep heading aligned*/
+      width: 65%; /* Increased width to keep heading aligned*/
     }
   }
   
@@ -576,6 +586,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 .projects-image { /* Thumbnails used in project section */
   width: 459px; 
   height: 293px;
+  margin: auto;
 }
 
 .projects-image:hover { 
@@ -594,24 +605,32 @@ h1, h2, h3, h4, h5, h6, a, p {
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
+@media (max-width: 1000px) {
+  .projects-content { /* Content of the project section */
+    flex-direction: column; /* Changes flex direction to column from row */
+  }
+
+  .projects-item { /* Items used in the projects list */ 
+    display: block;
+    margin: 3rem auto; /* Vertical margin applied to counteract the effects of flex change */
+  }
+}
+
 @media (max-width: 500px) { 
   .projects-image { /* Thumbnails used in project section */
-    height: 138px;
-    width: 229px;
-    margin: auto; /* Prevents images from breaking alignment */
+    height: 180px;
+    width: 350px;
   }
 
   .projects-item h1 { 
     margin-top: 3rem; 
   }
 }
-@media (max-width: 1000px) { 
-  .projects-content { /* Content of the project section */
-    flex-direction: column; /* Changes flex direction to column from row */
-  }
 
-  .projects-item { /* Items used in the projects list */ 
-    margin: 3rem 1rem;
+@media (max-width: 400px) { 
+  .projects-image { /* Thumbnails used in project section */
+    height: 160px;
+    width: 300px;
   }
 }
 
@@ -637,20 +656,22 @@ h1, h2, h3, h4, h5, h6, a, p {
   font-family: 'Roboto', sans-serif;
   font-size: 3vh; 
   width: 100%;
-  margin: 1rem; 
+  margin: 1rem 0; 
   border-radius: 5px;
   padding: 5px;
 }
 
 .contact-form textarea { /* Text area in form */
   height: 70%;
+  display: flex;
+  margin: 1rem auto;
 }
 
 .contact-form button { /* Button used in contact form */
   margin: auto; /* Overrides margin auto */
   display: block; /* Changes display from flex to align to center */
   width: 50%;
-  margin-top: 1rem;
+  margin: 2rem auto;
   padding: 1rem; 
   border-radius: 10px;
   font-size: 1.2rem;
@@ -672,16 +693,19 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 400px) {
-  .contact-form { /* Form used in contact section */
-    margin-right: 5rem;
+  .contact-form input { /* Input and textareas used in contact form */
+    font-size: 1vh;
   }
 
   .contact-form textarea { /* Text area in form */
+    font-size: 1vh;
     height: 50%;
   }
 
-  .contact-form button { /* Button used in contact form */
-    margin-right: 1.4rem;
+  .contact-form button {
+    width: 60%;
+    font-size: 0.8rem;
+    padding: 5px;
   }
 }
 
