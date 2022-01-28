@@ -716,3 +716,28 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 /* #endregion */
+
+/* #region Projects */
+
+.projects-page-heading {
+  text-align: center;
+  padding: 8rem 0; /* To space text away from the header */
+  font-size: 8vh;
+  margin: auto; /* Prevents heading conflicting with header and footer */
+  text-decoration: underline #4c6bc1;
+}
+
+.projects-page-content {
+  display: flex;
+  flex-wrap: wrap; /* Handles content overflow */
+  justify-content: center;
+  margin: auto;
+}
+
+.projects-page-item {
+  width: 30%;
+  margin: auto;
+}
+
+
+/* #endregion */
