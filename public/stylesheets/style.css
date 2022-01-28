@@ -257,6 +257,24 @@ h1, h2, h3, h4, h5, h6, a, p {
   .footer button:hover {
     color: #ffffff;
   }
+
+  @media (max-width: 1000px) {
+    .footer-headings :nth-of-type(2) {
+      width: 54%; /* Increased width to keep heading aligned*/
+    }
+  }
+
+  @media (max-width: 600px) {
+    .footer-headings :nth-of-type(2) {
+      width: 57%; /* Increased width to keep heading aligned*/
+    }
+  }
+
+  @media (max-width: 400px) {
+    .footer-headings :nth-of-type(2) {
+      width: 59%; /* Increased width to keep heading aligned*/
+    }
+  }
   
 /* #endregion */
 
