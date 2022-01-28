@@ -168,8 +168,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .nav-links li { /* Individual navbar element */
     padding: 0.2rem 1rem; /* Padds elements so background hover works more effectively */
-    text-align: center; /* Algins text in center of element */
-    
+    text-align: center; /* Aligns text in center of element */
+    margin-right: 2rem; /* Offset text to align to center */
   }
 
   .nav-links li a:hover { 
@@ -680,6 +680,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 @media (max-width: 800px) {
   .contact-form {
     margin-bottom: 13rem; /* To prevent too large a space between footer and contact form */
+    width: 60%;
   }
 
   .contact-form input { /* Input and textareas used in contact form */
@@ -693,6 +694,11 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 400px) {
+  .contact-form {
+    margin-bottom: 13rem; /* To prevent too large a space between footer and contact form */
+    width: 70%;
+  }
+
   .contact-form input { /* Input and textareas used in contact form */
     font-size: 1vh;
   }
@@ -746,7 +752,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #endregion */
 
-/* #region Projects */
+/* #region Projects page */
 
 .projects-page-heading { /* Heading of projects page */
   text-align: center;
@@ -850,4 +856,54 @@ h1, h2, h3, h4, h5, h6, a, p {
     margin-bottom: 1rem;
   }
 }
+/* #endregion */
+
+/* #region Contact page */
+
+.map {
+  z-index: -1;
+  width: 100%;
+  height: 114vh; /* set slightly above the viewport to cover area before the footer */
+  position:absolute;
+  top: 0;
+  left: 0;
+  opacity: 40%;
+}
+
+.contact-page-content { /* Content area of error page */
+  text-align: center;
+  margin-left: 1rem; /* Moves text away from sedge of page */
+  padding: 8rem 0; /* To space text away from the header */
+  font-size: 1.5rem;
+}
+
+.contact-page-content h1 {
+  font-size: 4rem;
+  text-decoration: underline #4c6bc1;
+}
+
+@media(max-width: 1400px) {
+  .map {
+    height: 104vh; /* Height reduced to prevent image stretching */
+  }
+}
+
+@media(max-width: 1000px) {
+  .map {
+    height: 105vh; /* Height reduced to prevent image stretching */
+  }
+}
+
+@media(max-width: 700px) {
+  .map {
+    height: 92vh; /* Height reduced to prevent image stretching */
+  }
+}
+
+@media(max-width: 600px) {
+  .map {
+    height: 100%; /* Height fixed to prevent image stretching */
+  }
+}
+
 /* #endregion */
