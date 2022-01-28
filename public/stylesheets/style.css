@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 .portrait { /* Portrait image used in hero */
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
-  box-shadow: 20px -20px #181a1d;
+  box-shadow: 20px -20px #373b42;
 }
 
 @media (max-width: 2560px) { 
@@ -565,6 +565,10 @@ h1, h2, h3, h4, h5, h6, a, p {
   color: #4c6bc1;
 }
 
+.projects-item a:hover { 
+  color: #597de0;
+}
+
 .projects-item h1 {
   margin-top: 1rem;
 }
@@ -613,7 +617,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #endregion */
 
-/* #region Contact */
+/* #region Contact */ 
 
 .contact h1 { 
   text-align: center; 
@@ -649,6 +653,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin-top: 1rem;
   padding: 1rem; 
   border-radius: 10px;
+  font-size: 1.2rem;
 }
 
 @media (max-width: 800px) {
@@ -719,7 +724,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Projects */
 
-.projects-page-heading {
+.projects-page-heading { /* Heading of projects page */
   text-align: center;
   padding: 8rem 0; /* To space text away from the header */
   font-size: 8vh;
@@ -727,17 +732,98 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: underline #4c6bc1;
 }
 
-.projects-page-content {
+.projects-page-content { /* Content section of project page */
   display: flex;
   flex-wrap: wrap; /* Handles content overflow */
-  justify-content: center;
+  margin-bottom: 3rem;
+  overflow-x: hidden; /* Prevents scrollbar appearing when thumbnails are hovered */
+}
+
+.projects-page-item { /* Individual item in project page */
+  width: 33%;
+  margin: 5rem auto;
+}
+
+.projects-page-image:hover { 
+  animation: popOut 1s; /* Triggers animation for 1 second */
+  animation-fill-mode: forwards; /* Prevents animation from restarting */
+}
+
+@keyframes popOut { /* Fade in animation */  
+  100% {
+    transform: scale(1.03); /* Increases scale slightly */
+  }
+}
+
+.projects-page-thumbnail { /* Image tag used for thumbnails */
+  height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
+  display: flex;
   margin: auto;
 }
 
-.projects-page-item {
-  width: 30%;
+.projects-page-text {
+  width: 55%; /* Width altered to align text with image */
   margin: auto;
 }
 
+.projects-page-item a { 
+  text-decoration: none; /* Removes underline */
+  color: #4c6bc1;
+}
 
+.projects-page-item a:hover { 
+  color: #597de0;
+}
+
+@media(max-width: 2100px) {
+  .projects-page-text {
+    width: 66%; /* Width increased to maintain alignment with image */
+  }
+}
+
+@media(max-width: 1700px) {
+  .projects-page-text {
+    width: 81%; /* Width increased to maintain alignment with image */
+  }
+}
+
+@media(max-width: 1500px) {
+  .projects-page-text {
+    width: 62%; /* Width decreased to match less columns */
+  }
+
+  .projects-page-item { /* Individual item in project page */
+    width: 50%; /* Downsizes to two columns */
+  }
+}
+
+@media(max-width: 1300px) {
+  .projects-page-text {
+    width: 71%; /* Width increased to maintain alignment with image */
+  }
+}
+
+@media(max-width: 1000px) {
+  .projects-page-item { /* Individual item in project page */
+    width: 100%; /* Downsizes to single column */
+    margin: 3rem auto;
+  }
+
+  .projects-page-text {
+    text-align: center;
+  }
+}
+
+@media(max-width: 400px) {
+  .projects-page-heading { /* Heading of projects page */
+    padding: 6rem 0;
+    padding-top: 10rem; /* Increased top padding to maintain vertical centering with header and items */
+    font-size: 6vh;
+  }
+
+  .projects-page-content { /* Content section of project page */
+    margin-bottom: 1rem;
+  }
+}
 /* #endregion */
