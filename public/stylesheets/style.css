@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 .nav-toggle { /* Navbar hamburger menu */
   position: absolute; /* To ensure menu is always in the top right of the screen */
-  top: 2.2rem;
+  top: 2rem;
   right: 1rem;
   display: none; /* Sets display to none by default for javascript function */
   flex-direction: column; /* Sets flex direction to prevent bars from aligning to row */
