@@ -57,32 +57,6 @@ h1, h2, h3, h4, h5, h6, a, p {
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
-.navbar svg {
-  position: absolute; /* To ensure menu is always in the top right of the screen */
-  top: 2.15rem;
-  right: 2rem;
-  height: 24px;
-  width: 24px;
-  color: #ffffff;
-}
-
-.navbar svg:hover {
-  color: #4c6bc1;
-  transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
-}
-
-.theme-toggle-light { /* Theme toggle for lightmode */
-  height: auto; /* To maintain aspect ratio */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
-  visibility: visible; /* Defaults to visible until ThemeToggle function is called */
-}
-
-.theme-toggle-dark { /* Theme toggle for darkmode */
-  height: auto; /* To maintain aspect ratio */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
-  visibility: hidden; /* Defaults to hidden until ThemeToggle function is called */
-}
-
 .nav-toggle { /* Navbar hamburger menu */
   position: absolute; /* To ensure menu is always in the top right of the screen */
   top: 2.2rem;
@@ -128,8 +102,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .nav-links ul {
-  margin: 0 3.5rem;
   display: flex; /* Creates flexbox to align links in a row rather than column */
+  margin: auto; /* To align links to image */
 }
 
 .nav-links li {
@@ -153,12 +127,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   .navbar { /* Navbar */
     flex-direction: column; /* Alters flex direction to list items in a column */
   }
-
-  .navbar svg { 
-    right: 4rem;
-    color: #ffffff;
-  }
-
+  
   .nav-toggle { /* Navbar hamburger menu */
     display: flex; /* To show the menu when at this screen size */
   }

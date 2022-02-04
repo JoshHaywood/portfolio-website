@@ -27,21 +27,6 @@ window.addEventListener('scroll', function() {; //Event listener for mouse scrol
     }   
 });
 
-function ToggleTheme() {
-    var themeToggleDark = document.getElementsByClassName("theme-toggle-dark")[0];
-    var themeToggleLight = document.getElementsByClassName("theme-toggle-light")[0];
-
-    if (themeToggleLight.style.visibility == "hidden") {
-        themeToggleLight.style.visibility = "visible";
-        themeToggleDark.style.visibility = "hidden";
-    } 
-    
-    else {
-        themeToggleLight.style.visibility = "hidden";
-        themeToggleDark.style.visibility = "visible";
-    }
-}
-
 // #endregion
 
 // #region Footer
