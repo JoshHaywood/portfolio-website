@@ -534,16 +534,11 @@ h1, h2, h3, h4, h5, h6, a, p {
   .about-text {
     flex-direction: column; 
     text-align: center;
+    align-items: center;
   }
 
   .about-item { /* Individual list items used in about text section */
     width: 100%; /* Creates 3 rows instead of columns */
-  }
-}
-
-@media (max-width: 400px) {
-  .about-text {
-    margin-right: 3rem;
   }
 }
 
