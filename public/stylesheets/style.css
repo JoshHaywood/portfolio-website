@@ -402,16 +402,15 @@ h1, h2, h3, h4, h5, h6, a, p {
 .portrait { /* Portrait image used in hero */
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
-  box-shadow: 20px -20px #373b42;
+  box-shadow: 50px 30px #373b42;
+  border: 5px groove white;
+  border-radius: 50%;
+  width: 600px;
 }
 
 @media (max-width: 2560px) { 
   .hero-content {
     width: 98%; /* Re-centers image */
-  }
-
-  .portrait { /* Portrait image used in hero */
-    width: 550px; /* Scales up image */
   }
 }
 
