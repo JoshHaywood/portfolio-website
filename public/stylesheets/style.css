@@ -301,6 +301,65 @@ h1, h2, h3, h4, h5, h6, a, p {
   color: #101316;
 }
 
+@media (max-width: 1200px) {
+  .error-content h1 {
+    font-size: 4rem;
+  }
+
+  .error-content h5 {
+    font-size: 1rem;
+  }
+
+  .error-content button {
+    width: 15%; /* Width increased so text is one line */
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .error-content h1 {
+    font-size: 3rem;
+  }
+
+  .error-content h5 {
+    font-size: 0.8rem;
+  }
+
+  .error-content button {
+    width: 20%; /* Width increased so text is one line */
+    font-size: 0.6rem;
+    padding: 0.5rem; /* Button away from text */
+  }
+}
+
+@media (max-width: 600px) {
+  .error-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .error-content h5 {
+    font-size: 0.6rem;
+  }
+
+  .error-content button {
+    width: 25%; /* Width increased so text is one line */
+  }
+}
+
+@media (max-width: 400px) {
+  .error-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .error-content h5 {
+    font-size: 0.5rem;
+  }
+
+  .error-content button {
+    width: 30%; /* Width increased so text is one line */
+  }
+}
+
 /* #endregion */
 
 /* #region Index */
@@ -701,11 +760,17 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .contact-form input { /* Input and textareas used in contact form */
     font-size: 2vh;
+    margin: 1rem 0; 
   }
 
   .contact-form textarea { /* Text area in form */
     font-size: 2vh;
     height: 60%;
+    margin: 1rem 0; 
+  }
+
+  .contact-form button {
+    margin: 2rem auto;
   }
 }
 
@@ -764,6 +829,65 @@ h1, h2, h3, h4, h5, h6, a, p {
 .message-content a {
   text-decoration: none; /* Removes anchor text underline */
   color: #101316;
+}
+
+@media (max-width: 1200px) {
+  .message-content h1 {
+    font-size: 4rem;
+  }
+
+  .message-content h5 {
+    font-size: 1rem;
+  }
+
+  .message-content button {
+    width: 15%; /* Width increased so text is one line */
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .message-content h1 {
+    font-size: 3rem;
+  }
+
+  .message-content h5 {
+    font-size: 0.8rem;
+  }
+
+  .message-content button {
+    width: 20%; /* Width increased so text is one line */
+    font-size: 0.6rem;
+    padding: 0.5rem; /* Button away from text */
+  }
+}
+
+@media (max-width: 600px) {
+  .message-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .message-content h5 {
+    font-size: 0.6rem;
+  }
+
+  .message-content button {
+    width: 25%; /* Width increased so text is one line */
+  }
+}
+
+@media (max-width: 400px) {
+  .message-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .message-content h5 {
+    font-size: 0.5rem;
+  }
+
+  .message-content button {
+    width: 30%; /* Width increased so text is one line */
+  }
 }
 
 /* #endregion */
@@ -891,8 +1015,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 .map {
   z-index: -1;
   width: 100%;
-  height: 114vh; /* set slightly above the viewport to cover area before the footer */
-  position:absolute;
+  height: 125%; /* set above the viewport to cover area before the footer */
+  position: absolute;
   top: 0;
   left: 0;
   opacity: 40%;
