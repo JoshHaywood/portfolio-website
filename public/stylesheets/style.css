@@ -155,9 +155,15 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 }
 
-@media (max-width: 370px) { 
+@media (max-width: 500px) { 
   .navbar img { 
-    width: 170px;
+    width: 220px;
+  }
+}
+
+@media (max-width: 400px) { 
+  .navbar img { 
+    width: 180px;
   }
 }
 
@@ -311,7 +317,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 .hero-content { /* Content area of hero */
   display: flex; 
-  justify-content: space-around; 
+  justify-content: space-evenly; 
   align-items: center; 
   height: 100vh; /* Set to the same height as the background image */
 }
@@ -321,13 +327,14 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .hero-text h1 { 
-  font-size: 10vh;
+  font-size: 9vh;
   font-weight: 900;
   margin: 2rem 0;
 }
 
 .hero-text p { 
   font-size: 3vh; 
+  width: 99%;
 }
 
 .hero-text svg { 
@@ -374,56 +381,76 @@ h1, h2, h3, h4, h5, h6, a, p {
   box-shadow: 50px 30px #373b42;
   border: 5px groove white;
   border-radius: 50%;
-  width: 600px;
-}
-
-@media (max-width: 2560px) { 
-  .hero-content {
-    width: 98%; /* Re-centers image */
-  }
-}
-
-@media (max-width: 1920px) { 
-  .hero-content {
-    width: 97%; /* Re-centers image */
-  }
-
-  .portrait { /* Portrait image used in hero */
-    width: 450px; /* Scales up image */
-  }
-
-  .hero-text h1 { 
-    font-size: 9vh; 
-  }
-
-  .hero-text p { 
-    font-size: 3vh;
-  }
+  width: 450px;
 }
 
 @media (max-width: 1700px) { 
-  .hero-content { 
-    margin-left: 1rem; 
-  }
-}
-
-@media (max-width: 1400px) { 
-  .hero-text h1 { 
-    font-size: 9vh; 
-  }
-}
-
-@media (max-width: 1200px) { 
   .hero-text h1 { 
     font-size: 8vh; 
   }
 
-  .hero-text p {
-    font-size: 1.5rem; /* Rem was used as the desired size couldnt be achieved with VH */
+  .hero-text p { 
+    width: 90%;
   }
 
   .portrait { /* Portrait image used in hero */
-    width: 350px; /* Scales image down */
+    width: 400px;
+  }
+}
+
+@media (max-width: 1500px) { 
+  .hero-text { /* Text section of hero */
+    width: 50%;
+  }
+
+  .hero-text h1 { 
+    font-size: 7vh; 
+  }
+
+  .hero-text p { 
+    font-size: 2rem; /* Rem was used as the desired size couldnt be achieved with VH */
+    width: 100%; /* Stops text from bunching */
+  }
+
+  .portrait { /* Portrait image used in hero */
+    width: 350px;
+  }
+}
+
+@media (max-width: 1200px) { 
+  .hero-text { /* Text section of hero */
+    width: 60%;
+  }
+
+  .hero-text h1 { 
+    font-size: 6vh; 
+  }
+
+  .hero-text p {
+    font-size: 1.5rem; 
+    width: 90%; /* Stops text from bunching */
+  }
+
+  .portrait { /* Portrait image used in hero */
+    width: 300px;
+  }
+}
+
+@media (max-width: 1000px) { 
+  .hero-text { /* Text section of hero */
+    padding-left: 1rem; /* Prevents text reaching page edge */
+  }
+
+  .hero-text h1 { 
+    font-size: 5vh; 
+  }
+
+  .hero-text p {
+    font-size: 1.3rem; 
+  }
+  
+  .portrait { /* Portrait image used in hero */
+    width: 250px;
   }
 }
 
@@ -436,7 +463,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .hero-text { /* Text section of hero */
     order: 2; /* Re orders flex box to make text appear below image */
-    margin: 0 2rem;
+    height: 30%; /* Aligns content vertically */
+    width: 70%;
   }
 
   .hero-text h1 { 
@@ -449,17 +477,23 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 
   .portrait { /* Portrait image used in hero */
-    box-shadow: none;
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-text h1 { /* H1 of text section */
+    font-size: 5vh;
   }
 }
 
 @media (max-width: 400px) {
-  .hero-text h1 { /* H1 of text section */
-    font-size: 5vh;
+  .hero-text { /* Text section of hero */
+    width: 80%;
   }
 
-  .hero-text p {
-    font-size: 2vh;
+  .portrait { /* Portrait image used in hero */
+    box-shadow: none;
   }
 }
 
@@ -473,6 +507,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin: auto; /* To space content in center */
   width: 80%;
   margin-top: 5rem;
+  
 }
 
 .about-item { /* Columns used in about section */
@@ -498,7 +533,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 }
 
-@media (max-width: 500px) { 
+@media (max-width: 800px) { 
   .about-text {
     flex-direction: column; 
     text-align: center;
@@ -598,9 +633,13 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 400px) { 
+  .projects-item h1, .projects p, .projects a {
+    width: 95%;
+  }
+
   .projects-image { /* Thumbnails used in project section */
     height: 160px;
-    width: 300px;
+    width: 330px;
   }
 }
 
@@ -647,10 +686,17 @@ h1, h2, h3, h4, h5, h6, a, p {
   font-size: 1.2rem;
 }
 
+@media (max-width: 1200px) {
+  .contact-form {
+    margin-bottom: 18rem; /* To prevent too large a space between footer and contact form */
+    width: 60%;
+  }
+}
+
 @media (max-width: 800px) {
   .contact-form {
-    margin-bottom: 13rem; /* To prevent too large a space between footer and contact form */
-    width: 60%;
+    margin-bottom: 15rem; /* To prevent too large a space between footer and contact form */
+    width: 70%;
   }
 
   .contact-form input { /* Input and textareas used in contact form */
@@ -665,8 +711,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 @media (max-width: 400px) {
   .contact-form {
-    margin-bottom: 13rem; /* To prevent too large a space between footer and contact form */
-    width: 70%;
+    margin-bottom: 10rem; /* To prevent too large a space between footer and contact form */
+    width: 75%;
   }
 
   .contact-form input { /* Input and textareas used in contact form */
@@ -815,7 +861,18 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 600px) {
+  .projects-page-heading { /* Heading of projects page */
+    font-size: 7vh;
+  }
+
+  .projects-page-content { /* Content section of project page */
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media(max-width: 500px) {
   .projects-page-heading { /* Heading of projects page */
     padding: 6rem 0;
     padding-top: 10rem; /* Increased top padding to maintain vertical centering with header and items */
@@ -824,6 +881,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .projects-page-content { /* Content section of project page */
     margin-bottom: 1rem;
+    width: 80%;
   }
 }
 /* #endregion */
@@ -868,11 +926,20 @@ h1, h2, h3, h4, h5, h6, a, p {
   .map {
     height: 92vh; /* Height reduced to prevent image stretching */
   }
+
+  .contact-page-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 6rem;
+  }
 }
 
 @media(max-width: 600px) {
   .map {
     height: 100%; /* Height fixed to prevent image stretching */
+  }
+
+  .contact-page-content h1 {
+    margin-bottom: 7rem;
   }
 }
 

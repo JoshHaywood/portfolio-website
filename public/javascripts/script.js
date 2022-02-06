@@ -5,12 +5,12 @@ function ToggleNavLinks() { //Function to toggle navigation links display
     var navBar = document.getElementsByClassName("navbar")[0]; //Gets first instance of class name
     
     if (window.getComputedStyle(navLink).display === "none") { //If currently not displayed, computed style is used to ensure element is set to none
-        navLink.style.display = "flex"; //Set display to flex
-        navBar.style.background = "#181a1d"; //Sets background colour to secondary 
+        navLink.style.display = "flex";
+        navBar.style.background = "#181a1d"; 
     } 
     else {
-        navLink.style.display = "none"; //Else leave display as none
-        navBar.style.background = "none"; //Sets background back to none
+        navLink.style.display = "none"; 
+        navBar.style.background = "none"; 
     }
 };
 
@@ -19,11 +19,11 @@ window.addEventListener('scroll', function() {; //Event listener for mouse scrol
     var navBar = document.getElementsByClassName("navbar")[0]; //Gets first instance of class name
 
     if(scrollY >= 1){ //If user scrolls 1 pixel
-        navBar.style.background = "#181a1d"; //Sets background colour to secondary
+        navBar.style.background = "#181a1d"; 
     }
 
     if (scrollY < 1) { //If user scroll back to the point of no scroll
-        navBar.style.background = "none"; //Sets background colour back to none
+        navBar.style.background = "none"; 
     }   
 });
 
@@ -32,7 +32,7 @@ window.addEventListener('scroll', function() {; //Event listener for mouse scrol
 // #region Footer
 
 function ScrollTop() { //Function to scroll to top of the page
-    document.documentElement.scrollTop = 0; //Sets scroll top value to 0
+    document.documentElement.scrollTop = 0; 
 };
 
 // #endregion
