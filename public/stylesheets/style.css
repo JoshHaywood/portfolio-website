@@ -908,25 +908,10 @@ h1, h2, h3, h4, h5, h6, a, p {
 .contact-page-content h1 {
   font-size: 4rem;
   text-decoration: underline #4c6bc1;
-}
-
-@media(max-width: 1400px) {
-  .map {
-    height: 104vh; /* Height reduced to prevent image stretching */
-  }
-}
-
-@media(max-width: 1000px) {
-  .map {
-    height: 105vh; /* Height reduced to prevent image stretching */
-  }
+  margin-bottom: 8rem;
 }
 
 @media(max-width: 700px) {
-  .map {
-    height: 92vh; /* Height reduced to prevent image stretching */
-  }
-
   .contact-page-content h1 {
     font-size: 3.5rem;
     margin-bottom: 6rem;
@@ -934,10 +919,6 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media(max-width: 600px) {
-  .map {
-    height: 100%; /* Height fixed to prevent image stretching */
-  }
-
   .contact-page-content h1 {
     margin-bottom: 7rem;
   }
