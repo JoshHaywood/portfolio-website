@@ -609,8 +609,9 @@ h1, h2, h3, h4, h5, h6, a, p {
 /* #region Projects */
 
 .projects { /* Projects section */
-  margin-top: 15rem; 
+  margin-top: 11rem; 
   padding-bottom: 5rem;
+  padding-top: 2rem;
   background: #15171a; 
 }
 
@@ -753,7 +754,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   padding: 2rem 0; 
   font-size: 4vh; 
   text-decoration: underline #4c6bc1;
-  margin-top: 12rem;
+  margin-top: 8rem;
 }
 
 .contact-form { /* Form uses in contact section */
