@@ -823,6 +823,13 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin: 2rem 0; 
   border-radius: 5px;
   padding: 5px;
+  background-color: #181a1d; /* Prevents other instances overiding colour */
+  border: none;
+  border-bottom: 1px solid #4c6bc1;
+} 
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+  color: #ffffff;
 }
 
 .contact-form textarea { /* Text area in form */
@@ -839,6 +846,10 @@ h1, h2, h3, h4, h5, h6, a, p {
   padding: 1rem; 
   border-radius: 10px;
   font-size: 1.2rem;
+  background-color: #181a1d;
+  border: none;
+  color: #ffffff;
+  border-bottom: 1px solid #4c6bc1;
 }
 
 @media (max-width: 1200px) {
@@ -1120,14 +1131,8 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Contact page */
 
-.map {
-  z-index: -1;
-  width: 100%;
-  height: 125%; /* set above the viewport to cover area before the footer */
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 40%;
+.contact-page {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/contact-background.jpg"); /* Gradient to give a darker image colour */
 }
 
 .contact-page-content { /* Content area of error page */
@@ -1135,6 +1140,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin-left: 1rem; /* Moves text away from sedge of page */
   padding: 8rem 0; /* To space text away from the header */
   font-size: 1.5rem;
+  width: 100%;
 }
 
 .contact-page-content h1 {
