@@ -11,6 +11,11 @@ router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects' });
 });
 
+/* GET Portfolio project page */
+router.get('/portfolio-project', function(req, res, next) {
+  res.render('portfolio-project', { title: 'Portfolio Project' });
+});
+
 /* GET Contact page */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
