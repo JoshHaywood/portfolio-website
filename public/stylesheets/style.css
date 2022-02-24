@@ -1013,6 +1013,10 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Projects page */
 
+.projects-page {
+  margin-bottom: 5rem; /* Space footer away from content */
+}
+
 .projects-page-heading { /* Heading of projects page */
   text-align: center;
   padding: 8rem 0; /* To space text away from the header */
@@ -1033,6 +1037,11 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin: 5rem auto;
 }
 
+.projects-page-image {
+  height: auto; /* To maintain aspect ratio */
+  max-width: 100%; /* Sets max width to prevent image upscaling */
+}
+
 .projects-page-image:hover { 
   animation: popOut 1s; /* Triggers animation for 1 second */
   animation-fill-mode: forwards; /* Prevents animation from restarting */
@@ -1045,15 +1054,14 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .projects-page-thumbnail { /* Image tag used for thumbnails */
-  height: auto; /* To maintain aspect ratio */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
+  width: 600px;
   display: flex;
   margin: auto;
 }
 
 .projects-page-text {
   width: 55%; /* Width altered to align text with image */
-  margin: auto;
+  margin: 0 1rem;
 }
 
 .projects-page-item a { 
