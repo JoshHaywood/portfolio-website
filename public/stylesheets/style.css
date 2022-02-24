@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6, a, p {
     justify-content: space-between;
     margin: auto;
     padding-bottom: 3rem;
-    width: 90%;
+    width: 70%;
     font-size: 2vh;
   }
 
@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6, a, p {
     display: flex;
     color: #ffffff;
     padding: 1px 0;
-    width: 90%;
+    width: 70%;
     margin: auto;
     justify-content: space-between;
     border-top: 1px solid #4c6bc1;
@@ -244,12 +244,20 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 
   @media (max-width: 700px) {
+    .footer-content {
+      width: 80%;
+    }
+
     .footer-column h2 {
       font-size: 2vh;
     }
 
     .footer-column a {
       font-size: 1rem;
+    }
+
+    .footnote {
+      width: 80%;
     }
 
     .footnote p {
@@ -262,12 +270,20 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 
   @media (max-width: 400px) {
+    .footer-content {
+      width: 90%;
+    }
+
     .footer-column h2 {
       font-size: 1rem;
     }
 
     .footer-column a {
       font-size: 0.8rem;
+    }
+    
+    .footnote {
+      width: 90%;
     }
 
     .footnote p {
