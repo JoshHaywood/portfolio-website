@@ -159,15 +159,21 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 }
 
-@media (max-width: 500px) { 
+@media (max-width: 700px) { 
   .navbar img { 
+    height: 50px;
     width: 220px;
   }
 }
 
 @media (max-width: 400px) { 
   .navbar img { 
+    height: 40px;
     width: 180px;
+  }
+
+  .nav-toggle {
+    top: 1.6rem;
   }
 }
 
@@ -187,7 +193,7 @@ h1, h2, h3, h4, h5, h6, a, p {
     justify-content: space-between;
     margin: auto;
     padding-bottom: 3rem;
-    width: 70%;
+    width: 90%;
     font-size: 2vh;
   }
 
@@ -217,7 +223,7 @@ h1, h2, h3, h4, h5, h6, a, p {
     display: flex;
     color: #ffffff;
     padding: 1px 0;
-    width: 70%;
+    width: 90%;
     margin: auto;
     justify-content: space-between;
     border-top: 1px solid #4c6bc1;
@@ -235,7 +241,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 
 
-  @media (max-width: 1100px) {
+  @media (max-width: 700px) {
     .footer-column h2 {
       font-size: 2vh;
     }
@@ -243,14 +249,30 @@ h1, h2, h3, h4, h5, h6, a, p {
     .footer-column a {
       font-size: 1rem;
     }
+
+    .footnote p {
+      font-size: 1rem;
+    }
+
+    .footnote button {
+      font-size: 1rem;
+    }
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 400px) {
     .footer-column h2 {
       font-size: 1rem;
     }
 
     .footer-column a {
+      font-size: 0.8rem;
+    }
+
+    .footnote p {
+      font-size: 0.8rem;
+    }
+
+    .footnote button {
       font-size: 0.8rem;
     }
   }
@@ -510,7 +532,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   .hero-text { /* Text section of hero */
     order: 2; /* Re orders flex box to make text appear below image */
     height: 30%; /* Aligns content vertically */
-    width: 70%;
+    width: 90%;
   }
 
   .hero-text h1 { 
@@ -703,6 +725,11 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 800px) {
+  .projects-content { /* Content of the project section */
+    width: 85%;
+    margin: auto;
+  }
+
   .projects-image {
     width: 600px;
   }
@@ -782,9 +809,15 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .contact-form {
     width: 70%;
+  }
+}
+
+@media (max-width: 800px) {
+  .contact-form {
+    width: 80%;
   }
 
   .contact-form input { /* Input and textareas used in contact form */
@@ -804,10 +837,6 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 400px) {
-  .contact-form {
-    width: 75%;
-  }
-
   .contact-form input { /* Input and textareas used in contact form */
     font-size: 1vh;
   }
