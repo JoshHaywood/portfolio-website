@@ -21,6 +21,8 @@ body { /* Webpage body */
   background-color: var(--bg-primary);
   margin: 0; /* Margin removed */
   padding: 0; /* Padding removed */
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body::-webkit-scrollbar { /* Scrollbar */
@@ -606,10 +608,17 @@ h1, h2, h3, h4, h5, h6, a, p {
     flex-direction: column; 
     text-align: center;
     align-items: center;
+    margin-top: 5rem;
   }
 
   .about-item { /* Individual list items used in about text section */
     width: 100%; /* Creates 3 rows instead of columns */
+  }
+}
+
+@media (max-width: 400px) { 
+  .about-text {
+    margin-top: 3rem;
   }
 }
 
@@ -722,26 +731,35 @@ h1, h2, h3, h4, h5, h6, a, p {
   .projects-image {
     width: 700px; /* Resize images as flex direction has changed */
   }
+
+
 }
 
 @media (max-width: 800px) {
+  .projects {
+    margin-top: 6rem;
+    padding-top: 0;
+  }
+
   .projects-content { /* Content of the project section */
-    width: 85%;
-    margin: auto;
+    width: 100%;
   }
 
   .projects-image {
-    width: 600px;
+    width: 550px;
+  }
+
+  .projects-item h1 {
+    margin-top: 0;
+    padding-top: 2rem;
   }
 }
 
 @media (max-width: 600px) {
   .projects-image {
-    width: 500px;
+    width: 450px;
   }
 }
-
-
 
 @media (max-width: 500px) { 
   .projects-image { /* Thumbnails used in project section */
@@ -750,6 +768,10 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 400px) { 
+  .projects {
+    margin-top: 4rem;
+  }
+
   .projects-item h1, .projects p, .projects a {
     width: 95%;
   }
@@ -816,8 +838,13 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 800px) {
+  .contact h1 {
+    margin-top: 3rem;
+  }
+  
   .contact-form {
     width: 80%;
+    margin-bottom: 15rem;
   }
 
   .contact-form input { /* Input and textareas used in contact form */
@@ -833,10 +860,18 @@ h1, h2, h3, h4, h5, h6, a, p {
 
   .contact-form button {
     margin: 2rem auto;
+    font-size: 2vh;
+    padding: 0.5rem;
+    width: 40%;
   }
 }
 
 @media (max-width: 400px) {
+  .contact-form {
+    width: 85%;
+    margin-bottom: 10rem;
+  }
+
   .contact-form input { /* Input and textareas used in contact form */
     font-size: 1vh;
   }
