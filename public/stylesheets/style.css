@@ -2,38 +2,35 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevents any uncessary horizontal scrolling */
 }
 
-:root { /* Project root */
-  font-size: 16px; /* Fontsize specification */
+:root { 
+  font-size: 16px; 
   font-family: 'Roboto', sans-serif;
-  --text-primary: #ffffff; /* Primary text colour */
-  --text-secondary: #4c6bc1; /* Secondary text colour */
-  --bg-primary: #101316; /* Primary background colour */
-  --bg-secondary: #181a1d; /* Secondary background colour */
+  --text-primary: #ffffff; 
 }
 
 * {
   box-sizing: border-box; /* Incase browsers do not use border box */
 }
 
-body { /* Webpage body */
-  background-color: var(--bg-primary);
-  margin: 0; /* Margin removed */
-  padding: 0; /* Padding removed */
-  overflow-x: hidden;
+body {
+  background-color: #101316;
+  margin: 0; 
+  padding: 0; 
   max-width: 100%;
 }
 
-body::-webkit-scrollbar { /* Scrollbar */
+body::-webkit-scrollbar { 
   width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track { /* Scrollbar background */
+body::-webkit-scrollbar-track { 
   background: #181a1d;
 }
 
-body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
+body::-webkit-scrollbar-thumb { 
   background: #4c6bc1;
 }
 
@@ -43,7 +40,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Header */
 
-.navbar { /* Navbar*/
+.navbar { 
   position: fixed; /* So navbar is superimposed over the rest of the page content */
   width: 100%;
   padding: 1rem;
@@ -58,12 +55,12 @@ h1, h2, h3, h4, h5, h6, a, p {
   width: 260px;
 }
 
-.logo{ /* Logo used in navbar*/
+.logo{ 
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
-.nav-toggle { /* Navbar hamburger menu */
+.nav-toggle { 
   position: absolute; /* To ensure menu is always in the top right of the screen */
   top: 2rem;
   right: 1rem;
@@ -79,7 +76,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .nav-toggle:hover {
-  cursor: pointer; /* Sets cursor type to pointer */
+  cursor: pointer; /* Sets cursor type to pointer as this isnt dont by default */
 }
 
 .nav-toggle .bar { 
@@ -87,33 +84,33 @@ h1, h2, h3, h4, h5, h6, a, p {
   width: 100%;
   background-color: #ffffff;
   border-radius: 10px;
-  transition: all 100ms ease-in-out; /* Transition for all elements for 0.1 seconds, slowing at the beginning and end. */
+  transition: all 100ms ease-in-out;
 }
 
-.nav-toggle:hover .bar:nth-of-type(1){ /* First child element of bar */
-  transition: all 100ms ease-in-out; /* Transition for 100ms with slow start and finish */
-  transform: rotate(45deg); /* Rotates 45 degress to create one of the lines used in x */
-  transform-origin: top left; /* Moves to top-left */
+.nav-toggle:hover .bar:nth-of-type(1){ 
+  transition: all 100ms ease-in-out; 
+  transform: rotate(45deg); 
+  transform-origin: top left; 
 }
-.nav-toggle:hover .bar:nth-of-type(2){ /* Second child element of bar */
-  transition: all 100ms ease-in-out; /* Transition for 100ms with slow start and finish */
-  transform-origin: center; /* Moves to center */
-  width: 0; /* Width is removed to give the impression bar has disappeared */
+.nav-toggle:hover .bar:nth-of-type(2){ 
+  transition: all 100ms ease-in-out; 
+  transform-origin: center; 
+  width: 0; 
 }
 
-.nav-toggle:hover .bar:nth-of-type(3){ /* Second child element of bar */
-  transition: all 100ms ease-in-out; /* Transition for 100ms with slow start and finish */
-  transform: rotate(-45deg); /* Rotates -45 degress to create the other line used in x */
-  transform-origin: bottom left; /* Moves to bottom-left */
+.nav-toggle:hover .bar:nth-of-type(3){ 
+  transition: all 100ms ease-in-out; 
+  transform: rotate(-45deg); 
+  transform-origin: bottom left; 
 }
 
 .nav-links ul {
   display: flex; /* Creates flexbox to align links in a row rather than column */
-  margin: auto; /* To align links to image */
 }
 
 .nav-links li {
   list-style: none; /* Removes bullet points from list items */
+  margin: 0 1rem;
 }
 
 .nav-links li a {
@@ -121,21 +118,20 @@ h1, h2, h3, h4, h5, h6, a, p {
   text-decoration: none; /* Removes underline */
   color: #ffffff;
   padding: 1rem;
-  display: block; /* Centers links */
 }
 
 .nav-links li a:hover { 
   color: #4c6bc1;
-  transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
+  transition: all 0.5s ease-out; 
 }
 
 @media (max-width: 800px) {
-  .navbar { /* Navbar */
+  .navbar { 
     flex-direction: column; /* Alters flex direction to list items in a column */
   }
   
-  .nav-toggle { /* Navbar hamburger menu */
-    display: flex; /* To show the menu when at this screen size */
+  .nav-toggle { 
+    display: flex; /* Menu appear as part of JS function */
   }
 
   .nav-links {
@@ -144,20 +140,20 @@ h1, h2, h3, h4, h5, h6, a, p {
   }
 
   .nav-links ul {
-    width: 100%; /* Ensures elements are centered */
-    flex-direction: column; /* Alters flex direction of child elements in the nav bar */
+    width: 100%; 
+    flex-direction: column; 
   }
 
-  .nav-links li { /* Individual navbar element */
+  .nav-links li { 
     padding: 0.2rem 1rem; /* Padds elements so background hover works more effectively */
-    text-align: center; /* Aligns text in center of element */
+    text-align: center; 
     margin-right: 2rem; /* Offset text to align to center */
   }
 
   .nav-links li a:hover { 
     background-color: #2d3136;
     border-radius: 10px; 
-    transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
+    transition: all 0.5s ease-out; 
   }
 }
 
@@ -196,7 +192,7 @@ h1, h2, h3, h4, h5, h6, a, p {
     margin: auto;
     padding-bottom: 3rem;
     width: 70%;
-    font-size: 2vh;
+    font-size: 1.5vh;
   }
 
   .footer-column { /* Columns used in footer */
@@ -235,7 +231,7 @@ h1, h2, h3, h4, h5, h6, a, p {
     background-color: Transparent;
     border: none;
     color: #9e9e9e;
-    font-size: 1rem;
+    font-size: 0.8vw;
   }
 
   .footer button:hover {
@@ -249,23 +245,15 @@ h1, h2, h3, h4, h5, h6, a, p {
     }
 
     .footer-column h2 {
-      font-size: 2vh;
+      font-size: 2.7vw;
     }
 
-    .footer-column a {
-      font-size: 1rem;
+    .footer-column a, .footnote p, .footnote button {
+      font-size: 1.7vw;
     }
 
     .footnote {
       width: 80%;
-    }
-
-    .footnote p {
-      font-size: 1rem;
-    }
-
-    .footnote button {
-      font-size: 1rem;
     }
   }
 
@@ -275,23 +263,15 @@ h1, h2, h3, h4, h5, h6, a, p {
     }
 
     .footer-column h2 {
-      font-size: 1rem;
+      font-size: 3.1vw;
     }
 
-    .footer-column a {
-      font-size: 0.8rem;
+    .footer-column a, .footnote p, .footnote button {
+      font-size: 2.1vw;
     }
     
     .footnote {
       width: 90%;
-    }
-
-    .footnote p {
-      font-size: 0.8rem;
-    }
-
-    .footnote button {
-      font-size: 0.8rem;
     }
   }
   
@@ -299,91 +279,91 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Error */
 
-.error-content { /* Content area of error page */
+.message-content { /* Content area of error page */
   text-align: center;
   margin-left: 1rem; /* Moves text away from edge of page */
   padding: 8rem 0; /* To space text away from the header */
   font-size: 1.5rem;
 }
 
-.error-content h1 {
-  font-size: 5rem;
+.message-content h1 {
+  font-size: 4.2vw;
 }
 
-.error-content button {
+.message-content button {
   width: 15%;
   padding: 1rem; /* Button away from text */
   margin: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1vw;
   background-color: #4c6bc1;
   border: none;
 }
 
-.error-content button:hover {
+.message-content button:hover {
   background-color: #597de0;
 }
 
-.error-content a {
+.message-content a {
   text-decoration: none; /* Removes anchor text underline */
   color: #101316;
 }
 
 @media (max-width: 1200px) {
-  .error-content h1 {
-    font-size: 4rem;
+  .message-content h1 {
+    font-size: 5vw;
   }
 
-  .error-content h5 {
-    font-size: 1rem;
+  .message-content h5 {
+    font-size: 1.4vw;
   }
 
-  .error-content button {
+  .message-content button {
     width: 15%; /* Width increased so text is one line */
-    font-size: 0.8rem;
+    font-size: 1vw;
   }
 }
 
 @media (max-width: 900px) {
-  .error-content h1 {
-    font-size: 3rem;
+  .message-content h1 {
+    font-size: 6vw;
   }
 
-  .error-content h5 {
-    font-size: 0.8rem;
+  .message-content h5 {
+    font-size: 1.6vw;
   }
 
-  .error-content button {
-    width: 20%; /* Width increased so text is one line */
-    font-size: 0.6rem;
+  .message-content button {
+    font-size: 1.2vw;
     padding: 0.5rem; /* Button away from text */
   }
 }
 
 @media (max-width: 600px) {
-  .error-content h1 {
-    font-size: 2.2rem;
+  .message-content h1 {
+    font-size: 7vw;
   }
 
-  .error-content h5 {
-    font-size: 0.6rem;
+  .message-content h5 {
+    font-size: 1.8vw;
   }
 
-  .error-content button {
-    width: 25%; /* Width increased so text is one line */
+  .message-content button {
+    font-size: 1.4vw;
   }
 }
 
 @media (max-width: 400px) {
-  .error-content h1 {
-    font-size: 1.8rem;
+  .message-content h1 {
+    font-size: 8vw;
   }
 
-  .error-content h5 {
-    font-size: 0.5rem;
+  .message-content h5 {
+    font-size: 2.5vw;
   }
 
-  .error-content button {
-    width: 30%; /* Width increased so text is one line */
+  .message-content button {
+    font-size: 2vw;
+    width: 25%; /* Prevents text from overlapping too multiple lines */
   }
 }
 
@@ -393,7 +373,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Hero */
 
-.hero { /* Hero section */
+.hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/background.png"); /* Gradient to give a darker image colour */
   height: 100vh; /* Hero is full screen size on page load */
   background-position: center;
@@ -401,25 +381,25 @@ h1, h2, h3, h4, h5, h6, a, p {
   background-size: cover; 
 }
 
-.hero-content { /* Content area of hero */
+.hero-content { 
   display: flex; 
   justify-content: space-evenly; 
   align-items: center; 
   height: 100vh; /* Set to the same height as the background image */
 }
 
-.hero-text { /* Text section of hero */
-  flex-direction: column; /* Flexes heading and text to column instead of row */
+.hero-text { 
+  flex-direction: column; /* Flexs heading and text to column instead of row */
 }
 
 .hero-text h1 { 
-  font-size: 9vh;
+  font-size: 5vw;
   font-weight: 900;
   margin: 2rem 0;
 }
 
 .hero-text p { 
-  font-size: 3vh; 
+  font-size: 1.5vw; 
   width: 99%;
 }
 
@@ -428,26 +408,28 @@ h1, h2, h3, h4, h5, h6, a, p {
   width: 24px;
   margin: 1rem; 
   color: #ffffff; 
+  fill: #ffffff;
   margin-left: 0; /* No margin on left so svgs are inline with text */
 }
 
 .hero-text svg:hover { 
   color: #9e9e9e; 
-  transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
+  fill: #9e9e9e; 
+  transition: all 0.5s ease-out; 
 }
 
-.hero-text h1, .hero-text p, .github-icon, .envelope-icon { /* All items in hero section, listed individually as the parent element wouldnt apply the effect */
-  animation: fadeInUp 3s; /* Text fades and moves up */
+.hero-text h1, .hero-text p, .hero-text svg { 
+  animation: fadeInUp 3s;
 }
 
-@keyframes fadeInUp { /* Fade in and up animation */
+@keyframes fadeInUp { 
   0% { 
      opacity: 0; 
      transform:translate3d(0, 100%, 0); /* Translates elements up Y vector */
   }
   
   100% { 
-     opacity: 1; 
+     opacity: 1; /* Alters opacity */
      transform: none;
   }
 }
@@ -457,11 +439,11 @@ h1, h2, h3, h4, h5, h6, a, p {
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
 
-.hero-image { /* Image used in hero */
-  animation: fadeInUp 3s; /* Text fades and moves up */
+.hero-image { 
+  animation: fadeInUp 3s;
 }
 
-.portrait { /* Portrait image used in hero */
+.portrait {
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
   box-shadow: 50px 30px #373b42;
@@ -472,114 +454,114 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 @media (max-width: 1700px) { 
   .hero-text h1 { 
-    font-size: 8vh; 
+    font-size: 5.5vw; 
   }
 
   .hero-text p { 
     width: 90%;
+    font-size: 1.7vw;
   }
 
-  .portrait { /* Portrait image used in hero */
+  .portrait {
     width: 400px;
   }
 }
 
 @media (max-width: 1500px) { 
-  .hero-text { /* Text section of hero */
-    width: 50%;
+  .hero-text {
+    width: 45%;
   }
 
   .hero-text h1 { 
-    font-size: 7vh; 
+    font-size: 6vw; 
   }
 
   .hero-text p { 
-    font-size: 2rem; /* Rem was used as the desired size couldnt be achieved with VH */
+    font-size: 1.8vw; 
     width: 100%; /* Stops text from bunching */
   }
 
-  .portrait { /* Portrait image used in hero */
+  .portrait {
     width: 350px;
   }
 }
 
 @media (max-width: 1200px) { 
-  .hero-text { /* Text section of hero */
+  .hero-text {
     width: 60%;
   }
 
   .hero-text h1 { 
-    font-size: 6vh; 
+    font-size: 7vw; 
   }
 
   .hero-text p {
-    font-size: 1.5rem; 
-    width: 90%; /* Stops text from bunching */
+    font-size: 2vw; 
+    width: 90%;
   }
 
-  .portrait { /* Portrait image used in hero */
+  .portrait { 
     width: 300px;
   }
 }
 
 @media (max-width: 1000px) { 
-  .hero-text { /* Text section of hero */
-    padding-left: 1rem; /* Prevents text reaching page edge */
-  }
-
   .hero-text h1 { 
-    font-size: 5vh; 
+    font-size: 8vw; 
   }
 
   .hero-text p {
-    font-size: 1.3rem; 
+    font-size: 2.2vw; 
   }
   
-  .portrait { /* Portrait image used in hero */
+  .portrait {
     width: 250px;
   }
 }
 
 @media (max-width: 800px) {
-  .hero-content { /* Content section of hero */
-    flex-direction: column; /* Changes flex direction to column */
-    justify-content: center; /* Centers content vertically */
-    margin: auto; /* Centers content horizontally */
+  .hero-content { 
+    flex-direction: column; 
+    justify-content: center;
   }
 
-  .hero-text { /* Text section of hero */
+  .hero-text {
     order: 2; /* Re orders flex box to make text appear below image */
-    height: 30%; /* Aligns content vertically */
-    width: 90%;
+    margin: 0 auto;
+    width: 80%;
   }
 
   .hero-text h1 { 
-    font-size: 6vh; 
+    font-size: 11vw; 
   }
 
-  .hero-image { /* Image used in hero */
+  .hero-text p {
+    font-size: 3.5vw; 
+    width: 100%; /* Prevents text bunching */
+  }
+
+  .hero-image { 
     order: 1; /* Orders image above text */
-    margin: 2rem 0;
+    margin: 3rem 0;
   }
 
-  .portrait { /* Portrait image used in hero */
-    width: 300px;
+  .portrait {
+    width: 350px;
   }
 }
 
 @media (max-width: 500px) {
-  .hero-text h1 { /* H1 of text section */
-    font-size: 5vh;
-  }
-}
-
-@media (max-width: 400px) {
-  .hero-text { /* Text section of hero */
-    width: 80%;
+  .hero-text h1 { 
+    font-size: 14vw;
   }
 
-  .portrait { /* Portrait image used in hero */
+  .hero-text p {
+    font-size: 4vw; 
+  }
+
+  .portrait {
     box-shadow: none;
+    width: 300px;
   }
 }
 
@@ -587,36 +569,59 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region About */
 
-.about-text { /* Text section of about */
+.about-text { 
   display: flex;
-  list-style: none; /* Removes bullet points from list */
-  margin: auto; /* To space content in center */
+  list-style: none; 
+  margin: auto; 
   width: 80%;
-  margin-top: 10rem;
-  
+  margin-top: 10rem;  
 }
 
-.about-item { /* Columns used in about section */
+.about-item { 
   width: 33%; /* Sets width to a third of the screen in order to create 3 columns */
   margin: 0 1rem;
 }
 
 .about-text h1 { 
-  font-size: 4vh; 
+  font-size: 2vw; 
   text-align: center; 
   text-decoration: underline #4c6bc1;
 }
 
 .about-text p { 
-  font-size: 2vh; 
+  font-size: 1.1vw; 
   white-space: pre-line; /* Seperates text at a full stop */
   margin: 3rem 0; 
 }
 
-@media (max-width: 1000px) { 
-  .about-text h1 {
-    font-size: 3vh;
+@media (max-width: 1500px) {
+  .about-text h1 { 
+    font-size: 2.2vw;
   }
+  
+  .about-text p { 
+    font-size: 1.3vw; 
+  } 
+}
+
+@media (max-width: 1200px) {
+  .about-text h1 { 
+    font-size: 2.4vw;
+  }
+  
+  .about-text p { 
+    font-size: 1.5vw; 
+  } 
+}
+
+@media (max-width: 900px) {
+  .about-text h1 { 
+    font-size: 2.8vw;
+  }
+  
+  .about-text p { 
+    font-size: 1.9vw; 
+  } 
 }
 
 @media (max-width: 800px) { 
@@ -627,14 +632,30 @@ h1, h2, h3, h4, h5, h6, a, p {
     margin-top: 5rem;
   }
 
-  .about-item { /* Individual list items used in about text section */
-    width: 100%; /* Creates 3 rows instead of columns */
+  .about-text h1 { 
+    font-size: 4vw;
+  }
+  
+  .about-text p { 
+    font-size: 3.1vw; 
+  }
+
+  .about-item { 
+    width: 100%; /* Creates 1 column instead of rows */
   }
 }
 
-@media (max-width: 400px) { 
+@media (max-width: 500px) { 
   .about-text {
     margin-top: 3rem;
+  }
+
+  .about-text h1 { 
+    font-size: 5vw;
+  }
+  
+  .about-text p { 
+    font-size: 4.1vw; 
   }
 }
 
@@ -642,7 +663,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Projects */
 
-.projects { /* Projects section */
+.projects { 
   margin-top: 11rem; 
   padding-bottom: 5rem;
   padding-top: 2rem;
@@ -652,26 +673,26 @@ h1, h2, h3, h4, h5, h6, a, p {
 .projects h1 { 
   text-align: center; 
   padding-top: 4rem;
-  font-size: 4vh; 
+  font-size: 2.1vw; 
   text-decoration: underline #4c6bc1; 
 }
 
-.projects-content { /* Content of the project section */
+.projects-content { 
   display: flex; 
   justify-content: space-evenly;
 }
 
 .projects-content h1 { 
   text-align: left;
-  font-size: 2vh;
+  font-size: 1.1vw;
 }
 
-.projects-item { /* Items used in the projects list */
+.projects-item { 
   margin: 5rem 0;
 }
 
 .projects-item a { 
-  text-decoration: none; /* Removes underline */
+  text-decoration: none; 
   color: #4c6bc1;
 }
 
@@ -683,23 +704,23 @@ h1, h2, h3, h4, h5, h6, a, p {
   margin-top: 1rem;
 }
 
-.projects-image { /* Thumbnails used in project section */
+.projects-image { 
   width: 900px; 
   margin: auto;
 }
 
 .projects-image:hover { 
-  animation: popOut 1s; /* Triggers animation for 1 second */
+  animation: popOut 1s; 
   animation-fill-mode: forwards; /* Prevents animation from restarting */
 }
 
-@keyframes popOut { /* Fade in animation */  
+@keyframes popOut { 
   100% {
     transform: scale(1.03); /* Increases scale slightly */
   }
 }
 
-.projects-thumbnail { /* Image tag used for thumbnails */
+.projects-thumbnail { 
   height: auto; /* To maintain aspect ratio */
   max-width: 100%; /* Sets max width to prevent image upscaling */
 }
@@ -717,8 +738,20 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 1600px) {
+  .projects h1 { 
+    font-size: 3.1vw;
+  }
+
   .projects-image {
     width: 600px;
+  }
+
+  .projects-item h1 { 
+    font-size: 1.8vw;
+  }
+  
+  .projects-item p { 
+    font-size: 1.3vw; 
   }
 }
 
@@ -729,71 +762,131 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 @media (max-width: 1200px) {
-  .projects-image {
-    width: 450px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .projects-content { /* Content of the project section */
-    flex-direction: column; /* Changes flex direction to column from row */
-  }
-
-  .projects-item { /* Items used in the projects list */ 
-    display: block;
-    margin: 3rem auto; /* Vertical margin applied to counteract the effects of flex change */
-  }
-
-  .projects-image {
-    width: 700px; /* Resize images as flex direction has changed */
-  }
-
-
-}
-
-@media (max-width: 800px) {
-  .projects {
-    margin-top: 6rem;
-    padding-top: 0;
-  }
-
-  .projects-content { /* Content of the project section */
-    width: 100%;
+  .projects h1 { 
+    font-size: 4.1vw;
   }
 
   .projects-image {
     width: 550px;
   }
 
-  .projects-item h1 {
-    margin-top: 0;
-    padding-top: 2rem;
+  .projects-item h1 { 
+    font-size: 2vw;
+  }
+  
+  .projects-item p { 
+    font-size: 1.5vw; 
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1110px) {
+  .projects h1 { 
+    font-size: 5.1vw;
+  }
+
+  .projects-content { 
+    flex-direction: column; /* Changes flex direction to column from row */
+  }
+  
+  .projects-item { 
+    display: block;
+    margin: 4rem auto; /* Vertical margin applied to counteract the effects of flex change */
+  }
+  
   .projects-image {
-    width: 450px;
+    width: 800px; /* Resize images as flex direction has changed */
+  }
+  .projects-item h1 { 
+    font-size: 3vw;
+  }
+  
+  .projects-item p { 
+    font-size: 2.5vw; 
+  }
+}
+
+@media (max-width: 900px) {
+  .projects {
+    margin-top: 6rem;
+    padding-top: 0;
+  }
+
+  .projects-content {
+    width: 100%;
+  }
+
+  .projects-image {
+    width: 700px;
+  }
+
+  .projects-item h1 {
+    margin-top: 0;
+    padding-top: 2rem;
+    font-size: 2.8vw;
+  }
+
+  .projects-item p { 
+    font-size: 2.3vw; 
+  }
+}
+
+@media (max-width: 700px) {
+  .projects h1 { 
+    font-size: 5.5vw;
+  }
+
+  .projects-image {
+    width: 600px;
+  }
+
+  .projects-item h1 {
+    margin-top: 0;
+    padding-top: 2rem;
+    font-size: 3.2vw;
+  }
+
+  .projects-item p { 
+    font-size: 2.7vw; 
+  }
+}
+
+@media (max-width: 600px) { 
+  .projects h1 { 
+    font-size: 6vw;
+  }
+
+  .projects-item h1 {
+    font-size: 3.4vw;
+  }
+
+  .projects-image {
+    width: 500px;
   }
 }
 
 @media (max-width: 500px) { 
-  .projects-image { /* Thumbnails used in project section */
-    width: 400px;
-  }
-}
-
-@media (max-width: 400px) { 
   .projects {
     margin-top: 4rem;
+  }
+
+  .projects h1 { 
+    font-size: 7vw;
+  }
+
+  .projects-item h1 {
+    font-size: 3.8vw;
+  }
+
+  .projects-item p { 
+    font-size: 3.3vw; 
   }
 
   .projects-item h1, .projects p, .projects a {
     width: 95%;
   }
 
-  .projects-image { /* Thumbnails used in project section */
-    width: 350px;
+  .projects-image { 
+    width: 450px;
   }
 }
 
@@ -921,7 +1014,7 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 /* #region Message-sent */
 
-.message-content { /* Content area of message-sent page */
+.message-content { /* Content area of error page */
   text-align: center;
   margin-left: 1rem; /* Moves text away from edge of page */
   padding: 8rem 0; /* To space text away from the header */
@@ -929,14 +1022,14 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 .message-content h1 {
-  font-size: 5rem;
+  font-size: 4.2vw;
 }
 
 .message-content button {
   width: 15%;
   padding: 1rem; /* Button away from text */
   margin: 2rem 0;
-  font-size: 1.2rem;
+  font-size: 1vw;
   background-color: #4c6bc1;
   border: none;
 }
@@ -952,60 +1045,60 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 @media (max-width: 1200px) {
   .message-content h1 {
-    font-size: 4rem;
+    font-size: 5vw;
   }
 
   .message-content h5 {
-    font-size: 1rem;
+    font-size: 1.4vw;
   }
 
   .message-content button {
     width: 15%; /* Width increased so text is one line */
-    font-size: 0.8rem;
+    font-size: 1vw;
   }
 }
 
 @media (max-width: 900px) {
   .message-content h1 {
-    font-size: 3rem;
+    font-size: 6vw;
   }
 
   .message-content h5 {
-    font-size: 0.8rem;
+    font-size: 1.6vw;
   }
 
   .message-content button {
-    width: 20%; /* Width increased so text is one line */
-    font-size: 0.6rem;
+    font-size: 1.2vw;
     padding: 0.5rem; /* Button away from text */
   }
 }
 
 @media (max-width: 600px) {
   .message-content h1 {
-    font-size: 2.2rem;
+    font-size: 7vw;
   }
 
   .message-content h5 {
-    font-size: 0.6rem;
+    font-size: 1.8vw;
   }
 
   .message-content button {
-    width: 25%; /* Width increased so text is one line */
+    font-size: 1.4vw;
   }
 }
 
 @media (max-width: 400px) {
   .message-content h1 {
-    font-size: 1.8rem;
+    font-size: 8vw;
   }
 
   .message-content h5 {
-    font-size: 0.5rem;
+    font-size: 2.5vw;
   }
 
   .message-content button {
-    width: 30%; /* Width increased so text is one line */
+    font-size: 2vw;
+    width: 25%; /* Prevents text from overlapping too multiple lines */
   }
 }
 
