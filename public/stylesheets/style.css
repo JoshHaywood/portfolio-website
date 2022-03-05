@@ -109,19 +109,17 @@ h1, h2, h3, h4, h5, h6, a, p {
 
 .nav-links ul {
   display: flex; /* Creates flexbox to align links in a row rather than column */
-  margin: auto; /* To align links to image */
 }
 
 .nav-links li {
   list-style: none; /* Removes bullet points from list items */
+  margin: 0 2rem;
 }
 
 .nav-links li a {
   font-size: 1.5rem;
   text-decoration: none; /* Removes underline */
   color: #ffffff;
-  padding: 1rem;
-  display: block; /* Centers links */
 }
 
 .nav-links li a:hover { 
@@ -151,7 +149,7 @@ h1, h2, h3, h4, h5, h6, a, p {
   .nav-links li { /* Individual navbar element */
     padding: 0.2rem 1rem; /* Padds elements so background hover works more effectively */
     text-align: center; /* Aligns text in center of element */
-    margin-right: 2rem; /* Offset text to align to center */
+    margin: 1rem 0;
   }
 
   .nav-links li a:hover { 
