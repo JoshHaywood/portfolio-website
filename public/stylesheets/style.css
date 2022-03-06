@@ -225,6 +225,16 @@ img {
   }
 }
 
+@media (max-width: 400px) {
+  .navbar img {
+    width: 200px;
+  }
+
+  .hamburger { 
+    top: 1.7rem;
+  }
+}
+
 /* #endregion */
 
 /* #region Footer */
@@ -409,9 +419,14 @@ img {
     flex-direction: column;
   }
 
+  .hero .container, .hero img {
+    width: 80%;
+  }
+
   .hero .container {
     order: 2; /* Image appears on top */
     margin: 3rem 0;
+    height: 40%;
   }
 
   .hero .container h1 { 
@@ -431,6 +446,16 @@ img {
     order: 1;
     width: 250px;
     margin-top: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero .container h1 {
+    font-size: 3rem;
+  }
+
+  .hero .container h2 {
+    font-size: 1.3rem;
   }
 }
 
