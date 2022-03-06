@@ -464,54 +464,39 @@ img {
 
 /* #region About */
 
-.about-text { /* Text section of about */
+.about { 
   display: flex;
-  list-style: none; /* Removes bullet points from list */
-  margin: auto; /* To space content in center */
+  margin: auto;
   width: 80%;
-  margin-top: 10rem;
-  
+  margin-top: 10rem; /* Space away from hero */
 }
 
-.about-item { /* Columns used in about section */
-  width: 33%; /* Sets width to a third of the screen in order to create 3 columns */
+.about div { 
+  width: 33%; 
   margin: 0 1rem;
 }
 
-.about-text h1 { 
-  font-size: 4vh; 
+.about h1 { 
   text-align: center; 
-  text-decoration: underline #4c6bc1;
+  text-decoration: underline var(--primary-colour);
 }
 
-.about-text p { 
-  font-size: 2vh; 
+.about p { 
+  font-size: 1.2rem; 
   white-space: pre-line; /* Seperates text at a full stop */
   margin: 3rem 0; 
 }
 
-@media (max-width: 1000px) { 
-  .about-text h1 {
-    font-size: 3vh;
-  }
-}
-
-@media (max-width: 800px) { 
-  .about-text {
-    flex-direction: column; 
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 6rem;
   }
 
-  .about-item { /* Individual list items used in about text section */
-    width: 100%; /* Creates 3 rows instead of columns */
-  }
-}
-
-@media (max-width: 400px) { 
-  .about-text {
-    margin-top: 3rem;
+  .about div {
+    width: 100%;
   }
 }
 
