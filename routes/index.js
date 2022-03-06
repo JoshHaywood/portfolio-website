@@ -21,8 +21,8 @@ router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
 
-/* POST Message-sent page */
-router.post('/message-sent', function(req, res, next) {
+/* GET Message-sent page */
+router.get('/message-sent', function(req, res, next) {
   var heading = 'Thank you';
   var message = 'Your message has been sent succesfully. You will recieve a reply to the email you provided as soon as possible.'
 

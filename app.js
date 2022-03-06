@@ -34,7 +34,7 @@ app.use(function(err, req, res, next) {
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   var heading = 'This page does not exist';
-  var message = 'The page you were looking for does not exist or has been removed'
+  var message = 'The page you were looking for does not exist or has been removed';
 
   // render the error page
   res.status(err.status || 500);

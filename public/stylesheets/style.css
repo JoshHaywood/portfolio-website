@@ -280,92 +280,56 @@ button {
   
 /* #endregion */
 
-/* #region Error */
+/* #region Message */
 
-.error { 
+.message { 
   text-align: center;
   padding: 8rem 0; /* To space text away from the header */
   font-size: 1.5rem;
 }
 
-.error h1 {
+.message h1 {
   font-size: 5rem;
 }
 
-.error button {
-  width: 15%;
-  padding: 1rem; /* Button away from text */
+.message button {
+  padding: 0.8rem 1.5rem;
   margin: 2rem 0;
   font-size: 1.2rem;
-  background-color: #4c6bc1;
+  background-color: var(--primary-colour);
   border: none;
+  border-radius: 25px;
 }
 
-.error button:hover {
-  background-color: #597de0;
-}
-
-.error a {
-  text-decoration: none; /* Removes anchor text underline */
-  color: #101316;
-}
-
-@media (max-width: 1200px) {
-  .error h1 {
-    font-size: 4rem;
-  }
-
-  .error h5 {
-    font-size: 1rem;
-  }
-
-  .error button {
-    width: 15%; /* Width increased so text is one line */
-    font-size: 0.8rem;
-  }
+.message a:hover {
+  color: var(--secondary-colour);
 }
 
 @media (max-width: 900px) {
-  .error h1 {
-    font-size: 3rem;
+  .message h1 {
+    font-size: 3.5rem;
   }
 
-  .error h5 {
-    font-size: 0.8rem;
+  .message h5, .message button a {
+    font-size: 1rem;
   }
 
-  .error button {
-    width: 20%; /* Width increased so text is one line */
-    font-size: 0.6rem;
-    padding: 0.5rem; /* Button away from text */
+  .message button {
+    padding: 0.7rem 1.4rem;
   }
 }
 
-@media (max-width: 600px) {
-  .error h1 {
-    font-size: 2.2rem;
+@media (max-width: 650px) {
+  .message h1 {
+    font-size: 2.7rem;
   }
 
-  .error h5 {
-    font-size: 0.6rem;
+  .message h5, .message button a {
+    font-size: 0.7rem;
   }
 
-  .error button {
-    width: 25%; /* Width increased so text is one line */
-  }
-}
-
-@media (max-width: 400px) {
-  .error h1 {
-    font-size: 1.8rem;
-  }
-
-  .error h5 {
-    font-size: 0.5rem;
-  }
-
-  .error button {
-    width: 30%; /* Width increased so text is one line */
+  .message button {
+    padding: 0.3rem 1rem;
   }
 }
 
@@ -898,98 +862,6 @@ button {
 }
 
 /* #endregion */
-
-/* #endregion */
-
-/* #region Message-sent */
-
-.message-content { /* Content area of message-sent page */
-  text-align: center;
-  margin-left: 1rem; /* Moves text away from edge of page */
-  padding: 8rem 0; /* To space text away from the header */
-  font-size: 1.5rem;
-}
-
-.message-content h1 {
-  font-size: 5rem;
-}
-
-.message-content button {
-  width: 15%;
-  padding: 1rem; /* Button away from text */
-  margin: 2rem 0;
-  font-size: 1.2rem;
-  background-color: #4c6bc1;
-  border: none;
-}
-
-.message-content button:hover {
-  background-color: #597de0;
-}
-
-.message-content a {
-  text-decoration: none; /* Removes anchor text underline */
-  color: #101316;
-}
-
-@media (max-width: 1200px) {
-  .message-content h1 {
-    font-size: 4rem;
-  }
-
-  .message-content h5 {
-    font-size: 1rem;
-  }
-
-  .message-content button {
-    width: 15%; /* Width increased so text is one line */
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .message-content h1 {
-    font-size: 3rem;
-  }
-
-  .message-content h5 {
-    font-size: 0.8rem;
-  }
-
-  .message-content button {
-    width: 20%; /* Width increased so text is one line */
-    font-size: 0.6rem;
-    padding: 0.5rem; /* Button away from text */
-  }
-}
-
-@media (max-width: 600px) {
-  .message-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .message-content h5 {
-    font-size: 0.6rem;
-  }
-
-  .message-content button {
-    width: 25%; /* Width increased so text is one line */
-  }
-}
-
-@media (max-width: 400px) {
-  .message-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .message-content h5 {
-    font-size: 0.5rem;
-  }
-
-  .message-content button {
-    width: 30%; /* Width increased so text is one line */
-  }
-}
 
 /* #endregion */
 
