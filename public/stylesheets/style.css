@@ -1,179 +1,199 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); /* Roboto font import */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 html {
   scroll-behavior: smooth;
 }
 
-:root { /* Project root */
-  font-size: 16px; /* Fontsize specification */
+:root {
+  font-size: 16px; 
   font-family: 'Roboto', sans-serif;
-  --text-primary: #ffffff; /* Primary text colour */
-  --text-secondary: #4c6bc1; /* Secondary text colour */
-  --bg-primary: #101316; /* Primary background colour */
-  --bg-secondary: #181a1d; /* Secondary background colour */
+  --primary-colour: #4c6bc1;
+  --secondary-colour: #101316;
+  --tertiary-colour: #15171a;
+  --quaternary-colour: #181a1d;
+  --primary-text-colour: #ffffff; 
 }
 
 * {
-  box-sizing: border-box; /* Incase browsers do not use border box */
+  box-sizing: border-box;
 }
 
-body { /* Webpage body */
-  background-color: var(--bg-primary);
-  margin: 0; /* Margin removed */
-  padding: 0; /* Padding removed */
+body { 
+  background-color: var(--secondary-colour);
+  margin: 0; 
+  padding: 0; 
   overflow-x: hidden;
   max-width: 100%;
 }
 
-body::-webkit-scrollbar { /* Scrollbar */
+body::-webkit-scrollbar { 
   width: 0.25rem;
 }
 
-body::-webkit-scrollbar-track { /* Scrollbar background */
+body::-webkit-scrollbar-track { 
   background: #181a1d;
 }
 
-body::-webkit-scrollbar-thumb { /* Scrollbar thumb */
-  background: #4c6bc1;
+body::-webkit-scrollbar-thumb { 
+  background: var(--primary-colour);
 }
 
-h1, h2, h3, h4, h5, h6, a, p {
-  color: var(--text-primary);
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-text-colour);
 }
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-text-colour);
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: var(--primary-text-colour);
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: var(--primary-text-colour);
+}
+
+h5 {
+  font-size: 1.25rem;
+  color: var(--primary-text-colour);
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--primary-text-colour);
+}
+
+p {
+  font-size: 1rem;
+  color: var(--primary-text-colour);
+}
+
+a {
+  font-size: 1rem;
+  color: var(--primary-text-colour);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
 
 /* #region Header */
 
-.navbar { /* Navbar*/
-  position: fixed; /* So navbar is superimposed over the rest of the page content */
+.navbar { 
+  position: fixed; 
   width: 100%;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
   z-index: 1; /* Prevents navbar from disappearing */
-  transition: all 300ms ease-in-out; /* Transition for 300ms with slow start and finish */
+  transition: all 300ms ease-in-out; 
 }
 
 .navbar a:first-of-type {
-  height: 60px;
-  width: 260px;
+  width: 260px; /* Prevent image overscaling */
 }
 
-.logo{ /* Logo used in navbar*/
-  height: auto; /* To maintain aspect ratio */
-  max-width: 100%; /* Sets max width to prevent image upscaling */
+.logo{ 
+  height: auto; 
+  max-width: 100%;
 }
 
-.nav-toggle { /* Navbar hamburger menu */
-  position: absolute; /* To ensure menu is always in the top right of the screen */
-  top: 2rem;
+.hamburger { 
+  position: absolute; 
+  top: 2.1rem;
   right: 1rem;
-  display: none; /* Sets display to none by default for javascript function */
-  flex-direction: column; /* Sets flex direction to prevent bars from aligning to row */
-  justify-content: space-between; /* To ensure even distance between bars */
+  display: none; /* Default for JS function */
+  flex-direction: column; 
+  justify-content: space-between; 
   height: 22px;
   width: 22px;
 }
 
-.nav-toggle:hover .bar {
+.hamburger:hover .bar {
   width: 28px; 
 }
 
-.nav-toggle:hover {
-  cursor: pointer; /* Sets cursor type to pointer */
-}
-
-.nav-toggle .bar { 
+.hamburger .bar { 
   height: 3px; 
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--primary-text-colour);
   border-radius: 10px;
-  transition: all 100ms ease-in-out; /* Transition for all elements for 0.1 seconds, slowing at the beginning and end. */
+  transition: all 100ms ease-in-out; 
 }
 
-.nav-toggle:hover .bar:nth-of-type(1){ /* First child element of bar */
-  transition: all 100ms ease-in-out; /* Transition for 100ms with slow start and finish */
+.hamburger:hover .bar:nth-of-type(1){ 
   transform: rotate(45deg); /* Rotates 45 degress to create one of the lines used in x */
   transform-origin: top left; /* Moves to top-left */
 }
-.nav-toggle:hover .bar:nth-of-type(2){ /* Second child element of bar */
-  transition: all 100ms ease-in-out; /* Transition for 100ms with slow start and finish */
+
+.hamburger:hover .bar:nth-of-type(2){ 
   transform-origin: center; /* Moves to center */
   width: 0; /* Width is removed to give the impression bar has disappeared */
 }
 
-.nav-toggle:hover .bar:nth-of-type(3){ /* Second child element of bar */
-  transition: all 100ms ease-in-out; /* Transition for 100ms with slow start and finish */
+.hamburger:hover .bar:nth-of-type(3){
   transform: rotate(-45deg); /* Rotates -45 degress to create the other line used in x */
   transform-origin: bottom left; /* Moves to bottom-left */
 }
 
-.nav-links ul {
-  display: flex; /* Creates flexbox to align links in a row rather than column */
+.links ul {
+  display: flex; 
 }
 
-.nav-links li {
-  list-style: none; /* Removes bullet points from list items */
+.links li {
   margin: 0 2rem;
 }
 
-.nav-links li a {
+.links li a {
   font-size: 1.5rem;
-  text-decoration: none; /* Removes underline */
-  color: #ffffff;
 }
 
-.nav-links li a:hover { 
-  color: #4c6bc1;
-  transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
+.links li a:hover { 
+  color: var(--primary-colour);
+  transition: all 0.5s ease-out;
 }
 
 @media (max-width: 800px) {
-  .navbar { /* Navbar */
-    flex-direction: column; /* Alters flex direction to list items in a column */
+  .navbar { 
+    flex-direction: column; /* Prevents links appearing inline with navbar */
   }
   
-  .nav-toggle { /* Navbar hamburger menu */
-    display: flex; /* To show the menu when at this screen size */
+  .hamburger { 
+    display: flex;
   }
 
-  .nav-links {
-    display: none; /* Hides links when at this screen size */
+  .links {
+    display: none; /* Hides links by default for JS function */
     padding-top: 0.3rem;
+    text-align: center;
   }
 
-  .nav-links ul {
-    width: 100%; /* Ensures elements are centered */
-    flex-direction: column; /* Alters flex direction of child elements in the nav bar */
+  .links ul {
+    width: 100%; /* Ensures correct centering */
+    flex-direction: column; /* Alter links to be columns */
   }
 
-  .nav-links li { /* Individual navbar element */
-    padding: 0.2rem 1rem; /* Padds elements so background hover works more effectively */
+  .links li {
     text-align: center; /* Aligns text in center of element */
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
-  .nav-links li a:hover { 
-    background-color: #2d3136;
+  .links li a {
+    padding: 1rem 3rem;
+  }
+
+  .links li a:hover { 
+    background-color: var(--tertiary-colour);
     border-radius: 10px; 
-    transition: all 0.5s ease-out; /* Transition for all elements for 0.5 seconds, slowing towards the end. */
-  }
-}
-
-@media (max-width: 700px) { 
-  .navbar img { 
-    height: 50px;
-    width: 220px;
-  }
-}
-
-@media (max-width: 400px) { 
-  .navbar img { 
-    height: 40px;
-    width: 180px;
-  }
-
-  .nav-toggle {
-    top: 1.6rem;
+    transition: all 0.5s ease-out;
   }
 }
 

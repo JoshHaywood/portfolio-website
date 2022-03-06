@@ -1,38 +1,35 @@
-// #region Header
-
-function ToggleNavLinks() { //Function to toggle navigation links display
-    var navLink = document.getElementsByClassName("nav-links")[0]; //Gets first instance of class name
-    var navBar = document.getElementsByClassName("navbar")[0]; //Gets first instance of class name
+function ToggleNavLinks() { 
+    var navLink = document.getElementsByClassName('links')[0]; 
+    var navBar = document.getElementsByClassName('navbar')[0]; 
     
-    if (window.getComputedStyle(navLink).display === "none") { //If currently not displayed, computed style is used to ensure element is set to none
-        navLink.style.display = "flex";
-        navBar.style.background = "#181a1d"; 
+    //If links arent displayed display
+    if (window.getComputedStyle(navLink).display === 'none') { 
+        navLink.style.display = 'flex';
+        navBar.style.background = '#181a1d'; 
     } 
+
+    //Else display none links
     else {
-        navLink.style.display = "none"; 
-        navBar.style.background = "none"; 
+        navLink.style.display = 'none'; 
+        navBar.style.background = 'none'; 
     }
 };
 
-window.addEventListener('scroll', function() {; //Event listener for mouse scroll
+window.addEventListener('scroll', function() {; 
 
-    var navBar = document.getElementsByClassName("navbar")[0]; //Gets first instance of class name
+    var navBar = document.getElementsByClassName('navbar')[0]; 
 
-    if(scrollY >= 1){ //If user scrolls 1 pixel
-        navBar.style.background = "#181a1d"; 
+    //If user scrolls 1 or more pixels
+    if(scrollY >= 1){ 
+        navBar.style.background = '#181a1d'; 
     }
 
-    if (scrollY < 1) { //If user scroll back to the point of no scroll
-        navBar.style.background = "none"; 
+    //If user hasnt scrolled
+    if (scrollY < 1) { 
+        navBar.style.background = 'none'; 
     }   
 });
 
-// #endregion
-
-// #region Footer
-
-function ScrollTop() { //Function to scroll to top of the page
-    document.documentElement.scrollTop = 0; 
+function ScrollTop() {
+    document.documentElement.scrollTop = 0; //Set scroll distance to 0
 };
-
-// #endregion

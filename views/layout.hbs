@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Language English -->
+<html lang="en"> 
 	<head>   
-		<!-- #region Preamble-->
-
 		<title>{{title}}</title>		
-		<link rel="icon" style="height: 300px" class="icon" alt="Icon used for website" href="../Images/icon.png"> <!-- Site icon -->
+		<link rel="icon" class="icon" alt="Icon used for website" href="../Images/icon.png"> 
 		
 		<meta charset="utf-8"/> 
 		<meta name="description" content="Portfolio website to showcase projects">
@@ -14,41 +12,34 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/> 
 		<link rel='stylesheet' href='/stylesheets/style.css'/> 
 		<script type="text/javascript" src="/javascripts/script.js"></script> 
-
-		<!-- #endregion -->
-
 	</head>
 
 	<body>
-		<!-- #region Header -->
+		<!-- Navbar -->
+		<header class="navbar">
+			<a href="/"><img class="logo" alt="logo" src="../Images/logo.jpg"></a> 
 
-		<header>
-			<!-- Navbar -->
-			<nav class="navbar"> 
-				<a href="/"><img class="logo" alt="logo" src="../Images/logo.jpg"></a> <!-- Logo image -->
+			
+			<a class="hamburger" onclick="ToggleNavLinks()" > 
+				<span class="bar"></span> 
+				<span class="bar"></span> 
+				<span class="bar"></span> 
+			</a>
 
-				<!-- Navbar hamburger menu -->
-				<a class="nav-toggle" onclick="ToggleNavLinks()" > <!-- Calls ToggleNavLinks function on click -->
-					<span class="bar"></span> <!-- First line used in menu -->
-					<span class="bar"></span> <!-- Second line used in menu -->
-					<span class="bar"></span> <!-- Third line used in menu -->
-				</a>
-
-				<!-- Links used in the navbar -->
-				<div class="nav-links"> <!-- ID set navLinks for ToggleNavLinks function -->
-					<ul>
-						<li> <!-- Each item in the bar -->
-							<a href="/">Home</a> <!-- Link to home page -->
-						</li>
-						<li> <!-- Each item in the bar -->
-							<a href="/projects">Projects</a> <!-- Link to projects page -->
-						</li>
-						<li> <!-- Each item in the bar -->
-							<a href="/contact">Contact</a> <!-- Link to contact page -->
-						</li>
-					</ul>
-				</div>
-			</nav>
+			
+			<div class="links"> 
+				<ul>
+					<li>
+						<a href="/">Home</a> 
+					</li>
+					<li> 
+						<a href="/projects">Projects</a> 
+					</li>
+					<li> 
+						<a href="/contact">Contact</a> 
+					</li>
+				</ul>
+			</div>
 		</header>
 
 		<!-- #endregion -->
