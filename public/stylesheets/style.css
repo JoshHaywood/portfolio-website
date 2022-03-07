@@ -669,9 +669,9 @@ input::placeholder, textarea::placeholder {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 1rem;
+  grid-column-gap: 3rem;
   grid-row-gap: 5rem;
-  padding: 0 1rem;
+  padding: 0 3rem;
 }
 
 .projects-page .container div { 
@@ -679,7 +679,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .projects-page .container div a img {
-  width: 500px;
+  width: 842px;
   border-radius: 10px;
 }
 
