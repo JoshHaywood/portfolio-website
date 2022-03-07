@@ -814,7 +814,7 @@ input::placeholder, textarea::placeholder {
 
 .projects-detailed-page p, .projects-detailed-page a {
   font-size: 1.2rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
 }
 
 .projects-detailed-page .container a:hover {
@@ -869,7 +869,7 @@ input::placeholder, textarea::placeholder {
   font-weight: 400;
 }
 
-.projects-detailed-page .container img, .target img, .issues img {
+.projects-detailed-page img, .target img, .issues img {
   margin: 3rem 0;
   width: inherit; /* Prevents image being smaller than parent */
   border-radius: 10px;
@@ -883,6 +883,8 @@ input::placeholder, textarea::placeholder {
 
   .info-container h3 {
     text-align: center;
+    margin: 2rem 0;
+    padding: 0;
   }
 
   .features li, .structure li {
