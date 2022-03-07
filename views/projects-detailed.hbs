@@ -1,32 +1,30 @@
-<section class="portfolio-page">
+<section class="projects-detailed-page">
     <h1>{{heading}}</h1>
 
     <a href="/projects">&#8592 Go Back</a>
 
     <div class="container">
-        <P>{{overview}}</P>
+        <a href="https://www.joshhaywood-portfolio.com/">View project</a>
         <a href="https://github.com/El-Goblino/portfolio-website">View Code</a>
     </div>
 
-    <div class="portfolio-image"> 
-        <a><img class="portfolio-thumbnail" alt="Image of project" src={{projectImage}}></a> 
-    </div>
+    <p>{{overview}}<p>
 
+    <a><img alt="Image of project" src={{projectImage}}></a> 
 
-
-    <div class="info-container">
+    <div class="info-container"> <!-- Named info container to avoid styling previous container -->
         <div class="features">
-            <h2>Features<h2>
+            <h3>Features<h3>
 
             <ul>
-                {{#each features}}
+                {{#each features}} <!-- For each array item create a list item -->
                 <li>{{this}}</li>
                 {{/each}}
             </ul>
         </div>
 
         <div class="structure">
-            <h2>Structure<h2>
+            <h3>Structure<h3>
                 
             <ul>
                 {{#each structure}}
@@ -37,21 +35,21 @@
     </div>
 
     <section class="target">
-        <h2>Target</h2>
+        <h3>Target</h3>
         <p>{{target}}</p>
 
         <img src={{targetImage}} alt="Image of project">
     </section>
 
     <section class="issues">
-        <h2>Issues</h2>
+        <h3>Issues</h3>
         <p>{{issues}}</p>
 
         <img src={{issuesImage}} alt="Image of project">
     </section>
 
     <section class="resolutions">
-        <h2>Resolutions</h2>
+        <h3>Resolutions</h3>
         <p>{{resolutions}}</p>
     </section>
 </section>

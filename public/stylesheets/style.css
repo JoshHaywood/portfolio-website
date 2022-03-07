@@ -12,9 +12,11 @@ html {
   --tertiary-colour: #15171a;
   --quaternary-colour: #181a1d;
   --quinary-colour: #373b42; 
+  
   --primary-text-colour: #ffffff; 
   --secondary-text-colour: #9e9e9e;
   --tertiary-text-colour: #597de0;
+  --quaternary-text-colour: #818181;
 }
 
 * {
@@ -93,6 +95,7 @@ a {
 
 li {
   list-style: none;
+  font-size: 1rem;
 }
 
 button {
@@ -778,162 +781,118 @@ input::placeholder, textarea::placeholder {
 
 /* #endregion */
 
-/* #region Portfolio-project page */
+/* #region Projects-detailed page */
 
-.portfolio-page {
+.projects-detailed-page {
   padding-bottom: 5rem; /* Space footer away from content */
   width: 60%;
   margin: auto;
 }
 
-.portfolio-page h1 { 
+.projects-detailed-page h1 { 
   text-align: center;
   padding: 8rem 0 4rem 0; /* To space text and navbar away from the header */
-  font-size: 8vh;
+  font-weight: 500;
   margin: auto;
-  text-decoration: underline #4c6bc1;
+  text-decoration: underline var(--primary-colour);
 }
 
-.portfolio-page a {
-  text-decoration: none;
-  color: #9e9e9e;
+.projects-detailed-page a, .projects-detailed-page .container a {
+  color: var(--quaternary-text-colour);
+  margin: 1rem 0;
 }
 
-.portfolio-page a:hover {
-  color: #818181;
+.projects-detailed-page a:hover {
+  color: var(--quaternary-text-colour);
 }
 
-.portfolio-page .container {
+.projects-detailed-page .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.portfolio-page p, .portfolio-page a {
-  font-size: 1.5rem;
+.projects-detailed-page p, .projects-detailed-page a {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
 }
 
-.portfolio-page .container a {
-  color: #ffffff; /* Overrides changes above */
-}
-
-.portfolio-page .container a:hover {
-  border-bottom: 1px solid #4c6bc1;
-}
-
-.portfolio-page img {
-  width: 90%;
-  display: flex; /* Needed so margin auto works as intended */
-  margin: auto;
-
-}
-
-.portfolio-thumbnail {
-  height: auto;
-  max-width: 100%;
+.projects-detailed-page .container a:hover {
+  border-bottom: 1px solid var(--primary-colour);
 }
 
 .info-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around; 
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  grid-column-gap: 32px;
+  grid-row-gap: 16px;
+  border-top: 1px solid var(--primary-colour);
+  border-bottom: 1px solid var(--primary-colour);
 }
 
-.info-container h2 {
-  border-bottom: 1px solid #4c6bc1;
+.info-container h3 {
   padding-bottom: 1rem;
+  font-weight: 400;
+}
+
+.features h3 {
+  font-weight: 400;
+}
+
+.features ul, .structure ul {
+  border: none;
+  padding: 0;
 }
 
 .features li {
-  padding: 1rem;
+  padding: 1rem 0;
   border: none;
-}
-
-.features ul {
-  border: none;
+  font-size: 1.5rem;
+  font-weight: 300; /* Prevents weight override from parent */
+  list-style: circle;
 }
 
 .structure li {
-  padding: 1rem;
+  padding: 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 300; /* Prevents weight override from parent */
+  list-style: circle;
 }
 
 .target, .issues, .resolutions {
   margin: 2rem 0;
 }
 
-.target h2, .issues h2, .resolutions h2 {
-  text-decoration: underline #4c6bc1;
+.target h3, .issues h3, .resolutions h3 {
+  text-decoration: underline var(--primary-colour);
+  font-weight: 400;
 }
 
-.target img, .issues img, .resolutions img {
+.projects-detailed-page .container img, .target img, .issues img {
   margin: 3rem 0;
-}
-
-.issues img {
+  width: inherit; /* Prevents image being smaller than parent */
   border-radius: 10px;
 }
 
-@media (max-width: 1400px) {
-  .portfolio-page h1 { 
-    font-size: 7vh;
+@media (max-width: 1100px) {
+  .info-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .portfolio-page a, .portfolio-page p, .info-container h2, .target h2, .issues h2, .resolutions h2 {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 1200px) {
-  .portfolio-page h1 { 
-    font-size: 6vh;
+  .info-container h3 {
+    text-align: center;
   }
 
-  .portfolio-page a, .portfolio-page p, .info-container h2, .target h2, .issues h2, .resolutions h2 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 1000px) {
-  .portfolio-page h1 { 
-    font-size: 5vh;
-  }
-
-  .portfolio-page a, .portfolio-page p, .info-container h2, .target h2, .issues h2, .resolutions h2 {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 800px) {
-  .portfolio-page {
-    width: 70%;
-  }
-
-  .portfolio-page h1 { 
-    font-size: 5vh;
+  .features li, .structure li {
+    text-align: left; /* Prevent align override from parent */
   }
 }
 
 @media (max-width: 700px) {
-  .portfolio-page a, .portfolio-page p, .info-container h2, .target h2, .issues h2, .resolutions h2 {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .portfolio-page {
-    width: 90%;
-  }
-}
-
-@media (max-width: 500px) {
-  .portfolio-page a, .portfolio-page p, .info-container h2, .target h2, .issues h2, .resolutions h2 {
-    font-size: 0.7rem;
-  }
-}
-
-@media (max-width: 400px) {
-  .portfolio-page a, .portfolio-page p, .info-container h2, .target h2, .issues h2, .resolutions h2 {
-    font-size: 0.6rem;
+  .projects-detailed-page {
+    width: 85%;
   }
 }
 
