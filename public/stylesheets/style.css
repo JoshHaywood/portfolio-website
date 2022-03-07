@@ -834,31 +834,54 @@ input::placeholder, textarea::placeholder {
 
 /* #region Contact page */
 
+
 .contact-page {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/contact-background.jpg"); /* Gradient to give a darker image colour */
+  padding: 10rem 0 22rem 0; /* Space form away from header and footer */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../Images/contact-background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.contact-page h1 { 
+  text-align: center; 
+  text-decoration: underline var(--primary-colour);
+}
+
+.contact-page .container { 
+  display: flex;
+  justify-content: center;
   text-align: center;
-  padding: 8rem 0; /* To space text away from the header */
-  font-size: 1.5rem;
-  width: 100%;
 }
 
-.contact-page h1 {
-  font-size: 4rem;
-  text-decoration: underline #4c6bc1;
-  margin-bottom: 8rem;
+.contact-page .container input, .contact-page .container textarea { 
+  width: 50%;
+  margin: 2rem 0; 
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: var(--quaternary-colour); 
+  border: none;
+  border-bottom: 1px solid var(--primary-colour);
+} 
+
+.contact-page .container textarea { 
+  height: 60%;
 }
 
-@media(max-width: 700px) {
-  .contact-page h1 {
-    font-size: 3.5rem;
-    margin-bottom: 6rem;
-  }
+.contact-page .container button { 
+  display: flex;
+  margin: auto; 
+  padding: 1rem 2rem; 
+  border-radius: 10px;
+  background-color: var(--quaternary-colour);
+  border: none;
+  border-bottom: 1px solid var(--primary-colour);
 }
 
-@media(max-width: 600px) {
-  .contact-page h1 {
-    margin-bottom: 7rem;
-  }
+@media (max-width: 800px) {
+  .contact-page .container input, .contact-page .container textarea { 
+    width: 80%;
+  } 
 }
 
 /* #endregion */
