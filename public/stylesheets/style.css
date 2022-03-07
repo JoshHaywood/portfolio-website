@@ -821,6 +821,11 @@ input::placeholder, textarea::placeholder {
   border-bottom: 1px solid var(--primary-colour);
 }
 
+.projects-detailed-page .image-container {
+  display: flex;
+  justify-content: center; /* Centers portrait images */
+}
+
 .info-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
