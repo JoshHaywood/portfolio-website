@@ -191,6 +191,7 @@ input::placeholder, textarea::placeholder {
 
 .links ul {
   display: flex; 
+  padding: 0; /* Prevents effecting on smaller screen sizes */
 }
 
 .links li {
@@ -267,7 +268,7 @@ input::placeholder, textarea::placeholder {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    padding-bottom: 3rem;
+    padding: 1rem 0 3rem 0;
     width: 70%;
   }
 
@@ -278,8 +279,9 @@ input::placeholder, textarea::placeholder {
   }
 
   .footer .container div h4 {
-    margin-top: 2rem;
     color: var(--secondary-text-colour);
+    font-weight: 500;
+    margin: 1rem 0;
   }
 
   .footer .container div a {
@@ -462,13 +464,13 @@ input::placeholder, textarea::placeholder {
   .hero img {
     order: 1;
     width: 250px;
-    margin-top: 5rem;
+    margin: 10rem 1rem 0 1rem;
   }
 }
 
 @media (max-width: 400px) {
   .hero .container h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .hero .container h2 {
@@ -507,7 +509,6 @@ input::placeholder, textarea::placeholder {
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
-    text-align: center;
     align-items: center;
     margin-top: 6rem;
   }
@@ -561,10 +562,7 @@ input::placeholder, textarea::placeholder {
   text-align: left;
   text-decoration: underline var(--primary-colour);
   font-weight: 400;
-}
-
-.projects .container div p {
-  padding-top: 1rem;
+  margin-bottom: 0;
 }
 
 .projects .container div a { 
