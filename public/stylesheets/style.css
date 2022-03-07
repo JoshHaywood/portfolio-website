@@ -661,7 +661,7 @@ input::placeholder, textarea::placeholder {
 .projects-page h1 { 
   text-align: center;
   text-decoration: underline var(--primary-colour);
-  margin-bottom:  4rem;
+  margin-bottom: 6rem;
   font-weight: 500;
 }
 
@@ -671,7 +671,7 @@ input::placeholder, textarea::placeholder {
   grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 5rem;
-  padding: 0 3rem;
+  padding: 0 5rem;
 }
 
 .projects-page .container div { 
@@ -679,8 +679,9 @@ input::placeholder, textarea::placeholder {
 }
 
 .projects-page .container div a img {
-  width: 842px;
+  width: inherit; /* Images always match parent */
   border-radius: 10px;
+  border: 1px solid var(--primary-colour);
 }
 
 .projects-page .container div a img:hover { 
@@ -708,10 +709,6 @@ input::placeholder, textarea::placeholder {
   .projects-page .container {
     grid-template-columns: repeat(2, 1fr);
   }
-
-  .projects-page .container div a img {
-    width: 571px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -722,10 +719,6 @@ input::placeholder, textarea::placeholder {
   .projects-page .container {
     grid-template-columns: repeat(1, 1fr);
     padding: 0 1.5rem;
-  }
-
-  .projects-page .container div a img {
-    width: 660px;
   }
 }
 

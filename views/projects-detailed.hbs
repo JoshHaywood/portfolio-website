@@ -1,0 +1,57 @@
+<section class="portfolio-page">
+    <h1>{{heading}}</h1>
+
+    <a href="/projects">&#8592 Go Back</a>
+
+    <div class="container">
+        <P>{{overview}}</P>
+        <a href="https://github.com/El-Goblino/portfolio-website">View Code</a>
+    </div>
+
+    <div class="portfolio-image"> 
+        <a><img class="portfolio-thumbnail" alt="Image of project" src={{projectImage}}></a> 
+    </div>
+
+
+
+    <div class="info-container">
+        <div class="features">
+            <h2>Features<h2>
+
+            <ul>
+                {{#each features}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="structure">
+            <h2>Structure<h2>
+                
+            <ul>
+                {{#each structure}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <section class="target">
+        <h2>Target</h2>
+        <p>{{target}}</p>
+
+        <img src={{targetImage}} alt="Image of project">
+    </section>
+
+    <section class="issues">
+        <h2>Issues</h2>
+        <p>{{issues}}</p>
+
+        <img src={{issuesImage}} alt="Image of project">
+    </section>
+
+    <section class="resolutions">
+        <h2>Resolutions</h2>
+        <p>{{resolutions}}</p>
+    </section>
+</section>
