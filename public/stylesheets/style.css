@@ -721,6 +721,7 @@ input::placeholder, textarea::placeholder {
 
   .projects-page .container {
     grid-template-columns: repeat(1, 1fr);
+    padding: 0 1.5rem;
   }
 
   .projects-page .container div a img {
