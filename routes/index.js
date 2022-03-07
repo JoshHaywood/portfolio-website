@@ -38,13 +38,13 @@ router.get('/portfolio-project', function(req, res, next) {
 router.get('/arduino-project', function(req, res, next) {
   var heading = 'Arduino Unity Project';
   var overview = 'This project was a arduino controller and unity game. It was part of my first year of university and is unfortunately no longer viewable. It helped me further my knowledge with Unity as well as an introduction to Arduino and its Unity plugin called Udunio. Additionally this projects other assignment gave me my first attempt at a technical poster.'
-  var projectImage =  '../Images/unity-thumbnail.jpg';
+  var projectImage =  '../Images/unity-thumbnail.JPG';
 
   const features = ['Unity game with Arduino', 'User interaction using arduino components', 'technical poster'];
   const structure = ['Unity', 'Arduino / Uduino', 'C#'];
 
   var target = 'The target was too make an interactive and engaging Unity game using components applicable to an Arduino breadboard to make a game controller and to create a corresponding techincal poster detailing the project.';
-  var targetImage = '../Images/breadboard-thumbnail.JPG';
+  var targetImage = '../Images/breadboard-thumbnail.jpg';
 
   var issues = 'Issue I found in this project were mainly to do with Uduino and its syntax as well as what components to use for the game. I personally found Uduino very difficult to use in correspondance with my components as well as using interesting components that were easy to apply to a Unity project.';
   var issuesImage = '../Images/arduino-technical-poster.JPG';
