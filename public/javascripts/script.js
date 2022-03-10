@@ -1,3 +1,4 @@
+//Hamburger toggle
 function ToggleNavLinks() { 
     var navLink = document.getElementsByClassName('links')[0]; 
     var navBar = document.getElementsByClassName('navbar')[0]; 
@@ -15,6 +16,7 @@ function ToggleNavLinks() {
     }
 };
 
+//Scroll event
 window.addEventListener('scroll', function() {; 
 
     var navBar = document.getElementsByClassName('navbar')[0]; 
@@ -30,6 +32,7 @@ window.addEventListener('scroll', function() {;
     }   
 });
 
+//Scrolltop 
 function ScrollTop() {
     document.documentElement.scrollTop = 0; //Set scroll distance to 0
 };

@@ -93,9 +93,11 @@ a {
   cursor: pointer;
 }
 
-li {
+li, ul {
   list-style: none;
   font-size: 1rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
 }
 
 button {
@@ -382,7 +384,7 @@ input::placeholder, textarea::placeholder {
 
 /* #endregion */
 
-/* #region Index */
+/* #region Index page */
 
 /* #region Hero */
 
@@ -511,6 +513,21 @@ input::placeholder, textarea::placeholder {
   margin: 3rem 0; 
 }
 
+.about div:nth-child(2) p {
+  margin-bottom: 0; /* Prevents large spacing between text and list */
+}
+
+.about ul, .about li {
+  padding: 0;
+  margin-top: 0; /* Prevents large spacing between text and list */
+  font-size: 1.2rem; 
+} 
+
+.about li {
+  margin-left: 1rem;
+  list-style: circle;
+}
+
 @media (max-width: 800px) {
   .about {
     flex-direction: column;
@@ -552,7 +569,7 @@ input::placeholder, textarea::placeholder {
 }
 
 .projects .container div { 
-  margin: 2rem 1rem;
+  margin: 2rem 1.5rem;
 }
 
 .projects .container div img { 
@@ -684,7 +701,7 @@ input::placeholder, textarea::placeholder {
 .projects-page .container div a img {
   width: inherit; /* Images always match parent */
   border-radius: 10px;
-  border: 1px solid var(--primary-colour);
+  border: 1px solid rgb(255, 255, 255, 0.15)
 }
 
 .projects-page .container div a img:hover { 

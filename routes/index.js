@@ -60,19 +60,19 @@ router.get('/student-survival-store-project', function(req, res, next) {
   var projectLink = 'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store';
   var repoLink = 'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store';
 
-  var overview = 'This was a group project in my second year of university and was centered around a buisness that provided a subscription based box of student related supplies. My role was front-end development as well as documentation handling.'
+  var overview = 'This was a group project in my second year of university and was centered around a buisness that provided a subscription based box of student related supplies. My role was front-end development as well as documentation handling. I maintained our teams agile approach by documenting each standups notes, targets, target status and any issues that occured for that week. This project was my first time using React and therefore my development was minimul but I did create the mobile header and implemented the user profile modal.'
   var projectImage =  '../Images/student-survival-store-index.JPG';
 
   const features = ['Website', 'Login and registering system', 'User dashboard'];
   const structure = ['HTML', 'React', 'Tailwinds CSS', 'Javascript', 'Express.js', 'SQLite'];
 
-  var target = 'The target was to create the buisness website with all the ideal functionality based on proposols each individual member had pitched and decided on.';
+  var target = 'The target was to create the buisness website with all the ideal functionality based on proposols each individual member had pitched and decided on. With my own original buisness plan and proposal presentation being centered around a job seekers website, for tech specifcally. This was in-light of the Covid 19 pandemic and therefore the mass employment lead to a gap to find an available and accessable employment platform.';
   var targetImage = '../Images/student-survival-store-large.JPG';
 
-  var issues = 'My personal issues in the project were learning React and Tailwinds as I had not used either of these previously. Maintaining an Agile methodology with standup meetings and a kanban board as well as the group setting were also changes I had to adapt too.';
+  var issues = 'My personal issues in the project were learning React and Tailwinds as I had not used either of these previously (as somewhat mentioned). Therefore I had a steep learning curve to match my expierence team members capabilities, something I am still working to achieve currently. Maintaining an Agile methodology with standup meetings and a kanban board as well as the group setting were also changes I had to adapt too. I had around 18 months expierence with agile methodology at the time and I had to help the team collaberate under this scheme as well as document the process, as mentioned.';
   var issuesImage = '../Images/student-survival-store-login.JPG';
 
-  var resolutions = 'Tailwinds I found straight foward and easy to pick up and resolved my lack of knowledge fairly quickly as a result. The same could not be said for React and that is something I am happending to expand my knowledge on in upcoming projects. The group dynamic worked well and all members made sure to stick to standup meetings and deadlines.';
+  var resolutions = 'Tailwinds I found straight foward and easy to pick up and resolved my lack of knowledge fairly quickly as a result. The same could not be said for React and that is something I am hopping to expand my knowledge on in upcoming personal projects, due to its current popularity in industry. The group dynamic worked well and all members made sure to stick to standup meetings and deadlines, based in an agile approach.';
 
   res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
 });
