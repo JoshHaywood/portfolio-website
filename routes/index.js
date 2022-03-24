@@ -77,6 +77,29 @@ router.get('/student-survival-store-project', function(req, res, next) {
   res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
 });
 
+/* GET One Messaging project page */
+router.get('/one-messaging-project', function(req, res, next) {
+  var heading = 'One Messaging';
+  var projectLink = 'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2';
+  var repoLink = 'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2';
+
+  var overview = 'This was an individual project in my second year of university. This project was centered around creating a distributed system, with a distributed system being an application distributed across multiple systems. A technical poster detailing the project we wished to create also had to be provided along with a structured report, documenting the creation of the project. The project I decided to create was a realtime messaging app.'
+  var projectImage =  '../Images/one-messaging-login-thumbnail.JPG';
+
+  const features = ['Login and registering system', 'Chat input and output interface', 'SQL storage'];
+  const structure = ['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Sockety.io', 'SQLite'];
+
+  var target = 'The target was to follow the timeline I had provided in the poster and follow it as closely as possible. Having to list the reasoning for any deviations in the report. The artifacts targets were to creating a login and registering systems where user information was stored to a database. A chat interface where multiple users could communicate with each other and a messaging system detailing the message, username and time of message.';
+  var targetImage = '../Images/one-messaging-validation-thumbnail.JPG';
+
+  var issues = 'The issue I found where the shear amount of back-end development required in this project. The front-end development was relatively easy to me and completed quickly. However creating the login and registering system and the message component proved very challenging. Due to my knowledge of Sqlite being limited and this being the most advanced authentication system I had created.';
+  var issuesImage = '../Images/one-messaging-poster.JPG';
+
+  var resolutions = 'I resolved the authentification system mainly through help from both my peers and lecturers who were able to explain the method of each key stage such as login verification or checking a hashed password against a form request. Online tutorials and documentation for socket.io helped me to creat the messaging component.';
+
+  res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
+});
+
 /* GET Contact page */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact' });
