@@ -87,7 +87,7 @@ router.get('/one-messaging-project', function(req, res, next) {
   var projectImage =  '../Images/one-messaging-login-thumbnail.JPG';
 
   const features = ['Login and registering system', 'Chat input and output interface', 'SQL storage'];
-  const structure = ['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Sockety.io', 'SQLite'];
+  const structure = ['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Socket.io', 'SQLite'];
 
   var target = 'The target was to follow the timeline I had provided in the poster and follow it as closely as possible. Having to list the reasoning for any deviations in the report. The artifacts targets were to creating a login and registering systems where user information was stored to a database. A chat interface where multiple users could communicate with each other and a messaging system detailing the message, username and time of message.';
   var targetImage = '../Images/one-messaging-validation-thumbnail.JPG';
@@ -95,7 +95,30 @@ router.get('/one-messaging-project', function(req, res, next) {
   var issues = 'The issue I found where the shear amount of back-end development required in this project. The front-end development was relatively easy to me and completed quickly. However creating the login and registering system and the message component proved very challenging. Due to my knowledge of Sqlite being limited and this being the most advanced authentication system I had created.';
   var issuesImage = '../Images/one-messaging-poster.JPG';
 
-  var resolutions = 'I resolved the authentification system mainly through help from both my peers and lecturers who were able to explain the method of each key stage such as login verification or checking a hashed password against a form request. Online tutorials and documentation for socket.io helped me to creat the messaging component.';
+  var resolutions = 'I resolved the authentication system mainly through help from both my peers and lecturers who were able to explain the method of each key stage such as login verification or checking a hashed password against a form request. Online tutorials and documentation for socket.io helped me to creat the messaging component.';
+
+  res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
+});
+
+/* GET One Messaging project page */
+router.get('/esports-center-project', function(req, res, next) {
+  var heading = 'The Esports Center';
+  var projectLink = 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center';
+  var repoLink = 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center';
+
+  var overview = 'This was a group project in my second year with the same team as the Student Survival Store project. Similarly to that project the esports center was first presented through a business plan with my team pitches their own ideas, with my own pitch being the esports center. A statistics tracking website centered around the sporting genre esports, the competitive play of video games. My own role being front-end development and design and documentation'
+  var projectImage =  '../Images/esports-center-hero-thumbnail.JPG';
+
+  const features = ['Search and filtering', 'SQL database storage', 'Registering users and local esports teams'];
+  const structure = ['HTML', 'React', 'CSS', 'Material UI', 'Javascript', 'Express.js', 'MySQL'];
+
+  var target = 'The target was to create the business website with all the ideal functionality based on the previous proposals. With is idea being my own I also had to ensure the team had direction and correct distribution on tasks according to their own strengths.l Additionally I managed the stand up meetings.';
+  var targetImage = '../Images/esports-center-form-thumbnail.JPG';
+
+  var issues = 'Being the project manager I found this new and challenging as it wasn`t an area I had much experience with previously. I found Material UI to be very complex with areas such as `sx` shorthand style and the vast amount of components. I personally prefer to use no UI libraries to create truly unique web page styling, however even if it is required I prefer bootstrap because of its simplicity and how amount of support.';
+  var issuesImage = '../Images/esports-center-kanban-thumbnail.JPG';
+
+  var resolutions = 'Towards the end of the project my issues with being the project manager where resolved naturally as it became regular to conduct standup meetings and have a constant mental overview of the project. I tried to manage my team as effectively as I could and overall this role was an engaging learning curve that I would be open to trying again. I was able to understand Material UI and use it effectively in the project however the amount of time to understand the library impacted my own abilities compared to standard styling. However I am grateful to understand a UI library specifically for React.';
 
   res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
 });
