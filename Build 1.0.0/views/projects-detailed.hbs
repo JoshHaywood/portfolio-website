@@ -1,0 +1,55 @@
+<section class="projects-detailed-page">
+    <h1>{{heading}}</h1>
+
+    <a href="/projects">&#8592 Go Back</a>
+
+    <div class="container">
+        <a href={{projectLink}}>View project</a>
+        <a href={{repoLink}}>View Code</a>
+    </div>
+
+    <p>{{overview}}<p>
+
+    <div class="image-container"><img src={{projectImage}} alt="Image of project"></div>
+
+    <div class="info-container"> <!-- Named info container to avoid styling previous container -->
+        <div class="features">
+            <h3>Features<h3>
+
+            <ul>
+                {{#each features}} <!-- For each array item create a list item -->
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+
+        <div class="structure">
+            <h3>Structure<h3>
+                
+            <ul>
+                {{#each structure}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <section class="target">
+        <h3>Target</h3>
+        <p>{{target}}</p>
+
+        <div class="image-container"><img src={{targetImage}} alt="Image of project"></div>
+    </section>
+
+    <section class="issues">
+        <h3>Issues</h3>
+        <p>{{issues}}</p>
+
+        <div class="image-container"><img src={{issuesImage}} alt="Image of project"></div>
+    </section>
+
+    <section class="resolutions">
+        <h3>Resolutions</h3>
+        <p>{{resolutions}}</p>
+    </section>
+</section>
