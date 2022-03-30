@@ -97,10 +97,10 @@ router.get('/one-messaging-project', function(req, res, next) {
 
   var resolutions = 'I resolved the authentication system mainly through help from both my peers and lecturers who were able to explain the method of each key stage such as login verification or checking a hashed password against a form request. Online tutorials and documentation for socket.io helped me to creat the messaging component.';
 
-  res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
+  res.render('projects-detailed', { title: 'One Messaging Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
 });
 
-/* GET One Messaging project page */
+/* GET Esports Center project page */
 router.get('/esports-center-project', function(req, res, next) {
   var heading = 'The Esports Center';
   var projectLink = 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center';
@@ -120,7 +120,30 @@ router.get('/esports-center-project', function(req, res, next) {
 
   var resolutions = 'Towards the end of the project my issues with being the project manager where resolved naturally as it became regular to conduct standup meetings and have a constant mental overview of the project. I tried to manage my team as effectively as I could and overall this role was an engaging learning curve that I would be open to trying again. I was able to understand Material UI and use it effectively in the project however the amount of time to understand the library impacted my own abilities compared to standard styling. However I am grateful to understand a UI library specifically for React.';
 
-  res.render('projects-detailed', { title: 'Student Survival Store Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
+  res.render('projects-detailed', { title: 'Esports Center Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
+});
+
+/* GET Game Review project page */
+router.get('/game-review-project', function(req, res, next) {
+  var heading = 'Game Review Project';
+  var projectLink = 'https://game-review-application.herokuapp.com/';
+  var repoLink = 'https://github.com/El-Goblino/game-review-app';
+
+  var overview = 'This was a side project I worked on aimed at reviewing video games of my choice.'
+  var projectImage =  '../Images/reviews-thumbnail.JPG';
+
+  const features = ['Search and filtering', 'JSON storage', 'Dynamic content'];
+  const structure = ['HTML', 'React', 'CSS', 'Tailwind', 'Javascript'];
+
+  var target = 'The target of this project was to extended my own React knowledge. Covering features such as props, states, mapping and JSON objects which I had previously had little expierence in. Because of previously making dynamic content in Handlebars and Express and my understanding of Reacts impact in industry I attempted to achieve a site that was fully dynamic in React.';
+  var targetImage = '../Images/switch-thumbnail.JPG';
+
+  var issues = 'The main issue I came across was the search and filtering aspect. It was a feature I hadn`t covered in other projects and Reacts approach was new to me compared to client-side Javascript. Creating dynamic pages was also a feature a hadn`t covered in React and utilizing mapping and props was challenging.';
+  var issuesImage = '../Images/review-thumbnail.JPG';
+
+  var resolutions = 'React approaches to both these issue was surprisingly intuitive and has completely changed my tendency to use the library. For searching there were many errors to validate such as clicking the button instead of suggestions or not searching anything and clicking search. Resolved by using ternary statements and suggestions mapped to a JSON array. JSON arrays, props and switch statements contributed to achieving dynamic content and to reiterate this was straight forward and simplistic in React compared to other technologies I have worked with.';
+
+  res.render('projects-detailed', { title: 'Game Review Project', heading, projectLink, repoLink, overview, projectImage, features, structure, target, targetImage, issues, issuesImage, resolutions });
 });
 
 /* GET Contact page */
