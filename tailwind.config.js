@@ -19,6 +19,7 @@ module.exports = {
 
       backgroundImage: {
         'hero-background': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/images/background.png')",
+        /*'contact-background': "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/images/contact-background.jpg')",*/
       },
 
       keyframes: {
