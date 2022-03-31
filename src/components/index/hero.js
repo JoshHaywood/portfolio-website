@@ -33,7 +33,7 @@ export default function Hero() {
             </div>
         
             {/* Image */}
-            <img src="../images/portrait.jpg" className="rounded-full shadow-[30px_30px_rgba(55,55,66,1)] w-[250px] md:w-[400px] md:mx-10"></img>
+            <img src="../Images/portrait.jpg" className="rounded-full shadow-[30px_30px_rgba(55,55,66,1)] w-[250px] md:w-[400px] md:mx-10"></img>
         </div>
     </div>
     );
