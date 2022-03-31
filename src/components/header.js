@@ -17,7 +17,8 @@ export default function Header() {
     <nav className="w-full shadow-lg bg-quaternary fixed py-2 px-3 flex justify-between items-center z-10">
       {/* Logo */}
       <Link to="/">
-        <div className="w-[260px] h-[60px]"></div>
+        <div className=" w-[260px] h-[60px]"></div>
+        {/* bg-[url('../public/images/logo.jpg')] hover:bg-[url('../public/images/logo-hover.jpg')] */}
       </Link>
 
       <div className="flex"> {/* Container for links and menu */}
