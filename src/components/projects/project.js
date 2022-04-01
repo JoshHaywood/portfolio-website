@@ -20,7 +20,7 @@ export default function Project(props) {
             <div className="space-y-10">
                 <p>{props.overview}</p>
      
-                <img src={props.projectImage} alt="Image of project"/>
+                <img className="mx-auto"  src={props.projectImage} alt="Image of project"/>
 
                 <div className="py-10 space-y-10 md:space-y-0 md:flex md:space-x-20 border-y-2 border-primary">
                     <div className="space-y-10">
@@ -48,7 +48,7 @@ export default function Project(props) {
                         <p>{props.target}</p>
                     </div>
 
-                    <div className="image-container"><img src={props.targetImage} alt="Image of project" /></div>
+                    <div className="image-container"><img className="mx-auto" src={props.targetImage} alt="Image of project" /></div>
                 </section>
 
                 <section className="space-y-10">
@@ -57,7 +57,7 @@ export default function Project(props) {
                         <p>{props.issues}</p>
                     </div>
 
-                    <div className="image-container"><img src={props.issuesImage} alt="Image of project" /></div>
+                    <div className="image-container"><img className="mx-auto"  src={props.issuesImage} alt="Image of project" /></div>
                 </section>
 
                 <section className="space-y-10">
