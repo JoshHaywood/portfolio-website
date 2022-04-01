@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const items = [
     {
         imagePath: "/projects/portfolio", 
-        imageSrc: "../images/portfolio-thumbnail.jpg",
+        imageSrc: "../Images/portfolio-thumbnail.jpg",
         heading: "Portfolio Website",
         text: "The portfolio website you are currently viewing.",
         link: "/projects/portfolio"
@@ -12,7 +12,7 @@ const items = [
 
     {
         imagePath: "/projects/one-messaging", 
-        imageSrc: "../images/one-messaging-thumbnail.jpg",
+        imageSrc: "../Images/one-messaging-thumbnail.jpg",
         heading: "One messaging project",
         text: "A realtime messaging app I made in my second year of University",
         link: "/projects/one-messaging"

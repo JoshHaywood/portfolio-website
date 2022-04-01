@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const items = [
     {
         imagePath: "/projects/portfolio", 
-        imageSrc: "../images/portfolio-thumbnail.jpg",
+        imageSrc: "../Images/portfolio-thumbnail.jpg",
         heading: "Portfolio Website",
         text: "The portfolio website you are currently viewing.",
         link: "/projects/portfolio"
@@ -13,7 +13,7 @@ const items = [
 
     {
         imagePath: "/projects/arduino", 
-        imageSrc: "../images/arduino-thumbnail.jpg",
+        imageSrc: "../Images/arduino-thumbnail.jpg",
         heading: "Arduino Unity Project",
         text: "An arduino game I made in my first year of University.",
         link: "/projects/arduino"
@@ -21,7 +21,7 @@ const items = [
 
     {
         imagePath: "/projects/student-survival-store", 
-        imageSrc: "../images/student-survival-store-thumbnail.jpg",
+        imageSrc: "../Images/student-survival-store-thumbnail.jpg",
         heading: "Student Survival Store",
         text: "Software as a service group project from my second year of University.",
         link: "/projects/student-survival-store"
@@ -29,7 +29,7 @@ const items = [
 
     {
         imagePath: "/projects/one-messaging", 
-        imageSrc: "../images/one-messaging-thumbnail.jpg",
+        imageSrc: "../Images/one-messaging-thumbnail.jpg",
         heading: "One messaging project",
         text: "A realtime messaging app I made in my second year of University.",
         link: "/projects/one-messaging"
@@ -37,7 +37,7 @@ const items = [
 
     {
         imagePath: "/projects/esports-center", 
-        imageSrc: "../images/esports-center-thumbnail.jpg",
+        imageSrc: "../Images/esports-center-thumbnail.jpg",
         heading: "The Esports Center",
         text: "Statistics tracking group project from my second year of University.",
         link: "/projects/esports-center"
@@ -45,7 +45,7 @@ const items = [
 
     {
         imagePath: "/projects/game-review", 
-        imageSrc: "../images/game-review-thumbnail.jpg",
+        imageSrc: "../Images/game-review-thumbnail.jpg",
         heading: "Game Review",
         text: "Website for reviewing video games",
         link: "/projects/game-review"

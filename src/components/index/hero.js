@@ -5,7 +5,7 @@ export default function Hero() {
         // Background
         <div className="w-full h-screen bg-hero-background bg-no-repeat bg-cover bg-center">
         <div className="h-screen xl:w-10/12 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up">
-            <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-5 lg:mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
+            <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
                 {/* Text */}
                 <div className="space-y-8 mt-12"> {/* Prevents text being effected by flex */}
                     <h1 className="text-6xl lg:text-7xl font-semibold text-light-blue">Hi, I'm Josh</h1>
