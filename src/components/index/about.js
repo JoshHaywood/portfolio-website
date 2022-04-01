@@ -58,7 +58,7 @@ export default function About() {
                 </ul>
             </div>
             
-            <div className="space-y-5  md:w-1/3"> 
+            <div className="space-y-5 md:w-1/3"> 
                 <h1 className="underline decoration-primary font-semibold text-center">Interest</h1>
                 <p>The web related languages and frameworks listed previously are my current main interests.
                     With CSS, React and Express.js being my main focus.

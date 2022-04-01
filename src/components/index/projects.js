@@ -31,7 +31,7 @@ export default function Projects() {
                             <img className="hover:animate-pop-out" alt="Image of project" src={items.imageSrc}/>
                         </Link>
 
-                        <h5 className="mt-10">{items.heading}</h5>
+                        <h5 className="mt-10 font-medium">{items.heading}</h5>
                         <p className="my-2">{items.text}</p>
                         <Link className="text-primary hover:underline decoration-primary" to={items.link}>View Project →</Link>
                     </div>
