@@ -10,7 +10,7 @@ export default function ProjectsDetailed() {
 
     //Cases for id
     switch (id) {
-        case 'portfolio-project':
+        case 'portfolio':
             return (
                 <>
                     <Helmet>
@@ -40,7 +40,7 @@ export default function ProjectsDetailed() {
                 </>
             );
 
-        case 'arduino-project':
+        case 'arduino':
             return (
                 <>
                     <Helmet>
@@ -49,6 +49,15 @@ export default function ProjectsDetailed() {
 
                     <Project
                         heading={'Arduino Unity Project'}
+                        projectLink={<Message 
+                            heading={"This project is no longer available"}
+                            message={"Unfortunately the repository for this project has been closed"} 
+                        />}
+                        repoLink={<Message 
+                            heading={"This project is no longer available"}
+                            message={"Unfortunately the repository for this project has been closed"} 
+                        />}
+
                         overview={'This project was a to create an Arduino game controller using electronic components of our choice and Unity game. It was part of my first year of university and is unfortunately no longer viewable as the repository has been closed. It helped me further my knowledge with Unity as well as an introduction to Arduino and its Unity plugin called Udunio. Additionally this projects other assignment gave me my first attempt at a technical poster.'}
                         projectImage={'../Images/unity-thumbnail.JPG'}
                     
@@ -66,7 +75,7 @@ export default function ProjectsDetailed() {
                 </>
             );
 
-        case 'student-survival-store-project':
+        case 'student-survival-store':
             return (
                 <>
                     <Helmet>
@@ -95,7 +104,7 @@ export default function ProjectsDetailed() {
                 </>
             );
 
-        case 'one-messaging-project':
+        case 'one-messaging':
             return (
                 <>
                     <Helmet>
@@ -124,7 +133,7 @@ export default function ProjectsDetailed() {
                 </>
             );
 
-        case 'esports-center-project':
+        case 'esports-center':
             return (
                 <>
                     <Helmet>
@@ -153,11 +162,11 @@ export default function ProjectsDetailed() {
                 </>
             );
 
-        case 'game-review-project':
+        case 'game-review':
             return (
                 <>
                     <Helmet>
-                        <title>TGame Review Project</title>
+                        <title>Game Review Project</title>
                     </Helmet>
 
                     <Project
@@ -184,6 +193,9 @@ export default function ProjectsDetailed() {
 
         default:
             //Defaults error handler
-            return <Message />
+            return <Message
+                heading={"This page does not exist"}
+                message={"The page you were looking for does not exist or has been removed."} 
+            />
     }
 }

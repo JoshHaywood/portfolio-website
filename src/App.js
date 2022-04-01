@@ -18,7 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Index />}/>
         <Route path="/projects" element={<Projects />}/>
-        <Route path="/:id" element={<ProjectsDetailed />}/>
+        <Route path="/projects/:id" element={<ProjectsDetailed />}/>
         <Route path="/contact" element={<ContactPage />}/>
         <Route path="/message-sent" element={<Message
           heading={"Thank you"}

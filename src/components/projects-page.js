@@ -4,51 +4,51 @@ import { Link } from "react-router-dom";
 
 const items = [
     {
-        imagePath: "/portfolio-project", 
+        imagePath: "/projects/portfolio", 
         imageSrc: "../Images/portfolio-thumbnail.jpg",
         heading: "Portfolio Website",
         text: "The portfolio website you are currently viewing.",
-        link: "/portfolio-project"
+        link: "/projects/portfolio"
     },
 
     {
-        imagePath: "/arduino-project", 
+        imagePath: "/projects/arduino", 
         imageSrc: "../Images/arduino-thumbnail.jpg",
         heading: "Arduino Unity Project",
         text: "An arduino game I made in my first year of University.",
-        link: "/arduino-project"
+        link: "/projects/arduino"
     },
 
     {
-        imagePath: "/student-survival-store-project", 
+        imagePath: "/projects/student-survival-store", 
         imageSrc: "../Images/student-survival-store-thumbnail.jpg",
         heading: "Student Survival Store",
         text: "Software as a service group project from my second year of University.",
-        link: "/student-survival-store-project"
+        link: "/projects/student-survival-store"
     },
 
     {
-        imagePath: "/one-messaging", 
+        imagePath: "/projects/one-messaging", 
         imageSrc: "../Images/one-messaging-thumbnail.jpg",
         heading: "One messaging project",
         text: "A realtime messaging app I made in my second year of University.",
-        link: "/one-messaging"
+        link: "/projects/one-messaging"
     },
 
     {
-        imagePath: "/esports-center-project", 
+        imagePath: "/projects/esports-center", 
         imageSrc: "../Images/esports-center-thumbnail.jpg",
         heading: "The Esports Center",
         text: "Statistics tracking group project from my second year of University.",
-        link: "/esports-center-project"
+        link: "/projects/esports-center"
     },
 
     {
-        imagePath: "/game-review-project", 
+        imagePath: "/projects/game-review", 
         imageSrc: "../Images/game-review-thumbnail.jpg",
         heading: "Game Review",
         text: "Website for reviewing video games",
-        link: "/game-review-project"
+        link: "/projects/game-review"
     }
 ];
 

@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom';
 
 const items = [
     {
-        imagePath: "/portfolio-project", 
+        imagePath: "/projects/portfolio", 
         imageSrc: "../Images/portfolio-thumbnail.jpg",
         heading: "Portfolio Website",
         text: "The portfolio website you are currently viewing.",
-        link: "/portfolio-project"
+        link: "/projects/portfolio"
     },
 
     {
-        imagePath: "/one-messaging", 
+        imagePath: "/projects/one-messaging", 
         imageSrc: "../Images/one-messaging-thumbnail.jpg",
         heading: "One messaging project",
         text: "A realtime messaging app I made in my second year of University",
-        link: "/one-messaging"
+        link: "/projects/one-messaging"
     },
 ];
 

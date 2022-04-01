@@ -8,12 +8,12 @@ const pagesColumn = [
 ];
 
 const projectsColumn = [
-  {name: "Portfolio", path: "/portfolio-project"},
-  {name: "Arduino", path: "/arduino-project"},
-  {name: "Student Survival Store", path: "/student-survival-store-project"},
-  {name: "One Messaging", path: "/one-messaging-project"},
-  {name: "Esports Center", path: "/esports-center-project"},
-  {name: "Game Review", path: "/game-review-project"}
+  {name: "Portfolio", path: "/projects/portfolio"},
+  {name: "Arduino", path: "/projects/arduino"},
+  {name: "Student Survival Store", path: "/projects/student-survival-store"},
+  {name: "One Messaging", path: "/projects/one-messaging"},
+  {name: "Esports Center", path: "/projects/esports-center"},
+  {name: "Game Review", path: "/projects/game-review"}
 ];
 
 export default function Footer() {
