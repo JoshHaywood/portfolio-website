@@ -47,6 +47,7 @@ body::-webkit-scrollbar-thumb {
   background: var(--primary-colour);
 }
 
+/* Loading bar */
 .pace {
 	-webkit-pointer-events: none;
 	pointer-events: none;
@@ -149,6 +150,7 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-text-colour);
 }
 
+/* Animation */
 .circles{
   /* Prevents circles being found under parent */
   position: absolute;
