@@ -27,7 +27,7 @@ function App() {
         <Route path="/projects/portfolio" element={          
           <>
             <Helmet>
-                    <title>Portfolio Project</title>
+                    <title>Projects | Portfolio</title>
             </Helmet>
             
             {/*Returns components with assigned props */}
@@ -56,7 +56,7 @@ function App() {
         <Route path="/projects/arduino" element={
           <>
             <Helmet>
-                <title>Arduino Project</title>
+                <title>Projects | Arduino</title>
             </Helmet>
 
             <Project
@@ -90,7 +90,7 @@ function App() {
         <Route path="/projects/student-survival-store" element={
           <>
             <Helmet>
-                <title>Student Survival Store Project</title>
+                <title>Projects | Student Survival Store</title>
             </Helmet>
 
             <Project
@@ -118,7 +118,7 @@ function App() {
         <Route path="/projects/one-messaging" element={
           <>
             <Helmet>
-                <title>One Messaging Project</title>
+                <title>Projects | One Messaging</title>
             </Helmet>
 
             <Project
@@ -146,7 +146,7 @@ function App() {
         <Route path="/projects/esports-center" element={
           <>
             <Helmet>
-                <title>The Esports Center Project</title>
+                <title>Projects | The Esports Center</title>
             </Helmet>
 
             <Project
@@ -174,7 +174,7 @@ function App() {
         <Route path="/projects/game-review" element={
           <>
             <Helmet>
-                <title>Game Review Project</title>
+                <title>Projects | Game Review</title>
             </Helmet>
 
             <Project

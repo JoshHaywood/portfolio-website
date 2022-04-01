@@ -13,8 +13,28 @@ export default function Header() {
   //State to toggle navlinks
   const [isOpen, setOpen] = useState(false);
 
+  //Scroll event
+  window.addEventListener('scroll', function() {; 
+
+    var navBar = document.getElementById('navbar'); 
+
+    //If user scrolls 1 or more pixels
+    if(window.scrollY >= 1){ 
+        navBar.style.background = '#181a1d'; 
+        navBar.style.boxShadow = 'box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
+    }
+
+    //Else they haven't scrolled
+    else { 
+        navBar.style.background = 'none'; 
+        navBar.style.boxShadow = 'none'
+    }   
+  });
+
   return (
-    <nav className="w-full shadow-lg bg-quaternary fixed py-2 px-3 flex justify-between items-center z-10">
+    <nav 
+      id="navbar" 
+      className="w-full fixed py-2 px-3 flex justify-between items-center z-10 transition duration-300 ease-in-out">
       {/* Logo */}
       <Link to="/">
         <div className="bg-[url('../public/images/logo.png')] hover:bg-[url('../public/images/logo-hover.png')] w-[260px] h-[60px]"></div>
