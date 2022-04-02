@@ -63,14 +63,14 @@ export default function Projects() {
                 <h1 className="text-center font-semibold underline decoration-primary">Projects</h1>
                     <div className="space-y-10 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 gap-x-10 gap-y-20"> 
                         {items.map((items) => 
-                            <div>
+                            <div id="project">
                                 <Link to={items.imagePath}>
-                                    <img className="border-2 border-gray-700 rounded-md" alt="Image of project" src={items.imageSrc}/>
+                                    <img  className="border-2 border-gray-700 rounded-md hover:animate-pop-out" alt="Image of project" src={items.imageSrc}/>
                                 </Link>
 
                                 <h5 className="mt-10">{items.heading}</h5>
                                 <p className="my-2">{items.text}</p>
-                                <Link className="text-primary hover:underline decoration-primary" to={items.link}>View Project →</Link>
+                                <Link id="projectLink" className="text-primary" to={items.link}>View Project →</Link>
                             </div>
                         )}
                     </div>

@@ -119,6 +119,11 @@ a {
   font-weight: 300;
   text-decoration: none;
   cursor: pointer;
+
+  background-image: linear-gradient(var(--primary-colour), var(--primary-colour));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
 }
 
 li, ul {
@@ -155,6 +160,14 @@ input::placeholder, textarea::placeholder {
 #backToTop:hover :nth-child(2) {
   animation: bounce 1s infinite;
   color: var(--primary-colour);
+}
+
+#project:hover a, #projectLink {
+  background-position: 0 calc(100% - 0px)
+}
+
+#project:hover a, #projectLink:hover {
+  background-size: 100% 1px;
 }
 
 /* Animations */

@@ -7,13 +7,13 @@ export default function Project(props) {
 
     return (
         <div className="py-40 px-10 md:px-0 md:w-3/5 mx-auto space-y-10">
-            <div className="space-y-5">
+            <div className="space-y-3">
                 <h1 className="text-center underline decoration-primary font-semibold mb-16">{props.heading}</h1>
-                <Link className="text-quaternary-text hover:underline decoration-quaternary-text" to="/projects">← Go Back</Link>
+                <Link className="text-quaternary-text hover:text-quaternary-text-hover" to="/projects">← Go Back</Link>
 
                 <div className="flex flex-row justify-between">
-                    <Link className="text-quaternary-text hover:underline decoration-quaternary-text" to={props.projectLink}>View project</Link>
-                    <Link className="text-quaternary-text hover:underline decoration-quaternary-text" to={props.repoLink}>View Code</Link>
+                    <Link id="projectLink" className="text-quaternary-text" to={props.projectLink}>View project</Link>
+                    <Link id="projectLink" className="text-quaternary-text" to={props.repoLink}>View Code</Link>
                 </div>
             </div>
             
