@@ -54,8 +54,12 @@ export default function Footer() {
 
 			{/* Footnote */}
 			<div className="flex py-2 w-4/6 m-auto justify-between border-t-2 border-primary">
-        		<a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
-				<button className="text-white hover:text-primary" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top ↑</button>
+        <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
+
+        <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
+          <button className="text-white hover:text-primary" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top</button>
+          <div className="text-white">↑</div>
+        </div>
 			</div>
     </footer>
   );

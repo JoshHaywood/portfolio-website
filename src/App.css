@@ -150,7 +150,15 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-text-colour);
 }
 
-/* Animation */
+/* Custom CSS from Tailwind limitations */
+
+#backToTop:hover :nth-child(2) {
+  animation: bounce 1s infinite;
+  color: var(--primary-colour);
+}
+
+/* Animations */
+
 .circles{
   /* Prevents circles being found under parent */
   position: absolute;
@@ -248,8 +256,6 @@ input::placeholder, textarea::placeholder {
   animation-duration: 11s;
 }
 
-
-
 @keyframes animate {
 
   0%{
@@ -263,5 +269,16 @@ input::placeholder, textarea::placeholder {
       opacity: 0;
       border-radius: 50%;
   }
+}
 
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
