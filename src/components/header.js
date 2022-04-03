@@ -61,7 +61,11 @@ export default function Header() {
           <ul className="h-56 bg-quaternary lg:h-auto flex flex-col lg:flex-row absolute lg:relative mt-14 lg:mt-0 right-0 lg:right-auto px-10 lg:px-0 rounded-lg lg:rounded-none shadow-sm lg:shadow-none">
             {links.map((link) => (
               <li className="m-5 lg:my-0 lg:mx-5">
-                <Link className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out" to={link.path}>
+                <Link 
+                  className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
+                  to={link.path} 
+                  onClick={() => setOpen(false)}
+                >
                   {link.name}
                 </Link>
               </li>

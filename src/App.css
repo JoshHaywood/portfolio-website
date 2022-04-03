@@ -173,7 +173,7 @@ input::placeholder, textarea::placeholder {
 /* Animations */
 
 .circles{
-  /* Prevents circles being found under parent */
+/* Prevents circles being found under parent */
   position: absolute;
   top: 0;
   left: 0;
