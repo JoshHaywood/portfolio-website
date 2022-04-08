@@ -26,7 +26,7 @@ export default function Footer() {
           <div className="flex flex-col text-center md:text-left space-y-1"> 
             <h4 className="text-white font-medium">Pages</h4>
             {pagesColumn.map((item) => (
-              <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+              <Link className="text-quaternary-text hover:text-white hover:underline" to={item.path}>{item.name}</Link>
             ))}
         </div>
 
@@ -37,7 +37,7 @@ export default function Footer() {
           {/* Maps first 3 entries */}
           {projectsColumn.map((item, index) => 
             index < 3 && (
-              <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+              <Link className="text-quaternary-text hover:text-white hover:underline" to={item.path}>{item.name}</Link>
             )
           )}
 				</div>
@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Maps final 3 entries */}
         {projectsColumn.map((item, index) => 
             index >= 3 && (
-              <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+              <Link className="text-quaternary-text hover:text-white hover:underline" to={item.path}>{item.name}</Link>
             )
           )}
 				</div>
@@ -57,8 +57,8 @@ export default function Footer() {
         <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
 
         <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
-          <button className="text-white" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top</button>
-          <p className="text-white">↑</p>
+          <button className="text-white hover:text-primary" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top</button>
+          <div className="text-white">↑</div>
         </div>
 			</div>
     </footer>
