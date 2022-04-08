@@ -162,11 +162,11 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-colour);
 }
 
-#project:hover a, #projectLink {
+#projectOne:hover a, #projectTwo:hover a, #projectLink {
   background-position: 0 calc(100% - 0px)
 }
 
-#project:hover a, #projectLink:hover {
+#projectOne:hover a, #projectTwo:hover a, #projectLink:hover {
   background-size: 100% 1px;
 }
 
@@ -269,6 +269,11 @@ input::placeholder, textarea::placeholder {
   animation-duration: 11s;
 }
 
+.fade-in-up {
+  animation: fadeInUp 1s ease-in;
+  animation-fill-mode: forwards;
+}
+
 @keyframes animate {
 
   0%{
@@ -293,5 +298,17 @@ input::placeholder, textarea::placeholder {
   50% {
     transform: translateY(0);
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% { 
+     opacity: 0;
+     transform:translate(0, 10%); /* Translates elements up Y vector */
+  }
+  
+  100% { 
+     opacity: 100;
+     transform: none;
   }
 }
