@@ -11,10 +11,10 @@ export default function Hero() {
     return (
         // Background
         <div class="area" className="w-full h-screen bg-hero-background bg-no-repeat bg-cover bg-center">
-            <div className="h-screen xl:w-10/12 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up">
-                <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
+            <div className="h-screen xl:w-10/12 pt-28 sm:pt-0 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up ">
+                <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-4 sm:mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
                     {/* Text */}
-                    <div className="space-y-8 mt-12"> {/* Prevents text being effected by flex */}
+                    <div className="space-y-8 mt-12 mr-4"> {/* Prevents text being effected by flex */}
                         <h1 className="text-6xl lg:text-7xl font-semibold text-light-blue">Hi, I'm Josh</h1>
                         <p className="text-xl lg:text-2xl font-medium">
                             A Web Development student at <span className='font-black'>Falmouth University. </span>
@@ -37,19 +37,21 @@ export default function Hero() {
                             </svg>
                         </a>
                     </div>
+                </div>
+            
+                {/* Image */}
+                <div id="hero-image" className="border-2 border-primary z-10 ml-12 md:ml-0 rounded-md md:mt-10"> {/* Creates border behind image */}
+                    <img src="../Images/portrait.jpg" className="w-[250px] md:w-[400px] rounded-md relative bottom-5 right-5"></img>
+                </div>
             </div>
-        
-            {/* Image */}
-            <img src="../Images/portrait.jpg" className="rounded-full shadow-[30px_30px_rgba(55,55,66,1)] w-[250px] md:w-[400px] md:mx-10 z-10"></img>
-        </div>
 
-        {/* Background animation */}
-        <ul class="circles"> {/* Attribution: Mohammad Abdul Mohaiman https://codepen.io/mohaiman/pen/MQqMyo */}
-            {/* Maps each circle for animating */}
-            {items.map((items) => (
-                <li></li>
-            ))}
-        </ul>
-    </div>
+            {/* Background animation */}
+            <ul class="circles"> {/* Attribution: Mohammad Abdul Mohaiman https://codepen.io/mohaiman/pen/MQqMyo */}
+                {/* Maps each circle for animating */}
+                {items.map((items) => (
+                    <li></li>
+                ))}
+            </ul>
+        </div>
     );
 }
