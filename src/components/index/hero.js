@@ -11,10 +11,10 @@ export default function Hero() {
     return (
         // Background
         <div class="area" className="w-full h-screen bg-hero-background bg-no-repeat bg-cover bg-center">
-            <div className="h-screen xl:w-10/12 pt-28 sm:pt-0 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up ">
-                <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-4 sm:mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
+            <div className="h-screen xl:w-10/12 pt-28 sm:pt-0 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up">
+                <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-6 sm:mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
                     {/* Text */}
-                    <div className="space-y-8 mt-12 mr-4"> {/* Prevents text being effected by flex */}
+                    <div className="space-y-8 mt-12"> {/* Prevents text being effected by flex */}
                         <h1 className="text-6xl lg:text-7xl font-semibold text-light-blue">Hi, I'm Josh</h1>
                         <p className="text-xl lg:text-2xl font-medium">
                             A Web Development student at <span className='font-black'>Falmouth University. </span>
@@ -23,7 +23,7 @@ export default function Hero() {
                         </p>
                     </div>
 
-                    <div className="flex space-x-6 "> {/* Container to SVGs */}
+                    <div className="flex space-x-6"> {/* Container to SVGs */}
                         {/* Media Icons */}
                         <a href="https://github.com/El-Goblino/" className="h-8 w-8 hover:text-primary z-10">
                             <svg alt="Github logo" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" classname="svg-inline--fa fa-github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"> {/*! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */} 
@@ -41,7 +41,7 @@ export default function Hero() {
             
                 {/* Image */}
                 <div id="hero-image" className="border-2 border-primary z-10 ml-12 md:ml-0 rounded-md md:mt-10"> {/* Creates border behind image */}
-                    <img src="../Images/portrait.jpg" className="w-[250px] md:w-[400px] rounded-md relative bottom-5 right-5"></img>
+                    <img src="../Images/portrait.jpg" className="w-[250px] md:w-[350px] rounded-md relative bottom-5 right-5"></img>
                 </div>
             </div>
 

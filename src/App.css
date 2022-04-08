@@ -172,6 +172,10 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-colour);
 }
 
+#backToTop:hover button, #backToTop:hover p {
+  color: var(--primary-colour);
+}
+
 #projectOne:hover a, #projectTwo:hover a, #projectLink {
   background-position: 0 calc(100% - 0px)
 }
