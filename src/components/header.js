@@ -46,7 +46,7 @@ export default function Header() {
 
       <div className="flex"> {/* Container for links and menu */}
         {/* Hamburger */}
-        <div className="lg:hidden mb-2" onClick={(ToggleNavLinks)}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
+        <div className="lg:hidden" onClick={(ToggleNavLinks)}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
           <Hamburger
             color="#ffffff"
             easing="ease-in-out"
