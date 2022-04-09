@@ -1,5 +1,6 @@
 import * as React from 'react';
 import TextField from "@mui/material/TextField";
+import Button from '@mui/material/Button';
 
 export default function Contact() {
     return (
@@ -40,7 +41,18 @@ export default function Contact() {
                 />
                 
                 <input type="hidden"  name="_next" defaultValue="https://www.joshhaywood-portfolio.com/message-sent"/>
-                <button className="bg-quaternary rounded-md border-b-2 border-primary py-2 px-3.5 w-1/4 mx-auto hover:text-primary" type="submit">Submit</button>
+                <Button
+                    sx={{
+                            borderBottom: '2px solid #4c6bc1',
+                            width: '25%',
+                            marginLeft: 'auto',
+                            marginRight: 'auto',
+                            backgroundColor: '#181a1d',
+                            color: 'white'
+                        }}
+                >
+                Submit
+                </Button>
             </form>
         </>
     );

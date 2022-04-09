@@ -17,7 +17,7 @@ export default function About() {
         <div className="md:space-x-10 space-y-10 md:space-y-0 md:flex"> 
             <div className="space-y-5 md:w-1/3"> 
                 <h1 className="underline decoration-primary font-semibold text-center">About me</h1>
-                <p >I’m a student from Devon, currently enrolled at Falmouth University, in my second year of a Web Development BSC.
+                <p>I’m a student from Devon, currently enrolled at Falmouth University, in my second year of a Web Development BSC.
                     My interest for Web Development came from my educational background.
                     Having studied Information Technologies at GCSE and later completed a level 3 BTEC diploma in computing software.
                     During the diploma I studied web fundamentals such as: HTML, CSS and JavaScript and became keen to study these languages more.

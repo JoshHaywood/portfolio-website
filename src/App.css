@@ -157,8 +157,22 @@ input::placeholder, textarea::placeholder {
 
 /* Custom CSS from Tailwind limitations */
 
-#backToTop:hover :nth-child(2) {
+#hero-image:hover img {
+  bottom: 0.75rem;
+  right: 0.75rem;
+  transition: 0.3s ease-in-out;
+}
+
+#hero-image img {
+  transition: 0.3s ease-in-out; /* Plays same transition onMouseOut */
+}
+
+#backToTop:hover:nth-child(2) {
   animation: bounce 1s infinite;
+  color: var(--primary-colour);
+}
+
+#backToTop:hover button, #backToTop:hover p {
   color: var(--primary-colour);
 }
 
