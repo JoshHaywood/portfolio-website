@@ -48,7 +48,11 @@ export default function Contact() {
                             marginLeft: 'auto',
                             marginRight: 'auto',
                             backgroundColor: '#181a1d',
-                            color: 'white'
+                            color: 'white',
+
+                            ':hover': {
+                                bgcolor: 'rgba(24, 26, 29, 0.5)', 
+                            },
                         }}
                 >
                 Submit
