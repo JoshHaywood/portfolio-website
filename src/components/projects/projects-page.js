@@ -59,13 +59,15 @@ export default function Projects() {
                 <title>Projects | Josh Haywood | Portfolio</title>
             </Helmet>
 
-            <div className="py-40 md:px-0 md:w-3/4 mx-auto space-y-20">        
+            <div className="py-32 md:px-0 md:w-3/4 mx-5 md:mx-auto space-y-20">        
                 <h1 className="text-center font-semibold underline decoration-primary">Projects</h1>
                     <div className="space-y-10 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 gap-x-10 gap-y-20"> 
                         {items.map((items) => 
                             <div id="project">
                                 <Link to={items.imagePath}>
-                                    <img  className="border-2 border-gray-700 rounded-md hover:animate-pop-out" alt="Image of project" src={items.imageSrc}/>
+                                    <div className="overflow-hidden"> {/* Prevents scale animation overlapping container */}
+                                        <img className="rounded-md hover:animate-pop-out" alt="Image of project" src={items.imageSrc}/>
+                                    </div>
                                 </Link>
 
                                 <h5 className="mt-10">{items.heading}</h5>

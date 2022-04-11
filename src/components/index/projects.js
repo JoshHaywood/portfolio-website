@@ -50,7 +50,9 @@ export default function Projects() {
                 {items.map((items) => (
                     <div id={items.id} className="opacity-0">
                         <Link to={items.imagePath}>
-                            <img className="hover:animate-pop-out" alt="Image of project" src={items.imageSrc}/>
+                            <div className="overflow-hidden">
+                                <img className="hover:animate-pop-out" alt="Image of project" src={items.imageSrc}/>
+                            </div>
                         </Link>
 
                         <h5 className="mt-10 font-medium">{items.heading}</h5>

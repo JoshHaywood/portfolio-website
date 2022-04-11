@@ -12,8 +12,8 @@ export default function Project(props) {
                 <Link className="text-quaternary-text hover:text-quaternary-text-hover" to="/projects">← Go Back</Link>
 
                 <div className="flex flex-row justify-between">
-                    <Link id="projectLink" className="text-quaternary-text" to={props.projectLink}>View project</Link>
-                    <Link id="projectLink" className="text-quaternary-text" to={props.repoLink}>View Code</Link>
+                    <a id="projectLink" className="text-quaternary-text" href={props.projectLink}>View project</a>
+                    <a id="projectLink" className="text-quaternary-text" href={props.repoLink}>View Code</a>
                 </div>
             </div>
             

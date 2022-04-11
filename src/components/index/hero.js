@@ -11,7 +11,7 @@ export default function Hero() {
     return (
         // Background
         <div class="area" className="w-full h-screen bg-hero-background bg-no-repeat bg-cover bg-center">
-            <div className="h-screen xl:w-10/12 pt-28 sm:pt-0 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up">
+            <div className="h-screen xl:w-10/12 pt-20 sm:pt-0 md:m-auto flex flex-col md:flex-row justify-center lg:justify-between items-center animate-fade-in-up">
                 <div className="flex flex-col space-y-8 items-center md:items-baseline text-center md:text-left mx-6 sm:mx-10 order-1 md:order-none"> {/* Prevents media icons from being flexed in wrong direction */}
                     {/* Text */}
                     <div className="space-y-8 mt-12"> {/* Prevents text being effected by flex */}

@@ -10,6 +10,10 @@ import Projects from './components/projects/projects-page';
 import ContactPage from './components/contact-page';
 import Project from './components/projects/project';
 
+const errorPaths = [
+  {path: "*",},
+  {path: "/error"}
+];
 
 function App() {
   return (
@@ -61,14 +65,8 @@ function App() {
 
             <Project
                 heading={'Arduino Unity Project'}
-                projectLink={<Message 
-                    heading={"This project is no longer available"}
-                    message={"Unfortunately the repository for this project has been closed"} 
-                />}
-                repoLink={<Message 
-                    heading={"This project is no longer available"}
-                    message={"Unfortunately the repository for this project has been closed"} 
-                />}
+                projectLink={'/error'}
+                repoLink={'/error'}
 
                 overview={'This project was a to create an Arduino game controller using electronic components of our choice and Unity game. It was part of my first year of university and is unfortunately no longer viewable as the repository has been closed. It helped me further my knowledge with Unity as well as an introduction to Arduino and its Unity plugin called Udunio. Additionally this projects other assignment gave me my first attempt at a technical poster.'}
                 projectImage={'../Images/unity-thumbnail.JPG'}
@@ -208,9 +206,15 @@ function App() {
           heading={"Thank you"}
           message={"Your message has been sent successfully. You will receive a reply to the email you provided as soon as possible."}
         />} />
+
         <Route path="*" element={<Message
           heading={"This page does not exist"}
           message={"The page you were looking for does not exist or has been removed."}
+        />} />
+
+        <Route path="/error" element={<Message
+          heading={"This project has been removed"}
+          message={"Unfortunately the source code and build for this project is no longer available"}
         />} />
       </Routes>
 
