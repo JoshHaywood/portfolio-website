@@ -41,7 +41,7 @@ export default function Hero() {
             
                 {/* Image */}
                 <div id="hero-image" className="border-2 border-primary z-10 ml-12 md:ml-0 rounded-md md:mt-10"> {/* Creates border behind image */}
-                    <img src="../Images/portrait.jpg" className="w-[250px] md:w-[350px] rounded-md relative bottom-5 right-5"></img>
+                    <img src="../Images/portrait.jpg" alt="developer portrait" className="w-[250px] md:w-[350px] rounded-md relative bottom-5 right-5"></img>
                 </div>
             </div>
 
