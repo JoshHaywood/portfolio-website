@@ -21,9 +21,7 @@ export default function Footer() {
 		<footer className="left-0 bottom-0 w-full bg-quaternary">
 			<div className="flex flex-col md:flex-row justify-between m-auto py-4 px-1 w-4/6">
 				{/* Pages column */}
-
-        
-          <div className="flex flex-col text-center md:text-left space-y-1"> 
+        <div className="flex flex-col text-center md:text-left space-y-1"> 
             <h4 className="text-white font-medium">Pages</h4>
             {pagesColumn.map((item) => (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
