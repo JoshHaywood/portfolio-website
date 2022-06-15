@@ -18,21 +18,21 @@ export default function Hero() {
                 Your browser does not support videos
             </video>
 
-            <div className="absolute left-[20%] right-[30%] top-[25%] bottom-[25%] z-10 space-y-6"> {/* Prevents media icons from being flexed in wrong direction */}
+            <div className="absolute lg:left-[20%] h-screen flex flex-col justify-center mx-10 lg:mx-auto z-10 space-y-6"> {/* Prevents media icons from being flexed in wrong direction */}
                 {/* Text */}
-                <div className="space-y-6 mt-12"> {/* Prevents text being effected by flex */}
+                <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <h3>Hi, my name is</h3>
-                    <h1 className="text-6xl font-semibold">Josh Haywood</h1>
-                    <h1 className="text-6xl font-semibold">An aspiring web developer</h1>
-                    <p className="text-xl w-[68%]">
+                    <h1 className="sm:text-5xl md:text-6xl font-semibold">Josh Haywood</h1>
+                    <h1 className="sm:text-5xl md:text-6xl font-semibold">An aspiring web developer</h1>
+                    <p className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%]">
                         Im currently a Web Development student at <span className='font-semibold text-primary'>Falmouth University</span> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
                     </p>
                 </div>
 
                 {/* Media Icons */}
-                <div className="flex space-x-6">
-                    <div className="flex">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6">
+                    <div className="flex pr-[0.9rem] sm:pr-0">
                         <Button
                             sx={{
                                     backgroundColor: '#181a1d',
@@ -54,7 +54,7 @@ export default function Hero() {
                         </a>
                     </div>
 
-                    <div className="flex items">
+                    <div className="flex pr-[2.5rem] sm:pr-0">
                         <Button
                             sx={{
                                     border: '2px solid #4c6bc1',
