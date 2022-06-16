@@ -22,7 +22,7 @@ export default function Footer() {
 			<div className="flex flex-col md:flex-row justify-between m-auto py-4 px-1 w-4/6">
 				{/* Pages column */}
         <div className="flex flex-col text-center md:text-left space-y-1"> 
-            <h4 className="text-white font-medium">Pages</h4>
+            <h5 className="text-white font-medium">Pages</h5>
             {pagesColumn.map((item) => (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
             ))}
@@ -31,7 +31,7 @@ export default function Footer() {
 
 				{/* Projects columns */}
 				<div className="flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
-					<h4 className="text-white font-medium">Projects</h4>
+					<h5 className="text-white font-medium">Projects</h5>
           {/* Maps first 3 entries */}
           {projectsColumn.map((item, index) => 
             index < 3 && (

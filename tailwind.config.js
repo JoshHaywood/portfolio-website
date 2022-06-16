@@ -14,7 +14,7 @@ module.exports = {
         'tertiary-text': '#597de0',
         'quaternary-text': '#818181',
 
-        'quaternary-text-hover': 'rgba(129, 129, 129, 0.6)',
+        'quaternary-text-hover': 'rgba(129, 129, 129, 0.75)',
       },
 
       backgroundImage: {
