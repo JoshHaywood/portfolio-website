@@ -25,7 +25,7 @@ export default function Hero() {
                     <h1 className="sm:text-5xl md:text-6xl font-semibold">Josh Haywood</h1>
                     <h1 className="sm:text-5xl md:text-6xl font-semibold text-gray-400">An aspiring web developer</h1>
                     <p className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%] text-gray-400">
-                        Im currently a Web Development student at <span className='font-semibold text-primary'>Falmouth University</span> in my final year of a BSC.
+                        Im currently a Web Development student at <a href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
                     </p>
                 </div>
