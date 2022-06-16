@@ -1,7 +1,9 @@
 import * as React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
+
+import { debounce } from './utilities/helpers';
 
 const links = [
   {name: "Home", path: "/"},
@@ -10,7 +12,30 @@ const links = [
 ];
 
 export default function Header() {
-  //State to toggle navlinks
+  //Navbar scroll hide
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce(() => {
+  const currentScrollPos = window.pageYOffset;
+
+  setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 75) || currentScrollPos < 10); //Check if user has scrolled beyond the navbar height to hide or less then 10 to show navbar
+
+  setPrevScrollPos(currentScrollPos); //Sets last scroll position 
+}, 100); //Time interval for debounce
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+
+  }, [prevScrollPos, visible, handleScroll]);
+
+  const navbarStyles = {
+    transition: 'top 0.6s'
+  };
+
+  //Hamburger state
   const [isOpen, setOpen] = useState(false);
 
   //Set navbar background without scroll
@@ -38,7 +63,7 @@ export default function Header() {
   });
 
   return (
-    <nav id="navbar" className="w-full fixed py-2 px-3 flex justify-between items-center z-20 transition duration-300 ease-in-out">
+    <nav style={{ ...navbarStyles, top: visible ? '0' : '-75px' }} id="navbar" className="w-full h-[75px] fixed py-2 px-3 flex justify-between items-center z-20 transition duration-300 ease-in-out">
       {/* Logo */}
       <Link to="/">
         <div className="bg-[url('../public/Images/logo.png')] hover:bg-[url('../public/Images/logo-hover.png')] w-[260px] h-[60px]"></div>
