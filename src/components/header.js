@@ -63,7 +63,7 @@ export default function Header() {
   });
 
   return (
-    <nav style={{ ...navbarStyles, top: visible ? '0' : '-75px' }} id="navbar" className="w-full h-[75px] fixed py-2 px-3 flex justify-between items-center z-20 transition duration-300 ease-in-out">
+    <nav style={{ ...navbarStyles, top: visible ? '0' : '-75px' }} id="navbar" className="w-full h-[75px] fixed py-2 px-3 sm:px-6 flex justify-between items-center z-20 transition duration-300 ease-in-out">
       {/* Logo */}
       <Link to="/">
         <div className="bg-[url('../public/Images/logo.png')] hover:bg-[url('../public/Images/logo-hover.png')] w-[260px] h-[60px]"></div>
@@ -71,7 +71,7 @@ export default function Header() {
 
       <div className="flex"> {/* Container for links and menu */}
         {/* Hamburger */}
-        <div className="lg:hidden mb-0.5" onClick={(ToggleNavLinks)}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
+        <div className="lg:hidden mb-0.5 z-10" onClick={(ToggleNavLinks)}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
           <Hamburger
             color="#ffffff"
             easing="ease-in-out"
@@ -83,9 +83,9 @@ export default function Header() {
 
         {/* If menu is open */}
         {isOpen && (
-          <ul className="h-56 bg-quaternary lg:h-auto flex flex-col lg:flex-row absolute lg:relative mt-14 lg:mt-0 right-0 lg:right-auto px-10 lg:px-0 rounded-lg lg:rounded-none shadow-sm lg:shadow-none">
+          <ul className="h-screen w-3/5 sm:w-1/2 md:w-2/5 bg-quaternary flex flex-col lg:flex-row items-center absolute right-0 pt-32">
             {links.map((link) => (
-              <li className="m-5 lg:my-0 lg:mx-5">
+              <li className="m-5 lg:my-0 lg:mx-5 leading-10">
                 <Link 
                   className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
                   to={link.path} 
@@ -99,7 +99,7 @@ export default function Header() {
         )}
 
         {/* Links */}
-        <ul className= "h-56 lg:h-auto hidden lg:flex flex-col lg:flex-row absolute lg:relative mt-10 lg:mt-0 right-0 lg:right-auto px-10 lg:px-0 rounded-lg lg:rounded-none shadow-sm lg:shadow-none">
+        <ul className= "hidden lg:flex flex-row">
           {links.map((link) => (
             <li className="m-5 lg:my-0 lg:mx-5">
               <Link className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out" to={link.path}>
