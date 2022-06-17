@@ -32,6 +32,7 @@ module.exports = {
                 transform: 'none'
             },
         },
+        
         'pop-out': {
           '100%': {
             transform: 'scale(1.03)'
@@ -45,5 +46,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwindcss-animation-delay"),
+  ],
 }

@@ -194,6 +194,10 @@ input::placeholder, textarea::placeholder {
   animation-fill-mode: forwards;
 }
 
+#heroText {
+  animation-fill-mode: both;
+}
+
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);
