@@ -10,7 +10,7 @@ export default function Hero() {
     }
 
     return (
-        <div className="h-screen relative flex flex-col animate-fade-in-up">
+        <div className="h-screen relative flex flex-col">
             {/* Background video */}
             <video autoPlay muted loop className="w-full h-screen object-cover brightness-50 blur-sm"> {/* Object cover allows videos aspect ratio to be overridden */}
                 {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
@@ -18,7 +18,7 @@ export default function Hero() {
                 Your browser does not support videos
             </video>
 
-            <div className="absolute lg:left-[20%] h-screen flex flex-col justify-center mx-10 lg:mx-auto z-10 space-y-6 leading-10 sm:leading-none"> {/* Prevents media icons from being flexed in wrong direction */}
+            <div className="absolute lg:left-[20%] h-screen flex flex-col justify-center mx-10 lg:mx-auto z-10 space-y-6 leading-10 sm:leading-none animate-fade-in-up">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <h3 className="text-primary">Hi, my name is</h3>

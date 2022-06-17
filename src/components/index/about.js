@@ -22,7 +22,7 @@ export default function About() {
             </div>
 
             {/* Text */}
-            <div className="flex flex-col md:flex-row md:justify-between items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0 px-5 md:px-10 lg:px-0 pb-10 sm:pb-0"> 
+            <div className="flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0 px-5 md:px-10 lg:px-0 pb-10 sm:pb-0"> 
                 <div className="flex flex-col space-y-4 w-100% md:w-3/5 text-white leading-7">
                     <p>
                         I’m a student from Devon, England. 
