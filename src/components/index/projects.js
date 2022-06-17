@@ -22,12 +22,13 @@ const items = [
 ];  
 
 export default function Projects() {
+    //Animation scroll event
     window.addEventListener('scroll', function() {; 
-        //For each item
-        for (let i = 0; i < items.length; i++) {
-            //let item = items[i];
-            let element = document.getElementById(items[i].id); //Ensure each element has an id assigned
-            let bounding = element.getBoundingClientRect();
+        for (let i = 0; i < items.length; i++) { //Ensures all mapped elements have animation applied
+            let triggerElement = document.getElementById("heading"); //Element used as trigger
+            let bounding = triggerElement.getBoundingClientRect();
+
+            let targetedElement = document.getElementById(items[i].id); //Element animation is applied too
 
             // Gets boundaries using getBoundingClientRect
             // If in viewport
@@ -37,14 +38,14 @@ export default function Projects() {
                 bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
                 bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
 
-                element.classList.add('fade-in-up');
+                targetedElement.classList.add('fade-in-up');
             };
         };
     });
 
     return (
         <div className="md:w-3/4 mx-auto pt-8 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-44 space-y-10"> 
-            <h1 className="text-center font-semibold underline decoration-primary">Featured Projects</h1>
+            <h1 id="heading" className="text-center font-semibold underline decoration-primary">Featured Projects</h1>
             
             <div className="space-y-10 xl:space-y-0 xl:pt-10 xl:space-x-10 xl:flex"> 
                 {items.map((items) => (
