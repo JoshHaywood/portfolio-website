@@ -12,26 +12,6 @@ const links = [
 ];
 
 export default function Header() {
-  //Navbar scroll hide
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  const handleScroll = debounce(() => {
-  const currentScrollPos = window.pageYOffset;
-
-  setVisible((prevScrollPos > currentScrollPos && prevScrollPos - currentScrollPos > 75) || currentScrollPos < 10); //Check if user has scrolled beyond the navbar height to hide or less then 10 to show navbar
-
-  setPrevScrollPos(currentScrollPos); //Sets last scroll position 
-}, 100); //Time interval for debounce
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    document.body.style.overflow = "hidden"; //Prevents scrolling to avoid navbar disappearing while menu is open
-
-    return () => window.removeEventListener('scroll', handleScroll);
-
-  }, [prevScrollPos, visible, handleScroll]);
-
   //Hamburger state
   const [isOpen, setOpen] = useState(false);
 
@@ -60,7 +40,7 @@ export default function Header() {
   });
 
   return (
-    <nav style={{ top: visible ? '0' : '-75px' }} id="navbar" className="w-full h-[75px] fixed py-2 px-3 sm:px-6 flex justify-between items-center z-20 transition-all duration-300 ease-in-out">
+    <nav id="navbar" className="w-full h-[75px] fixed py-2 px-3 sm:px-6 flex justify-between items-center z-20 transition-all duration-300 ease-in-out">
       {/* Logo */}
       <Link to="/">
         <div className="bg-[url('../public/Images/logo.png')] hover:bg-[url('../public/Images/logo-hover.png')] w-[260px] h-[60px]"></div>
