@@ -23,7 +23,7 @@ const items = [
 
 export default function Projects() {
     //Animation scroll event
-    window.addEventListener('scroll', function() {; 
+    window.addEventListener('scroll', function() {
         for (let i = 0; i < items.length; i++) { //Ensures all mapped elements have animation applied
             let triggerElement = document.getElementById("projectsHeading"); //Element used as trigger
             let bounding = triggerElement.getBoundingClientRect();

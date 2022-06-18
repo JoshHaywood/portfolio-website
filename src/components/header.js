@@ -79,19 +79,23 @@ export default function Header() {
 
         {/* If menu is open */}
         {isOpen && (
-          <ul className="h-screen w-3/5 sm:w-1/2 md:w-2/5 bg-quaternary flex flex-col lg:flex-row items-center absolute right-0 pt-32">
-            {links.map((link) => (
-              <li className="m-5 lg:my-0 lg:mx-5 leading-10">
-                <Link 
-                  className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
-                  to={link.path} 
-                  onClick={() => setOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <>
+            <div className="h-screen w-screen absolute mt-[3.75rem] left-0 bg-black opacity-60 blur-sm"></div>
+            
+            <ul className="h-screen w-3/5 sm:w-1/2 md:w-2/5 bg-quaternary flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-32">
+              {links.map((link) => (
+                <li className="m-5 lg:my-0 lg:mx-5 leading-10">
+                  <Link 
+                    className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
+                    to={link.path} 
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </>
         )}
 
         {/* Links */}

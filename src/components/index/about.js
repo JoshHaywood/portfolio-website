@@ -14,7 +14,7 @@ const items = [
 
 export default function About() {
     //Animation scroll event
-    window.addEventListener('scroll', function() {; 
+    window.addEventListener('scroll', function() {
         let triggerElement = document.getElementById("heading"); //Element used as trigger
         let bounding = triggerElement.getBoundingClientRect();
 
