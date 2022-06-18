@@ -59,9 +59,12 @@ export default function Projects() {
             {/* Project section */}
             <Link to="/projects/one-messaging">
                 <div className="xl:pt-12 xl:space-x-10 xl:flex items-center text-right"> 
-                    <img className="rounded-sm w-2/3 -mr-32" src="../Images/one-messaging-thumbnail.jpg"></img>
+                    <div className="relative -mr-32">
+                        <div className="absolute bg-primary w-full h-full z-10 opacity-30 hover:opacity-0"></div>
+                        <img className="rounded-sm h-full w-full" src="../Images/one-messaging-thumbnail.jpg"></img>
+                    </div>
 
-                    <div className="flex flex-col items-end">
+                    <div className="flex flex-col items-end z-20">
                         <h6 className="text-primary">Messaging Project</h6>
                         <h4 className="mb-5">One Messaging</h4>
                         <p className="bg-senary pl-10 pr-5 pt-5 pb-5 shadow-md rounded-sm text-gray-300">
