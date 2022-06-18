@@ -3,15 +3,34 @@ import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 
 export default function Contact() {
+    //Animation scroll event
+    window.addEventListener('scroll', function() {
+        let triggerElement = document.getElementById("contactHeading"); //Element used as trigger
+        let bounding = triggerElement.getBoundingClientRect();
+
+        let targetedElement = document.getElementById("contactForm"); //Element animation is applied too
+
+        // Gets boundaries using getBoundingClientRect
+        // If in viewport
+        if (bounding.top >= 0 &&
+            bounding.left >= 0 &&
+            //Compares to element dimensions
+            bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+
+            targetedElement.classList.add('fade-in-up');
+        };
+    });
+
     return (
         <> 
             {/* Heading */}
-            <div className="pb-12 mx-auto"> 
-                <h2 id="projectsHeading" className="font-semibold text-center">Contact</h2>
+            <div className="pb-12 pt-4 md:pt-0 mx-auto"> 
+                <h2 id="contactHeading" className="font-semibold text-center">Contact</h2>
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
 
-            <form className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST">
+            <form id="contactForm" className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST">
                 <TextField 
                     className="bg-quaternary rounded-md" 
                     InputProps={{ sx: { color: "white" } }} 

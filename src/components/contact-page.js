@@ -9,12 +9,9 @@ export default function ContactPage() {
                 <title>Contact | Josh Haywood | Portfolio</title>
             </Helmet>
             
-            {/* Background */}
-            <div className="w-full h-screen bg-contact-background bg-no-repeat bg-cover bg-center">
-                {/* Form */}
-                <div className="h-screen px-10 flex flex-col justify-center md:w-2/4 lg:w-2/5 mx-auto">
-                    <Contact />
-                </div>
+            {/* Form */}
+            <div className="h-screen px-10 flex flex-col justify-center md:w-2/4 lg:w-2/5 mx-auto">
+                <Contact />
             </div>
         </>
     );

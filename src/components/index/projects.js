@@ -51,7 +51,7 @@ export default function Projects() {
     });
 
     return (
-        <div className="md:w-4/5 xl:w-3/5 mx-auto pt-8 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-44"> 
+        <div className="md:w-4/5 xl:w-3/5 mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
             {/* Heading */}
             <div className="space-y-3 mx-auto"> 
                 <h2 id="projectsHeading" className="font-semibold text-center">Featured Projects</h2>
@@ -103,7 +103,7 @@ export default function Projects() {
                         <Link to={items.link}>
                             <div id={items.id} className="pt-12 md:space-x-10 flex md:flex-row items-center mt-5 md:mt-20"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                 {/* Text card */}
-                                <div className="flex flex-col items-start md:items-end z-20 w-full pr-20 md:pr-0 md:w-2/5 mx-5 sm:mx-10 md:mx-0 absolute md:static">
+                                <div className="flex flex-col items-start z-20 w-full pr-20 md:pr-0 md:w-2/5 mx-5 sm:mx-10 md:mx-0 absolute md:static">
                                     <h6 className="text-primary">{items.tagline}</h6>
                                     <h4 className="mb-5">{items.heading}</h4>
 
