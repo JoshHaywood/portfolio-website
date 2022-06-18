@@ -14,7 +14,7 @@ export default function Index() {
             <div className="px-5 md:px-0 bg-tertiary w-screen"> {/* Allows background to exceed width */}
                 <Projects />                    
             </div>
-            <div className="px-5 pb-16 md:pb-28 lg:pb-52 md:px-0 md:w-2/3 lg:w-2/5 mx-auto">
+            <div className="px-10 pb-16 md:pb-28 lg:pb-52 md:px-0 md:w-2/3 lg:w-2/5 mx-auto">
                 <Contact />
             </div>
         </div>

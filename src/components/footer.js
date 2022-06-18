@@ -19,7 +19,7 @@ const projectsColumn = [
 export default function Footer() {
   return (
 		<footer className="left-0 bottom-0 w-full bg-quaternary">
-			<div className="flex flex-col md:flex-row justify-between m-auto py-4 px-1 w-4/6">
+			<div className="flex flex-col md:flex-row justify-between m-auto py-4 px-1 w-1/2">
 				{/* Pages column */}
         <div className="flex flex-col text-center md:text-left space-y-1"> 
             <h5 className="text-white font-medium">Pages</h5>
@@ -51,7 +51,7 @@ export default function Footer() {
 			</div>
 
 			{/* Footnote */}
-			<div className="flex py-2 w-5/6 md:w-4/6 m-auto justify-between border-t-2 border-primary">
+			<div className="flex py-2 w-3/5 md:w-1/2 m-auto justify-between border-t-2 border-primary">
         <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
 
         <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}

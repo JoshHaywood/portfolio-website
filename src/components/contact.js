@@ -5,7 +5,11 @@ import Button from '@mui/material/Button';
 export default function Contact() {
     return (
         <> 
-            <h1 className="text-center underline font-semibold decoration-primary pb-10 lg:pb-20">Contact</h1>
+            {/* Heading */}
+            <div className="pb-12 mx-auto"> 
+                <h2 id="projectsHeading" className="font-semibold text-center">Contact</h2>
+                <div className="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
 
             <form className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST">
                 <TextField 

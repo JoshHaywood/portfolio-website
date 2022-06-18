@@ -63,7 +63,7 @@ export default function Projects() {
                 {items.map((items, index) => 
                     index == 0 && (
                         <Link to={items.link}>
-                            <div id={items.id} className="xl:pt-12 xl:space-x-10 xl:flex items-center text-right mt-20"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
+                            <div id={items.id} className="pt-12 md:space-x-10 flex md:flex-row items-center text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                 {/* Image */}
                                 <div className="relative w-3/5  overflow-hidden"> {/* Container for overlaying child elements */}
                                     <div className="hover:animate-pop-out over">  {/* Animation added as child so parent elements scale isnt effected */}
