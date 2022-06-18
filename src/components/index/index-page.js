@@ -8,7 +8,7 @@ export default function Index() {
     return (
         <div className="space-y-10 md:space-y-20 xl:space-y-40">
             <Hero />
-            <div className="px-5 xl:px-0 lg:w-4/5 xl:w-3/5 mx-auto"> {/* Multiple parents created to not */}
+            <div className="px-5 xl:px-0 lg:w-4/5 xl:w-1/2 mx-auto"> {/* Multiple parents created to not */}
                 <About />
             </div>
             <div className="px-5 md:px-0 bg-tertiary w-screen"> {/* Allows background to exceed width */}
