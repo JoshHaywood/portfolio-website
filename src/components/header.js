@@ -26,6 +26,7 @@ export default function Header() {
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    document.body.style.overflow = "hidden"; //Prevents scrolling to avoid navbar disappearing while menu is open
 
     return () => window.removeEventListener('scroll', handleScroll);
 
