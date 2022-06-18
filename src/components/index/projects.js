@@ -73,7 +73,7 @@ export default function Projects() {
                                     </div>
 
                                     {/* Text card */}
-                                    <div className="flex flex-col items-start md:items-end z-20 w-full pr-20 md:pr-0 md:w-2/5  mx-5 sm:mx-10 absolute md:static">
+                                    <div className="flex flex-col items-start md:items-end z-20 pr-20 md:pr-0 md:w-2/5  mx-5 sm:mx-10 absolute md:static">
                                         <h6 className="text-primary">{items.tagline}</h6>
                                         <h4 className="mb-5">{items.heading}</h4>
 
@@ -103,7 +103,7 @@ export default function Projects() {
                         <Link to={items.link}>
                             <div id={items.id} className="pt-12 md:space-x-10 flex md:flex-row items-center mt-5 md:mt-20"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                 {/* Text card */}
-                                <div className="flex flex-col items-start z-20 w-full pr-20 md:pr-0 md:w-2/5 mx-5 sm:mx-10 md:mx-0 absolute md:static">
+                                <div className="flex flex-col items-start z-20 pr-20 md:pr-0 md:w-2/5 mx-5 sm:mx-10 md:mx-0 absolute md:static">
                                     <h6 className="text-primary">{items.tagline}</h6>
                                     <h4 className="mb-5">{items.heading}</h4>
 
