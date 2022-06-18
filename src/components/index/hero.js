@@ -25,7 +25,7 @@ export default function Hero() {
                     <h1 id="heroText" className="sm:text-5xl md:text-6xl font-semibold animate-fade-in-up animation-delay-200">Josh Haywood</h1>
                     <h1 id="heroText" className="sm:text-5xl md:text-6xl font-semibold text-gray-400 animate-fade-in-up animation-delay-400">An aspiring web developer</h1>
                     <p id="heroText" className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%] text-gray-400 animate-fade-in-up animation-delay-600">
-                        Im currently a Web Development student at <a href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
+                        Im currently a Web Development student at <a id="heroLink" href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
                     </p>
                 </div>
@@ -66,7 +66,7 @@ export default function Hero() {
                                     },
                                 }}
                         >
-                        View my Indeed
+                        View my Linked In
                         </Button>                            
                                 
                         <a href="https://www.linkedin.com/in/josh-haywood-b70a24233/" className="h-4 w-4 -ml-[26px] mt-[9px] fill-white">

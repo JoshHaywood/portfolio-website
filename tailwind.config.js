@@ -7,7 +7,8 @@ module.exports = {
         'secondary': '#101316',
         'tertiary': '#15171a',
         'quaternary': '#181a1d',
-        'quinary': '#373b42', 
+        'quinary': '#373b42',
+        'senary': '#1e2024', 
         
         'primary-text': '#ffffff',
         'secondary-text': '#9e9e9e',

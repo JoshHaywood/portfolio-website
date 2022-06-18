@@ -175,11 +175,11 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-colour);
 }
 
-#projectOne:hover a, #projectTwo:hover a, #project a, #projectLink {
+#heroLink, #project a, #projectLink {
   background-position: 0 calc(100% - 0px)
 }
 
-#projectOne:hover a, #projectTwo:hover a, #project:hover a, #projectLink:hover {
+#heroLink:hover, #project:hover a, #projectLink:hover {
   background-size: 100% 1px;
 }
 

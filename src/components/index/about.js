@@ -15,7 +15,7 @@ const items = [
 export default function About() {
     //Animation scroll event
     window.addEventListener('scroll', function() {
-        let triggerElement = document.getElementById("heading"); //Element used as trigger
+        let triggerElement = document.getElementById("aboutHeading"); //Element used as trigger
         let bounding = triggerElement.getBoundingClientRect();
 
         let targetedElement = document.getElementById("section"); //Element animation is applied too
@@ -36,7 +36,7 @@ export default function About() {
         <div className="space-y-12">
             {/* Heading */}
             <div className="space-y-3 mx-auto">
-                <h2 id="heading" className="font-semibold text-center">About me</h2>
+                <h2 id="aboutHeading" className="font-semibold text-center">About me</h2>
                 <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>
 
