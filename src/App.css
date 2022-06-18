@@ -166,6 +166,18 @@ input::placeholder, textarea::placeholder {
   transition: 0.3s ease-in-out; /* Plays same transition onMouseOut */
 }
 
+#heroLink, #project a, #projectLink {
+  background-position: 0 calc(100% - 0px)
+}
+
+#heroLink:hover, #project:hover a, #projectLink:hover {
+  background-size: 100% 1px;
+}
+
+#projectList {
+  word-spacing: 20px;
+}
+
 #backToTop:hover p:nth-child(2) {
   animation: bounce 1s infinite;
   color: var(--primary-colour);
@@ -173,14 +185,6 @@ input::placeholder, textarea::placeholder {
 
 #backToTop:hover button, #backToTop:hover p {
   color: var(--primary-colour);
-}
-
-#heroLink, #project a, #projectLink {
-  background-position: 0 calc(100% - 0px)
-}
-
-#heroLink:hover, #project:hover a, #projectLink:hover {
-  background-size: 100% 1px;
 }
 
 #pageDown:hover svg {
@@ -191,7 +195,6 @@ input::placeholder, textarea::placeholder {
 /* Animations */
 .fade-in-up {
   animation: fadeInUp 1s ease-in;
-  animation-fill-mode: forwards;
 }
 
 #heroText {

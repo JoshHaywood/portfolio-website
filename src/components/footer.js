@@ -25,7 +25,7 @@ export default function Footer() {
             <h5 className="text-white font-medium">Pages</h5>
             {pagesColumn.map((item) => (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
-            ))}
+            ))};
         </div>
 
 
@@ -37,7 +37,7 @@ export default function Footer() {
             index < 3 && (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
             )
-          )}
+          )};
 				</div>
 
 				<div className="flex flex-col md:justify-end text-center md:text-left space-y-1"> 
@@ -46,7 +46,7 @@ export default function Footer() {
             index >= 3 && (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
             )
-          )}
+          )};
 				</div>
 			</div>
 
