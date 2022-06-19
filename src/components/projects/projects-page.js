@@ -56,7 +56,7 @@ export default function Projects() {
     return (
         <>
             <Helmet>
-                <title>Projects | Josh Haywood | Portfolio</title>
+                <title>Projects | Josh Haywood</title>
             </Helmet>
 
             <div className="py-32 md:px-0 md:w-3/4 mx-5 md:mx-auto space-y-20">        

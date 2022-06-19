@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <>
             <Helmet>
-                <title>Contact | Josh Haywood | Portfolio</title>
+                <title>Contact | Josh Haywood</title>
             </Helmet>
             
             {/* Form */}
