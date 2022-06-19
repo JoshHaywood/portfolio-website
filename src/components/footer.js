@@ -25,7 +25,7 @@ export default function Footer() {
             <h5 className="text-white font-medium">Pages</h5>
             {pagesColumn.map((item) => (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
-            ))};
+            ))}
         </div>
 
 
@@ -37,7 +37,7 @@ export default function Footer() {
             index < 3 && (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
             )
-          )};
+          )}
 				</div>
 
 				<div className="flex flex-col md:justify-end text-center md:text-left space-y-1"> 
@@ -46,12 +46,12 @@ export default function Footer() {
             index >= 3 && (
               <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
             )
-          )};
+          )}
 				</div>
 			</div>
 
 			{/* Footnote */}
-			<div className="flex py-2 w-3/5 md:w-1/2 m-auto justify-between border-t-2 border-primary">
+			<div className="flex py-2 w-4/5 md:w-1/2 m-auto justify-between border-t-2 border-primary">
         <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
 
         <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
@@ -60,5 +60,5 @@ export default function Footer() {
         </div>
 			</div>
     </footer>
-  );
+  )
 };
