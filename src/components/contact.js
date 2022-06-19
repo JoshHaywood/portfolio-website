@@ -25,7 +25,7 @@ export default function Contact() {
     return (
         <> 
             {/* Heading */}
-            <div className="pb-12 pt-4 md:pt-0 mx-auto"> 
+            <div className="pb-10 md:pb-14 pt-4 md:pt-0 space-y-3 mx-auto"> 
                 <h2 id="contactHeading" className="font-semibold text-center">Contact</h2>
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
