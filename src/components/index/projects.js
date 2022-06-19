@@ -63,26 +63,26 @@ export default function Projects() {
                 {items.map((items, index) => 
                     index == 0 && (
                         <Link to={items.link}>
-                            <div id={items.id} className="pt-12 md:space-x-10 flex md:flex-row items-center text-left md:text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
+                            <div id={items.id} className="mt-12 md:space-x-10 flex md:flex-row items-center text-left md:text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                 {/* Image */}
                                     <div className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
                                         <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
                                             <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
-                                            <img className="rounded-sm h-[40vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
+                                            <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
                                         </div>
                                     </div>
 
                                     {/* Text card */}
-                                    <div className="flex flex-col items-start md:items-end z-20 pr-20 md:pr-0 md:w-2/5  mx-5 sm:mx-10 absolute md:static">
+                                    <div className="flex flex-col items-start md:items-end z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 pb-5 sm:pb-0 absolute md:static">
                                         <h6 className="text-primary">{items.tagline}</h6>
                                         <h4 className="mb-5">{items.heading}</h4>
 
-                                        <p className="bg-none md:bg-senary md:pl-10 pr-5 pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
+                                        <p className="bg-none md:bg-senary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
                                             {items.text}
                                         </p>
 
                                         {/* Stack list */}
-                                        <ul id="projectList" className="flex flex-row pt-5">
+                                        <ul id="projectList" className="flex flex-row sm:pt-5">
                                             <li>{items.list}</li>
                                         </ul>
 
@@ -101,18 +101,18 @@ export default function Projects() {
                 {items.map((items, index) => 
                     index == 1 && (
                         <Link to={items.link}>
-                            <div id={items.id} className="pt-12 md:space-x-10 flex md:flex-row items-center mt-5 md:mt-20"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
+                            <div id={items.id} className="mt-8 lg:mt-20 md:space-x-10 flex md:flex-row items-center"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                 {/* Text card */}
-                                <div className="flex flex-col items-start z-20 pr-20 md:pr-0 md:w-2/5 mx-5 sm:mx-10 md:mx-0 absolute md:static">
+                                <div className="flex flex-col items-start z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 md:mx-0 pb-5 sm:pb-0 absolute md:static">
                                     <h6 className="text-primary">{items.tagline}</h6>
                                     <h4 className="mb-5">{items.heading}</h4>
 
-                                    <p className="bg-none md:bg-senary text-left md:pl-5 pr-10 pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
+                                    <p className="bg-none md:bg-senary text-left md:pl-5 pr-10 sm:pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
                                         {items.text}
                                     </p>
 
                                     {/* Stack list */}
-                                    <ul id="projectList" className="flex flex-row pt-5">
+                                    <ul id="projectList" className="flex flex-row sm:pt-5">
                                         <li>{items.list}</li>
                                     </ul>
 
@@ -127,7 +127,7 @@ export default function Projects() {
                                 <div className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
                                     <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
                                         <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
-                                        <img className="rounded-sm h-[40vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
+                                        <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
                                     </div>
                                 </div>
                             </div>

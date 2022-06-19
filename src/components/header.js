@@ -40,7 +40,7 @@ export default function Header() {
   });
 
   return (
-    <nav id="navbar" className="w-full h-[75px] fixed py-2 px-3 sm:px-6 flex justify-between items-center z-20 transition-all duration-300 ease-in-out">
+    <nav id="navbar" className="w-full h-[75px] fixed py-2 px-3 sm:px-6 flex justify-between items-center z-50 transition-all duration-300 ease-in-out">
       {/* Logo */}
       <Link to="/">
         <div className="bg-[url('../public/Images/logo.png')] hover:bg-[url('../public/Images/logo-hover.png')] w-[260px] h-[60px]"></div>

@@ -86,7 +86,7 @@ export default function About() {
 
                 {/* Image */}
                 <div id="hero-image" className="border-2 border-primary rounded-md h-min relative top-5 mx-auto left-5"> {/* Creates border behind image */}
-                    <img src="../Images/portrait.jpg" alt="developer portrait" className="sm:w-[300px] rounded-md relative bottom-5 right-5"></img>
+                    <img src="../Images/portrait.jpg" alt="developer portrait" className="w-[200px] sm:w-[300px] rounded-md relative bottom-5 right-5"></img>
                 </div>
             </div>
         </div>
