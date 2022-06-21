@@ -37,6 +37,8 @@ function App() {
             {/*Returns components with assigned props */}
             <Project
                 heading={'Portfolio'}
+                headingStyle={'w-20'}
+
                 projectLink={'https://www.joshhaywood-portfolio.com/'}
                 repoLink={'https://github.com/El-Goblino/portfolio-website'}
 
@@ -65,6 +67,8 @@ function App() {
 
             <Project
                 heading={'Arduino Unity Project'}
+                headingStyle={'w-[16rem]'}
+
                 projectLink={'/error'}
                 repoLink={'/error'}
 
@@ -93,6 +97,8 @@ function App() {
 
             <Project
                 heading={'Student Survival Store'}
+                headingStyle={'w-[17rem]'}
+
                 projectLink={'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store'}
                 repoLink={'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store'}
 
@@ -121,6 +127,8 @@ function App() {
 
             <Project
                 heading={'One Messaging'}
+                headingStyle={'w-[11rem]'}
+
                 projectLink={'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2'}
                 repoLink={'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2'}
 
@@ -149,6 +157,8 @@ function App() {
 
             <Project
                 heading={'The Esports Center'}
+                headingStyle={'w-[14rem]'}
+
                 projectLink={'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center'}
                 repoLink={'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center'}
 
@@ -177,6 +187,8 @@ function App() {
 
             <Project
                 heading={'Game Review Project'}
+                headingStyle={'w-[16rem]'}
+                
                 projectLink={'https://game-review-application.herokuapp.com/'}
                 repoLink={'https://github.com/El-Goblino/game-review-app'}
 

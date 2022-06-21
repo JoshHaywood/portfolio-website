@@ -6,13 +6,17 @@ export default function Project(props) {
     const structure = props.structure;
 
     return (
-        <div className="py-40 px-10 md:px-0 md:w-3/5 mx-auto space-y-10">
+        <div className="py-40 px-10 md:px-0 md:w-1/2 mx-auto space-y-10">
             <div className="space-y-3">
-                <h1 className="text-center underline decoration-primary font-semibold mb-16">{props.heading}</h1>
+                {/* Heading */}
+                <div className="space-y-3 mb-16 mx-auto">
+                    <h2 id="aboutHeading" className="font-semibold text-center">{props.heading}</h2>
+                    <div className={`${props.headingStyle} h-1 bg-primary mx-auto`}></div>
+                </div>
                 <Link className="text-quaternary-text hover:underline decoration-quaternary-text-hover hover:text-quaternary-text-hover" to="/projects">← Go Back</Link>
 
                 <div className="flex flex-row justify-between">
-                    <a id="projectLink" className="text-quaternary-text" href={props.projectLink}>View project</a>
+                    <a id="projectLink" className="text-quaternary-text" href={props.projectLink}>View Project</a>
                     <a id="projectLink" className="text-quaternary-text" href={props.repoLink}>View Code</a>
                 </div>
             </div>
@@ -20,7 +24,7 @@ export default function Project(props) {
             <div className="space-y-10">
                 <p>{props.overview}</p>
      
-                <img className="mx-auto"  src={props.projectImage} alt="Image of project"/>
+                <img className="mx-auto md:px-10 rounded-sm"  src={props.projectImage} alt="Image of project"/>
 
                 <div className="py-10 space-y-10 md:space-y-0 md:flex md:space-x-20 border-y-2 border-primary">
                     <div className="space-y-10">
@@ -48,7 +52,9 @@ export default function Project(props) {
                         <p>{props.target}</p>
                     </div>
 
-                    <div className="image-container"><img className="mx-auto" src={props.targetImage} alt="Image of project" /></div>
+                    <div className="image-container"> {/* Prevents image animation overflow */}
+                        <img className="mx-auto md:px-10 rounded-sm" src={props.targetImage} alt="Image of project" />
+                    </div>
                 </section>
 
                 <section className="space-y-10">
@@ -57,7 +63,9 @@ export default function Project(props) {
                         <p>{props.issues}</p>
                     </div>
 
-                    <div className="image-container"><img className="mx-auto"  src={props.issuesImage} alt="Image of project" /></div>
+                    <div className="image-container">
+                        <img className="mx-auto md:px-10 rounded-sm" src={props.issuesImage} alt="Image of project" />
+                    </div>
                 </section>
 
                 <section className="space-y-10">
