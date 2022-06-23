@@ -17,10 +17,9 @@ html {
   --quaternary-colour: #181a1d;
   --quinary-colour: #373b42; 
   
-  --primary-text-colour: #ffffff; 
-  --secondary-text-colour: #9e9e9e;
+  --primary-text-colour: #d1d5db; 
+  --secondary-text-colour: #9ca3af;
   --tertiary-text-colour: #597de0;
-  --quaternary-text-colour: #818181;
 }
 
 * {
@@ -108,13 +107,13 @@ h6 {
 
 p {
   font-size: 1rem;
-  color: var(--primary-text-colour);
+  color: var(--secondary-text-colour);
   font-weight: 300;
 }
 
 a {
   font-size: 1rem;
-  color: var(--primary-text-colour);
+  color: var(--secondary-text-colour);
   font-weight: 300;
   text-decoration: none;
   cursor: pointer;
@@ -128,13 +127,13 @@ a {
 li, ul {
   list-style: none;
   font-size: 1rem;
-  color: var(--primary-text-colour);
+  color: var(--secondary-text-colour);
   font-weight: 300;
 }
 
 button {
   font-size: 1rem;
-  color: var(--primary-text-colour);
+  color: var(--secondary-text-colour);
   font-weight: 300;
 }
 
@@ -166,12 +165,17 @@ input::placeholder, textarea::placeholder {
   transition: 0.3s ease-in-out; /* Plays same transition onMouseOut */
 }
 
-#heroLink, #project a, #projectLink {
+#heroLink, #project a {
   background-position: 0 calc(100% - 0px)
 }
 
-#heroLink:hover, #project:hover a, #projectLink:hover {
+#heroLink:hover, #project:hover a {
   background-size: 100% 1px;
+}
+
+#heroButton:hover, #heroButton:hover svg {
+  fill: white;
+  color: white;
 }
 
 #projectList {

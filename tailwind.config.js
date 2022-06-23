@@ -10,12 +10,11 @@ module.exports = {
         'quinary': '#373b42',
         'senary': '#1e2024', 
         
-        'primary-text': '#ffffff',
-        'secondary-text': '#9e9e9e',
+        'primary-text': '#d1d5db',
+        'secondary-text': '#9ca3af',
         'tertiary-text': '#597de0',
-        'quaternary-text': '#818181',
 
-        'quaternary-text-hover': 'rgba(129, 129, 129, 0.75)',
+        'secondary-text-hover': 'rgba(129, 129, 129, 0.75)',
       },
 
       backgroundImage: {

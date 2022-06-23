@@ -13,11 +13,11 @@ export default function Project(props) {
                     <h2 id="aboutHeading" className="font-semibold text-center">{props.heading}</h2>
                     <div className={`${props.headingStyle} h-1 bg-primary mx-auto`}></div>
                 </div>
-                <Link className="text-quaternary-text hover:underline decoration-quaternary-text-hover hover:text-quaternary-text-hover" to="/projects">← Go Back</Link>
+                <Link className="hover:underline decoration-secondary-text-hover hover:text-secondary-text-hover" to="/projects">← Go Back</Link>
 
                 <div className="flex flex-row justify-between">
-                    <a id="projectLink" className="text-quaternary-text" href={props.projectLink}>View Project</a>
-                    <a id="projectLink" className="text-quaternary-text" href={props.repoLink}>View Code</a>
+                    <a id="projectLink" href={props.projectLink}>View Project</a>
+                    <a id="projectLink" href={props.repoLink}>View Code</a>
                 </div>
             </div>
             

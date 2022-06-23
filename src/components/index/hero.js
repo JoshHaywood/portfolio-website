@@ -17,7 +17,7 @@ export default function Hero() {
                     <h3 id="heroText" className="text-primary animate-fade-in-up">Hi, my name is</h3>
                     <h1 id="heroText" className="sm:text-5xl md:text-6xl font-semibold animate-fade-in-up animation-delay-200">Josh Haywood</h1>
                     <h1 id="heroText" className="sm:text-5xl md:text-6xl font-semibold text-gray-400 animate-fade-in-up animation-delay-400">An aspiring web developer</h1>
-                    <p id="heroText" className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%] text-gray-400 animate-fade-in-up animation-delay-600">
+                    <p id="heroText" className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%] animate-fade-in-up animation-delay-600">
                         Im currently a Web Development student at <a id="heroLink" href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
                     </p>
@@ -25,17 +25,18 @@ export default function Hero() {
 
                 {/* Media Icons */}
                 <div id="heroText" className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6 animate-fade-in-up animation-delay-800">
-                    <a href="https://github.com/El-Goblino/">  
+                    <a id="heroButton" href="https://github.com/El-Goblino/">  
                         <div className="flex pr-[0.7rem] sm:pr-0">
                             <Button
                                 sx={{
                                         border: '2px solid #181a1d', /* To match dimensions of other button without affecting padding */
                                         backgroundColor: '#181a1d',
-                                        color: 'white',
+                                        color: '#9ca3af',
                                         paddingRight: '1.9rem',
 
                                         ':hover': {
                                             bgcolor: 'rgba(24, 26, 29, 0.8)', 
+                                            color: 'white',
                                         },
                                     }}
                             >
@@ -48,23 +49,24 @@ export default function Hero() {
                         </div>
                     </a>
                     
-                    <a href="https://www.linkedin.com/in/josh-haywood-b70a24233/">
+                    <a id="heroButton" href="https://www.linkedin.com/in/josh-haywood-b70a24233/">
                         <div className="flex pr-[2.5rem] sm:pr-0">
                             <Button
                                 sx={{
                                         border: '2px solid #4c6bc1',
-                                        color: 'white',
+                                        color: '#9ca3af',
                                         paddingRight: '1.9rem',
 
                                         ':hover': {
                                             bgcolor: 'rgba(76, 107, 193, 0.3)',
+                                            color: 'white',
                                         },
                                     }}
                             >
                             View my Linked In
                             </Button>                            
 
-                            <svg className="h-4 w-4 -ml-[26px] mt-[11px] fill-white" alt="Linkedin logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> {/* ! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */} 
+                            <svg className="h-4 w-4 -ml-[26px] mt-[11px] fill-gray-400" alt="Linkedin logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"> {/* ! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. */} 
                                 <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/>
                             </svg>
                         </div>

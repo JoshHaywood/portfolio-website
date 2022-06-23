@@ -42,7 +42,7 @@ export default function About() {
 
             {/* Text */}
             <div id="section" className="flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0 px-5 md:px-10 lg:px-0 pb-10 sm:pb-0"> 
-                <div className="flex flex-col space-y-4 w-100% md:w-3/5 text-white leading-7">
+                <div className="flex flex-col space-y-4 w-100% md:w-3/5 leading-7">
                     <p>
                         I’m a student from Devon, England. 
                         Currently studying a BSC in Web Development.
@@ -55,7 +55,7 @@ export default function About() {
                         Recently I've been focused on learning React, Material UI and marketing myself using online tools like this portfolio site.
                     </p>
 
-                    <h6>Technologies I have experience using:</h6>
+                    <h6 className="text-gray-400">Technologies I have experience using:</h6>
                     <div className="flex justify-between">
                         <ul>
                             {/* Maps first three objects */}
@@ -85,7 +85,7 @@ export default function About() {
                 </div>
 
                 {/* Image */}
-                <div id="hero-image" className="border-2 border-primary rounded-md h-min relative mx-auto left-5"> {/* Creates border behind image */}
+                <div id="hero-image" className="border-2 border-primary rounded-md h-min relative mx-auto md:top-5 left-5"> {/* Creates border behind image */}
                     <img src="../Images/portrait.jpg" alt="developer portrait" className="w-[200px] sm:w-[300px] rounded-md relative bottom-5 right-5"></img>
                 </div>
             </div>
