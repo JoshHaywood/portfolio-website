@@ -2,13 +2,6 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 
 export default function Hero() {
-    const items = []
-
-    //Creates array of 10
-    for (var i = 0; i < 10; i++) {
-        items.push(i);
-    }
-
     return (
         <div className="h-screen relative flex flex-col">
             {/* Background video */}
@@ -78,5 +71,5 @@ export default function Hero() {
                 </div>
             </div>
         </div>
-    );
-}
+    )
+};

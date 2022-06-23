@@ -8,9 +8,9 @@ export default function Projects() {
             imageSrc: "../Images/portfolio-thumbnail.jpg",
             tagline: "Personal Site",
             heading: "Portfolio Website",
-            text: "My website showcasing projects ive created as well as a hub for marketing and contact. Specifically my first version of the portfolio site.",
+            text: "My website showcasing projects i've created as well as a hub for marketing and contact. Specifically, my first version of the portfolio site and how ive adapted the project since then.",
             link: "/projects/portfolio",
-            list: "Handlebars ExpressJS CSS",
+            list: "Handlebars/React ExpressJS CSS/Tailwind",
         },
     
         {
@@ -18,7 +18,7 @@ export default function Projects() {
             imageSrc: "../Images/one-messaging-thumbnail.jpg",
             tagline: "Messaging Project",
             heading: "One messaging project",
-            text: "A realtime messaging app I made in my second year of University. The project portion of my research into web communication systems.",
+            text: "A realtime messaging app I made in my second year of University. This was project portion of my research into the advancement web communication systems.",
             link: "/projects/one-messaging",
             list: "Handlebars ExpressJS SocketIO SQLite",
         },
