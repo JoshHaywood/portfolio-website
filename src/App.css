@@ -173,11 +173,6 @@ input::placeholder, textarea::placeholder {
   background-size: 100% 1px;
 }
 
-#heroButton:hover, #heroButton:hover svg {
-  fill: white;
-  color: white;
-}
-
 #projectList {
   word-spacing: 20px;
 }
