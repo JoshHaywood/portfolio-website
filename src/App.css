@@ -177,6 +177,12 @@ input::placeholder, textarea::placeholder {
   word-spacing: 20px;
 }
 
+#slide:hover h4 {
+  color: var(--tertiary-text-colour);
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
 #backToTop:hover p:nth-child(2) {
   animation: bounce 1s infinite;
   color: var(--primary-colour);
@@ -186,9 +192,26 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-colour);
 }
 
-#pageDown:hover svg {
-  fill: var(--primary-colour);
-  cursor: pointer;
+@media (max-width: 500px) { 
+  #slide { /* Slideshow disabled as text becomes far too large */
+    display: none;
+  }
+}
+
+/* Ensures theres is no margin on project cards when slideshow isnt present */
+@media (min-width: 500px) {
+  #projectCardContainer {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+/* Removes margin when screen size is adjusted at desktop */
+@media (min-width: 1024px) {
+  #projectCardContainer {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 /* Animations */

@@ -15,6 +15,8 @@
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
+    "react-slideshow-image": "^3.7.5",
+    "react-syntax-highlighter": "^15.5.0",
     "styled-components": "^5.3.5",
     "tailwindcss-animation-delay": "^1.0.7",
     "web-vitals": "^2.1.4"
@@ -47,7 +49,9 @@
     ]
   },
   "devDependencies": {
-    "tailwindcss": "^3.0.23"
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4"
   },
   "heroku-run-build-script": true
 }

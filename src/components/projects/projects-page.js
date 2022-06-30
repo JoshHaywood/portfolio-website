@@ -2,6 +2,8 @@ import * as React from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
+import Slider from "./slider";
+
 const items = [
     {
         imagePath: "/projects/portfolio", 
@@ -64,24 +66,29 @@ export default function Projects() {
             <Helmet>
                 <title>Projects | Josh Haywood</title>
             </Helmet>
-
-            <div className="pt-44 pb-48 md:px-0 md:w-2/3 mx-5 md:mx-auto space-y-12">        
+            
+            <div className="pt-44 pb-16 md:pb-48 md:px-0 md:w-2/3 mx-5 md:mx-auto space-y-12">        
                 {/* Heading */}
                 <div className="space-y-3 mx-auto">
-                    <h2 id="aboutHeading" className="font-semibold text-center">Projects</h2>
+                    <h2 className="font-semibold text-center">Projects</h2>
                     <div className="w-24 h-1 bg-primary mx-auto"></div>
                 </div>
 
-                <div className="space-y-10 lg:space-y-0 lg:grid grid-rows-2 grid-cols-3 gap-x-10 gap-y-14"> 
+                <Slider />
+
+                <div id="projectCardContainer" className="space-y-16 lg:space-y-0 lg:grid grid-rows-2 grid-cols-3 gap-x-10 gap-y-14"> 
                     {items.map((items) => 
+                        //Project card
                         <div className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md">
                             <div className="bg-quaternary rounded-md rounded-b-none">
+                                {/* Image */}
                                 <Link to={items.imagePath}>
                                     <div className="overflow-hidden"> {/* Prevents scale animation overlapping container */}
                                         <img className="rounded-md p-3 pb-0" alt="Image of project" src={items.imageSrc}/>
                                     </div>
                                 </Link>
 
+                                {/* Text */}
                                 <div className="mx-3 mt-3 pb-4 mb-1 space-y-3 md:h-[215px] flex flex-col justify-center"> {/* Specific height to keep cards same dimesions */}
                                     <h5 className="font-semibold text-gray-300">{items.heading}</h5>
                                     <p className="text-gray-400">{items.textFirst}</p>
@@ -89,6 +96,7 @@ export default function Projects() {
                                 </div>
                             </div>
                             
+                            {/* Button */}
                             <div className="bg-quaternary text-center rounded-md rounded-t-none p-3">
                                 <Link className="text-primary-text hover:text-secondary-text" to={items.link}>View Project →</Link>
                             </div>
