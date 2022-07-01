@@ -67,7 +67,7 @@ export default function Projects() {
                 <title>Projects | Josh Haywood</title>
             </Helmet>
             
-            <div className="pt-44 pb-16 md:pb-48 md:px-0 md:w-2/3 mx-5 md:mx-auto space-y-12">        
+            <div className="pt-44 pb-16 md:pb-48 md:px-0 lg:w-2/3 mx-5 md:mx-auto space-y-12">        
                 {/* Heading */}
                 <div className="space-y-3 mx-auto">
                     <h2 className="font-semibold text-center">Projects</h2>
@@ -76,10 +76,10 @@ export default function Projects() {
 
                 <Slider />
 
-                <div id="projectCardContainer" className="space-y-16 lg:space-y-0 lg:grid grid-rows-2 grid-cols-3 gap-x-10 gap-y-14"> 
+                <div id="projectCardContainer" className="space-y-16 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-14"> 
                     {items.map((items) => 
                         //Project card
-                        <div className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md">
+                        <div className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-20 md:mx-32 lg:mx-0">
                             <div className="bg-quaternary rounded-md rounded-b-none">
                                 {/* Image */}
                                 <Link to={items.imagePath}>
@@ -89,7 +89,7 @@ export default function Projects() {
                                 </Link>
 
                                 {/* Text */}
-                                <div className="mx-3 mt-3 pb-4 mb-1 space-y-3 md:h-[215px] flex flex-col justify-center"> {/* Specific height to keep cards same dimesions */}
+                                <div className="mx-3 mt-3 pb-3 mb-1 space-y-3 lg:flex flex-col justify-center lg:h-[200px]"> {/* Specific height to keep cards same dimesions */}
                                     <h5 className="font-semibold text-gray-300">{items.heading}</h5>
                                     <p className="text-gray-400">{items.textFirst}</p>
                                     <p className="text-gray-400">{items.textSecond}</p>

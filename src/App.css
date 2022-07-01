@@ -177,10 +177,17 @@ input::placeholder, textarea::placeholder {
   word-spacing: 20px;
 }
 
-#slide:hover h4 {
-  color: var(--tertiary-text-colour);
+#slide:hover h4, #slide:hover div, #slide:hover p {
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
+}
+
+#slide:hover div {
+  filter: brightness(100%);
+}
+
+#slide:hover p {
+  color: #ffffff;
 }
 
 #backToTop:hover p:nth-child(2) {
@@ -190,28 +197,6 @@ input::placeholder, textarea::placeholder {
 
 #backToTop:hover button, #backToTop:hover p {
   color: var(--primary-colour);
-}
-
-@media (max-width: 500px) { 
-  #slide { /* Slideshow disabled as text becomes far too large */
-    display: none;
-  }
-}
-
-/* Ensures theres is no margin on project cards when slideshow isnt present */
-@media (min-width: 500px) {
-  #projectCardContainer {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-}
-
-/* Removes margin when screen size is adjusted at desktop */
-@media (min-width: 1024px) {
-  #projectCardContainer {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
 
 /* Animations */

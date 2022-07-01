@@ -1,6 +1,7 @@
 import *  as React from 'react';
 import { Link } from 'react-router-dom';
 import { Slide } from 'react-slideshow-image';
+import Button from '@mui/material/Button';
 
 import 'react-slideshow-image/dist/styles.css';
 
@@ -9,21 +10,24 @@ const slideImages = [
         slide: "../Images/portfolio-thumbnail.jpg",
         heading: "Portfolio Website", 
         text: "My website showcasing projects i've created as well as a hub for marketing and contact. Specifically, my first version of the portfolio site and how ive adapted the project since then.", 
-        path: "/projects/portfolio"
+        path: "/projects/portfolio",
+        link: "/projects/portfolio"
     },
 
     {
         slide: "../Images/one-messaging-thumbnail.jpg", 
         heading: "One Messaging", 
         text: "A realtime messaging app I made in my second year of University. This was project portion of my research into the advancement web communication systems.",
-        path: "/projects/one-messaging"
+        path: "/projects/one-messaging",
+        link: "/projects/one-messaging"
     },
 
     {
         slide: "../Images/student-survival-store-thumbnail.jpg", 
         heading: "Student Survival Store", 
         text: "Software as a service group project from my second year of University. A group project based around a monthly subscription based product service.",
-        path: "/projects/student-survival-store"
+        path: "/projects/student-survival-store",
+        link: "/projects/student-survival-store"
     }
 ];
 
@@ -49,22 +53,38 @@ const properties = {
 
 export default function App() {
     return (
-        <div className="lg:w-3/4 mx-auto">
-            <Slide {...properties} easing="ease" id="slide">
+        <div className="sm:w-[90%] xl:w-3/4 mx-auto">
+            <Slide {...properties} easing="ease" className="hidden sm:block">
                     {slideImages.map((items, index) => {
-                    return (
-                        //Individual slide
-                        <Link className="relative text-center" to={items.path}>
-                            <img className="brightness-[40%]" src={items.slide}></img>
-                            <div className="absolute opacity-20 brightness-[40%] bg-primary left-0 right-0 top-0 bottom-0 z-10"></div> {/* Image overlay to avoid using background images */}
+                        return (
+                            //Individual slide
+                            <Link className="relative text-center" to={items.path} id="slide">
+                                <img className="brightness-[40%]" src={items.slide}></img>
+                                <div className="absolute opacity-20 brightness-[40%] bg-primary left-0 right-0 top-0 bottom-0 z-10"></div> {/* Image overlay to avoid using background images */}
 
-                            {/* Overlay text */}
-                            <div className="p-5 my-5 absolute z-20 top-[25%] md:top-[40%] bottom-[25%]  left-0 w-full space-y-3">
-                                <h4 className="font-semibold">{items.heading}</h4>
-                                <p>{items.text}</p>
-                            </div>
-                        </Link>
-                    );
+                                {/* Overlay text */}
+                                <div className="absolute z-20 top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center w-3/4 mx-auto space-y-5">
+                                    <h4 className="font-semibold">{items.heading}</h4>
+                                    <p>{items.text}</p>
+                                    <Link to={items.link}>
+                                        <Button
+                                        sx={{
+                                                border: '2px solid #181a1d', /* To match dimensions of other button without affecting padding */
+                                                backgroundColor: '#181a1d',
+                                                color: 'white',
+                                                width: '8rem',
+
+                                                ':hover': {
+                                                    bgcolor: '#181a1d', 
+                                                },
+                                            }}
+                                        >
+                                        View Project
+                                        </Button>   
+                                    </Link>
+                                </div>
+                            </Link>
+                        );
                     })}
             </Slide>
         </div>
