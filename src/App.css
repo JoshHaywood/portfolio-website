@@ -177,6 +177,10 @@ input::placeholder, textarea::placeholder {
   word-spacing: 20px;
 }
 
+#projectCard:hover h5 {
+  color: var(--primary-colour);
+}
+
 #slide:hover h4, #slide:hover div, #slide:hover p {
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
