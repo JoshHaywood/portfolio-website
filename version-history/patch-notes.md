@@ -21,3 +21,7 @@ I have kept previous build versions to demostrate my refactoring and progress as
 - Fixed all major bugs
 - Updated all styling errors
 - Additonal styling support for larger screens 
+
+## Build 3.0.0
+
+- Major redesign of pages designs structures and features
