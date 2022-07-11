@@ -16,12 +16,12 @@ export default function LoadingScreen() {
         <div className="flex items-center h-screen w-screen transition duration-300 ease-in-out">
             <div className="mx-auto flex items-center space-x-5">
                 <div className="items-center z-10">
-                    <img id="icon" src="../Images/icon.png" className="h-[60px] sm:h-[80px]"></img>
-                    <img id="iconPrimary" src="../Images/icon-primary.png" className="h-[60px] sm:h-[80px] -mt-[3.75rem] sm:-mt-[5rem] opacity-0"></img>
+                    <img id="icon" src="../Images/icon.png" className="h-[70px] sm:h-[80px]"></img>
+                    <img id="iconPrimary" src="../Images/icon-primary.png" className="h-[70px] sm:h-[80px] -mt-[4.3rem] sm:-mt-[5rem] opacity-0"></img>
                 </div>
                 
                 
-                <img id="logoText" src="../Images/logo-text.png" className="h-[50px] sm:h-[70px]"></img>
+                <img id="logoText" src="../Images/logo-text.png" className="h-[60px] sm:h-[70px]"></img>
             </div>
         </div>
     )
