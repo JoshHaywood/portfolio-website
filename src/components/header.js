@@ -3,8 +3,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 
-import { debounce } from './utilities/helpers';
-
 const links = [
   {name: "Home", path: "/"},
   {name: "Projects", path: "/projects"},
