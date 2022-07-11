@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  font-size: 16px; 
+  font-family: 'Roboto', sans-serif;
+  --primary-colour: #4c6bc1;
+  --secondary-colour: #101316;
+  --tertiary-colour: #15171a;
+  --quaternary-colour: #181a1d;
+  --quinary-colour: #373b42; 
+  
+  --primary-text-colour: #d1d5db; 
+  --secondary-text-colour: #9ca3af;
+  --tertiary-text-colour: #597de0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body { 
+  background-color: var(--secondary-colour);
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden;
+  max-width: 100%;
+  overflow: overlay;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 15px 15px rgba(255, 255, 255, 0.3);
+  border: solid 3px transparent;
+  border-radius: 10px;
+}
+
+/* Loading bar */
+.pace {
+	-webkit-pointer-events: none;
+	pointer-events: none;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+.pace-inactive {
+	display: none;
+}
+
+.pace .pace-progress {
+	background: var(--primary-colour);
+	position: fixed;
+	z-index: 2000;
+	top: 0;
+	right: 100%;
+	width: 100%;
+	height: 2px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
+}
+
+h5 {
+  font-size: 1.25rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
+}
+
+h6 {
+  font-size: 1rem;
+  color: var(--primary-text-colour);
+  font-weight: 300;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--secondary-text-colour);
+  font-weight: 300;
+}
+
+a {
+  font-size: 1rem;
+  color: var(--secondary-text-colour);
+  font-weight: 300;
+  text-decoration: none;
+  cursor: pointer;
+
+  background-image: linear-gradient(var(--primary-colour), var(--primary-colour));
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
+}
+
+li, ul {
+  list-style: none;
+  font-size: 1rem;
+  color: var(--secondary-text-colour);
+  font-weight: 300;
+}
+
+button {
+  font-size: 1rem;
+  color: var(--secondary-text-colour);
+  font-weight: 300;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input, textarea {
+  font-family: 'roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--primary-text-colour);
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--primary-text-colour);
+}
+
+/* Custom CSS from Tailwind limitations */
+
+#hero-image:hover img {
+  bottom: 0.75rem;
+  right: 0.75rem;
+  transition: 0.3s ease-in-out;
+}
+
+#hero-image img {
+  transition: 0.3s ease-in-out; /* Plays same transition onMouseOut */
+}
+
+#heroLink, #project a {
+  background-position: 0 calc(100% - 0px)
+}
+
+#heroLink:hover, #project:hover a {
+  background-size: 100% 1px;
+}
+
+#projectList {
+  word-spacing: 20px;
+}
+
+#projectCard:hover h5 {
+  color: var(--primary-colour);
+}
+
+#slide:hover h4, #slide:hover div, #slide:hover p {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+#slide:hover div {
+  filter: brightness(100%);
+}
+
+#slide:hover p {
+  color: #ffffff;
+}
+
+#backToTop:hover p:nth-child(2) {
+  animation: bounce 1s infinite;
+  color: var(--primary-colour);
+}
+
+#backToTop:hover button, #backToTop:hover p {
+  color: var(--primary-colour);
+}
+
+/* Animations */
+.fade-in-up {
+  animation: fadeInUp 1s ease-in;
+}
+
+#heroText {
+  animation-fill-mode: both;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes fadeInUp {
+  0% { 
+     opacity: 0;
+     transform:translate(0, 10%); /* Translates elements up Y vector */
+  }
+  
+  100% { 
+     opacity: 100;
+     transform: none;
+  }
+}
