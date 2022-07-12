@@ -99,6 +99,7 @@ Then extract the folder somewhere in your files.
 - style: Formatting, missing code, white space (This doesnt apply to CSS.)
 - refactor: Maintainabilty or a functions method has been altered.
 - dep: Dependancies added to the project.
+- chore: Miscellaneous such as altering assets.
 - del: Deleted or removed unused code, files or other assets.
 
 
