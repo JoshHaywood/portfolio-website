@@ -1,7 +1,17 @@
 import * as React from 'react';
+import { gsap } from "gsap";
+import { useEffect } from 'react';
 import Button from '@mui/material/Button';
 
 export default function Hero() {
+    //Animation
+    useEffect(() => {
+        gsap.from('#heroTagline', {duration: 1, y: '50%', opacity: '0', ease: 'sine', delay: '0.9'});
+        gsap.from('#heroHeadingOne', {duration: 1, y: '50%', opacity: '0', ease: 'power2', delay: '1.1'});
+        gsap.from('#heroHeadingTwo', {duration: 1, y: '50%', opacity: '0', ease: 'power2', delay: '1.3'});
+        gsap.from('#heroText', {duration: 1, y: '50%', opacity: '0', ease: 'power4', delay: '1.5'});
+    });
+
     return (
         <div className="h-screen relative flex flex-col">
             {/* Background video */}
@@ -14,17 +24,17 @@ export default function Hero() {
             <div className="absolute lg:left-[20%] h-screen flex flex-col justify-center mx-10 lg:mx-auto z-10 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
-                    <h3 id="heroText" className="text-primary animate-fade-in-up">Hi, my name is</h3>
-                    <h1 id="heroText" className="sm:text-5xl md:text-6xl font-semibold animate-fade-in-up animation-delay-200">Josh Haywood</h1>
-                    <h1 id="heroText" className="sm:text-5xl md:text-6xl font-semibold text-gray-400 animate-fade-in-up animation-delay-400">An aspiring web developer</h1>
-                    <p id="heroText" className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%] animate-fade-in-up animation-delay-600">
+                    <h3 id="heroTagline" className="text-primary">Hi, my name is</h3>
+                    <h1 id="heroHeadingOne" className="sm:text-5xl md:text-6xl font-semibold">Josh Haywood</h1>
+                    <h1 id="heroHeadingTwo" className="sm:text-5xl md:text-6xl font-semibold text-gray-400">An aspiring web developer</h1>
+                    <p id="heroText" className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%]">
                         Im currently a Web Development student at <a id="heroLink" href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
                     </p>
                 </div>
 
                 {/* Media Icons */}
-                <div id="heroText" className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6 animate-fade-in-up animation-delay-800">
+                <div id="heroText" className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6">
                     <a href="https://github.com/El-Goblino/">  
                         <div className="flex pr-[0.7rem] sm:pr-0">
                             <Button

@@ -208,10 +208,6 @@ input::placeholder, textarea::placeholder {
   animation: fadeInUp 1s ease-in;
 }
 
-#heroText {
-  animation-fill-mode: both;
-}
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(-25%);

@@ -41,12 +41,8 @@ module.exports = {
       },
 
       animation: {
-          'fade-in-up': 'fade-in-up 1s ease-in-out',
           'pop-out': 'pop-out 1s ease-in-out forwards',
       }
     },
   },
-  plugins: [
-    require("tailwindcss-animation-delay"),
-  ],
 }

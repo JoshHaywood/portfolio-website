@@ -1,15 +1,23 @@
 import * as React from 'react';
+import { gsap } from "gsap";
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 
 const links = [
-  {name: "Home", path: "/"},
-  {name: "Projects", path: "/projects"},
-  {name: "Contact", path: "/contact"}
+  {id: "homeLink", name: "Home", path: "/"},
+  {id: "projectsLink", name: "Projects", path: "/projects"},
+  {id: "contactLink", name: "Contact", path: "/contact"}
 ];
 
 export default function Header() {
+  //Animation
+  useEffect(() => {
+    gsap.from('#homeLink', {duration: 1, y: '-100%', opacity: '0', ease: 'power4', delay: '0.3'});
+    gsap.from('#projectsLink', {duration: 1, y: '-100%', opacity: '0', ease: 'power4', delay: '0.5'});
+    gsap.from('#contactLink', {duration: 1, y: '-100%', opacity: '0', ease: 'power4', delay: '0.7'});
+});
+
   //Hamburger state
   const [isOpen, setOpen] = useState(false);
 
@@ -80,7 +88,7 @@ export default function Header() {
         {/* Links */}
         <ul className= "hidden lg:flex flex-row">
           {links.map((link) => (
-            <li className="m-5 lg:my-0 lg:mx-5">
+            <li id={link.id} className="m-5 lg:my-0 lg:mx-5">
               <Link className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out" to={link.path}>
                 {link.name}
               </Link>
