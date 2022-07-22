@@ -173,7 +173,7 @@ input::placeholder, textarea::placeholder {
   background-size: 100% 1px;
 }
 
-#projectOneList, #projectTwoList {
+#projectList {
   word-spacing: 20px;
 }
 

@@ -1,29 +1,36 @@
 import * as React from 'react';
-import { useEffect } from 'react';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import TextField from "@mui/material/TextField";
 import Button from '@mui/material/Button';
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function Contact() {
-    //Animation
-    useEffect(() => {
-        gsap.from('#contactSection', {duration: 1, y: '10%', opacity: '0', ease: 'sine', delay: '0.5', scrollTrigger: {
-          trigger: "#contactSection",
-      }});
-  });
+    //Animation scroll event
+    window.addEventListener('scroll', function() {
+        let triggerElement = document.getElementById("contactHeading"); //Element used as trigger
+        let bounding = triggerElement.getBoundingClientRect();
+
+        let targetedElement = document.getElementById("contactForm"); //Element animation is applied too
+
+        // Gets boundaries using getBoundingClientRect
+        // If in viewport
+        if (bounding.top >= 0 &&
+            bounding.left >= 0 &&
+            //Compares to element dimensions
+            bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+            bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+
+            targetedElement.classList.add('fade-in-up');
+        };
+    });
 
     return (
         <> 
             {/* Heading */}
             <div className="pb-12 md:pb-14 pt-4 md:pt-0 space-y-3 mx-auto"> 
-                <h2 className="font-semibold text-center">Contact</h2>
+                <h2 id="contactHeading" className="font-semibold text-center">Contact</h2>
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
 
-            <form id="contactSection" className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST">
+            <form id="contactForm" className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST">
                 <TextField 
                     className="bg-quaternary rounded-md" 
                     InputProps={{ sx: { color: "white" } }} 
