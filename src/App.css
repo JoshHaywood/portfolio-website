@@ -33,6 +33,7 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   overflow: overlay;
+  position: absolute;
 }
 
 ::-webkit-scrollbar {
