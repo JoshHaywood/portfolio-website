@@ -5,11 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.config({
-    // default is "resize,visibilitychange,DOMContentLoaded,load" so we can remove "resize" from the list:
-    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load"
-  });
-
 export default function About() {
     const items = [
         {text: "HTML - 3 years"},
@@ -25,7 +20,7 @@ export default function About() {
 
     //Animation
     useEffect(() => {
-          gsap.from('#aboutSection', {duration: 1, y: '10%', opacity: '0', ease: 'sine', delay: '0.5', scrollTrigger: {
+        gsap.from('#aboutSection', {duration: 1, y: '10%', opacity: '0', ease: 'sine', delay: '0.5', scrollTrigger: {
             trigger: "#aboutSection",
         }});
     });

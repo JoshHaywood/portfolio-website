@@ -6,11 +6,6 @@ import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.config({
-    // default is "resize,visibilitychange,DOMContentLoaded,load" so we can remove "resize" from the list:
-    autoRefreshEvents: "visibilitychange,DOMContentLoaded,load"
-  });
-
 export default function Projects() {
     const items = [
         {

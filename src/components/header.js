@@ -4,11 +4,6 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 
-gsap.config({
-  // default is "resize,visibilitychange,DOMContentLoaded,load" so we can remove "resize" from the list:
-  autoRefreshEvents: "visibilitychange,DOMContentLoaded,load"
-});
-
 const links = [
   {id: "homeLink", name: "Home", path: "/"},
   {id: "projectsLink", name: "Projects", path: "/projects"},
