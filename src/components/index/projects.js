@@ -23,68 +23,114 @@ export default function Projects() {
         },
     ];  
 
-    //Animation Variants
-    //Parent container that holds properties
-    const containerVariants = {
-        hidden: {},
-        visible: {}
-    };
-    
-    //Individual component animations
-    const imageVariants = {
-        hidden: { opacity: 0, y: '3%' },
-        visible: { 
-            opacity: 1,
-            y: 0,
+    const isMobile = window.innerWidth < 768; 
+    let containerVariants = {};
+    let imageVariants = {};
+    let leftCardVariants = {};
+    let rightCardVariants = {};
+    let listVariants = {};
 
-            transition: {
-                duration: 0.5,
-                delay: 0.5,
-                ease: 'easeInOut',
-            } 
-        }
-    };
+    let textVariants = {};
 
-    const leftCardVariants = {
-        hidden: { opacity: 0, x: '-50%' },
-        visible: {
-            opacity: 1, 
-            x: 0,
+    //Prevents animations on mobile
+    if (!isMobile) {
+        //Animation Variants
+        //Parent container that holds properties
+        containerVariants = {
+            hidden: {},
+            visible: {}
+        };
+        
+        //Individual component animations
+        imageVariants = {
+            hidden: { opacity: 0, y: '3%' },
+            visible: { 
+                opacity: 1,
+                y: 0,
 
-            transition: {
-                duration: 0.5,
-                delay: 1.3,
-                ease: 'easeInOut',
-            } 
-        }
-    };
+                transition: {
+                    duration: 0.5,
+                    delay: 0.5,
+                    ease: 'easeInOut',
+                } 
+            }
+        };
 
-    const rightCardVariants = {
-        hidden: { opacity: 0, x: '50%' },
-        visible: { 
-            opacity: 1,
-            x: 0,
+        leftCardVariants = {
+            hidden: { opacity: 0, x: '-50%' },
+            visible: {
+                opacity: 1, 
+                x: 0,
 
-            transition: {
-                duration: 0.5,
-                delay: 1.3,
-                ease: 'easeInOut',
-            } 
-        }
-    };
+                transition: {
+                    duration: 0.5,
+                    delay: 1.3,
+                    ease: 'easeInOut',
+                } 
+            }
+        };
 
-    const listVariants = {
-        hidden: { opacity: 0 },
-        visible: { 
-            opacity: 1,
+        rightCardVariants = {
+            hidden: { opacity: 0, x: '50%' },
+            visible: { 
+                opacity: 1,
+                x: 0,
 
-            transition: {
-                duration: 0.5,
-                delay: 1.8,
-                ease: 'easeInOut',
-            } 
-        }
-    };
+                transition: {
+                    duration: 0.5,
+                    delay: 1.3,
+                    ease: 'easeInOut',
+                } 
+            }
+        };
+
+        listVariants = {
+            hidden: { opacity: 0 },
+            visible: { 
+                opacity: 1,
+
+                transition: {
+                    duration: 0.5,
+                    delay: 1.8,
+                    ease: 'easeInOut',
+                } 
+            }
+        };
+    }
+
+    else {
+        imageVariants = {
+            hidden: { 
+                opacity: 0,
+                y: '15%'
+            },
+            visible: { 
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 1,
+                    delay: 0.5,
+                    ease: 'easeInOut',
+                }
+            },
+        };
+
+        textVariants = {
+            hidden: { 
+                opacity: 0,
+                y: '15%'
+            },
+            visible: { 
+                opacity: 1,
+                y: 0,
+                transition: {
+                    duration: 1,
+                    delay: 0.5,
+                    ease: 'easeInOut',
+                }
+            },
+        };
+    }
 
     return (
         <div className="md:w-4/5 xl:w-3/5 mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
@@ -112,7 +158,7 @@ export default function Projects() {
                                         </motion.div>
 
                                         {/* Text card */}
-                                        <div className="flex flex-col items-start md:items-end z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 pb-5 absolute md:static">
+                                        <motion.div variants={textVariants} className="flex flex-col items-start md:items-end z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 pb-5 absolute md:static">
                                             <motion.div variants={rightCardVariants}>
                                                 <h6 className="text-primary">{items.tagline}</h6>
                                                 <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
@@ -123,15 +169,10 @@ export default function Projects() {
                                             </motion.div>
        
                                             {/* Stack list */}
-                                            <motion.ul variants={listVariants} id="projectList" className="flex flex-row sm:pt-5"
-                                                initial= {{ opacity: 0 }}
-                                                whileInView={{ opacity: 1 }}
-                                                transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
-                                                viewport={{ once: true }}
-                                            >
+                                            <motion.ul variants={listVariants} id="projectList" className="flex flex-row sm:pt-5">
                                                 <li>{items.list}</li>
                                             </motion.ul>
-                                        </div>
+                                        </motion.div>
                                     
                                 </div>
                             </Link>

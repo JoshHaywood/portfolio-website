@@ -20,29 +20,51 @@ export default function Header() {
     navBar.style.background = '#181a1d'; 
   };
 
-  //Animation Variants
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
+  //Scroll event
+  window.addEventListener('scroll', function() {; 
+    var navBar = document.getElementById('navbar'); 
 
-      transition: {
-        staggerChildren: 0.2,
+    //If user scrolls 1 or more pixels
+    if(window.scrollY >= 1){ 
+      navBar.style.background = '#181a1d'; 
+      navBar.style.boxShadow = 'box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
+    }
+
+    //Else they haven't scrolled
+    else { 
+        navBar.style.background = 'none'; 
+        navBar.style.boxShadow = 'none'
+    };
+  });
+
+  const isMobile = window.innerWidth < 1024; 
+  let containerVariants = {};
+  let listVariants = {};
+
+  //Prevents animations on mobile
+  if (!isMobile) {
+    //Animation Variants
+    containerVariants = {
+      hidden: {},
+      visible: {
+        transition: {
+          staggerChildren: 0.2,
+        }
       }
-    }
-  };
-  
-  const listItemVariants = {
-    hidden: { opacity: 0, y: '-80%' },
-    visible: { 
-      opacity: 1,
-      y: 0,
+    };
+    
+    listVariants = {
+      hidden: { opacity: 0, y: '-80%' },
+      visible: { 
+        opacity: 1,
+        y: 0,
 
-      transition: {
-        duration: 0.5,
-        ease: 'easeInOut'
-      } 
-    }
+        transition: {
+          duration: 0.5,
+          ease: 'easeInOut'
+        } 
+      }
+    };
   };
 
   return (
@@ -88,7 +110,7 @@ export default function Header() {
         {/* Links */}
         <motion.ul variants={containerVariants} initial="hidden" animate="visible" className="hidden lg:flex flex-row">
             {links.map((link, i) => (
-              <motion.li variants={listItemVariants} id={link.id} className="m-5 lg:my-0 lg:mx-5">
+              <motion.li variants={listVariants} id={link.id} className="m-5 lg:my-0 lg:mx-5">
                 <Link className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out" to={link.path}>
                   {link.name}
                 </Link>
