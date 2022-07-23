@@ -186,7 +186,7 @@ export default function Projects() {
                             <Link to={items.link}> {/* Motions own container as not compatible with Link */}
                                 <div className="mt-8 lg:mt-24 md:space-x-10 flex md:flex-row items-center"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                     {/* Text card */}
-                                    <div className="flex flex-col items-start z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 md:mx-0 pb-5 absolute md:static">
+                                    <motion.div className="flex flex-col items-start z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 md:mx-0 pb-5 absolute md:static">
                                         <motion.div variants={leftCardVariants}>
                                             <h6 className="text-primary">{items.tagline}</h6>
                                             <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
@@ -200,7 +200,7 @@ export default function Projects() {
                                         <motion.ul variants={listVariants} id="projectList" className="flex flex-row sm:pt-5">
                                             <li>{items.list}</li>
                                         </motion.ul>
-                                    </div>
+                                    </motion.div>
 
                                     {/* Image */}
                                     <motion.div variants={imageVariants} className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
