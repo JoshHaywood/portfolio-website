@@ -13,7 +13,7 @@ export default function Contact() {
             </div>
 
             <motion.form className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST"
-                initial= {{ opacity: 0, y: '15%' }}
+                initial= {{ opacity: 0, y: '5%' }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
                 viewport={{ once: true }}

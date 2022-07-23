@@ -23,6 +23,7 @@ export default function Projects() {
         },
     ];  
 
+    //Animation
     const isMobile = window.innerWidth < 768; 
     let containerVariants = {};
     let imageVariants = {};
@@ -102,7 +103,7 @@ export default function Projects() {
         imageVariants = {
             hidden: { 
                 opacity: 0,
-                y: '15%'
+                y: '5%'
             },
             visible: { 
                 opacity: 1,
@@ -118,19 +119,17 @@ export default function Projects() {
         textVariants = {
             hidden: { 
                 opacity: 0,
-                y: '15%'
             },
             visible: { 
                 opacity: 1,
-                y: 0,
                 transition: {
                     duration: 1,
-                    delay: 0.5,
+                    delay: 1,
                     ease: 'easeInOut',
                 }
             },
         };
-    }
+    };
 
     return (
         <div className="md:w-4/5 xl:w-3/5 mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 

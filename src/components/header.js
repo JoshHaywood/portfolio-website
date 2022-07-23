@@ -37,6 +37,7 @@ export default function Header() {
     };
   });
 
+  //Animation
   const isMobile = window.innerWidth < 1024; 
   let containerVariants = {};
   let listVariants = {};
