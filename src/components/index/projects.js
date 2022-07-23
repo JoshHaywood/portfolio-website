@@ -1,10 +1,10 @@
 import * as React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export default function Projects() {
     const items = [
         {
-            id: "projectOne",
             imageSrc: "../Images/portfolio-thumbnail.jpg",
             tagline: "Personal Site",
             heading: "Portfolio Website",
@@ -14,7 +14,6 @@ export default function Projects() {
         },
     
         {
-            id: "projectTwo",
             imageSrc: "../Images/one-messaging-thumbnail.jpg",
             tagline: "Messaging Project",
             heading: "One messaging project",
@@ -23,38 +22,75 @@ export default function Projects() {
             list: "Handlebars ExpressJS SocketIO SQLite",
         },
     ];  
+
+    //Animation Variants
+    //Parent container that holds properties
+    const containerVariants = {
+        hidden: {},
+        visible: {}
+    };
     
-    const technologies = [];
-    const listItems = technologies.map((technologies) =>
-      <li className="text-gray-400">{technologies}</li>
-    );
+    //Individual component animations
+    const imageVariants = {
+        hidden: { opacity: 0, y: '3%' },
+        visible: { 
+            opacity: 1,
+            y: 0,
 
-    //Animation scroll event
-    window.addEventListener('scroll', function() {
-        for (let i = 0; i < items.length; i++) { //Ensures all mapped elements have animation applied
-            let triggerElement = document.getElementById("projectsHeading"); //Element used as trigger
-            let bounding = triggerElement.getBoundingClientRect();
+            transition: {
+                duration: 0.5,
+                delay: 0.5,
+                ease: 'easeInOut',
+            } 
+        }
+    };
 
-            let targetedElement = document.getElementById(items[i].id); //Element animation is applied too
+    const leftCardVariants = {
+        hidden: { opacity: 0, x: '-50%' },
+        visible: {
+            opacity: 1, 
+            x: 0,
 
-            // Gets boundaries using getBoundingClientRect
-            // If in viewport
-            if (bounding.top >= 0 &&
-                bounding.left >= 0 &&
-                //Compares to element dimensions
-                bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
-                bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)) {
+            transition: {
+                duration: 0.5,
+                delay: 1.3,
+                ease: 'easeInOut',
+            } 
+        }
+    };
 
-                targetedElement.classList.add('fade-in-up');
-            };
-        };
-    });
+    const rightCardVariants = {
+        hidden: { opacity: 0, x: '50%' },
+        visible: { 
+            opacity: 1,
+            x: 0,
+
+            transition: {
+                duration: 0.5,
+                delay: 1.3,
+                ease: 'easeInOut',
+            } 
+        }
+    };
+
+    const listVariants = {
+        hidden: { opacity: 0 },
+        visible: { 
+            opacity: 1,
+
+            transition: {
+                duration: 0.5,
+                delay: 1.8,
+                ease: 'easeInOut',
+            } 
+        }
+    };
 
     return (
         <div className="md:w-4/5 xl:w-3/5 mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
             {/* Heading */}
             <div className="space-y-3 mx-auto"> 
-                <h2 id="projectsHeading" className="font-semibold text-center">Featured Projects</h2>
+                <h2 className="font-semibold text-center">Featured Projects</h2>
                 <div className="w-48 h-1 bg-primary mx-auto"></div>
             </div>
 
@@ -62,64 +98,80 @@ export default function Projects() {
             <>
                 {items.map((items, index) => 
                     index == 0 && (
-                        <Link to={items.link}>
-                            <div id={items.id} className="mt-12 md:space-x-10 flex md:flex-row items-center text-left md:text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
-                                {/* Image */}
-                                    <div className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
+                        //Project One
+                        <motion.div variants={containerVariants} initial="hidden" whileInView="visible"> {/* Motions own container as not compatible with Link */}
+                            <Link to={items.link} >
+                                <div className="mt-12 md:space-x-10 flex md:flex-row items-center text-left md:text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
+                                    {/* Image */}
+                                        <motion.div variants={imageVariants} className="relative w-full md:w-3/5 overflow-hidden"
+                                        > {/* Container for overlaying child elements */}
+                                            <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
+                                                <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
+                                                <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
+                                            </div>
+                                        </motion.div>
+
+                                        {/* Text card */}
+                                        <div className="flex flex-col items-start md:items-end z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 pb-5 absolute md:static">
+                                            <motion.div variants={rightCardVariants}>
+                                                <h6 className="text-primary">{items.tagline}</h6>
+                                                <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
+
+                                                <p className="bg-none md:bg-senary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
+                                                    {items.text}
+                                                </p>
+                                            </motion.div>
+       
+                                            {/* Stack list */}
+                                            <motion.ul variants={listVariants} id="projectList" className="flex flex-row sm:pt-5"
+                                                initial= {{ opacity: 0 }}
+                                                whileInView={{ opacity: 1 }}
+                                                transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+                                                viewport={{ once: true }}
+                                            >
+                                                <li>{items.list}</li>
+                                            </motion.ul>
+                                        </div>
+                                    
+                                </div>
+                            </Link>
+                        </motion.div>
+                    )
+                )}
+                    
+                {items.map((items, index) => 
+                    index == 1 && (
+                        //Project Two
+                        <motion.div variants={containerVariants} initial="hidden" whileInView="visible"> {/* Motions own container as not compatible with Link */}
+                            <Link to={items.link}> {/* Motions own container as not compatible with Link */}
+                                <div className="mt-8 lg:mt-24 md:space-x-10 flex md:flex-row items-center"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
+                                    {/* Text card */}
+                                    <div className="flex flex-col items-start z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 md:mx-0 pb-5 absolute md:static">
+                                        <motion.div variants={leftCardVariants}>
+                                            <h6 className="text-primary">{items.tagline}</h6>
+                                            <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
+
+                                            <p className="bg-none md:bg-senary text-left md:pl-5 pr-10 sm:pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
+                                                {items.text}
+                                            </p>
+                                        </motion.div>
+
+                                        {/* Stack list */}
+                                        <motion.ul variants={listVariants} id="projectList" className="flex flex-row sm:pt-5">
+                                            <li>{items.list}</li>
+                                        </motion.ul>
+                                    </div>
+
+                                    {/* Image */}
+                                    <motion.div variants={imageVariants} className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
                                         <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
                                             <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
                                             <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
                                         </div>
-                                    </div>
-
-                                    {/* Text card */}
-                                    <div className="flex flex-col items-start md:items-end z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 pb-5 absolute md:static">
-                                        <h6 className="text-primary">{items.tagline}</h6>
-                                        <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
-
-                                        <p className="bg-none md:bg-senary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
-                                            {items.text}
-                                        </p>
-
-                                        {/* Stack list */}
-                                        <ul id="projectList" className="flex flex-row sm:pt-5">
-                                            <li>{items.list}</li>
-                                        </ul>
-                                    </div>
-                                
-                            </div>
-                        </Link>
-                    )
-                )};
-                    
-                {items.map((items, index) => 
-                    index == 1 && (
-                        <Link to={items.link}>
-                            <div id={items.id} className="mt-8 lg:mt-20 md:space-x-10 flex md:flex-row items-center"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
-                                {/* Text card */}
-                                <div className="flex flex-col items-start z-20 sm:pr-20 md:pr-0 md:w-2/5 mx-[0.7rem] sm:mx-10 md:mx-0 pb-5 absolute md:static">
-                                    <h6 className="text-primary">{items.tagline}</h6>
-                                    <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
-
-                                    <p className="bg-none md:bg-senary text-left md:pl-5 pr-10 sm:pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
-                                        {items.text}
-                                    </p>
-
-                                    {/* Stack list */}
-                                    <ul id="projectList" className="flex flex-row sm:pt-5">
-                                        <li>{items.list}</li>
-                                    </ul>
+                                    </motion.div>
                                 </div>
-
-                                {/* Image */}
-                                <div className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
-                                    <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
-                                        <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
-                                        <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link> 
+                            </Link> 
+                        </motion.div>
                     )
                 )};
             </>

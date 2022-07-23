@@ -1,16 +1,19 @@
 import * as React from 'react';
-import { gsap } from "gsap";
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 
 export default function Hero() {
-    //Animation
-    useEffect(() => {
-        gsap.from('#heroTagline', {duration: 1, y: '50%', opacity: '0', ease: 'sine', delay: '0.9'});
-        gsap.from('#heroHeadingOne', {duration: 1, y: '50%', opacity: '0', ease: 'power2', delay: '1.1'});
-        gsap.from('#heroHeadingTwo', {duration: 1, y: '50%', opacity: '0', ease: 'power2', delay: '1.3'});
-        gsap.from('#heroText', {duration: 1, y: '50%', opacity: '0', ease: 'power4', delay: '1.5'});
-    });
+    //Animation Variants
+    const heroVariants = {
+        hidden: { 
+            opacity: 0,
+            y: '50%'
+        },
+        visible: {
+            opacity: 1,
+            y: 0
+        }
+    }
 
     return (
         <div className="h-screen relative flex flex-col">
@@ -24,17 +27,48 @@ export default function Hero() {
             <div className="absolute lg:left-[20%] h-screen flex flex-col justify-center mx-10 lg:mx-auto z-10 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
-                    <h3 id="heroTagline" className="text-primary">Hi, my name is</h3>
-                    <h1 id="heroHeadingOne" className="sm:text-5xl md:text-6xl font-semibold">Josh Haywood</h1>
-                    <h1 id="heroHeadingTwo" className="sm:text-5xl md:text-6xl font-semibold text-gray-400">An aspiring web developer</h1>
-                    <p id="heroText" className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%]">
+                    <motion.h3 className="text-primary"
+                        variants={heroVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                    >
+                        Hi, my name is
+                    </motion.h3>
+                    <motion.h1 className="sm:text-5xl md:text-6xl font-semibold"
+                        variants={heroVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
+                    >
+                        Josh Haywood
+                    </motion.h1>
+                    <motion.h1 className="sm:text-5xl md:text-6xl font-semibold text-gray-400"
+                        variants={heroVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.5, delay: 0.9, ease: "easeInOut" }}
+                    >
+                        An aspiring web developer
+                    </motion.h1>
+                    <motion.p className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%]"
+                        variants={heroVariants}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 0.5, delay: 1.1, ease: "easeInOut" }}
+                    >
                         Im currently a Web Development student at <a id="heroLink" href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
-                    </p>
+                    </motion.p>
                 </div>
 
                 {/* Media Icons */}
-                <div id="heroText" className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6">
+                <motion.div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6"
+                    variants={heroVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 0.5, delay: 1.1, ease: "easeInOut" }}
+                >
                     <a href="https://github.com/El-Goblino/">  
                         <div className="flex pr-[0.7rem] sm:pr-0">
                             <Button
@@ -79,7 +113,7 @@ export default function Hero() {
                             </svg>
                         </div>
                     </a>
-                </div>
+                </motion.div>
             </div>
         </div>
     )
