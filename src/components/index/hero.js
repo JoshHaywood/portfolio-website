@@ -51,7 +51,7 @@ export default function Hero() {
                     >
                         An aspiring web developer
                     </motion.h1>
-                    <motion.p className="text-xl sm:w-[80%] md:w-[60%] lg:w-[48%]"
+                    <motion.p className="text-xl max-w-[500px]"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"

@@ -1,73 +1,101 @@
 import * as React from 'react';
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 import Slider from "./slider";
 
-const items = [
-    {
-        cardPath: "/projects/portfolio", 
-        iconPath: "https://github.com/El-Goblino/portfolio-website",
-        heading: "Portfolio Website",
-        textFirst: "My website showcasing projects i've created as well as a hub for marketing and contact.",
-        textSecond: "Specifically, my first version of the portfolio site and how ive adapted the project since then.",
-        link: "/projects/portfolio"
-    },
-
-    {
-        cardPath: "/projects/arduino", 
-        iconPath: "/error",
-        heading: "Arduino Unity Project",
-        textFirst: "An arduino game and controller I made in my first year of University.",
-        textSecond: "This was my introduction into how psychical components can interact with game engines",
-        link: "/projects/arduino"
-    },
-
-    {
-        cardPath: "/projects/student-survival-store", 
-        iconPath: "https://github.falmouth.ac.uk/LW254830/Student-Survival-Store",
-        heading: "Student Survival Store",
-        textFirst: "Software as a service group project from my second year of University.",
-        textSecond: "A group project based around a monthly subscription based product service.",
-        link: "/projects/student-survival-store"
-    },
-
-    {
-        cardPath: "/projects/one-messaging",
-        iconPath: "https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2", 
-        heading: "One Messaging Project",
-        textFirst: "A realtime messaging app I made in my second year of University.",
-        textSecond : "This was project portion of my research into the advancement web communication systems.",
-        link: "/projects/one-messaging"
-    },
-
-    {
-        cardPath: "/projects/esports-center", 
-        iconPath: "https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center",
-        heading: "The Esports Center",
-        textFirst: "Statistics tracking group project from my second year of University.",
-        textSecond: "A project I lead as project leader, looking into the rise of Esports.",
-        link: "/projects/esports-center"
-    },
-
-    {
-        cardPath: "/projects/game-review", 
-        iconPath: "https://github.com/El-Goblino/game-review-app",
-        heading: "Game Review",
-        textFirst: "Website for reviewing video games",
-        textSecond: "Targeted at improving my knowledge in functional based React and web design",
-        link: "/projects/game-review"
-    }
-];
-
 export default function Projects() {
-    return (
+    const items = [
+        {
+            cardPath: "/projects/portfolio", 
+            iconPath: "https://github.com/El-Goblino/portfolio-website",
+            heading: "Portfolio Website",
+            textFirst: "My website showcasing projects i've created as well as a hub for marketing and contact.",
+            textSecond: "Specifically, my first version of the portfolio site and how ive adapted the project since then.",
+            link: "/projects/portfolio"
+        },
+    
+        {
+            cardPath: "/projects/arduino", 
+            iconPath: "/error",
+            heading: "Arduino Unity Project",
+            textFirst: "An arduino game and controller I made in my first year of University.",
+            textSecond: "This was my introduction into how psychical components can interact with game engines",
+            link: "/projects/arduino"
+        },
+    
+        {
+            cardPath: "/projects/student-survival-store", 
+            iconPath: "https://github.falmouth.ac.uk/LW254830/Student-Survival-Store",
+            heading: "Student Survival Store",
+            textFirst: "Software as a service group project from my second year of University.",
+            textSecond: "A group project based around a monthly subscription based product service.",
+            link: "/projects/student-survival-store"
+        },
+    
+        {
+            cardPath: "/projects/one-messaging",
+            iconPath: "https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2", 
+            heading: "One Messaging Project",
+            textFirst: "A realtime messaging app I made in my second year of University.",
+            textSecond : "This was project portion of my research into the advancement web communication systems.",
+            link: "/projects/one-messaging"
+        },
+    
+        {
+            cardPath: "/projects/esports-center", 
+            iconPath: "https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center",
+            heading: "The Esports Center",
+            textFirst: "Statistics tracking group project from my second year of University.",
+            textSecond: "A project I lead as project leader, looking into the rise of Esports.",
+            link: "/projects/esports-center"
+        },
+    
+        {
+            cardPath: "/projects/game-review", 
+            iconPath: "https://github.com/El-Goblino/game-review-app",
+            heading: "Game Review",
+            textFirst: "Website for reviewing video games",
+            textSecond: "Targeted at improving my knowledge in functional based React and web design",
+            link: "/projects/game-review"
+        }
+    ];
+
+    //Animation
+    let containerVariants = {
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: 0.5,
+          }
+        }
+      };
+      
+    let listVariants = {
+        hidden: { opacity: 0, y: '5%' },
+        visible: { 
+          opacity: 1,
+          y: 0,
+  
+          transition: {
+            duration: 0.5,
+            ease: 'easeInOut',
+          } 
+        }
+      };    
+      
+      return (
         <>
             <Helmet>
                 <title>Projects | Josh Haywood</title>
             </Helmet>
             
-            <div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 md:mx-auto space-y-12">        
+            <motion.div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 md:mx-auto space-y-12"
+                initial= {{ opacity: 0, y: '5%' }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
+            >        
                 {/* Heading */}
                 <div className="space-y-3 mx-auto">
                     <h2 className="font-semibold text-center">Projects</h2>
@@ -76,13 +104,12 @@ export default function Projects() {
 
                 <Slider />
 
-                <div id="projectCardContainer" className="space-y-8 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-6"> 
+                <motion.div id="projectCardContainer" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-8 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-6"> 
                     {items.map((items) => 
                         //Project card
-                        <div id="projectCard" className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-20 md:mx-36 lg:mx-0 hover:-translate-y-4 transition duration-300 ease-in-out">
+                        <motion.div id="projectCard" variants={listVariants} className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-20 md:mx-36 lg:mx-0 hover:-translate-y-4 transition duration-300 ease-in-out">
                             <div className="bg-quaternary rounded-md rounded-b-none space-y-3 px-3 pb-5 lg:pb-60 inline-block lg:max-h-[280px] w-full">
                                 {/* Image */}
-                                
                                     <div className="flex justify-between">
                                         <Link to={items.cardPath}>
                                             <svg className="h-auto w-8 pt-4 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/* Attribution: https://fontawesome.com/icons/folder?s=regular */}
@@ -111,10 +138,10 @@ export default function Projects() {
                             <div className="bg-quaternary text-center rounded-md rounded-t-none p-3 mt-1">
                                 <Link className="text-primary-text hover:text-secondary-text" to={items.link}>View Project →</Link>
                             </div>
-                        </div>
+                        </motion.div>
                     )}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </>
     );
 }

@@ -1,12 +1,17 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 export default function Project(props) {
     const features = props.features;
     const structure = props.structure;
 
     return (
-        <div className="py-40 px-5 max-w-[1000px] mx-auto space-y-10">
+        <motion.div className="py-40 px-5 max-w-[1000px] mx-auto space-y-10"
+            initial= {{ opacity: 0, y: '5%' }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
+        >
             <div className="space-y-3">
                 {/* Heading */}
                 <div className="space-y-3 mb-16 mx-auto">
@@ -75,6 +80,6 @@ export default function Project(props) {
                     </div>
                 </section>
             </div>
-        </div>
+        </motion.div>
     );
 }
