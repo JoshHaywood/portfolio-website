@@ -72,7 +72,7 @@ export default function Header() {
     <nav id="navbar" className="w-full h-[75px] fixed py-2 px-3 sm:px-6 flex justify-between items-center z-50 transition-all duration-300 ease-in-out">
       {/* Logo */}
       <Link to="/">
-        <div className="bg-[url('../public/Images/logo.png')] hover:bg-[url('../public/Images/logo-hover.png')] w-[260px] h-[60px]"></div>
+        <div className="bg-[url('../public/Images/logo.png')] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat w-[260px] h-[50px]"></div>
       </Link>
 
       <div className="flex"> {/* Container for links and menu */}
