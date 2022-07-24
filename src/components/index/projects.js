@@ -39,7 +39,7 @@ export default function Projects() {
         //Parent container that holds properties
         containerVariants = {
             hidden: {},
-            visible: {}
+            visible: {},
         };
         
         //Individual component animations
@@ -144,7 +144,7 @@ export default function Projects() {
                 {items.map((items, index) => 
                     index == 0 && (
                         //Project One
-                        <motion.div variants={containerVariants} initial="hidden" whileInView="visible"> {/* Motions own container as not compatible with Link */}
+                        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}> {/* Motions own container as not compatible with Link */}
                             <Link to={items.link} >
                                 <div className="mt-12 md:space-x-10 flex md:flex-row items-center text-left md:text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                     {/* Image */}
@@ -182,7 +182,7 @@ export default function Projects() {
                 {items.map((items, index) => 
                     index == 1 && (
                         //Project Two
-                        <motion.div variants={containerVariants} initial="hidden" whileInView="visible"> {/* Motions own container as not compatible with Link */}
+                        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}> {/* Motions own container as not compatible with Link */}
                             <Link to={items.link}> {/* Motions own container as not compatible with Link */}
                                 <div className="mt-8 lg:mt-24 md:space-x-10 flex md:flex-row items-center"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                     {/* Text card */}
