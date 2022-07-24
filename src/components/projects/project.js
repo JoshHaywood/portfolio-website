@@ -6,7 +6,7 @@ export default function Project(props) {
     const structure = props.structure;
 
     return (
-        <div className="py-40 px-10 md:px-0 md:w-1/2 mx-auto space-y-10">
+        <div className="py-40 px-10 md:px-0 max-w-[1000px] mx-auto space-y-10">
             <div className="space-y-3">
                 {/* Heading */}
                 <div className="space-y-3 mb-16 mx-auto">

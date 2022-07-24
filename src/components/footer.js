@@ -18,47 +18,49 @@ const projectsColumn = [
 
 export default function Footer() {
   return (
-		<footer className="left-0 bottom-0 w-full bg-quaternary">
-			<div className="flex flex-col md:flex-row justify-between m-auto py-4 px-1 w-3/5">
-				{/* Pages column */}
-        <div className="flex flex-col text-center md:text-left space-y-1"> 
-            <h5 className="text-white font-medium">Pages</h5>
-            {pagesColumn.map((item) => (
-              <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
-            ))}
-        </div>
+		<footer className="bg-quaternary">
+      <div className="px-20 max-w-[1000px] mx-auto">
+        <div className="flex flex-col md:flex-row justify-between py-4">
+          {/* Pages column */}
+          <div className="flex flex-col text-center md:text-left space-y-1"> 
+              <h5 className="text-white font-medium">Pages</h5>
+              {pagesColumn.map((item) => (
+                <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+              ))}
+          </div>
 
 
-				{/* Projects columns */}
-				<div className="flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
-					<h5 className="text-white font-medium">Projects</h5>
-          {/* Maps first 3 entries */}
+          {/* Projects columns */}
+          <div className="flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
+            <h5 className="text-white font-medium">Projects</h5>
+            {/* Maps first 3 entries */}
+            {projectsColumn.map((item, index) => 
+              index < 3 && (
+                <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+              )
+            )}
+          </div>
+
+          <div className="flex flex-col md:justify-end text-center md:text-left space-y-1"> 
+          {/* Maps final 3 entries */}
           {projectsColumn.map((item, index) => 
-            index < 3 && (
-              <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
-            )
-          )}
-				</div>
-
-				<div className="flex flex-col md:justify-end text-center md:text-left space-y-1"> 
-        {/* Maps final 3 entries */}
-        {projectsColumn.map((item, index) => 
-            index >= 3 && (
-              <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
-            )
-          )}
-				</div>
-			</div>
-
-			{/* Footnote */}
-			<div className="flex py-2 w-4/5 md:w-3/5 m-auto justify-between border-t-2 border-primary">
-        <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
-
-        <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
-          <button className="text-white" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top</button>
-          <p className="text-white">↑</p>
+              index >= 3 && (
+                <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+              )
+            )}
+          </div>
         </div>
-			</div>
+
+        {/* Footnote */}
+        <div className="flex py-2 justify-between border-t-2 border-primary">
+          <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
+
+          <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
+            <button className="text-white" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top</button>
+            <p className="text-white">↑</p>
+          </div>
+        </div>
+      </div>
     </footer>
   )
 };

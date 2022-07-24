@@ -10,7 +10,7 @@ export default function ContactPage() {
             </Helmet>
             
             {/* Form */}
-            <div className="h-screen px-10 flex flex-col justify-center md:w-2/4 lg:w-2/5 mx-auto">
+            <div className="h-screen px-10 flex flex-col justify-center max-w-[650px] mx-auto">
                 <Contact />
             </div>
         </>

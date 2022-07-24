@@ -24,7 +24,7 @@ export default function Hero() {
                 Your browser does not support videos
             </video>
 
-            <div className="absolute lg:left-[20%] h-screen flex flex-col justify-center mx-10 lg:mx-auto z-10 space-y-6 leading-10 sm:leading-none">
+            <div className="absolute max-w-[1000px] h-screen left-0 right-0 flex flex-col justify-center mx-auto px-10 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <motion.h3 className="text-primary"

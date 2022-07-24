@@ -132,7 +132,7 @@ export default function Projects() {
     };
 
     return (
-        <div className="md:w-4/5 xl:w-3/5 mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
+        <div className="max-w-[1000px] mx-auto px-5 xl:px-0 pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
             {/* Heading */}
             <div className="space-y-3 mx-auto"> 
                 <h2 className="font-semibold text-center">Featured Projects</h2>
