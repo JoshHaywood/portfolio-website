@@ -132,7 +132,7 @@ export default function Projects() {
     };
 
     return (
-        <div className="max-w-[1000px] mx-auto px-5 xl:px-0 pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
+        <div className="max-w-[1000px] mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
             {/* Heading */}
             <div className="space-y-3 mx-auto"> 
                 <h2 className="font-semibold text-center">Featured Projects</h2>
@@ -148,11 +148,11 @@ export default function Projects() {
                             <Link to={items.link} >
                                 <div className="mt-12 md:space-x-10 flex md:flex-row items-center text-left md:text-right"> {/* Objects mapped ID used so all mapped elements have scroll listener applied */}
                                     {/* Image */}
-                                        <motion.div variants={imageVariants} className="relative w-full md:w-3/5 overflow-hidden"
+                                        <motion.div variants={imageVariants} className="relative overflow-hidden"
                                         > {/* Container for overlaying child elements */}
                                             <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
                                                 <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
-                                                <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
+                                                <img className="rounded-sm max-w-[600px]" alt="Image of feature project" src={items.imageSrc}></img>
                                             </div>
                                         </motion.div>
 
@@ -203,10 +203,10 @@ export default function Projects() {
                                     </motion.div>
 
                                     {/* Image */}
-                                    <motion.div variants={imageVariants} className="relative w-full md:w-3/5 overflow-hidden"> {/* Container for overlaying child elements */}
+                                    <motion.div variants={imageVariants} className="relative overflow-hidden"> {/* Container for overlaying child elements */}
                                         <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
                                             <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
-                                            <img className="rounded-sm h-[35vh] md:h-full w-min" alt="Image of feature project" src={items.imageSrc}></img>
+                                            <img className="rounded-sm max-w-[600px]" alt="Image of feature project" src={items.imageSrc}></img>
                                         </div>
                                     </motion.div>
                                 </div>

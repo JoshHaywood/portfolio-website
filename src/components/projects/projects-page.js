@@ -67,7 +67,7 @@ export default function Projects() {
                 <title>Projects | Josh Haywood</title>
             </Helmet>
             
-            <div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-10 md:mx-auto space-y-12">        
+            <div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 md:mx-auto space-y-12">        
                 {/* Heading */}
                 <div className="space-y-3 mx-auto">
                     <h2 className="font-semibold text-center">Projects</h2>

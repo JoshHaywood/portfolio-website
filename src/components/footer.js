@@ -19,7 +19,7 @@ const projectsColumn = [
 export default function Footer() {
   return (
 		<footer className="bg-quaternary">
-      <div className="px-20 max-w-[1000px] mx-auto">
+      <div className="px-16 max-w-[1000px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between py-4">
           {/* Pages column */}
           <div className="flex flex-col text-center md:text-left space-y-1"> 
