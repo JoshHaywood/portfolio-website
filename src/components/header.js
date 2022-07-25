@@ -13,8 +13,6 @@ export default function Header() {
 
   //Hamburger state
   const [isOpen, setOpen] = useState(false);
-  //Navbar state
-  const [isVisible, setState] = useState(false);
 
   //Set navbar background without scroll
   function ToggleNavLinks() { 
@@ -29,7 +27,6 @@ export default function Header() {
     //If user scrolls 1 or more pixels
     if(window.scrollY >= 1){ 
       navBar.style.background = '#181a1d'; 
-      navBar.style.boxShadow = 'box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)';
     }
 
     //Else they haven't scrolled
@@ -99,7 +96,10 @@ export default function Header() {
           }`}
         ></div>
 
-        <ul 
+        <motion.ul 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
           className={`${
             isOpen
               ?  `h-screen min-w-[390px] flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-40 bg-quaternary shadow-md shadow-primary`
@@ -107,7 +107,7 @@ export default function Header() {
           } lg:flex flex-row`}
         >
           {links.map((link) => (
-            <li className="m-5 lg:my-0 lg:mx-5 leading-10">
+            <motion.li variants={listVariants} id={link.id} className="m-5 lg:my-0 lg:mx-5 leading-10">
               <Link 
                 className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
                 to={link.path} 
@@ -115,10 +115,10 @@ export default function Header() {
               >
                 {link.name}
               </Link>
-            </li>
+            </motion.li>
           ))}
-        </ul>
+        </motion.ul>
       </div>
     </nav>
   );
-}
+};
