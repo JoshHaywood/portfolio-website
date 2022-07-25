@@ -71,12 +71,12 @@ export default function Header() {
     <nav id="navbar" className="w-full h-[75px] fixed py-2 px-1.5 sm:px-6 flex justify-between items-center z-50">
       {/* Logo */}
       <Link to="/">
-        <div className="bg-[url('../public/Images/logo.png')] w-[260px] h-[50px] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat"></div>
+        <div className="bg-[url('../public/Images/logo.png')] w-[260px] h-[50px] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat" alt="logo"></div>
       </Link>
 
       <div className="flex"> {/* Container for links and menu */}
         {/* Hamburger */}
-        <div className="lg:hidden mb-0.5 z-10" onClick={ToggleNavLinks}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
+        <div className="md:hidden mb-0.5 z-10" onClick={ToggleNavLinks}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
           <Hamburger
             color="#ffffff"
             easing="ease-in-out"
@@ -102,9 +102,9 @@ export default function Header() {
           animate="visible"
           className={`${
             isOpen
-              ?  `h-screen min-w-[390px] flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-40 bg-quaternary shadow-md shadow-primary`
+              ?  `h-screen w-3/5 sm:w-1/2  flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-40 bg-quaternary shadow-md shadow-primary`
               : `hidden`
-          } lg:flex flex-row`}
+          } md:flex flex-row`}
         >
           {links.map((link) => (
             <motion.li variants={listVariants} id={link.id} className="m-5 lg:my-0 lg:mx-5 leading-10">
