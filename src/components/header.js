@@ -13,28 +13,21 @@ export default function Header() {
 
   //Hamburger state
   const [isOpen, setOpen] = useState(false);
+  //Scroll state
+  const [scrolled, setScroll] = useState(false)
 
-  //Set navbar background without scroll
-  function ToggleNavLinks() { 
-    var navBar = document.getElementById('navbar'); 
-    navBar.style.background = '#181a1d'; 
-  };
-
-  //Scroll event
-  window.addEventListener('scroll', function() {; 
-    var navBar = document.getElementById('navbar'); 
-
-    //If user scrolls 1 or more pixels
-    if(window.scrollY >= 1){ 
-      navBar.style.background = '#181a1d'; 
+  // The scroll listener
+  const handleScroll = event => {
+    if (window.scrollY >= 1) {
+      setScroll(true)
     }
 
-    //Else they haven't scrolled
-    else { 
-        navBar.style.background = 'none'; 
-        navBar.style.boxShadow = 'none'
+    else {
+      setScroll(false)
     };
-  });
+  };
+
+  window.addEventListener("scroll", handleScroll);
 
   //Animation
   const isMobile = window.innerWidth < 1024; 
@@ -68,15 +61,22 @@ export default function Header() {
   };
 
   return (
-    <nav id="navbar" className="w-full h-[75px] fixed py-2 px-1.5 sm:px-6 flex justify-between items-center z-50">
+    <nav
+      className={`${
+        isOpen || scrolled
+        ? `bg-quaternary`
+        : `bg-none`
+      } w-full h-[75px] fixed py-2 sm:px-6 flex justify-between items-center z-50`}
+    
+    >
       {/* Logo */}
-      <Link to="/">
+      <Link to="/" className="px-2">
         <div className="bg-[url('../public/Images/logo.png')] w-[260px] h-[50px] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat" alt="logo"></div>
       </Link>
 
       <div className="flex"> {/* Container for links and menu */}
         {/* Hamburger */}
-        <div className="md:hidden mb-0.5 z-10" onClick={ToggleNavLinks}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
+        <div className="md:hidden mb-0.5  z-10"> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
           <Hamburger
             color="#ffffff"
             easing="ease-in-out"
