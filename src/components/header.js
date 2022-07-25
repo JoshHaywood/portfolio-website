@@ -13,6 +13,8 @@ export default function Header() {
 
   //Hamburger state
   const [isOpen, setOpen] = useState(false);
+  //Navbar state
+  const [isVisible, setState] = useState(false);
 
   //Set navbar background without scroll
   function ToggleNavLinks() { 
@@ -69,7 +71,7 @@ export default function Header() {
   };
 
   return (
-    <nav id="navbar" className="w-full h-[75px] fixed py-2 px-1.5 sm:px-6 flex justify-between items-center z-50 transition-all duration-300 ease-in-out">
+    <nav id="navbar" className="w-full h-[75px] fixed py-2 px-1.5 sm:px-6 flex justify-between items-center z-50">
       {/* Logo */}
       <Link to="/">
         <div className="bg-[url('../public/Images/logo.png')] w-[260px] h-[50px] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat"></div>
@@ -77,7 +79,7 @@ export default function Header() {
 
       <div className="flex"> {/* Container for links and menu */}
         {/* Hamburger */}
-        <div className="lg:hidden mb-0.5 z-10" onClick={(ToggleNavLinks)}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
+        <div className="lg:hidden mb-0.5 z-10" onClick={ToggleNavLinks}> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
           <Hamburger
             color="#ffffff"
             easing="ease-in-out"
@@ -86,38 +88,36 @@ export default function Header() {
             toggle={setOpen}
           />
         </div>
-
-        {/* If menu is open */}
-        {isOpen && (
-          <>
-            <div className="h-screen w-screen absolute mt-[3.75rem] left-0 bg-black opacity-60 blur-sm"></div>
-            
-            <ul className="h-screen w-3/5 sm:w-1/2 md:w-2/5 bg-quaternary flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-32">
-              {links.map((link) => (
-                <li className="m-5 lg:my-0 lg:mx-5 leading-10">
-                  <Link 
-                    className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
-                    to={link.path} 
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </>
-        )}
-
+        
         {/* Links */}
-        <motion.ul variants={containerVariants} initial="hidden" animate="visible" className="hidden lg:flex flex-row">
-            {links.map((link, i) => (
-              <motion.li variants={listVariants} id={link.id} className="m-5 lg:my-0 lg:mx-5">
-                <Link className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out" to={link.path}>
-                  {link.name}
-                </Link>
-              </motion.li>
-            ))}
-        </motion.ul>
+        {/* Overlay */}
+        <div 
+          className={`${
+            isOpen
+              ? `h-screen w-screen absolute mt-[3.75rem] left-0 bg-black opacity-60 backdrop-blur`
+              : `hidden`
+          }`}
+        ></div>
+
+        <ul 
+          className={`${
+            isOpen
+              ?  `h-screen min-w-[390px] flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-40 bg-quaternary shadow-md shadow-primary`
+              : `hidden`
+          } lg:flex flex-row`}
+        >
+          {links.map((link) => (
+            <li className="m-5 lg:my-0 lg:mx-5 leading-10">
+              <Link 
+                className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
+                to={link.path} 
+                onClick={() => setOpen(false)}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     </nav>
   );
