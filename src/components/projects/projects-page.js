@@ -107,8 +107,8 @@ export default function Projects() {
                 <motion.div id="projectCardContainer" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-8 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-6"> 
                     {items.map((items) => 
                         //Project card
-                        <div> {/* Container to prevent space-y errors */}
-                            <Link to={items.link} className="hover:-translate-y-4 transition duration-300 ease-in-out">
+                        <div className="hover:-translate-y-4 transition duration-300 ease-in-out"> {/* Container to prevent space-y errors */}
+                            <Link to={items.link}>
                                 <motion.div id="projectCard" variants={listVariants} className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-20 md:mx-36 lg:mx-0">
                                     <div className="bg-tertiary rounded-md rounded-b-none space-y-3 px-3 pb-5 lg:pb-60 inline-block lg:max-h-[280px] w-full">
                                         {/* Image */}
