@@ -26,17 +26,17 @@ export default function Project(props) {
 
                 {/* Heading */}
                 {/* Parent with position to not interfere with inline-block */}
-                <motion.div className="absolute text-center left-0 right-0"
+                <motion.div className="absolute text-center left-0 right-0 inline-block"
                     initial= {{ opacity: 0, y: '-50%' }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
                 > 
-                    <h1 className="inline-block mx-auto p-5 shadow-md rounded-md sm:text-5xl md:text-6xl font-semibold bg-secondary">
-                        {props.heading}
-                    </h1>
+                    <div className="space-y-3 text-center inline-block p-5 pb-8 rounded-md bg-secondary">
+                        <h1 className="inline-block mx-auto shadow-md sm:text-5xl md:text-6xl font-semibold">{props.heading}</h1>
+                        <div className="h-1 w-4/5 mx-auto bg-primary"></div>
+                    </div>
                 </motion.div>
             </div>
-
             
             <div className="flex flex-col md:flex-row max-w-[1000px] mx-auto py-16 md:py-32 px-5">
                 {/* Article */}
