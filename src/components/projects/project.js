@@ -14,15 +14,19 @@ export default function Project(props) {
         >
             <div className="space-y-3">
                 {/* Heading */}
-                <div className="space-y-3 mb-16 mx-auto">
-                    <h2 id="aboutHeading" className="font-semibold text-center">{props.heading}</h2>
-                    <div className={`${props.headingStyle} h-1 bg-primary mx-auto`}></div>
+                <div className="flex justify-center align-middle"> {/* Container used to allow centering as display: inline-block prevents this */}
+                    <div className="space-y-3 mb-16 text-center inline-block">
+                        <h2 className="inline-block font-semibold text-center">{props.heading}</h2>
+                        <div className={`h-1 w-4/5 mx-auto bg-primary`}></div>
+                    </div>
                 </div>
+
                 <Link className="hover:underline decoration-secondary-text-hover hover:text-secondary-text-hover" to="/projects">← Go Back</Link>
 
+                {/* Links */}
                 <div className="flex flex-row justify-between">
-                    <a id="projectLink" href={props.projectLink}>View Project</a>
-                    <a id="projectLink" href={props.repoLink}>View Code</a>
+                    <a href={props.projectLink}>View Project</a>
+                    <a href={props.repoLink}>View Code</a>
                 </div>
             </div>
             
