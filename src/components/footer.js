@@ -18,14 +18,14 @@ const projectsColumn = [
 
 export default function Footer() {
   return (
-		<footer className="bg-quaternary">
+		<footer className="bg-tertiary">
       <div className="px-16 max-w-[1000px] mx-auto">
         <div className="flex flex-col md:flex-row justify-between py-4">
           {/* Pages column */}
           <div className="flex flex-col text-center md:text-left space-y-1"> 
               <h5 className="text-white font-medium">Pages</h5>
               {pagesColumn.map((item) => (
-                <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+                <Link className="hover:underline" to={item.path}>{item.name}</Link>
               ))}
           </div>
 
@@ -36,7 +36,7 @@ export default function Footer() {
             {/* Maps first 3 entries */}
             {projectsColumn.map((item, index) => 
               index < 3 && (
-                <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+                <Link className="hover:underline" to={item.path}>{item.name}</Link>
               )
             )}
           </div>
@@ -45,7 +45,7 @@ export default function Footer() {
           {/* Maps final 3 entries */}
           {projectsColumn.map((item, index) => 
               index >= 3 && (
-                <Link className="text-quaternary-text hover:text-quaternary-text-hover hover:underline" to={item.path}>{item.name}</Link>
+                <Link className="hover:underline" to={item.path}>{item.name}</Link>
               )
             )}
           </div>

@@ -108,7 +108,7 @@ export default function Projects() {
                     {items.map((items) => 
                         //Project card
                         <motion.div id="projectCard" variants={listVariants} className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-20 md:mx-36 lg:mx-0 hover:-translate-y-4 transition duration-300 ease-in-out">
-                            <div className="bg-quaternary rounded-md rounded-b-none space-y-3 px-3 pb-5 lg:pb-60 inline-block lg:max-h-[280px] w-full">
+                            <div className="bg-tertiary rounded-md rounded-b-none space-y-3 px-3 pb-5 lg:pb-60 inline-block lg:max-h-[280px] w-full">
                                 {/* Image */}
                                     <div className="flex justify-between">
                                         <Link to={items.cardPath}>
@@ -135,7 +135,7 @@ export default function Projects() {
                             </div>
                             
                             {/* Button */}
-                            <div className="bg-quaternary text-center rounded-md rounded-t-none p-3 mt-1">
+                            <div className="bg-tertiary text-center rounded-md rounded-t-none p-3 mt-1">
                                 <Link className="text-primary-text hover:text-secondary-text" to={items.link}>View Project →</Link>
                             </div>
                         </motion.div>

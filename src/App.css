@@ -14,12 +14,9 @@ html {
   --primary-colour: #4c6bc1;
   --secondary-colour: #101316;
   --tertiary-colour: #15171a;
-  --quaternary-colour: #181a1d;
-  --quinary-colour: #373b42; 
   
   --primary-text-colour: #d1d5db; 
   --secondary-text-colour: #9ca3af;
-  --tertiary-text-colour: #597de0;
 }
 
 * {

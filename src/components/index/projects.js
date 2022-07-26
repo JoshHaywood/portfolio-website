@@ -162,7 +162,7 @@ export default function Projects() {
                                                 <h6 className="text-primary">{items.tagline}</h6>
                                                 <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
 
-                                                <p className="bg-none md:bg-senary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
+                                                <p className="bg-none md:bg-quaternary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
                                                     {items.text}
                                                 </p>
                                             </motion.div>
@@ -191,7 +191,7 @@ export default function Projects() {
                                             <h6 className="text-primary">{items.tagline}</h6>
                                             <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
 
-                                            <p className="bg-none md:bg-senary text-left md:pl-5 pr-10 sm:pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
+                                            <p className="bg-none md:bg-quaternary text-left md:pl-5 pr-10 sm:pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
                                                 {items.text}
                                             </p>
                                         </motion.div>

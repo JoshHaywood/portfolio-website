@@ -64,7 +64,7 @@ export default function Header() {
     <nav
       className={`${
         isOpen || scrolled
-        ? `bg-quaternary`
+        ? `bg-tertiary`
         : `bg-none`
       } w-full h-[75px] fixed py-2 sm:px-6 flex justify-between items-center z-50`}
     
@@ -102,7 +102,7 @@ export default function Header() {
           animate="visible"
           className={`${
             isOpen
-              ?  `h-screen w-3/5 sm:w-1/2  flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-40 bg-quaternary shadow-md shadow-primary`
+              ?  `h-screen w-3/5 sm:w-1/2  flex flex-col lg:flex-row items-center absolute top-0 right-0 pt-40 bg-tertiary shadow-md shadow-primary`
               : `hidden`
           } md:flex flex-row`}
         >

@@ -19,7 +19,7 @@ export default function Contact() {
                 viewport={{ once: true }}
             >
                 <TextField 
-                    className="bg-quaternary rounded-md" 
+                    className="bg-tertiary rounded-md" 
                     InputProps={{ sx: { color: "white" } }} 
                     InputLabelProps={{ sx: { color: "white" } }} 
                     sx={{ borderBottom: '1px solid #4c6bc1' }} 
@@ -29,7 +29,7 @@ export default function Contact() {
                     required 
                 />
                 <TextField 
-                    className="bg-quaternary rounded-md" 
+                    className="bg-tertiary rounded-md" 
                     InputProps={{ sx: { color: "white" } }}
                     InputLabelProps={{ sx: { color: "white" } }} 
                     sx={{ borderBottom: '1px solid #4c6bc1' }} 
@@ -38,7 +38,7 @@ export default function Contact() {
                     required 
                 /> 
                 <TextField 
-                    className="bg-quaternary rounded-md" 
+                    className="bg-tertiary rounded-md" 
                     InputProps={{ sx: { color: "white" } }}
                     InputLabelProps={{ sx: { color: "white" } }} 
                     sx={{ borderBottom: '1px solid #4c6bc1' }} 
