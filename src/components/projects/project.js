@@ -49,7 +49,7 @@ export default function Project(props) {
 
                     {/* Features list */}
                     <div className="py-10 md:flex space-y-10 items md:space-y-0 md:space-x-10 border-y-2 border-primary">
-                        <div className="space-y-10 w-1/2 md:w-full mx-auto md:mx-0">
+                        <div className="space-y-10 w-3/4 md:w-full mx-auto md:mx-0">
                             <h3 className="font-medium text-center md:text-left">Features</h3>
                             <ul className="space-y-10">
                                 {features.map((features) =>
@@ -58,7 +58,7 @@ export default function Project(props) {
                             </ul>
                         </div>
 
-                        <div className="space-y-10 w-1/2 md:w-full mx-auto md:mx-0">
+                        <div className="space-y-10 w-3/4 md:w-full mx-auto md:mx-0">
                             <h3 className="font-medium text-center md:text-left">Structure</h3>
                             <ul className="space-y-10">
                                 {structure.map((structure) =>
