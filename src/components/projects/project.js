@@ -26,7 +26,7 @@ export default function Project(props) {
 
                 {/* Heading */}
                 {/* Parent with position to not interfere with inline-block */}
-                <motion.div className="absolute text-center left-0 right-0 inline-block"
+                <motion.div className="absolute text-center left-0 right-0 inline-block px-5"
                     initial= {{ opacity: 0, y: '-50%' }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
