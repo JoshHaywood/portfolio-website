@@ -20,7 +20,7 @@ export default function Footer() {
   return (
 		<footer className="bg-tertiary">
       <div className="px-16 max-w-[1000px] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between py-4">
+        <div className="items-center md:items-end flex flex-col md:flex-row md:justify-between py-4">
           {/* Pages column */}
           <div className="flex flex-col text-center md:text-left space-y-1"> 
               <h5 className="text-white font-medium">Pages</h5>
@@ -31,7 +31,7 @@ export default function Footer() {
 
 
           {/* Projects columns */}
-          <div className="flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
+          <div className="items-center md:items-start flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
             <h5 className="text-white font-medium">Projects</h5>
             {/* Maps first 3 entries */}
             {projectsColumn.map((item, index) => 
