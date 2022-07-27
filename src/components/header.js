@@ -66,17 +66,17 @@ export default function Header() {
         isOpen || scrolled
         ? `bg-tertiary`
         : `bg-none`
-      } w-full h-[75px] fixed top-0 pt-1 sm:px-6 flex justify-between items-center z-50`}
+      } w-full h-[75px] fixed top-0 sm:px-6 flex justify-between items-center z-50`}
     
     >
       {/* Logo */}
-      <Link to="/" className="px-2 pb-1.5">
+      <Link to="/" className="px-2 pr-0 sm:pr-2">
         <div className="bg-[url('../public/Images/logo.png')] w-[260px] h-[50px] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat" alt="logo"></div>
       </Link>
 
       <div className="flex"> {/* Container for links and menu */}
         {/* Hamburger */}
-        <div className="md:hidden mb-0.5  z-10"> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
+        <div className="md:hidden mb-0.5 z-10"> {/* Had to use parent element as Tailwind doesn't effect custom React components */}
           <Hamburger
             color="#ffffff"
             easing="ease-in-out"

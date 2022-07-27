@@ -77,6 +77,7 @@ export default function Hero() {
                                         backgroundColor: '#181a1d',
                                         color: 'white',
                                         paddingRight: '1.9rem',
+                                        width: '175px',
 
                                         ':hover': {
                                             bgcolor: 'rgba(24, 26, 29, 0.8)', 
@@ -99,6 +100,7 @@ export default function Hero() {
                                         border: '2px solid #4c6bc1',
                                         color: 'white',
                                         paddingRight: '1.9rem',
+                                        width: '175px',
 
                                         ':hover': {
                                             bgcolor: 'rgba(76, 107, 193, 0.3)',
