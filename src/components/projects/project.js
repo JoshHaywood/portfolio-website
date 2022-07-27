@@ -18,15 +18,18 @@ export default function Project(props) {
                         animate={{ scale: 1 }}
                         transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
                     >
-                        <div className="absolute bg-primary h-[35vh] sm:h-[40vh] w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
-                        <div className="h-[35vh] mt-0 sm:h-[40vh]" style={{backgroundImage: `url("${props.projectImage}")`}}></div>
+                        <div className="absolute bg-primary w-full h-full z-10 md:h-[40vh] md:w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
+                        <img className="max-w-[610px] sm:max-w-[700px] md:hidden" src={props.projectImage}></img>
+
+                        {/* Replace img with background image to cover screen whilst maintaining aspect ratio */}
+                        <div className="hidden md:flex md:h-[40vh]" style={{backgroundImage: `url("${props.projectImage}")`}}></div>
                     </motion.div>
                 </div>
 
 
                 {/* Heading */}
                 {/* Parent with position to not interfere with inline-block */}
-                <motion.div className="absolute text-center left-0 right-0 inline-block px-5"
+                <motion.div className="absolute text-center left-0 right-0 inline-block px-5 z-10"
                     initial= {{ opacity: 0, y: '-50%' }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
