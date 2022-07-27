@@ -62,8 +62,8 @@ export default function Projects() {
             projectLink: 'https://game-review-application.herokuapp.com/',
             repoLink: "https://github.com/El-Goblino/game-review-app",
             heading: "Game Review",
-            textFirst: "Website for reviewing video games",
-            textSecond: "Targeted at improving my knowledge in functional based React and web design",
+            textFirst: "A web project for reviewing recently released video games.",
+            textSecond: "Targeted at improving my knowledge of functional based React and web design.",
             link: "/projects/game-review"
         }
     ];
@@ -97,7 +97,7 @@ export default function Projects() {
                 <title>Projects | Josh Haywood</title>
             </Helmet>
             
-            <motion.div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 md:mx-auto space-y-12"
+            <motion.div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 lg:mx-auto space-y-12"
                 initial= {{ opacity: 0, y: '5%' }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
@@ -110,11 +110,11 @@ export default function Projects() {
 
                 <Slider />
 
-                <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-8 lg:space-y-0 lg:grid grid-rows-2 grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-6"> 
+                <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-8 md:space-y-0 md:grid grid-rows-2 grid-cols-2 xl:grid-cols-3 gap-x-5 gap-y-6"> 
                     {items.map((items) => 
                         //Project card      
                         <div className="hover:-translate-y-4 transition duration-300 ease-in-out">                      
-                            <motion.div variants={listVariants} className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-20 md:mx-36 lg:mx-0">
+                            <motion.div variants={listVariants} className="shadow-md shadow-[rgba(76,107,193,0.2)] rounded-md sm:mx-16 md:mx-0">
                                 <div className="bg-tertiary rounded-md px-3 pb-5 lg:pb-60 lg:max-h-[280px] w-full">
                                     {/* Card */}
                                     <div className="flex justify-between">

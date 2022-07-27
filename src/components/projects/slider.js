@@ -53,7 +53,7 @@ const properties = {
 
 export default function App() {
     return (
-        <div className="sm:w-[90%] xl:w-3/4 mx-auto">
+        <div className="max-w-[900px] mx-auto">
             <Slide {...properties} easing="ease" className="hidden sm:block">
                     {slideImages.map((items, index) => {
                         return (
