@@ -152,6 +152,12 @@ input::placeholder, textarea::placeholder {
 
 /* Custom CSS from Tailwind limitations */
 
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
 #hero-image:hover img {
   bottom: 0.75rem;
   right: 0.75rem;

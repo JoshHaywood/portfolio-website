@@ -24,7 +24,7 @@ export default function About() {
         >
             {/* Heading */}
             <div className="space-y-3 mx-auto">
-                <h2 className="font-semibold text-center">About me</h2>
+                <h2 className="font-semibold text-center">About Me</h2>
                 <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>
 

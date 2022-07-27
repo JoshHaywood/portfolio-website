@@ -56,7 +56,7 @@ export default function Footer() {
           <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
 
           <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
-            <button className="text-white" onClick={() => {document.documentElement.scrollTop = 0}}>Back to top</button>
+            <button className="text-white" onClick={() => {document.documentElement.scrollTop = 0}}>Back To Top</button>
             <p className="text-white">↑</p>
           </div>
         </div>

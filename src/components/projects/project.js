@@ -12,14 +12,14 @@ export default function Project(props) {
         <>
             <div className="relative flex flex-col justify-center mt-[4.75rem]">
                 {/* Background Image */}
-                <div className="overflow-hidden"> {/* Container to prevent overflow */}
+                <div className="overflow-hidden w-[screen]"> {/* Container to prevent overflow */}
                     <motion.div
                         initial= {{ scale: 1.5 }}
                         animate={{ scale: 1 }}
                         transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
                     >
-                        <div id="projectHero" className="absolute bg-primary h-[35vh] sm:h-[40vh] w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
-                        <div className="h-[35vh] sm:h-[40vh] w-[screen]" style={{backgroundImage: `url("${props.projectImage}")`}}></div>
+                        <div className="absolute bg-primary h-[35vh] sm:h-[40vh] w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
+                        <div className="h-[35vh] mt-0 sm:h-[40vh]" style={{backgroundImage: `url("${props.projectImage}")`}}></div>
                     </motion.div>
                 </div>
 
