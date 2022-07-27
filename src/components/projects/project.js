@@ -19,7 +19,7 @@ export default function Project(props) {
                         transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
                     >
                         <div className="absolute bg-primary w-full h-full z-10 md:h-[40vh] md:w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
-                        <img className="max-w-[610px] sm:max-w-[700px] md:hidden" src={props.projectImage}></img>
+                        <img className="max-w-[640px] sm:max-w-[760px] md:hidden" src={props.projectImage}></img>
 
                         {/* Replace img with background image to cover screen whilst maintaining aspect ratio */}
                         <div className="hidden md:flex md:h-[40vh]" style={{backgroundImage: `url("${props.projectImage}")`}}></div>
