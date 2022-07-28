@@ -18,7 +18,7 @@ export default function Hero() {
     return (
         <div className="h-screen relative flex flex-col">
             {/* Background video */}
-            <video autoPlay muted loop className="w-full h-screen object-cover brightness-50 blur-sm"> {/* Object cover allows videos aspect ratio to be overridden */}
+            <video autoPlay muted loop playsInline  className="w-full h-screen object-cover brightness-50 blur-sm"> {/* Object cover allows videos aspect ratio to be overridden */}
                 {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 <source src="../videos/background.mp4" type="video/mp4"/>
                 Your browser does not support videos
