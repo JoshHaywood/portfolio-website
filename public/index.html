@@ -15,6 +15,32 @@
 		<!-- Attribution Pace automatic page load progress bar https://codebyzach.github.io/pace/ -->
 		<script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
+
+		<script src="canvas-video-player.js"></script>
+		<script>
+
+		var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+		if (isIOS) {
+
+			var canvasVideo = new CanvasVideoPlayer({
+				videoSelector: '.video',
+				canvasSelector: '.canvas',
+				timelineSelector: false,
+				autoplay: true,
+				makeLoop: true,
+				pauseOnClick: false,
+				audio: false
+			});
+
+		}else {
+
+			// Use HTML5 video
+			document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+		}   
+
+		</script>
 	</head>
 
 	<body>

@@ -16,15 +16,17 @@ export default function Hero() {
     }
 
     return (
-        <div className="h-screen relative flex flex-col">
+        <div class="video-responsive" className="h-screen relative flex flex-col w-full -z-10">
             {/* Background video */}
-            <video autoPlay muted loop playsInline  className="w-full h-screen object-cover brightness-50 blur-sm"> {/* Object cover allows videos aspect ratio to be overridden */}
+            <video class="video" autoPlay muted loop playsInline className="brightness-50 blur-sm"> {/* Object cover allows videos aspect ratio to be overridden */}
                 {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 <source src="../videos/background.mp4" type="video/mp4"/>
                 Your browser does not support videos
             </video>
 
-            <div className="absolute max-w-[1000px] h-screen left-0 right-0 flex flex-col justify-center mx-auto px-5 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
+            <canvas class="canvas"></canvas>        
+
+            <div className="absolute max-w-[1000px] h-screen left-0 right-0 flex flex-col justify-center mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <motion.h3 className="text-primary"
