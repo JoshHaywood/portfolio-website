@@ -51,22 +51,24 @@ export default function Contact() {
                 />
                 
                 <input type="hidden"  name="_next" defaultValue="https://www.joshhaywood-portfolio.com/message-sent"/>
-                <Button
-                    sx={{
-                            borderBottom: '2px solid #4c6bc1',
-                            width: '25%',
-                            marginLeft: 'auto',
-                            marginRight: 'auto',
-                            backgroundColor: '#181a1d',
-                            color: 'white',
+                <button type="submit"> {/* Form submit does not recognise MUI button as submit */}
+                    <Button
+                        sx={{
+                                borderBottom: '2px solid #4c6bc1',
+                                width: '25%',
+                                marginLeft: 'auto',
+                                marginRight: 'auto',
+                                backgroundColor: '#181a1d',
+                                color: 'white',
 
-                            ':hover': {
-                                bgcolor: 'rgba(24, 26, 29, 0.5)', 
-                            },
-                        }}
-                >
-                Submit
-                </Button>
+                                ':hover': {
+                                    bgcolor: 'rgba(24, 26, 29, 0.5)', 
+                                },
+                            }}
+                    >
+                    Submit
+                    </Button>
+                </button>
             </motion.form>
         </>
     );
