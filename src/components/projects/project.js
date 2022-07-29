@@ -115,7 +115,7 @@ export default function Project(props) {
                     transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }}
                 >
                     <Button
-                        onClick={() => navigate(-1)}
+                        onClick={() => {navigate(-1); document.documentElement.scrollTop = 0}}
                         variant="contained"
 
                         sx={{

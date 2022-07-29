@@ -12,7 +12,7 @@ export default function Message(props) {
             <h5>{props.message}</h5>
 
             <Button
-                onClick={() => navigate(-1)}
+                onClick={() => {navigate(-1); document.documentElement.scrollTop = 0}}
 
                 sx={{
                         border: '2px solid #4c6bc1',
