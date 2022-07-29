@@ -1,11 +1,8 @@
 import * as React from 'react';
-import enableInlineVideo from 'iphone-inline-video';
 import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 
 export default function Hero() {
-
-
     //Animation Variants
     const heroVariants = {
         hidden: { 
@@ -21,13 +18,9 @@ export default function Hero() {
     return (
         <div class="video-responsive" className="h-screen relative flex flex-col w-full -z-10">
             {/* Background video */}
-            <video autoPlay muted loop playsinline className="w-full h-screen object-cover brightness-50 blur-sm"> {/* Object cover allows videos aspect ratio to be overridden */}
-                {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
-                <source src="../videos/background.mp4" type="video/mp4"/>
+            <video autoPlay muted loop className="w-full h-screen object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4" playsinline> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
             </video>
-
-            <canvas class="canvas"></canvas>        
 
             <div className="absolute max-w-[1000px] h-screen left-0 right-0 flex flex-col justify-center mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
