@@ -18,7 +18,7 @@ export default function Hero() {
     return (
         <div class="video-responsive" className="h-screen relative flex flex-col w-full -z-10">
             {/* Background video */}
-            <video autoPlay muted loop className="w-full h-screen object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4" playsinline> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
+            <video autoPlay muted loop playsInline className="w-full h-screen object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
             </video>
 
