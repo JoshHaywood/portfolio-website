@@ -118,7 +118,10 @@ export default function Projects() {
                                 <div className="bg-tertiary rounded-md px-3 pb-5 lg:pb-60 lg:max-h-[280px] w-full">
                                     {/* Card */}
                                     <div className="flex justify-between">
-                                        <Link to={items.cardPath}>
+                                        <Link 
+                                            to={items.cardPath}
+                                            onClick={() => {document.documentElement.scrollTop = 0}}    
+                                        >
                                             <svg className="h-auto w-8 pt-4 fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"> {/* Attribution: https://fontawesome.com/icons/folder?s=regular */}
                                                 <path d="M447.1 96h-172.1L226.7 50.75C214.7 38.74 198.5 32 181.5 32H63.1c-35.35 0-64 28.66-64 64v320c0 35.34 28.65 64 64 64h384c35.35 0 64-28.66 64-64V160C511.1 124.7 483.3 96 447.1 96zM463.1 416c0 8.824-7.178 16-16 16h-384c-8.822 0-16-7.176-16-16V96c0-8.824 7.178-16 16-16h117.5c4.273 0 8.293 1.664 11.31 4.688L255.1 144h192c8.822 0 16 7.176 16 16V416z"/>
                                             </svg>
@@ -139,7 +142,10 @@ export default function Projects() {
                                         </div>
                                     </div>
                                     
-                                    <Link to={items.link}>
+                                    <Link 
+                                        to={items.link}
+                                        onClick={() => {document.documentElement.scrollTop = 0}}    
+                                    >
                                         {/* Text */}
                                         <div className="space-y-3 mt-3 lg:flex flex-col"> {/* Specific height to keep cards same dimensions */}
                                             <h5 className="font-semibold text-gray-300 transition duration-300 ease-in-out">{items.heading}</h5>
@@ -151,7 +157,10 @@ export default function Projects() {
                                 </div>
                                 
                                 {/* Button */}
-                                <Link to={items.link}>
+                                <Link 
+                                    to={items.link}
+                                    onClick={() => {document.documentElement.scrollTop = 0}}
+                                >
                                     <div className="bg-tertiary text-center rounded-md rounded-t-none p-3 mt-1">
                                         <p className="text-primary-text hover:text-secondary-text">View Project →</p>
                                     </div>
