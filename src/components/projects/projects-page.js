@@ -23,7 +23,7 @@ export default function Projects() {
             repoLink: "/error",
             heading: "Arduino Unity Project",
             textFirst: "An arduino game and controller I made in my first year of University.",
-            textSecond: "This was my introduction into how psychical components can interact with game engines",
+            textSecond: "This was my introduction into how psychical components can interact with game engines.",
             link: "/projects/arduino"
         },
     

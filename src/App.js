@@ -44,19 +44,19 @@ function App() {
                 projectLink={'https://www.joshhaywood-portfolio.com/'}
                 repoLink={'https://github.com/El-Goblino/portfolio-website'}
 
-                overview={'This project was a website I can use as a marketing tool to showcase my skills and various projects ive completed. To demonstrate my range of abilities to potential employers or people of interest and to serve as a hub for my various profiles whether on Github or Linkedin. Please also note this project is subject to change as its on the current process of being converted to a React, JSON stack. Please refer to my Github commit log for the project for a clearer overview of progress. All of the following content will only cover the Handlebars, Express version rather than the React conversion.'}
+                overview={'This project was a website I can use as a marketing tool to showcase my relevant experience and various projects ive undertaken. In order demonstrate my range of abilities to potential employers or to people of interest and to serve as a hub for my various social profiles whether on Github, Linkedin or Email. Please note that this article covers the initial creation of the Handlebars Express version of this project. The current version now uses React, therefore this article covers the reasoning for the project itself and various changes ive made.'}
                 projectImage={'../Images/portfolio-thumbnail.jpg'}
 
-                features={['Index page with skills, about and interest summary', 'Projects page for showcasing', 'Individual pages for further detail', 'Email contact system with page']}
+                features={['Index page with experience, featured projects and contact form', 'Projects page for showcasing projects', 'Individual article pages for greater detail']}
                 structure={['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js']}
 
-                target={'The target of this project was aimed at my future prospects post graduation. Being able to use this site as a tool to showcase my skills and previous works to potential employers. Towards the coding aspect this was also an opportunity to expand my knowledge of CSS, industry conventions and web design.'}
+                target={'The target of this project was aimed at my future prospects post graduation. Using this site as a tool to showcase my skills and previous works to potential employers. Originally in terms of programming this was also an opportunity to expand my knowledge of CSS, TailwindCSS, React, Animation Libraries, industry conventions and web design.'}
                 targetImage={'../Images/projects-page-thumbnail.JPG'}
 
-                issues={'Issues I found in this project include my overuse of classes and commenting, animating with CSS and JavaScript whilst making my styling engaging and satisfactory and incorrect use of media queries. More recently I found that Handlebars is limited in its capabilities when compared to the React libary. Therefore the this project is subject to be converted to JSX.'}
-                issuesImage={'../Images/commit-thumbnail.JPG'}
+                issues={'Issues found in this project was the limitations of Handlebars in comparison to React. Design of page layouts as well as UI systems were another area of focus and as a result this sites layout has changed drastically. In addition I found CSS animations time consuming for limited functionality, resulting in confusion as to how other developers create complex animations based timelines and viewport entries for example.'}
+                issuesImage={'../Images/portfolio-thumbnail.jpg'}
 
-                resolutions={'My resolutions for this problems was to rely more of containers and element tags rather than creating separate classes too often and focusing on commenting from more of a `Why has this been used?` as oppose to `this is what it is`. Animating was a lengthy process having to consult several forums and documentation pages however I have begun to grasp transitions and keyframing with this project. The page styling and CSS had to be refactored several times (as evident in the commit logs) although my grasp of UI (user interface) ,themes and media query usage has improved.'}
+                resolutions={'Converting the project to React resolved my Handlebars limitations as React contains greater maintainability features such as functional or class based structure, hooks, states, map and a greater emphasis on objects whilst maintaining fast load times. To improve the sites design and layout I researched other developers work as well as getting inspiration from sites like Pinterest and Dribble.io. After additionally researching animations beyond CSS I discovered GSAP and Framer Motion, opting for Framer Motion as its built specifcally around React. With these plugins including far greater features than CSS such as: delay, timelines and in view triggers.'}
             />
           </>
         } />
@@ -73,19 +73,19 @@ function App() {
                 projectLink={'/error'}
                 repoLink={'/error'}
 
-                overview={'This project was a to create an Arduino game controller using electronic components of our choice and Unity game. It was part of my first year of university and is unfortunately no longer viewable as the repository has been closed. It helped me further my knowledge with Unity as well as an introduction to Arduino and its Unity plugin called Udunio. Additionally this projects other assignment gave me my first attempt at a technical poster.'}
+                overview={'This project was a to create an Arduino game controller, using electronic components of our choice and accompanying Unity game. It was part of my first year of university. Currently this project no longer viewable as the repository this project was stored on has been closed. It helped me further my knowledge with Unity as well as an introduction to Arduino and its Unity plugin called Udunio. Additionally this projects other assignment gave me my first attempt at a technical poster, based around the Arduino project.'}
                 projectImage={'../Images/unity-thumbnail.JPG'}
             
-                features={['Unity game with Arduino', 'User interaction using arduino components', 'technical poster']}
+                features={['Unity game with Arduino', 'User interaction using arduino electronics', 'technical poster']}
                 structure={['Unity', 'Arduino / Uduino', 'C#']}
             
-                target={'The target was too make an interactive and engaging Unity game using components applicable to an Arduino breadboard to make a game controller and to create a corresponding technical poster detailing the project. Both the Arduino controller and the Unity game had to have some form of communication in some way and the final product had to follow the design detailed in the poster. My own idea was a Arduino version of the Hasbro game bop-it with four unique inputs in each corner of the controller and a game where the user would have to match the input to the component shown.'}
+                target={'The target was too make an interactive and engaging Unity game using components applicable to an Arduino breadboard to make a game controller and to create a corresponding technical poster detailing the project. Both the Arduino controller and the Unity game had to have some form of communication between the electronics and the in game features whilst following the design set out by the technical poster. My own idea was a Arduino version of the Hasbro game bop-it with four unique inputs in each corner of the controller and a game where the user would have to match the input to the component shown.'}
                 targetImage={'../Images/breadboard-thumbnail.jpg'}
             
-                issues={'Issue I found in this project were mainly to do with Uduino and its syntax as well as what components to use for the game. I personally found Uduino very difficult to use in correspondence with my components. As controller anything that wasn`t a simple state such as a button was very tedious and documentation I found was limited at the time. Using interesting and engaging components that were easy to apply to a Unity project was also a challenge. The components I selected were a accelerometer, photosensor, switch, button and leds. The accelerometer epically was very difficult to implement into the game.'}
+                issues={'Issue I found in this project were mainly to do with Uduino and its syntax as well as what components to use for the game. I personally found Uduino very difficult to use in correspondence with my components. As controlling anything that wasn`t a simple state such as a button was very tedious and documentation I found was limited at the time. Using interesting and engaging components that were easy to apply to a Unity project was also a challenge. The components I selected were a accelerometer, photosensor, switch, button and leds, with the accelerometer being especially difficult to implement into the game.'}
                 issuesImage={'../Images/arduino-technical-poster.JPG'}
             
-                resolutions={'Uduino and Arduino are both systems that I struggled with and am unlikely to use again. Especially seeing as I am now more web technologies focused. My technical poster skills have improved drastically as you can see in my One Messaging project. However the project stilled remained insightful to Arduino if I am ever likely to use it again in Javascript instead of C# for example.'}
+                resolutions={'Uduino and Arduino are both systems that I struggled with and am unlikely to use again. Especially seeing as I am now more web technologies focused. My technical poster skills have improved drastically as you can see in my One Messaging project. However the project still remained insightful to Arduino if I am ever likely to use it again in Javascript instead of C# for example.'}
             />
           </>
         } />
@@ -102,19 +102,19 @@ function App() {
                 projectLink={'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store'}
                 repoLink={'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store'}
 
-                overview={'This was a group project in my second year of university and was centered around a business that provided a subscription based box of student related supplies. My role was front-end development as well as documentation handling. I maintained our teams agile approach by documenting each stand-ups notes, targets, target status and any issues that occurred for that week. This project was my first time using React and therefore my development was minimal but I did create the mobile header and implemented the user profile modal.'}
+                overview={'This was a group project in my second year of university and was centered around a business that provided a subscription based box of student related supplies. My role was front-end development as well as documentation handling. I maintained our teams agile approach by documenting each stand-ups notes, targets, target status and any issues that occurred for that week. This project was my first time using React and therefore my development less substantial than normal but I did components like the mobile header and implemented the user profile modal.'}
                 projectImage={'../Images/student-survival-store-index.JPG'}
 
                 features={['Website', 'Login and registering system', 'User dashboard']}
                 structure={['HTML', 'React', 'Tailwinds CSS', 'Javascript', 'Express.js', 'SQLite']}
 
-                target={'The target was to create the business website with all the ideal functionality based on proposals each individual member had pitched and decided on. With my own original business plan and proposal presentation being centered around a job seekers website, for tech specifically. This was in-light of the Covid 19 pandemic and therefore the mass employment lead to a gap to find an available and accessable employment platform.'}
+                target={'The target was to create the business website with all the ideal functionality based on proposals each individual member had pitched and decided on. With my own original business plan and proposal presentation being centered around a job seekers website, for tech specifically. This was in-light of the Covid 19 pandemic and therefore the mass unemployment lead to a market need to find an available and accessible employment platform.'}
                 targetImage={'../Images/student-survival-store-large.JPG'}
 
-                issues={'My personal issues in the project were learning React and Tailwinds as I had not used either of these previously (as somewhat mentioned). Therefore I had a steep learning curve to match my experience team members capabilities, something I am still working to achieve currently. Maintaining an Agile methodology with standup meetings and a kanban board as well as the group setting were also changes I had to adapt too. I had around 18 months experience with agile methodology at the time and I had to help the team collaberate under this scheme as well as document the process, as mentioned.'}
+                issues={'My personal issues in the project were learning React and Tailwinds as I had not used either of these previously, as mentioned. Therefore I had a steep learning curve to match my experienced team members capabilities, something I am still working to achieve currently. Maintaining an Agile methodology with standup meetings and kanban boards were a regular part of the project and ensuring the team collaborated effectively and timeline along with documenting the process.'}
                 issuesImage={'../Images/student-survival-store-login.JPG'}
 
-                resolutions={'Tailwinds I found straight forward and easy to pick up and resolved my lack of knowledge fairly quickly as a result. The same could not be said for React and that is something I am hopping to expand my knowledge on in upcoming personal projects, due to its current popularity in industry. The group dynamic worked well and all members made sure to stick to standup meetings and deadlines, based in an agile approach.'}
+                resolutions={'Tailwinds I found straight forward and easy to pick up and built up a solid base of knowledge using thier documentation. The same could not be said for React and that is something I have expanded my knowledge since from other projects. Something I was keen to do due to its current popularity in industry. The group dynamic worked well and all members made sure to stick to standup meetings and deadlines whilst maintaining agile practices.'}
             />
           </>
         } />
@@ -131,19 +131,19 @@ function App() {
                 projectLink={'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2'}
                 repoLink={'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2'}
 
-                overview={'This was an individual project in my second year of university. This project was centered around creating a distributed system, with a distributed system being an application distributed across multiple systems. A technical poster detailing the project we wished to create also had to be provided along with a structured report, documenting the creation of the project. The project I decided to create was a realtime messaging app.'}
+                overview={'This was an individual project in my second year of university. This project was centered around creating a distributed system, with a distributed system being an application distributed across multiple systems, as the name suggests. A technical poster detailing the project we wished to create also had to be provided along with a structured report, documenting the creation of the project. The project I decided to create was a realtime messaging app.'}
                 projectImage={'../Images/one-messaging-login-thumbnail.JPG'}
 
                 features={['Login and registering system', 'Chat input and output interface', 'SQL storage']}
                 structure={['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Socket.io', 'SQLite']}
 
-                target={'The target was to follow the timeline I had provided in the poster and follow it as closely as possible. Having to list the reasoning for any deviations in the report. The artifacts targets were to creating a login and registering systems where user information was stored to a database. A chat interface where multiple users could communicate with each other and a messaging system detailing the message, username and time of message.'}
+                target={'The target was to follow the timeline I had detailed in the poster and follow it as closely as possible. Having to list the reasoning for any deviations in the report. The artifacts targets were to creating a login and registering systems where user information was stored to a SQL database. A chat interface where multiple users could communicate with each other and a messaging system detailing the message, username and time of message.'}
                 targetImage={'../Images/one-messaging-validation-thumbnail.JPG'}
 
                 issues={'The issue I found where the shear amount of back-end development required in this project. The front-end development was relatively easy to me and completed quickly. However creating the login and registering system and the message component proved very challenging. Due to my knowledge of Sqlite being limited and this being the most advanced authentication system I had created.'}
                 issuesImage={'../Images/one-messaging-poster.JPG'}
 
-                resolutions={'I resolved the authentication system mainly through help from both my peers and lecturers who were able to explain the method of each key stage such as login verification or checking a hashed password against a form request. Online tutorials and documentation for socket.io helped me to creat the messaging component.'}
+                resolutions={'I resolved the authentication system mainly through help from both my peers and lecturers who were able to explain the method of each key stage such as login verification or checking a hashed password against a form request for examples. Online tutorials and documentation for socket.io helped me to create the messaging component.'}
             />
           </>
         } />
@@ -160,7 +160,7 @@ function App() {
                 projectLink={'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center'}
                 repoLink={'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center'}
 
-                overview={'This was a group project in my second year with the same team as the Student Survival Store project. Similarly to that project the esports center was first presented through a business plan with my team pitches their own ideas, with my own pitch being the esports center. A statistics tracking website centered around the sporting genre esports, the competitive play of video games. My own role being front-end development and design and documentation'}
+                overview={'This was a group project in my second year with the same team as the Student Survival Store project. Similarly to that project the Esports Center was first presented through a business plan with my team pitches their own ideas, with my own pitch being the Esports Center. A statistics tracking website centered around the sporting genre Esports, the competitive play of video games. My own role being front-end development and design and documentation'}
                 projectImage={'../Images/esports-center-hero-thumbnail.JPG'}
 
                 features={['Search and filtering', 'SQL database storage', 'Registering users and local esports teams']}
@@ -189,13 +189,13 @@ function App() {
                 projectLink={'https://game-review-application.herokuapp.com/'}
                 repoLink={'https://github.com/El-Goblino/game-review-app'}
 
-                overview={'This was a side project I worked on aimed at reviewing video games of my choice.'}
+                overview={'This was a side project I worked on aimed at creating a reviewing website where I could review video games of my choice.'}
                 projectImage={'../Images/reviews-thumbnail.JPG'}
 
                 features={['Search and filtering', 'JSON storage', 'Dynamic content']}
                 structure={['HTML', 'React', 'CSS', 'Tailwind', 'Javascript']}
 
-                target={'The target of this project was to extended my own React knowledge. Covering features such as props, states, mapping and JSON objects which I had previously had little expierence in. Because of previously making dynamic content in Handlebars and Express and my understanding of Reacts impact in industry I attempted to achieve a site that was fully dynamic in React.'}
+                target={'The target of this project was to extended my own React knowledge. Covering features such as props, states, mapping, functional hooks and JSON objects which I had previously had little experience in. Because of previously making dynamic content in Handlebars and Express and my understanding of Reacts impact in industry I attempted to achieve a site that was fully dynamic in React.'}
                 targetImage={'../Images/switch-thumbnail.JPG'}
 
                 issues={'The main issue I came across was the search and filtering aspect. It was a feature I hadn`t covered in other projects and Reacts approach was new to me compared to client-side Javascript. Creating dynamic pages was also a feature a hadn`t covered in React and utilizing mapping and props was challenging.'}
