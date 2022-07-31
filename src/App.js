@@ -22,12 +22,13 @@ function App() {
 
   if (loading) {
     document.body.style.position = 'fixed'; //Disables scroll bars without creating padding gap
-    
+    document.body.addEventListener('touchmove', function(event){ event.preventDefault(); }); //Prevents mobile scrolling
   }
 
   else {
     document.body.style.position = 'relative'; //Enables scroll bars
   }
+
 
   return (
     <>
