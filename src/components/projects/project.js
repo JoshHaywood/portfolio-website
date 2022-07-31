@@ -29,7 +29,8 @@ export default function Project(props) {
 
                 {/* Heading */}
                 {/* Parent with position to not interfere with inline-block */}
-                <motion.div className="absolute text-center left-0 right-0 inline-block px-5 z-10"
+                <motion.div 
+                    className="absolute text-center left-0 right-0 inline-block px-5 z-10"
                     initial= {{ opacity: 0, y: '-50%' }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
@@ -43,7 +44,8 @@ export default function Project(props) {
             
             <div className="flex flex-col md:flex-row max-w-[1000px] mx-auto py-16 md:py-32 px-5">
                 {/* Article */}
-                <motion.div className="w-full md:w-4/5 mr-5 order-2 md:order-1 space-y-10"
+                <motion.div 
+                    className="w-full md:w-4/5 mr-5 order-2 md:order-1 space-y-10"
                     initial= {{ opacity: 0, y: '5%' }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 1.5, ease: 'easeInOut' }}
@@ -109,7 +111,8 @@ export default function Project(props) {
                 </motion.div>
 
                 {/* Side menu */}
-                <motion.div className="w-full md:w-1/5 mx-auto pb-10 md:py-0 relative order-1 md:order-2 md:text-center"
+                <motion.div 
+                    className="w-full md:w-1/5 mx-auto pb-10 md:py-0 relative order-1 md:order-2 md:text-center"
                     initial= {{ opacity: 0, y: '5%' }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }}

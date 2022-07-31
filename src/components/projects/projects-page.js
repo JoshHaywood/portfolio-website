@@ -73,6 +73,7 @@ export default function Projects() {
         hidden: {},
         visible: {
           transition: {
+            delayChildren: 1,
             staggerChildren: 0.5,
           }
         }
@@ -97,7 +98,8 @@ export default function Projects() {
                 <title>Projects | Josh Haywood</title>
             </Helmet>
             
-            <motion.div className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 lg:mx-auto space-y-12"
+            <motion.div 
+                className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 lg:mx-auto space-y-12"
                 initial= {{ opacity: 0, y: '5%' }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}

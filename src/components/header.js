@@ -41,6 +41,7 @@ export default function Header() {
       hidden: {},
       visible: {
         transition: {
+          delayChildren: 2.9,
           staggerChildren: 0.2,
         }
       }
@@ -61,13 +62,15 @@ export default function Header() {
   };
 
   return (
-    <nav
+    <motion.nav
       className={`${
         isOpen || scrolled
         ? `bg-tertiary`
         : `bg-none`
       } w-full h-[75px] fixed top-0 sm:px-6 flex justify-between items-center z-50`}
-    
+      initial= {{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.1, delay: 2.8 }}    
     >
       {/* Logo */}
       <Link to="/" className="px-2 pr-0 sm:pr-2"> 
@@ -119,6 +122,6 @@ export default function Header() {
           ))}
         </motion.ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };

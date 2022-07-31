@@ -25,35 +25,39 @@ export default function Hero() {
             <div className="absolute max-w-[1000px] h-screen left-0 right-0 flex flex-col justify-center mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
-                    <motion.h3 className="text-primary"
+                    <motion.h3 
+                        className="text-primary"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: 3.3, ease: "easeInOut" }}
                     >
                         Hi, my name is
                     </motion.h3>
-                    <motion.h1 className="sm:text-5xl md:text-6xl font-semibold"
+                    <motion.h1 
+                        className="sm:text-5xl md:text-6xl font-semibold"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 0.7, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
                     >
                         Josh Haywood
                     </motion.h1>
-                    <motion.h1 className="sm:text-5xl md:text-6xl font-semibold text-gray-400"
+                    <motion.h1 
+                        className="sm:text-5xl md:text-6xl font-semibold text-gray-400"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 0.9, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: 3.7, ease: "easeInOut" }}
                     >
                         An aspiring web developer
                     </motion.h1>
-                    <motion.p className="text-xl max-w-[500px]"
+                    <motion.p 
+                        className="text-xl max-w-[500px]"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 1.1, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: 4.1, ease: "easeInOut" }}
                     >
                         Im currently a Web Development student at <a id="heroLink" href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
@@ -61,11 +65,12 @@ export default function Hero() {
                 </div>
 
                 {/* Media Icons */}
-                <motion.div className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6"
+                <motion.div 
+                    className="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6"
                     variants={heroVariants}
                     initial="hidden"
                     animate="visible"
-                    transition={{ duration: 0.5, delay: 1.1, ease: "easeInOut" }}
+                    transition={{ duration: 0.5, delay: 4.1, ease: "easeInOut" }}
                 >
                     <a href="https://github.com/El-Goblino/">  
                         <div className="flex pr-[1.4rem] sm:pr-0">

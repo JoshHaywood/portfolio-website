@@ -12,7 +12,10 @@ export default function Contact() {
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
 
-            <motion.form className="flex flex-col space-y-10" action="https://formsubmit.co/joshhaywood025@gmail.com" method="POST"
+            <motion.form 
+                className="flex flex-col space-y-10" 
+                action="https://formsubmit.co/joshhaywood025@gmail.com" 
+                method="POST"
                 initial= {{ opacity: 0, y: '5%' }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}

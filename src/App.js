@@ -1,8 +1,10 @@
 import * as React from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 
+import LoadingScreen from './components/loading';
 import Header from './components/header';
 import Footer from './components/footer';
 import Message from './components/message';
@@ -12,10 +14,31 @@ import ContactPage from './components/contact-page';
 import Project from './components/projects/project';
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 2800) //Sets load time
+  }, [])
+
+  if (loading) {
+    document.body.style.position = 'fixed';
+    
+  }
+
+  else {
+    document.body.style.position = 'relative';
+  }
+
   return (
     <>
+      {loading === false ? ( //If not in loading state
+        <></>
+      ) : ( //Else calls loading screen
+        <LoadingScreen />
+      )}
+
       <Header />
-      
+          
       <Routes>
         <Route path="/" element={<Index />}/>
         <Route path="/projects" element={<Projects />}/>
@@ -224,6 +247,7 @@ function App() {
       </Routes>
 
       <Footer />
+
     </>
   );
 }
