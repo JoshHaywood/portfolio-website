@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Projects() {
     const items = [
         {
-            imageSrc: "../Images/portfolio-thumbnail.jpg",
+            imageSrc: "../Images/portfolio-thumbnail.webp",
             tagline: "Personal Site",
             heading: "Portfolio Website",
             text: "My website showcasing projects i've created as well as a hub for marketing and contact. Specifically, my first version of the portfolio site and how ive adapted the project since then.",
@@ -14,7 +14,7 @@ export default function Projects() {
         },
     
         {
-            imageSrc: "../Images/one-messaging-thumbnail.jpg",
+            imageSrc: "../Images/one-messaging-thumbnail.webp",
             tagline: "Messaging Project",
             heading: "One messaging project",
             text: "A realtime messaging app I made in my second year of University. This was project portion of my research into the advancement web communication systems.",

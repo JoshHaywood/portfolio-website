@@ -7,7 +7,7 @@ import 'react-slideshow-image/dist/styles.css';
 
 const slideImages = [
     {
-        slide: "../Images/portfolio-thumbnail.jpg",
+        slide: "../Images/portfolio-thumbnail.webp",
         heading: "Portfolio Website", 
         text: "My website showcasing projects i've created as well as a hub for marketing and contact. Specifically, my first version of the portfolio site and how ive adapted the project since then.", 
         path: "/projects/portfolio",
@@ -15,7 +15,7 @@ const slideImages = [
     },
 
     {
-        slide: "../Images/one-messaging-thumbnail.jpg", 
+        slide: "../Images/one-messaging-thumbnail.webp", 
         heading: "One Messaging", 
         text: "A realtime messaging app I made in my second year of University. This was project portion of my research into the advancement web communication systems.",
         path: "/projects/one-messaging",
@@ -23,7 +23,7 @@ const slideImages = [
     },
 
     {
-        slide: "../Images/student-survival-store-thumbnail.jpg", 
+        slide: "../Images/student-survival-store-thumbnail.webp", 
         heading: "Student Survival Store", 
         text: "Software as a service group project from my second year of University. A group project based around a monthly subscription based product service.",
         path: "/projects/student-survival-store",

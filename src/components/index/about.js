@@ -74,7 +74,7 @@ export default function About() {
 
                 {/* Image */}
                 <div id="hero-image" className="max-w-[200px] sm:max-w-[300px] border-2 border-primary rounded-md h-min relative mx-auto md:top-5 left-5"> {/* Creates border behind image */}
-                    <img src="../Images/portrait.jpg" alt="developer portrait" className="rounded-md relative bottom-5 right-5"></img>
+                    <img src="../Images/portrait.webp" alt="developer portrait" className="rounded-md relative bottom-5 right-5"></img>
                 </div>
             </div>
         </motion.div>

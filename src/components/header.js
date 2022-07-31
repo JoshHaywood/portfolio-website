@@ -70,7 +70,7 @@ export default function Header() {
     
     >
       {/* Logo */}
-      <Link to="/" className="px-2 pr-0 sm:pr-2">
+      <Link to="/" className="px-2 pr-0 sm:pr-2"> 
         <div className="bg-[url('../public/Images/logo.png')] w-[260px] h-[50px] hover:bg-[url('../public/Images/logo-hover.png')] bg-[length:260px] bg-no-repeat" alt="logo"></div>
       </Link>
 
