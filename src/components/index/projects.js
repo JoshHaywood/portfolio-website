@@ -152,7 +152,7 @@ export default function Projects() {
                                         > {/* Container for overlaying child elements */}
                                             <div className="hover:animate-pop-out">  {/* Animation added as child so parent elements scale isnt effected */}
                                                 <div className="absolute bg-primary w-full h-full z-10 brightness-[20%] md:brightness-100 opacity-90 md:opacity-30 md:hover:opacity-0 transition duration-300 ease-in-out"></div>
-                                                <img className="rounded-sm max-w-[600px]" alt="Image of feature project" src={items.imageSrc}></img>
+                                                <img className="rounded-sm max-w-[600px] h-[337px]" alt="Image of feature project" src={items.imageSrc}></img>
                                             </div>
                                         </motion.div>
 
