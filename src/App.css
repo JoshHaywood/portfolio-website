@@ -33,6 +33,7 @@ body {
   max-width: 100%;
   overflow: overlay;
   min-height: 100vh;
+  min-height: -moz-available;
   min-height: fill-available;
   min-height: -webkit-fill-available;
 }
