@@ -17,21 +17,21 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 2800) //Sets load time
+    setTimeout(() => setLoading(false), 0) //Sets load time
   }, [])
 
   if (loading) {
-    document.body.style.position = 'fixed';
+    document.body.style.position = 'fixed'; //Disables scroll bars without creating padding gap
     
   }
 
   else {
-    document.body.style.position = 'relative';
+    document.body.style.position = 'relative'; //Enables scroll bars
   }
 
   return (
     <>
-      {loading === false ? ( //If not in loading state
+      {loading === true ? ( //If not in loading state
         <></>
       ) : ( //Else calls loading screen
         <LoadingScreen />
