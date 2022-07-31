@@ -6,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  height: fill-available;
+  height: -webkit-fill-available;
 }
 
 :root {
@@ -30,6 +32,9 @@ body {
   overflow-x: hidden;
   max-width: 100%;
   overflow: overlay;
+  min-height: 100vh;
+  min-height: fill-available;
+  min-height: -webkit-fill-available;
 }
 
 ::-webkit-scrollbar {
