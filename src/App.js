@@ -17,7 +17,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 0) //Sets load time
+    setTimeout(() => setLoading(false), 2800) //Sets load time
   }, [])
 
   if (loading) {
@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      {loading === true ? ( //If not in loading state
+      {loading === false ? ( //If not in loading state
         <></>
       ) : ( //Else calls loading screen
         <LoadingScreen />
