@@ -59,7 +59,6 @@ This branch contains:
 - Site theme
 - Site font
 - Referencing for assets
-- Application Documentation
 
 ## Installation
 
