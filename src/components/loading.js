@@ -7,9 +7,16 @@ export default function LoadingScreen() {
         window.scrollTo(0, 0)
       }, [])
 
+    //Sets view height as inner height for mobile browsers
+    window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
     return(
         <motion.div 
-            className="fixed z-50 w-full h-full bg-tertiary"
+            id="fullscreenElement"
+            className="fixed z-50 w-full bg-tertiary"
             initial= {{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.3, delay: 2.5, ease: 'easeInOut' }} 

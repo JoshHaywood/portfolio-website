@@ -5,9 +5,9 @@ import { motion } from 'framer-motion';
 
 export default function Contact() {
     return (
-        <div className="max-w-[650px] mx-auto px-10 md:px-0"> 
+        <> 
             {/* Heading */}
-            <div className="pb-12 md:pb-14 pt-4 md:pt-0 space-y-3"> 
+            <div className="pb-12 md:pb-14 pt-4 md:pt-0 space-y-3 mx-auto"> 
                 <h2 className="font-semibold text-center">Contact</h2>
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
@@ -73,6 +73,6 @@ export default function Contact() {
                     </Button>
                 </button>
             </motion.form>
-        </div>
+        </>
     );
 }
