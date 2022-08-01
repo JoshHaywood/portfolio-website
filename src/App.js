@@ -75,7 +75,7 @@ function App() {
                 projectLink={'https://www.joshhaywood-portfolio.com/'}
                 repoLink={'https://github.com/El-Goblino/portfolio-website'}
 
-                overview={'This project was a website I can use as a marketing tool to showcase my relevant experience and various projects ive undertaken. In order demonstrate my range of abilities to potential employers or to people of interest and to serve as a hub for my various social profiles whether on Github, Linkedin or Email. Please note that this article covers the initial creation of the Handlebars Express version of this project. The current version now uses React, therefore this article covers the reasoning for the project itself and various changes ive made.'}
+                overview={`This project was a website I can use as a marketing tool to showcase my relevant experience and various projects i've undertaken. In order demonstrate my range of abilities to potential employers or to people of interest and to serve as a hub for my various social profiles whether on Github, Linkedin or Email. Please note that this article covers the initial creation of the Handlebars Express version of this project. The current version now uses React, therefore this article covers the reasoning for the project itself and various changes i've made.`}
                 projectImage={'../Images/portfolio-thumbnail.webp'}
 
                 features={['Index page with experience, featured projects and contact form', 'Projects page for showcasing projects', 'Individual article pages for greater detail']}
