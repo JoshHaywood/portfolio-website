@@ -9,14 +9,14 @@ export default function LoadingScreen() {
 
     return(
         <motion.div 
-            className="fixed w-screen h-screen z-50 bg-tertiary"
+            className="fixed w-screen min-h-screen z-50 bg-tertiary"
             initial= {{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.3, delay: 2.5, ease: 'easeInOut' }} 
         >
             {/* Image container */}
             <motion.div 
-                className="flex justify-center items-center"
+                className="flex-1 justify-center items-center"
                 initial= {{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, ease: 'easeInOut' }} 
