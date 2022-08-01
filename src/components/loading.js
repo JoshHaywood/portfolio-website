@@ -3,12 +3,19 @@ import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export default function LoadingScreen() {
+    window.onload = window.onresize = function () {
+        var left = document.getElementById("fullscreen-element");
+        var height = window.innerHeight;
+        left.style.height = height + "px";
+    }
+
     useEffect(() => {
         window.scrollTo(0, 0)
       }, [])
 
     return(
         <motion.div 
+            id="fullscreen-element"
             className="fixed w-screen min-h-screen z-50 bg-tertiary"
             initial= {{ opacity: 1 }}
             animate={{ opacity: 0 }}
