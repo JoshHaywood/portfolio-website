@@ -155,9 +155,8 @@ input::placeholder, textarea::placeholder {
 }
 
 /* Custom CSS from Tailwind limitations */
-#fullscreenElement {
-  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
-  height: calc(var(--vh, 1vh) * 100);
+.backdrop-blur {
+  -webkit-backdrop-filter: blur(8px);
 }
 
 #hero-image:hover img {

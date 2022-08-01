@@ -9,7 +9,7 @@ export default function LoadingScreen() {
 
     return(
         <motion.div 
-            className="w-screen h-screen z-50 bg-tertiary"
+            className="fixed w-screen h-screen z-50 bg-tertiary"
             initial= {{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ duration: 0.3, delay: 2.5, ease: 'easeInOut' }} 

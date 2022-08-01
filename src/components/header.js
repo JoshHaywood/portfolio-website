@@ -67,7 +67,7 @@ export default function Header() {
         isOpen || scrolled
         ? `bg-tertiary`
         : `bg-none`
-      } w-full h-[75px] fixed top-0 sm:px-6 flex justify-between items-center z-50`}
+      } w-full h-[75px] fixed top-0 sm:px-6 flex justify-between items-center z-50 backdrop-blur`}
       initial= {{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.1, delay: 2.8 }}    
