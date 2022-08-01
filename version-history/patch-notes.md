@@ -25,3 +25,9 @@ I have kept previous build versions to demostrate my refactoring and progress as
 ## Build 3.0.0
 
 - Major redesign of pages designs structures and features
+
+## Build 3.1.0
+
+- Overhauled design with animations
+- Optimised for large desktops and landscape mobile
+- Redesigned project pages
