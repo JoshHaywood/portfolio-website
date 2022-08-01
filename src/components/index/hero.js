@@ -2,7 +2,7 @@ import * as React from 'react';
 import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 
-export default function Hero() {
+export default function Hero(props) {
     //Animation Variants
     const heroVariants = {
         hidden: { 
@@ -30,7 +30,7 @@ export default function Hero() {
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 3.3, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: props.taglineDelay, ease: "easeInOut" }}
                     >
                         Hi, my name is
                     </motion.h3>
@@ -39,7 +39,7 @@ export default function Hero() {
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 3.5, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: props.headingOneDelay, ease: "easeInOut" }}
                     >
                         Josh Haywood
                     </motion.h1>
@@ -48,7 +48,7 @@ export default function Hero() {
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 3.7, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: props.headingTwoDelay, ease: "easeInOut" }}
                     >
                         An aspiring web developer
                     </motion.h1>
@@ -57,7 +57,7 @@ export default function Hero() {
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 0.5, delay: 4.1, ease: "easeInOut" }}
+                        transition={{ duration: 0.5, delay: props.textDelay, ease: "easeInOut" }}
                     >
                         Im currently a Web Development student at <a id="heroLink" href="https://www.falmouth.ac.uk/"><span className='font-semibold text-primary text-xl'>Falmouth University</span></a> in my final year of a BSC.
                         Currently im focused on specializing in front-end development.
@@ -70,7 +70,7 @@ export default function Hero() {
                     variants={heroVariants}
                     initial="hidden"
                     animate="visible"
-                    transition={{ duration: 0.5, delay: 4.1, ease: "easeInOut" }}
+                    transition={{ duration: 0.5, delay: props.textDelay, ease: "easeInOut" }}
                 >
                     <a href="https://github.com/El-Goblino/">  
                         <div className="flex pr-[1.4rem] sm:pr-0">

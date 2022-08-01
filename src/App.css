@@ -156,7 +156,7 @@ input::placeholder, textarea::placeholder {
 
 /* Custom CSS from Tailwind limitations */
 .backdrop-blur {
-  -webkit-backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Ensures backdrop works on mobile */
 }
 
 #hero-image:hover img {

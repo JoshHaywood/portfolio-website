@@ -41,7 +41,21 @@ function App() {
       <Header />
           
       <Routes>
-        <Route path="/" element={<Index />}/>
+        <Route path="/" element={
+          <>
+            {/* Passes prop based on loading screen completion */ }
+            {loading ? (
+              <Index 
+                hasLoaded={false}
+              />
+            ) : (
+              <Index 
+                hasLoaded={true}
+              />
+            )}
+          </>
+        }/>
+
         <Route path="/projects" element={<Projects />}/>
 
         {

@@ -5,7 +5,9 @@ import Projects from './projects';
 import Contact from '../contact';
 import { Helmet } from "react-helmet";
 
-export default function Index() {
+export default function Index(props) {
+    const hasLoaded = props.hasLoaded; //Matches bool to passed prop
+
     return (
         <>
             <Helmet>
@@ -13,7 +15,27 @@ export default function Index() {
             </Helmet>
 
             <div className="space-y-10 md:space-y-20 xl:space-y-40">
-                <Hero />
+                <>
+                    {hasLoaded ? (
+                        /* If loading screen has already been completed reduce delay */
+                        <Hero 
+                            taglineDelay = '0.5'
+                            headingOneDelay = '0.7'
+                            headingTwoDelay = '0.9'
+                            textDelay = '1.1'
+
+                        />
+                    ) : (
+                        /* Else increase delay to match load time */
+                        <Hero 
+                            taglineDelay = '3.3'
+                            headingOneDelay = '3.5'
+                            headingTwoDelay = '3.7'
+                            textDelay = '4.1'
+                        />
+                    )}
+                </>
+                
                 <div className="px-5 sm:px-10 mx-auto max-w-[1000px]"> {/* Multiple parents created to not alter absolute of background elements */}
                     <About />
                 </div>
