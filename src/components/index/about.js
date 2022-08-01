@@ -17,7 +17,7 @@ export default function About() {
     return (
         //Animation
         <motion.div 
-            className="space-y-12" 
+            className="space-y-12 px-5 sm:px-10 max-w-[1000px] mx-auto" 
             initial= {{ opacity: 0, y: '5%' }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
@@ -30,7 +30,7 @@ export default function About() {
             </div>
 
             {/* Text */}
-            <div className="flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0 pb-10 sm:pb-0"> 
+            <div className=" flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 pb-10 sm:pb-0"> 
                 <div className="flex flex-col space-y-4 w-100% md:w-3/5 leading-7">
                     <p>
                         I’m a student from Devon, England. 
@@ -74,7 +74,7 @@ export default function About() {
                 </div>
 
                 {/* Image */}
-                <div id="hero-image" className="max-w-[200px] sm:max-w-[300px] border-2 border-primary rounded-md h-min relative mx-auto md:top-5 left-5"> {/* Creates border behind image */}
+                <div id="hero-image" className="max-w-[200px] sm:max-w-[300px] mt-16 md:mt-0 border-2 border-primary rounded-md h-min relative mx-auto md:top-5 left-5"> {/* Creates border behind image */}
                     <img src="../Images/portrait.webp" alt="developer portrait" className="rounded-md relative bottom-5 right-5"></img>
                 </div>
             </div>

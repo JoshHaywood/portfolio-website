@@ -29,7 +29,6 @@ function App() {
     document.body.style.position = 'relative'; //Enables scroll bars
   }
 
-
   return (
     <>
       {loading === false ? ( //If not in loading state

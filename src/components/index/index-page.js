@@ -12,17 +12,15 @@ export default function Index() {
                 <title>Josh Haywood | Portfolio</title>
             </Helmet>
 
-            <div className="space-y-10 md:space-y-20 xl:space-y-40">
-                <Hero />
-                <div className="px-5 sm:px-10 mx-auto max-w-[1000px]"> {/* Multiple parents created to not alter absolute of background elements */}
-                    <About />
-                </div>
-                <div className="px-5 sm:px-10 bg-tertiary w-screen"> {/* Allows background to exceed width */}
-                    <Projects />                    
-                </div>
-                <div className="px-10 md:px-0 pb-16 md:pb-28 lg:pb-52 max-w-[650px] mx-auto">
-                    <Contact />
-                </div>
+            <Hero />
+            <div className="py-10 md:py-20 xl:py-40 bg-quinary w-screen"> {/* Parents allows background to exceed childs' max width */}
+                <About />
+            </div>
+            <div className="py-10 md:py-20 xl:py-40 bg-tertiary w-screen">
+                <Projects />                    
+            </div>
+            <div className="py-10 md:py-20 xl:py-40 bg-quinary w-screen">
+                <Contact />
             </div>
         </>
     );
