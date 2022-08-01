@@ -1,29 +1,39 @@
 # Portfolio Website
 
 This project is a portfolio website to showcase my previous, current and future projects.
-The project features a website to present these projects.
-The project is created using Express.js back-end and a Handlebars layout for a HTML front-end.
+The project features a React / Tailwind application to present these projects.
+Please note the documentation centers around the original design and stack created with Handlebars and Express.JS.
+My reasoning for maintaining the original documentation is to showcase how I have adapted and altered this project over time.
+My justification can be found: https://www.joshhaywood-portfolio.com/projects/portfolio
 
 ## Contents
 
-- [Main Features](#main-features)
-- [Repository Layout](#repository-layout)
-  - [Main](#main)
-  - [Application](#application)
-  - [Documentation](#documentation)
-- [Installation](#installation)
-  - [Prerequisites](#prerequisites)
-  - [User Guide](#user-guide)
-- [Commit Message Key](#commit-message-key)
+- [Portfolio Website](#portfolio-website)
+  - [Contents](#contents)
+  - [Main Features](#main-features)
+  - [Repository Layout](#repository-layout)
+    - [Main](#main)
+    - [Application](#application)
+    - [Documentation](#documentation)
+  - [Installation](#installation)
+    - [Prerequisites](#prerequisites)
+    - [User Guide](#user-guide)
+  - [Commit Message Key](#commit-message-key)
 
 
 ## Main Features
 
-The main target features of the project are: 
-- Index page with a brief description of myself, my background and future aspirations.
-- Links and showcases of all previous projects I have worked on and a link to their repositories on GitHub.
+The main target features of the original concept are: 
+- Index page with a brief description of myself, my background, current works, future aspirations and experience.
+- Links and showcases of featured projects I have worked on and a link to their repositories on GitHub and live site where applicable.
 - Admin log in system for to add new posts without having to open the project in an IDE.
 - SQLite3 database used for storing the projects in the format: 'Name', 'Description', 'Image', 'Link'. Which using the log in system the admin can edit or delete.
+
+The current project features are:
+- Index page with a brief description of myself, my background and future aspirations.
+- Links and showcases of all previous projects I have worked on and a link to their repositories on GitHub.
+- Admin log in system scrapped as its not required in this scope.
+- Project storage included in JSON files and managed through React props and mapping.
 
 ## Repository Layout
 
@@ -49,10 +59,7 @@ This branch contains:
 - Site theme
 - Site font
 - Referencing for assets
-- Development log
 - Application Documentation
-- User studys
-- Performance metrics
 
 ## Installation
 
@@ -85,7 +92,12 @@ Then extract the folder somewhere in your files.
 
 `$ npm install`
 
-`$ npm start`
+`$ npm run dev`
+
+or
+
+`$ react-scripts build`
+`$ serve -s build` for Reacts's production mode.
 
 6. Finally enter the local URL (http:localhost:3000) into your web browser.
 
