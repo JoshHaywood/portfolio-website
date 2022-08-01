@@ -21,6 +21,10 @@ html {
   --secondary-text-colour: #9ca3af;
 }
 
+#root {
+  height: 100%;
+}
+
 * {
   box-sizing: border-box;
 }
