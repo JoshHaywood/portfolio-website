@@ -15,20 +15,14 @@ export default function Hero() {
         }
     }
 
-    //Sets view height as inner height for mobile browsers
-    window.addEventListener('resize', () => {
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-
     return (
-        <div id="fullscreenElement" className="relative flex flex-col w-full -z-10">
+        <div className="relative flex flex-col w-full h-screen -z-10">
             {/* Background video */}
-            <video id="fullscreenElement" autoPlay muted loop playsInline className="w-full object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
+            <video autoPlay muted loop playsInline className="w-full h-screen object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
             </video>
 
-            <div id="fullscreenElement" className="absolute max-w-[1000px] left-0 right-0 flex flex-col justify-center mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
+            <div className="absolute max-w-[1000px] h-screen left-0 right-0 flex flex-col justify-center mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <motion.h3 
