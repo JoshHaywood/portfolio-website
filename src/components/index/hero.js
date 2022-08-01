@@ -3,12 +3,6 @@ import { motion } from 'framer-motion';
 import Button from '@mui/material/Button';
 
 export default function Hero(props) {
-    window.onload = window.onresize = function () {
-        var left = document.getElementById("fullscreen-element");
-        var height = window.innerHeight;
-        left.style.height = height + "px";
-    }
-
     //Animation Variants
     const heroVariants = {
         hidden: { 
@@ -22,13 +16,13 @@ export default function Hero(props) {
     }
 
     return (
-        <div id="fullscreen-element" className="relative flex flex-col justify-center w-full min-h-screen -z-10">
+        <div className="relative flex flex-col justify-center w-full min-h-screen -z-10">
             {/* Background video */}
-            <video id="fullscreen-element" autoPlay muted loop playsInline className="w-full flex-1 object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
+            <video autoPlay muted loop playsInline className="w-full flex-1 object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
             </video>
 
-            <div id="fullscreen-element" className="absolute max-w-[1000px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
+            <div className="absolute max-w-[1000px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <motion.h3 
