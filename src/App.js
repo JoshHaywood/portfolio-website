@@ -25,6 +25,8 @@ function App() {
   let articleDelay
   let sideMenuDelay
 
+  const isMobile = window.innerWidth < 640; //Constant for mobile screen size
+
   if (loading) {
     document.body.style.position = "fixed"; //Disables scroll bars without creating padding gap
     document.body.addEventListener("touchmove", function(event){ event.preventDefault(); }); //Prevents mobile scrolling
@@ -43,7 +45,6 @@ function App() {
     articleDelay = 1.5
     sideMenuDelay = 2
   }
-
 
   return (
     <>
@@ -80,10 +81,20 @@ function App() {
                 childDelay={3.8}
               />
             ) : (
-              <Projects 
-                containerDelay={0.5}
-                childDelay={1}
-              />
+              <>
+                {/* If mobile reduce child delay to sync animations */}
+                {isMobile ? (
+                  <Projects 
+                    containerDelay={0.5}
+                    childDelay={0.5}
+                  />
+                ) : (
+                  <Projects 
+                    containerDelay={0.5}
+                    childDelay={1}
+                  />
+                )}
+              </>
             )};
           </>
         }/>
