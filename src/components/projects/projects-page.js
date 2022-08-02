@@ -1,11 +1,11 @@
-import * as React from 'react';
+import * as React from "react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 import Slider from "./slider";
 
-export default function Projects() {
+export default function Projects(props) {
     const items = [
         {
             cardPath: "/projects/portfolio", 
@@ -73,7 +73,7 @@ export default function Projects() {
         hidden: {},
         visible: {
           transition: {
-            delayChildren: 1,
+            delayChildren: props.childDelay,
             staggerChildren: 0.5,
           }
         }
@@ -92,7 +92,7 @@ export default function Projects() {
         }
       };    
       
-      return (
+    return (
         <>
             <Helmet>
                 <title>Projects | Josh Haywood</title>
@@ -102,7 +102,7 @@ export default function Projects() {
                 className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 lg:mx-auto space-y-12"
                 initial= {{ opacity: 0, y: '5%' }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
+                transition={{ duration: 0.5, delay: props.containerDelay, ease: 'easeInOut' }}
             >        
                 {/* Heading */}
                 <div className="space-y-3 mx-auto">

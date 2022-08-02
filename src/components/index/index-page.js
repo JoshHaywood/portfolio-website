@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Hero from './hero';
-import About from './about';
-import Projects from './projects';
-import Contact from '../contact';
+import * as React from "react";
+import Hero from "./hero";
+import About from "./about";
+import Projects from "./projects";
+import Contact from "../contact";
 import { Helmet } from "react-helmet";
 
 export default function Index(props) {
@@ -19,19 +19,18 @@ export default function Index(props) {
                     {hasLoaded ? (
                         /* If loading screen has already been completed reduce delay */
                         <Hero 
-                            taglineDelay = '0.5'
-                            headingOneDelay = '0.7'
-                            headingTwoDelay = '0.9'
-                            textDelay = '1.1'
-
+                            taglineDelay = {0.5}
+                            headingOneDelay = {0.7}
+                            headingTwoDelay = {0.9}
+                            textDelay = {1.1}
                         />
                     ) : (
                         /* Else increase delay to match load time */
                         <Hero 
-                            taglineDelay = '3.3'
-                            headingOneDelay = '3.5'
-                            headingTwoDelay = '3.7'
-                            textDelay = '4.1'
+                            taglineDelay = {3.3}
+                            headingOneDelay = {3.5}
+                            headingTwoDelay = {3.7}
+                            textDelay = {4.1}
                         />
                     )}
                 </>

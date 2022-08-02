@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import Button from '@mui/material/Button';
+import * as React from "react";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import Button from "@mui/material/Button";
 
 export default function Project(props) {
     const navigate = useNavigate();
@@ -10,13 +10,13 @@ export default function Project(props) {
     const structure = props.structure;
     return (
         <>
-            <div className="relative flex flex-col justify-center mt-[4.75rem]">
+            <div className="relative flex flex-col justify-center mt-[51px]">
                 {/* Background Image */}
                 <div className="overflow-hidden w-[screen]"> {/* Container to prevent overflow */}
                     <motion.div
                         initial= {{ scale: 1.5 }}
                         animate={{ scale: 1 }}
-                        transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+                        transition={{ duration: 1, delay: props.backgroundDelay, ease: 'easeInOut' }}
                     >
                         <div className="absolute bg-primary w-full h-full z-10 md:h-[40vh] md:w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
                         <img className="max-w-[640px] sm:max-w-[760px] md:hidden" src={props.projectImage}></img>
@@ -33,7 +33,7 @@ export default function Project(props) {
                     className="absolute text-center left-0 right-0 inline-block px-5 z-10"
                     initial= {{ opacity: 0, y: '-50%' }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1, ease: 'easeInOut' }}
+                    transition={{ duration: 0.5, delay: props.headingDelay, ease: 'easeInOut' }}
                 > 
                     <div className="space-y-3 text-center inline-block p-5 pb-8 rounded-md bg-secondary">
                         <h1 className="inline-block mx-auto shadow-md sm:text-5xl md:text-6xl font-semibold">{props.heading}</h1>
@@ -48,7 +48,7 @@ export default function Project(props) {
                     className="w-full md:w-4/5 mr-5 order-2 md:order-1 space-y-10"
                     initial= {{ opacity: 0, y: '5%' }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.5, ease: 'easeInOut' }}
+                    transition={{ duration: 0.5, delay: props.articleDelay, ease: 'easeInOut' }}
                 >
                     <p>{props.overview}</p>
 
@@ -115,7 +115,7 @@ export default function Project(props) {
                     className="w-full md:w-1/5 mx-auto pb-10 md:py-0 relative order-1 md:order-2 md:text-center"
                     initial= {{ opacity: 0, y: '5%' }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 2, ease: 'easeInOut' }}
+                    transition={{ duration: 0.5, delay: props.sideMenuDelay, ease: 'easeInOut' }}
                 >
                     <Button
                         onClick={() => {navigate(-1); document.documentElement.scrollTop = 0}}
