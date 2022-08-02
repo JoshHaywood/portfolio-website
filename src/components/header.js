@@ -1,14 +1,13 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 
 export default function Header() {
   const links = [
-    {id: "homeLink", name: "Home", path: "/"},
-    {id: "projectsLink", name: "Projects", path: "/projects"},
-    {id: "contactLink", name: "Contact", path: "/contact"}
+    {id: 'homeLink', name: 'Home', path: '/'},
+    {id: 'projectsLink', name: 'Projects', path: '/projects'},
+    {id: 'contactLink', name: 'Contact', path: '/contact'}
   ];
 
   //Hamburger state
@@ -27,7 +26,7 @@ export default function Header() {
     };
   };
 
-  window.addEventListener("scroll", handleScroll);
+  window.addEventListener('scroll', handleScroll);
 
   //Animation
   const isMobile = window.innerWidth < 1024; 

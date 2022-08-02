@@ -1,9 +1,10 @@
-import * as React from "react";
-import Hero from "./hero";
-import About from "./about";
-import Projects from "./projects";
-import Contact from "../contact";
-import { Helmet } from "react-helmet";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+
+import Hero from './hero';
+import About from './about';
+import Projects from './projects';
+import Contact from '../contact';
 
 export default function Index(props) {
     const hasLoaded = props.hasLoaded; //Matches bool to passed prop

@@ -1,19 +1,19 @@
-import * as React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const pagesColumn = [
-  {name: "Home", path: "/"},
-  {name: "Projects", path: "/projects"},
-  {name: "Contact", path: "/contact"}
+  {name: 'Home', path: '/'},
+  {name: 'Projects', path: '/projects'},
+  {name: 'Contact', path: '/contact'}
 ];
 
 const projectsColumn = [
-  {name: "Portfolio", path: "/projects/portfolio"},
-  {name: "Arduino", path: "/projects/arduino"},
-  {name: "Student Survival Store", path: "/projects/student-survival-store"},
-  {name: "One Messaging", path: "/projects/one-messaging"},
-  {name: "Esports Center", path: "/projects/esports-center"},
-  {name: "Game Review", path: "/projects/game-review"}
+  {name: 'Portfolio', path: '/projects/portfolio'},
+  {name: 'Arduino', path: '/projects/arduino'},
+  {name: 'Student Survival Store', path: '/projects/student-survival-store'},
+  {name: 'One Messaging', path: '/projects/one-messaging'},
+  {name: 'Esports Center', path: '/projects/esports-center'},
+  {name: 'Game Review', path: '/projects/game-review'}
 ];
 
 export default function Footer() {

@@ -1,70 +1,70 @@
-import * as React from "react";
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import Slider from "./slider";
+import Slider from './slider';
 
 export default function Projects(props) {
     const items = [
         {
-            cardPath: "/projects/portfolio", 
+            cardPath: '/projects/portfolio', 
             projectLink: 'https://www.joshhaywood-portfolio.com/',
-            repoLink: "https://github.com/El-Goblino/portfolio-website",
-            heading: "Portfolio Website",
-            textFirst: "My website showcasing projects i've created as well as a hub for marketing and contact.",
-            textSecond: "Specifically, my first version of the portfolio site and how ive adapted the project since then.",
-            link: "/projects/portfolio"
+            repoLink: 'https://github.com/El-Goblino/portfolio-website',
+            heading: 'Portfolio Website',
+            textFirst: `My website showcasing projects i've created as well as a hub for marketing and contact.`,
+            textSecond: 'Specifically, my first version of the portfolio site and how ive adapted the project since then.',
+            link: '/projects/portfolio'
         },
     
         {
-            cardPath: "/projects/arduino", 
+            cardPath: '/projects/arduino', 
             projectLink: '/error',
-            repoLink: "/error",
-            heading: "Arduino Unity Project",
-            textFirst: "An arduino game and controller I made in my first year of University.",
-            textSecond: "This was my introduction into how psychical components can interact with game engines.",
-            link: "/projects/arduino"
+            repoLink: '/error',
+            heading: 'Arduino Unity Project',
+            textFirst: 'An arduino game and controller I made in my first year of University.',
+            textSecond: 'This was my introduction into how psychical components can interact with game engines.',
+            link: '/projects/arduino'
         },
     
         {
-            cardPath: "/projects/student-survival-store", 
+            cardPath: '/projects/student-survival-store', 
             projectLink: 'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store',
-            repoLink: "https://github.falmouth.ac.uk/LW254830/Student-Survival-Store",
-            heading: "Student Survival Store",
-            textFirst: "Software as a service group project from my second year of University.",
-            textSecond: "A group project based around a monthly subscription based product service.",
-            link: "/projects/student-survival-store"
+            repoLink: 'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store',
+            heading: 'Student Survival Store',
+            textFirst: 'Software as a service group project from my second year of University.',
+            textSecond: 'A group project based around a monthly subscription based product service.',
+            link: '/projects/student-survival-store'
         },
     
         {
-            cardPath: "/projects/one-messaging",
+            cardPath: '/projects/one-messaging',
             projectLink: 'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2',
-            repoLink: "https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2", 
-            heading: "One Messaging Project",
-            textFirst: "A realtime messaging app I made in my second year of University.",
-            textSecond : "This was project portion of my research into the advancement web communication systems.",
-            link: "/projects/one-messaging"
+            repoLink: 'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2', 
+            heading: 'One Messaging Project',
+            textFirst: 'A realtime messaging app I made in my second year of University.',
+            textSecond : 'This was project portion of my research into the advancement web communication systems.',
+            link: '/projects/one-messaging'
         },
     
         {
-            cardPath: "/projects/esports-center", 
-            projectLink: "https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center",
-            repoLink: "https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center",
-            heading: "The Esports Center",
-            textFirst: "Statistics tracking group project from my second year of University.",
-            textSecond: "A project I lead as project leader, looking into the rise of Esports.",
-            link: "/projects/esports-center"
+            cardPath: '/projects/esports-center', 
+            projectLink: 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center',
+            repoLink: 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center',
+            heading: 'The Esports Center',
+            textFirst: 'Statistics tracking group project from my second year of University.',
+            textSecond: 'A project I lead as project leader, looking into the rise of Esports.',
+            link: '/projects/esports-center'
         },
     
         {
-            cardPath: "/projects/game-review", 
+            cardPath: '/projects/game-review', 
             projectLink: 'https://game-review-application.herokuapp.com/',
-            repoLink: "https://github.com/El-Goblino/game-review-app",
-            heading: "Game Review",
-            textFirst: "A web project for reviewing recently released video games.",
-            textSecond: "Targeted at improving my knowledge of functional based React and web design.",
-            link: "/projects/game-review"
+            repoLink: 'https://github.com/El-Goblino/game-review-app',
+            heading: 'Game Review',
+            textFirst: 'A web project for reviewing recently released video games.',
+            textSecond: 'Targeted at improving my knowledge of functional based React and web design.',
+            link: '/projects/game-review'
         }
     ];
 

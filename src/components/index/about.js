@@ -1,17 +1,17 @@
-import  * as React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 export default function About() {
     const items = [
-        {text: "HTML - 3 years"},
-        {text: "CSS - 3 years"},
-        {text: "Client side JavaScript - 6 months"},
-        {text: "Handlebars - 6 months"},
-        {text: "Node.js  - 6 months"},
-        {text: "Express.js  - 6 months"},
-        {text: "C#.net and Unity C# - 18 months"},
-        {text: "C++ - 18 months"},
-        {text: "Unity - 18 months"},
+        {text: 'HTML - 3 years'},
+        {text: 'CSS - 3 years'},
+        {text: 'Client side JavaScript - 6 months'},
+        {text: 'Handlebars - 6 months'},
+        {text: 'Node.js  - 6 months'},
+        {text: 'Express.js  - 6 months'},
+        {text: 'C#.net and Unity C# - 18 months'},
+        {text: 'C++ - 18 months'},
+        {text: 'Unity - 18 months'},
     ];
 
     return (

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import TextField from "@mui/material/TextField";
-import Button from '@mui/material/Button';
+import React from 'react';
 import { motion } from 'framer-motion';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function Contact() {
     return (
