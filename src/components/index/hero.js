@@ -16,13 +16,13 @@ export default function Hero(props) {
     }
 
     return (
-        <div className="relative flex flex-col justify-center w-full h-screen -z-10">
+        <div className="relative flex flex-col justify-center w-full h-screen -z-10 ">
             {/* Background video */}
             <video autoPlay muted loop playsInline className="w-full flex-1 object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
             </video>
 
-            <div className="absolute max-w-[1000px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
+            <div className="absolute max-w-[1000px] tall:pt-[15rem] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-50 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
                     <motion.h3 
