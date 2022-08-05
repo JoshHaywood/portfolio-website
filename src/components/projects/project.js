@@ -154,5 +154,5 @@ export default function Project(props) {
                 </motion.div>
             </div>
         </>
-    );
+    )
 }

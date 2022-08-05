@@ -30,5 +30,5 @@ export default function Message(props) {
             Go Back
             </Button>
         </div>
-    );
+    )
 }

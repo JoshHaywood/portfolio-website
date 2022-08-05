@@ -122,5 +122,5 @@ export default function Header() {
         </motion.ul>
       </div>
     </motion.nav>
-  );
-};
+  )
+}

@@ -79,5 +79,5 @@ export default function About() {
                 </div>
             </div>
         </motion.div>
-    );
+    )
 }

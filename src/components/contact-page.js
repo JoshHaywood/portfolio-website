@@ -21,5 +21,5 @@ export default function ContactPage(props) {
                 <Contact />
             </motion.div>
         </>
-    );
+    )
 }

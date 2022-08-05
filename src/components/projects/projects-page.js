@@ -173,5 +173,5 @@ export default function Projects(props) {
                 </motion.div>
             </motion.div>
         </>
-    );
+    )
 }
