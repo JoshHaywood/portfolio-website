@@ -99,7 +99,7 @@ export default function Projects(props) {
             </Helmet>
             
             <motion.div 
-                className="pt-44 pb-16 md:pb-48 max-w-[1000px] mx-5 lg:mx-auto space-y-12"
+                className="pt-36 sm:pt-44 pb-20 md:pb-48 max-w-[1000px] mx-5 lg:mx-auto space-y-12"
                 initial= {{ opacity: 0, y: '5%' }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: props.containerDelay, ease: 'easeInOut' }}

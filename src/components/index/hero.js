@@ -16,7 +16,7 @@ export default function Hero(props) {
     }
 
     return (
-        <div className="relative flex flex-col justify-center w-full h-screen -z-10">
+        <div className="relative flex flex-col justify-center w-full h-screen min-h-[600px] -z-10">
             {/* Background video */}
             <video autoPlay muted loop playsInline className="w-full flex-1 object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
@@ -35,7 +35,7 @@ export default function Hero(props) {
                         Hi, my name is
                     </motion.h3>
                     <motion.h1 
-                        className="sm:text-5xl md:text-6xl font-semibold"
+                        className="md:text-5xl lg:text-6xl font-semibold"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
@@ -44,7 +44,7 @@ export default function Hero(props) {
                         Josh Haywood
                     </motion.h1>
                     <motion.h1 
-                        className="sm:text-5xl md:text-6xl font-semibold text-gray-400"
+                        className="md:text-5xl lg:text-6xl font-semibold text-gray-400"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
