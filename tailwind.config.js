@@ -1,10 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
   theme: {
-    screens: {
-      'tall': { 'raw': '(max-height: 800px)' },
-    },
-
     extend: {
       colors: {
         'primary': '#4c6bc1',
