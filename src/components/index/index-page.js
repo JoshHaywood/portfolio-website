@@ -15,7 +15,7 @@ export default function Index(props) {
                 <title>Josh Haywood | Portfolio</title>
             </Helmet>
 
-            <div className="space-y-10 md:space-y-20 xl:space-y-40">
+            <div className="space-y-10 md:space-y-20 xl:space-y-40 -mt-5">
                 <>
                     {hasLoaded ? (
                         /* If loading screen has already been completed reduce delay */

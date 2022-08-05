@@ -5,8 +5,6 @@ import Button from '@mui/material/Button';
 export default function Message(props) {
     const navigate = useNavigate();
 
-    console.log(props.redirect)
-
     return (
         <div className="flex flex-col text-center justify-center h-screen space-y-10 mx-5">
             <h1 className="text-white text-6xl font-semibold">{props.heading}</h1>
