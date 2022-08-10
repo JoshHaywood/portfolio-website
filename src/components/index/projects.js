@@ -116,18 +116,43 @@ export default function Projects() {
             },
         };
 
-        textVariants = {
-            hidden: { 
-                opacity: 0,
-            },
+        leftCardVariants = {
+            hidden: { opacity: 0 },
+            visible: {
+                opacity: 1, 
+
+                transition: {
+                    duration: 0.5,
+                    delay: 1.3,
+                    ease: 'easeInOut',
+                } 
+            }
+        };
+
+        rightCardVariants = {
+            hidden: { opacity: 0 },
             visible: { 
                 opacity: 1,
+
                 transition: {
-                    duration: 1,
-                    delay: 1,
+                    duration: 0.5,
+                    delay: 1.3,
                     ease: 'easeInOut',
-                }
-            },
+                } 
+            }
+        };
+
+        listVariants = {
+            hidden: { opacity: 0 },
+            visible: { 
+                opacity: 1,
+
+                transition: {
+                    duration: 0.5,
+                    delay: 1.3,
+                    ease: 'easeInOut',
+                } 
+            }
         };
     };
 
@@ -157,7 +182,7 @@ export default function Projects() {
                                         </motion.div>
 
                                         {/* Text card */}
-                                        <motion.div variants={textVariants} className="flex flex-col items-start md:items-end z-20 max-w-[600px] md:w-2/5 mx-5 pb-5 absolute md:static">
+                                        <motion.div className="flex flex-col items-start md:items-end z-20 max-w-[600px] md:w-2/5 mx-5 pb-5 absolute md:static">
                                             <motion.div variants={rightCardVariants}>
                                                 <h6 className="text-primary">{items.tagline}</h6>
                                                 <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
