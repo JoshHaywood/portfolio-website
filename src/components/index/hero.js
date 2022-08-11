@@ -16,7 +16,7 @@ export default function Hero(props) {
     }
 
     return (
-        <div className="flex flex-col justify-center w-full lg:h-screen min-h-[600px] -z-10">
+        <div className="flex flex-col justify-center w-full lg:h-screen min-h-[770px] -z-10">
             {/* Background video */}
             <video autoPlay muted loop playsInline className="w-full flex-1 object-cover brightness-50 blur-sm" src="../videos/background.mp4" type="video/mp4"> {/* Object cover allows videos aspect ratio to be overridden */} {/* Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
                 Your browser does not support videos
