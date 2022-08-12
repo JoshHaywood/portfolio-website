@@ -20,7 +20,7 @@ export default function Projects(props) {
         {
             cardPath: '/projects/arduino', 
             projectLink: '/error',
-            repoLink: '/error',
+            repoLink: 'https://github.com/JoshHaywood/arduino-project',
             heading: 'Arduino Unity Project',
             textFirst: 'An arduino game and controller I made in my first year of University.',
             textSecond: 'This was my introduction into how psychical components can interact with game engines.',
@@ -29,8 +29,8 @@ export default function Projects(props) {
     
         {
             cardPath: '/projects/student-survival-store', 
-            projectLink: 'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store',
-            repoLink: 'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store',
+            projectLink: '/error',
+            repoLink: 'https://github.com/JoshHaywood/student-survival-store',
             heading: 'Student Survival Store',
             textFirst: 'Software as a service group project from my second year of University.',
             textSecond: 'A group project based around a monthly subscription based product service.',
@@ -39,8 +39,8 @@ export default function Projects(props) {
     
         {
             cardPath: '/projects/one-messaging',
-            projectLink: 'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2',
-            repoLink: 'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2', 
+            projectLink: '/error',
+            repoLink: 'https://github.com/JoshHaywood/one-messaging', 
             heading: 'One Messaging Project',
             textFirst: 'A realtime messaging app I made in my second year of University.',
             textSecond : 'This was project portion of my research into the advancement web communication systems.',
@@ -49,8 +49,8 @@ export default function Projects(props) {
     
         {
             cardPath: '/projects/esports-center', 
-            projectLink: 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center',
-            repoLink: 'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center',
+            projectLink: '/error',
+            repoLink: 'https://github.com/JoshHaywood/esports-center',
             heading: 'The Esports Center',
             textFirst: 'Statistics tracking group project from my second year of University.',
             textSecond: 'A project I lead as project leader, looking into the rise of Esports.',

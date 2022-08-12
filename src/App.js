@@ -148,7 +148,7 @@ function App() {
               heading={'Arduino Unity Project'}
 
               projectLink={'/error'}
-              repoLink={'/error'}
+              repoLink={'https://github.com/JoshHaywood/arduino-project'}
 
               overview={'This project was a to create an Arduino game controller, using electronic components of our choice and accompanying Unity game. It was part of my first year of university. Currently this project no longer viewable as the repository this project was stored on has been closed. It helped me further my knowledge with Unity as well as an introduction to Arduino and its Unity plugin called Udunio. Additionally this projects other assignment gave me my first attempt at a technical poster, based around the Arduino project.'}
               projectImage={'../Images/unity-thumbnail.webp'}
@@ -182,8 +182,8 @@ function App() {
             <Project
               heading={'Student Survival Store'}
 
-              projectLink={'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store'}
-              repoLink={'https://github.falmouth.ac.uk/LW254830/Student-Survival-Store'}
+              projectLink={'/error'}
+              repoLink={'https://github.com/JoshHaywood/student-survival-store'}
 
               overview={'This was a group project in my second year of university and was centered around a business that provided a subscription based box of student related supplies. My role was front-end development as well as documentation handling. I maintained our teams agile approach by documenting each stand-ups notes, targets, target status and any issues that occurred for that week. This project was my first time using React and therefore my development less substantial than normal but I did components like the mobile header and implemented the user profile modal.'}
               projectImage={'../Images/student-survival-store-index.webp'}
@@ -217,8 +217,8 @@ function App() {
             <Project
               heading={'One Messaging'}
 
-              projectLink={'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2'}
-              repoLink={'https://github.falmouth.ac.uk/JH248828/2005220_Comp260-A1-A2'}
+              projectLink={'/error'}
+              repoLink={'https://github.com/JoshHaywood/one-messaging'}
 
               overview={'This was an individual project in my second year of university. This project was centered around creating a distributed system, with a distributed system being an application distributed across multiple systems, as the name suggests. A technical poster detailing the project we wished to create also had to be provided along with a structured report, documenting the creation of the project. The project I decided to create was a realtime messaging app.'}
               projectImage={'../Images/one-messaging-login-thumbnail.webp'}
@@ -252,8 +252,8 @@ function App() {
             <Project
               heading={'The Esports Center'}
 
-              projectLink={'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center'}
-              repoLink={'https://github.falmouth.ac.uk/JH248828/Web220_A2-eSports-Center'}
+              projectLink={'/error'}
+              repoLink={'https://github.com/JoshHaywood/esports-center'}
 
               overview={'This was a group project in my second year with the same team as the Student Survival Store project. Similarly to that project the Esports Center was first presented through a business plan with my team pitches their own ideas, with my own pitch being the Esports Center. A statistics tracking website centered around the sporting genre Esports, the competitive play of video games. My own role being front-end development and design and documentation'}
               projectImage={'../Images/esports-center-hero-thumbnail.webp'}
@@ -342,7 +342,7 @@ function App() {
 
         <Route path='/error' element={<Message
           heading={'This project has been removed'}
-          message={'Unfortunately the source code or build for this project is no longer available'}
+          message={`Unfortunately the source code live site aren't available.`}
           redirect={-1}
         />} />
       </Routes>
