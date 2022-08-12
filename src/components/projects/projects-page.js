@@ -10,7 +10,7 @@ export default function Projects(props) {
         {
             cardPath: '/projects/portfolio', 
             projectLink: 'https://www.joshhaywood-portfolio.com/',
-            repoLink: 'https://github.com/El-Goblino/portfolio-website',
+            repoLink: 'https://github.com/JoshHaywood/portfolio-website',
             heading: 'Portfolio Website',
             textFirst: `My website showcasing projects i've created as well as a hub for marketing and contact.`,
             textSecond: 'Specifically, my first version of the portfolio site and how ive adapted the project since then.',
@@ -60,7 +60,7 @@ export default function Projects(props) {
         {
             cardPath: '/projects/game-review', 
             projectLink: 'https://game-review-application.herokuapp.com/',
-            repoLink: 'https://github.com/El-Goblino/game-review-app',
+            repoLink: 'https://github.com/JoshHaywood/game-review-app',
             heading: 'Game Review',
             textFirst: 'A web project for reviewing recently released video games.',
             textSecond: 'Targeted at improving my knowledge of functional based React and web design.',

@@ -113,7 +113,7 @@ function App() {
               heading={'Portfolio'}
 
               projectLink={'https://www.joshhaywood-portfolio.com/'}
-              repoLink={'https://github.com/El-Goblino/portfolio-website'}
+              repoLink={'https://github.com/JoshHaywood/portfolio-website'}
 
               overview={`This project was a website I can use as a marketing tool to showcase my relevant experience and various projects i've undertaken. In order demonstrate my range of abilities to potential employers or to people of interest and to serve as a hub for my various social profiles whether on Github, Linkedin or Email. Please note that this article covers the initial creation of the Handlebars Express version of this project. The current version now uses React, therefore this article covers the reasoning for the project itself and various changes i've made.`}
               projectImage={'../Images/portfolio-thumbnail.webp'}
@@ -288,7 +288,7 @@ function App() {
               heading={'Game Review Project'}
               
               projectLink={'https://game-review-application.herokuapp.com/'}
-              repoLink={'https://github.com/El-Goblino/game-review-app'}
+              repoLink={'https://github.com/JoshHaywood/game-review-app'}
 
               overview={'This was a side project I worked on aimed at creating a reviewing website where I could review video games of my choice.'}
               projectImage={'../Images/reviews-thumbnail.webp'}

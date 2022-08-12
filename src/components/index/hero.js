@@ -72,7 +72,7 @@ export default function Hero(props) {
                     animate="visible"
                     transition={{ duration: 0.5, delay: props.textDelay, ease: "easeInOut" }}
                 >
-                    <a href="https://github.com/El-Goblino/">  
+                    <a href="https://github.com/JoshHaywood/">  
                         <div className="flex pr-[1.4rem] sm:pr-0">
                             <Button
                                 sx={{
