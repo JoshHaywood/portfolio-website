@@ -76,7 +76,7 @@ This branch contains:
 
 ### User Guide
 
-1. Firstly download the correct build if you haven’t already from [GitHub](https://github.com/El-Goblino/portfolio-website.)
+1. Firstly download the correct build if you haven’t already from [GitHub](https://github.com/JoshHaywood/portfolio-website)
 Builds are found on the 'main' branch under the 'builds' folder with the highest number collectively in the format '0.0.0' being the latest build.
 
 2. If you have downloaded the optional repository browser clone the repository and pull.
