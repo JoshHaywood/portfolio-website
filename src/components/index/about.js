@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 
 export default function About() {
     const items = [
-        {text: 'HTML - 3 years'},
-        {text: 'CSS - 3 years'},
-        {text: 'Client side JavaScript - 6 months'},
-        {text: 'Handlebars - 6 months'},
-        {text: 'Node.js  - 6 months'},
-        {text: 'Express.js  - 6 months'},
-        {text: 'C#.net and Unity C# - 18 months'},
-        {text: 'C++ - 18 months'},
-        {text: 'Unity - 18 months'},
+        {text: 'HTML'},
+        {text: 'CSS'},
+        {text: 'JavaScript'},
+        {text: 'Tailwind'},
+        {text: 'Node.js'},
+        {text: 'React'},
+        {text: 'Material UI'},
+        {text: 'Git'},
+        {text: 'Heroku'},
     ];
 
     return (
@@ -44,7 +44,7 @@ export default function About() {
                         Recently I've been focused on learning React, Material UI and marketing myself using online tools like this portfolio site.
                     </p>
 
-                    <h6 className="text-gray-400">Technologies I have experience using:</h6>
+                    <h6 className="text-gray-400">Technologies I have been using recently</h6>
                     <div className="flex justify-between">
                         <ul>
                             {/* Maps first three objects */}
