@@ -9,7 +9,7 @@ export default function Message(props) {
         <div className="flex flex-col text-center justify-center h-screen space-y-10 mx-5">
             <h1 className="text-white text-6xl font-semibold">{props.heading}</h1>
 
-            <h5>{props.message}</h5>
+            <h2 className="text-xl">{props.message}</h2>
 
             <Button
                 onClick={() => {navigate(props.redirect); document.documentElement.scrollTop = 0}}

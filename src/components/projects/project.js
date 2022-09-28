@@ -55,7 +55,7 @@ export default function Project(props) {
                     {/* Features list */}
                     <div className="py-10 md:flex space-y-10 items md:space-y-0 md:space-x-10 border-y-2 border-primary">
                         <div className="space-y-10 w-3/4 md:w-full mx-auto md:mx-0">
-                            <h3 className="font-medium text-center md:text-left">Features</h3>
+                            <h2 className="font-medium text-3xl text-center md:text-left">Features</h2>
                             <ul className="space-y-10">
                                 {features.map((features) =>
                                     <li className="list-disc marker:text-primary ml-4 text-2xl align-right ">{features}</li>
@@ -64,7 +64,7 @@ export default function Project(props) {
                         </div>
 
                         <div className="space-y-10 w-3/4 md:w-full mx-auto md:mx-0">
-                            <h3 className="font-medium text-center md:text-left">Structure</h3>
+                            <h3 className="font-medium text-3xl text-center md:text-left">Structure</h3>
                             <ul className="space-y-10">
                                 {structure.map((structure) =>
                                     <li className="list-disc marker:text-primary ml-4 text-2xl">{structure}</li>
@@ -74,21 +74,21 @@ export default function Project(props) {
                     </div>
 
                     <div className="space-y-3">
-                        <h3 className="font-semibold text-center md:text-left">Target</h3>
+                        <h4 className="font-semibold text-3xl text-center md:text-left">Target</h4>
                         <p>{props.target}</p>
                     </div>
 
                     <img className="mx-auto rounded-sm" src={props.targetImage} alt="Image of project"></img>
 
                     <div className="space-y-3">
-                        <h3 className="font-semibold text-center md:text-left">Issues</h3>
+                        <h5 className="font-semibold text-3xl text-center md:text-left">Issues</h5>
                         <p>{props.issues}</p>
                     </div>
 
                     <img className="mx-auto rounded-sm" src={props.issuesImage} alt="Image of project"></img>
 
                     <div className="space-y-3">
-                        <h3 className="font-semibold text-center md:text-left">Resolutions</h3>
+                        <h6 className="font-semibold text-3xl text-center md:text-left">Resolutions</h6>
                         <p>{props.resolutions}</p>
                     </div>
 

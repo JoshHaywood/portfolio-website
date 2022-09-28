@@ -8,7 +8,7 @@ export default function Contact() {
         <> 
             {/* Heading */}
             <div className="pb-12 md:pb-14 pt-4 md:pt-0 space-y-3 mx-auto"> 
-                <h2 className="font-semibold text-center">Contact</h2>
+                <h1 className="font-semibold text-4xl text-center">Contact</h1>
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
 

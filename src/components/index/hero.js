@@ -43,7 +43,7 @@ export default function Hero(props) {
                     >
                         Josh Haywood
                     </motion.h1>
-                    <motion.h1 
+                    <motion.h2
                         className="md:text-5xl lg:text-6xl font-semibold text-gray-400"
                         variants={heroVariants}
                         initial="hidden"
@@ -51,7 +51,7 @@ export default function Hero(props) {
                         transition={{ duration: 0.5, delay: props.headingTwoDelay, ease: "easeInOut" }}
                     >
                         An aspiring web developer
-                    </motion.h1>
+                    </motion.h2>
                     <motion.p 
                         className="text-xl max-w-[500px]"
                         variants={heroVariants}

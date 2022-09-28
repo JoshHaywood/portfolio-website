@@ -64,7 +64,7 @@ export default function App() {
 
                                 {/* Overlay text */}
                                 <div className="absolute z-20 top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center w-3/4 mx-auto space-y-5">
-                                    <h4 className="font-semibold">{items.heading}</h4>
+                                    <h2 className="font-semibold text-2xl">{items.heading}</h2>
                                     <p>{items.text}</p>
                                     <Link to={items.link}>
                                         <Button

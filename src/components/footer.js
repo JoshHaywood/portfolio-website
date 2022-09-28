@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="items-center md:items-end flex flex-col md:flex-row md:justify-between py-4">
           {/* Pages column */}
           <div className="flex flex-col text-center md:text-left space-y-1"> 
-              <h5 className="text-white font-medium">Pages</h5>
+              <h1 className="text-white text-xl font-medium">Pages</h1>
               {pagesColumn.map((item) => (
                 <Link className="hover:underline" to={item.path}>{item.name}</Link>
               ))}
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Projects columns */}
           <div className="items-center md:items-start flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
-            <h5 className="text-white font-medium">Projects</h5>
+            <h2 className="text-white text-xl font-medium">Projects</h2>
             {/* Maps first 3 entries */}
             {projectsColumn.map((item, index) => 
               index < 3 && (
