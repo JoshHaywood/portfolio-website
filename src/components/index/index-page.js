@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 
 import Hero from './hero';
+import Skills from './skills';
 import About from './about';
 import Projects from './projects';
 import Contact from '../contact';
@@ -35,6 +36,10 @@ export default function Index(props) {
                         />
                     )}
                 </>
+
+                <div className="px-5 sm:px-10 mx-auto max-w-[1000px]">
+                    <Skills />
+                </div>
                 
                 <div className="px-5 sm:px-10 mx-auto max-w-[1000px]"> {/* Multiple parents created to not alter absolute of background elements */}
                     <About />
