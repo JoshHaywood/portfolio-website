@@ -27,26 +27,26 @@ export default function Skills() {
         <div>
             {/* Heading */}
             <div className="space-y-3 mx-auto">
-                <h1 className="font-semibold text-4xl text-center">Skills</h1>
+                <h2 className="font-semibold text-4xl text-center">Skills</h2>
                 <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>
 
             {/* Cards */}
             <div className="flex flex-col md:flex-row md:w-full items-center md:items-start mt-[4rem] space-y-5 md:space-y-0 md:space-x-5">
                 {items.map((items, index) => index != 1 && (
-                    <div className="w-[350px] h-[366px] md:h-[423px] lg:h-[366px] bg-tertiary border-b-2 border-primary space-y-3 hover:-translate-y-4 transition duration-300 ease-in-out">
+                    <div className="w-[350px] h-[366px] md:h-[423px] lg:h-[366px] bg-tertiary border-b-2 border-primary rounded-sm space-y-3 hover:-translate-y-4 transition duration-300 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="h-24 w-24 my-5 mx-auto fill-primary">
                             <path d={items.path}/>
                         </svg>
                         
-                        <h1 className="px-5 text-2xl font-medium">{items.heading}</h1>
+                        <h3 className="px-5 text-2xl font-medium">{items.heading}</h3>
                         <p className="px-5 pb-10 text-gray-400">{items.text}</p>
                     </div>  
                 ))}
 
                 {/* SVG wasnt aligning correctly so required unique styling */}
                 {items.map((items, index) => index === 1 && (
-                    <div className="w-[350px] h-[366px] md:h-[423px] lg:h-[366px] bg-tertiary border-b-2 border-primary hover:-translate-y-4 transition duration-300 ease-in-out">
+                    <div className="w-[350px] h-[366px] md:h-[423px] lg:h-[366px] bg-tertiary border-b-2 border-primary rounded-sm hover:-translate-y-4 transition duration-300 ease-in-out">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" className="h-28 w-28 mt-5 mb-1 pl-5 mx-auto fill-primary">
                             <path d={items.path}/>
                         </svg>

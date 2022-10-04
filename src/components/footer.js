@@ -20,10 +20,10 @@ export default function Footer() {
   return (
 		<footer className="bg-tertiary">
       <div className="px-16 max-w-[1000px] mx-auto">
-        <div className="items-center md:items-end flex flex-col md:flex-row md:justify-between py-4">
+        <div className="items-center md:items-end flex flex-col md:flex-row md:justify-between pt-5 pb-4">
           {/* Pages column */}
           <div className="flex flex-col text-center md:text-left space-y-1"> 
-              <h1 className="text-white text-xl font-medium">Pages</h1>
+              <h4 className="text-xl font-medium">Pages</h4>
               {pagesColumn.map((item) => (
                 <Link className="hover:underline" to={item.path}>{item.name}</Link>
               ))}
@@ -32,7 +32,7 @@ export default function Footer() {
 
           {/* Projects columns */}
           <div className="items-center md:items-start flex flex-col text-center md:text-left mt-1 md:mt-0 space-y-1"> 
-            <h2 className="text-white text-xl font-medium">Projects</h2>
+            <h4 className="text-xl font-medium">Projects</h4>
             {/* Maps first 3 entries */}
             {projectsColumn.map((item, index) => 
               index < 3 && (
@@ -53,11 +53,11 @@ export default function Footer() {
 
         {/* Footnote */}
         <div className="flex py-2 justify-between border-t-2 border-primary">
-          <a className="text-white hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
+          <a className="hover:text-primary" href="https://www.joshhaywood-portfolio.com/">© Josh Haywood {new Date().getFullYear()}</a>
 
           <div id="backToTop" className="flex flex-row space-x-1 items-center"> {/* Container used in place of span as CSS doesnt effect span correctly */}
-            <button className="text-white" onClick={() => {document.documentElement.scrollTop = 0}}>Back To Top</button>
-            <p className="text-white">↑</p>
+            <button onClick={() => {document.documentElement.scrollTop = 0}}>Back To Top</button>
+            <p>↑</p>
           </div>
         </div>
       </div>

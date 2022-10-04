@@ -25,26 +25,26 @@ export default function Hero(props) {
             <div className="absolute max-w-[1000px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
                 {/* Text */}
                 <div className="space-y-3 md:space-y-6"> {/* Prevents text being effected by flex */}
-                    <motion.h3 
-                        className="text-primary"
+                    <motion.h1
+                        className="text-primary text-3xl"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
                         transition={{ duration: 0.5, delay: props.taglineDelay, ease: "easeInOut" }}
                     >
                         Hi, my name is
-                    </motion.h3>
-                    <motion.h1 
-                        className="md:text-5xl lg:text-6xl font-semibold"
+                    </motion.h1>
+                    <motion.h2
+                        className="block md:text-5xl lg:text-6xl font-semibold"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"
                         transition={{ duration: 0.5, delay: props.headingOneDelay, ease: "easeInOut" }}
                     >
                         Josh Haywood
-                    </motion.h1>
+                    </motion.h2>
                     <motion.h2
-                        className="md:text-5xl lg:text-6xl font-semibold text-gray-400"
+                        className="block md:text-5xl lg:text-6xl font-semibold text-gray-400"
                         variants={heroVariants}
                         initial="hidden"
                         animate="visible"

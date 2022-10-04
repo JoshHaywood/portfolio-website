@@ -18,7 +18,9 @@ export default function ContactPage(props) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: props.delay, ease: 'easeInOut' }}
             >
-                <Contact />
+                <Contact
+                    heading={<h1 className="font-semibold text-4xl text-center">Contact</h1>}
+                />
             </motion.div>
         </>
     )

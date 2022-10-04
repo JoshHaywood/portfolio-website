@@ -17,7 +17,7 @@ export default function About() {
     return (
         //Animation
         <motion.div 
-            className="space-y-12 pt-8" 
+            className="space-y-12" 
             initial= {{ opacity: 0, y: '5%' }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
@@ -25,12 +25,12 @@ export default function About() {
         >
             {/* Heading */}
             <div className="space-y-3 mx-auto">
-                <h1 className="font-semibold text-4xl text-center">About Me</h1>
+                <h2 className="font-semibold text-4xl text-center">About Me</h2>
                 <div className="w-24 h-1 bg-primary mx-auto"></div>
             </div>
 
             {/* Text */}
-            <div className="flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0 pb-10 sm:pb-0"> 
+            <div className="flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0"> 
                 <div className="flex flex-col space-y-4 w-100% md:w-3/5 leading-7">
                     <p>
                         I’m a student from Devon, England. 
@@ -44,7 +44,7 @@ export default function About() {
                         Recently I've been focused on learning React, Material UI and marketing myself using online tools like this portfolio site.
                     </p>
 
-                    <h6 className="text-gray-400">Technologies I have been using recently</h6>
+                    <span className="text-gray-400">Technologies I have been using recently</span>
                     <div className="flex justify-between">
                         <ul>
                             {/* Maps first three objects */}

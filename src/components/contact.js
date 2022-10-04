@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
-export default function Contact() {
+export default function Contact(props) {
     return (
         <> 
             {/* Heading */}
-            <div className="pb-12 md:pb-14 pt-4 md:pt-0 space-y-3 mx-auto"> 
-                <h1 className="font-semibold text-4xl text-center">Contact</h1>
+            <div className="pb-12 md:pb-14 space-y-3 mx-auto"> 
+                {props.heading}
                 <div className="w-20 h-1 bg-primary mx-auto"></div>
             </div>
 

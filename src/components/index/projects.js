@@ -157,10 +157,10 @@ export default function Projects() {
     };
 
     return (
-        <div className="max-w-[1000px] mx-auto pt-20 md:pt-16 xl:pt-36 pb-12 md:pb-20 xl:pb-40"> 
+        <> 
             {/* Heading */}
             <div className="space-y-3 mx-auto"> 
-                <h1 className="font-semibold text-4xl text-center">Featured Projects</h1>
+                <h2 className="font-semibold text-4xl text-center">Featured Projects</h2>
                 <div className="w-48 h-1 bg-primary mx-auto"></div>
             </div>
 
@@ -238,8 +238,8 @@ export default function Projects() {
                             </Link> 
                         </motion.div>
                     )
-                )};
-            </>
-        </div>
+                )}
+            </>  
+        </>
     )
 }
