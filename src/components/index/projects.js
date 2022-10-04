@@ -184,8 +184,8 @@ export default function Projects() {
                                         {/* Text card */}
                                         <motion.div className="flex flex-col items-start md:items-end z-20 max-w-[600px] md:w-2/5 mx-5 pb-5 absolute md:static">
                                             <motion.div variants={rightCardVariants}>
-                                                <h6 className="text-primary">{items.tagline}</h6>
-                                                <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
+                                                <p className="text-primary">{items.tagline}</p>
+                                                <h3 className="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">{items.heading}</h3>
 
                                                 <p className="bg-none md:bg-quaternary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
                                                     {items.text}
@@ -213,8 +213,8 @@ export default function Projects() {
                                     {/* Text card */}
                                     <motion.div variants={textVariants} className="flex flex-col items-start z-20 max-w-[600px] md:w-2/5 mx-5 pb-5 absolute md:static">
                                         <motion.div variants={leftCardVariants}>
-                                            <h6 className="text-primary">{items.tagline}</h6>
-                                            <h4 className="mb-5 font-semibold text-primary-text">{items.heading}</h4>
+                                            <p className="text-primary">{items.tagline}</p>
+                                            <h3 className="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">{items.heading}</h3>
 
                                             <p className="bg-none md:bg-quaternary text-left md:pl-5 pr-10 sm:pt-5 pb-5 md:-mr-32 shadow-md hover:shadow-lg rounded-sm text-gray-300">
                                                 {items.text}
