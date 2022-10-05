@@ -25,6 +25,7 @@ export default function Index(props) {
                             headingOneDelay = {0.7}
                             headingTwoDelay = {0.9}
                             textDelay = {1.1}
+                            scrollButtonDelay = {1.3}
                         />
                     ) : (
                         /* Else increase delay to match load time */
@@ -33,6 +34,7 @@ export default function Index(props) {
                             headingOneDelay = {3.5}
                             headingTwoDelay = {3.7}
                             textDelay = {4.1}
+                            scrollButtonDelay = {4.3}
                         />
                     )}
                 </>
