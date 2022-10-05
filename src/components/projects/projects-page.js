@@ -12,8 +12,8 @@ export default function Projects(props) {
             projectLink: 'https://www.joshhaywood-portfolio.com/',
             repoLink: 'https://github.com/JoshHaywood/portfolio-website',
             heading: 'Portfolio Website',
-            textFirst: `My website showcasing projects i've created as well as a hub for marketing and contact.`,
-            textSecond: 'Specifically, my first version of the portfolio site and how ive adapted the project since then.',
+            textFirst: `My website showcasing projects I've created as well as a hub for marketing and contact.`,
+            textSecond: `Specifically, my first version of the portfolio site and how I've adapted the project since then.`,
             link: '/projects/portfolio'
         },
     

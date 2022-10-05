@@ -8,7 +8,7 @@ export default function Projects() {
             imageSrc: '../Images/portfolio-thumbnail.webp',
             tagline: 'Personal Site',
             heading: 'Portfolio Website',
-            text: `My website showcasing projects i've created as well as a hub for marketing and contact. Specifically, my first version of the portfolio site and how ive adapted the project since then.`,
+            text: `My website showcasing projects I've created as well as a hub for marketing and contact. Specifically, my first version of the portfolio site and how Ive adapted the project since then.`,
             link: '/projects/portfolio',
             list: 'Handlebars/React ExpressJS CSS/Tailwind',
         },

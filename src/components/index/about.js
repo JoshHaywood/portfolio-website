@@ -33,15 +33,13 @@ export default function About() {
             <div className="flex flex-col md:flex-row md:justify-evenly items-center md:items-start md:space-x-10 space-y-[4rem] md:space-y-0"> 
                 <div className="flex flex-col space-y-4 w-100% md:w-3/5 leading-7">
                     <p>
-                        I’m a student from Devon, England. 
-                        Currently studying a BSC in Web Development.
-                        My interest for Web Development came from my educational background.
-                        Studying Information Technologies and later Computer Software. 
+                        I’m a student from Devon, England currently studying a BSC in Web Development.
+                        My interest for Web Development came from my educational background, studying Information Technologies and later Computer Software. 
                     </p>
 
                     <p>
-                        My main interests are in front-end or user interface development and design. 
-                        Recently I've been focused on learning React, Material UI and marketing myself using online tools like this portfolio site.
+                        My main interests are in front-end, full stack or user interface development and design. 
+                        Recently I've been focused on learning React, Sass, Azure including marketing myself using my portfolio site and CV.
                     </p>
 
                     <span className="text-gray-400">Technologies I have been using recently</span>
