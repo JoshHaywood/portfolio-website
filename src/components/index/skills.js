@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default function Skills() {
     {/* SVG Attributions: 
@@ -24,7 +25,12 @@ export default function Skills() {
     ];
 
     return (
-        <div>
+        <motion.div
+            initial= {{ opacity: 0, y: '5%' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease: 'easeInOut' }}
+            viewport={{ once: true }}
+        >
             {/* Heading */}
             <div className="space-y-3 mx-auto">
                 <h2 className="font-semibold text-4xl text-center">Skills</h2>
@@ -58,6 +64,6 @@ export default function Skills() {
 
 
             </div>
-        </div>
+        </motion.div>
     );
 };
