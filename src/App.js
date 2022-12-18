@@ -3,10 +3,10 @@ import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import LoadingScreen from './components/loading';
+import LoadingScreen from './components/utils/loading';
 import Header from './components/header';
 import Footer from './components/footer';
-import Message from './components/message';
+import Message from './pages/message';
 import Index from './pages';
 import Projects from './pages/projects';
 import ContactPage from './pages/contact';
