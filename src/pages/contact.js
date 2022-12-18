@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import { motion } from 'framer-motion';
 
-import Contact from './contact';
+import Contact from '../components/contact';
 
 export default function ContactPage(props) {
     return (

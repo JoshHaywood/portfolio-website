@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Slider from './slider';
+import Slider from '../components/projects/slider';
 
 export default function Projects(props) {
     const items = [

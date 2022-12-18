@@ -7,10 +7,10 @@ import LoadingScreen from './components/loading';
 import Header from './components/header';
 import Footer from './components/footer';
 import Message from './components/message';
-import Index from './components/index/index-page';
-import Projects from './components/projects/projects-page';
-import ContactPage from './components/contact-page';
-import Project from './components/projects/project';
+import Index from './pages';
+import Projects from './pages/projects';
+import ContactPage from './pages/contact';
+import Project from './pages/projectDetailed';
 
 function App() {
   const [loading, setLoading] = useState(true);
