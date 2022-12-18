@@ -16,7 +16,7 @@ export default function Index(props) {
                 <title>Josh Haywood | Portfolio</title>
             </Helmet>
 
-            <div className="-mt-5 -mb-6"> {/* Prevent header and footer gaps */}
+            <div class="-mt-5 -mb-6"> {/* Prevent header and footer gaps */}
                 <>
                     {hasLoaded ? (
                         /* If loading screen has already been completed reduce delay */
@@ -39,20 +39,20 @@ export default function Index(props) {
                     )}
                 </>
 
-                <div className="space-y-32 md:space-y-48 xl:space-y-56 mt-20 sm:mt-28 mb-36 md:mb-56 lg:mb-64">
-                    <div className="px-5 sm:px-10 mx-auto max-w-[1000px]">
+                <div class="space-y-32 md:space-y-48 xl:space-y-56 mt-20 sm:mt-28 mb-36 md:mb-56 lg:mb-64">
+                    <div class="px-5 sm:px-10 mx-auto max-w-[1000px]">
                         <Skills />
                     </div>
                     
-                    <div className="px-5 sm:px-10 mx-auto max-w-[1000px]"> {/* Multiple parents created to not alter absolute of background elements */}
+                    <div class="px-5 sm:px-10 mx-auto max-w-[1000px]"> {/* Multiple parents created to not alter absolute of background elements */}
                         <About />
                     </div>
-                    <div className="px-5 sm:px-10 mx-auto max-w-[1100px]"> {/* Allows background to exceed width */}
+                    <div class="px-5 sm:px-10 mx-auto max-w-[1100px]"> {/* Allows background to exceed width */}
                         <Projects />                    
                     </div>
-                    <div className="px-10 md:px-0 max-w-[650px] mx-auto">
+                    <div class="px-10 md:px-0 max-w-[650px] mx-auto">
                         <Contact 
-                            heading={<h2 className="font-semibold text-4xl text-center">Contact</h2>}
+                            heading={<h2 class="font-semibold text-4xl text-center">Contact</h2>}
                         />
                     </div>
                 </div>

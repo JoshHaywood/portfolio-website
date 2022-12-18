@@ -6,10 +6,10 @@ export default function Message(props) {
     const navigate = useNavigate();
 
     return (
-        <div className="flex flex-col text-center justify-center h-screen space-y-10 mx-5">
-            <h1 className="text-white text-6xl font-semibold">{props.heading}</h1>
+        <div class="flex flex-col text-center justify-center h-screen space-y-10 mx-5">
+            <h1 class="text-white text-6xl font-semibold">{props.heading}</h1>
 
-            <h2 className="text-xl">{props.message}</h2>
+            <h2 class="text-xl">{props.message}</h2>
 
             <Button
                 onClick={() => {navigate(props.redirect); document.documentElement.scrollTop = 0}}

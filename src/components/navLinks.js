@@ -14,12 +14,11 @@ export default function NavLinks(props) {
   const setSidebar = props.setSidebar;
 
   const isMobile = window.innerWidth < 768;
-  var containerVariants = {};
-  var listVariants = {};
+  let containerVariants = {};
+  let listVariants = {};
 
   // If not mobile, set animation variants
   if (!isMobile) {
-    //Animation Variants
     containerVariants = {
       hidden: {},
       visible: {

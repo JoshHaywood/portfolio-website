@@ -13,13 +13,13 @@ export default function ContactPage(props) {
             
             {/* Form */}
             <motion.div 
-                className="py-32 md:py-44 px-10 flex flex-col justify-center max-w-[650px] mx-auto"
+                class="py-32 md:py-44 px-10 flex flex-col justify-center max-w-[650px] mx-auto"
                 initial= {{ opacity: 0, y: '5%' }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: props.delay, ease: 'easeInOut' }}
             >
                 <Contact
-                    heading={<h1 className="font-semibold text-4xl text-center">Contact</h1>}
+                    heading={<h1 class="font-semibold text-4xl text-center">Contact</h1>}
                 />
             </motion.div>
         </>

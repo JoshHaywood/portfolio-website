@@ -7,9 +7,9 @@ export default function Contact(props) {
     return (
         <> 
             {/* Heading */}
-            <div className="pb-12 md:pb-14 space-y-3 mx-auto"> 
+            <div class="pb-12 md:pb-14 space-y-3 mx-auto"> 
                 {props.heading}
-                <div className="w-20 h-1 bg-primary mx-auto"></div>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
 
             <motion.form 

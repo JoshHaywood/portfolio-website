@@ -29,7 +29,7 @@ export default function Header() {
     <>
       {/* Overlay */}
       <div
-        className={`${
+        class={`${
           sidebar
             ? `z-50 h-screen w-screen fixed bg-black opacity-60 backdrop-blur`
             : `hidden`
@@ -40,7 +40,7 @@ export default function Header() {
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{duration: 0.1, delay: 2.8}}
-        className={`${
+        class={`${
           sidebar || scrolled ? `bg-tertiary` : `bg-none`
         } w-full h-[75px] fixed top-0 sm:px-5 flex justify-between items-center z-50 backdrop-blur`}
       >
@@ -54,9 +54,9 @@ export default function Header() {
           class="w-[260px] h-auto px-2 pr-0 sm:pr-2 hover:cursor-pointer"
         ></img>
 
-        <div className="flex items-center mb-1">
+        <div class="flex items-center mb-1">
           {/* Hamburger menu */}
-          <div className="md:hidden mb-0.5 z-10">
+          <div class="md:hidden mb-0.5 z-10">
             <Hamburger
               color="#ffffff"
               easing="ease-in-out"

@@ -1,9 +1,9 @@
-import React from "react"
-import ReactDOM from "react-dom"
-import { BrowserRouter } from "react-router-dom"
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
-import ScrollTop from "./components/utils/scrollTop"
-import App from "./App"
+import ScrollTop from "./components/utils/scrollTop";
+import App from "./App";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -13,4 +13,4 @@ ReactDOM.render(
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
-)
+);

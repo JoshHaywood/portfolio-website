@@ -37,13 +37,13 @@ const properties = {
     infinite: true,
     canSwipe: true,
 
-    prevArrow: <div className="w-[10px] md:w-[20px] -mr-[10px] sm:mr-[5px] z-50" role="button" aria-label="Previous arrow"> 
+    prevArrow: <div class="w-[10px] md:w-[20px] -mr-[10px] sm:mr-[5px] z-50" role="button" aria-label="Previous arrow"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="white"> {/* Attribution: https://fontawesome.com/icons/angle-left?s=solid */}
                         <path d="M192 448c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25l160-160c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L77.25 256l137.4 137.4c12.5 12.5 12.5 32.75 0 45.25C208.4 444.9 200.2 448 192 448z"/>
                     </svg>
                 </div>,
 
-    nextArrow: <div className="w-[10px] md:w-[20px] -ml-[10px] sm:ml-[5px] z-50" role="button" aria-label="Next arrow"> 
+    nextArrow: <div class="w-[10px] md:w-[20px] -ml-[10px] sm:ml-[5px] z-50" role="button" aria-label="Next arrow"> 
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" fill="white"> {/* Attribution: https://fontawesome.com/icons/angle-right?s=solid */}
                         <path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/>
                     </svg>
@@ -53,18 +53,18 @@ const properties = {
 
 export default function App() {
     return (
-        <div className="max-w-[900px] mx-auto">
-            <Slide {...properties} easing="ease" className="hidden sm:block">
+        <div class="max-w-[900px] mx-auto">
+            <Slide {...properties} easing="ease" class="hidden sm:block">
                     {slideImages.map((items, index) => {
                         return (
                             //Individual slide
-                            <Link className="relative text-center" to={items.path} id="slide" aria-hidden="false">
-                                <img className="brightness-[40%]" src={items.slide} alt="Image of project in slideshow"></img>
-                                <div className="absolute opacity-20 brightness-[40%] bg-primary left-0 right-0 top-0 bottom-0 z-10"></div> {/* Image overlay to avoid using background images */}
+                            <Link class="relative text-center" to={items.path} id="slide" aria-hidden="false">
+                                <img class="brightness-[40%]" src={items.slide} alt="Image of project in slideshow"></img>
+                                <div class="absolute opacity-20 brightness-[40%] bg-primary left-0 right-0 top-0 bottom-0 z-10"></div> {/* Image overlay to avoid using background images */}
 
                                 {/* Overlay text */}
-                                <div className="absolute z-20 top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center w-3/4 mx-auto space-y-5">
-                                    <h2 className="font-semibold text-2xl">{items.heading}</h2>
+                                <div class="absolute z-20 top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center w-3/4 mx-auto space-y-5">
+                                    <h2 class="font-semibold text-2xl">{items.heading}</h2>
                                     <p>{items.text}</p>
                                     <Link to={items.link}>
                                         <Button
