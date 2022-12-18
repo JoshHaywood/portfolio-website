@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 import Button from '@mui/material/Button';
 
-import Pdf from '../files/cv.pdf';
-
 export default function Header() {
   const links = [
     {id: 'homeLink', name: 'Home', path: '/'},
@@ -131,7 +129,7 @@ export default function Header() {
             className="md:mr-3"
           >
             <Button
-                href={Pdf} 
+                href={`${process.env.PUBLIC_URL}/documents/cv.pdf`} 
                 target="_blank"
                 sx={{
                         border: '2px solid #4c6bc1',
