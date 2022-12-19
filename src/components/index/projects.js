@@ -152,8 +152,8 @@ export default function Projects() {
               <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">Portfolio Website</h3>
 
               <p class="bg-none md:bg-quaternary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 md:shadow-md md:rounded-sm text-gray-300">
-                My website showcasing projects I've created as well as a hub for marketing and contact.
-                Specifically, my first version of the portfolio site and how Ive adapted the project since then.
+                My website showcasing projects I have created and serves as a hub for marketing and contact.
+                The includes my first version of the portfolio site and how I have adapted the project since then.
               </p>
             </motion.div>
 
@@ -190,8 +190,7 @@ export default function Projects() {
             <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">One messaging project</h3>
 
             <p class="bg-none md:bg-quaternary md:px-5 sm:pt-5 pb-5 md:-mr-32 md:shadow-md md:rounded-sm text-gray-300">
-              A realtime messaging app I made in my second year of University.
-              This was project portion of my research into the advancement web communication systems.
+              A real-time messaging app during my second year of university as part of a research project on the advancement of web communication systems.
             </p>
           </motion.div>
 

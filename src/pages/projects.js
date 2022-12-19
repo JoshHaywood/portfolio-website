@@ -10,8 +10,8 @@ const projectCards = [
     projectLink: 'https://www.joshhaywood-portfolio.com/',
     repoLink: 'https://github.com/JoshHaywood/portfolio-website',
     heading: 'Portfolio Website',
-    textFirst: `My website showcasing projects I've created as well as a hub for marketing and contact.`,
-    textSecond: `Specifically, my first version of the portfolio site and how I've adapted the project since then.`,
+    textFirst: `A website showcasing the projects I have created and serves as a hub for marketing and contact.`,
+    textSecond: `The project includes my first version of the portfolio site and how I have adapted the project since then.`,
     link: '/projects/portfolio',
   },
   {
@@ -19,10 +19,8 @@ const projectCards = [
     projectLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/arduino-project',
     heading: 'Arduino Unity Project',
-    textFirst:
-      'An arduino game and controller I made in my first year of University.',
-    textSecond:
-      'This was my introduction into how psychical components can interact with game engines.',
+    textFirst: 'An Arduino game and controller during my first year of university.',
+    textSecond: 'This project introduced me to the concept of using physical components to interact with game engines.',
     link: '/projects/arduino',
   },
   {
@@ -30,10 +28,8 @@ const projectCards = [
     projectLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/student-survival-store',
     heading: 'Student Survival Store',
-    textFirst:
-      'Software as a service group project from my second year of University.',
-    textSecond:
-      'A group project based around a monthly subscription based product service.',
+    textFirst: 'A group project I participated in during my second year of university that involved creating a software as a service (SaaS) product.',
+    textSecond: 'The project was based on a monthly subscription model for a product or service.',
     link: '/projects/student-survival-store',
   },
   {
@@ -41,10 +37,8 @@ const projectCards = [
     projectLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/one-messaging',
     heading: 'One Messaging Project',
-    textFirst:
-      'A realtime messaging app I made in my second year of University.',
-    textSecond:
-      'This was project portion of my research into the advancement web communication systems.',
+    textFirst: 'A real-time messaging app I made during my second year of university.',
+    textSecond: 'This project was part of my research into the advancement of web communication systems.',
     link: '/projects/one-messaging',
   },
   {
@@ -52,10 +46,8 @@ const projectCards = [
     projectLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/esports-center',
     heading: 'The Esports Center',
-    textFirst:
-      'Statistics tracking group project from my second year of University.',
-    textSecond:
-      'A project I lead as project leader, looking into the rise of Esports.',
+    textFirst: 'A group project during my second year of university that involved creating a statistics tracking tool.',
+    textSecond: 'I led the project as the project leader, investigating the rise of Esports',
     link: '/projects/esports-center',
   },
   {
@@ -64,8 +56,7 @@ const projectCards = [
     repoLink: 'https://github.com/JoshHaywood/game-review-app',
     heading: 'Game Review',
     textFirst: 'A web project for reviewing recently released video games.',
-    textSecond:
-      'Targeted at improving my knowledge of functional based React and web design.',
+    textSecond: 'The project was targeted at improving my knowledge of functional-based React and web design.',
     link: '/projects/game-review',
   },
 ];

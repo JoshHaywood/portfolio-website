@@ -51,6 +51,7 @@ export default function Hero(props) {
           >
             Hi, my name is
           </motion.h1>
+
           <motion.h2
             class="block md:text-5xl lg:text-6xl font-semibold"
             variants={heroVariants}
@@ -64,6 +65,7 @@ export default function Hero(props) {
           >
             Josh Haywood
           </motion.h2>
+
           <motion.h2
             class="block md:text-5xl lg:text-6xl font-semibold text-gray-400"
             variants={heroVariants}
@@ -77,6 +79,7 @@ export default function Hero(props) {
           >
             An aspiring web developer
           </motion.h2>
+          
           <motion.p
             class="text-xl max-w-[500px]"
             variants={heroVariants}
@@ -88,14 +91,13 @@ export default function Hero(props) {
               ease: "easeInOut",
             }}
           >
-            I'm currently a Web Development student at
+            I am currently a Web Development student at{" "}
             <a id="heroLink" href="https://www.falmouth.ac.uk/">
               <span class="font-semibold text-primary text-xl">
                 Falmouth University
               </span>
             </a>
-            in my final year of a BSC. At present i'm focused on specializing in
-            front-end development.
+            {" "}in my final year of a BSc. At present, I am focused on specializing in front-end development.
           </motion.p>
         </div>
 

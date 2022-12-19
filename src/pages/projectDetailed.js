@@ -135,10 +135,7 @@ export default function Project(props) {
           </div>
 
           <Button
-            class="text-white"
-            onClick={() => {
-              document.documentElement.scrollTop = 0;
-            }}
+            onClick={() => {document.documentElement.scrollTop = 0}}
             sx={{
               border: "2px solid #4c6bc1",
               color: "white",
