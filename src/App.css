@@ -205,7 +205,7 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-colour);
 }
 
-#backToTop:hover button, #backToTop:hover p {
+#backToTop:hover button, #backToTop:hover div {
   color: var(--primary-colour);
 }
 

@@ -88,7 +88,7 @@ export default function Hero(props) {
               ease: "easeInOut",
             }}
           >
-            I'm currently a Web Development student at{" "}
+            I'm currently a Web Development student at
             <a id="heroLink" href="https://www.falmouth.ac.uk/">
               <span class="font-semibold text-primary text-xl">
                 Falmouth University

@@ -1,30 +1,30 @@
 import { motion } from "framer-motion";
 
-export default function About() {
-  const columns = [
-    {
-      technologies: [
-        { label: 'HTML' },
-        { label: 'CSS' },
-        { label: 'JavaScript' },
-      ],
-    },
-    {
-      technologies: [
-        { label: 'Tailwind' },
-        { label: 'Node.js' },
-        { label: 'React' },
-      ],
-    },
-    {
-      technologies: [
-        { label: 'Material UI' },
-        { label: 'Git' },
-        { label: 'Heroku' },
-      ],
-    },
-  ];
+const columns = [
+  {
+    technologies: [
+      { label: 'HTML' },
+      { label: 'CSS' },
+      { label: 'JavaScript' },
+    ],
+  },
+  {
+    technologies: [
+      { label: 'Tailwind' },
+      { label: 'Node.js' },
+      { label: 'React' },
+    ],
+  },
+  {
+    technologies: [
+      { label: 'Material UI' },
+      { label: 'Git' },
+      { label: 'Heroku' },
+    ],
+  },
+];
 
+export default function About() {
   return (
     <motion.div
       initial={{ opacity: 0, y: "5%" }}
