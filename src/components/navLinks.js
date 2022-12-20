@@ -50,7 +50,7 @@ export default function NavLinks(props) {
       animate="visible"
       className={`${
         sidebar
-          ? `h-screen w-3/5 sm:w-1/2 overflow-y-scroll flex flex-col lg:flex-row absolute top-0 right-0 pt-40 pl-5 bg-tertiary shadow-md shadow-primary`
+          ? `h-screen w-[280px] sm:w-1/2 overflow-y-scroll flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row absolute top-0 right-0 pt-28 pl-5 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
           : `hidden`
       } md:flex flex-row items-center`}
     >
@@ -58,12 +58,12 @@ export default function NavLinks(props) {
         <motion.li
           variants={listVariants}
           id={link.id}
-          className="mx-3 my-5 md:my-0 md:order-2"
+          className="mx-2.5 my-5 md:my-0 md:order-2"
         >
           <Link
             to={link.path}
             onClick={() => setSidebar(false)}
-            className="text-2xl font-medium text-white hover:text-primary transition duration-300 ease-in-out"
+            className="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out"
           >
             {link.name}
           </Link>
@@ -84,10 +84,11 @@ export default function NavLinks(props) {
           href={`${process.env.PUBLIC_URL}/documents/cv.pdf`}
           target="_blank"
           sx={{
+            textTransform: "none",
             border: "2px solid #4c6bc1",
             color: "white",
             bgcolor: "rgba(76, 107, 193, 0.3)",
-            margin: "1.25rem 0",
+            margin: sidebar ? "1.25rem 0" : "0",
 
             ":hover": {
               bgcolor: "none",
