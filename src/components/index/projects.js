@@ -11,8 +11,6 @@ export default function Projects() {
   let rightCardVariants = {};
   let listVariants = {};
 
-  let textVariants = {};
-
   // Prevents animations on mobile
   if (!isMobile) {
     //Parent container that holds properties
@@ -77,11 +75,12 @@ export default function Projects() {
       },
     };
   } else {
-    imageVariants = {
-      hidden: { opacity: 0, y: "5%"},
+    containerVariants = {
+      hidden: { opacity: 0, y: "5%" },
       visible: {
         opacity: 1,
         y: 0,
+
         transition: {
           duration: 1,
           delay: 0.5,
@@ -111,7 +110,7 @@ export default function Projects() {
         transition: {
           duration: 0.5,
           delay: 1.3,
-          ease: "easeInOut",
+          ease: 'easeInOut',
         },
       },
     };
@@ -146,16 +145,14 @@ export default function Projects() {
           </motion.div>
 
           {/* Project information */}
-          <div class="p-5 sm:px-10 md:px-0 sm:py-14 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 md:text-right">
-            <motion.div variants={rightCardVariants}>
-              <p class="text-primary">Personal Site</p>
-              <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">Portfolio Website</h3>
+          <motion.div variants={rightCardVariants} class="p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 md:text-right">
+            <p class="text-primary">Personal Site</p>
+            <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">Portfolio Website</h3>
 
-              <p class="bg-none md:bg-quaternary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 md:shadow-md md:rounded-sm text-gray-300">
-                My website showcasing projects I have created and serves as a hub for marketing and contact.
-                The includes my first version of the portfolio site and how I have adapted the project since then.
-              </p>
-            </motion.div>
+            <p class="bg-none md:bg-quaternary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 md:shadow-md md:rounded-sm text-gray-300">
+              My website showcasing projects I have created and serves as a hub for marketing and contact.
+              The includes my first version of the portfolio site and how I have adapted the project since then.
+            </p>
 
             {/* Stack list */}
             <motion.ul
@@ -167,7 +164,7 @@ export default function Projects() {
               <li>NodeJS</li>
               <li>CSS/Tailwind</li>
             </motion.ul>
-          </div>
+          </motion.div>
         </motion.div>
     );
   };
@@ -184,15 +181,13 @@ export default function Projects() {
         class="relative bg-[url('../public/Images/one-messaging-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
       >
         {/* Project information */}
-        <div class="p-5 sm:px-10 md:px-0 sm:py-14 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-20 md:w-2/5">
-          <motion.div variants={leftCardVariants}>
-            <p class="text-primary">Messaging Project</p>
-            <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">One messaging project</h3>
+        <motion.div variants={leftCardVariants} class="p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-20 md:w-2/5">
+          <p class="text-primary">Messaging Project</p>
+          <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">One messaging project</h3>
 
-            <p class="bg-none md:bg-quaternary md:px-5 sm:pt-5 pb-5 md:-mr-32 md:shadow-md md:rounded-sm text-gray-300">
-              A real-time messaging app during my second year of university as part of a research project on the advancement of web communication systems.
-            </p>
-          </motion.div>
+          <p class="bg-none md:bg-quaternary md:px-5 sm:pt-5 pb-5 md:-mr-32 md:shadow-md md:rounded-sm text-gray-300">
+            A real-time messaging app during my second year of university as part of a research project on the advancement of web communication systems.
+          </p>
 
           {/* Stack list */}
           <motion.ul
@@ -205,12 +200,12 @@ export default function Projects() {
             <li>SocketIO</li>
             <li>SQLite</li>
           </motion.ul>
-        </div>
+        </motion.div>
 
         {/* Image */}
         <motion.div
-        variants={imageVariants}
-        class="hidden md:block md:w-3/5 md:relative md:overflow-hidden"
+          variants={imageVariants}
+          class="hidden md:block md:w-3/5 md:relative md:overflow-hidden"
         >
           <div class="hover:scale-105 transition duration-500 ease-in-out">
             {/* Image overlay */}

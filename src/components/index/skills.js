@@ -40,18 +40,20 @@ export default function Skills() {
         {cards.map((card, index) => (
           <div
             key={index}
-            class="w-[350px] h-[366px] md:h-[423px] bg-tertiary border-b-2 border-primary rounded-sm space-y-3 hover:-translate-y-5 transition duration-300 ease-in-out"
+            class="sm:h-[325px] md:h-[425px] lg:h-[400px] sm:w-3/4 md:w-1/3 px-5 py-10 sm:py-5 lg:py-10 space-y-8 hover:-translate-y-5 transition duration-300 ease-in-out bg-tertiary border-b-2 border-primary rounded-sm"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 512"
-              class="h-24 w-24 my-5 mx-auto fill-primary"
+              class="h-auto w-24 mb-5 sm:my-5 mx-auto fill-primary"
             >
               <path d={card.path} />
             </svg>
 
-            <h3 class="px-5 text-2xl font-medium">{card.heading}</h3>
-            <p class="px-5 pb-10 text-gray-400">{card.text}</p>
+            <div class="w-full space-y-4 md:pb-10">
+              <h3 class="text-2xl font-medium">{card.heading}</h3>
+              <p class="text-gray-400">{card.text}</p>
+            </div>
           </div>
         ))}
       </div>
