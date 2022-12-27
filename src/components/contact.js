@@ -35,6 +35,7 @@ export default function Contact() {
             class="w-full sm:w-3/5 xl:w-2/5"
           >
             <Button class="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 bg-tertiary">
+              {/* Attribution: https://fontawesome.com/icons/linkedin-in?s=&f=brands */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -54,6 +55,7 @@ export default function Contact() {
             class="w-full sm:w-3/5"
           >
             <Button class="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 bg-tertiary">
+              {/* Attribution: https://heroicons.com/ */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
