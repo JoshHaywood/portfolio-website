@@ -50,12 +50,8 @@ export default function Index(props) {
           <div class="px-5 xl:px-0 mx-auto max-w-[1100px]">
             <Projects />
           </div>
-          <div class="px-5 md:px-0 max-w-[650px] mx-auto">
-            <Contact
-              heading={
-                <h2 class="font-semibold text-4xl text-center">Contact</h2>
-              }
-            />
+          <div class="px-5 xl:px-0 mx-auto max-w-[1100px]">
+            <Contact />
           </div>
         </div>
       </div>
