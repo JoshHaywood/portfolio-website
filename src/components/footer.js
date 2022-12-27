@@ -132,7 +132,7 @@ export default function Footer() {
         {/* Footnote */}
         <div class="flex py-2 justify-between border-t border-primary">
           <a
-            class="text-gray-200 hover:text-primary"
+            class="text-sm text-gray-200 hover:text-primary"
             href="https://www.joshhaywood-portfolio.com/"
           >
             © Josh Haywood {new Date().getFullYear()}
@@ -143,7 +143,7 @@ export default function Footer() {
               onClick={() => {
                 document.documentElement.scrollTop = 0;
               }}
-              class="text-gray-200"
+              class="text-sm text-gray-200"
             >
               Back To Top
             </button>
