@@ -27,8 +27,8 @@ function App() {
   const isMobile = window.innerWidth < 640;
 
   if (loading) {
-    document.body.style.position = "fixed"; //Disables scroll bars without creating padding gap
-    document.body.addEventListener("touchmove", function (e) {e.preventDefault()}); //Prevents mobile scrolling
+    document.body.style.position = 'fixed'; //Disables scroll bars without creating padding gap
+    document.body.addEventListener('touchmove', function (e) {e.preventDefault()}); //Prevents mobile scrolling
 
     //Increased animation delay to account for loading time
     backgroundDelay = 3.3;
@@ -36,7 +36,7 @@ function App() {
     articleDelay = 4.3;
     sideMenuDelay = 4.8;
   } else {
-    document.body.style.position = "relative"; //Enables scroll bars
+    document.body.style.position = 'relative'; //Enables scroll bars
     backgroundDelay = 0.5;
     headingDelay = 1;
     articleDelay = 1.5;

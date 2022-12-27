@@ -1,8 +1,8 @@
-import { Helmet } from "react-helmet";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import Slider from "../components/projects/slider";
+import Slider from '../components/projects/slider';
 
 const projectCards = [
   {

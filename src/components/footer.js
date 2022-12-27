@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 const mediaIcons = [
   /* Attribution: https://fontawesome.com/icons/linkedin-in?s=&f=brands */

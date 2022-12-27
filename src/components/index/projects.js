@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import Heading from "../heading";
+import Heading from '../heading';
 
 export default function Projects() {
   const navigate = useNavigate();

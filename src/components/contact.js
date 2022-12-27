@@ -1,8 +1,8 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import Heading from "../components/heading";
+import Heading from '../components/heading';
 
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 export default function Contact() {
   return (
@@ -151,4 +151,4 @@ export default function Contact() {
       </motion.form>
     </div>
   );
-}
+};

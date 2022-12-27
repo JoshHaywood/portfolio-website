@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 const links = [
   { id: 'homeLink', name: 'Home', path: '/' },

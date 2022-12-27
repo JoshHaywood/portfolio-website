@@ -1,6 +1,6 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-import Heading from "../heading";
+import Heading from '../heading';
 
 const cards = [
   {

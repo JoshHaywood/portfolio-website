@@ -1,6 +1,6 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 export default function Message(props) {
   const navigate = useNavigate();

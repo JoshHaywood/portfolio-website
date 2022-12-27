@@ -1,7 +1,7 @@
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import Button from "@mui/material/Button";
+import Button from '@mui/material/Button';
 
 export default function Project(props) {
   const navigate = useNavigate();

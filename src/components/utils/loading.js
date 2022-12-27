@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { motion } from "framer-motion";
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export default function LoadingScreen() {
   useEffect(() => {
@@ -38,4 +38,4 @@ export default function LoadingScreen() {
       </motion.div>
     </motion.div>
   );
-}
+};

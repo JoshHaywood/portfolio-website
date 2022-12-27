@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import Heading from "../heading";
-import Rating from "./rating";
+import Heading from '../heading';
+import Rating from './rating';
 
 const columns = [
   {
