@@ -1,5 +1,7 @@
-import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+import Heading from "../heading";
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -225,10 +227,7 @@ export default function Projects() {
   return (
     <>
       {/* Heading */}
-      <div class="space-y-3 mx-auto">
-        <h2 class="font-semibold text-4xl text-center">Featured Projects</h2>
-        <div class="w-48 h-1 bg-primary mx-auto"></div>
-      </div>
+      <Heading heading={"Featured Projects"} />
 
       {/* Project cards */}
       <div class="mt-12 space-y-10 lg:space-y-24">

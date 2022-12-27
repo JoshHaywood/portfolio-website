@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import Heading from "../heading";
 import Rating from "./rating";
 
 const columns = [
@@ -37,15 +38,13 @@ export default function About() {
       class="space-y-12"
     >
       {/* Heading */}
-      <h2 class="inline-block relative font-semibold text-4xl tracking-wide before:w-3/5 before:absolute before:left-0 before:top-12 before:border-t-2 before:border-t-primary">
-        About Me
-      </h2>
+      <Heading heading={"About Me"} />
 
       <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-10 pb-12 md:pb-0">
         {/* Image */}
         <a
           href="https://github.com/JoshHaywood"
-          class="order-2 md:order-1 w-1/3 relative top-12 md:top-0 md:left-3 border-2 border-primary rounded-md"
+          class="order-2 md:order-1 w-1/3 relative top-12 md:top-3 md:left-3 border-2 border-primary rounded-md"
         >
           <img
             src="../Images/portrait.webp"
@@ -96,4 +95,4 @@ export default function About() {
       </div>
     </motion.div>
   );
-}
+};
