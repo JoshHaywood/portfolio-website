@@ -39,15 +39,15 @@ export default function Index(props) {
           )}
         </>
         <div class="space-y-32 md:space-y-48 xl:space-y-56 mt-20 sm:mt-28 mb-36 md:mb-56 lg:mb-64">
-          <div class="px-5 sm:px-5 mx-auto max-w-[1100px]">
+          <div class="px-5 xl:px-0 mx-auto max-w-[1100px]">
             <Skills />
           </div>
 
-          <div class="px-5 sm:px-5 mx-auto max-w-[1100px]">
+          <div class="px-5 xl:px-0 mx-auto max-w-[1100px]">
             {/* Multiple parents created to not alter absolute of background elements */}
             <About />
           </div>
-          <div class="px-5 sm:px-5 mx-auto max-w-[1100px]">
+          <div class="px-5 xl:px-0 mx-auto max-w-[1100px]">
             <Projects />
           </div>
           <div class="px-5 md:px-0 max-w-[650px] mx-auto">

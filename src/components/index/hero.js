@@ -35,7 +35,7 @@ export default function Hero(props) {
         Your browser does not support videos
       </video>
 
-      <div class="absolute max-w-[1000px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
+      <div class="absolute max-w-[1100px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
         {/* Heading text */}
         <div class="space-y-3 md:space-y-6">
           <motion.h1
