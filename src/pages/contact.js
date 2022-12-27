@@ -12,7 +12,7 @@ export default function ContactPage(props) {
 
       {/* Form */}
       <motion.div
-        class="py-32 md:py-44 px-10 flex flex-col justify-center max-w-[650px] mx-auto"
+        class="py-32 md:py-44 px-10 flex flex-col justify-center max-w-[1100px] mx-auto"
         initial={{ opacity: 0, y: "5%" }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: props.delay, ease: "easeInOut" }}
