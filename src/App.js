@@ -46,13 +46,14 @@ function App() {
   return (
     <>
       {loading === false ? ( //If not in loading state
-        <></>
+        null
       ) : (
         //Else calls loading screen
         <LoadingScreen />
       )}
-      ;
+      
       <Header />
+
       <Routes>
         <Route
           path="/"
@@ -64,7 +65,6 @@ function App() {
               ) : (
                 <Index hasLoaded={true} />
               )}
-              ;
             </>
           }
         />
@@ -86,7 +86,6 @@ function App() {
                   )}
                 </>
               )}
-              ;
             </>
           }
         />

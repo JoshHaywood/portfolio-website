@@ -1,14 +1,15 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
+
+const links = [
+  { id: 'homeLink', name: 'Home', path: '/' },
+  { id: 'projectsLink', name: 'Projects', path: '/projects' },
+  { id: 'contactLink', name: 'Contact', path: '/contact' },
+];
 
 export default function NavLinks(props) {
-  const links = [
-    { id: 'homeLink', name: 'Home', path: '/' },
-    { id: 'projectsLink', name: 'Projects', path: '/projects' },
-    { id: 'contactLink', name: 'Contact', path: '/contact' },
-  ];
 
   const sidebar = props.sidebar;
   const setSidebar = props.setSidebar;
