@@ -72,7 +72,7 @@ export default function App() {
   };
 
   return (
-    <div class="max-w-[900px] mx-auto">
+    <div class="max-w-[1100px] mx-auto">
       <Slide {...properties} easing="ease" class="hidden sm:block">
         {slideImages.map((items, index) => {
           return (
