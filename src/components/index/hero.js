@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
 
+import Particles from './particles';
+
 import Button from '@mui/material/Button';
 
 export default function Hero(props) {
@@ -22,18 +24,7 @@ export default function Hero(props) {
 
   return (
     <div class="flex flex-col justify-center relative w-full sm:h-screen min-h-[770px]">
-      {/* Background video, Attribution:https://pixabay.com/videos/circuit-electronics-digital-27725/ by motionstock */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        class="w-full flex-1 object-cover brightness-50 blur-sm"
-        src="../videos/background.mp4"
-        type="video/mp4"
-      >
-        Your browser does not support videos
-      </video>
+      <Particles />
 
       <div class="absolute max-w-[1100px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
         {/* Heading text */}
