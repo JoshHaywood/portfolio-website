@@ -127,7 +127,7 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true }}
           onClick={() => navigate("/projects/portfolio")}
-          class="relative bg-[url('../public/images/logo.png')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
+          class="relative shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Image */}
           <motion.div
@@ -180,7 +180,7 @@ export default function Projects() {
         whileInView="visible"
         viewport={{ once: true }}
         onClick={() => navigate("/projects/one-messaging")}
-        class="relative bg-[url('../public/images/one-messaging-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
+        class="relative shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
       >
         {/* Project information */}
         <motion.div variants={leftCardVariants} class="p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-20 md:w-2/5">
