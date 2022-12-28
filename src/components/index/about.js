@@ -47,7 +47,7 @@ export default function About() {
           class="order-2 md:order-1 w-1/3 relative top-12 md:top-3 md:left-3 border-2 border-primary rounded-md"
         >
           <img
-            src="../images/portrait.webp"
+            src="../Images/portrait.webp"
             alt="developer portrait"
             class="w-full rounded-md relative bottom-3 right-3 hover:bottom-0 hover:right-0 hover:cursor-pointer transition-all duration-300 ease-in-out"
           ></img>

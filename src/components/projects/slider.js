@@ -6,21 +6,21 @@ import Button from '@mui/material/Button';
 
 const slideImages = [
   {
-    slide: '../images/portfolio-thumbnail.webp',
+    slide: '../Images/portfolio-thumbnail.webp',
     heading: 'Portfolio Website',
     text: 'My website showcasing projects I have created and serves as a hub for marketing and contact. The includes my first version of the portfolio site and how I have adapted the project since then.',
     path: '/projects/portfolio',
     link: '/projects/portfolio',
   },
   {
-    slide: '../images/one-messaging-thumbnail.webp',
+    slide: '../Images/one-messaging-thumbnail.webp',
     heading: 'One Messaging',
     text: 'A real-time messaging app during my second year of university as part of a research project on the advancement of web communication systems.',
     path: '/projects/one-messaging',
     link: '/projects/one-messaging',
   },
   {
-    slide: '../images/student-survival-store-thumbnail.webp',
+    slide: '../Images/student-survival-store-thumbnail.webp',
     heading: 'Student Survival Store',
     text: 'Software as a service (SaaS) group project during my second year of university that involved creating a monthly subscription based web project.',
     path: '/projects/student-survival-store',
@@ -89,7 +89,7 @@ export default function App() {
                 alt="Image of project in slideshow"
               ></img>
               <div class="absolute opacity-20 brightness-[40%] bg-primary left-0 right-0 top-0 bottom-0 z-10"></div>
-              {/* Image overlay to avoid using background images */}
+              {/* Image overlay to avoid using background Images */}
               {/* Overlay text */}
               <div class="absolute z-20 top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center w-3/4 mx-auto space-y-5">
                 <h2 class="font-semibold text-2xl">{items.heading}</h2>
