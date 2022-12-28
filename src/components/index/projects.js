@@ -37,7 +37,7 @@ export default function Projects() {
     };
 
     leftCardVariants = {
-      hidden: { opacity: 0, x: "-10%" },
+      hidden: { opacity: 0, x: "-5%" },
       visible: {
         opacity: 1,
         x: 0,
@@ -51,7 +51,7 @@ export default function Projects() {
     };
 
     rightCardVariants = {
-      hidden: { opacity: 0, x: "10%" },
+      hidden: { opacity: 0, x: "5%" },
       visible: {
         opacity: 1,
         x: 0,
