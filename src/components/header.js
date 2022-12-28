@@ -31,12 +31,11 @@ export default function Header() {
   return (
     <>
       {/* Overlay */}
-      <div
-        class={`${
-          sidebar
-            ? `z-50 h-screen w-screen fixed bg-black opacity-60 backdrop-blur`
-            : `hidden`
-        }`}
+      <div class={`${
+        sidebar
+          ? `z-50 h-screen w-screen fixed bg-black opacity-60 backdrop-blur`
+          : `hidden`
+      }`}
       ></div>
 
       <motion.nav

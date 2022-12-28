@@ -6,21 +6,21 @@ import Button from '@mui/material/Button';
 
 const slideImages = [
   {
-    slide: '../Images/portfolio-thumbnail.webp',
+    slide: '../images/portfolio-thumbnail.webp',
     heading: 'Portfolio Website',
     text: 'My website showcasing projects I have created and serves as a hub for marketing and contact. The includes my first version of the portfolio site and how I have adapted the project since then.',
     path: '/projects/portfolio',
     link: '/projects/portfolio',
   },
   {
-    slide: '../Images/one-messaging-thumbnail.webp',
+    slide: '../images/one-messaging-thumbnail.webp',
     heading: 'One Messaging',
     text: 'A real-time messaging app during my second year of university as part of a research project on the advancement of web communication systems.',
     path: '/projects/one-messaging',
     link: '/projects/one-messaging',
   },
   {
-    slide: '../Images/student-survival-store-thumbnail.webp',
+    slide: '../images/student-survival-store-thumbnail.webp',
     heading: 'Student Survival Store',
     text: 'Software as a service (SaaS) group project during my second year of university that involved creating a monthly subscription based web project.',
     path: '/projects/student-survival-store',

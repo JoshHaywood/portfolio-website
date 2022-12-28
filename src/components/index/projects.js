@@ -127,7 +127,7 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true }}
           onClick={() => navigate("/projects/portfolio")}
-          class="relative bg-[url('../public/Images/portfolio-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
+          class="relative bg-[url('../public/images/portfolio-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Image */}
           <motion.div
@@ -139,7 +139,7 @@ export default function Projects() {
               <div class="absolute bg-primary w-full h-full z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
 
               <img
-                src="../Images/portfolio-thumbnail.webp"
+                src="../images/portfolio-thumbnail.webp"
                 alt="Featured project"
                 class="rounded max-w-[600px]"
               ></img>
@@ -180,7 +180,7 @@ export default function Projects() {
         whileInView="visible"
         viewport={{ once: true }}
         onClick={() => navigate("/projects/one-messaging")}
-        class="relative bg-[url('../public/Images/one-messaging-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
+        class="relative bg-[url('../public/images/one-messaging-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
       >
         {/* Project information */}
         <motion.div variants={leftCardVariants} class="p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-20 md:w-2/5">
@@ -214,7 +214,7 @@ export default function Projects() {
             <div class="absolute bg-primary w-full h-full z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
 
             <img
-              src="../Images/one-messaging-thumbnail.webp"
+              src="../images/one-messaging-thumbnail.webp"
               alt="Featured project"
               class="rounded max-w-[600px]"
             ></img>
