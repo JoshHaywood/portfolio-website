@@ -127,7 +127,7 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true }}
           onClick={() => navigate("/projects/portfolio")}
-          class="relative bg-[url('../public/images/portfolio-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
+          class="relative bg-[url('../public/images/logo.png')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Image */}
           <motion.div
