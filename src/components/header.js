@@ -42,7 +42,7 @@ export default function Header() {
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.1, delay: 2.8 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         class={`${
           sidebar || scrolled ? `bg-tertiary` : `bg-none`
         } w-full fixed top-0 py-1 sm:py-3 px-2.5 sm:px-5 flex justify-between items-center z-50 backdrop-blur`}

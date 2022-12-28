@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 const links = [
   { id: 'homeLink', name: 'Home', path: '/' },
@@ -24,7 +24,7 @@ export default function NavLinks(props) {
       hidden: {},
       visible: {
         transition: {
-          delayChildren: 3.4,
+          delayChildren: 0.6,
           staggerChildren: 0.2,
         },
       },
@@ -46,7 +46,7 @@ export default function NavLinks(props) {
   
   return (
     <motion.ul
-      variants={containerVariants}
+      variants={ containerVariants }
       initial="hidden"
       animate="visible"
       className={`${
@@ -72,11 +72,11 @@ export default function NavLinks(props) {
       ))}
 
       <motion.div
-        initial={{opacity: 0, y: "-80%"}}
-        animate={{opacity: 1, y: 0}}
+        initial={{ opacity: 0, y: "-80%" }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1,
-          delay: 2.9,
+          delay: 0.3,
           ease: "easeInOut",
         }}
         className="md:mr-3"
