@@ -12,7 +12,7 @@ export default function Particles() {
     
     const points = [];
     const amount = 320; 
-    const speed = 12;
+    const speed = 8;
     const size = 1;
     const lineWidth = 0.1;
     const connectionDistance = 225;

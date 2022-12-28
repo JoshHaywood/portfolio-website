@@ -1,10 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import Particles from './particles';
+import Particles from "./particles";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 export default function Hero(props) {
+  const isMobile = window.innerWidth < 500;
+
   //Animation Variants
   const heroVariants = {
     hidden: {
@@ -18,19 +20,19 @@ export default function Hero(props) {
   };
 
   function ScrollTo() {
-    const element = document.getElementById("scrollButton");
+    const element = document.getElementById("scrollButton"); // Scroll to element
     element.scrollIntoView();
   };
 
   return (
-    <div class="flex flex-col justify-center relative w-full sm:h-screen min-h-[770px]">
+    <div class="flex flex-col justify-center relative w-full h-screen">
+      {/* Background animation */}
       <Particles />
 
-      <div class="absolute max-w-[1100px] flex-1 left-0 right-0 mx-auto px-5 xl:px-0 z-10 space-y-6 leading-10 sm:leading-none">
+      <div class="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 z-10 space-y-5">
         {/* Heading text */}
-        <div class="space-y-3 md:space-y-6">
+        <div>
           <motion.h1
-            class="text-primary text-3xl"
             variants={heroVariants}
             initial="hidden"
             animate="visible"
@@ -39,12 +41,12 @@ export default function Hero(props) {
               delay: props.taglineDelay,
               ease: "easeInOut",
             }}
+            class="tracking-wide font-normal text-lg text-primary"
           >
             Hi, my name is
           </motion.h1>
 
           <motion.h2
-            class="block md:text-5xl lg:text-6xl font-semibold"
             variants={heroVariants}
             initial="hidden"
             animate="visible"
@@ -53,12 +55,12 @@ export default function Hero(props) {
               delay: props.headingOneDelay,
               ease: "easeInOut",
             }}
+            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold"
           >
             Josh Haywood
           </motion.h2>
 
           <motion.h2
-            class="block md:text-5xl lg:text-6xl font-semibold text-gray-400"
             variants={heroVariants}
             initial="hidden"
             animate="visible"
@@ -67,12 +69,13 @@ export default function Hero(props) {
               delay: props.headingTwoDelay,
               ease: "easeInOut",
             }}
+            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
           >
             An aspiring web developer
           </motion.h2>
-          
+
           <motion.p
-            class="text-xl max-w-[500px]"
+            class="mt-6 tracking-wide text-xl max-w-lg"
             variants={heroVariants}
             initial="hidden"
             animate="visible"
@@ -87,14 +90,17 @@ export default function Hero(props) {
               <span class="font-semibold text-primary text-xl">
                 Falmouth University
               </span>
-            </a>
-            {" "}in my final year of a BSc. At present, I am focused on specializing in front-end development.
+            </a>{" "}
+            in my final year of a BSc. At present, I am focused on specializing
+            in front-end development.
           </motion.p>
         </div>
 
         {/* Media Icons */}
         <motion.div
-          class="flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 space-x-6"
+          class={`${
+            isMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"
+          }`}
           variants={heroVariants}
           initial="hidden"
           animate="visible"
@@ -105,7 +111,7 @@ export default function Hero(props) {
           }}
         >
           <a href="https://github.com/JoshHaywood/">
-            <div class="flex pr-[1.4rem] sm:pr-0">
+            <div class="flex sm:pr-0">
               <Button
                 sx={{
                   textTransform: "none",
@@ -113,7 +119,7 @@ export default function Hero(props) {
                   border: "2px solid #181a1d",
                   backgroundColor: "#181a1d",
                   color: "white",
-                  width: "175px",
+                  width: isMobile ? "100%" : "175px",
 
                   ":hover": {
                     bgcolor: "rgba(24, 26, 29, 0.8)",
@@ -126,14 +132,14 @@ export default function Hero(props) {
           </a>
 
           <a href="https://www.linkedin.com/in/josh-haywood-b70a24233/">
-            <div class="flex pr-[2.5rem] sm:pr-0">
+            <div class="flex">
               <Button
                 sx={{
                   textTransform: "none",
                   fontSize: "1rem",
                   border: "2px solid #4c6bc1",
                   color: "white",
-                  width: "175px",
+                  width: isMobile ? "100%" : "175px",
 
                   ":hover": {
                     bgcolor: "rgba(76, 107, 193, 0.3)",

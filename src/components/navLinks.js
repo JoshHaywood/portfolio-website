@@ -24,7 +24,7 @@ export default function NavLinks(props) {
       hidden: {},
       visible: {
         transition: {
-          delayChildren: 0.6,
+          delayChildren: 0.7,
           staggerChildren: 0.2,
         },
       },
@@ -53,7 +53,7 @@ export default function NavLinks(props) {
         sidebar
           ? `h-screen w-[280px] sm:w-1/2 overflow-y-scroll flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row absolute top-0 right-0 pt-28 pl-5 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
           : `hidden`
-      } md:flex flex-row items-center`}
+      } md:flex flex-row items-center backdrop-blur`}
     >
       {links.map((link) => (
         <motion.li
@@ -76,7 +76,6 @@ export default function NavLinks(props) {
         animate={{ opacity: 1, y: 0 }}
         transition={{
           duration: 1,
-          delay: 0.3,
           ease: "easeInOut",
         }}
         className="md:mr-3"

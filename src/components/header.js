@@ -45,7 +45,7 @@ export default function Header() {
         transition={{ duration: 0.5, delay: 0.3 }}
         class={`${
           sidebar || scrolled ? `bg-tertiary` : `bg-none`
-        } w-full fixed top-0 py-1 sm:py-3 px-2.5 sm:px-5 flex justify-between items-center z-50 backdrop-blur`}
+        } w-full fixed top-0 py-1 sm:py-3 px-2.5 sm:px-5 flex justify-between items-center z-50`}
       >
         {/* Logo */}
         <img
@@ -54,7 +54,7 @@ export default function Header() {
           onMouseLeave={() => setSrc('../images/logo.png')}
           onClick={() => navigate('/')}
           alt="Logo"
-          class="w-[200px] sm:w-[250px] h-auto px-2 pr-0 sm:pr-2 hover:cursor-pointer"
+          class="w-[200px] sm:w-[250px] h-auto px-2 pr-0 sm:pr-2 backdrop-blur hover:cursor-pointer"
         ></img>
 
         <div class="flex items-center mb-1">
