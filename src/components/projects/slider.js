@@ -87,7 +87,7 @@ export default function App() {
               <img
                 class="brightness-[40%]"
                 src={items.slide}
-                alt="Image of project in slideshow"
+                alt="Slide of project in slideshow"
               ></img>
               <div class="absolute opacity-20 brightness-[40%] bg-primary left-0 right-0 top-0 bottom-0 z-10"></div>
               {/* Image overlay to avoid using background Images */}

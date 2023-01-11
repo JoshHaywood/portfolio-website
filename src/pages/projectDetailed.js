@@ -25,8 +25,9 @@ export default function Project(props) {
           >
             <div class="absolute bg-primary w-full h-full z-10 md:h-[40vh] md:w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
             <img
-              class="max-w-[640px] sm:max-w-[760px] md:hidden"
               src={props.projectImage}
+              alt="project background"
+              class="max-w-[640px] sm:max-w-[760px] md:hidden"
             ></img>
 
             {/* Replace img with background image to cover screen whilst maintaining aspect ratio */}
@@ -111,7 +112,7 @@ export default function Project(props) {
           <img
             class="mx-auto rounded-sm"
             src={props.targetImage}
-            alt="Image of project"
+            alt="Project target"
           ></img>
 
           <div class="space-y-3">
@@ -124,7 +125,7 @@ export default function Project(props) {
           <img
             class="mx-auto rounded-sm"
             src={props.issuesImage}
-            alt="Image of project"
+            alt="Project issue"
           ></img>
 
           <div class="space-y-3">
