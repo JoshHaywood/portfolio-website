@@ -10,7 +10,7 @@ export default function Project(props) {
   const structure = props.structure;
   return (
     <>
-      <div class="relative flex flex-col justify-center mt-[51px]">
+      <div class="relative flex flex-col justify-center mt-[70px]">
         {/* Background Image */}
         <div class="overflow-hidden w-[screen]">
           {/* Container to prevent overflow */}

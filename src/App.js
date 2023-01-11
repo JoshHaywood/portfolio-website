@@ -11,18 +11,12 @@ import ContactPage from "./pages/contact";
 import Project from "./pages/projectDetailed";
 
 function App() {
-  let backgroundDelay;
-  let headingDelay;
-  let articleDelay;
-  let sideMenuDelay;
-
   const isMobile = window.innerWidth < 640;
 
-  document.body.style.position = "relative"; //Enables scroll bars
-  backgroundDelay = 0.5;
-  headingDelay = 1;
-  articleDelay = 1.5;
-  sideMenuDelay = 2;
+  const backgroundDelay = 0.3;
+  const headingDelay = 0.6;
+  const articleDelay = 0.9;
+  const sideMenuDelay = 1.2;
 
   return (
     <>
