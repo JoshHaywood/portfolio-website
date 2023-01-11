@@ -90,7 +90,7 @@ export default function Footer() {
                       aria-label={icon.label}
                     >
                       <svg
-                        class="w-5 h-5 fill-gray-200 transition-colors duration-300 hover:fill-primary"
+                        class="w-4 h-4 fill-gray-400 transition-colors duration-300 hover:fill-primary"
                         xmlns="http://www.w3.org/2000/svg"
                         stroke-width="1.5"
                         stroke="currentColor"
@@ -109,7 +109,7 @@ export default function Footer() {
               <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
                 {columns.map((column, index) => (
                   <div key={index} class={column.containerStyle}>
-                    <h4 class="text-base font-bold text-gray-200">
+                    <h4 class="text-base font-bold text-gray-300">
                       {column.heading}
                     </h4>
 
@@ -133,7 +133,7 @@ export default function Footer() {
         {/* Footnote */}
         <div class="flex py-2 justify-between border-t border-primary">
           <a
-            class="text-sm text-gray-200 hover:text-primary"
+            class="text-sm text-gray-300 hover:text-primary"
             href="https://www.joshhaywood-portfolio.com/"
           >
             © Josh Haywood {new Date().getFullYear()}
@@ -144,11 +144,11 @@ export default function Footer() {
               onClick={() => {
                 document.documentElement.scrollTop = 0;
               }}
-              class="text-sm text-gray-200"
+              class="text-sm text-gray-300"
             >
               Back To Top
             </button>
-            <div class="text-gray-200">↑</div>
+            <div class="text-gray-300">↑</div>
           </div>
         </div>
       </div>
