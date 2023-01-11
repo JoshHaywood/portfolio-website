@@ -6,7 +6,7 @@ import About from "../components/index/about";
 import Projects from "../components/index/projects";
 import Contact from "../components/contact";
 
-export default function Index(props) {
+export default function Index() {
   return (
     <>
       <Helmet>

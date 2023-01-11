@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-import Heading from '../heading';
-import Rating from './rating';
+import Heading from "../heading";
+import Rating from "./rating";
 
 const columns = [
   {
@@ -56,21 +56,36 @@ export default function About() {
         {/* Background information */}
         <div class="order-1 md:order-2 flex flex-col space-y-4 w-full md:w-2/3 leading-7">
           <p>
-            I am a student at <a href="https://www.falmouth.ac.uk" class="font-semibold text-primary hover:underline">Falmouth University</a> from Devon, England studying
-            for a BSc in Web Development. My main interests lie in front-end,
-            full-stack, and user interface development and design. I have
-            recently been focusing on creating React and Node.js applications
-            hosted on the cloud, as well as marketing myself through my
-            portfolio site and CV.
+            I am a student at{" "}
+            <a
+              href="https://www.falmouth.ac.uk"
+              class="font-semibold text-primary hover:underline"
+            >
+              Falmouth University
+            </a>{" "}
+            from Devon, England studying for a BSc in Web Development. My main
+            interests lie in front-end, full-stack, and user interface
+            development and design. I have recently been focusing on creating
+            React and Node.js applications hosted on the cloud, as well as
+            marketing myself through my portfolio site and CV.
           </p>
 
           <p>
             I make use of the latest web development trends and technologies,
             and I am always looking for new ways to improve my skills. One of my
-            standout achievements is creating an <Link to="#" class="font-semibold text-primary hover:underline">e-commerce site</Link> as part of a
-            mixed-method study into UX and UI design, and creating a <Link to="projects/one-messaging" class="font-semibold text-primary hover:underline">real-time
-            messaging system</Link>, both of which received high praise from my peers
-            and instructors.
+            standout achievements is creating an{" "}
+            <Link to="#" class="font-semibold text-primary hover:underline">
+              e-commerce site
+            </Link>{" "}
+            as part of a mixed-method study into UX and UI design, and creating
+            a{" "}
+            <Link
+              to="projects/one-messaging"
+              class="font-semibold text-primary hover:underline"
+            >
+              real-time messaging system
+            </Link>
+            , both of which received high praise from my peers and instructors.
           </p>
 
           {/* Technologies list */}
