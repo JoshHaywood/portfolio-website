@@ -30,7 +30,7 @@ export default function Projects() {
 
         transition: {
           duration: 0.5,
-          delay: 0.5,
+          delay: 0.3,
           ease: "easeInOut",
         },
       },
@@ -44,7 +44,7 @@ export default function Projects() {
 
         transition: {
           duration: 0.5,
-          delay: 1.3,
+          delay: 1.1,
           ease: "easeInOut",
         },
       },
@@ -58,7 +58,7 @@ export default function Projects() {
 
         transition: {
           duration: 0.5,
-          delay: 1.3,
+          delay: 1.1,
           ease: "easeInOut",
         },
       },
@@ -71,7 +71,7 @@ export default function Projects() {
 
         transition: {
           duration: 0.5,
-          delay: 1.8,
+          delay: 1.5,
           ease: "easeInOut",
         },
       },
@@ -85,7 +85,7 @@ export default function Projects() {
 
         transition: {
           duration: 1,
-          delay: 0.5,
+          delay: 0.3,
           ease: "easeInOut",
         },
       },
@@ -98,7 +98,7 @@ export default function Projects() {
 
         transition: {
           duration: 0.5,
-          delay: 1.3,
+          delay: 1.1,
           ease: "easeInOut",
         },
       },
@@ -111,7 +111,7 @@ export default function Projects() {
 
         transition: {
           duration: 0.5,
-          delay: 1.3,
+          delay: 1.1,
           ease: 'easeInOut',
         },
       },

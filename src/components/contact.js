@@ -1,12 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import Heading from '../components/heading';
+import Heading from "../components/heading";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 export default function Contact() {
   return (
-    <div class="flex flex-col lg:flex-row space-y-16 lg:space-y-0 lg:space-x-10">
+    <motion.div
+      initial={{ opacity: 0, y: "5%" }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
+      viewport={{ once: true }}
+      class="flex flex-col lg:flex-row space-y-16 lg:space-y-0 lg:space-x-10"
+    >
       <div class="w-full lg:w-[55%]">
         {/* Heading */}
         <Heading heading="Contact" />
@@ -50,10 +56,7 @@ export default function Contact() {
             </Button>
           </a>
 
-          <a
-            href="mailto:joshhaywood025@gmail.com"
-            class="w-full sm:w-3/5"
-          >
+          <a href="mailto:joshhaywood025@gmail.com" class="w-full sm:w-3/5">
             <Button class="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 bg-tertiary">
               {/* Attribution: https://heroicons.com/ */}
               <svg
@@ -80,14 +83,10 @@ export default function Contact() {
       </div>
 
       {/* Form */}
-      <motion.form
+      <form
         className="w-full lg:w-3/5 flex flex-col"
         action="https://formsubmit.co/joshhaywood025@gmail.com"
         method="POST"
-        initial={{ opacity: 0, y: "5%" }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.5, ease: "easeInOut" }}
-        viewport={{ once: true }}
       >
         <div class="mb-4">
           <label class="block mb-2 text-sm font-bold text-white">Name</label>
@@ -148,7 +147,7 @@ export default function Contact() {
         >
           Submit
         </Button>
-      </motion.form>
-    </div>
+      </form>
+    </motion.div>
   );
-};
+}

@@ -36,9 +36,9 @@ function App() {
           element={
             /* If mobile reduce child delay to sync animations */
             isMobile ? (
-              <Projects containerDelay={0.5} childDelay={0.5} />
+              <Projects containerDelay={0.3} childDelay={0.3} />
             ) : (
-              <Projects containerDelay={0.5} childDelay={1} />
+              <Projects containerDelay={0.3} childDelay={0.6} />
             )
           }
         />
