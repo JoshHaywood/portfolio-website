@@ -10,8 +10,6 @@ import ContactPage from "./pages/contact";
 import Project from "./pages/projectDetailed";
 
 function App() {
-  const isMobile = window.innerWidth < 640;
-
   const backgroundDelay = 0.3;
   const headingDelay = 0.6;
   const articleDelay = 0.9;
