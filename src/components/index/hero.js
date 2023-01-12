@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import Particles from "./particles";
+import Particles from "./Particles";
 
 import Button from "@mui/material/Button";
 

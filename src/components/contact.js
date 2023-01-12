@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import Heading from "../components/heading";
+import Heading from "./Heading";
 
 import Button from "@mui/material/Button";
 

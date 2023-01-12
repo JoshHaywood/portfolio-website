@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import Heading from "../heading";
-import ProjectCards from "../projects/projectCards";
+import Heading from "../Heading";
+import ProjectCards from "../projects/ProjectCards";
 
 export default function Projects() {
   const navigate = useNavigate();

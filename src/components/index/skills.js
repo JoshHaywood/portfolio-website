@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import Heading from "../heading";
+import Heading from "../Heading";
 import linkHandler from "../utils/linkHandler";
 
 const cards = [

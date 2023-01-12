@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { Squash as Hamburger } from "hamburger-react";
 
-import NavLinks from "./navLinks";
+import NavLinks from "./NavLinks";
 
 export default function Header() {
   const navigate = useNavigate();
