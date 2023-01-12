@@ -1,10 +1,10 @@
 import { Helmet } from "react-helmet";
 
-import Hero from "../components/index/hero";
-import Skills from "../components/index/skills";
-import About from "../components/index/about";
-import Projects from "../components/index/projects";
-import Contact from "../components/contact";
+import Hero from "../components/index/Hero";
+import Skills from "../components/index/Skills";
+import About from "../components/index/About";
+import Projects from "../components/index/Projects";
+import Contact from "../components/Contact";
 
 export default function Index() {
   return (

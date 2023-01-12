@@ -2,12 +2,12 @@ import { Routes, Route } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import "./App.css";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import Message from "./pages/message";
-import Index from "./pages";
-import ContactPage from "./pages/contact";
-import Project from "./pages/projectDetailed";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Message from "./pages/Message";
+import Index from "./pages/Index";
+import ContactPage from "./pages/Contact";
+import Project from "./pages/ProjectDetailed";
 
 function App() {
   const backgroundDelay = 0.3;
