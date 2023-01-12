@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Heading from "../heading";
+import ProjectCards from "../projects/projectCards";
 
 export default function Projects() {
   const navigate = useNavigate();
@@ -242,6 +243,9 @@ export default function Projects() {
       <div class="mt-12 space-y-10 lg:space-y-24">
         <AlignedRightCard />
         <AlignedLeftCard />
+
+        {/* If mobile reduce child delay to sync animations */}
+        <ProjectCards />
       </div>
     </>
   );

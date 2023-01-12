@@ -6,7 +6,6 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import Message from "./pages/message";
 import Index from "./pages";
-import Projects from "./pages/projects";
 import ContactPage from "./pages/contact";
 import Project from "./pages/projectDetailed";
 
@@ -24,18 +23,6 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Index />} />
-
-        <Route
-          path="/projects"
-          element={
-            /* If mobile reduce child delay to sync animations */
-            isMobile ? (
-              <Projects containerDelay={0.3} childDelay={0.3} />
-            ) : (
-              <Projects containerDelay={0.3} childDelay={0.6} />
-            )
-          }
-        />
 
         {
           //#region Projects
