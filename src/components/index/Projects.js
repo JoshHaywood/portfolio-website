@@ -113,7 +113,7 @@ export default function Projects() {
         },
       },
     };
-  }
+  };
 
   // Right aligned card
   function AlignedRightCard() {
@@ -172,7 +172,7 @@ export default function Projects() {
         </motion.div>
       </motion.div>
     );
-  }
+  };
 
   // Left aligned card
   function AlignedLeftCard() {
@@ -232,19 +232,19 @@ export default function Projects() {
         </motion.div>
       </motion.div>
     );
-  }
+  };
 
   return (
     <>
       {/* Heading */}
       <Heading heading={"Featured Projects"} />
 
-      {/* Project cards */}
       <div class="mt-12 space-y-10 lg:space-y-24">
+        {/* Featured project */}
         <AlignedRightCard />
         <AlignedLeftCard />
 
-        {/* If mobile reduce child delay to sync animations */}
+        {/* Project cards */}
         <ProjectCards />
       </div>
     </>

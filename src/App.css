@@ -159,21 +159,8 @@ input::placeholder, textarea::placeholder {
   background-size: 100% 1px;
 }
 
-#projectCard:hover h5 {
+#projectCard:hover h4 {
   color: var(--primary-colour);
-}
-
-#slide:hover h4, #slide:hover div, #slide:hover p {
-  transition-duration: 300ms;
-  transition-timing-function: ease-in-out;
-}
-
-#slide:hover div {
-  filter: brightness(100%);
-}
-
-#slide:hover p {
-  color: #ffffff;
 }
 
 #backToTop:hover p:nth-child(2) {
