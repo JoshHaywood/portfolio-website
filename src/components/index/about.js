@@ -2,33 +2,35 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Heading from "../heading";
-import Rating from "./rating";
+import linkHandler from "../utils/linkHandler";
 
-const columns = [
+const technologies = [
   {
-    technologies: [
-      { label: 'HTML', rating: 4 },
-      { label: 'SASS', rating: 3 },
-      { label: 'JavaScript', rating: 4 },
+    listColumn: [
+      { label: 'HTML' },
+      { label: 'SASS' },
+      { label: 'JavaScript' },
     ],
   },
   {
-    technologies: [
-      { label: 'TailwindCSS', rating: 4 },
-      { label: 'Node.js', rating: 4 },
-      { label: 'React', rating: 4 },
+    listColumn: [
+      { label: 'TailwindCSS' },
+      { label: 'Node.js' },
+      { label: 'React' },
     ],
   },
   {
-    technologies: [
-      { label: 'Axios', rating: 4 },
-      { label: 'Express', rating: 4 },
-      { label: 'Heroku', rating: 3 },
+    listColumn: [
+      { label: 'Axios' },
+      { label: 'Express' },
+      { label: 'Heroku' },
     ],
   },
 ];
 
 export default function About() {
+  const isSmallMobile = window.innerWidth < 450;
+
   return (
     <motion.div
       initial={{ opacity: 0, y: "5%" }}
@@ -40,21 +42,9 @@ export default function About() {
       {/* Heading */}
       <Heading heading={"About Me"} />
 
-      <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-10 pb-12 md:pb-0">
-        {/* Image */}
-        <a
-          href="https://github.com/JoshHaywood"
-          class="order-2 md:order-1 w-1/3 relative top-12 md:top-3 md:left-3 border-2 border-primary rounded-md"
-        >
-          <img
-            src="../Images/portrait.webp"
-            alt="developer portrait"
-            class="w-full rounded-md relative bottom-3 right-3 hover:bottom-0 hover:right-0 hover:cursor-pointer transition-all duration-300 ease-in-out"
-          ></img>
-        </a>
-
+      <div class="flex flex-col md:flex-row justify-between items-center md:items-start md:space-x-10 pb-12 md:pb-0">
         {/* Background information */}
-        <div class="order-1 md:order-2 flex flex-col space-y-4 w-full md:w-2/3 leading-7">
+        <div class="flex flex-col space-y-4 w-full md:w-2/3 leading-7">
           <p>
             I am a student at{" "}
             <a
@@ -89,24 +79,43 @@ export default function About() {
           </p>
 
           {/* Technologies list */}
-          <p class="text-gray-400">Technologies I have been using recently:</p>
+          <p class="font-normal text-gray-400">
+            Technologies I have been using recently:
+          </p>
 
-          <div class="grid grid-cols-3 gap-10 bg-tertiary px-5 pb-5">
-            {columns.map((column, index) => (
+          <div class={`${
+              isSmallMobile ? "grid-cols-1 gap-4" : "grid-cols-3 gap-10"
+            } grid bg-tertiary px-5 pb-5`}
+          >
+            {technologies.map((column, index) => (
               <ul key={index}>
-                {column.technologies.map((technology, index) => (
-                  <li key={index}>
-                    <div class="mt-5 mb-1 text-sm text-white">
-                      {technology.label}
+                {column.listColumn.map((technology, index) => (
+                  <li key={index} class="flex flex-row mt-5 mb-1 space-x-2.5">
+                    <div class="overflow-hidden inline-block mt-[0.175rem]">
+                      <div class="h-2 w-2 bg-primary rotate-45 transform origin-top-left"></div>
                     </div>
 
-                    <Rating rating={technology.rating} />
+                    <span class="text-sm font-normal text-gray-400">
+                      {technology.label}
+                    </span>
                   </li>
                 ))}
               </ul>
             ))}
           </div>
         </div>
+
+        {/* Developer picture */}
+        <a
+          onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood")} 
+          class="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded"
+        >
+          <img
+            src="../Images/portrait.webp"
+            alt="developer portrait"
+            class="w-full rounded relative bottom-3 right-3 hover:bottom-0 hover:right-0 hover:cursor-pointer transition-all duration-300 ease-in-out"
+          ></img>
+        </a>
       </div>
     </motion.div>
   );

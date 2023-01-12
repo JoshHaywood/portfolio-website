@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import Heading from "../heading";
+import linkHandler from "../utils/linkHandler";
 
 const cards = [
   {
@@ -27,11 +28,6 @@ const cards = [
 ];
 
 export default function Skills() {
-  const handleClick = (event) => {
-    event.preventDefault();
-    window.open('https://github.com/JoshHaywood?tab=repositories', '_blank');
-  };
-
   return (
     <motion.div
       initial={{ opacity: 0, y: "5%" }}
@@ -59,7 +55,7 @@ export default function Skills() {
 
             <a 
               href="#" 
-              onClick={handleClick} 
+              onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood?tab=repositories")} 
               rel="noopener" 
               class="w-full"
             >
@@ -69,7 +65,7 @@ export default function Skills() {
 
             <a
               href="#"
-              onClick={handleClick}
+              onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood?tab=repositories")} 
               rel="noopener"
               class="text-sm text-gray-600 absolute bottom-8 hover:underline"
             >
