@@ -15,42 +15,22 @@ export default function Header() {
   const isMobile = window.innerWidth < 640;
   const isntDesktop = window.innerWidth < 768;
 
-  const [backgroundColor, setBackgroundColor] = useState('transparent');
-
   useEffect(() => {
-      //Scroll handler
-      const handleScroll = () => {
+    //Scroll handler
+    const handleScroll = () => {
         const currentScrollY = window.scrollY; //Current scroll position
         //If user scrolls down
         if (currentScrollY > lastScrollY) {
-          setScrolled(true);
-
-          //If user is not at the top of the page
-          if (currentScrollY > 0) {
-            setBackgroundColor('#15171a');
-          }
+            setScrolled(true);
           //Else user scrolls up
         } else {
-          setScrolled(false);
-
-          //If at user is at the top of the page
-          if (currentScrollY === 0) {
-            setBackgroundColor('transparent');
-          }
+            setScrolled(false);
         }
         setLastScrollY(currentScrollY); //Set last scroll position to current
-      };
-      
-      window.addEventListener('scroll', handleScroll);
-      return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
-  
-
-useEffect(() => {
-  if (window.scrollY === 0) {
-    setScrolled(false);
-  }
-}, [window.scrollY]);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+}, [lastScrollY]);
 
   return (
     <>
@@ -64,10 +44,10 @@ useEffect(() => {
       ></div>
 
       <motion.nav
-        initial={{ y: '0%', backgroundColor: backgroundColor }}
-        animate={{ y: scrolled ? '-100%' : '0%', backgroundColor: backgroundColor }}
+        initial={{ y: '0%' }}
+        animate={{ y: scrolled ? '-100%' : '0%' }}
         transition={{ duration: 0.5, delay: 0.3 }}
-        class="w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 backdrop-blur"
+        class="w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 bg-transparent backdrop-blur"
       >
         {/* Logo */}
         <img
