@@ -27,6 +27,11 @@ const cards = [
 ];
 
 export default function Skills() {
+  const handleClick = (event) => {
+    event.preventDefault();
+    window.open('https://github.com/JoshHaywood?tab=repositories', '_blank');
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: "5%" }}
@@ -52,8 +57,10 @@ export default function Skills() {
               <path d={card.path} />
             </svg>
 
-            <a
-              href="https://github.com/JoshHaywood?tab=repositories"
+            <a 
+              href="#" 
+              onClick={handleClick} 
+              rel="noopener" 
               class="w-full"
             >
               <h3 class="text-xl font-medium">{card.heading}</h3>
@@ -61,7 +68,9 @@ export default function Skills() {
             </a>
 
             <a
-              href="https://github.com/JoshHaywood?tab=repositories"
+              href="#"
+              onClick={handleClick}
+              rel="noopener"
               class="text-sm text-gray-600 absolute bottom-8 hover:underline"
             >
               {card.projectNumber}+ projects

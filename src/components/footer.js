@@ -86,7 +86,7 @@ export default function Footer() {
                     <Link
                       to={icon.path}
                       key={index}
-                      class="mx-2 "
+                      class="mx-2"
                       aria-label={icon.label}
                     >
                       <svg
