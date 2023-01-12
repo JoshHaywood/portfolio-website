@@ -46,7 +46,7 @@ export default function Header() {
       <motion.nav
         initial={{ y: '0%' }}
         animate={{ y: scrolled ? '-100%' : '0%' }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.3 }}
         class="w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 bg-transparent backdrop-blur"
       >
         {/* Logo */}
