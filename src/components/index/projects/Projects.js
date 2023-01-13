@@ -172,8 +172,8 @@ export default function Projects() {
 
             {/* Media links */}
             <div class="flex flex-row mt-5 md:justify-end space-x-2.5">
-              <GithubLink link="https://github.com/JoshHaywood/portfolio-website" />
-              <DeployLink link="https://www.joshhaywood-portfolio.com/" />
+              <GithubLink link="https://github.com/JoshHaywood/portfolio-website" width="1.25rem" height="1.25rem" />
+              <DeployLink link="https://www.joshhaywood-portfolio.com/" width="1.25rem" height="1.25rem" />
             </div>
           </motion.div>
         </motion.div>
@@ -220,7 +220,7 @@ export default function Projects() {
 
             {/* Media links */}
             <div class="mt-5">
-              <GithubLink link="https://github.com/JoshHaywood/one-messaging" />
+              <GithubLink link="https://github.com/JoshHaywood/one-messaging" width="1.25rem" height="1.25rem" />
             </div>
           </motion.div>
         </motion.div>

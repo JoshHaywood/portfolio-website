@@ -206,11 +206,8 @@ export default function ProjectCards() {
 
                     {/* Media links */}
                     <div class="flex flex-row items-center space-x-2">
-                      {/* Github link */}
-                      <GithubLink link={card.repoLink} />
-
-                      {/* Live project link */}
-                      <DeployLink link={card.projectLink} />
+                      <GithubLink link={card.repoLink} width="1.25rem" height="1.25rem" />
+                      <DeployLink link={card.projectLink} width="1.25rem" height="1.25rem" />
                     </div>
                   </div>
 

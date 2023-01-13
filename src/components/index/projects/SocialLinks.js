@@ -9,7 +9,9 @@ export function GithubLink(props) {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 496 512"
         alt="Github logo"
-        class="h-5 w-5 text-gray-400 hover:text-primary transition duration-300 ease-in-out"
+        width={props.width}
+        height={props.height}
+        class="text-gray-400 hover:text-primary transition duration-300 ease-in-out"
       >
         <path
           fill="currentColor"
@@ -33,7 +35,9 @@ export function DeployLink(props) {
         viewBox="0 0 24 24"
         stroke-width="2"
         stroke="currentColor"
-        class="h-5 w-5 text-gray-400 hover:text-primary transition duration-300 ease-in-out"
+        width={props.width}
+        height={props.height}
+        class="text-gray-400 hover:text-primary transition duration-300 ease-in-out"
       >
         <path
           stroke-linecap="round"

@@ -13,7 +13,7 @@ const projects = [
     path: '/projects/portfolio',
     title: 'Projects | Portfolio',
     heading: 'Portfolio',
-    projectLink: 'https://www.joshhaywood-portfolio.com/',
+    deployLink: 'https://www.joshhaywood-portfolio.com/',
     repoLink: 'https://github.com/JoshHaywood/portfolio-website',
     overview: 'This project was a website that I created to use as a marketing tool to showcase my relevant experience and various projects that I have undertaken. The goal was to demonstrate my range of abilities to potential employers or people of interest, and to serve as a hub for my various social profiles on Github, LinkedIn, and email.',
     projectImage: '../images/portfolio-thumbnail.webp',
@@ -33,7 +33,7 @@ const projects = [
     path: '/projects/arduino',
     title: 'Projects | Arduino',
     heading: 'Arduino Unity Project',
-    projectLink: '/error',
+    deployLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/arduino-project',
     overview: 'This project involved creating an Arduino game controller and accompanying Unity game as part of my first year of university. It was designed to introduce me to Arduino and its Unity plugin, Udunio, and help me improve my knowledge of Unity. I created a technical poster detailing the project and its structure, which included Unity, Arduino/Uduino, and C#.',
     projectImage: '../images/unity-thumbnail.webp',
@@ -53,7 +53,7 @@ const projects = [
     path: '/projects/student-survival-store',
     title: 'Projects | Student Survival Store',
     heading: 'Student Survival Store',
-    projectLink: '/error',
+    deployLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/student-survival-store',
     overview: "This was a group project in my second year of university that centered around a business that provided a subscription-based box of student-related supplies. My role was front-end development and documentation handling. I maintained our team's agile approach by documenting each stand-up's notes, targets, target status, and any issues that occurred for that week. This project was my first time using React, so my development was not as substantial as normal, but I did create components such as the mobile header and implemented the user profile modal.",
     projectImage: '../images/student-survival-store-index.webp',
@@ -76,7 +76,7 @@ const projects = [
     path: '/projects/one-messaging',
     title: 'Projects | One Messaging',
     heading: 'One Messaging',
-    projectLink: '/error',
+    deployLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/one-messaging',
     overview: 'This was an individual project in my second year of university that focused on creating a distributed system, which is an application that is distributed across multiple systems. In addition to creating the project, I was also required to provide a technical poster detailing the project and a structured report documenting the creation process. The project I chose to create was a real-time messaging app.',
     projectImage: '../images/one-messaging-login-thumbnail.webp',
@@ -104,7 +104,7 @@ const projects = [
     path: '/projects/esports-center',
     title: 'Projects | Esports Center',
     heading: 'The Esports Center',
-    projectLink: '/error',
+    deployLink: '/error',
     repoLink: 'https://github.com/JoshHaywood/esports-center',
     overview: 'This was a group project in my second year with the same team as the Student Survival Store project. Similarly to that project, the Esports Center was first presented through a business plan in which each team member pitched their own ideas. My own pitch was for the Esports Center, a statistics tracking website focused on the sporting genre of esports, or the competitive play of video games. My role in the project was front-end development and design, as well as documentation.',
     projectImage: '../images/esports-center-hero-thumbnail.webp',
@@ -132,7 +132,7 @@ const projects = [
     path: '/projects/game-review',
     title: 'Projects | Game Review',
     heading: 'Game Review Project',
-    projectLink: 'https://game-review-application.herokuapp.com/',
+    deployLink: 'https://game-review-application.herokuapp.com/',
     repoLink: 'https://github.com/JoshHaywood/game-review-app',
     overview: 'This was a side project I worked on aimed at creating a reviewing website where I could review video games of my choice.',
     projectImage: '../images/reviews-thumbnail.webp',
@@ -159,12 +159,6 @@ const messages = [
     message: 'The page you were looking for does not exist or has been removed.',
     redirect: -1,
   },
-  {
-    path: '/error',
-    heading: 'This project has been removed',
-    message: 'Unfortunately the source code live site are not available.',
-    redirect: -1,
-  },
 ];
 
 function App() {
@@ -186,12 +180,12 @@ function App() {
             element={
               <>
                 <Helmet>
-                  <title>Projects | Portfolio</title>
+                  <title>{project.title}</title>
                 </Helmet>
 
                 <Project
                   heading={project.heading}
-                  projectLink={project.projectLink}
+                  deployLink={project.deployLink}
                   repoLink={project.repoLink}
                   overview={project.overview}
                   projectImage={project.projectImage}
