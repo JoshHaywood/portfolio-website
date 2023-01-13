@@ -65,11 +65,16 @@ useEffect(() => {
         }`}
       ></div>
 
-<motion.nav
+      <motion.nav
         initial={{ y: '0%', backdropFilter: backdropFilter, filter: boxShadow }}
         animate={{ y: scrolled ? '-100%' : '0%', backdropFilter: backdropFilter, filter: boxShadow }}
         transition={{ duration: 0.3 }}
-        class={`w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 bg-transparent`}>
+        class={`${
+          sidebar 
+          ? ('bg-tertiary') 
+          : ('bg-transparent')
+          } w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50`}
+      >
         {/* Logo */}
         <img
           src={src}
