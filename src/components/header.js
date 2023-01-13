@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 
 export default function Header() {
   const navigate = useNavigate();
-  const [src, setSrc] = useState('../Images/logo.png');
+  const [src, setSrc] = useState('../images/logo.png');
   const [sidebar, setSidebar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -52,8 +52,8 @@ export default function Header() {
         {/* Logo */}
         <img
           src={src}
-          onMouseEnter={() => setSrc("../Images/logo-hover.png")}
-          onMouseLeave={() => setSrc("../Images/logo.png")}
+          onMouseEnter={() => setSrc("../images/logo-hover.png")}
+          onMouseLeave={() => setSrc("../images/logo.png")}
           onClick={() => navigate("/")}
           alt="Logo"
           class="w-[200px] sm:w-[250px] h-auto px-2 pr-0 sm:pr-2 backdrop-blur hover:cursor-pointer"

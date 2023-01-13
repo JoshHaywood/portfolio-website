@@ -55,7 +55,7 @@ const columns = [
 
 export default function Footer() {
   const navigate = useNavigate();
-  const [src, setSrc] = useState("../Images/logo.png");
+  const [src, setSrc] = useState("../images/logo.png");
 
   return (
     <footer class="bg-tertiary">
@@ -68,8 +68,8 @@ export default function Footer() {
                 <img
                   src={src}
                   alt="Logo"
-                  onMouseEnter={() => setSrc("../Images/logo-hover.png")}
-                  onMouseLeave={() => setSrc("../Images/logo.png")}
+                  onMouseEnter={() => setSrc("../images/logo-hover.png")}
+                  onMouseLeave={() => setSrc("../images/logo.png")}
                   onClick={() => navigate("/")}
                   class="w-[175px] h-auto mb-3 hover:cursor-pointer"
                 ></img>
