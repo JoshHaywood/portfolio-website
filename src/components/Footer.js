@@ -106,7 +106,7 @@ export default function Footer() {
               <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
                 {columns.map((column, index) => (
                   <div key={index} class={column.containerStyle}>
-                    <h4 class="mb-5 text-base font-medium text-gray-300">
+                    <h4 class="mb-4 text-base font-medium text-gray-300">
                       {column.heading}
                     </h4>
 
@@ -130,7 +130,7 @@ export default function Footer() {
         {/* Footnote */}
         <div class="flex py-5 justify-between border-t border-primary">
           <a
-            class="text-sm text-gray-300 hover:underline"
+            class="text-sm text-gray-400 hover:underline"
             href="https://www.joshhaywood-portfolio.com/"
           >
             © Josh Haywood {new Date().getFullYear()}
@@ -141,7 +141,7 @@ export default function Footer() {
             onClick={() => {document.documentElement.scrollTop = 0}} 
             class="flex flex-row space-x-1 items-center"
           >
-            <span class="text-sm text-gray-300">
+            <span class="text-sm text-gray-400">
               Back To Top
             </span>
 
@@ -155,7 +155,7 @@ export default function Footer() {
                 fill="none" 
                 transform="translate(2 2)"
                 strokeWidth="2"
-                class="stroke-gray-300 fill-none"
+                class="stroke-gray-400 fill-none"
               >
                 <circle cx="8.5" cy="8.5" r="8"/>
                 <path d="m11.5 9.5-3-3-3 3"/>
