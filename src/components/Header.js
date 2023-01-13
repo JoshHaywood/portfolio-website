@@ -7,7 +7,7 @@ import NavLinks from "./NavLinks";
 
 export default function Header() {
   const navigate = useNavigate();
-  const [src, setSrc] = useState('../Images/logo.png');
+  const [src, setSrc] = useState('../images/logo.png');
   const [sidebar, setSidebar] = useState(false);
 
   const [scrolled, setScrolled] = useState(false);
