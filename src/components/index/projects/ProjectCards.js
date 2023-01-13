@@ -185,7 +185,7 @@ export default function ProjectCards() {
               class="shadow-lg rounded bg-tertiary "
             >
               <div id="projectCard">
-                <div class="relative px-5 py-5 lg:pb-60 h-full md:h-[325px] w-full">
+                <div class="relative pt-5 pb-16 px-5 md:pb-5 lg:pb-60 h-full sm:h-[350px] md:h-[325px] w-full">
                   {/* Icons */}
                   <div class="flex justify-between pt-4">
                     {/* Project link */}
@@ -218,11 +218,12 @@ export default function ProjectCards() {
                   <Link 
                     to={card.cardPath}
                     onClick={() => {document.documentElement.scrollTop = 0}} 
-                    class="space-y-4 mt-8 mb-14 md:mb-0 lg:flex flex-col"
+                    class="space-y-4 lg:flex flex-col"
                   >
-                    <h4 class="font-semibold text-xl text-gray-200 transition duration-300 ease-in-out">
+                    <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition duration-300 ease-in-out">
                       {card.heading}
                     </h4>
+
                     <p class="text-gray-400">{card.text}</p>
                   </Link>
 

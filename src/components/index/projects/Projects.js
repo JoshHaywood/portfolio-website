@@ -9,6 +9,7 @@ export default function Projects() {
   const navigate = useNavigate();
 
   const isMobile = window.innerWidth < 768;
+  const isSmallMobile = window.innerWidth < 450;
   let { containerVariants = {}, imageVariants = {}, leftCardVariants = {}, rightCardVariants = {}, listVariants: technologiesVariants = {}} = {};
 
   // If isnt mobile add list animation
@@ -161,9 +162,9 @@ export default function Projects() {
           </p>
 
           {/* Technologies */}
-          <motion.div variants={technologiesVariants} >
+          <motion.div variants={technologiesVariants}>
             {/* Stack list */}
-            <ul class="flex flex-col flex-wrap gap-y-2 sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-5 md:justify-end md:mt-5 md:-ml-32">
+            <ul class="flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 md:justify-end md:mt-5 md:-ml-32">
               <li>Handlebars/React</li>
               <li>ExpressJS</li>
               <li>NodeJS</li>
@@ -211,7 +212,7 @@ export default function Projects() {
           {/* Technologies */}
           <motion.div variants={technologiesVariants}>
             {/* Stack list */}
-            <ul class="flex flex-col flex-wrap gap-y-2 sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-5 md:mt-5 md:-mr-32">
+            <ul class="flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 md:mt-5 md:-mr-32">
               <li>Handlebars</li>
               <li>ExpressJS</li>
               <li>NodeJS</li>
@@ -249,7 +250,14 @@ export default function Projects() {
   return (
     <>
       {/* Heading */}
-      <Heading heading={"Featured Projects"} />
+      <motion.div 
+        initial={{ opacity: 0, y: "5%" }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
+        viewport={{ once: true }}
+      >
+        <Heading heading={"Featured Projects"} />
+      </motion.div>
 
       <div class="mt-12 space-y-10 lg:space-y-24">
         {/* Featured projects */}
