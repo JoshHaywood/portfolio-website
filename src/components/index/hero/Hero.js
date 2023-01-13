@@ -5,7 +5,7 @@ import Particles from "./Particles";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
-  const isMobile = window.innerWidth < 500;
+  const isMobile = window.innerWidth < 450;
 
   //Animation Variants
   const heroVariants = {

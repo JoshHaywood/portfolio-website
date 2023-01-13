@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 
 const mediaIcons = [
   /* Attribution: https://fontawesome.com/icons/linkedin-in?s=&f=brands */
@@ -23,46 +23,46 @@ const mediaIcons = [
   },
 ];
 
-const columns = [
-  {
-    heading: 'Pages',
-    links: [
-      { label: 'Home', path: '/' },
-      { label: 'Projects', path: '/projects' },
-      { label: 'Contact', path: '/contact' },
-    ],
-  },
-  {
-    heading: 'Projects',
-    links: [
-      { label: 'Portfolio', path: '/projects/portfolio' },
-      { label: 'Arduino', path: '/projects/arduino' },
-      {
-        label: 'Student Survival Store',
-        path: '/projects/student-survival-store',
-      },
-    ],
-  },
-  {
-    containerStyle: 'flex flex-col justify-end',
-    links: [
-      { label: 'One Messaging', path: '/projects/one-messaging' },
-      { label: 'Esports Center', path: '/projects/esports-center' },
-      { label: 'Game Review', path: '/projects/game-review' },
-    ],
-  },
-];
-
 export default function Footer() {
   const navigate = useNavigate();
+
+  const isMobile = window.innerWidth < 500;
+
+  //Brought into function to use isMobile
+  const columns = [
+    {
+      heading: 'Pages',
+      links: [
+        { label: 'Home', path: '/' },
+        { label: 'Projects', path: '/projects' },
+        { label: 'Contact', path: '/contact' },
+      ],
+    },
+    {
+      heading: 'Projects',
+      links: [
+        { label: 'Portfolio', path: '/projects/portfolio' },
+        { label: 'Arduino', path: '/projects/arduino' },
+        { label: 'Student Survival Store', path: '/projects/student-survival-store',},
+      ],
+    },
+    {
+      containerStyle: !isMobile && ('flex flex-col justify-end'),
+      links: [
+        { label: 'One Messaging', path: '/projects/one-messaging' },
+        { label: 'Esports Center', path: '/projects/esports-center' },
+        { label: 'Game Review', path: '/projects/game-review' },
+      ],
+    },
+  ];
 
   return (
     <footer class="bg-tertiary">
       <div class="max-w-[1100px] mx-auto px-5 xl:px-0 pt-5 pb-10">
         <div class="flex flex-col md:flex-row md:justify-between items-center py-12">
-          <div class="lg:flex w-full justify-between space-x-10">
+          <div class="md:flex w-full md:justify-between space-y-10 md:space-y-0 md:space-x-10">
             {/* Branding */}
-            <div class="-ml-6 w-1/3">
+            <div class="-ml-6 md:w-1/3">
               <div class="px-6">
                 <img
                   src="../images/logo.png"
@@ -102,11 +102,11 @@ export default function Footer() {
             </div>
 
             {/* Columns */}
-            <div class="w-2/3">
-              <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
+            <div class="md:w-2/3">
+              <div class={`${!isMobile && 'grid gap-6 grid-cols-3'}`}>
                 {columns.map((column, index) => (
                   <div key={index} class={column.containerStyle}>
-                    <h4 class="mb-4 text-base font-medium text-gray-300">
+                    <h4 class={`${isMobile ? ('my-4') : ('mb-4')} text-base font-medium text-gray-300`}>
                       {column.heading}
                     </h4>
 
@@ -115,7 +115,7 @@ export default function Footer() {
                       <Link
                         key={index}
                         to={link.path}
-                        class="mt-3 block text-sm text-gray-400 hover:underline"
+                        class="mb-3 block text-sm text-gray-400 hover:underline"
                       >
                         {link.label}
                       </Link>
