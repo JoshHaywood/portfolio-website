@@ -163,13 +163,8 @@ input::placeholder, textarea::placeholder {
   color: var(--primary-colour);
 }
 
-#backToTop:hover p:nth-child(2) {
-  animation: bounce 1s infinite;
-  color: var(--primary-colour);
-}
-
-#backToTop:hover button, #backToTop:hover div {
-  color: var(--primary-colour);
+#backToTop:hover span, #backToTop:hover g {
+  text-decoration: underline;
 }
 
 /* Animations */

@@ -55,33 +55,30 @@ const columns = [
 
 export default function Footer() {
   const navigate = useNavigate();
-  const [src, setSrc] = useState("../images/logo.png");
 
   return (
     <footer class="bg-tertiary">
-      <div class="max-w-[1100px] mx-auto px-5 xl:px-0">
-        <div class="items-center flex flex-col md:flex-row md:justify-between py-5">
-          <div class="lg:flex">
+      <div class="max-w-[1100px] mx-auto px-5 xl:px-0 pt-5 pb-10">
+        <div class="flex flex-col md:flex-row md:justify-between items-center py-12">
+          <div class="lg:flex w-full justify-between space-x-10">
             {/* Branding */}
-            <div class="w-full -ml-6 mr-5 lg:w-2/5">
+            <div class="-ml-6 w-1/3">
               <div class="px-6">
                 <img
-                  src={src}
+                  src="../images/logo.png"
                   alt="Logo"
-                  onMouseEnter={() => setSrc("../images/logo-hover.png")}
-                  onMouseLeave={() => setSrc("../images/logo.png")}
                   onClick={() => navigate("/")}
-                  class="w-[175px] h-auto mb-3 hover:cursor-pointer"
+                  class="w-[185px] h-auto hover:cursor-pointer"
                 ></img>
 
-                <p class="text-sm max-w-sm mt-4 text-gray-400">
+                <p class="text-sm max-w-sm mt-5 text-gray-400">
                   Contact me via my{" "}
-                  <span class="font-medium">social media</span> or{" "}
-                  <span class="font-medium">email</span> for any inquiries.
+                  <span class="font-normal">social media</span> or{" "}
+                  <span class="font-normal">email</span> for any inquiries.
                 </p>
 
                 {/* Media icons */}
-                <div class="flex mt-5 -mx-2">
+                <div class="flex mt-4 -mx-2">
                   {mediaIcons.map((icon, index) => (
                     <Link
                       to={icon.path}
@@ -90,7 +87,7 @@ export default function Footer() {
                       aria-label={icon.label}
                     >
                       <svg
-                        class="w-4 h-4 fill-gray-400 transition-colors duration-300 hover:fill-primary"
+                        class="w-4 h-4 fill-gray-400"
                         xmlns="http://www.w3.org/2000/svg"
                         stroke-width="1.5"
                         stroke="currentColor"
@@ -104,12 +101,12 @@ export default function Footer() {
               </div>
             </div>
 
-            <div class="mt-6 lg:mt-3 lg:flex-1">
-              {/* Columns */}
+            {/* Columns */}
+            <div class="w-2/3">
               <div class="grid grid-cols-1 gap-6 sm:grid-cols-3">
                 {columns.map((column, index) => (
                   <div key={index} class={column.containerStyle}>
-                    <h4 class="text-base font-bold text-gray-300">
+                    <h4 class="mb-5 text-base font-medium text-gray-300">
                       {column.heading}
                     </h4>
 
@@ -118,7 +115,7 @@ export default function Footer() {
                       <Link
                         key={index}
                         to={link.path}
-                        class="mt-2 block text-sm text-gray-400 hover:underline"
+                        class="mt-3 block text-sm text-gray-400 hover:underline"
                       >
                         {link.label}
                       </Link>
@@ -131,25 +128,40 @@ export default function Footer() {
         </div>
 
         {/* Footnote */}
-        <div class="flex py-2 justify-between border-t border-primary">
+        <div class="flex py-5 justify-between border-t border-primary">
           <a
-            class="text-sm text-gray-300 hover:text-primary"
+            class="text-sm text-gray-300 hover:underline"
             href="https://www.joshhaywood-portfolio.com/"
           >
             © Josh Haywood {new Date().getFullYear()}
           </a>
 
-          <div id="backToTop" class="flex flex-row space-x-1 items-center">
-            <button
-              onClick={() => {
-                document.documentElement.scrollTop = 0;
-              }}
-              class="text-sm text-gray-300"
-            >
+          <button 
+            id="backToTop" 
+            onClick={() => {document.documentElement.scrollTop = 0}} 
+            class="flex flex-row space-x-1 items-center"
+          >
+            <span class="text-sm text-gray-300">
               Back To Top
-            </button>
-            <div class="text-gray-300">↑</div>
-          </div>
+            </span>
+
+            {/* Attribution: https://www.svgrepo.com/svg/343035/chevron-up-circle */}
+            <svg 
+              viewBox="0 0 21 21" 
+              xmlns="http://www.w3.org/2000/svg" 
+              class="h-4 w-4 hover:cursor-pointer"
+            > 
+              <g 
+                fill="none" 
+                transform="translate(2 2)"
+                strokeWidth="2"
+                class="stroke-gray-300 fill-none"
+              >
+                <circle cx="8.5" cy="8.5" r="8"/>
+                <path d="m11.5 9.5-3-3-3 3"/>
+              </g>
+            </svg>
+          </button>
         </div>
       </div>
     </footer>

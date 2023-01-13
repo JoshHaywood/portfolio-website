@@ -52,7 +52,7 @@ useEffect(() => {
   if (window.scrollY === 0) {
     setScrolled(false);
   }
-}, [window.scrollY]);
+}, []);
 
   return (
     <>
