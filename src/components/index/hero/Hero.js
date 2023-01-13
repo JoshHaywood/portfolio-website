@@ -4,7 +4,7 @@ import Particles from "./Particles";
 
 import Button from "@mui/material/Button";
 
-export default function Hero(props) {
+export default function Hero() {
   const isMobile = window.innerWidth < 500;
 
   //Animation Variants
@@ -38,7 +38,7 @@ export default function Hero(props) {
             animate="visible"
             transition={{
               duration: 0.5,
-              delay: props.taglineDelay,
+              delay: 0.9,
               ease: "easeInOut",
             }}
             class="tracking-wide font-normal text-lg text-primary"
@@ -52,7 +52,7 @@ export default function Hero(props) {
             animate="visible"
             transition={{
               duration: 0.5,
-              delay: props.headingOneDelay,
+              delay: 1.1,
               ease: "easeInOut",
             }}
             class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold"
@@ -66,7 +66,7 @@ export default function Hero(props) {
             animate="visible"
             transition={{
               duration: 0.5,
-              delay: props.headingTwoDelay,
+              delay: 1.3,
               ease: "easeInOut",
             }}
             class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
@@ -81,7 +81,7 @@ export default function Hero(props) {
             animate="visible"
             transition={{
               duration: 0.5,
-              delay: props.textDelay,
+              delay: 1.5,
               ease: "easeInOut",
             }}
           >
@@ -106,7 +106,7 @@ export default function Hero(props) {
           animate="visible"
           transition={{
             duration: 0.5,
-            delay: props.textDelay,
+            delay: 1.5,
             ease: "easeInOut",
           }}
         >
@@ -160,7 +160,7 @@ export default function Hero(props) {
         animate={{ opacity: 1 }}
         transition={{
           duration: 0.5,
-          delay: props.scrollButtonDelay,
+          delay: 1.7,
           ease: "easeInOut",
         }}
       >

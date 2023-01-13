@@ -58,9 +58,9 @@ export default function Particles() {
     function draw() {
       ctx.globalCompositeOperation = "source-over";
 
-      ctx.fillStyle = "hsla(210, 17%, 7%)"; // Canvas background color
-      ctx.fillRect(0, 0, w, h);
-
+      ctx.fillStyle = "#101316"; // Canvas background color
+      ctx.fillRect(0, 0, w, h);  
+  
       ctx.lineWidth = lineWidth;
       ctx.fillStyle = "hsl(0, 0%, 50%)"; // Point color
 
@@ -144,5 +144,5 @@ export default function Particles() {
     setup(); // Initialize canvas
   }, []);
 
-  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />;
+  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} class="shadow-lg" />;
 };
