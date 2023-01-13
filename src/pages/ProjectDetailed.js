@@ -8,6 +8,7 @@ export default function Project(props) {
 
   const features = props.features;
   const structure = props.structure;
+  
   return (
     <>
       <div class="relative flex flex-col justify-center mt-[70px]">
