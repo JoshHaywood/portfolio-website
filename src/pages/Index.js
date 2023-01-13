@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet";
 
-import Hero from "../components/index/Hero";
+import Hero from "../components/index/hero/Hero";
 import Skills from "../components/index/Skills";
 import About from "../components/index/About";
-import Projects from "../components/index/Projects";
+import Projects from "../components/index/projects/Projects";
 import Contact from "../components/Contact";
 
 export default function Index() {
