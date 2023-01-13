@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Message from './pages/Message';
 import Index from './pages/Index';
-import Project from './pages/ProjectDetailed';
+import Project from './pages/Project';
 
 const projects = [
   {

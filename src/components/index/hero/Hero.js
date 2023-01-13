@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import Particles from "./Particles";
-
+import ScrollTo from "../../utils/scrollTo";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
@@ -17,11 +17,6 @@ export default function Hero() {
       opacity: 1,
       y: 0,
     },
-  };
-
-  function ScrollTo() {
-    const element = document.getElementById("scrollButton"); // Scroll to element
-    element.scrollIntoView();
   };
 
   return (
@@ -98,9 +93,7 @@ export default function Hero() {
 
         {/* Media Icons */}
         <motion.div
-          class={`${
-            isMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"
-          }`}
+          class={`${isMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"}`}
           variants={heroVariants}
           initial="hidden"
           animate="visible"
@@ -165,13 +158,13 @@ export default function Hero() {
         }}
       >
         <button
-          onClick={ScrollTo}
+          onClick={() => {ScrollTo({target: 'scrollButton', offset: 0, mobileOffset: 0 })}}
           class="font-medium text-xl hover:text-white transition duration-300 ease-in-out"
         >
           View more
         </button>
         <svg
-          onClick={ScrollTo}
+          onClick={() => {ScrollTo({target: 'scrollButton', offset: 0, mobileOffset: 0})}}
           class="h-5 w-5 fill-primary mx-auto"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"

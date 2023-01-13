@@ -20,7 +20,7 @@ export function GithubLink(props) {
       </svg>
     </a>
   );
-};
+}
 
 export function DeployLink(props) {
   return (

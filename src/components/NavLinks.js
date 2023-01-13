@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
+import ScrollTo from "./utils/scrollTo";
 import Button from "@mui/material/Button";
 
 const links = [
-  { id: 'homeLink', name: 'Home', path: '/' },
-  { id: 'projectsLink', name: 'Projects', path: '/projects' },
-  { id: 'contactLink', name: 'Contact', path: '/contact' },
+  { id: 'skills', name: 'Skills' },
+  { id: 'about', name: 'About' },
+  { id: 'projects', name: 'Projects' },
+  { id: 'contact', name: 'Contact' },
 ];
 
 export default function NavLinks(props) {
@@ -46,10 +47,10 @@ export default function NavLinks(props) {
   
   return (
     <motion.ul
-      variants={ containerVariants }
+      variants={containerVariants}
       initial="hidden"
       animate="visible"
-      className={`${
+      class={`${
         sidebar
           ? `h-screen w-[280px] sm:w-1/2 overflow-y-scroll flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row absolute top-0 right-0 pt-28 pl-5 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
           : `hidden`
@@ -58,16 +59,17 @@ export default function NavLinks(props) {
       {links.map((link) => (
         <motion.li
           variants={listVariants}
-          id={link.id}
-          className="mx-2.5 my-5 md:my-0 md:order-2"
+          class="mx-2.5 my-5 md:my-0 md:order-2"
         >
-          <Link
-            to={link.path}
-            onClick={() => setSidebar(false)}
-            className="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out"
+          <div
+            onClick={() => {
+              setSidebar(false);
+              ScrollTo({target: link.id, offset: 120, mobileOffset: 20});
+            }}
+            class="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
           >
             {link.name}
-          </Link>
+          </div>
         </motion.li>
       ))}
 
@@ -78,7 +80,7 @@ export default function NavLinks(props) {
           duration: 1,
           ease: "easeInOut",
         }}
-        className="md:mr-3"
+        class="md:mr-3"
       >
         <Button
           href={`${process.env.PUBLIC_URL}/documents/cv.pdf`}

@@ -30,13 +30,14 @@ const cards = [
 export default function Skills() {
   return (
     <motion.div
+      id="skills" 
       initial={{ opacity: 0, y: "5%" }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay: 0.3, ease: "easeInOut" }}
       viewport={{ once: true }}
     >
       {/* Heading */}
-      <Heading heading={"Skill-Set"} />
+      <Heading heading="Skill-Set" />
 
       {/* Cards */}
       <div class="h-full flex flex-col md:flex-row md:w-full mt-12 space-y-5 md:space-y-0 md:space-x-5 lg:space-x-10">
