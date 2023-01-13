@@ -7,30 +7,52 @@ import NavLinks from "./NavLinks";
 
 export default function Header() {
   const navigate = useNavigate();
-  const [src, setSrc] = useState('../images/logo.png');
+  const [src, setSrc] = useState('../Images/logo.png');
   const [sidebar, setSidebar] = useState(false);
+
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [backdropFilter, setBackdropFilter] = useState('blur(0)');
+  const [boxShadow, setBoxShadow] = useState('drop-shadow(0 0 #0000)');
 
   const isMobile = window.innerWidth < 640;
-  const isntDesktop = window.innerWidth < 768;
 
   useEffect(() => {
     //Scroll handler
     const handleScroll = () => {
-        const currentScrollY = window.scrollY; //Current scroll position
-        //If user scrolls down
-        if (currentScrollY > lastScrollY) {
-            setScrolled(true);
-          //Else user scrolls up
-        } else {
-            setScrolled(false);
-        }
-        setLastScrollY(currentScrollY); //Set last scroll position to current
+      const currentScrollY = window.scrollY; //Current scroll position
+      //If user scrolls down
+      if (currentScrollY > lastScrollY) {
+        setScrolled(true);
+
+        //If user is not at the top of the page
+        if (currentScrollY > 0) {
+          setBackdropFilter('blur(8px)');
+          setBoxShadow('drop-shadow(0 4px 3px rgba(0, 0, 0, 0.07)) drop-shadow(0 2px 2px rgba(0, 0, 0, 0.06))');
+        };
+        //Else user scrolls up
+      } else {
+        setScrolled(false);
+
+        //If at user is at the top of the page
+        if (currentScrollY === 0) {
+          setBackdropFilter('blur(0)');
+          setBoxShadow('drop-shadow(0 0 #0000)');
+        };
+      };
+      setLastScrollY(currentScrollY); //Set last scroll position to current
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-}, [lastScrollY]);
+  }, [lastScrollY]);
+  
+
+useEffect(() => {
+  if (window.scrollY === 0) {
+    setScrolled(false);
+  }
+}, [window.scrollY]);
 
   return (
     <>
@@ -43,12 +65,11 @@ export default function Header() {
         }`}
       ></div>
 
-      <motion.nav
-        initial={{ y: '0%' }}
-        animate={{ y: scrolled ? '-100%' : '0%' }}
+<motion.nav
+        initial={{ y: '0%', backdropFilter: backdropFilter, filter: boxShadow }}
+        animate={{ y: scrolled ? '-100%' : '0%', backdropFilter: backdropFilter, filter: boxShadow }}
         transition={{ duration: 0.3 }}
-        class="w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 bg-transparent backdrop-blur shadow-md"
-      >
+        class={`w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 bg-transparent`}>
         {/* Logo */}
         <img
           src={src}
@@ -61,7 +82,7 @@ export default function Header() {
 
         <div class="flex items-center mb-1">
           {/* Hamburger menu */}
-          {isntDesktop && (
+          <div class="block md:hidden">
             <Hamburger
               color="#ffffff"
               size={`${isMobile ? 25 : 30}`}
@@ -70,7 +91,7 @@ export default function Header() {
               toggle={setSidebar}
               toggled={sidebar}
             />
-          )}
+          </div>
 
           {/* Navlinks */}
           <NavLinks sidebar={sidebar} setSidebar={setSidebar} />
