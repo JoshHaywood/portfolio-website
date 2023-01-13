@@ -2,13 +2,14 @@ import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Heading from "../../Heading";
+import { GithubLink, DeployLink } from "./SocialLinks"
 import ProjectCards from "./ProjectCards";
 
 export default function Projects() {
   const navigate = useNavigate();
 
   const isMobile = window.innerWidth < 768;
-  let { containerVariants = {}, imageVariants = {}, leftCardVariants = {}, rightCardVariants = {}, listVariants = {}} = {};
+  let { containerVariants = {}, imageVariants = {}, leftCardVariants = {}, rightCardVariants = {}, listVariants: technologiesVariants = {}} = {};
 
   // If isnt mobile add list animation
   if (!isMobile) {
@@ -61,7 +62,7 @@ export default function Projects() {
       },
     };
 
-    listVariants = {
+    technologiesVariants = {
       hidden: { opacity: 0 },
       visible: {
         opacity: 1,
@@ -148,7 +149,7 @@ export default function Projects() {
           variants={rightCardVariants}
           class="p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 md:text-right"
         >
-          <p class="text-primary">Personal Site</p>
+          <p class="font-normal text-primary">Personal Site</p>
           <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">
             Portfolio Website
           </h3>
@@ -159,16 +160,22 @@ export default function Projects() {
             portfolio site and how I have adapted the project since then.
           </p>
 
-          {/* Stack list */}
-          <motion.ul
-            variants={listVariants}
-            class="flex flex-col flex-wrap gap-y-2 sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-5 md:justify-end sm:pt-5 md:-ml-32"
-          >
-            <li>Handlebars/React</li>
-            <li>ExpressJS</li>
-            <li>NodeJS</li>
-            <li>CSS/Tailwind</li>
-          </motion.ul>
+          {/* Technologies */}
+          <motion.div variants={technologiesVariants} >
+            {/* Stack list */}
+            <ul class="flex flex-col flex-wrap gap-y-2 sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-5 md:justify-end md:mt-5 md:-ml-32">
+              <li>Handlebars/React</li>
+              <li>ExpressJS</li>
+              <li>NodeJS</li>
+              <li>CSS/Tailwind</li>
+            </ul>
+
+            {/* Media links */}
+            <div class="flex flex-row mt-5 md:justify-end space-x-2.5">
+              <GithubLink link="https://github.com/JoshHaywood/portfolio-website" />
+              <DeployLink link="https://www.joshhaywood-portfolio.com/" />
+            </div>
+          </motion.div>
         </motion.div>
       </motion.div>
     );
@@ -190,7 +197,7 @@ export default function Projects() {
           variants={leftCardVariants}
           class="p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-20 md:w-2/5"
         >
-          <p class="text-primary">Messaging Project</p>
+          <p class="font-normal text-primary">Messaging Project</p>
           <h3 class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out">
             One messaging project
           </h3>
@@ -201,17 +208,22 @@ export default function Projects() {
             systems.
           </p>
 
-          {/* Stack list */}
-          <motion.ul
-            variants={listVariants}
-            class="flex flex-col flex-wrap gap-y-2 sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-5 sm:pt-5 md:-mr-32"
-          >
-            <li>Handlebars</li>
-            <li>ExpressJS</li>
-            <li>NodeJS</li>
-            <li>SocketIO</li>
-            <li>SQLite</li>
-          </motion.ul>
+          {/* Technologies */}
+          <motion.div variants={technologiesVariants}>
+            {/* Stack list */}
+            <ul class="flex flex-col flex-wrap gap-y-2 sm:flex-row space-y-2.5 sm:space-y-0 sm:space-x-5 md:mt-5 md:-mr-32">
+              <li>Handlebars</li>
+              <li>ExpressJS</li>
+              <li>NodeJS</li>
+              <li>SocketIO</li>
+              <li>SQLite</li>
+            </ul>
+
+            {/* Media links */}
+            <div class="mt-5">
+              <GithubLink link="https://github.com/JoshHaywood/one-messaging" />
+            </div>
+          </motion.div>
         </motion.div>
 
         {/* Image */}
@@ -240,7 +252,7 @@ export default function Projects() {
       <Heading heading={"Featured Projects"} />
 
       <div class="mt-12 space-y-10 lg:space-y-24">
-        {/* Featured project */}
+        {/* Featured projects */}
         <AlignedRightCard />
         <AlignedLeftCard />
 

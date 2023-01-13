@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
 
-
 const mediaIcons = [
   /* Attribution: https://fontawesome.com/icons/linkedin-in?s=&f=brands */
   {
@@ -87,7 +86,7 @@ export default function Footer() {
                       aria-label={icon.label}
                     >
                       <svg
-                        class="w-4 h-4 fill-gray-400"
+                        class="w-4 h-4 fill-gray-400 hover:fill-gray-500"
                         xmlns="http://www.w3.org/2000/svg"
                         stroke-width="1.5"
                         stroke="currentColor"
@@ -103,10 +102,13 @@ export default function Footer() {
 
             {/* Columns */}
             <div class="md:w-2/3">
-              <div class={`${!isMobile && 'grid gap-6 grid-cols-3'}`}>
+              <div class={`${!isMobile && "grid gap-6 grid-cols-3"}`}>
                 {columns.map((column, index) => (
                   <div key={index} class={column.containerStyle}>
-                    <h4 class={`${isMobile ? ('my-4') : ('mb-4')} text-base font-medium text-gray-300`}>
+                    <h4 class={`${
+                        isMobile ? "my-4" : "mb-4"
+                      } text-base font-medium text-gray-300`}
+                    >
                       {column.heading}
                     </h4>
 
@@ -136,29 +138,29 @@ export default function Footer() {
             © Josh Haywood {new Date().getFullYear()}
           </a>
 
-          <button 
-            id="backToTop" 
-            onClick={() => {document.documentElement.scrollTop = 0}} 
+          <button
+            id="backToTop"
+            onClick={() => {
+              document.documentElement.scrollTop = 0;
+            }}
             class="flex flex-row space-x-1 items-center"
           >
-            <span class="text-sm text-gray-400">
-              Back To Top
-            </span>
+            <span class="text-sm text-gray-400">Back To Top</span>
 
             {/* Attribution: https://www.svgrepo.com/svg/343035/chevron-up-circle */}
-            <svg 
-              viewBox="0 0 21 21" 
-              xmlns="http://www.w3.org/2000/svg" 
+            <svg
+              viewBox="0 0 21 21"
+              xmlns="http://www.w3.org/2000/svg"
               class="h-4 w-4 hover:cursor-pointer"
-            > 
-              <g 
-                fill="none" 
+            >
+              <g
+                fill="none"
                 transform="translate(2 2)"
                 strokeWidth="2"
                 class="stroke-gray-400 fill-none"
               >
-                <circle cx="8.5" cy="8.5" r="8"/>
-                <path d="m11.5 9.5-3-3-3 3"/>
+                <circle cx="8.5" cy="8.5" r="8" />
+                <path d="m11.5 9.5-3-3-3 3" />
               </g>
             </svg>
           </button>
