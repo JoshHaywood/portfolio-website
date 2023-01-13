@@ -156,9 +156,8 @@ export default function Projects() {
           </h3>
 
           <p class="bg-none md:bg-quaternary md:pl-10 pr-5 sm:pt-5 pb-5 md:-ml-32 md:shadow-md md:rounded-sm text-gray-300">
-            My website showcasing projects I have created and serves as a hub
-            for marketing and contact. The includes my first version of the
-            portfolio site and how I have adapted the project since then.
+            My portfolio website which includes my latest projects and serves as a point of contact for potential clients and employers,
+            it's constantly updated to reflect my development progress.
           </p>
 
           {/* Technologies */}
@@ -204,9 +203,8 @@ export default function Projects() {
           </h3>
 
           <p class="bg-none md:bg-quaternary md:px-5 sm:pt-5 pb-5 md:-mr-32 md:shadow-md md:rounded-sm text-gray-300">
-            A real-time messaging app during my second year of university as
-            part of a research project on the advancement of web communication
-            systems.
+            A real-time messaging app,
+            developed as a research project on web communication systems advancement during my second year of university.
           </p>
 
           {/* Technologies */}
