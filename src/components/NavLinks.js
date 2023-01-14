@@ -28,7 +28,7 @@ export default function NavLinks(props) {
     document.body.style.overflow = 'unset';
   };
 
-  // If not mobile, set animation variants
+  // If not mobile, set animation variants. Else use sidebar variants
   if (!isMobile) {
     containerVariants = {
       hidden: {},
@@ -65,37 +65,42 @@ export default function NavLinks(props) {
         right: 0,
         
         transition: {
-          duration: 0.3,
+          duration: 0.2,
           ease: "easeInOut",
         },
       },
 
       closed: { 
         opacity: 0, 
-        x: "50%" 
+        x: "50%",
+        position: "absolute", 
+        top: 0, 
+        right: 0,
+        transition: {
+          duration: 0.2,
+          ease: "easeInOut",
+        },
       },
     };
   };
+
   
   return (
     isMobile ? (
       <motion.div
         variants={sidebarVariants}
+        initial="closed"
         animate={sidebar ? "open" : "closed"}
       >
         <ul
-          class={`${
-            sidebar
-              ? `h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
-              : `hidden`
-          } md:flex flex-row items-center`}
+          class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)] items-center"
         >
           {links.map((link) => (
             <li class="mx-2.5 my-5 md:my-0 md:order-2">
               <div
                 onClick={() => {
                   setSidebar(false);
-                  ScrollTo({target: link.id, offset: 120, mobileOffset: 20});
+                  ScrollTo({ target: link.id, offset: 120, mobileOffset: 20 });
                 }}
                 class="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
               >

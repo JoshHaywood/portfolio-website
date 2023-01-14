@@ -59,6 +59,7 @@ export default function Header() {
     <>
       {/* Overlay */}
       <div
+        onClick={() => setSidebar(false)}
         class={`${
           sidebar
             ? `z-50 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
@@ -69,12 +70,9 @@ export default function Header() {
       <motion.nav
         initial={{ y: '0%', backdropFilter: backdropFilter, filter: boxShadow }}
         animate={{ y: scrolled ? '-100%' : '0%', backdropFilter: backdropFilter, filter: boxShadow }}
-        transition={{ duration: 0.3 }}
-        class={`${
-          sidebar 
-          ? ('bg-tertiary') 
-          : ('bg-transparent')
-        } w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50`}
+        transition={{ duration: 0.3, ease: 'easeInOut'}}
+        style={{ backgroundColor: sidebar ? '#15171a': 'transparent'}}
+        class={`w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 transition-colors duration-200 ease-in-out`}
       >
         {/* Logo */}
         <img
