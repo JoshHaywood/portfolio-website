@@ -48,11 +48,12 @@ export default function Header() {
   }, [lastScrollY]);
   
 
-useEffect(() => {
-  if (window.scrollY === 0) {
-    setScrolled(false);
-  }
-}, []);
+  useEffect(() => {
+    //If user is at the top of the page
+    if (window.scrollY === 0) {
+      setScrolled(false);
+    }
+  }, []);
 
   return (
     <>
@@ -60,7 +61,7 @@ useEffect(() => {
       <div
         class={`${
           sidebar
-            ? `z-50 h-screen w-screen fixed bg-black opacity-60 backdrop-blur`
+            ? `z-50 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
             : `hidden`
         }`}
       ></div>
@@ -73,7 +74,7 @@ useEffect(() => {
           sidebar 
           ? ('bg-tertiary') 
           : ('bg-transparent')
-          } w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50`}
+        } w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50`}
       >
         {/* Logo */}
         <img
@@ -87,7 +88,7 @@ useEffect(() => {
 
         <div class="flex items-center mb-1">
           {/* Hamburger menu */}
-          <div class="block md:hidden">
+          <div class="block md:hidden z-50">
             <Hamburger
               color="#ffffff"
               size={`${isMobile ? 25 : 30}`}
