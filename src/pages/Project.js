@@ -24,8 +24,9 @@ export default function Project(props) {
               delay: props.backgroundDelay,
               ease: "easeInOut",
             }}
+            class="relative overflow-hidden"
           >
-            <div class="absolute bg-primary w-full h-full z-10 md:h-[40vh] md:w-screen brightness-[80%] opacity-50 backdrop-blur-sm"></div>
+            <div class="absolute w-full h-full z-10 md:h-[40vh] md:w-screen brightness-50 opacity-50 bg-primary"></div>
             <img
               src={props.projectImage}
               alt="project background"
