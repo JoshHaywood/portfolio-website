@@ -1,11 +1,14 @@
+import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import { GithubLink, DeployLink } from "./SocialLinks";
 import Button from "@mui/material/Button";
 
+import { AnimatePresence, motion } from "framer-motion";
+
 export default function Sidebar(props) {
   const navigate = useNavigate();
-  const { setSidebar, projectName } = props;
+  const { sideBar, setSideBar, projectName } = props;
 
   const projects = [
     {
@@ -77,125 +80,133 @@ export default function Sidebar(props) {
   ];
 
   // Get projects data without mapping
-  const currentProject = projects.find(project => project.projectName === projectName);
+  const currentProject = projects.find((project) => project.projectName === projectName);
   const repoLink = currentProject.repoLink;
   const deployLink = currentProject.deployLink;
 
   return (
-    <div class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-10 overflow-y-scroll bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]">
-      {/* Navigation */}
-      <div class="z-50 flex flex-row justify-between">
-        {/* Attribution: https://heroicons.com/ */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          onClick={() => {setSidebar(false)}}
-          class="w-6 h-6 text-gray-600 hover:text-gray-400 hover:cursor-pointer"
+    <AnimatePresence>
+      {sideBar && (
+        <motion.div
+          initial={{ x: "100%" }}
+          animate={{ x: 0 }}
+          exit={{ x: "100%"}}
+          transition={{ duration: 0.2, ease: "easeInOut" }}
+          class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-10 overflow-y-scroll bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-
-        {/* Media links */}
-        <div class="flex flex-row items-center space-x-2">
-          <GithubLink
-            link={repoLink}
-            width="1.25rem"
-            height="1.25rem"
-          />
-          <DeployLink
-            link={deployLink}
-            width="1.25rem"
-            height="1.25rem"
-          />
-        </div>
-      </div>
-
-      {/* Project */}
-      {projects.map((project, index) => {
-        if (project.projectName === projectName) {
-          return (
-            <div key={index} class="mt-16">
-              <h1 class="text-2xl font-bold tracking-wide">
-                {project.heading}
-              </h1>
-
-              <div class="mt-4 text-gray-500">
-                {project.tagline}
-              </div>
-
-              <img
-                src={project.projectImage}
-                alt="Project hero image"
-                class="w-full mt-6 rounded-lg"
+          {/* Navigation */}
+          <div class="z-50 flex flex-row justify-between">
+            {/* Attribution: https://heroicons.com/ */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              onClick={() => {
+                setSideBar(false);
+              }}
+              class="w-6 h-6 text-gray-600 hover:text-gray-400 hover:cursor-pointer"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
+            </svg>
 
-              <h2 class="mt-6 text-lg font-medium">
-                Overview
-              </h2>
-
-              <p class="mt-2 text-gray-500">
-                {project.overview}
-              </p>
-
-              <h3 class="mt-6 text-lg font-medium">
-                Technologies
-              </h3>
-
-              <div class="mt-1 flex flex-row flex-wrap text-gray-400">
-                {project.structure.map((tech, index) => {
-                  return (
-                    <div key={index} class="text-sm p-2 mr-2 mt-2 rounded bg-gray-800">
-                      {tech}
-                    </div>
-                  );
-                })}
-              </div>
-
-              <h4 class="mt-6 text-lg font-medium">
-                Role
-              </h4>
-
-              <p class="mt-2 text-gray-500">
-                {project.role}
-              </p>
-
-              {/* View project button */}
-              {/* If deployLink is '/error', then the button will not be rendered */}
-              {project.deployLink != '/error' && 
-              (
-                <Button
-                  onClick={() => {
-                    navigate(project.deployLink);
-                    document.documentElement.scrollTop = 0;
-                  }}
-                  sx={{
-                    marginTop: "1.5rem",
-                    bgcolor: "#1f2937",
-                    width: "100%",
-                    padding: "0.75rem 1.5rem",
-                    color: "white",
-                    textTransform: "none",
-
-                    ":hover": {
-                      bgcolor: "#1f2937",
-                      textDecoration: "underline",
-                    },
-                  }}
-                >
-                  View Project
-                </Button>
-              )}
+            {/* Media links */}
+            <div class="flex flex-row items-center space-x-2">
+              <GithubLink link={repoLink} width="1.25rem" height="1.25rem" />
+              <DeployLink
+                link={deployLink}
+                width="1.25rem"
+                height="1.25rem"
+              />
             </div>
-          );
-        };
-      })}
-    </div>
+          </div>
+
+          {/* Project */}
+          {projects.map((project, index) => {
+            if (project.projectName === projectName) {
+              return (
+                <div key={index} class="mt-16">
+                  <h1 class="text-2xl font-bold tracking-wide">
+                    {project.heading}
+                  </h1>
+
+                  <div class="mt-4 text-gray-500">
+                    {project.tagline}
+                  </div>
+
+                  <img
+                    src={project.projectImage}
+                    alt="Project hero image"
+                    class="w-full mt-6 rounded-lg"
+                  />
+
+                  <h2 class="mt-6 text-lg font-medium">
+                    Overview
+                  </h2>
+
+                  <p class="mt-2 text-gray-500">
+                    {project.overview}
+                  </p>
+
+                  <h3 class="mt-6 text-lg font-medium">
+                    Technologies
+                  </h3>
+
+                  <div class="mt-1 flex flex-row flex-wrap text-gray-400">
+                    {project.structure.map((tech, index) => {
+                      return (
+                        <div key={index} class="text-sm p-2 mr-2 mt-2 rounded bg-gray-800">
+                          {tech}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <h4 class="mt-6 text-lg font-medium">
+                    Role
+                  </h4>
+
+                  <p class="mt-2 text-gray-500">
+                    {project.role}
+                  </p>
+
+                  {/* View project button */}
+                  {/* If deployLink is '/error', then the button will not be rendered */}
+                  {project.deployLink != '/error' && 
+                  (
+                    <Button
+                      onClick={() => {
+                        navigate(project.deployLink);
+                        document.documentElement.scrollTop = 0;
+                      }}
+                      sx={{
+                        marginTop: "1.5rem",
+                        bgcolor: "#1f2937",
+                        width: "100%",
+                        padding: "0.75rem 1.5rem",
+                        color: "white",
+                        textTransform: "none",
+
+                        ":hover": {
+                          bgcolor: "#1f2937",
+                          textDecoration: "underline",
+                        },
+                      }}
+                    >
+                      View Project
+                    </Button>
+                  )}
+                </div>
+              );
+            };
+          })}
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
-};
+}

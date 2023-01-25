@@ -353,7 +353,7 @@ export default function Projects(props) {
   };
 
   return (
-    <div className="relative">
+    <div>
       {/* Heading */}
       <motion.div 
         id="projects"
@@ -380,10 +380,11 @@ export default function Projects(props) {
       </div>
 
       {/* Projects sidebar */}
-      {sidebar && (<Sidebar
-        setSidebar={setSidebar}
+      <Sidebar
+        sideBar={sidebar}
+        setSideBar={setSidebar}
         projectName={projectName}
-      />)}
+      />
     </div>
   );
 };

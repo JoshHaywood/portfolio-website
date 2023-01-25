@@ -50,7 +50,7 @@ export default function NavLinks(props) {
         y: 0,
 
         transition: {
-          duration: 0.5,
+          duration: 0.3,
           ease: 'easeInOut',
         },
       },
@@ -58,7 +58,6 @@ export default function NavLinks(props) {
   } else {
     sidebarVariants = {
       open: { 
-        opacity: 1, 
         x: 0, 
         position: "absolute", 
         top: 0, 
@@ -71,8 +70,7 @@ export default function NavLinks(props) {
       },
 
       closed: { 
-        opacity: 0, 
-        x: "50%",
+        x: "105%",
         position: "absolute", 
         top: 0, 
         right: 0,
@@ -84,7 +82,6 @@ export default function NavLinks(props) {
     };
   };
 
-  
   return (
     isMobile ? (
       <motion.div
@@ -132,15 +129,15 @@ export default function NavLinks(props) {
       </motion.div>
     ) : (
       <motion.ul
-      variants={containerVariants}
-      initial="hidden"
-      animate="visible"
-      class={`${
-        sidebar
-          ? `h-screen w-[280px] sm:w-1/2 overflow-y-scroll flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 pl-5 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
-          : `hidden`
-      } md:flex flex-row items-center`}
-    >
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        class={`${
+          sidebar
+            ? `h-screen w-[280px] sm:w-1/2 overflow-y-scroll flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 pl-5 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
+            : `hidden`
+        } md:flex flex-row items-center`}
+      >
       {links.map((link) => (
         <motion.li
           variants={listVariants}
@@ -161,7 +158,7 @@ export default function NavLinks(props) {
       <motion.div
         initial={{ opacity: 0, y: "-80%" }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
         class="md:mr-3"
       >
         <Button
