@@ -17,10 +17,10 @@ export default function Project(props) {
         <div class="overflow-hidden w-[screen]">
           {/* Container to prevent overflow */}
           <motion.div
-            initial={{ scale: 1.5 }}
+            initial={{ scale: 1.25 }}
             animate={{ scale: 1 }}
             transition={{
-              duration: 1,
+              duration: 0.5,
               delay: props.backgroundDelay,
               ease: "easeInOut",
             }}
@@ -47,7 +47,7 @@ export default function Project(props) {
           initial={{ opacity: 0, y: "-50%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
             delay: props.headingDelay,
             ease: "easeInOut",
           }}
@@ -68,7 +68,7 @@ export default function Project(props) {
           initial={{ opacity: 0, y: "5%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
             delay: props.articleDelay,
             ease: "easeInOut",
           }}
@@ -160,7 +160,7 @@ export default function Project(props) {
           initial={{ opacity: 0, y: "5%" }}
           animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
             delay: props.sideMenuDelay,
             ease: "easeInOut",
           }}

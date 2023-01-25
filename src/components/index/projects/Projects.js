@@ -41,8 +41,8 @@ export default function Projects() {
         x: 0,
 
         transition: {
-          duration: 0.5,
-          delay: 1.1,
+          duration: 0.3,
+          delay: 0.8,
           ease: "easeInOut",
         },
       },
@@ -55,8 +55,8 @@ export default function Projects() {
         x: 0,
 
         transition: {
-          duration: 0.5,
-          delay: 1.1,
+          duration: 0.3,
+          delay: 0.8,
           ease: "easeInOut",
         },
       },
@@ -68,8 +68,8 @@ export default function Projects() {
         opacity: 1,
 
         transition: {
-          duration: 0.5,
-          delay: 1.5,
+          duration: 0.3,
+          delay: 1.1,
           ease: "easeInOut",
         },
       },
@@ -82,7 +82,7 @@ export default function Projects() {
         y: 0,
 
         transition: {
-          duration: 1,
+          duration: 0.5,
           delay: 0.3,
           ease: "easeInOut",
         },
@@ -95,8 +95,8 @@ export default function Projects() {
         opacity: 1,
 
         transition: {
-          duration: 0.5,
-          delay: 1.1,
+          duration: 0.3,
+          delay: 0.8,
           ease: "easeInOut",
         },
       },
@@ -108,8 +108,8 @@ export default function Projects() {
         opacity: 1,
 
         transition: {
-          duration: 0.5,
-          delay: 1.1,
+          duration: 0.3,
+          delay: 0.8,
           ease: "easeInOut",
         },
       },
@@ -132,7 +132,7 @@ export default function Projects() {
           variants={imageVariants}
           class="hidden md:block md:w-3/5 md:relative md:overflow-hidden"
         >
-          <div class="hover:scale-105 transition duration-500 ease-in-out">
+          <div class="hover:scale-105 transition duration-300 ease-in-out">
             {/* Image overlay */}
             <div class="absolute bg-primary w-full h-full z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
 
@@ -229,7 +229,7 @@ export default function Projects() {
           variants={imageVariants}
           class="hidden md:block md:w-3/5 md:relative md:overflow-hidden"
         >
-          <div class="hover:scale-105 transition duration-500 ease-in-out">
+          <div class="hover:scale-105 transition duration-300 ease-in-out">
             {/* Image overlay */}
             <div class="absolute bg-primary w-full h-full z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
 
