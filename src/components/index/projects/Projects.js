@@ -1,11 +1,14 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 
 import Heading from "../Heading";
 import { GithubLink, DeployLink } from "./SocialLinks"
 import ProjectCards from "./ProjectCards";
+import Sidebar from "./Sidebar";
 
 export default function Projects(props) {
   const { sidebar, setSidebar } = props;
+  const [projectName, setProjectName] = useState("");
 
   const isMobile = window.innerWidth < 768;
   let { containerVariants = {}, imageVariants = {}, leftCardVariants = {}, rightCardVariants = {}, listVariants: technologiesVariants = {}} = {};
@@ -113,7 +116,10 @@ export default function Projects(props) {
     return (
       sidebar ? (
         <div
-          onClick={() => setSidebar(!sidebar)}
+          onClick={() => {
+            setSidebar(!sidebar);
+            setProjectName("portfolio");
+          }}
           class="relative bg-[url('../public/images/portfolio-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Image */}
@@ -165,7 +171,10 @@ export default function Projects(props) {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          onClick={() => setSidebar(!sidebar)}
+          onClick={() => {
+            setSidebar(!sidebar);
+            setProjectName("portfolio");
+          }}
           class="relative bg-[url('../public/images/portfolio-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Image */}
@@ -227,7 +236,10 @@ export default function Projects(props) {
     return (
       sidebar ? (
         <div
-          onClick={() => setSidebar(!sidebar)}
+          onClick={() => {
+            setSidebar(!sidebar);
+            setProjectName("one-messaging");
+          }}
           class="relative bg-[url('../public/images/one-messaging-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Project information */}
@@ -280,7 +292,10 @@ export default function Projects(props) {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          onClick={() => setSidebar(!sidebar)}
+          onClick={() => {
+            setSidebar(!sidebar);
+            setProjectName("one-messaging");
+          }}
           class="relative bg-[url('../public/images/one-messaging-thumbnail.webp')] md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row md:space-x-5 hover:cursor-pointer"
         >
           {/* Project information */}
@@ -338,7 +353,7 @@ export default function Projects(props) {
   };
 
   return (
-    <div>
+    <div className="relative">
       {/* Heading */}
       <motion.div 
         id="projects"
@@ -359,8 +374,16 @@ export default function Projects(props) {
         <ProjectCards 
           sidebar={sidebar}
           setSidebar={setSidebar}
+          setProjectName={setProjectName}
+          projectName={projectName}
         />
       </div>
+
+      {/* Projects sidebar */}
+      {sidebar && (<Sidebar
+        setSidebar={setSidebar}
+        projectName={projectName}
+      />)}
     </div>
   );
 };

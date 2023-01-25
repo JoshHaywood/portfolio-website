@@ -1,19 +1,17 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import { GithubLink, DeployLink } from "./SocialLinks";
 
 export default function ProjectCards(props) {
-  const { sidebar, setSidebar } = props;
+  const { sidebar, setSidebar, setProjectName } = props;
 
   const projectCards = [
     {
-      cardPath: "/projects/portfolio",
+      projectName: "portfolio",
       projectLink: "https://www.joshhaywood-portfolio.com/",
       repoLink: "https://github.com/JoshHaywood/portfolio-website",
       heading: "Personal Portfolio Website",
       text: "A website showcasing a curated selection of my projects and providing easy access to my contact information for potential employers.",
-      link: "/projects/portfolio",
 
       technologies: [
         {
@@ -28,12 +26,11 @@ export default function ProjectCards(props) {
       ],
     },
     {
-      cardPath: "/projects/arduino",
+      projectName: "arduino",
       projectLink: "/error",
       repoLink: "https://github.com/JoshHaywood/arduino-project",
       heading: "Arduino Unity Game Controller",
       text: "An interactive game and controller built with Arduino technology, showcasing my ability to merge physical components with game engines.",
-      link: "/projects/arduino",
 
       technologies: [
         {
@@ -48,12 +45,11 @@ export default function ProjectCards(props) {
       ],
     },
     {
-      cardPath: "/projects/student-survival-store",
+      projectName: "student-survival-store",
       projectLink: "/error",
       repoLink: "https://github.com/JoshHaywood/student-survival-store",
       heading: "SaaS Student Survival Store",
       text: "A group project that involved creating a software as a service (SaaS) product utilizing a monthly subscription model.",
-      link: "/projects/student-survival-store",
 
       technologies: [
         {
@@ -68,12 +64,11 @@ export default function ProjectCards(props) {
       ],
     },
     {
-      cardPath: "/projects/one-messaging",
+      projectName: "one-messaging",
       projectLink: "/error",
       repoLink: "https://github.com/JoshHaywood/one-messaging",
       heading: "Real-time Messaging App",
       text: "A real-time messaging app developed during my second year of university, demonstrating my interest in web communication systems.",
-      link: "/projects/one-messaging",
 
       technologies: [
         {
@@ -88,12 +83,11 @@ export default function ProjectCards(props) {
       ],
     },
     {
-      cardPath: "/projects/esports-center",
+      projectName: "esports-center",
       projectLink: "/error",
       repoLink: "https://github.com/JoshHaywood/esports-center",
       heading: "Esports Stats Tracking Tool",
       text: "A statistics tracking tool for Esports, which I led as the project manager, displaying my leadership and interest in the rising Esports industry.",
-      link: "/projects/esports-center",
 
       technologies: [
         {
@@ -108,12 +102,11 @@ export default function ProjectCards(props) {
       ],
     },
     {
-      cardPath: "/projects/game-review",
+      projectName: "game-review",
       projectLink: "https://game-review-application.herokuapp.com/",
       repoLink: "https://github.com/JoshHaywood/game-review-app",
       heading: "Video Game Review Platform",
       text: "A web project that allows users to review recently released video games, showcasing my proficiency in functional-based React and web design.",
-      link: "/projects/game-review",
 
       technologies: [
         {
@@ -196,7 +189,10 @@ export default function ProjectCards(props) {
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
                       alt="Folder icon"
-                      onClick={() => {setSidebar(!sidebar)}}
+                      onClick={() => {
+                        setSidebar(!sidebar);
+                        setProjectName(card.projectName);
+                      }}
                       class="h-9 w-9 fill-primary hover:cursor-pointer"
                     >
                       {/* Attribution: https://fontawesome.com/icons/folder?s=regular */}
@@ -220,7 +216,10 @@ export default function ProjectCards(props) {
 
                   {/* Text */}
                   <div
-                    onClick={() => {setSidebar(!sidebar)}}
+                    onClick={() => {
+                      setSidebar(!sidebar);
+                      setProjectName(card.projectName);
+                    }}
                     class="space-y-4 lg:flex flex-col hover:cursor-pointer"
                   >
                     <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition duration-300 ease-in-out">
