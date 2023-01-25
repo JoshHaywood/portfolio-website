@@ -57,8 +57,8 @@ export default function Footer() {
 
   return (
     <footer class="bg-tertiary">
-      <div class="max-w-[1100px] mx-auto px-5 xl:px-0 pt-5 pb-10">
-        <div class="flex flex-col md:flex-row md:justify-between items-center py-12">
+      <div class="max-w-[1100px] mx-auto px-5 xl:px-0 py-5">
+        <div class="flex flex-col md:flex-row md:justify-between items-center py-8">
           <div class="md:flex w-full md:justify-between space-y-10 md:space-y-0 md:space-x-10">
             {/* Branding */}
             <div class="-ml-6 md:w-1/3">
