@@ -32,7 +32,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               delay: 0.9,
               ease: "easeInOut",
             }}
@@ -46,7 +46,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               delay: 1.1,
               ease: "easeInOut",
             }}
@@ -60,7 +60,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               delay: 1.3,
               ease: "easeInOut",
             }}
@@ -75,7 +75,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               delay: 1.5,
               ease: "easeInOut",
             }}
@@ -93,15 +93,14 @@ export default function Hero() {
 
         {/* Media Icons */}
         <motion.div
-          class={`${isMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"}`}
-          variants={heroVariants}
-          initial="hidden"
-          animate="visible"
+          initial={{ opacity: 0, y: "50%" }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{
-            duration: 0.5,
+            duration: 0.3,
             delay: 1.5,
             ease: "easeInOut",
           }}
+          class={`${isMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"}`}
         >
           <a href="https://github.com/JoshHaywood/">
             <div class="flex sm:pr-0">
@@ -152,7 +151,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
-          duration: 0.5,
+          duration: 0.3,
           delay: 1.7,
           ease: "easeInOut",
         }}

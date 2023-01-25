@@ -16,9 +16,7 @@ export default function NavLinks(props) {
   const setSidebar = props.setSidebar;
 
   const isMobile = window.innerWidth < 768;
-  let containerVariants = {};
-  let listVariants = {};
-  let sidebarVariants = {};
+  let { containerVariants, listVariants, sidebarVariants } = {};
 
   // If sidebar is open disable scroll
   if (sidebar) {
