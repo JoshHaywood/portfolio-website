@@ -83,7 +83,7 @@ export default function FeaturedProjects(props) {
                 onClick={() =>setSidebar(!sidebar)}
                 class={`flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 ${card.alignment === "right" ? "md:justify-end" : "md:justify-none"} md:mt-5`}
               >
-                {card.technologies.map(tech => <li>{tech}</li>)}
+                {card.technologies.map((tech, index) => <li key={index}>{tech}</li>)}
               </ul>
       
               {/* Media links */}

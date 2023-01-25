@@ -173,9 +173,8 @@ export default function ProjectCards(props) {
       {/* Project cards */}
       <div class="space-y-4 sm:space-y-0 sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 gap-4">
         {projectCards.map((card, index) => (
-          <div class="hover:-translate-y-2 transition duration-300 ease-in-out">
+          <div key={index} class="hover:-translate-y-2 transition duration-300 ease-in-out">
             <motion.div
-              key={index}
               variants={listVariants}
               class="shadow-lg rounded bg-tertiary "
             >

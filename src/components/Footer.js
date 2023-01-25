@@ -88,7 +88,7 @@ export default function Footer() {
                       <svg
                         class="w-4 h-4 fill-gray-400 hover:fill-gray-500"
                         xmlns="http://www.w3.org/2000/svg"
-                        stroke-width="1.5"
+                        strokeWidth="1.5"
                         stroke="currentColor"
                         viewBox="0 0 512 512"
                       >

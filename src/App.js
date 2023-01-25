@@ -29,8 +29,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Index />} />
 
-        {messages.map((message) => (
+        {messages.map((message, index) => (
           <Route
+            key={index}
             path={message.path}
             element={
               <Message

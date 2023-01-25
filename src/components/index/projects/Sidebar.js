@@ -81,8 +81,8 @@ export default function Sidebar(props) {
     <AnimatePresence>
       {sideBar && (
         projects.map((project, index) => {
-          if (project.projectName === projectName) {
-            return (
+          return (
+            project.projectName === projectName && (
               <motion.div
                 initial={{ x: "100%" }}
                 animate={{ x: 0 }}
@@ -98,7 +98,7 @@ export default function Sidebar(props) {
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke-width="1.5"
+                    strokeWidth="1.5"
                     stroke="currentColor"
                     onClick={() => {
                       setSideBar(false);
@@ -106,8 +106,8 @@ export default function Sidebar(props) {
                     class="w-6 h-6 text-gray-600 hover:text-gray-400 hover:cursor-pointer"
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
@@ -132,7 +132,7 @@ export default function Sidebar(props) {
 
                       <img
                         src={project.projectImage}
-                        alt="Project hero image"
+                        alt="Project"
                         class="w-full mt-6 rounded-lg"
                       />
 
@@ -168,7 +168,7 @@ export default function Sidebar(props) {
 
                       {/* View project button */}
                       {/* If deployLink is '/error', then the button will not be rendered */}
-                      {project.deployLink != '/error' && 
+                      {project.deployLink !== '/error' && 
                       (
                         <Button
                           onClick={() => {
@@ -194,8 +194,8 @@ export default function Sidebar(props) {
                       )}
                 </div>
               </motion.div>
-            );
-          }
+            )
+          )
         }
       ))}
     </AnimatePresence>

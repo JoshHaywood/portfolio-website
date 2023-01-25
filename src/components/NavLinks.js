@@ -92,8 +92,11 @@ export default function NavLinks(props) {
         <ul
           class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)] items-center"
         >
-          {links.map((link) => (
-            <li class="mx-2.5 my-5 md:my-0 md:order-2">
+          {links.map((link, index) => (
+            <li 
+              key={index} 
+              class="mx-2.5 my-5 md:my-0 md:order-2"
+            >
               <div
                 onClick={() => {
                   setSidebar(false);
@@ -138,8 +141,9 @@ export default function NavLinks(props) {
             : `hidden`
         } md:flex flex-row items-center`}
       >
-      {links.map((link) => (
+      {links.map((link, index) => (
         <motion.li
+          key={index}
           variants={listVariants}
           class="mx-2.5 my-5 md:my-0 md:order-2"
         >

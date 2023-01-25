@@ -48,7 +48,7 @@ export default function Index() {
           {components.map((component, index) =>
             // If index is 2, render Projects component with sidebar state
             index === 2 ? (
-              <Projects sidebar={sidebar} setSidebar={setSidebar} />
+              <Projects key={index} sidebar={sidebar} setSidebar={setSidebar} />
             ) : (
               <component.component key={index} />
             )
