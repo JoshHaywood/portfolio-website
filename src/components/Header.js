@@ -75,14 +75,17 @@ export default function Header() {
         class={`w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 transition-colors duration-200 ease-in-out`}
       >
         {/* Logo */}
-        <img
+        <motion.img
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
           src={src}
           onMouseEnter={() => setSrc("../images/logo-hover.png")}
           onMouseLeave={() => setSrc("../images/logo.png")}
           onClick={() => navigate("/")}
           alt="Logo"
           class="w-[200px] sm:w-[250px] h-auto px-2 pr-0 sm:pr-2 backdrop-blur hover:cursor-pointer"
-        ></img>
+        ></motion.img>
 
         <div class="flex items-center mb-1">
           {/* Hamburger menu */}
