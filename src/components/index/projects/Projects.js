@@ -245,7 +245,7 @@ export default function Projects() {
   };
 
   return (
-    <>
+    <div>
       {/* Heading */}
       <motion.div 
         id="projects"
@@ -265,6 +265,6 @@ export default function Projects() {
         {/* Project cards */}
         <ProjectCards />
       </div>
-    </>
+    </div>
   );
 };
