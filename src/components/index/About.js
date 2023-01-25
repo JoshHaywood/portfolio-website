@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import Heading from "../Heading";
+import Heading from "./Heading";
 import linkHandler from "../utils/linkHandler";
 
 const technologies = [

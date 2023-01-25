@@ -4,7 +4,7 @@ import Hero from "../components/index/hero/Hero";
 import Skills from "../components/index/Skills";
 import About from "../components/index/About";
 import Projects from "../components/index/projects/Projects";
-import Contact from "../components/Contact";
+import Contact from "../components/index/Contact";
 
 export default function Index() {
   return (

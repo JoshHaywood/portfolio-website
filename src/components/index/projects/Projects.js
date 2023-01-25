@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import Heading from "../../Heading";
+import Heading from "../Heading";
 import { GithubLink, DeployLink } from "./SocialLinks"
 import ProjectCards from "./ProjectCards";
 
@@ -9,7 +9,6 @@ export default function Projects() {
   const navigate = useNavigate();
 
   const isMobile = window.innerWidth < 768;
-  const isSmallMobile = window.innerWidth < 450;
   let { containerVariants = {}, imageVariants = {}, leftCardVariants = {}, rightCardVariants = {}, listVariants: technologiesVariants = {}} = {};
 
   // If isnt mobile add list animation
