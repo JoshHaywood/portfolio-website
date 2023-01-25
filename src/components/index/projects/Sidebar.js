@@ -120,6 +120,7 @@ export default function Sidebar(props) {
                   </div>
                 </div>
 
+                {/* Project details */}
                 <div class="mt-16">
                       <h1 class="text-2xl font-bold tracking-wide">
                         {project.heading}
