@@ -57,7 +57,7 @@ export default function Project(props) {
 
       <div class="flex flex-col md:flex-row max-w-[1000px] mx-auto py-16 md:py-32 px-5">
         {/* Article */}
-        <Article 
+        <Article
           articleDelay={props.articleDelay}
           overview={props.overview}
           features={props.features}
@@ -70,7 +70,7 @@ export default function Project(props) {
         />
 
         {/* Side menu */}
-        <Sidebar 
+        <Sidebar
           sideMenuDelay={props.sideMenuDelay}
           repoLink={props.repoLink}
           deployLink={props.deployLink}
