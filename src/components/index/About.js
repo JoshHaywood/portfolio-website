@@ -7,21 +7,21 @@ import linkHandler from "../utils/linkHandler";
 const technologies = [
   {
     listColumn: [
-      { label: 'HTML' },
+      { label: 'React' },
+      { label: 'NextJS' },
       { label: 'SASS' },
-      { label: 'JavaScript' },
     ],
   },
   {
     listColumn: [
       { label: 'TailwindCSS' },
+      { label: 'TypeScript' },
       { label: 'Node.js' },
-      { label: 'React' },
     ],
   },
   {
     listColumn: [
-      { label: 'Axios' },
+      { label: 'Web Sockets' },
       { label: 'Express' },
       { label: 'Heroku' },
     ],

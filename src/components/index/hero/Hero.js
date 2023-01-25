@@ -87,7 +87,7 @@ export default function Hero() {
               </span>
             </a>{" "}
             in my final year of a BSc. At present, I am focused on specializing
-            in front-end development.
+            in full-stack JavaScript development.
           </motion.p>
         </div>
 
