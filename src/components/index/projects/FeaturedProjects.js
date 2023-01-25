@@ -4,6 +4,7 @@ import { GithubLink, DeployLink } from "./SocialLinks"
 
 export default function FeaturedProjects(props) {
   const { sidebar, setSidebar, setProjectName } = props;
+  const isMobile = window.innerWidth < 768;
 
   const cardsData = [
     {
@@ -39,7 +40,11 @@ export default function FeaturedProjects(props) {
           class={`${card.alignment === `right` ? `md:flex-row-reverse bg-[url('../public/images/portfolio-thumbnail.webp')]` : `bg-[url('../public/images/one-messaging-thumbnail.webp')]`} relative   md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row hover:cursor-pointer`}
         >
           {/* Image */}
-          <div                 
+          <motion.div      
+            initial={{ opacity: 0, y: "5%" }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}         
+            viewport={{ once: true }}    
             onClick={() =>setSidebar(!sidebar)}
             class={`hidden md:block md:w-3/5 md:relative md:overflow-hidden ${card.alignment === "right" ? "order-2" : "order-1" }`}
           >
@@ -54,10 +59,16 @@ export default function FeaturedProjects(props) {
               >
               </img>
             </div>
-          </div>
+          </motion.div>
 
           {/* Project information */}
-          <div class={`p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 ${card.alignment === "right" ? "md:text-right" : "md:text-left"}`}>
+          <motion.div
+            initial={{ opacity: 0, x: isMobile ? 0 : (card.alignment === "right" ? "5%" : "-5%") }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: 0.5, ease: "easeInOut" }} 
+            viewport={{ once: true }}
+            class={`p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 ${card.alignment === "right" ? "md:text-right" : "md:text-left"}`}
+          >
             <div
               onClick={() =>setSidebar(!sidebar)}
               class="font-normal text-primary">{card.tagline}
@@ -77,7 +88,12 @@ export default function FeaturedProjects(props) {
             </p>
       
             {/* Technologies */}
-            <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: isMobile ? 0.5 : 0.8, ease: "easeInOut" }} 
+              viewport={{ once: true }}
+            >
               {/* Stack list */}
               <ul               
                 onClick={() =>setSidebar(!sidebar)}
@@ -91,8 +107,8 @@ export default function FeaturedProjects(props) {
                 <GithubLink link={card.githubLink} width="1.25rem" height="1.25rem" />
                 <DeployLink link={card.deployLink} width="1.25rem" height="1.25rem" />
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div> 
       )
     })
