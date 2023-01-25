@@ -70,7 +70,7 @@ export default function Sidebar(props) {
       deployLink: 'https://game-review-application.herokuapp.com/',
       heading: 'Video Game Review Platform',
       tagline: 'Reviewing the latest games, together',
-      projectImage: '../images/reviews-thumbnail.webp',
+      projectImage: '../images/review-thumbnail.webp',
       overview: 'This was a side project I worked on aimed at creating a reviewing website where I could review video games of my choice.',
       structure: ['HTML', 'React', 'CSS', 'Tailwind', 'Javascript'],
       role: 'I developed a website for a game review blog, where users can find reviews, trailers, and information about the latest games. My responsibilities included designing and developing the website, as well as creating the content for the blog. One of the challenges was creating an efficient system for displaying and sorting the large amount of game information, which was addressed by implementing a search and filter feature.',
