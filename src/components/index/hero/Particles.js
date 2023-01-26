@@ -58,7 +58,7 @@ export default function Particles() {
     function draw() {
       ctx.globalCompositeOperation = "source-over";
 
-      ctx.fillStyle = "#101316"; // Canvas background color
+      ctx.fillStyle = "#191b29"; // Canvas background color
       ctx.fillRect(0, 0, w, h);  
   
       ctx.lineWidth = lineWidth;
@@ -144,5 +144,5 @@ export default function Particles() {
     setup(); // Initialize canvas
   }, []);
 
-  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} class="shadow-lg" />;
+  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />;
 };

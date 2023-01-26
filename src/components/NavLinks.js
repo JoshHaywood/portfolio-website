@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { Link }  from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -91,7 +90,7 @@ export default function NavLinks(props) {
         animate={sidebar ? "open" : "closed"}
       >
         <ul
-          class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row items-center pt-28 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]"
+          class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row items-center pt-28 bg-tertiary"
         >
           <Link to="/">
             {links.map((link, index) => (
@@ -118,9 +117,9 @@ export default function NavLinks(props) {
               target="_blank"
               sx={{
                 textTransform: "none",
-                border: "2px solid #4c6bc1",
+                border: "2px solid #f2584c",
                 color: "white",
-                bgcolor: "rgba(76, 107, 193, 0.3)",
+                bgcolor: "rgba(242, 88, 76, 0.3)",
 
                 ":hover": {
                   bgcolor: "none",
@@ -172,9 +171,9 @@ export default function NavLinks(props) {
           target="_blank"
           sx={{
             textTransform: "none",
-            border: "2px solid #4c6bc1",
+            border: "2px solid #f2584c",
             color: "white",
-            bgcolor: "rgba(76, 107, 193, 0.3)",
+            bgcolor: "rgba(242, 88, 76, 0.3)",
             margin: sidebar ? "1.25rem 0" : "0",
 
             ":hover": {

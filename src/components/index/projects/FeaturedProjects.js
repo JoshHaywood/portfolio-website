@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import ResizeHandler from "../../utils/resizeHandler";
@@ -39,7 +38,7 @@ export default function FeaturedProjects(props) {
         <div
           key={index}
           onClick={() => {setProjectName(card.name)}}
-          class={`${card.alignment === `right` ? `md:flex-row-reverse bg-[url('../public/images/portfolio-thumbnail.webp')]` : `bg-[url('../public/images/one-messaging-thumbnail.webp')]`} relative   md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row hover:cursor-pointer`}
+          class={`${card.alignment === `right` ? `md:flex-row-reverse bg-[url('../public/images/portfolio-thumbnail.webp')]` : `bg-[url('../public/images/one-messaging-thumbnail.webp')]`} relative md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row hover:cursor-pointer`}
         >
           {/* Image */}
           <motion.div      
@@ -48,16 +47,16 @@ export default function FeaturedProjects(props) {
             transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}         
             viewport={{ once: true }}    
             onClick={() =>setSidebar(!sidebar)}
-            class={`hidden md:block md:w-3/5 md:relative md:overflow-hidden ${card.alignment === "right" ? "order-2" : "order-1" }`}
+            class={`hidden md:block md:w-3/5 md:relative md:overflow-hidden rounded ${card.alignment === "right" ? "order-2" : "order-1" }`}
           >
             <div class="hover:scale-105 transition duration-300 ease-in-out">
               {/* Image overlay */}
-              <div class="absolute bg-primary w-full h-full z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
+              <div class="absolute bg-[#f3867e86] min-w-[660px] min-h-[372px] z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
   
               <img
                 src={`../images/${card.image}`}
                 alt={`Featured project ${card.tagline}`}
-                class="rounded max-w-[600px]"
+                class="min-w-[660px] min-h-[372px]"
               >
               </img>
             </div>
@@ -84,7 +83,7 @@ export default function FeaturedProjects(props) {
       
             <p 
               onClick={() =>setSidebar(!sidebar)}
-              class={`${card.alignment === "right" ? "md:pl-10 md:pr-5 md:-ml-32" : "md:pl-5 md:pr-10 md:-mr-32"} bg-none md:bg-quaternary sm:pt-5 pb-5 md:shadow-md md:rounded-sm text-gray-300`}
+              class={`${card.alignment === "right" ? "md:pl-10 md:pr-5 md:-ml-32" : "md:pl-5 md:pr-10 md:-mr-32"} bg-none md:bg-tertiary sm:pt-5 pb-5 md:shadow-md md:rounded text-gray-300`}
             >
               {card.description}
             </p>

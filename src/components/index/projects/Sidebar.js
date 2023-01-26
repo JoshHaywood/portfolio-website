@@ -89,7 +89,7 @@ export default function Sidebar(props) {
                 exit={{ x: "100%"}}
                 key={index}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-10 overflow-y-scroll bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]"
+                class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-10 overflow-y-scroll bg-secondary"
               >
                 {/* Navigation */}
                 <div class="z-50 flex flex-row justify-between">
@@ -103,7 +103,7 @@ export default function Sidebar(props) {
                     onClick={() => {
                       setSideBar(false);
                     }}
-                    class="w-6 h-6 text-gray-600 hover:text-gray-400 hover:cursor-pointer"
+                    class="w-6 h-6 text-gray-400 hover:text-primary hover:cursor-pointer"
                   >
                     <path
                       strokeLinecap="round"
@@ -126,7 +126,7 @@ export default function Sidebar(props) {
                         {project.heading}
                       </h1>
 
-                      <div class="mt-4 text-gray-500">
+                      <div class="mt-4 text-gray-400">
                         {project.tagline}
                       </div>
 
@@ -136,33 +136,33 @@ export default function Sidebar(props) {
                         class="w-full mt-6 rounded-lg"
                       />
 
-                      <h2 class="mt-6 text-lg font-medium text-white">
+                      <h2 class="mt-6 text-lg font-semibold text-white">
                         Overview
                       </h2>
 
-                      <p class="mt-2 text-gray-500">
+                      <p class="mt-2 text-gray-400">
                         {project.overview}
                       </p>
 
-                      <h3 class="mt-6 text-lg font-medium text-white">
+                      <h3 class="mt-6 text-lg font-semibold text-white">
                         Technologies
                       </h3>
 
-                      <div class="mt-1 flex flex-row flex-wrap text-gray-400">
+                      <div class="mt-1 flex flex-row flex-wrap">
                         {project.structure.map((tech, index) => {
                           return (
-                            <div key={index} class="text-sm p-2 mr-2 mt-2 rounded bg-gray-800">
+                            <div key={index} class="text-sm p-2 mr-2 mt-2 rounded bg-tertiary text-gray-400">
                               {tech}
                             </div>
                           );
                         })}
                       </div>
 
-                      <h4 class="mt-6 text-lg font-medium text-white">
+                      <h4 class="mt-6 text-lg font-semibold text-white">
                         Role
                       </h4>
 
-                      <p class="mt-2 text-gray-500">
+                      <p class="mt-2 text-gray-400">
                         {project.role}
                       </p>
 
@@ -177,14 +177,14 @@ export default function Sidebar(props) {
                           }}
                           sx={{
                             marginTop: "1.5rem",
-                            bgcolor: "#1f2937",
+                            bgcolor: "#1f2335",
                             width: "100%",
                             padding: "0.75rem 1.5rem",
                             color: "white",
                             textTransform: "none",
 
                             ":hover": {
-                              bgcolor: "#1f2937",
+                              bgcolor: "#1f2335",
                               textDecoration: "underline",
                             },
                           }}

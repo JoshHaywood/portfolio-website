@@ -18,7 +18,7 @@ html {
 
 html, body {
   max-width: 100vw;
-  background-color: #101316;
+  background-color: #191b29;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,22 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #projectCard:hover h4 {
-  color: #4c6bc1;
+  color: #f2584c;
 }
 
 #backToTop:hover span, #backToTop:hover g {
   text-decoration: underline;
-}
-
-/* Animations */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
 }

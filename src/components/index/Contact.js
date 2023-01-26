@@ -132,16 +132,16 @@ export default function Contact() {
         <Button
           type="submit"
           sx={{
-            borderBottom: "2px solid #4c6bc1",
+            borderBottom: "2px solid #f2584c",
             width: "25%",
             marginLeft: "auto",
             marginRight: "auto",
-            backgroundColor: "#181a1d",
+            backgroundColor: "#1f2335",
             color: "white",
             textTransform: "none",
 
             ":hover": {
-              bgcolor: "rgba(24, 26, 29, 0.5)",
+              bgcolor: "rgba(242, 88, 76, 0.3)",
             },
           }}
         >

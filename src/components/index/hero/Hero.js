@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import ResizeHandler from "../../utils/resizeHandler";
@@ -84,7 +83,7 @@ export default function Hero() {
           >
             I am currently a Web Development student at{" "}
             <a id="hero-link" href="https://www.falmouth.ac.uk/">
-              <span class="font-semibold text-xl text-primary">
+              <span class="font-semibold text-xl text-primary hover:underline">
                 Falmouth University
               </span>
             </a>{" "}
@@ -110,13 +109,13 @@ export default function Hero() {
                 sx={{
                   textTransform: "none",
                   fontSize: "1rem",
-                  border: "2px solid #181a1d",
-                  backgroundColor: "#181a1d",
+                  border: "4px solid #1f2335",
+                  backgroundColor: "#1f2335",
                   color: "white",
                   width: isMobile ? "100%" : "175px",
 
                   ":hover": {
-                    bgcolor: "rgba(24, 26, 29, 0.8)",
+                    bgcolor: "rgba(31, 35, 53, 0.8)",
                   },
                 }}
               >
@@ -131,12 +130,12 @@ export default function Hero() {
                 sx={{
                   textTransform: "none",
                   fontSize: "1rem",
-                  border: "2px solid #4c6bc1",
+                  border: "2px solid #f2584c",
                   color: "white",
                   width: isMobile ? "100%" : "175px",
 
                   ":hover": {
-                    bgcolor: "rgba(76, 107, 193, 0.3)",
+                    bgcolor: "rgba(242, 88, 76, 0.3)",
                   },
                 }}
               >
