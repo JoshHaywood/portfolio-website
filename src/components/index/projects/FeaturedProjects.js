@@ -65,7 +65,7 @@ export default function FeaturedProjects(props) {
 
           {/* Project information */}
           <motion.div
-            initial={{ opacity: 0, x: isMobile ? 0 : (card.alignment === "right" ? "5%" : "-5%") }}
+            initial={{ opacity: 0, x: isMobile ? 0 : card.alignment === "right" ? "2.5%" : "-2.5%" }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, delay: 0.5, ease: "easeInOut" }} 
             viewport={{ once: true }}
