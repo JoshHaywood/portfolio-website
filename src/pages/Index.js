@@ -7,15 +7,15 @@ import About from "../components/index/About";
 import Projects from "../components/index/projects/Projects";
 import Contact from "../components/index/Contact";
 
+const components = [
+  { name: "About", component: About },
+  { name: "Skills", component: Skills },
+  { name: "Projects", component: Projects },
+  { name: "Contact", component: Contact },
+];
+
 export default function Index() {
   const [sidebar, setSidebar] = useState(false);
-
-  const components = [
-    { name: "About", component: About },
-    { name: "Skills", component: Skills },
-    { name: "Projects", component: Projects },
-    { name: "Contact", component: Contact },
-  ];
 
   // If sidebar is open disable scroll
   if (sidebar) {

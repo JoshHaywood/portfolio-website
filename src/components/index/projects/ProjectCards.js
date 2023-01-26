@@ -2,135 +2,133 @@ import { motion } from "framer-motion";
 
 import { GithubLink, DeployLink } from "./SocialLinks";
 
+const projectCards = [
+  {
+    projectName: "portfolio",
+    projectLink: "https://www.joshhaywood-portfolio.com/",
+    repoLink: "https://github.com/JoshHaywood/portfolio-website",
+    heading: "Personal Portfolio Website",
+    text: "A website showcasing a curated selection of my projects and providing easy access to my contact information for potential employers.",
+
+    technologies: [
+      {
+        item: "React",
+      },
+      {
+        item: "TailwindCSS",
+      },
+      {
+        item: "Framer Motion",
+      },
+    ],
+  },
+  {
+    projectName: "arduino",
+    projectLink: "/error",
+    repoLink: "https://github.com/JoshHaywood/arduino-project",
+    heading: "Arduino Unity Game Controller",
+    text: "An interactive game and controller built with Arduino technology, showcasing my ability to merge physical components with game engines.",
+
+    technologies: [
+      {
+        item: "Unity",
+      },
+      {
+        item: "Uduino",
+      },
+      {
+        item: "C#",
+      },
+    ],
+  },
+  {
+    projectName: "student-survival-store",
+    projectLink: "/error",
+    repoLink: "https://github.com/JoshHaywood/student-survival-store",
+    heading: "SaaS Student Survival Store",
+    text: "A group project that involved creating a software as a service (SaaS) product utilizing a monthly subscription model.",
+
+    technologies: [
+      {
+        item: "React",
+      },
+      {
+        item: "Express",
+      },
+      {
+        item: "Sqlite3",
+      },
+    ],
+  },
+  {
+    projectName: "one-messaging",
+    projectLink: "/error",
+    repoLink: "https://github.com/JoshHaywood/one-messaging",
+    heading: "Real-time Messaging App",
+    text: "A real-time messaging app developed during my second year of university, demonstrating my interest in web communication systems.",
+
+    technologies: [
+      {
+        item: "Handlebars",
+      },
+      {
+        item: "Express",
+      },
+      {
+        item: "Socket.io",
+      },
+    ],
+  },
+  {
+    projectName: "esports-center",
+    projectLink: "/error",
+    repoLink: "https://github.com/JoshHaywood/esports-center",
+    heading: "Esports Stats Tracking Tool",
+    text: "A statistics tracking tool for Esports, which I led as the project manager, displaying my leadership and interest in the rising Esports industry.",
+
+    technologies: [
+      {
+        item: "React",
+      },
+      {
+        item: "Express",
+      },
+      {
+        item: "MySQL",
+      },
+    ],
+  },
+  {
+    projectName: "game-review",
+    projectLink: "https://game-review-application.herokuapp.com/",
+    repoLink: "https://github.com/JoshHaywood/game-review-app",
+    heading: "Video Game Review Platform",
+    text: "A web project that allows users to review recently released video games, showcasing my proficiency in functional-based React and web design.",
+
+    technologies: [
+      {
+        item: "React",
+      },
+      {
+        item: "TailwindCSS",
+      },
+    ],
+  },
+];
+
 export default function ProjectCards(props) {
   const { sidebar, setSidebar, setProjectName } = props;
 
-  const projectCards = [
-    {
-      projectName: "portfolio",
-      projectLink: "https://www.joshhaywood-portfolio.com/",
-      repoLink: "https://github.com/JoshHaywood/portfolio-website",
-      heading: "Personal Portfolio Website",
-      text: "A website showcasing a curated selection of my projects and providing easy access to my contact information for potential employers.",
-
-      technologies: [
-        {
-          item: "React",
-        },
-        {
-          item: "TailwindCSS",
-        },
-        {
-          item: "Framer Motion",
-        },
-      ],
-    },
-    {
-      projectName: "arduino",
-      projectLink: "/error",
-      repoLink: "https://github.com/JoshHaywood/arduino-project",
-      heading: "Arduino Unity Game Controller",
-      text: "An interactive game and controller built with Arduino technology, showcasing my ability to merge physical components with game engines.",
-
-      technologies: [
-        {
-          item: "Unity",
-        },
-        {
-          item: "Uduino",
-        },
-        {
-          item: "C#",
-        },
-      ],
-    },
-    {
-      projectName: "student-survival-store",
-      projectLink: "/error",
-      repoLink: "https://github.com/JoshHaywood/student-survival-store",
-      heading: "SaaS Student Survival Store",
-      text: "A group project that involved creating a software as a service (SaaS) product utilizing a monthly subscription model.",
-
-      technologies: [
-        {
-          item: "React",
-        },
-        {
-          item: "Express",
-        },
-        {
-          item: "Sqlite3",
-        },
-      ],
-    },
-    {
-      projectName: "one-messaging",
-      projectLink: "/error",
-      repoLink: "https://github.com/JoshHaywood/one-messaging",
-      heading: "Real-time Messaging App",
-      text: "A real-time messaging app developed during my second year of university, demonstrating my interest in web communication systems.",
-
-      technologies: [
-        {
-          item: "Handlebars",
-        },
-        {
-          item: "Express",
-        },
-        {
-          item: "Socket.io",
-        },
-      ],
-    },
-    {
-      projectName: "esports-center",
-      projectLink: "/error",
-      repoLink: "https://github.com/JoshHaywood/esports-center",
-      heading: "Esports Stats Tracking Tool",
-      text: "A statistics tracking tool for Esports, which I led as the project manager, displaying my leadership and interest in the rising Esports industry.",
-
-      technologies: [
-        {
-          item: "React",
-        },
-        {
-          item: "Express",
-        },
-        {
-          item: "MySQL",
-        },
-      ],
-    },
-    {
-      projectName: "game-review",
-      projectLink: "https://game-review-application.herokuapp.com/",
-      repoLink: "https://github.com/JoshHaywood/game-review-app",
-      heading: "Video Game Review Platform",
-      text: "A web project that allows users to review recently released video games, showcasing my proficiency in functional-based React and web design.",
-
-      technologies: [
-        {
-          item: "React",
-        },
-        {
-          item: "TailwindCSS",
-        },
-      ],
-    },
-  ];
-
-  //Animation variants
-  let containerVariants = {
+  const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        delayChildren: 0.3,
         staggerChildren: 0.3,
       },
     },
   };
 
-  let listVariants = {
+  const listVariants = {
     hidden: { opacity: 0, y: "5%" },
     visible: {
       opacity: 1,
