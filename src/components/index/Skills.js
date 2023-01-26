@@ -60,7 +60,7 @@ export default function Skills() {
               rel="noopener" 
               class="w-full"
             >
-              <h3 class="text-xl font-medium">{card.heading}</h3>
+              <h3 class="text-xl font-medium text-white">{card.heading}</h3>
               <p class="mt-4 text-gray-400 hover:underline">{card.text}</p>
             </a>
 

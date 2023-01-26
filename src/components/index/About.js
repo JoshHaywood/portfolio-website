@@ -46,7 +46,7 @@ export default function About() {
       <div class="flex flex-col md:flex-row justify-between items-center md:items-start md:space-x-10 pb-12 md:pb-0">
         {/* Background information */}
         <div class="flex flex-col space-y-4 w-full md:w-2/3 leading-7">
-          <p>
+          <p class="text-gray-400">
             I am a student at{" "}
             <a
               href="https://www.falmouth.ac.uk"
@@ -61,7 +61,7 @@ export default function About() {
             marketing myself through my portfolio site and CV.
           </p>
 
-          <p>
+          <p class="text-gray-400">
             I make use of the latest web development trends and technologies,
             and I am always looking for new ways to improve my skills. One of my
             standout achievements is creating an{" "}

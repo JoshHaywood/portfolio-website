@@ -50,7 +50,7 @@ export default function Hero() {
               delay: 1.1,
               ease: "easeInOut",
             }}
-            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold"
+            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
           >
             Josh Haywood
           </motion.h2>
@@ -70,7 +70,7 @@ export default function Hero() {
           </motion.h2>
 
           <motion.p
-            class="mt-6 tracking-wide text-xl max-w-lg"
+            class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
             variants={heroVariants}
             initial="hidden"
             animate="visible"
@@ -81,8 +81,8 @@ export default function Hero() {
             }}
           >
             I am currently a Web Development student at{" "}
-            <a id="heroLink" href="https://www.falmouth.ac.uk/">
-              <span class="font-semibold text-primary text-xl">
+            <a id="hero-link" href="https://www.falmouth.ac.uk/">
+              <span class="font-semibold text-xl text-primary">
                 Falmouth University
               </span>
             </a>{" "}
@@ -158,7 +158,7 @@ export default function Hero() {
       >
         <button
           onClick={() => {ScrollTo({target: 'scrollButton', offset: 0, mobileOffset: 0 })}}
-          class="font-medium text-xl hover:text-white transition duration-300 ease-in-out"
+          class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out"
         >
           View more
         </button>

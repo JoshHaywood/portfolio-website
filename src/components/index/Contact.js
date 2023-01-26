@@ -24,7 +24,7 @@ export default function Contact() {
           zone, I am open to both remote and on-site opportunities.
         </p>
 
-        <p class="mt-4">
+        <p class="mt-4 text-gray-400">
           Please don't hesitate to contact me through this online form or my{" "}
           <a
             href="https://www.linkedin.com/in/josh-haywood-b70a24233/"

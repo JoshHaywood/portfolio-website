@@ -122,7 +122,7 @@ export default function Sidebar(props) {
 
                 {/* Project details */}
                 <div class="mt-16">
-                      <h1 class="text-2xl font-bold tracking-wide">
+                      <h1 class="text-2xl font-bold tracking-wide text-primary">
                         {project.heading}
                       </h1>
 
@@ -136,7 +136,7 @@ export default function Sidebar(props) {
                         class="w-full mt-6 rounded-lg"
                       />
 
-                      <h2 class="mt-6 text-lg font-medium">
+                      <h2 class="mt-6 text-lg font-medium text-white">
                         Overview
                       </h2>
 
@@ -144,7 +144,7 @@ export default function Sidebar(props) {
                         {project.overview}
                       </p>
 
-                      <h3 class="mt-6 text-lg font-medium">
+                      <h3 class="mt-6 text-lg font-medium text-white">
                         Technologies
                       </h3>
 
@@ -158,7 +158,7 @@ export default function Sidebar(props) {
                         })}
                       </div>
 
-                      <h4 class="mt-6 text-lg font-medium">
+                      <h4 class="mt-6 text-lg font-medium text-white">
                         Role
                       </h4>
 

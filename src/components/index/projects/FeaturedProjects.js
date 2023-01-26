@@ -75,7 +75,7 @@ export default function FeaturedProjects(props) {
             </div>
             <h3                 
               onClick={() =>setSidebar(!sidebar)}
-              class="mb-5 font-2xl font-semibold text-primary-text hover:text-primary transition duration-300 ease-in-out"
+              class="mb-5 text-3xl font-semibold text-primary-text text-white hover:text-primary transition duration-300 ease-in-out"
             >
               {card.heading}
             </h3>
@@ -97,7 +97,7 @@ export default function FeaturedProjects(props) {
               {/* Stack list */}
               <ul               
                 onClick={() =>setSidebar(!sidebar)}
-                class={`flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 ${card.alignment === "right" ? "md:justify-end" : "md:justify-none"} md:mt-5`}
+                class={`flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 ${card.alignment === "right" ? "md:justify-end" : "md:justify-none"} md:mt-5 text-gray-500`}
               >
                 {card.technologies.map((tech, index) => <li key={index}>{tech}</li>)}
               </ul>

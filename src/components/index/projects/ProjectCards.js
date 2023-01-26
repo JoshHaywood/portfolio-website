@@ -158,7 +158,7 @@ export default function ProjectCards(props) {
         viewport={{ once: true }}
         class="mt-20 xl:mt-0 mb-12 mx-auto text-center"
       >
-        <h3 class="mb-3 font-2xl font-semibold text-primary-text">
+        <h3 class="mb-3 text-2xl font-semibold text-white">
           Other Notable Projects
         </h3>
 
@@ -218,7 +218,7 @@ export default function ProjectCards(props) {
                       setSidebar(!sidebar);
                       setProjectName(card.projectName);
                     }}
-                    class="space-y-4 lg:flex flex-col hover:cursor-pointer"
+                    class="space-y-4 lg:flex flex-col hover:text-primary hover:cursor-pointer"
                   >
                     <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition duration-300 ease-in-out">
                       {card.heading}
