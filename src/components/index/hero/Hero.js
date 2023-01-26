@@ -1,21 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import ResizeHandler from "../../utils/resizeHandler";
 import Particles from "./Particles";
 import ScrollTo from "../../utils/scrollTo";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 450);
-
-  // If window is resized, trigger isMobile
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 450);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = ResizeHandler(450);
 
   //Animation Variants
   const heroVariants = {

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+import ResizeHandler from "../../utils/resizeHandler";
 import { GithubLink, DeployLink } from "./SocialLinks"
 
 const cardsData = [
@@ -30,16 +31,7 @@ const cardsData = [
 
 export default function FeaturedProjects(props) {
   const { sidebar, setSidebar, setProjectName } = props;
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  // If window is resized, trigger isMobile
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = ResizeHandler(768);
 
   return (
     cardsData.map((card, index) => {

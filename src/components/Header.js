@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import { Squash as Hamburger } from "hamburger-react";
 
+import ResizeHandler from "./utils/resizeHandler";
+import { Squash as Hamburger } from "hamburger-react";
 import NavLinks from "./NavLinks";
 
 export default function Header() {
@@ -15,16 +16,7 @@ export default function Header() {
   const [backdropFilter, setBackdropFilter] = useState('blur(0)');
   const [boxShadow, setBoxShadow] = useState('drop-shadow(0 0 #0000)');
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-
-  // If window is resized, trigger isMobile
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 640);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = ResizeHandler(640);
 
   useEffect(() => {
     //Scroll handler
