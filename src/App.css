@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #projectCard:hover h4 {
-  color: var(--primary-colour);
+  color: #4c6bc1;
 }
 
 #backToTop:hover span, #backToTop:hover g {
