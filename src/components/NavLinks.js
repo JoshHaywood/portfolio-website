@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import ScrollTo from "./utils/scrollTo";
 import Button from "@mui/material/Button";
 
+import { Link }  from "react-router-dom";
+
 const links = [
   { id: 'skills', name: 'Skills' },
   { id: 'about', name: 'About' },
@@ -88,24 +90,26 @@ export default function NavLinks(props) {
         animate={sidebar ? "open" : "closed"}
       >
         <ul
-          class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)] items-center"
+          class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row items-center pt-28 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]"
         >
-          {links.map((link, index) => (
-            <li 
-              key={index} 
-              class="mx-2.5 my-5 md:my-0 md:order-2"
-            >
-              <div
-                onClick={() => {
-                  setSidebar(false);
-                  ScrollTo({ target: link.id, offset: 120, mobileOffset: 20 });
-                }}
-                class="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
+          <Link to="/">
+            {links.map((link, index) => (
+              <li 
+                key={index} 
+                class="md:order-2"
               >
-                {link.name}
-              </div>
-            </li>
-          ))}
+                <div
+                  onClick={() => {
+                    setSidebar(false);
+                    ScrollTo({ target: link.id, offset: 120, mobileOffset: 20 });
+                  }}
+                  class="text-lg mr-2.5 font-semibold my-10 text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
+                >
+                  {link.name}
+                </div>
+              </li>
+            ))}
+          </Link>
 
           <div class="md:mr-3" >
             <Button
@@ -116,7 +120,6 @@ export default function NavLinks(props) {
                 border: "2px solid #4c6bc1",
                 color: "white",
                 bgcolor: "rgba(76, 107, 193, 0.3)",
-                margin: sidebar ? "1.25rem 0" : "0",
 
                 ":hover": {
                   bgcolor: "none",
@@ -143,7 +146,7 @@ export default function NavLinks(props) {
         <motion.li
           key={index}
           variants={listVariants}
-          class="mx-2.5 my-5 md:my-0 md:order-2"
+          class="mx-2.5 md:order-2"
         >
           <div
             onClick={() => {
