@@ -44,7 +44,7 @@ export default function Skills() {
         {cards.map((card, index) => (
           <div
             key={index}
-            class="relative w-full mx-auto md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 transition duration-300 ease-in-out bg-tertiary md:border-b md:border-primary md:rounded"
+            class="relative w-full mx-auto md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 hover:-translate-y-2 transition duration-300 ease-in-out bg-tertiary md:border-b md:border-primary md:rounded"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

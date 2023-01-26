@@ -111,11 +111,15 @@ export default function About() {
           onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood")} 
           class="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded"
         >
-          <img
+          <motion.img
+            initial={{ x: "5%", y: "5%" }}
+            whileInView={{ x: 0, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.8, ease: "easeInOut" }}
+            viewport={{ once: true }}
             src="../images/portrait.webp"
             alt="developer portrait"
             class="w-full rounded relative bottom-3 right-3 hover:bottom-0 hover:right-0 hover:cursor-pointer transition-all duration-300 ease-in-out"
-          ></img>
+          ></motion.img>
         </a>
       </div>
     </motion.div>

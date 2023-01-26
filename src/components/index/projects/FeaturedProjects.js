@@ -51,7 +51,7 @@ export default function FeaturedProjects(props) {
           >
             <div class="hover:scale-105 transition duration-300 ease-in-out">
               {/* Image overlay */}
-              <div class="absolute bg-[#f3867e86] min-w-[660px] min-h-[372px] z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
+              <div class="absolute bg-[#5e221e] min-w-[660px] min-h-[372px] z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
   
               <img
                 src={`../images/${card.image}`}
