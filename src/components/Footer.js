@@ -1,3 +1,4 @@
+import { useState, useEffect, } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 const mediaIcons = [
@@ -24,8 +25,16 @@ const mediaIcons = [
 
 export default function Footer() {
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
 
-  const isMobile = window.innerWidth < 500;
+  // If window is resized, trigger isMobile
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 500);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //Brought into function to use isMobile
   const columns = [

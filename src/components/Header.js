@@ -15,7 +15,16 @@ export default function Header() {
   const [backdropFilter, setBackdropFilter] = useState('blur(0)');
   const [boxShadow, setBoxShadow] = useState('drop-shadow(0 0 #0000)');
 
-  const isMobile = window.innerWidth < 640;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  // If window is resized, trigger isMobile
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 640);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     //Scroll handler

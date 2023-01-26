@@ -1,35 +1,45 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import { GithubLink, DeployLink } from "./SocialLinks"
 
+const cardsData = [
+  {
+    image: "portfolio-thumbnail.webp",
+    name: "portfolio",
+    tagline: "Portfolio Website",
+    heading: "Portfolio Website",
+    description: "My portfolio website which includes my latest projects and serves as a point of contact for potential clients and employers, it's constantly updated to reflect my development progress.",
+    technologies: ["Handlebars/React", "ExpressJS", "NodeJS", "CSS/Tailwind"],
+    githubLink: "https://github.com/JoshHaywood/portfolio-website",
+    deployLink: "https://www.joshhaywood-portfolio.com/",
+    alignment: "right"
+  },
+  {
+    image: "one-messaging-thumbnail.webp",
+    name: "one-messaging",
+    tagline: "Messaging Project",
+    heading: "One messaging project",
+    description: "A real-time messaging app, developed as a research project on web communication systems advancement during my second year of university.",
+    technologies: ["Handlebars", "ExpressJS", "NodeJS", "Socket.io", "SQlite"],
+    githubLink: "https://github.com/JoshHaywood/one-messaging",
+    deployLink: "/error",
+    alignment: "left"
+  }
+];
+
 export default function FeaturedProjects(props) {
   const { sidebar, setSidebar, setProjectName } = props;
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const cardsData = [
-    {
-      image: "portfolio-thumbnail.webp",
-      name: "portfolio",
-      tagline: "Portfolio Website",
-      heading: "Portfolio Website",
-      description: "My portfolio website which includes my latest projects and serves as a point of contact for potential clients and employers, it's constantly updated to reflect my development progress.",
-      technologies: ["Handlebars/React", "ExpressJS", "NodeJS", "CSS/Tailwind"],
-      githubLink: "https://github.com/JoshHaywood/portfolio-website",
-      deployLink: "https://www.joshhaywood-portfolio.com/",
-      alignment: "right"
-    },
-    {
-      image: "one-messaging-thumbnail.webp",
-      name: "one-messaging",
-      tagline: "Messaging Project",
-      heading: "One messaging project",
-      description: "A real-time messaging app, developed as a research project on web communication systems advancement during my second year of university.",
-      technologies: ["Handlebars", "ExpressJS", "NodeJS", "Socket.io", "SQlite"],
-      githubLink: "https://github.com/JoshHaywood/one-messaging",
-      deployLink: "/error",
-      alignment: "left"
-    }
-  ];
+  // If window is resized, trigger isMobile
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     cardsData.map((card, index) => {

@@ -1,9 +1,9 @@
+import { useState, useEffect } from "react";
+import { Link }  from "react-router-dom";
 import { motion } from "framer-motion";
 
 import ScrollTo from "./utils/scrollTo";
 import Button from "@mui/material/Button";
-
-import { Link }  from "react-router-dom";
 
 const links = [
   { id: 'skills', name: 'Skills' },
@@ -17,8 +17,17 @@ export default function NavLinks(props) {
   const sidebar = props.sidebar;
   const setSidebar = props.setSidebar;
 
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   let { containerVariants, listVariants, sidebarVariants } = {};
+
+  // If window is resized, trigger isMobile
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // If sidebar is open disable scroll
   if (sidebar) {
