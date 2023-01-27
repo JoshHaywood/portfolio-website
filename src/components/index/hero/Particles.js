@@ -144,5 +144,5 @@ export default function Particles() {
     setup(); // Initialize canvas
   }, []);
 
-  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />;
+  return <canvas id="hero-background" ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />;
 };

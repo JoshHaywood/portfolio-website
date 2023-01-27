@@ -140,10 +140,7 @@ export default function Footer() {
           </a>
 
           <button
-            id="backToTop"
-            onClick={() => {
-              document.documentElement.scrollTop = 0;
-            }}
+            onClick={() => {document.documentElement.scrollTop = 0}}
             class="flex flex-row space-x-1 items-center"
           >
             <span class="text-sm text-gray-400">Back To Top</span>

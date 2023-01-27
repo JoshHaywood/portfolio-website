@@ -21,7 +21,7 @@ export default function Hero() {
   };
 
   return (
-    <div class="flex flex-col justify-center relative w-full h-screen">
+    <div class="flex flex-col justify-center relative mx-auto">
       {/* Background animation */}
       <Particles />
 
@@ -147,7 +147,7 @@ export default function Hero() {
       </div>
 
       <motion.div
-        id="scrollButton"
+        id="scroll-button"
         class="absolute bottom-0 mb-2 left-0 right-0 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

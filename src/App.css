@@ -36,6 +36,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Custom CSS from Tailwind limitations */
+@media (max-width: 450px) and (orientation: landscape) {
+  #hero-background, #message {
+    margin: 6rem 0;
+  }
+
+  #scroll-button {
+    visibility: hidden;
+  }
+}
+
 #hero-Llnk, #project a {
   background-position: 0 calc(100% - 0px)
 }
@@ -44,10 +54,10 @@ h1, h2, h3, h4, h5, h6 {
   background-size: 100% 1px;
 }
 
-#projectCard:hover h4 {
+#project-card:hover h4 {
   color: #f2584c;
 }
 
-#backToTop:hover span, #backToTop:hover g {
+#back-to-top:hover span, #back-to-top:hover g {
   text-decoration: underline;
 }

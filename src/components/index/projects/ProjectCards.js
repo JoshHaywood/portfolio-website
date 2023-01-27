@@ -176,7 +176,7 @@ export default function ProjectCards(props) {
               variants={listVariants}
               class="shadow-lg rounded bg-tertiary "
             >
-              <div id="projectCard">
+              <div id="project-card">
                 <div class="relative pt-5 pb-16 px-5 md:pb-5 lg:pb-60 h-full sm:h-[350px] md:h-[325px] w-full">
                   {/* Icons */}
                   <div class="flex justify-between pt-4">
