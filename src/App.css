@@ -35,17 +35,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
 }
 
-/* Custom CSS from Tailwind limitations */
-@media (max-width: 450px) and (orientation: landscape) {
-  #hero-background, #message {
-    margin: 6rem 0;
-  }
-
-  #scroll-button {
-    visibility: hidden;
-  }
-}
-
+/* Custom CSS */
 #hero-Llnk, #project a {
   background-position: 0 calc(100% - 0px)
 }

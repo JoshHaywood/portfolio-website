@@ -147,7 +147,6 @@ export default function Hero() {
       </div>
 
       <motion.div
-        id="scroll-button"
         class="absolute bottom-0 mb-2 left-0 right-0 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
