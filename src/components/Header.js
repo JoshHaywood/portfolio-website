@@ -69,10 +69,13 @@ export default function Header() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           src={src}
+          alt="Logo"
           onMouseEnter={() => setSrc("../images/logo-hover.png")}
           onMouseLeave={() => setSrc("../images/logo.png")}
-          onClick={() => navigate("/")}
-          alt="Logo"
+          onClick={() => {
+            navigate("/");
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           class="w-[200px] sm:w-[250px] h-auto px-2 pr-0 sm:pr-2 backdrop-blur hover:cursor-pointer"
         ></motion.img>
 
