@@ -108,6 +108,8 @@ export default function About() {
 
         {/* Developer picture */}
         <a
+          href="#" 
+          rel="noopener" 
           onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood")} 
           class="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded"
         >
