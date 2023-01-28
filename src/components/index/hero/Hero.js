@@ -1,12 +1,20 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import ResizeHandler from "../../utils/resizeHandler";
 import Particles from "./Particles";
 import ScrollTo from "../../utils/scrollTo";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
-  const isMobile = ResizeHandler(450);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 450);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 450);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //Animation Variants
   const heroVariants = {
@@ -147,6 +155,7 @@ export default function Hero() {
       </div>
 
       <motion.div
+        id="scroll-button"
         class="absolute bottom-0 mb-2 left-0 right-0 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -157,14 +166,14 @@ export default function Hero() {
         }}
       >
         <button
-          onClick={() => {ScrollTo({target: 'scrollButton', offset: 0, mobileOffset: 0 })}}
+          onClick={() => {ScrollTo({target: 'scroll-button', offset: 0, mobileOffset: 0 })}}
           class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out"
         >
           View more
         </button>
         <svg
-          onClick={() => {ScrollTo({target: 'scrollButton', offset: 0, mobileOffset: 0})}}
-          class="h-5 w-5 fill-primary mx-auto"
+          onClick={() => {ScrollTo({target: 'scroll-button', offset: 0, mobileOffset: 0})}}
+          class="h-5 w-5 fill-primary mx-auto" 
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >

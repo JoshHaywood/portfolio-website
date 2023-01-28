@@ -1,6 +1,5 @@
+import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-import ResizeHandler from "./utils/resizeHandler";
 
 const mediaIcons = [
   /* Attribution: https://fontawesome.com/icons/linkedin-in?s=&f=brands */
@@ -26,7 +25,15 @@ const mediaIcons = [
 
 export default function Footer() {
   const navigate = useNavigate();
-  const isMobile = ResizeHandler(1024);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   //Brought into function to use isMobile
   const columns = [

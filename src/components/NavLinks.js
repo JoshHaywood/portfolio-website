@@ -1,7 +1,7 @@
-import { Link }  from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useNavigate }  from "react-router-dom";
 import { motion } from "framer-motion";
 
-import ResizeHandler from "./utils/resizeHandler";
 import ScrollTo from "./utils/scrollTo";
 import Button from "@mui/material/Button";
 
@@ -13,11 +13,21 @@ const links = [
 ];
 
 export default function NavLinks(props) {
+  const navigate = useNavigate();
 
   const sidebar = props.sidebar;
   const setSidebar = props.setSidebar;
 
-  const isMobile = ResizeHandler(768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   let { containerVariants, listVariants, sidebarVariants } = {};
 
   // If sidebar is open disable scroll
@@ -151,6 +161,7 @@ export default function NavLinks(props) {
           <div
             onClick={() => {
               setSidebar(false);
+              navigate("/");
               ScrollTo({target: link.id, offset: 120, mobileOffset: 20});
             }}
             class="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
