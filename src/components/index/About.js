@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 
 import Heading from "./Heading";
-import ScrollTo from "../utils/scrollTo";
+import { ScrollTo } from "../utils/scrollHandler";
 
 const technologies = [
   {

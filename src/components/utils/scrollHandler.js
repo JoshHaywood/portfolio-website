@@ -1,4 +1,4 @@
-export default function ScrollTo(props) {
+export function ScrollTo(props) {
   const element = document.getElementById(props.target); // Target element
   const isMobile = window.innerWidth < 768;
   const offset = isMobile ? props.mobileOffset : props.offset;

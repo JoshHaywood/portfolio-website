@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import Particles from "./Particles";
-import ScrollTo from "../../utils/scrollTo";
+import { ScrollTo }  from "../../utils/scrollHandler";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
@@ -166,13 +166,13 @@ export default function Hero() {
         }}
       >
         <button
-          onClick={() => {ScrollTo({target: 'scroll-button', offset: 0, mobileOffset: 0 })}}
+          onClick={() => {ScrollTo({ target: 'scroll-button', offset: -60, mobileOffset: -55 })}}
           class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out"
         >
           View more
         </button>
         <svg
-          onClick={() => {ScrollTo({target: 'scroll-button', offset: 0, mobileOffset: 0})}}
+          onClick={() => {ScrollTo({ target: 'scroll-button', offset: -60, mobileOffset: -55 })}}
           class="h-5 w-5 fill-primary mx-auto" 
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"

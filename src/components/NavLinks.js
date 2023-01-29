@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate }  from "react-router-dom";
 import { motion } from "framer-motion";
 
-import ScrollTo from "./utils/scrollTo";
+import { ScrollTo } from "./utils/scrollHandler";
 import Button from "@mui/material/Button";
 
 const links = [
