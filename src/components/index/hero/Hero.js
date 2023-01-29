@@ -127,7 +127,7 @@ export default function Hero() {
                   },
                 }}
               >
-                View my Github
+                View my GitHub
               </Button>
             </div>
           </a>
@@ -147,7 +147,7 @@ export default function Hero() {
                   },
                 }}
               >
-                View my Linked In
+                View my LinkedIn
               </Button>
             </div>
           </a>

@@ -8,7 +8,7 @@ export function GithubLink(props) {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 496 512"
-        alt="Github logo"
+        alt="GitHub logo"
         width={props.width}
         height={props.height}
         class="text-gray-400 hover:text-primary transition duration-300 ease-in-out"

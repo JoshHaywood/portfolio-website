@@ -143,6 +143,7 @@ export default function ProjectCards(props) {
 
   return (
     <motion.div
+      id="project-cards"
       variants={containerVariants}
       initial="hidden"
       whileInView="visible"
@@ -164,7 +165,7 @@ export default function ProjectCards(props) {
           href="https://github.com/JoshHaywood?tab=repositories"
           class="font-normal text-primary hover:underline"
         >
-          View the full list
+          View all projects
         </a>
       </motion.div>
 

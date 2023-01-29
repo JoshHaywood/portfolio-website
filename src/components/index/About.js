@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import Heading from "./Heading";
-import linkHandler from "../utils/linkHandler";
+import ScrollTo from "../utils/scrollTo";
 
 const technologies = [
   {
@@ -65,17 +64,20 @@ export default function About() {
             I make use of the latest web development trends and technologies,
             and I am always looking for new ways to improve my skills. One of my
             standout achievements is creating an{" "}
-            <Link to="#" class="font-semibold text-primary hover:underline">
+            <span
+              onClick={() => { ScrollTo({ target: "projects", offset: 120, mobileOffset: 20 })}}
+              class="font-semibold text-primary hover:underline hover:cursor-pointer"
+            >
               e-commerce site
-            </Link>{" "}
+            </span>{" "}
             as part of a mixed-method study into UX and UI design, and creating
             a{" "}
-            <Link
-              to="projects/one-messaging"
-              class="font-semibold text-primary hover:underline"
+            <span
+              onClick={() => { ScrollTo({ target: "projects", offset: 120, mobileOffset: 20 })}}
+              class="font-semibold text-primary hover:underline hover:cursor-pointer"
             >
               real-time messaging system
-            </Link>
+            </span>
             , both of which received high praise from my peers and instructors.
           </p>
 
@@ -107,12 +109,7 @@ export default function About() {
         </div>
 
         {/* Developer picture */}
-        <a
-          href="#" 
-          rel="noopener" 
-          onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood")} 
-          class="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded"
-        >
+        <div class="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded">
           <motion.img
             initial={{ x: "5%", y: "5%" }}
             whileInView={{ x: 0, y: 0 }}
@@ -120,9 +117,9 @@ export default function About() {
             viewport={{ once: true }}
             src="../images/portrait.webp"
             alt="developer portrait"
-            class="w-full rounded relative bottom-3 right-3 hover:bottom-0 hover:right-0 hover:cursor-pointer transition-all duration-300 ease-in-out"
+            class="w-full rounded relative bottom-3 right-3 hover:bottom-0 hover:right-0 transition-all duration-300 ease-in-out"
           ></motion.img>
-        </a>
+        </div>
       </div>
     </motion.div>
   );

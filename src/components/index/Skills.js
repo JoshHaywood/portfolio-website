@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 import Heading from "./Heading";
-import linkHandler from "../utils/linkHandler";
 
 const cards = [
   {
@@ -54,24 +53,12 @@ export default function Skills() {
               <path d={card.path} />
             </svg>
 
-            <a 
-              href="#" 
-              onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood?tab=repositories")} 
-              rel="noopener" 
-              class="w-full"
-            >
-              <h3 class="text-xl font-medium text-white">{card.heading}</h3>
-              <p class="mt-4 text-gray-400 hover:underline">{card.text}</p>
-            </a>
+            <h3 class="text-xl font-medium text-white">{card.heading}</h3>
+            <p class="mt-4 text-gray-400 hover:cursor-default">{card.text}</p>
 
-            <a
-              href="#"
-              onClick={(e) => linkHandler(e, "https://github.com/JoshHaywood?tab=repositories")} 
-              rel="noopener"
-              class="text-sm text-gray-600 absolute bottom-8 hover:underline"
-            >
+            <div class="text-sm text-gray-600 absolute bottom-8">
               {card.projectNumber}+ projects
-            </a>
+            </div>
           </div>
         ))}
       </div>
