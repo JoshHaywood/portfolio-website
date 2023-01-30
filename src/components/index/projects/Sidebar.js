@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { GithubLink, DeployLink } from "./SocialLinks";
@@ -74,7 +73,6 @@ const projects = [
 ];
 
 export default function Sidebar(props) {
-  const navigate = useNavigate();
   const { sideBar, setSideBar, projectName } = props;
 
   return (
@@ -170,27 +168,25 @@ export default function Sidebar(props) {
                       {/* If deployLink is '/error', then the button will not be rendered */}
                       {project.deployLink !== '/error' && 
                       (
-                        <Button
-                          onClick={() => {
-                            navigate(project.deployLink);
-                            document.documentElement.scrollTop = 0;
-                          }}
-                          sx={{
-                            marginTop: "1.5rem",
-                            bgcolor: "#1f2335",
-                            width: "100%",
-                            padding: "0.75rem 1.5rem",
-                            color: "white",
-                            textTransform: "none",
-
-                            ":hover": {
+                        <a href={project.deployLink}>
+                          <Button
+                            sx={{
+                              marginTop: "1.5rem",
                               bgcolor: "#1f2335",
-                              textDecoration: "underline",
-                            },
-                          }}
-                        >
-                          View Project
-                        </Button>
+                              width: "100%",
+                              padding: "0.75rem 1.5rem",
+                              color: "white",
+                              textTransform: "none",
+
+                              ":hover": {
+                                bgcolor: "#1f2335",
+                                textDecoration: "underline",
+                              },
+                            }}
+                          >
+                            View Project
+                          </Button>
+                        </a>
                       )}
                 </div>
               </motion.div>
