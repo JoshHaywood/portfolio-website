@@ -18,13 +18,13 @@ export default function Contact() {
         {/* Heading */}
         <Heading heading="Contact" />
 
-        <p class="mt-12 text-gray-400 hover:cursor-default">
+        <p class="mt-12 text-gray-400">
           I am currently available for both project work and full-time
           employment. Currently im based in South West England with a GMT time
           zone, I am open to both remote and on-site opportunities.
         </p>
 
-        <p class="mt-4 text-gray-400 hover:cursor-default">
+        <p class="mt-4 text-gray-400">
           Please don't hesitate to contact me through this online form or my{" "}
           <a
             href="https://www.linkedin.com/in/josh-haywood-b70a24233/"

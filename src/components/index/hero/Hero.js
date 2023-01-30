@@ -45,7 +45,7 @@ export default function Hero() {
               delay: 0.9,
               ease: "easeInOut",
             }}
-            class="tracking-wide font-normal text-lg text-primary hover:cursor-default"
+            class="tracking-wide font-normal text-lg text-primary"
           >
             Hi, my name is
           </motion.h1>
@@ -59,7 +59,7 @@ export default function Hero() {
               delay: 1.1,
               ease: "easeInOut",
             }}
-            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white hover:cursor-default"
+            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
           >
             Josh Haywood
           </motion.h2>
@@ -73,7 +73,7 @@ export default function Hero() {
               delay: 1.3,
               ease: "easeInOut",
             }}
-            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400 hover:cursor-default"
+            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
           >
             An aspiring web developer
           </motion.h2>
@@ -87,7 +87,7 @@ export default function Hero() {
               delay: 1.5,
               ease: "easeInOut",
             }}
-            class="mt-6 tracking-wide text-xl max-w-lg text-gray-400 hover:cursor-default"
+            class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
           >
             I am currently a Web Development student at{" "}
             <a id="hero-link" href="https://www.falmouth.ac.uk/">

@@ -54,7 +54,7 @@ export default function Skills() {
             </svg>
 
             <h3 class="text-xl font-medium text-white">{card.heading}</h3>
-            <p class="mt-4 text-gray-400 hover:cursor-default">{card.text}</p>
+            <p class="mt-4 text-gray-400">{card.text}</p>
 
             <div class="text-sm text-gray-600 absolute bottom-8">
               {card.projectNumber}+ projects
