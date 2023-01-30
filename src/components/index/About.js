@@ -27,7 +27,9 @@ const technologies = [
   },
 ];
 
-export default function About() {
+export default function About(props) {
+  const { sidebar, setSidebar, setProjectName } = props;
+
   const isSmallMobile = window.innerWidth < 450;
 
   return (
@@ -73,7 +75,10 @@ export default function About() {
             as part of a mixed-method study into UX and UI design, and creating
             a{" "}
             <span
-              onClick={() => { ScrollTo({ target: "projects", offset: 120, mobileOffset: 20 })}}
+              onClick={() => {
+                setSidebar(!sidebar);
+                setProjectName("one-messaging");
+              }}
               class="font-semibold text-primary hover:underline hover:cursor-pointer"
             >
               real-time messaging system

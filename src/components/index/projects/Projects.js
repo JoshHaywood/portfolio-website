@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
 
 import Heading from "../Heading";
@@ -7,8 +6,7 @@ import Sidebar from "./Sidebar";
 import FeaturedProjects from "./FeaturedProjects";
 
 export default function Projects(props) {
-  const { sidebar, setSidebar } = props;
-  const [projectName, setProjectName] = useState("");
+  const { sidebar, setSidebar, projectName, setProjectName } = props;
 
   return (
     <div>

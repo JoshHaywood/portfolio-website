@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Helmet } from "react-helmet";
 
 import Hero from "../components/index/hero/Hero";
@@ -14,8 +13,8 @@ const components = [
   { name: "Contact", component: Contact },
 ];
 
-export default function Index() {
-  const [sidebar, setSidebar] = useState(false);
+export default function Index(props) {
+  const { sidebar, setSidebar, projectName, setProjectName } = props;
 
   // If sidebar is open disable scroll
   if (sidebar) {
@@ -46,9 +45,9 @@ export default function Index() {
 
         <div class="max-w-[1100px] mt-20 sm:mt-28 mb-36 md:mb-56 lg:mb-64 mx-auto px-5 xl:px-0 space-y-32 md:space-y-48 xl:space-y-56">
           {components.map((component, index) =>
-            // If index is 2, render Projects component with sidebar state
-            index === 2 ? (
-              <Projects key={index} sidebar={sidebar} setSidebar={setSidebar} />
+            // If index is 0 or 2, render About and Projects component with sidebar state
+            index === 0 || index === 2 ? (
+              <component.component key={index} sidebar={sidebar} setSidebar={setSidebar} projectName={projectName} setProjectName={setProjectName} />
             ) : (
               <component.component key={index} />
             )

@@ -25,8 +25,11 @@ const mediaIcons = [
   },
 ];
 
-export default function Footer() {
+export default function Footer(props) {
+  const { sidebar, setSidebar, projectName, setProjectName } = props;
   const navigate = useNavigate();
+  
+  const [src, setSrc] = useState('../images/logo.png');
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
@@ -50,17 +53,17 @@ export default function Footer() {
     {
       heading: "Projects",
       links: [
-        { label: "Portfolio", target: "project" },
-        { label: "Arduino", target: "project-cards" },
-        { label: "Student Survival Store", target: "project-cards" },
+        { label: "Portfolio", target: "portfolio" },
+        { label: "Arduino", target: "arduino" },
+        { label: "Student Survival Store", target: "student-survival-store" },
       ],
     },
     {
       containerStyle: !isMobile && "flex flex-col justify-end",
       links: [
-        { label: "One Messaging", target: "project" },
-        { label: "Esports Center", target: "project-cards" },
-        { label: "Game Review", target: "project-cards" },
+        { label: "One Messaging", target: "one-messaging" },
+        { label: "Esports Center", target: "esports-center" },
+        { label: "Game Review", target: "game-review" },
       ],
     },
   ];
@@ -74,8 +77,10 @@ export default function Footer() {
             <div class="-ml-6 md:w-1/3">
               <div class="px-6">
                 <img
-                  src="../images/logo.png"
+                  src={src}
                   alt="Logo"
+                  onMouseEnter={() => setSrc("../images/logo-hover.png")}
+                  onMouseLeave={() => setSrc("../images/logo.png")}
                   onClick={() => navigate("/")}
                   class="w-[185px] h-auto hover:cursor-pointer"
                 ></img>
@@ -124,21 +129,37 @@ export default function Footer() {
                     </h4>
 
                     {/* Links */}
-                    {column.links.map((link, index) => (
-                      <div
-                        key={index}
-                        onClick={() => {
-                          ScrollTo({
-                            target: link.target,
-                            offset: 120,
-                            mobileOffset: 20,
-                          });
-                        }}
-                        class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
-                      >
-                        {link.label}
-                      </div>
-                    ))}
+                    {/* If pages column use scroll to else open sidebar */}
+                    {index < 1 ? (
+                      column.links.map((link, index) => (
+                        <div
+                          key={index}
+                          onClick={() => {
+                            ScrollTo({
+                              target: link.target,
+                              offset: 120,
+                              mobileOffset: 20,
+                            });
+                          }}
+                          class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
+                        >
+                          {link.label}
+                        </div>
+                      ))
+                    ) : (
+                      column.links.map((link, index) => (
+                        <div
+                          key={index}
+                          onClick={() => {
+                            setSidebar(!sidebar);
+                            setProjectName(link.target);
+                          }}
+                          class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
+                        >
+                          {link.label}
+                        </div>
+                      ))
+                    )}
                   </div>
                 ))}
               </div>
