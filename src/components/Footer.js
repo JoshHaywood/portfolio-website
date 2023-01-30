@@ -26,7 +26,7 @@ const mediaIcons = [
 ];
 
 export default function Footer(props) {
-  const { sidebar, setSidebar, projectName, setProjectName } = props;
+  const { sidebar, setSidebar, setProjectName } = props;
   const navigate = useNavigate();
   
   const [src, setSrc] = useState('../images/logo.png');

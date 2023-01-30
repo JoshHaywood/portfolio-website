@@ -63,7 +63,6 @@ function App() {
       <Footer
         sidebar={sidebar}
         setSidebar={setSidebar}
-        projectName={projectName}
         setProjectName={setProjectName}
       />
     </>
