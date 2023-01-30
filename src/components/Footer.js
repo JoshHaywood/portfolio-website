@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { ScrollTo } from "./utils/scrollHandler";
 
@@ -43,7 +43,7 @@ export default function Footer() {
       heading: "Sections",
       links: [
         { label: "About", target: "about" },
-        { label: "Project-cards", target: "projects" },
+        { label: "Projects", target: "projects" },
         { label: "Contact", target: "contact" },
       ],
     },
@@ -89,8 +89,8 @@ export default function Footer() {
                 {/* Media icons */}
                 <div class="flex mt-4 -mx-2">
                   {mediaIcons.map((icon, index) => (
-                    <Link
-                      to={icon.path}
+                    <a
+                      href={icon.path}
                       key={index}
                       class="mx-2"
                       aria-label={icon.label}
@@ -104,7 +104,7 @@ export default function Footer() {
                       >
                         <path d={icon.svg}></path>
                       </svg>
-                    </Link>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function Footer() {
                     <h4
                       class={`${
                         isMobile ? "my-4" : "mb-4"
-                      } text-base font-medium text-gray-300`}
+                      } text-base font-semibold text-gray-300`}
                     >
                       {column.heading}
                     </h4>
@@ -134,7 +134,7 @@ export default function Footer() {
                             mobileOffset: 20,
                           });
                         }}
-                        class="mb-3 block text-sm text-gray-400 hover:underline"
+                        class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
                       >
                         {link.label}
                       </div>
@@ -149,16 +149,14 @@ export default function Footer() {
         {/* Footnote */}
         <div class="flex py-5 justify-between border-t border-primary">
           <a
-            class="text-sm text-gray-400 hover:underline"
             href="https://www.joshhaywood-portfolio.com/"
+            class="text-sm text-gray-400 hover:underline"
           >
             © Josh Haywood {new Date().getFullYear()}
           </a>
 
           <button
-            onClick={() => {
-              document.documentElement.scrollTop = 0;
-            }}
+            onClick={() => {document.documentElement.scrollTop = 0}}
             class="flex flex-row space-x-1 items-center"
           >
             <span class="text-sm text-gray-400">Back To Top</span>

@@ -6,8 +6,8 @@ import { ScrollTo } from "./utils/scrollHandler";
 import Button from "@mui/material/Button";
 
 const links = [
-  { id: 'skills', name: 'Skills' },
   { id: 'about', name: 'About' },
+  { id: 'skills', name: 'Skills' },
   { id: 'projects', name: 'Projects' },
   { id: 'contact', name: 'Contact' },
 ];

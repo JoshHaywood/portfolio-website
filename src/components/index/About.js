@@ -82,7 +82,7 @@ export default function About() {
           </p>
 
           {/* Technologies list */}
-          <p class="font-normal text-gray-400">
+          <p class="font-normal text-gray-400 hover:cursor-default">
             Technologies I have been using recently:
           </p>
 
@@ -98,7 +98,7 @@ export default function About() {
                       <div class="h-2 w-2 bg-primary rotate-45 transform origin-top-left"></div>
                     </div>
 
-                    <span class="text-sm font-normal text-gray-400">
+                    <span class="text-sm font-normal text-gray-400 hover:cursor-default">
                       {technology.label}
                     </span>
                   </li>
