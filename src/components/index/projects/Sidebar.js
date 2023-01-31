@@ -87,7 +87,7 @@ export default function Sidebar(props) {
                 exit={{ x: "100%"}}
                 key={index}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-10 overflow-y-scroll bg-secondary"
+                class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary"
               >
                 {/* Navigation */}
                 <div class="z-50 flex flex-row justify-between">
