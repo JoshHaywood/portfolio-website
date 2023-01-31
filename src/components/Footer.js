@@ -177,6 +177,7 @@ export default function Footer(props) {
           </a>
 
           <button
+            id="back-to-top"
             onClick={() => {document.documentElement.scrollTop = 0}}
             class="flex flex-row space-x-1 items-center"
           >
