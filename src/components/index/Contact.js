@@ -27,7 +27,7 @@ export default function Contact() {
         <p class="mt-4 text-gray-400">
           Please don't hesitate to contact me through this online form or my{" "}
           <a
-            href="https://www.linkedin.com/in/josh-haywood-b70a24233/"
+            href="https://www.linkedin.com/in/josh-haywood"
             class="font-semibold text-primary hover:underline"
           >
             LinkedIn profile
@@ -38,7 +38,7 @@ export default function Contact() {
         {/* Contact buttons */}
         <div class="flex flex-col sm:flex-row lg:flex-col xl:flex-row space-y-5 sm:space-y-0 lg:space-y-5 xl:space-y-0 sm:space-x-5 lg:space-x-0 xl:space-x-5 pt-8">
           <a
-            href="https://www.linkedin.com/in/josh-haywood-b70a24233"
+            href="https://www.linkedin.com/in/josh-haywood"
             class="w-full sm:w-3/5 xl:w-2/5"
           >
             <Button class="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 transition duration-300 ease-in-out bg-tertiary">

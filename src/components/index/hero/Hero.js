@@ -132,7 +132,7 @@ export default function Hero() {
             </div>
           </a>
 
-          <a href="https://www.linkedin.com/in/josh-haywood-b70a24233/">
+          <a href="https://www.linkedin.com/in/josh-haywood">
             <div class="flex">
               <Button
                 sx={{
