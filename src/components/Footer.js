@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 
 import { ScrollTo } from "./utils/scrollHandler";
 
@@ -30,15 +31,7 @@ export default function Footer(props) {
   const navigate = useNavigate();
   
   const [src, setSrc] = useState('../images/logo.png');
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 1024);
-    }
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   //Brought into function to use isMobile
   const columns = [

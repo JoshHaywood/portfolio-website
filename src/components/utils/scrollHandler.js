@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 
 export function ScrollTo(props) {
   const element = document.getElementById(props.target); // Target element
-  const isMobile = window.innerWidth < 768;
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  
   const offset = isMobile ? props.mobileOffset : props.offset;
 
   //Scroll to element with offset of -120px

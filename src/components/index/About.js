@@ -1,3 +1,4 @@
+import { useMediaQuery } from 'react-responsive'
 import { motion } from "framer-motion";
 
 import Heading from "./Heading";
@@ -30,7 +31,7 @@ const technologies = [
 export default function About(props) {
   const { sidebar, setSidebar, setProjectName } = props;
 
-  const isSmallMobile = window.innerWidth < 450;
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 500px)" });
 
   return (
     <motion.div

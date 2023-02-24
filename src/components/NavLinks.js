@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { Link, useNavigate }  from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 import { motion } from "framer-motion";
 
 import { ScrollTo } from "./utils/scrollHandler";
@@ -18,15 +18,7 @@ export default function NavLinks(props) {
   const sidebar = props.sidebar;
   const setSidebar = props.setSidebar;
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   let { containerVariants, listVariants, sidebarVariants } = {};
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useMediaQuery } from 'react-responsive'
 import { motion } from "framer-motion";
 
 import Particles from "./Particles";
@@ -6,15 +6,7 @@ import { ScrollTo }  from "../../utils/scrollHandler";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 450);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 450);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isSmallMobile = useMediaQuery({ query: "(max-width: 450px)" });
 
   //Animation Variants
   const heroVariants = {
@@ -109,7 +101,7 @@ export default function Hero() {
             delay: 1.5,
             ease: "easeInOut",
           }}
-          class={`${isMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"}`}
+          class={`${isSmallMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"}`}
         >
           <a href="https://github.com/JoshHaywood/">
             <div class="flex sm:pr-0">
@@ -120,7 +112,7 @@ export default function Hero() {
                   border: "4px solid #1f2335",
                   backgroundColor: "#1f2335",
                   color: "white",
-                  width: isMobile ? "100%" : "175px",
+                  width: isSmallMobile ? "100%" : "175px",
 
                   ":hover": {
                     bgcolor: "rgba(31, 35, 53, 0.8)",
@@ -140,7 +132,7 @@ export default function Hero() {
                   fontSize: "1rem",
                   border: "2px solid #f2584c",
                   color: "white",
-                  width: isMobile ? "100%" : "175px",
+                  width: isSmallMobile ? "100%" : "175px",
 
                   ":hover": {
                     bgcolor: "rgba(242, 88, 76, 0.3)",

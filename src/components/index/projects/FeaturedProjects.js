@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useMediaQuery } from 'react-responsive'
 import { motion } from "framer-motion";
 
 import { GithubLink, DeployLink } from "./SocialLinks"
@@ -30,15 +30,7 @@ const cardsData = [
 
 export default function FeaturedProjects(props) {
   const { sidebar, setSidebar, setProjectName } = props;
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 768);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   return (
     cardsData.map((card, index) => {

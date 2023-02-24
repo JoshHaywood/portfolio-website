@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive'
 
 import { Squash as Hamburger } from "hamburger-react";
 import NavLinks from "./NavLinks";
@@ -13,16 +14,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
-
-  useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth < 640);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  
   //Scroll handler
   useEffect(() => {
     const handleScroll = () => {
