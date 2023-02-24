@@ -15,7 +15,7 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
-  
+
   //Scroll handler
   useEffect(() => {
     const handleScroll = () => {
@@ -32,7 +32,12 @@ export default function Header() {
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    // If sidebar is open, disable scroll
+    if (sidebar) {
+      window.removeEventListener("scroll", handleScroll);
+    } else {
+      window.addEventListener("scroll", handleScroll, { passive: true });
+    };
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
   
