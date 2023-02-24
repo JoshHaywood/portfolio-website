@@ -103,7 +103,7 @@ export default function NavLinks(props) {
                 <div
                   onClick={() => {
                     setSidebar(false);
-                    ScrollTo({ target: link.id, offset: 120, mobileOffset: 20 });
+                    ScrollTo({ target: link.id, offset: 120, mobileOffset: 80 });
                   }}
                   class="text-lg mr-2.5 font-semibold my-10 text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
                 >
@@ -154,7 +154,7 @@ export default function NavLinks(props) {
             onClick={() => {
               setSidebar(false);
               navigate("/");
-              ScrollTo({target: link.id, offset: 120, mobileOffset: 20});
+              ScrollTo({ target: link.id, offset: 120, mobileOffset: 80 });
             }}
             class="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
           >

@@ -68,7 +68,7 @@ export default function About(props) {
             and I am always looking for new ways to improve my skills. One of my
             standout achievements is creating an{" "}
             <span
-              onClick={() => { ScrollTo({ target: "projects", offset: 120, mobileOffset: 20 })}}
+              onClick={() => { ScrollTo({ target: "projects", offset: 120, mobileOffset: 80 })}}
               class="font-semibold text-primary hover:underline hover:cursor-pointer"
             >
               e-commerce site

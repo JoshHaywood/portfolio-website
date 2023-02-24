@@ -131,7 +131,7 @@ export default function Footer(props) {
                             ScrollTo({
                               target: link.target,
                               offset: 120,
-                              mobileOffset: 20,
+                              mobileOffset: 80,
                             });
                           }}
                           class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
