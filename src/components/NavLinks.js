@@ -170,7 +170,7 @@ export default function NavLinks(props) {
         class="md:mr-3"
       >
         <Button
-          href={`${process.env.PUBLIC_URL}/documents/cv.pdf`}
+          href={`${process.env.PUBLIC_URL}/documents/josh-haywood-cv.pdf`}
           target="_blank"
           sx={{
             textTransform: "none",
