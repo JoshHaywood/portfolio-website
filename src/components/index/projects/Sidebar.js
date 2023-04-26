@@ -12,8 +12,19 @@ const projects = [
     tagline: 'Highlighting my skills and projects',
     projectImage: '../images/portfolio-thumbnail.webp',
     overview: 'This project was a website that I created to use as a marketing tool to showcase my relevant experience and various projects that I have undertaken. The goal was to demonstrate my range of abilities to potential employers or people of interest, and to serve as a hub for my various social profiles on Github, LinkedIn, and email.',
-    structure: ['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js'],
+    structure: ['HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Node.js'],
     role: `I created a personal portfolio website to showcase my skills and experience to potential employers. I faced challenges with Handlebars and difficulties with the design of the page layouts, but overcame them by converting to React, researching other developers' work and using Framer Motion for animations. The end result was a sleek and visually appealing website that effectively highlighted my abilities and experience.`,
+  },
+  {
+    projectName: 'tech-terminus',
+    repoLink: 'https://github.com/JoshHaywood/tech-terminus',
+    deployLink: 'http://www.tech-terminus.me/',
+    heading: 'Ecommerce website',
+    tagline: 'Exploring the science of UX through ecommerce Design',
+    projectImage: '../images/tech-terminus-index.png',
+    overview: 'This was an ecommerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited knowledge of developing.',
+    structure: [ 'HTML', 'React', 'Tailwinds CSS', 'Material UI', 'Javascript', 'Express.js', 'Node.js', 'MySQL' ],
+    role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
   },
   {
     projectName: 'arduino',
@@ -34,7 +45,7 @@ const projects = [
     tagline: 'Surviving student life, made easy',
     projectImage: '../images/student-survival-store-index.webp',
     overview: "This was a group project in my second year of university that centered around a business that provided a subscription-based box of student-related supplies. My role was front-end development and documentation handling. I maintained our team's agile approach by documenting each stand-up's notes, targets, target status, and any issues that occurred for that week. This project was my first time using React, so my development was not as substantial as normal, but I did create components such as the mobile header and implemented the user profile modal.",
-    structure: [ 'HTML', 'React', 'Tailwinds CSS', 'Javascript', 'Express.js', 'SQLite'],
+    structure: [ 'HTML', 'React', 'Tailwinds CSS', 'Javascript', 'Express.js', 'Node.js', 'SQLite'],
     role: 'I helped create an e-commerce website to sell student survival kits. My role was focused on the development and design of the website, as well as working with a team to create the product offerings. One of the main challenges was ensuring a smooth and user-friendly checkout process, which was addressed by implementing a variety of payment options and testing them thoroughly.',
   },
   {
@@ -45,7 +56,7 @@ const projects = [
     tagline: 'Real-time communication, at your fingertips',
     projectImage: '../images/one-messaging-login-thumbnail.webp',
     overview: 'This was an individual project in my second year of university that focused on creating a distributed system, which is an application that is distributed across multiple systems. In addition to creating the project, I was also required to provide a technical poster detailing the project and a structured report documenting the creation process. The project I chose to create was a real-time messaging app.',
-    structure: [ 'HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Socket.io', 'SQLite' ],
+    structure: [ 'HTML', 'Handlebars', 'CSS', 'Javascript', 'Express.js', 'Node.js', 'Socket.io', 'SQLite' ],
     role: `I worked on a messaging app that aimed to bring all communication platforms in one place. My role included the development of the app's core functionality and implementing a clean and intuitive user interface. One of the challenges faced was creating compatibility with a variety of different messaging platforms, which was overcome by researching and implementing APIs.`,
   },
   {
@@ -54,21 +65,10 @@ const projects = [
     deployLink: '/error',
     heading: 'Esports Stats Tracking Website',
     tagline: 'Leading the way in Esports statistics',
-    projectImage: '../images/esports-center-hero-thumbnail.webp',
+    projectImage: '../images/tech-terminus-thumbnail.jpg',
     overview: 'This was a group project in my second year with the same team as the Student Survival Store project. Similarly to that project, the Esports Center was first presented through a business plan in which each team member pitched their own ideas. My own pitch was for the Esports Center, a statistics tracking website focused on the sporting genre of esports, or the competitive play of video games. My role in the project was front-end development and design, as well as documentation.',
-    structure: [ 'HTML', 'React', 'CSS', 'Material UI', 'Javascript', 'Express.js', 'MySQL' ],
+    structure: [ 'HTML', 'React', 'CSS', 'Material UI', 'Javascript', 'Express.js', 'Node.js', 'MySQL' ],
     role: `I assisted in creating a web platform for a local e-sport center, where users can find information about tournaments and events, as well as register and pay for them online. My role included working on the design and development of the website, as well as implementing a system for tournament registration and payment. One of the main challenges was ensuring the security and reliability of the payment system, which was addressed by using a well-known and secure payment gateway.`,
-  },
-  {
-    projectName: 'game-review',
-    repoLink: 'https://github.com/JoshHaywood/game-review-app',
-    deployLink: 'https://game-review-application.herokuapp.com/',
-    heading: 'Video Game Review Platform',
-    tagline: 'Reviewing the latest games, together',
-    projectImage: '../images/review-thumbnail.webp',
-    overview: 'This was a side project I worked on aimed at creating a reviewing website where I could review video games of my choice.',
-    structure: ['HTML', 'React', 'CSS', 'Tailwind', 'Javascript'],
-    role: 'I developed a website for a game review blog, where users can find reviews, trailers, and information about the latest games. My responsibilities included designing and developing the website, as well as creating the content for the blog. One of the challenges was creating an efficient system for displaying and sorting the large amount of game information, which was addressed by implementing a search and filter feature.',
   },
 ];
 
@@ -124,7 +124,7 @@ export default function Sidebar(props) {
                         {project.heading}
                       </h1>
 
-                      <div class="mt-4 text-gray-400">
+                      <div class="mt-2 text-gray-400">
                         {project.tagline}
                       </div>
 

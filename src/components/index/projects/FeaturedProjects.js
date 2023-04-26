@@ -16,14 +16,14 @@ const cardsData = [
     alignment: "right"
   },
   {
-    image: "one-messaging-thumbnail.webp",
-    name: "one-messaging",
-    tagline: "Messaging Project",
-    heading: "One messaging project",
-    description: "A real-time messaging app, developed as a research project on web communication systems advancement during my second year of university.",
-    technologies: ["Handlebars", "ExpressJS", "NodeJS", "Socket.io", "SQlite"],
-    githubLink: "https://github.com/JoshHaywood/one-messaging",
-    deployLink: "/error",
+    image: "tech-terminus-thumbnail.jpg",
+    name: "tech-terminus",
+    tagline: "Ecommerce Website",
+    heading: "Dissertation project",
+    description: "Artefact A of an A/B test used as part of my scientific study on the impact of interfaces and design on user experiences in web-based applications.",
+    technologies: ["React", "ExpressJS", "NodeJS", "Axios", "MySQL"],
+    githubLink: "https://github.com/JoshHaywood/tech-terminus",
+    deployLink: "http://www.tech-terminus.me/",
     alignment: "left"
   }
 ];
@@ -38,7 +38,7 @@ export default function FeaturedProjects(props) {
         <div
           key={index}
           onClick={() => {setProjectName(card.name)}}
-          class={`${card.alignment === `right` ? `md:flex-row-reverse bg-[url('../public/images/portfolio-thumbnail.webp')]` : `bg-[url('../public/images/one-messaging-thumbnail.webp')]`} relative md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row hover:cursor-pointer`}
+          class={`${card.alignment === `right` ? `md:flex-row-reverse bg-[url('../public/images/portfolio-thumbnail.webp')]` : `bg-[url('../public/images/tech-terminus-thumbnail.jpg')]`} relative md:bg-none bg-fit bg-no-repeat bg-center shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:shadow-none md:flex md:flex-row hover:cursor-pointer`}
         >
           {/* Image */}
           <motion.div      

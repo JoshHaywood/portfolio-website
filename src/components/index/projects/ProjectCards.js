@@ -23,6 +23,25 @@ const projectCards = [
     ],
   },
   {
+    projectName: "tech-terminus",
+    projectLink: "http://www.tech-terminus.me/",
+    repoLink: "https://github.com/JoshHaywood/tech-terminus",
+    heading: "Ecommerce Website",
+    text: "An Ecommerce website that I developed during my research and development dissertation, showcasing standard ecommerce features using a restful API.",
+
+    technologies: [
+      {
+        item: "React",
+      },
+      {
+        item: "Express",
+      },
+      {
+        item: "MySQL",
+      },
+    ],
+  },
+  {
     projectName: "arduino",
     projectLink: "/error",
     repoLink: "https://github.com/JoshHaywood/arduino-project",
@@ -95,22 +114,6 @@ const projectCards = [
       },
       {
         item: "MySQL",
-      },
-    ],
-  },
-  {
-    projectName: "game-review",
-    projectLink: "https://game-review-application.herokuapp.com/",
-    repoLink: "https://github.com/JoshHaywood/game-review-app",
-    heading: "Video Game Review Platform",
-    text: "A web project that allows users to review recently released video games, showcasing my proficiency in functional-based React and web design.",
-
-    technologies: [
-      {
-        item: "React",
-      },
-      {
-        item: "TailwindCSS",
       },
     ],
   },

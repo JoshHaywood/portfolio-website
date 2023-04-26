@@ -47,16 +47,16 @@ export default function Footer(props) {
       heading: "Projects",
       links: [
         { label: "Portfolio", target: "portfolio" },
+        { label: "Tech Terminus", target: "tech-terminus" },
         { label: "Arduino", target: "arduino" },
-        { label: "Student Survival Store", target: "student-survival-store" },
       ],
     },
     {
       containerStyle: !isMobile && "flex flex-col justify-end",
       links: [
+        { label: "Student Survival Store", target: "student-survival-store" },
         { label: "One Messaging", target: "one-messaging" },
         { label: "Esports Center", target: "esports-center" },
-        { label: "Game Review", target: "game-review" },
       ],
     },
   ];
