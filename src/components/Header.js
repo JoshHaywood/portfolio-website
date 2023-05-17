@@ -39,7 +39,7 @@ export default function Header() {
       window.addEventListener("scroll", handleScroll, { passive: true });
     }
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, [lastScrollY, sidebar]);
 
   useEffect(() => {
     //If user is at the top of the page
