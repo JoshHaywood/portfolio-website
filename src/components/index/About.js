@@ -1,4 +1,4 @@
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
 import Heading from "./Heading";
@@ -6,24 +6,20 @@ import { ScrollTo } from "../utils/scrollHandler";
 
 const technologies = [
   {
+    listColumn: [{ label: "React" }, { label: "NextJS" }, { label: "SASS" }],
+  },
+  {
     listColumn: [
-      { label: 'React' },
-      { label: 'NextJS' },
-      { label: 'SASS' },
+      { label: "TailwindCSS" },
+      { label: "TypeScript" },
+      { label: "Node.js" },
     ],
   },
   {
     listColumn: [
-      { label: 'TailwindCSS' },
-      { label: 'TypeScript' },
-      { label: 'Node.js' },
-    ],
-  },
-  {
-    listColumn: [
-      { label: 'Web Sockets' },
-      { label: 'Express' },
-      { label: 'Heroku' },
+      { label: "Web Sockets" },
+      { label: "Express" },
+      { label: "Heroku" },
     ],
   },
 ];
@@ -49,18 +45,19 @@ export default function About(props) {
         {/* Background information */}
         <div class="flex flex-col space-y-4 w-full md:w-2/3 leading-7">
           <p class="text-gray-400">
-            I am a student at{" "}
+            I am a recent graduate from{" "}
             <a
               href="https://www.falmouth.ac.uk"
               class="font-semibold text-primary hover:underline"
             >
               Falmouth University
             </a>{" "}
-            from Devon, England studying for a BSc in Web Development. My main
+            with a BSc in Web Development. Located in Devon, England, my main
             interests lie in front-end, full-stack, and user interface
-            development and design. I have recently been focusing on creating
-            React and Node.js applications hosted on the cloud, as well as
-            marketing myself through my portfolio site and CV.
+            development and design. Recently, I have been focusing on creating
+            full-stack RESTful APIs with React, Node.js, and TypeScript hosted
+            on the cloud. Additionally, I have been actively marketing myself
+            through my portfolio site and CV."
           </p>
 
           <p class="text-gray-400">
@@ -68,7 +65,9 @@ export default function About(props) {
             and I am always looking for new ways to improve my skills. One of my
             standout achievements is creating an{" "}
             <span
-              onClick={() => { ScrollTo({ target: "projects", offset: 120, mobileOffset: 80 })}}
+              onClick={() => {
+                ScrollTo({ target: "projects", offset: 120, mobileOffset: 80 });
+              }}
               class="font-semibold text-primary hover:underline hover:cursor-pointer"
             >
               e-commerce site
@@ -92,7 +91,8 @@ export default function About(props) {
             Technologies I have been using recently:
           </p>
 
-          <div class={`${
+          <div
+            class={`${
               isSmallMobile ? "grid-cols-1 gap-4" : "grid-cols-3 gap-10"
             } grid bg-tertiary px-5 pb-5`}
           >
@@ -129,4 +129,4 @@ export default function About(props) {
       </div>
     </motion.div>
   );
-};
+}

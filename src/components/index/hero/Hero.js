@@ -1,8 +1,8 @@
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
 import Particles from "./Particles";
-import { ScrollTo }  from "../../utils/scrollHandler";
+import { ScrollTo } from "../../utils/scrollHandler";
 import Button from "@mui/material/Button";
 
 export default function Hero() {
@@ -81,14 +81,14 @@ export default function Hero() {
             }}
             class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
           >
-            I am currently a Web Development student at{" "}
+            I'm a recent graduate at{" "}
             <a id="hero-link" href="https://www.falmouth.ac.uk/">
               <span class="font-semibold text-xl text-primary hover:underline">
                 Falmouth University
               </span>
             </a>{" "}
-            in my final year of a BSc. At present, I am focused on specializing
-            in full-stack JavaScript development.
+            with a BSc in web development. At present, I am focused on
+            specializing in front-end JavaScript development.
           </motion.p>
         </div>
 
@@ -101,7 +101,11 @@ export default function Hero() {
             delay: 1.5,
             ease: "easeInOut",
           }}
-          class={`${isSmallMobile ? "flex flex-col space-y-5" : "flex flex-row space-x-5"}`}
+          class={`${
+            isSmallMobile
+              ? "flex flex-col space-y-5"
+              : "flex flex-row space-x-5"
+          }`}
         >
           <a href="https://github.com/JoshHaywood/">
             <div class="flex sm:pr-0">
@@ -158,14 +162,26 @@ export default function Hero() {
         }}
       >
         <button
-          onClick={() => {ScrollTo({ target: 'scroll-button', offset: -60, mobileOffset: -55 })}}
+          onClick={() => {
+            ScrollTo({
+              target: "scroll-button",
+              offset: -60,
+              mobileOffset: -55,
+            });
+          }}
           class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out"
         >
           View more
         </button>
         <svg
-          onClick={() => {ScrollTo({ target: 'scroll-button', offset: -60, mobileOffset: -55 })}}
-          class="h-5 w-5 fill-primary mx-auto" 
+          onClick={() => {
+            ScrollTo({
+              target: "scroll-button",
+              offset: -60,
+              mobileOffset: -55,
+            });
+          }}
+          class="h-5 w-5 fill-primary mx-auto"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -175,4 +191,4 @@ export default function Hero() {
       </motion.div>
     </div>
   );
-};
+}
