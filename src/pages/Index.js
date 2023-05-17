@@ -22,7 +22,7 @@ export default function Index(props) {
     //Else enable scroll
   } else {
     document.body.style.overflow = "unset";
-  };
+  }
 
   return (
     <>
@@ -47,7 +47,13 @@ export default function Index(props) {
           {components.map((component, index) =>
             // If index is 0 or 2, render About and Projects component with sidebar state
             index === 0 || index === 2 ? (
-              <component.component key={index} sidebar={sidebar} setSidebar={setSidebar} projectName={projectName} setProjectName={setProjectName} />
+              <component.component
+                key={index}
+                sidebar={sidebar}
+                setSidebar={setSidebar}
+                projectName={projectName}
+                setProjectName={setProjectName}
+              />
             ) : (
               <component.component key={index} />
             )
@@ -56,4 +62,4 @@ export default function Index(props) {
       </div>
     </>
   );
-};
+}

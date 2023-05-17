@@ -175,7 +175,10 @@ export default function ProjectCards(props) {
       {/* Project cards */}
       <div class="space-y-4 sm:space-y-0 sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 gap-4">
         {projectCards.map((card, index) => (
-          <div key={index} class="hover:-translate-y-2 transition duration-300 ease-in-out">
+          <div
+            key={index}
+            class="hover:-translate-y-2 transition duration-300 ease-in-out"
+          >
             <motion.div
               variants={listVariants}
               class="shadow-lg rounded bg-tertiary "
@@ -234,7 +237,9 @@ export default function ProjectCards(props) {
                     {card.technologies.map((tech, index) => (
                       <li key={index}>
                         <div
-                          onClick={() => {setSidebar(!sidebar)}}
+                          onClick={() => {
+                            setSidebar(!sidebar);
+                          }}
                           class="text-sm text-gray-500 hover:cursor-pointer"
                         >
                           {tech.item}
@@ -250,4 +255,4 @@ export default function ProjectCards(props) {
       </div>
     </motion.div>
   );
-};
+}

@@ -139,7 +139,7 @@ export default function Contact() {
             backgroundColor: "#1f2335",
             color: "white",
             textTransform: "none",
-            
+
             ":hover": {
               bgcolor: "rgba(242, 88, 76, 0.3)",
             },
@@ -150,4 +150,4 @@ export default function Contact() {
       </form>
     </motion.div>
   );
-};
+}

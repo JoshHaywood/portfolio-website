@@ -1,12 +1,15 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 export default function Message(props) {
   const navigate = useNavigate();
 
   return (
-    <div id="message" class="h-screen flex flex-col text-center justify-center space-y-10 px-5 sm:px-0">
+    <div
+      id="message"
+      class="h-screen flex flex-col text-center justify-center space-y-10 px-5 sm:px-0"
+    >
       {/* Heading and message */}
       <h1 class="text-6xl font-semibold text-white">{props.heading}</h1>
       <h2 class="text-xl text-gray-400">{props.message}</h2>
@@ -33,4 +36,4 @@ export default function Message(props) {
       </Button>
     </div>
   );
-};
+}

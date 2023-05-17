@@ -4,4 +4,4 @@ export default function Heading(props) {
       {props.heading}
     </h2>
   );
-};
+}

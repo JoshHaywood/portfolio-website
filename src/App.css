@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 * {
@@ -16,13 +16,19 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
+html,
+body {
   max-width: 100vw;
   background-color: #191b29;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -36,11 +42,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Custom CSS */
-#hero-Llnk, #project a {
-  background-position: 0 calc(100% - 0px)
+#hero-Llnk,
+#project a {
+  background-position: 0 calc(100% - 0px);
 }
 
-#hero-link:hover, #project:hover a {
+#hero-link:hover,
+#project:hover a {
   background-size: 100% 1px;
 }
 
@@ -48,6 +56,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #f2584c;
 }
 
-#back-to-top:hover span, #back-to-top:hover g {
+#back-to-top:hover span,
+#back-to-top:hover g {
   text-decoration: underline;
 }

@@ -47,4 +47,4 @@ export function DeployLink(props) {
       </svg>
     </a>
   );
-};
+}

@@ -9,9 +9,9 @@ export default function Particles() {
     const ctx = canvas.getContext("2d");
     const w = (canvas.width = canvas.clientWidth);
     const h = (canvas.height = canvas.clientHeight);
-    
+
     const points = [];
-    const amount = 320; 
+    const amount = 320;
     const speed = 8;
     const size = 1;
     const lineWidth = 0.1;
@@ -19,14 +19,18 @@ export default function Particles() {
     const randomSize = 0.5;
 
     // Update canvas dimensions and points on resize
-    window.addEventListener("resize", () => {
-      const w = (canvas.width = canvas.clientWidth);
-      const h = (canvas.height = canvas.clientHeight);
+    window.addEventListener(
+      "resize",
+      () => {
+        const w = (canvas.width = canvas.clientWidth);
+        const h = (canvas.height = canvas.clientHeight);
 
-      // Point color
-      ctx.fillStyle = "hsl(0, 0%, 50%)";
-      ctx.fillRect(0, 0, w, h);
-    }, false);
+        // Point color
+        ctx.fillStyle = "hsl(0, 0%, 50%)";
+        ctx.fillRect(0, 0, w, h);
+      },
+      false
+    );
 
     // Canvas setup
     function setup() {
@@ -52,15 +56,15 @@ export default function Particles() {
       ctx.fillRect(0, 0, w, h);
 
       draw();
-    };
+    }
 
     // Draw points and connections on canvas
     function draw() {
       ctx.globalCompositeOperation = "source-over";
 
       ctx.fillStyle = "#191b29"; // Canvas background color
-      ctx.fillRect(0, 0, w, h);  
-  
+      ctx.fillRect(0, 0, w, h);
+
       ctx.lineWidth = lineWidth;
       ctx.fillStyle = "hsl(0, 0%, 50%)"; // Point color
 
@@ -100,7 +104,7 @@ export default function Particles() {
       });
 
       window.requestAnimationFrame(draw);
-    };
+    }
 
     // Point class to represent and draw dots on the canvas
     class Point {
@@ -109,7 +113,7 @@ export default function Particles() {
         this.y = y;
         this.xSpeed = xSpeed;
         this.ySpeed = ySpeed;
-      };
+      }
 
       // Draw dot on canvas
       draw() {
@@ -124,25 +128,31 @@ export default function Particles() {
         // If point goes off canvas, wrap it around to the other side
         if (this.x > w) {
           this.x = 0;
-        };
+        }
         if (this.y > h) {
           this.y = 0;
-        };
+        }
         if (this.x < 0) {
           this.x = w;
-        };
+        }
         if (this.y < 0) {
           this.y = h;
-        };
+        }
 
         ctx.beginPath();
         ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
         ctx.fill();
-      };
-    };
+      }
+    }
 
     setup(); // Initialize canvas
   }, []);
 
-  return <canvas ref={canvasRef} width={window.innerWidth} height={window.innerHeight} />;
-};
+  return (
+    <canvas
+      ref={canvasRef}
+      width={window.innerWidth}
+      height={window.innerHeight}
+    />
+  );
+}

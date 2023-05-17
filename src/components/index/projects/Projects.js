@@ -11,7 +11,7 @@ export default function Projects(props) {
   return (
     <div>
       {/* Heading */}
-      <motion.div 
+      <motion.div
         id="projects"
         initial={{ opacity: 0, y: "5%" }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -23,14 +23,14 @@ export default function Projects(props) {
 
       <div class="mt-12 space-y-10 lg:space-y-24">
         {/* Featured projects */}
-        <FeaturedProjects 
+        <FeaturedProjects
           sidebar={sidebar}
           setSidebar={setSidebar}
           setProjectName={setProjectName}
         />
 
         {/* Project cards */}
-        <ProjectCards 
+        <ProjectCards
           sidebar={sidebar}
           setSidebar={setSidebar}
           setProjectName={setProjectName}
@@ -46,4 +46,4 @@ export default function Projects(props) {
       />
     </div>
   );
-};
+}

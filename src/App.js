@@ -59,7 +59,7 @@ function App() {
           />
         ))}
       </Routes>
-      
+
       <Footer
         sidebar={sidebar}
         setSidebar={setSidebar}

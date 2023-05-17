@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useMediaQuery } from 'react-responsive'
+import { useMediaQuery } from "react-responsive";
 
 import { ScrollTo } from "./utils/scrollHandler";
 
@@ -29,8 +29,8 @@ const mediaIcons = [
 export default function Footer(props) {
   const { sidebar, setSidebar, setProjectName } = props;
   const navigate = useNavigate();
-  
-  const [src, setSrc] = useState('../images/logo.png');
+
+  const [src, setSrc] = useState("../images/logo.png");
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   //Brought into function to use isMobile
@@ -123,36 +123,34 @@ export default function Footer(props) {
 
                     {/* Links */}
                     {/* If pages column use scroll to else open sidebar */}
-                    {index < 1 ? (
-                      column.links.map((link, index) => (
-                        <div
-                          key={index}
-                          onClick={() => {
-                            ScrollTo({
-                              target: link.target,
-                              offset: 120,
-                              mobileOffset: 80,
-                            });
-                          }}
-                          class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
-                        >
-                          {link.label}
-                        </div>
-                      ))
-                    ) : (
-                      column.links.map((link, index) => (
-                        <div
-                          key={index}
-                          onClick={() => {
-                            setSidebar(!sidebar);
-                            setProjectName(link.target);
-                          }}
-                          class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
-                        >
-                          {link.label}
-                        </div>
-                      ))
-                    )}
+                    {index < 1
+                      ? column.links.map((link, index) => (
+                          <div
+                            key={index}
+                            onClick={() => {
+                              ScrollTo({
+                                target: link.target,
+                                offset: 120,
+                                mobileOffset: 80,
+                              });
+                            }}
+                            class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
+                          >
+                            {link.label}
+                          </div>
+                        ))
+                      : column.links.map((link, index) => (
+                          <div
+                            key={index}
+                            onClick={() => {
+                              setSidebar(!sidebar);
+                              setProjectName(link.target);
+                            }}
+                            class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
+                          >
+                            {link.label}
+                          </div>
+                        ))}
                   </div>
                 ))}
               </div>
@@ -171,7 +169,9 @@ export default function Footer(props) {
 
           <button
             id="back-to-top"
-            onClick={() => {document.documentElement.scrollTop = 0}}
+            onClick={() => {
+              document.documentElement.scrollTop = 0;
+            }}
             class="flex flex-row space-x-1 items-center"
           >
             <span class="text-sm text-gray-400">Back To Top</span>
@@ -197,4 +197,4 @@ export default function Footer(props) {
       </div>
     </footer>
   );
-};
+}
