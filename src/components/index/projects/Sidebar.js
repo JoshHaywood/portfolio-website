@@ -155,7 +155,7 @@ export default function Sidebar(props) {
                 .projectImage
             }
             alt="Project"
-            class="w-[80%] sm:w-[50%] h-auto"
+            class="w-full md:w-[50%] m-5 sm:m-0 h-auto"
           />
         </div>
       )}
@@ -216,12 +216,16 @@ export default function Sidebar(props) {
 
                   <div class="mt-2 text-gray-400">{project.tagline}</div>
 
-                  <img
-                    src={project.projectImage}
-                    alt="Project"
-                    onClick={() => setEnlargeImage(true)}
-                    class="w-full mt-6 rounded-lg"
-                  />
+                  <div class="mt-6 overflow-hidden rounded-lg">
+                    <div class="hover:scale-105 transition duration-300 ease-in-out">
+                      <img
+                        src={project.projectImage}
+                        alt="Project"
+                        onClick={() => setEnlargeImage(true)}
+                        class="w-full hover:cursor-pointer"
+                      />
+                    </div>
+                  </div>
 
                   <h2 class="mt-6 text-lg font-semibold text-white">
                     Overview
