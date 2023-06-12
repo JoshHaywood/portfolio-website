@@ -42,6 +42,24 @@ const projectCards = [
     ],
   },
   {
+    projectName: "realtime-messaging-app",
+    projectLink: "https://messaging-app.herokuapp.com/",
+    repoLink: "https://github.com/JoshHaywood/messaging-app",
+    heading: "Real-time Messaging App",
+    text: "An upgraded version of my previous real-time messaging app, showcasing improvements and new features. The app allows users to exchange messages instantly and interact in real-time.",
+    technologies: [
+      {
+        item: "Next.js",
+      },
+      {
+        item: "Express",
+      },
+      {
+        item: "TypeScript",
+      },
+    ],
+  },
+  {
     projectName: "freelancing-website",
     projectLink: "/error",
     repoLink: "https://github.com/JoshHaywood/pop-up-team",
@@ -76,25 +94,6 @@ const projectCards = [
       },
       {
         item: "Sqlite3",
-      },
-    ],
-  },
-  {
-    projectName: "one-messaging",
-    projectLink: "/error",
-    repoLink: "https://github.com/JoshHaywood/one-messaging",
-    heading: "Real-time Messaging App",
-    text: "A real-time messaging app developed during my second year of university, demonstrating my interest in web communication systems.",
-
-    technologies: [
-      {
-        item: "Handlebars",
-      },
-      {
-        item: "Express",
-      },
-      {
-        item: "Socket.io",
       },
     ],
   },

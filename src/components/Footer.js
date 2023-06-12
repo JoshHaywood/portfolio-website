@@ -48,14 +48,14 @@ export default function Footer(props) {
       links: [
         { label: "Portfolio", target: "portfolio" },
         { label: "Tech Terminus", target: "tech-terminus" },
-        { label: "Freelancing Website", target: "freelancing-website" },
+        { label: "Realtime Messaging App", target: "realtime-messaging-app" },
       ],
     },
     {
       containerStyle: !isMobile && "flex flex-col justify-end",
       links: [
+        { label: "Freelancing Website", target: "freelancing-website" },
         { label: "Student Survival Store", target: "student-survival-store" },
-        { label: "One Messaging", target: "one-messaging" },
         { label: "Esports Center", target: "esports-center" },
       ],
     },
