@@ -36,7 +36,7 @@ export default function Index(props) {
           onClick={() => setSidebar(false)}
           class={`${
             sidebar
-              ? `z-50 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
+              ? `z-40 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
               : `hidden`
           }`}
         ></div>

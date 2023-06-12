@@ -55,7 +55,7 @@ export default function Header() {
         onClick={() => setSidebar(false)}
         class={`${
           sidebar
-            ? `z-50 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
+            ? `z-40 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
             : `hidden`
         }`}
       ></div>
@@ -65,7 +65,7 @@ export default function Header() {
         animate={{ y: scrolled ? "-100%" : "0%" }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
         style={{ backgroundColor: sidebar ? "#1f2335" : "transparent" }}
-        class={`w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-50 backdrop-blur transition-colors duration-200 ease-in-out`}
+        class={`w-full fixed top-0 py-1 sm:py-3 px-2.5 lg:px-10 flex justify-between items-center z-40 backdrop-blur transition-colors duration-200 ease-in-out`}
       >
         {/* Logo */}
         <motion.img
@@ -85,7 +85,7 @@ export default function Header() {
 
         <div class="flex items-center mb-1">
           {/* Hamburger menu */}
-          <div class="block md:hidden z-50">
+          <div class="block md:hidden z-40">
             <Hamburger
               color="#ffffff"
               size={`${isMobile ? 25 : 30}`}

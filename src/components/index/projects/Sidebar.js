@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { GithubLink, DeployLink } from "./SocialLinks";
@@ -134,8 +135,31 @@ const projects = [
 export default function Sidebar(props) {
   const { sideBar, setSideBar, projectName } = props;
 
+  const [enlargeImage, setEnlargeImage] = useState(false);
+
   return (
     <AnimatePresence>
+      {/* Image Enlarger */}
+      {enlargeImage && (
+        <div
+          class="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col justify-center items-center bg-black bg-opacity-50"
+          onClick={() => setEnlargeImage(false)}
+        >
+          <motion.img
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            transition={{ duration: 0.2 }}
+            src={
+              projects.find((project) => project.projectName === projectName)
+                .projectImage
+            }
+            alt="Project"
+            class="w-[80%] sm:w-[50%] h-auto"
+          />
+        </div>
+      )}
+
       {sideBar &&
         projects.map((project, index) => {
           return (
@@ -146,10 +170,10 @@ export default function Sidebar(props) {
                 exit={{ x: "100%" }}
                 key={index}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                class="z-50 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary"
+                class="z-40 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary"
               >
                 {/* Navigation */}
-                <div class="z-50 flex flex-row justify-between">
+                <div class="z-40 flex flex-row justify-between">
                   {/* Attribution: https://heroicons.com/ */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -195,6 +219,7 @@ export default function Sidebar(props) {
                   <img
                     src={project.projectImage}
                     alt="Project"
+                    onClick={() => setEnlargeImage(true)}
                     class="w-full mt-6 rounded-lg"
                   />
 
