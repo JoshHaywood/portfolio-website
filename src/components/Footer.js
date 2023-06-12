@@ -48,7 +48,7 @@ export default function Footer(props) {
       links: [
         { label: "Portfolio", target: "portfolio" },
         { label: "Tech Terminus", target: "tech-terminus" },
-        { label: "Arduino", target: "arduino" },
+        { label: "Freelancing Website", target: "freelancing-website" },
       ],
     },
     {

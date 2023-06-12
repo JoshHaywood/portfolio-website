@@ -42,21 +42,21 @@ const projectCards = [
     ],
   },
   {
-    projectName: "arduino",
+    projectName: "freelancing-website",
     projectLink: "/error",
-    repoLink: "https://github.com/JoshHaywood/arduino-project",
-    heading: "Arduino Unity Game Controller",
-    text: "An interactive game and controller built with Arduino technology, showcasing my ability to merge physical components with game engines.",
+    repoLink: "https://github.com/JoshHaywood/pop-up-team",
+    heading: "Freelancing Website",
+    text: "A collaborative project I worked on as part of a group, where we developed a freelancing website to connect clients and freelancers.",
 
     technologies: [
       {
-        item: "Unity",
+        item: "React",
       },
       {
-        item: "Uduino",
+        item: "Express",
       },
       {
-        item: "C#",
+        item: "mySQL",
       },
     ],
   },
