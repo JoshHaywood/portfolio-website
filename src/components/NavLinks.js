@@ -2,15 +2,10 @@ import { Link, useNavigate } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
+import links from "../data/links";
+
 import { ScrollTo } from "./utils/scrollHandler";
 import Button from "@mui/material/Button";
-
-const links = [
-  { id: "about", name: "About" },
-  { id: "skills", name: "Skills" },
-  { id: "projects", name: "Projects" },
-  { id: "contact", name: "Contact" },
-];
 
 export default function NavLinks(props) {
   const navigate = useNavigate();

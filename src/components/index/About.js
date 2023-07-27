@@ -1,28 +1,10 @@
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
+import technologies from "../../data/technologies";
+
 import Heading from "./Heading";
 import { ScrollTo } from "../utils/scrollHandler";
-
-const technologies = [
-  {
-    listColumn: [{ label: "React" }, { label: "NextJS" }, { label: "SASS" }],
-  },
-  {
-    listColumn: [
-      { label: "TailwindCSS" },
-      { label: "TypeScript" },
-      { label: "Node.js" },
-    ],
-  },
-  {
-    listColumn: [
-      { label: "Web Sockets" },
-      { label: "Express" },
-      { label: "Heroku" },
-    ],
-  },
-];
 
 export default function About(props) {
   const { sidebar, setSidebar, setProjectName } = props;

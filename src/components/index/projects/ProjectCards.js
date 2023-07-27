@@ -1,122 +1,7 @@
 import { motion } from "framer-motion";
 
+import projects from "../../../data/projects";
 import { GithubLink, DeployLink } from "./SocialLinks";
-
-const projectCards = [
-  {
-    projectName: "portfolio",
-    projectLink: "https://www.joshhaywood-portfolio.com/",
-    repoLink: "https://github.com/JoshHaywood/portfolio-website",
-    heading: "Personal Portfolio Website",
-    text: "A website showcasing a curated selection of my projects and providing easy access to my contact information for potential employers.",
-
-    technologies: [
-      {
-        item: "React",
-      },
-      {
-        item: "TailwindCSS",
-      },
-      {
-        item: "Framer Motion",
-      },
-    ],
-  },
-  {
-    projectName: "tech-terminus",
-    projectLink: "http://www.tech-terminus.me/",
-    repoLink: "https://github.com/JoshHaywood/tech-terminus",
-    heading: "Ecommerce Website",
-    text: "An Ecommerce website that I developed during my research and development dissertation, showcasing standard ecommerce features using a restful API.",
-
-    technologies: [
-      {
-        item: "React",
-      },
-      {
-        item: "Express",
-      },
-      {
-        item: "MySQL",
-      },
-    ],
-  },
-  {
-    projectName: "realtime-messaging-app",
-    projectLink: "https://messaging-app.herokuapp.com/",
-    repoLink: "https://github.com/JoshHaywood/messaging-app",
-    heading: "Real-time Messaging App",
-    text: "An upgraded version of my previous real-time messaging app, showcasing improvements and new features. The app allows users to exchange messages instantly and interact in real-time.",
-    technologies: [
-      {
-        item: "Next.js",
-      },
-      {
-        item: "Express",
-      },
-      {
-        item: "TypeScript",
-      },
-    ],
-  },
-  {
-    projectName: "freelancing-website",
-    projectLink: "/error",
-    repoLink: "https://github.com/JoshHaywood/pop-up-team",
-    heading: "Freelancing Website",
-    text: "A collaborative project I worked on as part of a group, where we developed a freelancing website to connect clients and freelancers.",
-
-    technologies: [
-      {
-        item: "React",
-      },
-      {
-        item: "Express",
-      },
-      {
-        item: "mySQL",
-      },
-    ],
-  },
-  {
-    projectName: "student-survival-store",
-    projectLink: "/error",
-    repoLink: "https://github.com/JoshHaywood/student-survival-store",
-    heading: "SaaS Student Survival Store",
-    text: "A group project that involved creating a software as a service (SaaS) product utilizing a monthly subscription model.",
-
-    technologies: [
-      {
-        item: "React",
-      },
-      {
-        item: "Express",
-      },
-      {
-        item: "Sqlite3",
-      },
-    ],
-  },
-  {
-    projectName: "esports-center",
-    projectLink: "/error",
-    repoLink: "https://github.com/JoshHaywood/esports-center",
-    heading: "Esports Stats Tracking Tool",
-    text: "A statistics tracking tool for Esports, which I led as the project manager, displaying my leadership and interest in the rising Esports industry.",
-
-    technologies: [
-      {
-        item: "React",
-      },
-      {
-        item: "Express",
-      },
-      {
-        item: "MySQL",
-      },
-    ],
-  },
-];
 
 export default function ProjectCards(props) {
   const { sidebar, setSidebar, setProjectName } = props;
@@ -173,7 +58,7 @@ export default function ProjectCards(props) {
 
       {/* Project cards */}
       <div className="space-y-4 sm:space-y-0 sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 gap-4">
-        {projectCards.map((card) => (
+        {projects.map((card) => (
           <div
             key={card.projectName}
             className="hover:-translate-y-2 transition duration-300 ease-in-out"
@@ -228,12 +113,12 @@ export default function ProjectCards(props) {
                       {card.heading}
                     </h4>
 
-                    <p className="text-gray-400">{card.text}</p>
+                    <p className="text-gray-400">{card.previewText}</p>
                   </div>
 
-                  {/* Technologies list */}
+                  {/* Structure list */}
                   <ul className="absolute bottom-5 left-5 flex flex-row space-x-5 mt-8">
-                    {card.technologies.map((tech) => (
+                    {card.previewStructure.map((tech) => (
                       <li key={tech.item}>
                         <div
                           onClick={() => {
