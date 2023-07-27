@@ -101,11 +101,7 @@ export default function Hero() {
             delay: 1.5,
             ease: "easeInOut",
           }}
-          className={`${
-            isSmallMobile
-              ? "flex flex-col space-y-5"
-              : "flex flex-row space-x-5"
-          }`}
+          className="flex max-[450px]:flex-col flex-row max-[450px]:space-y-5 min-[450px]:space-x-5"
         >
           <a href="https://github.com/JoshHaywood/">
             <div className="flex sm:pr-0">

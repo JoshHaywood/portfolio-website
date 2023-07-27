@@ -1,4 +1,3 @@
-import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 
 import technologies from "../../data/technologies";
@@ -8,8 +7,6 @@ import { ScrollTo } from "../utils/scrollHandler";
 
 export default function About(props) {
   const { sidebar, setSidebar, setProjectName } = props;
-
-  const isSmallMobile = useMediaQuery({ query: "(max-width: 500px)" });
 
   return (
     <motion.div
@@ -73,11 +70,7 @@ export default function About(props) {
             Technologies I have been using recently:
           </p>
 
-          <div
-            className={`${
-              isSmallMobile ? "grid-cols-1 gap-4" : "grid-cols-3 gap-10"
-            } grid bg-tertiary px-5 pb-5`}
-          >
+          <div className="max-[500px]:grid-cols-1 max-[500px]:gap-4 grid-cols-3 gap-10 grid bg-tertiary px-5 pb-5">
             {technologies.map((column, index) => (
               <ul key={index}>
                 {column.listColumn.map((technology) => (

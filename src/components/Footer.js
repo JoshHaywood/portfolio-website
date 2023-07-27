@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useMediaQuery } from "react-responsive";
 
 import mediaIcons from "../data/mediaIcons";
 import columns from "../data/columns";
@@ -12,7 +11,6 @@ export default function Footer(props) {
   const navigate = useNavigate();
 
   const [src, setSrc] = useState("../images/logo.png");
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
 
   return (
     <footer className="bg-tertiary">
@@ -63,13 +61,15 @@ export default function Footer(props) {
 
             {/* Columns */}
             <div className="md:w-2/3">
-              <div className={`${!isMobile && "grid gap-6 grid-cols-3"}`}>
+              <div className="min-[600px]:grid min-[600px]:gap-6 grid-cols-3">
                 {columns.map((column, index) => (
                   <div key={column.heading} className={column.containerStyle}>
                     <h4
                       className={`${
-                        isMobile ? "my-4" : "mb-4"
-                      } text-base font-semibold text-gray-300`}
+                        index === 2
+                          ? "max-[600px]:mt-2 min-[600px]:mt-10"
+                          : "max-[600px]:my-4"
+                      } min-[600px]:mb-4 text-base font-semibold text-gray-300`}
                     >
                       {column.heading}
                     </h4>
