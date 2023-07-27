@@ -62,39 +62,39 @@ export default function Footer(props) {
   ];
 
   return (
-    <footer class="bg-tertiary">
-      <div class="max-w-[1100px] mx-auto px-5 xl:px-0 py-5">
-        <div class="flex flex-col md:flex-row md:justify-between items-center py-8">
-          <div class="md:flex w-full md:justify-between space-y-10 md:space-y-0 md:space-x-10">
+    <footer className="bg-tertiary">
+      <div className="max-w-[1100px] mx-auto px-5 xl:px-0 py-5">
+        <div className="flex flex-col md:flex-row md:justify-between items-center py-8">
+          <div className="md:flex w-full md:justify-between space-y-10 md:space-y-0 md:space-x-10">
             {/* Branding */}
-            <div class="-ml-6 md:w-1/3">
-              <div class="px-6">
+            <div className="-ml-6 md:w-1/3">
+              <div className="px-6">
                 <img
                   src={src}
                   alt="Logo"
                   onMouseEnter={() => setSrc("../images/logo-hover.png")}
                   onMouseLeave={() => setSrc("../images/logo.png")}
                   onClick={() => navigate("/")}
-                  class="w-[185px] h-auto hover:cursor-pointer"
+                  className="w-[185px] h-auto hover:cursor-pointer"
                 ></img>
 
-                <p class="text-sm max-w-sm mt-5 text-gray-400">
+                <p className="text-sm max-w-sm mt-5 text-gray-400">
                   Contact me via my{" "}
-                  <span class="font-normal">social media</span> or{" "}
-                  <span class="font-normal">email</span> for any inquiries.
+                  <span className="font-normal">social media</span> or{" "}
+                  <span className="font-normal">email</span> for any inquiries.
                 </p>
 
                 {/* Media icons */}
-                <div class="flex mt-4 -mx-2">
+                <div className="flex mt-4 -mx-2">
                   {mediaIcons.map((icon, index) => (
                     <a
                       href={icon.path}
                       key={index}
-                      class="mx-2"
+                      className="mx-2"
                       aria-label={icon.label}
                     >
                       <svg
-                        class="w-4 h-4 fill-gray-400 hover:fill-gray-500"
+                        className="w-4 h-4 fill-gray-400 hover:fill-gray-500"
                         xmlns="http://www.w3.org/2000/svg"
                         strokeWidth="1.5"
                         stroke="currentColor"
@@ -109,12 +109,12 @@ export default function Footer(props) {
             </div>
 
             {/* Columns */}
-            <div class="md:w-2/3">
-              <div class={`${!isMobile && "grid gap-6 grid-cols-3"}`}>
+            <div className="md:w-2/3">
+              <div className={`${!isMobile && "grid gap-6 grid-cols-3"}`}>
                 {columns.map((column, index) => (
-                  <div key={index} class={column.containerStyle}>
+                  <div key={index} className={column.containerStyle}>
                     <h4
-                      class={`${
+                      className={`${
                         isMobile ? "my-4" : "mb-4"
                       } text-base font-semibold text-gray-300`}
                     >
@@ -134,7 +134,7 @@ export default function Footer(props) {
                                 mobileOffset: 80,
                               });
                             }}
-                            class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
+                            className="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
                           >
                             {link.label}
                           </div>
@@ -146,7 +146,7 @@ export default function Footer(props) {
                               setSidebar(!sidebar);
                               setProjectName(link.target);
                             }}
-                            class="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
+                            className="mb-3 block text-sm text-gray-400 hover:underline hover:cursor-pointer"
                           >
                             {link.label}
                           </div>
@@ -159,10 +159,10 @@ export default function Footer(props) {
         </div>
 
         {/* Footnote */}
-        <div class="flex py-5 justify-between border-t border-primary">
+        <div className="flex py-5 justify-between border-t border-primary">
           <a
             href="https://www.joshhaywood-portfolio.com/"
-            class="text-sm text-gray-400 hover:underline"
+            className="text-sm text-gray-400 hover:underline"
           >
             © Josh Haywood {new Date().getFullYear()}
           </a>
@@ -172,21 +172,21 @@ export default function Footer(props) {
             onClick={() => {
               document.documentElement.scrollTop = 0;
             }}
-            class="flex flex-row space-x-1 items-center"
+            className="flex flex-row space-x-1 items-center"
           >
-            <span class="text-sm text-gray-400">Back To Top</span>
+            <span className="text-sm text-gray-400">Back To Top</span>
 
             {/* Attribution: https://www.svgrepo.com/svg/343035/chevron-up-circle */}
             <svg
               viewBox="0 0 21 21"
               xmlns="http://www.w3.org/2000/svg"
-              class="h-4 w-4 hover:cursor-pointer"
+              className="h-4 w-4 hover:cursor-pointer"
             >
               <g
                 fill="none"
                 transform="translate(2 2)"
                 strokeWidth="2"
-                class="stroke-gray-400 fill-none"
+                className="stroke-gray-400 fill-none"
               >
                 <circle cx="8.5" cy="8.5" r="8" />
                 <path d="m11.5 9.5-3-3-3 3" />

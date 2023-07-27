@@ -39,24 +39,24 @@ export default function Skills() {
       <Heading heading="Skill-Set" />
 
       {/* Cards */}
-      <div class="h-full flex flex-col md:flex-row md:w-full mt-12 space-y-5 md:space-y-0 md:space-x-5 lg:space-x-10">
+      <div className="h-full flex flex-col md:flex-row md:w-full mt-12 space-y-5 md:space-y-0 md:space-x-5 lg:space-x-10">
         {cards.map((card, index) => (
           <div
             key={index}
-            class="relative w-full mx-auto md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 bg-tertiary md:border-b md:border-primary md:rounded"
+            className="relative w-full mx-auto md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 bg-tertiary md:border-b md:border-primary md:rounded"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 640 512"
-              class="h-auto w-12 mb-5 sm:my-5 fill-primary"
+              className="h-auto w-12 mb-5 sm:my-5 fill-primary"
             >
               <path d={card.path} />
             </svg>
 
-            <h3 class="text-xl font-medium text-white">{card.heading}</h3>
-            <p class="mt-4 text-gray-400">{card.text}</p>
+            <h3 className="text-xl font-medium text-white">{card.heading}</h3>
+            <p className="mt-4 text-gray-400">{card.text}</p>
 
-            <div class="text-sm text-gray-600 absolute bottom-8">
+            <div className="text-sm text-gray-600 absolute bottom-8">
               {card.projectNumber}+ projects
             </div>
           </div>

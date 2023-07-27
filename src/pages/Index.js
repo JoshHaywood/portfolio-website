@@ -30,11 +30,11 @@ export default function Index(props) {
         <title>Josh Haywood | Portfolio</title>
       </Helmet>
 
-      <div class="relative">
+      <div className="relative">
         {/* Sidebar overlay */}
         <div
           onClick={() => setSidebar(false)}
-          class={`${
+          className={`${
             sidebar
               ? `z-40 h-screen w-screen fixed bg-black opacity-70 backdrop-blur`
               : `hidden`
@@ -43,7 +43,7 @@ export default function Index(props) {
 
         <Hero />
 
-        <div class="max-w-[1100px] mt-20 sm:mt-28 mb-36 md:mb-56 lg:mb-64 mx-auto px-5 xl:px-0 space-y-32 md:space-y-48 xl:space-y-56">
+        <div className="max-w-[1100px] mt-20 sm:mt-28 mb-36 md:mb-56 lg:mb-64 mx-auto px-5 xl:px-0 space-y-32 md:space-y-48 xl:space-y-56">
           {components.map((component, index) =>
             // If index is 0 or 2, render About and Projects component with sidebar state
             index === 0 || index === 2 ? (

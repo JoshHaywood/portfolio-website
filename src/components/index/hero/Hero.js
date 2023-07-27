@@ -21,11 +21,11 @@ export default function Hero() {
   };
 
   return (
-    <div class="flex flex-col justify-center relative mx-auto">
+    <div className="flex flex-col justify-center relative mx-auto">
       {/* Background animation */}
       <Particles />
 
-      <div class="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 z-10 space-y-5">
+      <div className="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 z-10 space-y-5">
         {/* Heading text */}
         <div>
           <motion.h1
@@ -37,7 +37,7 @@ export default function Hero() {
               delay: 0.9,
               ease: "easeInOut",
             }}
-            class="tracking-wide font-normal text-lg text-primary"
+            className="tracking-wide font-normal text-lg text-primary"
           >
             Hi, my name is
           </motion.h1>
@@ -51,7 +51,7 @@ export default function Hero() {
               delay: 1.1,
               ease: "easeInOut",
             }}
-            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
+            className="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
           >
             Josh Haywood
           </motion.h2>
@@ -65,7 +65,7 @@ export default function Hero() {
               delay: 1.3,
               ease: "easeInOut",
             }}
-            class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
+            className="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
           >
             An aspiring web developer
           </motion.h2>
@@ -79,11 +79,11 @@ export default function Hero() {
               delay: 1.5,
               ease: "easeInOut",
             }}
-            class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
+            className="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
           >
             I'm a recent graduate at{" "}
             <a id="hero-link" href="https://www.falmouth.ac.uk/">
-              <span class="font-semibold text-xl text-primary hover:underline">
+              <span className="font-semibold text-xl text-primary hover:underline">
                 Falmouth University
               </span>
             </a>{" "}
@@ -101,14 +101,14 @@ export default function Hero() {
             delay: 1.5,
             ease: "easeInOut",
           }}
-          class={`${
+          className={`${
             isSmallMobile
               ? "flex flex-col space-y-5"
               : "flex flex-row space-x-5"
           }`}
         >
           <a href="https://github.com/JoshHaywood/">
-            <div class="flex sm:pr-0">
+            <div className="flex sm:pr-0">
               <Button
                 sx={{
                   textTransform: "none",
@@ -129,7 +129,7 @@ export default function Hero() {
           </a>
 
           <a href="https://www.linkedin.com/in/josh-haywood">
-            <div class="flex">
+            <div className="flex">
               <Button
                 sx={{
                   textTransform: "none",
@@ -152,7 +152,7 @@ export default function Hero() {
 
       <motion.div
         id="scroll-button"
-        class="absolute bottom-0 mb-2 left-0 right-0 text-center"
+        className="absolute bottom-0 mb-2 left-0 right-0 text-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{
@@ -169,7 +169,7 @@ export default function Hero() {
               mobileOffset: -55,
             });
           }}
-          class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out"
+          className="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out"
         >
           View more
         </button>
@@ -181,7 +181,7 @@ export default function Hero() {
               mobileOffset: -55,
             });
           }}
-          class="h-5 w-5 fill-primary mx-auto"
+          className="h-5 w-5 fill-primary mx-auto"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >

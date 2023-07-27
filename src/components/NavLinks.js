@@ -90,16 +90,16 @@ export default function NavLinks(props) {
       initial="closed"
       animate={sidebar ? "open" : "closed"}
     >
-      <ul class="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row items-center pt-28 bg-tertiary">
+      <ul className="h-screen w-[280px] flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row items-center pt-28 bg-tertiary">
         <Link to="/">
           {links.map((link, index) => (
-            <li key={index} class="md:order-2">
+            <li key={index} className="md:order-2">
               <div
                 onClick={() => {
                   setSidebar(false);
                   ScrollTo({ target: link.id, offset: 120, mobileOffset: 80 });
                 }}
-                class="text-lg mr-2.5 font-semibold my-10 text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
+                className="text-lg mr-2.5 font-semibold my-10 text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
               >
                 {link.name}
               </div>
@@ -107,7 +107,7 @@ export default function NavLinks(props) {
           ))}
         </Link>
 
-        <div class="md:mr-3">
+        <div className="md:mr-3">
           <Button
             href={`${process.env.PUBLIC_URL}/documents/josh-haywood-cv.pdf`}
             target="_blank"
@@ -132,7 +132,7 @@ export default function NavLinks(props) {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
-      class={`${
+      className={`${
         sidebar
           ? `h-screen w-[280px] sm:w-1/2 overflow-y-scroll flex mt-[3.75rem] sm:mt-[4.75rem] flex-col lg:flex-row pt-28 pl-5 bg-tertiary shadow-[0px_6px_4px_0px_rgb(76,107,193)]`
           : `hidden`
@@ -142,7 +142,7 @@ export default function NavLinks(props) {
         <motion.li
           key={index}
           variants={listVariants}
-          class="mx-2.5 md:order-2"
+          className="mx-2.5 md:order-2"
         >
           <div
             onClick={() => {
@@ -150,7 +150,7 @@ export default function NavLinks(props) {
               navigate("/");
               ScrollTo({ target: link.id, offset: 120, mobileOffset: 80 });
             }}
-            class="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
+            className="text-lg font-semibold text-white hover:text-primary transition duration-300 ease-in-out hover:cursor-pointer"
           >
             {link.name}
           </div>
@@ -161,7 +161,7 @@ export default function NavLinks(props) {
         initial={{ opacity: 0, y: "-80%" }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        class="md:mr-3"
+        className="md:mr-3"
       >
         <Button
           href={`${process.env.PUBLIC_URL}/documents/josh-haywood-cv.pdf`}

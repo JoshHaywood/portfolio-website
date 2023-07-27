@@ -21,7 +21,7 @@ export default function Projects(props) {
         <Heading heading={"Featured Projects"} />
       </motion.div>
 
-      <div class="mt-12 space-y-10 lg:space-y-24">
+      <div className="mt-12 space-y-10 lg:space-y-24">
         {/* Featured projects */}
         <FeaturedProjects
           sidebar={sidebar}

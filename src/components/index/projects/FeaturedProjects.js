@@ -41,7 +41,7 @@ export default function FeaturedProjects(props) {
         onClick={() => {
           setProjectName(card.name);
         }}
-        class={`${
+        className={`${
           card.alignment === `right`
             ? `md:flex-row-reverse bg-[url('../public/images/portfolio-thumbnail.webp')]`
             : `bg-[url('../public/images/tech-terminus-thumbnail.jpg')]`
@@ -54,18 +54,18 @@ export default function FeaturedProjects(props) {
           transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
           viewport={{ once: true }}
           onClick={() => setSidebar(!sidebar)}
-          class={`hidden md:block md:w-3/5 md:relative md:overflow-hidden rounded ${
+          className={`hidden md:block md:w-3/5 md:relative md:overflow-hidden rounded ${
             card.alignment === "right" ? "order-2" : "order-1"
           }`}
         >
-          <div class="hover:scale-105 transition duration-300 ease-in-out">
+          <div className="hover:scale-105 transition duration-300 ease-in-out">
             {/* Image overlay */}
-            <div class="absolute bg-[#5e221e] min-w-[660px] min-h-[372px] z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
+            <div className="absolute bg-[#5e221e] min-w-[660px] min-h-[372px] z-10 opacity-30 md:hover:opacity-0 transition duration-500 ease-in-out"></div>
 
             <img
               src={`../images/${card.image}`}
               alt={`Featured project ${card.tagline}`}
-              class="min-w-[660px] min-h-[372px]"
+              className="min-w-[660px] min-h-[372px]"
             ></img>
           </div>
         </motion.div>
@@ -79,26 +79,26 @@ export default function FeaturedProjects(props) {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: 0.5, ease: "easeInOut" }}
           viewport={{ once: true }}
-          class={`p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 ${
+          className={`p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 backdrop-brightness-[0.3] md:backdrop-brightness-100 md:z-10 md:w-2/5 ${
             card.alignment === "right" ? "md:text-right" : "md:text-left"
           }`}
         >
           <div
             onClick={() => setSidebar(!sidebar)}
-            class="font-normal text-primary"
+            className="font-normal text-primary"
           >
             {card.tagline}
           </div>
           <h3
             onClick={() => setSidebar(!sidebar)}
-            class="mb-5 text-3xl font-semibold text-primary-text text-white hover:text-primary transition duration-300 ease-in-out"
+            className="mb-5 text-3xl font-semibold text-primary-text text-white hover:text-primary transition duration-300 ease-in-out"
           >
             {card.heading}
           </h3>
 
           <p
             onClick={() => setSidebar(!sidebar)}
-            class={`${
+            className={`${
               card.alignment === "right"
                 ? "md:pl-10 md:pr-5 md:-ml-32"
                 : "md:pl-5 md:pr-10 md:-mr-32"
@@ -121,7 +121,7 @@ export default function FeaturedProjects(props) {
             {/* Stack list */}
             <ul
               onClick={() => setSidebar(!sidebar)}
-              class={`flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 ${
+              className={`flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 ${
                 card.alignment === "right"
                   ? "md:justify-end"
                   : "md:justify-none"
@@ -134,7 +134,7 @@ export default function FeaturedProjects(props) {
 
             {/* Media links */}
             <div
-              class={`flex flex-row mt-5 ${
+              className={`flex flex-row mt-5 ${
                 card.alignment === "right"
                   ? "md:justify-end"
                   : "md:justify-start"

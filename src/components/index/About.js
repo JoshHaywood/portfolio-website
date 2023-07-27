@@ -36,19 +36,19 @@ export default function About(props) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3, ease: "easeInOut" }}
       viewport={{ once: true }}
-      class="space-y-12"
+      className="space-y-12"
     >
       {/* Heading */}
       <Heading heading={"About Me"} />
 
-      <div class="flex flex-col md:flex-row justify-between items-center md:items-start md:space-x-10 pb-12 md:pb-0">
+      <div className="flex flex-col md:flex-row justify-between items-center md:items-start md:space-x-10 pb-12 md:pb-0">
         {/* Background information */}
-        <div class="flex flex-col space-y-4 w-full md:w-2/3 leading-7">
-          <p class="text-gray-400">
+        <div className="flex flex-col space-y-4 w-full md:w-2/3 leading-7">
+          <p className="text-gray-400">
             I am a recent graduate from{" "}
             <a
               href="https://www.falmouth.ac.uk"
-              class="font-semibold text-primary hover:underline"
+              className="font-semibold text-primary hover:underline"
             >
               Falmouth University
             </a>{" "}
@@ -60,7 +60,7 @@ export default function About(props) {
             through my portfolio site and CV."
           </p>
 
-          <p class="text-gray-400">
+          <p className="text-gray-400">
             I make use of the latest web development trends and technologies,
             and I am always looking for new ways to improve my skills. One of my
             standout achievements is creating an{" "}
@@ -68,7 +68,7 @@ export default function About(props) {
               onClick={() => {
                 ScrollTo({ target: "projects", offset: 120, mobileOffset: 80 });
               }}
-              class="font-semibold text-primary hover:underline hover:cursor-pointer"
+              className="font-semibold text-primary hover:underline hover:cursor-pointer"
             >
               e-commerce site
             </span>{" "}
@@ -79,7 +79,7 @@ export default function About(props) {
                 setSidebar(!sidebar);
                 setProjectName("one-messaging");
               }}
-              class="font-semibold text-primary hover:underline hover:cursor-pointer"
+              className="font-semibold text-primary hover:underline hover:cursor-pointer"
             >
               real-time messaging system
             </span>
@@ -87,24 +87,27 @@ export default function About(props) {
           </p>
 
           {/* Technologies list */}
-          <p class="font-normal text-gray-400">
+          <p className="font-normal text-gray-400">
             Technologies I have been using recently:
           </p>
 
           <div
-            class={`${
+            className={`${
               isSmallMobile ? "grid-cols-1 gap-4" : "grid-cols-3 gap-10"
             } grid bg-tertiary px-5 pb-5`}
           >
             {technologies.map((column, index) => (
               <ul key={index}>
                 {column.listColumn.map((technology, index) => (
-                  <li key={index} class="flex flex-row mt-5 mb-1 space-x-2.5">
-                    <div class="overflow-hidden inline-block mt-[0.175rem]">
-                      <div class="h-2 w-2 bg-primary rotate-45 transform origin-top-left"></div>
+                  <li
+                    key={index}
+                    className="flex flex-row mt-5 mb-1 space-x-2.5"
+                  >
+                    <div className="overflow-hidden inline-block mt-[0.175rem]">
+                      <div className="h-2 w-2 bg-primary rotate-45 transform origin-top-left"></div>
                     </div>
 
-                    <span class="text-sm font-normal text-gray-400">
+                    <span className="text-sm font-normal text-gray-400">
                       {technology.label}
                     </span>
                   </li>
@@ -115,7 +118,7 @@ export default function About(props) {
         </div>
 
         {/* Developer picture */}
-        <div class="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded">
+        <div className="min-w-[180px] sm:min-w-[305px] relative top-14 md:top-3 border-2 border-primary rounded">
           <motion.img
             initial={{ x: "5%", y: "5%" }}
             whileInView={{ x: 0, y: 0 }}
@@ -123,7 +126,7 @@ export default function About(props) {
             viewport={{ once: true }}
             src="../images/portrait.webp"
             alt="developer portrait"
-            class="w-full rounded relative bottom-3 right-3 hover:bottom-0 hover:right-0 transition-all duration-300 ease-in-out"
+            className="w-full rounded relative bottom-3 right-3 hover:bottom-0 hover:right-0 transition-all duration-300 ease-in-out"
           ></motion.img>
         </div>
       </div>

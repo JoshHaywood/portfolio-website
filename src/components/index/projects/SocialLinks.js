@@ -2,7 +2,7 @@ export function GithubLink(props) {
   return (
     <a
       href={props.link}
-      class={`${props.link !== "/error" ? "block" : "hidden"}`}
+      className={`${props.link !== "/error" ? "block" : "hidden"}`}
     >
       {/* Attribution: https://fontawesome.com/icons/github?s=brands */}
       <svg
@@ -11,7 +11,7 @@ export function GithubLink(props) {
         alt="GitHub logo"
         width={props.width}
         height={props.height}
-        class="text-gray-400 hover:text-primary transition duration-300 ease-in-out"
+        className="text-gray-400 hover:text-primary transition duration-300 ease-in-out"
       >
         <path
           fill="currentColor"
@@ -26,7 +26,7 @@ export function DeployLink(props) {
   return (
     <a
       href={props.link}
-      class={`${props.link !== "/error" ? "block" : "hidden"}`}
+      className={`${props.link !== "/error" ? "block" : "hidden"}`}
     >
       {/* Attribution: https://heroicons.com */}
       <svg
@@ -37,7 +37,7 @@ export function DeployLink(props) {
         stroke="currentColor"
         width={props.width}
         height={props.height}
-        class="text-gray-400 hover:text-primary transition duration-300 ease-in-out"
+        className="text-gray-400 hover:text-primary transition duration-300 ease-in-out"
       >
         <path
           strokeLinecap="round"

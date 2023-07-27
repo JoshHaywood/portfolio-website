@@ -142,7 +142,7 @@ export default function Sidebar(props) {
       {/* Image Enlarger */}
       {enlargeImage && (
         <div
-          class="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col justify-center items-center bg-black bg-opacity-50"
+          className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col justify-center items-center bg-black bg-opacity-50"
           onClick={() => setEnlargeImage(false)}
         >
           <motion.img
@@ -155,7 +155,7 @@ export default function Sidebar(props) {
                 .projectImage
             }
             alt="Project"
-            class="w-full md:w-[50%] m-5 sm:m-0 h-auto"
+            className="w-full md:w-[50%] m-5 sm:m-0 h-auto"
           />
         </div>
       )}
@@ -170,10 +170,10 @@ export default function Sidebar(props) {
                 exit={{ x: "100%" }}
                 key={index}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
-                class="z-40 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary"
+                className="z-40 fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary"
               >
                 {/* Navigation */}
-                <div class="z-40 flex flex-row justify-between">
+                <div className="z-40 flex flex-row justify-between">
                   {/* Attribution: https://heroicons.com/ */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ export default function Sidebar(props) {
                     onClick={() => {
                       setSideBar(false);
                     }}
-                    class="w-6 h-6 text-gray-400 hover:text-primary hover:cursor-pointer"
+                    className="w-6 h-6 text-gray-400 hover:text-primary hover:cursor-pointer"
                   >
                     <path
                       strokeLinecap="round"
@@ -194,7 +194,7 @@ export default function Sidebar(props) {
                   </svg>
 
                   {/* Media links */}
-                  <div class="flex flex-row items-center space-x-2">
+                  <div className="flex flex-row items-center space-x-2">
                     <GithubLink
                       link={project.repoLink}
                       width="1.25rem"
@@ -209,40 +209,40 @@ export default function Sidebar(props) {
                 </div>
 
                 {/* Project details */}
-                <div class="mt-16">
-                  <h1 class="text-2xl font-bold tracking-wide text-primary">
+                <div className="mt-16">
+                  <h1 className="text-2xl font-bold tracking-wide text-primary">
                     {project.heading}
                   </h1>
 
-                  <div class="mt-2 text-gray-400">{project.tagline}</div>
+                  <div className="mt-2 text-gray-400">{project.tagline}</div>
 
-                  <div class="mt-6 overflow-hidden rounded-lg">
-                    <div class="hover:scale-105 transition duration-300 ease-in-out">
+                  <div className="mt-6 overflow-hidden rounded-lg">
+                    <div className="hover:scale-105 transition duration-300 ease-in-out">
                       <img
                         src={project.projectImage}
                         alt="Project"
                         onClick={() => setEnlargeImage(true)}
-                        class="w-full hover:cursor-pointer"
+                        className="w-full hover:cursor-pointer"
                       />
                     </div>
                   </div>
 
-                  <h2 class="mt-6 text-lg font-semibold text-white">
+                  <h2 className="mt-6 text-lg font-semibold text-white">
                     Overview
                   </h2>
 
-                  <p class="mt-2 text-gray-400">{project.overview}</p>
+                  <p className="mt-2 text-gray-400">{project.overview}</p>
 
-                  <h3 class="mt-6 text-lg font-semibold text-white">
+                  <h3 className="mt-6 text-lg font-semibold text-white">
                     Technologies
                   </h3>
 
-                  <div class="mt-1 flex flex-row flex-wrap">
+                  <div className="mt-1 flex flex-row flex-wrap">
                     {project.structure.map((tech, index) => {
                       return (
                         <div
                           key={index}
-                          class="text-sm p-2 mr-2 mt-2 rounded bg-tertiary text-gray-400"
+                          className="text-sm p-2 mr-2 mt-2 rounded bg-tertiary text-gray-400"
                         >
                           {tech}
                         </div>
@@ -250,9 +250,11 @@ export default function Sidebar(props) {
                     })}
                   </div>
 
-                  <h4 class="mt-6 text-lg font-semibold text-white">Role</h4>
+                  <h4 className="mt-6 text-lg font-semibold text-white">
+                    Role
+                  </h4>
 
-                  <p class="mt-2 text-gray-400">{project.role}</p>
+                  <p className="mt-2 text-gray-400">{project.role}</p>
 
                   {/* View project button */}
                   {/* If deployLink is '/error', then the button will not be rendered */}
