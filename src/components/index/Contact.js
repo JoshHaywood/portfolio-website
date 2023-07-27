@@ -41,8 +41,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/josh-haywood"
             className="w-full sm:w-3/5 xl:w-2/5"
           >
-            <Button className="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 transition duration-300 ease-in-out bg-tertiary">
-              {/* Attribution: https://fontawesome.com/icons/linkedin-in?s=&f=brands */}
+            <Button class="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 transition duration-300 ease-in-out bg-tertiary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -58,8 +57,7 @@ export default function Contact() {
           </a>
 
           <a href="mailto:joshhaywood025@gmail.com" className="w-full sm:w-3/5">
-            <Button className="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 transition duration-300 ease-in-out bg-tertiary">
-              {/* Attribution: https://heroicons.com/ */}
+            <Button class="relative w-full flex flex-row space-x-5 items-center px-5 py-2.5 hover:ring ring-primary ring-opacity-40 transition duration-300 ease-in-out bg-tertiary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

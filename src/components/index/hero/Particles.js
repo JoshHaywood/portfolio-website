@@ -146,6 +146,12 @@ export default function Particles() {
     }
 
     setup(); // Initialize canvas
+
+    // Cleanup
+    return () => {
+      ctx.clearRect(0, 0, w, h);
+      window.removeEventListener("resize", setup);
+    };
   }, []);
 
   return (

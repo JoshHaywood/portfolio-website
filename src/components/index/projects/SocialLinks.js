@@ -4,7 +4,6 @@ export function GithubLink(props) {
       href={props.link}
       className={`${props.link !== "/error" ? "block" : "hidden"}`}
     >
-      {/* Attribution: https://fontawesome.com/icons/github?s=brands */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 496 512"
@@ -28,7 +27,6 @@ export function DeployLink(props) {
       href={props.link}
       className={`${props.link !== "/error" ? "block" : "hidden"}`}
     >
-      {/* Attribution: https://heroicons.com */}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

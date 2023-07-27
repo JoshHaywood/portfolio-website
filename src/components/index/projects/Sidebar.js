@@ -48,7 +48,6 @@ export default function Sidebar(props) {
               >
                 {/* Navigation */}
                 <div className="z-40 flex flex-row justify-between">
-                  {/* Attribution: https://heroicons.com/ */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
