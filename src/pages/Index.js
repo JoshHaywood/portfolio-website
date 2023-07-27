@@ -48,7 +48,7 @@ export default function Index(props) {
             // If index is 0 or 2, render About and Projects component with sidebar state
             index === 0 || index === 2 ? (
               <component.component
-                key={index}
+                key={component.name}
                 sidebar={sidebar}
                 setSidebar={setSidebar}
                 projectName={projectName}

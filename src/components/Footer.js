@@ -86,10 +86,10 @@ export default function Footer(props) {
 
                 {/* Media icons */}
                 <div className="flex mt-4 -mx-2">
-                  {mediaIcons.map((icon, index) => (
+                  {mediaIcons.map((icon) => (
                     <a
+                      key={icon.label}
                       href={icon.path}
-                      key={index}
                       className="mx-2"
                       aria-label={icon.label}
                     >
@@ -112,7 +112,7 @@ export default function Footer(props) {
             <div className="md:w-2/3">
               <div className={`${!isMobile && "grid gap-6 grid-cols-3"}`}>
                 {columns.map((column, index) => (
-                  <div key={index} className={column.containerStyle}>
+                  <div key={column.heading} className={column.containerStyle}>
                     <h4
                       className={`${
                         isMobile ? "my-4" : "mb-4"
@@ -124,9 +124,9 @@ export default function Footer(props) {
                     {/* Links */}
                     {/* If pages column use scroll to else open sidebar */}
                     {index < 1
-                      ? column.links.map((link, index) => (
+                      ? column.links.map((link) => (
                           <div
-                            key={index}
+                            key={link.label}
                             onClick={() => {
                               ScrollTo({
                                 target: link.target,
@@ -139,9 +139,9 @@ export default function Footer(props) {
                             {link.label}
                           </div>
                         ))
-                      : column.links.map((link, index) => (
+                      : column.links.map((link) => (
                           <div
-                            key={index}
+                            key={link.label}
                             onClick={() => {
                               setSidebar(!sidebar);
                               setProjectName(link.target);

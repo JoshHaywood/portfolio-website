@@ -173,9 +173,9 @@ export default function ProjectCards(props) {
 
       {/* Project cards */}
       <div className="space-y-4 sm:space-y-0 sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 gap-4">
-        {projectCards.map((card, index) => (
+        {projectCards.map((card) => (
           <div
-            key={index}
+            key={card.projectName}
             className="hover:-translate-y-2 transition duration-300 ease-in-out"
           >
             <motion.div
@@ -233,8 +233,8 @@ export default function ProjectCards(props) {
 
                   {/* Technologies list */}
                   <ul className="absolute bottom-5 left-5 flex flex-row space-x-5 mt-8">
-                    {card.technologies.map((tech, index) => (
-                      <li key={index}>
+                    {card.technologies.map((tech) => (
+                      <li key={tech.item}>
                         <div
                           onClick={() => {
                             setSidebar(!sidebar);

@@ -34,10 +34,10 @@ export default function FeaturedProjects(props) {
   const { sidebar, setSidebar, setProjectName } = props;
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  return cardsData.map((card, index) => {
+  return cardsData.map((card) => {
     return (
       <div
-        key={index}
+        key={card.name}
         onClick={() => {
           setProjectName(card.name);
         }}
@@ -127,8 +127,8 @@ export default function FeaturedProjects(props) {
                   : "md:justify-none"
               } md:mt-5 text-gray-500`}
             >
-              {card.technologies.map((tech, index) => (
-                <li key={index}>{tech}</li>
+              {card.technologies.map((tech) => (
+                <li key={tech.name}>{tech}</li>
               ))}
             </ul>
 

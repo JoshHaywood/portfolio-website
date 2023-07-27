@@ -40,9 +40,9 @@ export default function Skills() {
 
       {/* Cards */}
       <div className="h-full flex flex-col md:flex-row md:w-full mt-12 space-y-5 md:space-y-0 md:space-x-5 lg:space-x-10">
-        {cards.map((card, index) => (
+        {cards.map((card) => (
           <div
-            key={index}
+            key={card.heading}
             className="relative w-full mx-auto md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 bg-tertiary md:border-b md:border-primary md:rounded"
           >
             <svg

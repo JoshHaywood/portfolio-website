@@ -98,9 +98,9 @@ export default function About(props) {
           >
             {technologies.map((column, index) => (
               <ul key={index}>
-                {column.listColumn.map((technology, index) => (
+                {column.listColumn.map((technology) => (
                   <li
-                    key={index}
+                    key={technology.label}
                     className="flex flex-row mt-5 mb-1 space-x-2.5"
                   >
                     <div className="overflow-hidden inline-block mt-[0.175rem]">
