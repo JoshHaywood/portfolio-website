@@ -1,14 +1,11 @@
-// ~/stores/counter.ts
 import { defineStore } from 'pinia';
 
-export const useCounterStore = defineStore({
-  id: 'counter',
-  state: () => ({
-    count: 0,
-  }),
-  actions: {
-    increment() {
-      this.count++;
-    },
-  },
+export const useCounterStore = defineStore('counter', () => {
+  const count = ref<number>(0);
+
+  const increment = () => {
+    count.value++;
+  };
+
+  return { count, increment };
 });
