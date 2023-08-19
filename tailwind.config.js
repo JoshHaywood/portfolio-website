@@ -3,7 +3,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#00FF00',
+        primary: '#f2584c',
+        secondary: '#191b29',
+        tertiary: '#1f2335',
       },
     },
   },

@@ -5,6 +5,8 @@ export default defineNuxtConfig({
     shim: false,
   },
 
+  css: ['~/assets/main.css'],
+
   app: {
     head: {
       title: 'Josh Haywood | Portfolio',

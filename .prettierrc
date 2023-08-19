@@ -6,6 +6,5 @@
   "arrowParens": "always",
   "useTabs": false,
   "tabWidth": 2,
-  "error": 0,
-  "endOfLine": "auto"
+  "error": 0
 }
