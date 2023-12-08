@@ -49,5 +49,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxtjs/eslint-module', '@nuxt/image', '@nuxtjs/tailwindcss', '@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@nuxt/image', '@nuxtjs/tailwindcss', '@nuxtjs/eslint-module'],
 });
