@@ -4,7 +4,6 @@ module.exports = {
   rules: {
     'import/first': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
-    'vue/require-typed-ref': 'error',
   },
   overrides: [
     {
