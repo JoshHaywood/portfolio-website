@@ -28,6 +28,7 @@
     "@nuxtjs/tailwindcss": "^6.10.1",
     "@pinia/nuxt": "^0.5.1",
     "nuxt": "^3.8.2",
+    "nuxt-particles": "^0.1.5",
     "pinia": "^2.1.7"
   },
   "overrides": {
