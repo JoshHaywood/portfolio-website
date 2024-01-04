@@ -31,8 +31,10 @@ const props = defineProps({
 });
 
 const handleRedirect = () => {
+  // If redirect is a number, go back that many pages
   if (typeof props.redirect === 'number') {
     router.go(props.redirect);
+    // If redirect is a string, push that route
   } else if (typeof props.redirect === 'string') {
     router.push(props.redirect);
   }
