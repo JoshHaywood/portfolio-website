@@ -16,7 +16,7 @@ const options: any = {
       color: '#ffffff',
       distance: 150,
       enable: true,
-      opacity: 0.25,
+      opacity: 0.1,
       width: 1,
     },
     move: {
@@ -30,10 +30,10 @@ const options: any = {
       value: 100,
     },
     opacity: {
-      value: 0.5,
+      value: 0.25,
     },
     size: {
-      value: { min: 1, max: 3 },
+      value: { min: 1, max: 2 },
     },
   },
 };
