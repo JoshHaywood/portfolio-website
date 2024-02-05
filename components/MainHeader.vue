@@ -8,12 +8,12 @@
         :class="sidebar ? 'bg-tertiary' : 'bg-transparent'"
         class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition duration-300 lg:px-10"
       >
-        <img
+        <NuxtImg
           :src="src"
           alt="Logo"
           class="h-auto w-[200px] px-2 pr-0 hover:cursor-pointer sm:w-[250px] sm:pr-2"
-          @mouseenter="src = '../images/logo-hover.png'"
-          @mouseleave="src = '../images/logo.png'"
+          @mouseenter="src = '/images/logo-hover.png'"
+          @mouseleave="src = '/images/logo.png'"
         />
 
         <button class="absolute right-5 block h-5 w-5 md:hidden" @click="sidebar = !sidebar">
@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-const src = ref<string>('../images/logo.png');
+const src = ref<string>('/images/logo.png');
 
 const sidebar = ref<boolean>(false);
 const showHeader = ref<boolean>(true);
