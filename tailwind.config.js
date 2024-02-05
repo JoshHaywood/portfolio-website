@@ -8,7 +8,7 @@ export default {
         tertiary: '#1f2335',
       },
       screens: {
-        xs: '450px',
+        xs: '475px',
       },
     },
   },
