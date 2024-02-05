@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen flex items-center">
-    <BackgroundParticles class="z-0" />
+    <BackgroundParticles class="h-screen" />
 
     <!-- Intro -->
     <container class="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 space-y-5">
@@ -40,7 +40,7 @@
     <!-- Page scroller -->
     <div class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center">
       <button class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out">
-        View Mores
+        View More
       </button>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-primary mx-auto">
         <path

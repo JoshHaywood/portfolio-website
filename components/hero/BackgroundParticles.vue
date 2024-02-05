@@ -5,7 +5,7 @@
 <script setup lang="ts">
 const options: any = {
   fullScreen: {
-    enable: true,
+    enable: false,
     zIndex: -1,
   },
   particles: {
