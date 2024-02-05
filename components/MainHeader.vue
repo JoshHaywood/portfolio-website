@@ -16,7 +16,7 @@
           @mouseleave="src = '../images/logo.png'"
         />
 
-        <button class="absolute right-3 block h-5 w-5 md:hidden" @click="sidebar = !sidebar">
+        <button class="absolute right-5 block h-5 w-5 md:hidden" @click="sidebar = !sidebar">
           <div
             :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 rotate-45' : 'absolute top-0'"
             class="h-0.5 w-6 bg-white transition-transform"

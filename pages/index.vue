@@ -1,3 +1,3 @@
 <template>
-  <BackgroundParticles />
+  <HeroMain />
 </template>
