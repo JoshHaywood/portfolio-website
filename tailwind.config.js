@@ -7,6 +7,9 @@ export default {
         secondary: '#191b29',
         tertiary: '#1f2335',
       },
+      screens: {
+        xs: '450px',
+      },
     },
   },
 };
