@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-12">
+  <div>
     <!-- Heading -->
     <SectionHeading heading="About Me" />
 
