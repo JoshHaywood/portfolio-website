@@ -53,9 +53,7 @@
       </div>
 
       <!-- Developer picture-->
-      <div
-        class="xs:min-w-[275px] sm:min-w-[300px] relative top-14 md:top-3 max-sm:right-3 border-2 border-primary rounded"
-      >
+      <div class="w-[275px] sm:w-[300px] relative top-14 md:top-3 max-sm:right-3 border-2 border-primary rounded">
         <NuxtImg
           src="/images/portrait.webp"
           alt="Developer"

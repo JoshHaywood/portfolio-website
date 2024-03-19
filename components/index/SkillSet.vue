@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <!-- Offset index space-y -->
+  <div class="max-md:pt-8">
     <SectionHeading heading="Skill-Set" />
 
     <div class="flex max-md:flex-col md:w-full max-md:space-y-5 md:space-x-5 lg:space-x-10">
