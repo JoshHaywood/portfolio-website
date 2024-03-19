@@ -7,7 +7,7 @@
     >
       <AboutMe />
       <SkillSet />
-      <FeaturedProjects />
+      <ProjectContainer />
     </div>
   </div>
 </template>
