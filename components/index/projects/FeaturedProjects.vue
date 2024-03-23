@@ -48,8 +48,8 @@
         :class="card.alignment === 'right' ? 'md:justify-end' : 'md:justify-start'"
         class="flex flex-row mt-5 space-x-2.5"
       >
-        <GithubIcon class="h-5 w-5" />
-        <DeployIcon class="h-5 w-5" />
+        <GithubLink :link="card.githubLink" class="h-5 w-5" />
+        <DeployLink :link="card.deployLink" class="h-5 w-5" />
       </div>
     </div>
   </div>
