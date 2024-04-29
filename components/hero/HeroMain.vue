@@ -39,9 +39,7 @@
 
     <!-- Page scroller -->
     <div class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center">
-      <button class="font-medium text-xl text-gray-400 hover:text-white transition duration-300 ease-in-out">
-        View More
-      </button>
+      <button class="font-medium text-xl text-gray-400 hover:text-white transition">View More</button>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-primary mx-auto">
         <path
           d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"

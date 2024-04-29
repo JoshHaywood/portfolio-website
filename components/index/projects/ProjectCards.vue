@@ -10,11 +10,7 @@
 
     <!-- Cards -->
     <div class="sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 max-sm:space-y-4 gap-4">
-      <div
-        v-for="(project, index) in projectCards"
-        :key="index"
-        class="hover:-translate-y-2 transition duration-300 ease-in-out"
-      >
+      <div v-for="(project, index) in projectCards" :key="index" class="hover:-translate-y-2 transition">
         <div id="project-card" class="shadow-lg rounded bg-tertiary">
           <div class="relative h-full sm:h-[350px] md:h-[325px] w-full pt-5 pb-16 px-5 md:pb-5 lg:pb-60">
             <div class="flex justify-between pt-4">
@@ -23,6 +19,10 @@
                 viewBox="0 0 512 512"
                 alt="Folder icon"
                 class="h-9 w-9 fill-primary hover:cursor-pointer"
+                @click="
+                  $emit('toggleSidebar');
+                  $emit('setProject', project.projectName);
+                "
               >
                 <path
                   d="M447.1 96h-172.1L226.7 50.75C214.7 38.74 198.5 32 181.5 32H63.1c-35.35 0-64 28.66-64 64v320c0 35.34 28.65 64 64 64h384c35.35 0 64-28.66 64-64V160C511.1 124.7 483.3 96 447.1 96zM463.1 416c0 8.824-7.178 16-16 16h-384c-8.822 0-16-7.176-16-16V96c0-8.824 7.178-16 16-16h117.5c4.273 0 8.293 1.664 11.31 4.688L255.1 144h192c8.822 0 16 7.176 16 16V416z"
@@ -37,8 +37,14 @@
             </div>
 
             <!-- Card text -->
-            <div class="lg:flex flex-col space-y-4 hover:text-primary hover:cursor-pointer">
-              <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition duration-300 ease-in-out">
+            <div
+              class="lg:flex flex-col space-y-4 hover:text-primary hover:cursor-pointer"
+              @click="
+                $emit('toggleSidebar');
+                $emit('setProject', project.projectName);
+              "
+            >
+              <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition">
                 {{ project.heading }}
               </h4>
 
@@ -48,7 +54,13 @@
             <!-- Technologies list-->
             <ul class="absolute bottom-5 left-5 flex flex-row space-x-5 mt-8">
               <li v-for="(technology, techIndex) in project.technologies" :key="techIndex">
-                <div class="text-sm text-gray-500 hover:cursor-pointer">
+                <div
+                  class="text-sm text-gray-500 hover:cursor-pointer"
+                  @click="
+                    $emit('toggleSidebar');
+                    $emit('setProject', project.projectName);
+                  "
+                >
                   {{ technology.item }}
                 </div>
               </li>
@@ -61,6 +73,14 @@
 </template>
 
 <script setup lang="ts">
+defineProps({
+  showSidebar: {
+    type: Boolean,
+    required: true,
+  },
+});
+defineEmits(['toggleSidebar', 'setProject']);
+
 const projectCards = [
   {
     projectName: 'portfolio',
