@@ -79,15 +79,16 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  projects: {
+    type: Array,
+    required: true,
+  },
 });
 defineEmits(['toggleSidebar']);
 
-const projects = [
+// Additional fields specific to sidebar
+const sidebarFields = [
   {
-    projectName: 'portfolio',
-    repoLink: 'https://github.com/JoshHaywood/portfolio-website',
-    deployLink: 'https://www.joshhaywood-portfolio.com/',
-    heading: 'Personal Portfolio Website',
     tagline: 'Highlighting my skills and projects',
     projectImage: '../images/portfolio-thumbnail.webp',
     overview:
@@ -96,11 +97,8 @@ const projects = [
     role: `I created a personal portfolio website to showcase my skills and experience to potential employers. I faced challenges with Handlebars and difficulties with the design of the page layouts, but overcame them by converting to React, researching other developers' work and using Framer Motion for animations. The end result was a sleek and visually appealing website that effectively highlighted my abilities and experience.`,
   },
   {
-    projectName: 'tech-terminus',
-    repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-    deployLink: 'http://www.tech-terminus.me/',
-    heading: 'Ecommerce website',
     tagline: 'Exploring the science of UX through ecommerce Design',
+
     projectImage: '../images/tech-terminus-index.png',
     overview:
       'This was an ecommerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited knowledge of developing.',
@@ -108,10 +106,6 @@ const projects = [
     role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
   },
   {
-    projectName: 'realtime-messaging-app',
-    repoLink: 'https://github.com/JoshHaywood/messaging-app',
-    deployLink: 'https://messaging-app.herokuapp.com/',
-    heading: 'Real-Time Messaging App',
     tagline: 'Real-time communication, at your fingertips',
     projectImage: '../images/messaging-app-thumbnail.png',
     overview:
@@ -130,10 +124,6 @@ const projects = [
     role: `As the sole developer of this project, I took on the challenge of enhancing the app's functionality and design. I implemented new features such as friend requests, profiles and settings, and time stamping messages, improving the overall user experience. I also optimized the codebase for better performance and scalability with Next and TypeScript. Throughout the development process, I actively sought user feedback and iterated on the design to meet their needs and preferences.`,
   },
   {
-    projectName: 'freelancing-website',
-    repoLink: 'https://github.com/JoshHaywood/pop-up-team',
-    deployLink: '/error',
-    heading: 'Freelancing Website',
     tagline: 'Connecting clients and freelancers',
     projectImage: '../images/popup-team-thumbnail.png',
     overview:
@@ -152,10 +142,6 @@ const projects = [
     role: 'In this project, I played a key role in full-stack development. I was responsible for creating interfaces, database tables, and endpoints for core features. This involved developing user registration and authentication systems, designing the client directory and freelancer profile pages, and integrating a real-time one-to-one instant messaging system. The final result was a user-friendly platform that effectively facilitated the connection between clients and freelancers.',
   },
   {
-    projectName: 'student-survival-store',
-    repoLink: 'https://github.com/JoshHaywood/student-survival-store',
-    deployLink: '/error',
-    heading: 'SaaS Student Survival Store',
     tagline: 'Surviving student life, made easy',
     projectImage: '../images/student-survival-store-index.webp',
     overview:
@@ -164,10 +150,6 @@ const projects = [
     role: 'I helped create an e-commerce website to sell student survival kits. My role was focused on the development and design of the website, as well as working with a team to create the product offerings. One of the main challenges was ensuring a smooth and user-friendly checkout process, which was addressed by implementing a variety of payment options and testing them thoroughly.',
   },
   {
-    projectName: 'esports-center',
-    repoLink: 'https://github.com/JoshHaywood/esports-center',
-    deployLink: '/error',
-    heading: 'Esports Stats Tracking Website',
     tagline: 'Leading the way in Esports statistics',
     projectImage: '../images/tech-terminus-thumbnail.jpg',
     overview:
@@ -177,11 +159,21 @@ const projects = [
   },
 ];
 
+// Combine sidebar fields with projects prop
+const sidebarProjects = props.projects.map((project: any, index: number) => {
+  return {
+    ...project,
+    ...sidebarFields[index],
+  };
+});
+
+// Filter active project
 const activeProject = computed(() => {
-  const filteredProjects = projects.filter((project) => project.projectName === props.activeProject);
+  const filteredProjects = sidebarProjects.filter((project: any) => project.projectName === props.activeProject);
   return filteredProjects.length > 0 ? filteredProjects[0] : null;
 });
 
+// Disable scroll if sidebar is open
 watch(
   () => props.showSidebar,
   (newVal) => {

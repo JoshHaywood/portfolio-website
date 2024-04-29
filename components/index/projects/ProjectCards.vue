@@ -10,7 +10,7 @@
 
     <!-- Cards -->
     <div class="sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 max-sm:space-y-4 gap-4">
-      <div v-for="(project, index) in projectCards" :key="index" class="hover:-translate-y-2 transition">
+      <div v-for="(project, index) in cardProjects" :key="index" class="hover:-translate-y-2 transition">
         <div id="project-card" class="shadow-lg rounded bg-tertiary">
           <div class="relative h-full sm:h-[350px] md:h-[325px] w-full pt-5 pb-16 px-5 md:pb-5 lg:pb-60">
             <div class="flex justify-between pt-4">
@@ -73,20 +73,21 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   showSidebar: {
     type: Boolean,
+    required: true,
+  },
+  projects: {
+    type: Array,
     required: true,
   },
 });
 defineEmits(['toggleSidebar', 'setProject']);
 
-const projectCards = [
+// Additional fields specific to cards
+const cardFields = [
   {
-    projectName: 'portfolio',
-    projectLink: 'https://www.joshhaywood-portfolio.com/',
-    repoLink: 'https://github.com/JoshHaywood/portfolio-website',
-    heading: 'Personal Portfolio Website',
     description:
       'A website showcasing a curated selection of my projects and providing easy access to my contact information for potential employers.',
     technologies: [
@@ -102,10 +103,6 @@ const projectCards = [
     ],
   },
   {
-    projectName: 'tech-terminus',
-    projectLink: 'http://www.tech-terminus.me/',
-    repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-    heading: 'Ecommerce Website',
     description:
       'An Ecommerce website that I developed during my research and development dissertation, showcasing standard ecommerce features using a restful API.',
     technologies: [
@@ -121,10 +118,6 @@ const projectCards = [
     ],
   },
   {
-    projectName: 'realtime-messaging-app',
-    projectLink: 'https://messaging-app.herokuapp.com/',
-    repoLink: 'https://github.com/JoshHaywood/messaging-app',
-    heading: 'Real-time Messaging App',
     description:
       'An upgraded version of my previous real-time messaging app, showcasing improvements and new features. The app allows users to exchange messages instantly and interact in real-time.',
     technologies: [
@@ -140,10 +133,6 @@ const projectCards = [
     ],
   },
   {
-    projectName: 'freelancing-website',
-    projectLink: '/error',
-    repoLink: 'https://github.com/JoshHaywood/pop-up-team',
-    heading: 'Freelancing Website',
     description:
       'A collaborative project I worked on as part of a group, where we developed a freelancing website to connect clients and freelancers.',
     technologies: [
@@ -159,10 +148,6 @@ const projectCards = [
     ],
   },
   {
-    projectName: 'student-survival-store',
-    projectLink: '/error',
-    repoLink: 'https://github.com/JoshHaywood/student-survival-store',
-    heading: 'SaaS Student Survival Store',
     description:
       'A group project that involved creating a software as a service (SaaS) product utilizing a monthly subscription model.',
     technologies: [
@@ -178,10 +163,6 @@ const projectCards = [
     ],
   },
   {
-    projectName: 'esports-center',
-    projectLink: '/error',
-    repoLink: 'https://github.com/JoshHaywood/esports-center',
-    heading: 'Esports Stats Tracking Tool',
     description:
       'A statistics tracking tool for Esports, which I led as the project manager, displaying my leadership and interest in the rising Esports industry.',
     technologies: [
@@ -197,4 +178,12 @@ const projectCards = [
     ],
   },
 ];
+
+// Combine card fields with projects prop
+const cardProjects = props.projects.map((project: any, index: number) => {
+  return {
+    ...project,
+    ...cardFields[index],
+  };
+});
 </script>
