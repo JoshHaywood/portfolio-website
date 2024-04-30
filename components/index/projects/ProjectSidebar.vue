@@ -58,7 +58,7 @@
 
         <a :href="activeProject?.deployLink">
           <button
-            class="w-full mt-6 p-4 text-sm rounded text-white bg-tertiary transition-colors hover:bg-tertiary/70 hover:underline"
+            class="w-full mt-6 p-3 text-sm rounded text-white bg-tertiary transition-colors hover:bg-tertiary/70 hover:underline"
           >
             View Project
           </button>

@@ -8,6 +8,7 @@
       <AboutMe />
       <SkillSet />
       <ProjectContainer />
+      <ContactForm />
     </div>
   </div>
 </template>
