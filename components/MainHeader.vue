@@ -6,7 +6,7 @@
       <nav
         v-show="showHeader"
         :class="sidebar ? 'bg-tertiary' : 'bg-transparent'"
-        class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition duration-300 lg:px-10"
+        class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition-transform lg:px-10"
       >
         <NuxtImg
           :src="src"

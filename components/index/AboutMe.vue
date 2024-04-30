@@ -57,7 +57,7 @@
         <NuxtImg
           src="/images/portrait.webp"
           alt="Developer"
-          class="w-full relative rounded bottom-3 right-3 hover:bottom-0 hover:right-0 transition-all duration-300 ease-in-out"
+          class="w-full relative rounded bottom-3 right-3 hover:bottom-0 hover:right-0 transition-all"
         />
       </div>
     </div>

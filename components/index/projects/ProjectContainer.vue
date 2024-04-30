@@ -22,7 +22,7 @@
         :show-sidebar="showSidebar"
         :active-project="activeProject"
         :projects="projects"
-        class="fixed top-0 bottom-0 right-0 z-50 transition"
+        class="fixed top-0 bottom-0 right-0 z-50 transition-transform"
         @toggle-sidebar="showSidebar = !showSidebar"
       />
     </Transition>

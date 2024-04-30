@@ -3,7 +3,7 @@
     <div class="hidden items-center space-x-2.5 md:flex">
       <a href="/documents/josh-haywood-cv.pdf" target="_blank">
         <button
-          class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-transparent"
+          class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
         >
           View my CV
         </button>
@@ -13,7 +13,7 @@
         <li
           v-for="link in links"
           :key="link.id"
-          class="ml-2.5 text-lg font-semibold text-white transition duration-300 hover:cursor-pointer hover:text-primary"
+          class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
         >
           {{ link.name }}
         </li>
@@ -23,20 +23,20 @@
     <Transition name="slide">
       <div
         v-if="sidebar"
-        class="fixed right-0 mt-6 flex h-screen w-[280px] flex-col items-center bg-tertiary pt-40 transition duration-300 md:hidden"
+        class="fixed right-0 mt-6 flex h-screen w-[280px] flex-col items-center bg-tertiary pt-40 transition md:hidden"
       >
         <ul class="flex flex-col space-y-10">
           <li
             v-for="link in links"
             :key="link.id"
-            class="ml-2.5 text-lg font-semibold text-white transition duration-300 hover:cursor-pointer hover:text-primary"
+            class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
           >
             {{ link.name }}
           </li>
 
           <a href="/documents/josh-haywood-cv.pdf" target="_blank">
             <button
-              class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-transparent"
+              class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
             >
               View my CV
             </button>

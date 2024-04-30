@@ -27,7 +27,10 @@
       class="md:w-2/5 md:z-10 p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 max-md:backdrop-brightness-[0.3]"
     >
       <div class="font-normal text-primary" @click="$emit('toggleSidebar')">{{ project.tagline }}</div>
-      <div class="mb-5 text-3xl font-semibold text-white hover:text-primary transition" @click="$emit('toggleSidebar')">
+      <div
+        class="mb-5 text-3xl font-semibold text-white hover:text-primary transition-colors"
+        @click="$emit('toggleSidebar')"
+      >
         {{ project.heading }}
       </div>
       <p

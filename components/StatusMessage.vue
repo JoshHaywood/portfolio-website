@@ -4,7 +4,7 @@
     <h2 class="text-xl text-gray-400">{{ props.message }}</h2>
 
     <button
-      class="mx-auto rounded border-2 border-primary p-2 text-sm font-semibold text-white transition-colors duration-300 hover:bg-primary/30"
+      class="mx-auto rounded border-2 border-primary p-2 text-sm font-semibold text-white transition-colors hover:bg-primary/30"
       @click="handleRedirect"
     >
       Go Back

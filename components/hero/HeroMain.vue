@@ -22,14 +22,14 @@
       <div class="flex max-xs:flex-col items-center mt-5 max-xs:space-y-5 xs:space-x-5">
         <a href="https://github.com/JoshHaywood/">
           <button
-            class="mx-auto px-7 py-2 rounded border-4 text-white border-tertiary bg-tertiary transition-colors duration-300 hover:border-tertiary/30 hover:bg-tertiary/30"
+            class="mx-auto px-7 py-2 rounded border-4 text-white border-tertiary bg-tertiary transition-colors hover:border-tertiary/30 hover:bg-tertiary/30"
           >
             View my Github
           </button>
         </a>
         <a href="https://www.linkedin.com/in/josh-haywood">
           <button
-            class="mx-auto px-6 py-2 rounded border-2 text-white border-primary transition-colors duration-300 hover:bg-primary/30"
+            class="mx-auto px-6 py-2 rounded border-2 text-white border-primary transition-colors hover:bg-primary/30"
           >
             View my LinkedIn
           </button>
@@ -39,7 +39,7 @@
 
     <!-- Page scroller -->
     <div class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center">
-      <button class="font-medium text-xl text-gray-400 hover:text-white transition">View More</button>
+      <button class="font-medium text-xl text-gray-400 hover:text-white transition-colors">View More</button>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-primary mx-auto">
         <path
           d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"

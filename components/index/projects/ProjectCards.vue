@@ -10,7 +10,7 @@
 
     <!-- Cards -->
     <div class="sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 max-sm:space-y-4 gap-4">
-      <div v-for="(project, index) in cardProjects" :key="index" class="hover:-translate-y-2 transition">
+      <div v-for="(project, index) in cardProjects" :key="index" class="hover:-translate-y-2 transition-transform">
         <div id="project-card" class="shadow-lg rounded bg-tertiary">
           <div class="relative h-full sm:h-[350px] md:h-[325px] w-full pt-5 pb-16 px-5 md:pb-5 lg:pb-60">
             <div class="flex justify-between pt-4">
@@ -44,7 +44,7 @@
                 $emit('setProject', project.projectName);
               "
             >
-              <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition">
+              <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition-colors">
                 {{ project.heading }}
               </h4>
 

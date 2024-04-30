@@ -11,7 +11,7 @@
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          class="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors duration-300"
+          class="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors"
           @click="$emit('toggleSidebar')"
         >
           <path
@@ -34,7 +34,7 @@
         <div class="mt-2 text-gray-400">{{ activeProject?.tagline }}</div>
 
         <div class="mt-6 overflow-hidden rounded-lg">
-          <div class="hover:scale-105 transition duration-300">
+          <div class="hover:scale-105 transition-transform">
             <img :src="activeProject?.projectImage" alt="Project picture" class="w-full cursor-pointer" />
           </div>
         </div>
@@ -58,7 +58,7 @@
 
         <a :href="activeProject?.deployLink">
           <button
-            class="w-full mt-6 p-4 text-sm rounded text-white bg-tertiary transition-colors duration-300 hover:bg-tertiary/70 hover:underline"
+            class="w-full mt-6 p-4 text-sm rounded text-white bg-tertiary transition-colors hover:bg-tertiary/70 hover:underline"
           >
             View Project
           </button>
