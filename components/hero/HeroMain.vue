@@ -68,7 +68,21 @@
     </container>
 
     <!-- Page scroller -->
-    <div class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center">
+    <div
+      v-motion
+      :initial="{
+        opacity: 0,
+      }"
+      :visible-once="{
+        opacity: 1,
+        transition: {
+          delay: 1500,
+          type: 'keyframes',
+          ease: 'easeInOut',
+        },
+      }"
+      class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center"
+    >
       <button class="font-medium text-xl text-gray-400 hover:text-white transition-colors">View More</button>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-primary mx-auto">
         <path

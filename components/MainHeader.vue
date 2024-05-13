@@ -9,6 +9,13 @@
         class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition-transform lg:px-10"
       >
         <NuxtImg
+          v-motion
+          :initial="{
+            opacity: 0,
+          }"
+          :visible-once="{
+            opacity: 1,
+          }"
           :src="src"
           alt="Logo"
           class="h-auto w-[200px] px-2 pr-0 hover:cursor-pointer sm:w-[250px] sm:pr-2"
@@ -43,31 +50,19 @@ const src = ref<string>('/images/logo.png');
 const sidebar = ref<boolean>(false);
 const showHeader = ref<boolean>(true);
 
-let lastScrollY = 0;
+const lastScrollY = ref<number>(0);
 
-const handleScroll = () => {
-  const newY = window.scrollY;
+onMounted(() => {
+  window.addEventListener('resize', updateSidebarState);
+  window.addEventListener('scroll', handleScroll);
+});
 
-  if (sidebar.value) {
-    showHeader.value = true;
-    return;
-  }
+onUnmounted(() => {
+  window.removeEventListener('resize', updateSidebarState);
+  window.removeEventListener('scroll', handleScroll);
+});
 
-  if (newY < lastScrollY) {
-    showHeader.value = true;
-  } else if (newY > lastScrollY) {
-    showHeader.value = false;
-  }
-
-  lastScrollY = newY;
-};
-
-const updateSidebarState = () => {
-  if (window.innerWidth > 640) {
-    sidebar.value = false;
-  }
-};
-
+// Prevent scroll when sidebar is open
 watch(sidebar, (newValue) => {
   document.body.style.overflow = newValue ? 'hidden' : 'auto';
 
@@ -78,16 +73,32 @@ watch(sidebar, (newValue) => {
   }
 });
 
-onMounted(() => {
-  window.addEventListener('resize', updateSidebarState);
-  window.addEventListener('scroll', handleScroll);
-  updateSidebarState();
-});
+// Handle scroll behaviours
+const handleScroll = () => {
+  const newY = window.scrollY;
 
-onUnmounted(() => {
-  window.removeEventListener('resize', updateSidebarState);
-  window.removeEventListener('scroll', handleScroll);
-});
+  // Show header if sidebar is open
+  if (sidebar.value) {
+    return (showHeader.value = true);
+  }
+
+  // Show header if scrolling up
+  if (newY < lastScrollY.value) {
+    showHeader.value = true;
+    // Hide header if scrolling down
+  } else if (newY > lastScrollY.value) {
+    showHeader.value = false;
+  }
+
+  lastScrollY.value = newY;
+};
+
+// Hide sidebar on larger screens
+const updateSidebarState = () => {
+  if (window.innerWidth > 640) {
+    sidebar.value = false;
+  }
+};
 </script>
 
 <style scoped>

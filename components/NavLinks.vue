@@ -3,6 +3,15 @@
     <div class="hidden items-center space-x-2.5 md:flex">
       <a href="/documents/josh-haywood-cv.pdf" target="_blank">
         <button
+          v-motion
+          :initial="{
+            opacity: 0,
+            y: -20,
+          }"
+          :visible-once="{
+            opacity: 1,
+            y: 0,
+          }"
           class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
         >
           View my CV
@@ -11,8 +20,22 @@
 
       <ul class="flex space-x-5">
         <li
-          v-for="link in links"
+          v-for="(link, index) in links"
           :key="link.id"
+          v-motion
+          :initial="{
+            opacity: 0,
+            y: -20,
+          }"
+          :visible-once="{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: 400 + index * 400,
+              type: 'keyframes',
+              ease: 'easeInOut',
+            },
+          }"
           class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
         >
           {{ link.name }}
