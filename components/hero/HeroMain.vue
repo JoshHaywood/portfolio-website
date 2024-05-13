@@ -5,31 +5,61 @@
     <!-- Intro -->
     <container class="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 space-y-5">
       <section>
-        <h1 class="tracking-wide font-normal text-lg text-primary">Hi, my name is</h1>
-        <h2 class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white">Josh Haywood</h2>
-        <h2 class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400">
+        <h1
+          v-motion
+          :initial="initial()"
+          :visible-once="animation(900)"
+          class="tracking-wide font-normal text-lg text-primary"
+        >
+          Hi, my name is
+        </h1>
+        <h2
+          v-motion
+          :initial="initial()"
+          :visible-once="animation(1100)"
+          class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-white"
+        >
+          Josh Haywood
+        </h2>
+        <h2
+          v-motion
+          :initial="initial()"
+          :visible-once="animation(1300)"
+          class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
+        >
           An aspiring web developer
         </h2>
-        <p class="mt-6 tracking-wide text-xl max-w-lg text-gray-400">
+        <p
+          v-motion
+          :initial="initial()"
+          :visible-once="animation(1500)"
+          class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
+        >
           I'm a recent graduate at
           <a id="hero-link" href="https://www.falmouth.ac.uk/">
-            <span class="font-semibold text-xl text-primary hover:underline"> Falmouth University </span> </a
-          >with a BSc in web development. At present, I am focused on specializing in front-end JavaScript development.
+            <span class="font-semibold text-xl text-primary hover:underline">Falmouth University </span>
+          </a>
+          with a BSc in web development. At present, I am focused on specializing in front-end JavaScript development.
         </p>
       </section>
 
       <!-- Actions -->
-      <div class="flex max-xs:flex-col items-center mt-5 max-xs:space-y-5 xs:space-x-5">
-        <a href="https://github.com/JoshHaywood/">
+      <div
+        v-motion
+        :initial="initial()"
+        :visible-once="animation(1500)"
+        class="flex max-xs:flex-col items-center mt-5 max-xs:space-y-5 xs:space-x-5"
+      >
+        <a href="https://github.com/JoshHaywood/" class="max-sm:w-full">
           <button
-            class="mx-auto px-7 py-2 rounded border-4 text-white border-tertiary bg-tertiary transition-colors hover:border-tertiary/30 hover:bg-tertiary/30"
+            class="max-sm:w-full mx-auto px-7 py-2 rounded border-4 text-white border-tertiary bg-tertiary transition-colors hover:border-tertiary/30 hover:bg-tertiary/30"
           >
             View my Github
           </button>
         </a>
-        <a href="https://www.linkedin.com/in/josh-haywood">
+        <a href="https://www.linkedin.com/in/josh-haywood" class="max-sm:w-full">
           <button
-            class="mx-auto px-6 py-2 rounded border-2 text-white border-primary transition-colors hover:bg-primary/30"
+            class="max-sm:w-full mx-auto px-6 py-2 rounded border-2 text-white border-primary transition-colors hover:bg-primary/30"
           >
             View my LinkedIn
           </button>
@@ -48,3 +78,20 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+const initial = () => ({
+  opacity: 0,
+  y: 100,
+});
+
+const animation = (delay: number) => ({
+  opacity: 1,
+  y: 0,
+  transition: {
+    delay,
+    type: 'keyframes',
+    ease: 'easeInOut',
+  },
+});
+</script>
