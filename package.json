@@ -26,12 +26,10 @@
   "dependencies": {
     "@nuxt/image": "^1.1.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
-    "@pinia/nuxt": "^0.5.1",
     "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "nuxt": "^3.8.2",
-    "nuxt-particles": "^0.1.5",
-    "pinia": "^2.1.7"
+    "nuxt-particles": "^0.1.5"
   },
   "overrides": {
     "vue": "latest"
