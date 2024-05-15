@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <!--Project information -->
+    <!-- Project information -->
     <div
       :class="project.alignment === 'right' ? 'md:text-right' : 'md:text-left'"
       class="md:w-2/5 md:z-10 p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 max-md:backdrop-brightness-[0.3]"
@@ -63,12 +63,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  showSidebar: {
-    type: Boolean,
-    required: true,
-  },
-});
+defineProps<{
+  showSidebar: boolean;
+}>();
 defineEmits(['toggleSidebar', 'setProject']);
 
 const cardsData = [

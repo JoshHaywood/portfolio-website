@@ -18,7 +18,10 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  link: string;
-}>();
+defineProps({
+  link: {
+    type: String,
+    default: '',
+  },
+});
 </script>

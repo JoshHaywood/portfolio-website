@@ -70,20 +70,11 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  showSidebar: {
-    type: Boolean,
-    required: true,
-  },
-  activeProject: {
-    type: String,
-    required: true,
-  },
-  projects: {
-    type: Array,
-    required: true,
-  },
-});
+const props = defineProps<{
+  showSidebar: boolean;
+  activeProject: string;
+  projects: any[];
+}>();
 defineEmits(['toggleSidebar']);
 
 // Additional fields specific to sidebar

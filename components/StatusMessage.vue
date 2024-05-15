@@ -15,20 +15,11 @@
 <script setup lang="ts">
 const router = useRouter();
 
-const props = defineProps({
-  heading: {
-    type: String,
-    required: true,
-  },
-  message: {
-    type: String,
-    required: true,
-  },
-  redirect: {
-    type: [String, Number],
-    required: true,
-  },
-});
+const props = defineProps<{
+  heading: string;
+  message: string;
+  redirect: string | number;
+}>();
 
 const handleRedirect = () => {
   // If redirect is a number, go back that many pages

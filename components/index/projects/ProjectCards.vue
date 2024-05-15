@@ -73,16 +73,10 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  showSidebar: {
-    type: Boolean,
-    required: true,
-  },
-  projects: {
-    type: Array,
-    required: true,
-  },
-});
+const props = defineProps<{
+  showSidebar: boolean;
+  projects: any[];
+}>();
 defineEmits(['toggleSidebar', 'setProject']);
 
 // Additional fields specific to cards

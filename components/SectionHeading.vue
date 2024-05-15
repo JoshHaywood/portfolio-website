@@ -7,10 +7,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  heading: {
-    type: String,
-    required: true,
-  },
-});
+const props = defineProps<{
+  heading: string;
+}>();
 </script>
