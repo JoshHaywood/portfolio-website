@@ -3,7 +3,7 @@
     <div class="hidden items-center space-x-2.5 md:flex">
       <a href="/documents/josh-haywood-cv.pdf" target="_blank">
         <button
-          v-motion
+          v-motion-fade-visible-once
           :initial="{
             opacity: 0,
             y: -20,
@@ -37,6 +37,7 @@
             },
           }"
           class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
+          @click="useScrollTo().scrollTo(link.id)"
         >
           {{ link.name }}
         </li>
@@ -53,6 +54,7 @@
             v-for="link in links"
             :key="link.id"
             class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
+            @click="useScrollTo().scrollTo(link.id), $emit('close')"
           >
             {{ link.name }}
           </li>
@@ -74,6 +76,7 @@
 defineProps<{
   sidebar: boolean;
 }>();
+defineEmits(['close']);
 
 const links = [
   { id: 'about', name: 'About' },

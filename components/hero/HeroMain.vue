@@ -36,7 +36,7 @@
           class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
         >
           I'm a recent graduate at
-          <a id="hero-link" href="https://www.falmouth.ac.uk/">
+          <a href="https://www.falmouth.ac.uk/">
             <span class="font-semibold text-xl text-primary hover:underline">Falmouth University </span>
           </a>
           with a BSc in web development. At present, I am focused on specializing in front-end JavaScript development.
@@ -69,6 +69,7 @@
 
     <!-- Page scroller -->
     <div
+      id="view-more"
       v-motion
       :initial="{
         opacity: 0,
@@ -81,7 +82,7 @@
           ease: 'easeInOut',
         },
       }"
-      class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center"
+      class="absolute bottom-0 mb-2 space-y-1 left-0 right-0 text-center cursor-pointer"
     >
       <button class="font-medium text-xl text-gray-400 hover:text-white transition-colors">View More</button>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="h-5 w-5 fill-primary mx-auto">
@@ -107,5 +108,17 @@ const animation = (delay: number) => ({
     type: 'keyframes',
     ease: 'easeInOut',
   },
+});
+
+onMounted(() => {
+  // Scroll down a page when clicking view more
+  const viewMoreButton = document.getElementById('view-more');
+  viewMoreButton?.addEventListener('click', () => {
+    window.scrollBy({
+      top: window.innerHeight,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
 });
 </script>

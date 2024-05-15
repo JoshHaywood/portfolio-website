@@ -26,7 +26,6 @@
     <div class="sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 max-sm:space-y-4 gap-4">
       <div v-for="(project, index) in cardProjects" :key="index" class="hover:-translate-y-2 transition-transform">
         <div
-          id="project-card"
           v-motion
           :initial="{
             opacity: 0,

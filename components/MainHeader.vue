@@ -9,36 +9,31 @@
         class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition-transform lg:px-10"
       >
         <NuxtImg
-          v-motion
-          :initial="{
-            opacity: 0,
-          }"
-          :visible-once="{
-            opacity: 1,
-          }"
+          v-motion-fade-visible-once
           :src="src"
           alt="Logo"
           class="h-auto w-[200px] px-2 pr-0 hover:cursor-pointer sm:w-[250px] sm:pr-2"
           @mouseenter="src = '/images/logo-hover.png'"
           @mouseleave="src = '/images/logo.png'"
+          @click="scrollToTop"
         />
 
         <button class="absolute right-5 block h-5 w-5 md:hidden" @click="sidebar = !sidebar">
           <div
             :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 rotate-45' : 'absolute top-0'"
             class="h-0.5 w-6 bg-white transition-transform"
-          ></div>
+          />
           <div
             :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 opacity-0' : 'absolute top-1/2 -translate-y-1/2'"
             class="h-0.5 w-6 bg-white transition-opacity"
-          ></div>
+          />
           <div
             :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 -rotate-45' : 'absolute bottom-0'"
             class="h-0.5 w-6 bg-white transition-transform"
-          ></div>
+          />
         </button>
 
-        <NavLinks :sidebar="sidebar" />
+        <NavLinks :sidebar="sidebar" @close="sidebar = false" />
       </nav>
     </Transition>
   </div>
@@ -91,6 +86,11 @@ const handleScroll = () => {
   }
 
   lastScrollY.value = newY;
+};
+
+// Scroll to top
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
 };
 
 // Hide sidebar on larger screens
