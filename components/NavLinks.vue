@@ -31,7 +31,7 @@
             opacity: 1,
             y: 0,
             transition: {
-              delay: 400 + index * 400,
+              delay: 200 + index * 200,
               type: 'keyframes',
               ease: 'easeInOut',
             },
@@ -71,12 +71,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  sidebar: {
-    type: Boolean,
-    required: true,
-  },
-});
+defineProps<{
+  sidebar: boolean;
+}>();
 
 const links = [
   { id: 'about', name: 'About' },

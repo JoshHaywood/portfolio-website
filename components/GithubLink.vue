@@ -14,10 +14,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  link: {
-    type: String,
-    required: true,
-  },
-});
+defineProps<{
+  link: string;
+}>();
 </script>
