@@ -55,6 +55,17 @@
       <!-- Developer picture-->
       <div class="w-[275px] sm:w-[300px] relative top-14 md:top-3 max-sm:right-3 border-2 border-primary rounded">
         <NuxtImg
+          v-motion
+          :initial="{ x: 12, y: 12 }"
+          :visible-once="{
+            x: 0,
+            y: 0,
+            transition: {
+              delay: 400,
+              type: 'keyframes',
+              ease: 'easeInOut',
+            },
+          }"
           src="/images/portrait.webp"
           alt="Developer"
           class="w-full relative rounded bottom-3 right-3 hover:bottom-0 hover:right-0 transition-all"

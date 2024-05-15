@@ -43,7 +43,7 @@
       </ul>
     </div>
 
-    <Transition name="slide">
+    <Transition>
       <div
         v-if="sidebar"
         class="fixed right-0 mt-6 flex h-screen w-[280px] flex-col items-center bg-tertiary pt-40 transition md:hidden"
@@ -84,16 +84,16 @@ const links = [
 </script>
 
 <style scoped>
-.slide-enter-active {
+.v-enter-active {
   transform: translateX(0);
 }
 
-.slide-leave-active {
+.v-leave-active {
   transform: translateX(100%);
 }
 
-.slide-enter-from,
-.slide-leave-to {
+.v-enter-from,
+.v-leave-to {
   transform: translateX(100%);
 }
 </style>
