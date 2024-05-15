@@ -1,7 +1,21 @@
 <template>
   <div>
     <!-- Heading -->
-    <div class="max-xl:mt-20 mb-12 text-center">
+    <div
+      v-motion
+      :initial="{
+        opacity: 0,
+      }"
+      :visible-once="{
+        opacity: 1,
+        transition: {
+          delay: 200,
+          type: 'keyframes',
+          ease: 'easeInOut',
+        },
+      }"
+      class="max-xl:mt-20 mb-12 text-center"
+    >
       <h3 class="mb-3 text-2xl font-semibold text-white">Other Notable Projects</h3>
       <a href="https://github.com/JoshHaywood?tab=repositories" class="text-primary hover:underline">
         View all projects
@@ -11,7 +25,24 @@
     <!-- Cards -->
     <div class="sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 max-sm:space-y-4 gap-4">
       <div v-for="(project, index) in cardProjects" :key="index" class="hover:-translate-y-2 transition-transform">
-        <div id="project-card" class="shadow-lg rounded bg-tertiary">
+        <div
+          id="project-card"
+          v-motion
+          :initial="{
+            opacity: 0,
+            y: 20,
+          }"
+          :visible-once="{
+            opacity: 1,
+            y: 0,
+            transition: {
+              delay: index * 200,
+              type: 'keyframes',
+              ease: 'easeInOut',
+            },
+          }"
+          class="shadow-lg rounded bg-tertiary"
+        >
           <div class="relative h-full sm:h-[350px] md:h-[325px] w-full pt-5 pb-16 px-5 md:pb-5 lg:pb-60">
             <div class="flex justify-between pt-4">
               <svg
