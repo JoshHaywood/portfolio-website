@@ -56,5 +56,12 @@ export default defineNuxtConfig({
     },
   ],
 
-  modules: ['@nuxt/image', 'nuxt-particles', '@vueuse/motion/nuxt', '@nuxtjs/tailwindcss', '@nuxtjs/eslint-module'],
+  modules: [
+    '@pinia/nuxt',
+    '@nuxt/image',
+    'nuxt-particles',
+    '@vueuse/motion/nuxt',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/eslint-module',
+  ],
 });
