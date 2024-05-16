@@ -10,10 +10,16 @@
       <ProjectContainer id="projects" v-motion :initial="initial()" :visible-once="animation()" />
       <ContactForm id="contact" v-motion :initial="initial()" :visible-once="animation()" />
     </div>
+
+    <Transition>
+      <ProjectSidebar v-show="store.showSidebar" class="fixed top-0 bottom-0 right-0 z-50 transition-transform" />
+    </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
+const store = useProjectsStore();
+
 const initial = () => ({
   opacity: 0,
   y: 20,
@@ -29,3 +35,10 @@ const animation = () => ({
   },
 });
 </script>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transform: translateX(550px);
+}
+</style>
