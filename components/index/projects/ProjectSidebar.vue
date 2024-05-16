@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="fixed left-0 h-screen w-screen opacity-40 bg-black" @click="$emit('toggleSidebar')"></div>
+    <div class="fixed left-0 h-screen w-screen opacity-40 bg-black" @click="store.showSidebar = false"></div>
 
-    <div class="fixed top-0 bottom-0 right-0 w-full sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary">
+    <div class="fixed top-0 bottom-0 right-0 w-full h-screen sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary">
       <!-- Navigation -->
       <div class="flex flex-row justify-between">
         <svg
@@ -12,7 +12,7 @@
           strokeWidth="1.5"
           stroke="currentColor"
           class="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors"
-          @click="$emit('toggleSidebar')"
+          @click="store.showSidebar = false"
         >
           <path
             strokeLinecap="round"
@@ -70,12 +70,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  showSidebar: boolean;
-  activeProject: string;
-  projects: any[];
-}>();
-defineEmits(['toggleSidebar']);
+const store = useProjectsStore();
 
 // Additional fields specific to sidebar
 const sidebarFields = [
@@ -150,8 +145,8 @@ const sidebarFields = [
   },
 ];
 
-// Combine sidebar fields with projects prop
-const sidebarProjects = props.projects.map((project: any, index: number) => {
+// Combine sidebar fields with store projects
+const sidebarProjects = store.projects.map((project: any, index: number) => {
   return {
     ...project,
     ...sidebarFields[index],
@@ -160,13 +155,13 @@ const sidebarProjects = props.projects.map((project: any, index: number) => {
 
 // Filter active project
 const activeProject = computed(() => {
-  const filteredProjects = sidebarProjects.filter((project: any) => project.projectName === props.activeProject);
+  const filteredProjects = sidebarProjects.filter((project: any) => project.projectName === store.activeProject);
   return filteredProjects.length > 0 ? filteredProjects[0] : null;
 });
 
 // Disable scroll if sidebar is open
 watch(
-  () => props.showSidebar,
+  () => store.showSidebar,
   (newVal) => {
     if (newVal) {
       document.body.style.overflow = 'hidden';

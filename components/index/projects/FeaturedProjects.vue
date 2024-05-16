@@ -8,7 +8,7 @@
         : `bg-[url('@/images/tech-terminus-thumbnail.jpg')]`
     "
     class="group md:bg-none bg-center max-md:shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:flex cursor-pointer"
-    @click="$emit('setProject', project.name)"
+    @click="store.activeProject = project.name"
   >
     <!-- Image -->
     <div
@@ -27,7 +27,7 @@
       }"
       :class="project.alignment === 'right' ? 'order-2' : 'order-1'"
       class="hidden md:block md:w-3/5 md:relative md:overflow-hidden rounded"
-      @click="$emit('toggleSidebar')"
+      @click="store.showSidebar = true"
     >
       <div class="group-hover:scale-105 transition">
         <NuxtImg :src="`/images/${project.image}`" :alt="`${project.name} thumbnail`" class="min-w-[650px] h-auto" />
@@ -53,17 +53,17 @@
       :class="project.alignment === 'right' ? 'md:text-right' : 'md:text-left'"
       class="md:w-2/5 md:z-10 p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 max-md:backdrop-brightness-[0.3]"
     >
-      <div class="font-normal text-primary" @click="$emit('toggleSidebar')">{{ project.tagline }}</div>
+      <div class="font-normal text-primary" @click="store.showSidebar = true">{{ project.tagline }}</div>
       <div
         class="mb-5 text-3xl font-semibold text-white hover:text-primary transition-colors"
-        @click="$emit('toggleSidebar')"
+        @click="store.showSidebar = true"
       >
         {{ project.heading }}
       </div>
       <p
         :class="project.alignment === 'right' ? 'md:pl-10 md:pr-5 md:-ml-32' : 'md:pl-5 md:pr-10 md:-mr-32'"
         class="bg-none md:bg-tertiary sm:pt-5 pb-5 md:shadow-md md:rounded text-gray-300"
-        @click="$emit('toggleSidebar')"
+        @click="store.showSidebar = true"
       >
         {{ project.description }}
       </p>
@@ -86,7 +86,7 @@
         <ul
           :class="project.alignment === 'right' ? 'md:justify-end' : 'md:justify-none'"
           class="flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 md:mt-5 text-gray-500"
-          @click="$emit('toggleSidebar')"
+          @click="store.showSidebar = true"
         >
           <li v-for="technology in project.technologies" :key="technology">{{ technology }}</li>
         </ul>
@@ -107,10 +107,7 @@
 <script setup lang="ts">
 import { useMediaQuery } from '@vueuse/core';
 
-defineProps<{
-  showSidebar: boolean;
-}>();
-defineEmits(['toggleSidebar', 'setProject']);
+const store = useProjectsStore();
 
 const isMobile = useMediaQuery('(max-width: 768px)');
 
