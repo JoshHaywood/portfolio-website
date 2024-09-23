@@ -6,22 +6,22 @@ export const useProjectsStore = defineStore('project', () => {
 
   const projects = [
     {
-      projectName: 'freelancing-website',
+      projectName: 'customer-portal',
       heading: 'Customer Portal',
-      deployLink: 'https://joshhaywood.github.io/portfolio-website/',
+      deployLink: 'https://portal.industrion.io/',
     },
     {
-      projectName: 'student-survival-store',
+      projectName: 'crm-system',
       heading: 'Automated CRM System',
     },
     {
-      projectName: 'esports-center',
+      projectName: 'auction-website',
       heading: 'Auction Website',
     },
     {
       projectName: 'portfolio',
       repoLink: 'https://github.com/JoshHaywood/portfolio-website',
-      deployLink: 'https://joshhaywood.github.io/portfolio-website/',
+      deployLink: 'https://www.joshhaywood-portfolio.com/',
       heading: 'Personal Portfolio Website',
     },
     {

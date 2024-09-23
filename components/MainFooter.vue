@@ -117,16 +117,16 @@ const columns = [
   {
     heading: 'Projects',
     links: [
-      { label: 'Portfolio', target: 'portfolio' },
-      { label: 'Tech Terminus', target: 'tech-terminus' },
-      { label: 'Realtime Messaging App', target: 'realtime-messaging-app' },
+      { label: 'Customer Portal', target: 'customer-portal' },
+      { label: 'Automated CRM System', target: 'crm-system' },
+      { label: 'Auction Website', target: 'auction-website' },
     ],
   },
   {
     links: [
-      { label: 'Freelancing Website', target: 'freelancing-website' },
-      { label: 'Student Survival Store', target: 'student-survival-store' },
-      { label: 'Esports Center', target: 'esports-center' },
+      { label: 'Portfolio', target: 'portfolio' },
+      { label: 'Tech Terminus', target: 'tech-terminus' },
+      { label: 'Realtime Messaging App', target: 'realtime-messaging-app' },
     ],
   },
 ];
