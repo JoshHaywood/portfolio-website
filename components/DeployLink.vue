@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" :class="{ hidden: link === '/error' }">
+  <a :href="link">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
@@ -18,10 +18,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  link: {
-    type: String,
-    default: '',
-  },
-});
+defineProps<{
+  link: string;
+}>();
 </script>

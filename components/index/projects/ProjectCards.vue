@@ -58,8 +58,8 @@
 
               <!-- Project links -->
               <div class="flex flex-row items-center space-x-2">
-                <GithubLink :link="project.repoLink" class="h-5 w-5" />
-                <DeployLink :link="project.projectLink" class="h-5 w-5" />
+                <GithubLink v-if="project.repoLink" :link="project.repoLink" class="h-5 w-5" />
+                <DeployLink v-if="project.deployLink" :link="project.deployLink" class="h-5 w-5" />
               </div>
             </div>
 

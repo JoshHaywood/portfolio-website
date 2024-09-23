@@ -96,8 +96,8 @@
           :class="project.alignment === 'right' ? 'md:justify-end' : 'md:justify-start'"
           class="flex flex-row mt-5 space-x-2.5"
         >
-          <GithubLink :link="project.githubLink" class="h-5 w-5" />
-          <DeployLink :link="project.deployLink" class="h-5 w-5" />
+          <GithubLink v-if="project.githubLink" :link="project.githubLink" class="h-5 w-5" />
+          <DeployLink v-if="project.deployLink" :link="project.deployLink" class="h-5 w-5" />
         </div>
       </div>
     </div>

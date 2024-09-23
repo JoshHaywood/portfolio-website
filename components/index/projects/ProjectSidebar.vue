@@ -23,8 +23,8 @@
 
         <!-- Media Icons -->
         <div class="flex flex-row items-center space-x-2">
-          <GithubLink :link="activeProject?.repoLink ?? ''" class="h-5 w-5" />
-          <DeployLink :link="activeProject?.deployLink ?? ''" class="h-5 w-5" />
+          <GithubLink v-if="activeProject?.repoLink" :link="activeProject?.repoLink" class="h-5 w-5" />
+          <DeployLink v-if="activeProject?.deployLink" :link="activeProject?.deployLink" class="h-5 w-5" />
         </div>
       </div>
 
