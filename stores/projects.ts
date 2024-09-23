@@ -6,40 +6,33 @@ export const useProjectsStore = defineStore('project', () => {
 
   const projects = [
     {
+      projectName: 'freelancing-website',
+      heading: 'Customer Portal',
+      deployLink: 'https://joshhaywood.github.io/portfolio-website/',
+    },
+    {
+      projectName: 'student-survival-store',
+      heading: 'Automated CRM System',
+    },
+    {
+      projectName: 'esports-center',
+      heading: 'Auction Website',
+    },
+    {
       projectName: 'portfolio',
       repoLink: 'https://github.com/JoshHaywood/portfolio-website',
-      deployLink: 'https://www.joshhaywood-portfolio.com/',
+      deployLink: 'https://joshhaywood.github.io/portfolio-website/',
       heading: 'Personal Portfolio Website',
     },
     {
       projectName: 'tech-terminus',
       repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-      deployLink: 'http://www.tech-terminus.me/',
       heading: 'Ecommerce website',
     },
     {
       projectName: 'realtime-messaging-app',
       repoLink: 'https://github.com/JoshHaywood/messaging-app',
-      deployLink: 'https://messaging-app.herokuapp.com/',
       heading: 'Real-Time Messaging App',
-    },
-    {
-      projectName: 'freelancing-website',
-      repoLink: 'https://github.com/JoshHaywood/pop-up-team',
-      deployLink: '/error',
-      heading: 'Freelancing Website',
-    },
-    {
-      projectName: 'student-survival-store',
-      repoLink: 'https://github.com/JoshHaywood/student-survival-store',
-      deployLink: '/error',
-      heading: 'SaaS Student Survival Store',
-    },
-    {
-      projectName: 'esports-center',
-      repoLink: 'https://github.com/JoshHaywood/esports-center',
-      deployLink: '/error',
-      heading: 'Esports Stats Tracking Website',
     },
   ];
 

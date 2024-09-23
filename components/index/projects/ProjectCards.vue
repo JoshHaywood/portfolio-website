@@ -100,22 +100,67 @@ const store = useProjectsStore();
 const cardFields = [
   {
     description:
-      'A website showcasing a curated selection of my projects and providing easy access to my contact information for potential employers.',
+      'Enabling users to access and monitor their energy meters and sales data through a centralised platform designed for ease of use and efficiency.',
     technologies: [
       {
-        item: 'React',
+        item: 'Vue3',
       },
       {
-        item: 'TailwindCSS',
+        item: 'Adonis',
       },
       {
-        item: 'Framer Motion',
+        item: 'PostgreSQL',
       },
     ],
   },
   {
     description:
-      'An Ecommerce website that I developed during my research and development dissertation, showcasing standard ecommerce features using a restful API.',
+      'A CRM developed with a focus on AI and automation, reducing the workload for sales teams and improving lead generation processes.',
+    technologies: [
+      {
+        item: 'Vue3',
+      },
+      {
+        item: 'GraphQL',
+      },
+      {
+        item: 'Hasura',
+      },
+    ],
+  },
+  {
+    description:
+      'A real-time auction platform enabling suppliers to bid on meters, with live data facilitating efficient communication between staff and customers.',
+    technologies: [
+      {
+        item: 'Vue3',
+      },
+      {
+        item: 'Socket.io',
+      },
+      {
+        item: 'TypeScript',
+      },
+    ],
+  },
+  {
+    description:
+      'A portfolio site showcasing my projects, providing easy access to contact information for potential enquiries.',
+    technologies: [
+      {
+        item: 'NuxtJS',
+      },
+      {
+        item: 'TailwindCSS',
+      },
+      {
+        item: 'TypeScript',
+      },
+    ],
+  },
+  {
+    description:
+      'An Ecommerce site developed for my research dissertation, implementing standard ecommerce features using a RESTful API.',
     technologies: [
       {
         item: 'React',
@@ -130,7 +175,7 @@ const cardFields = [
   },
   {
     description:
-      'An upgraded version of my previous real-time messaging app, showcasing improvements and new features. The app allows users to exchange messages instantly and interact in real-time.',
+      'An upgraded real-time messaging app, featuring new functionalities and improvements for instant communication.',
     technologies: [
       {
         item: 'Next.js',
@@ -140,51 +185,6 @@ const cardFields = [
       },
       {
         item: 'TypeScript',
-      },
-    ],
-  },
-  {
-    description:
-      'A collaborative project I worked on as part of a group, where we developed a freelancing website to connect clients and freelancers.',
-    technologies: [
-      {
-        item: 'React',
-      },
-      {
-        item: 'Express',
-      },
-      {
-        item: 'mySQL',
-      },
-    ],
-  },
-  {
-    description:
-      'A group project that involved creating a software as a service (SaaS) product utilizing a monthly subscription model.',
-    technologies: [
-      {
-        item: 'React',
-      },
-      {
-        item: 'Express',
-      },
-      {
-        item: 'Sqlite3',
-      },
-    ],
-  },
-  {
-    description:
-      'A statistics tracking tool for Esports, which I led as the project manager, displaying my leadership and interest in the rising Esports industry.',
-    technologies: [
-      {
-        item: 'React',
-      },
-      {
-        item: 'Express',
-      },
-      {
-        item: 'MySQL',
       },
     ],
   },
