@@ -4,8 +4,8 @@
     :key="index"
     :class="
       project.alignment === 'right'
-        ? `md:flex-row-reverse bg-[url('@/images/portfolio-thumbnail.webp')]`
-        : `bg-[url('@/images/tech-terminus-thumbnail.jpg')]`
+        ? `md:flex-row-reverse bg-[url('../images/portfolio-thumbnail.webp')]`
+        : `bg-[url('../images/tech-terminus-thumbnail.jpg')]`
     "
     class="group md:bg-none bg-center max-md:shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:flex cursor-pointer"
     @click="store.activeProject = project.name"
