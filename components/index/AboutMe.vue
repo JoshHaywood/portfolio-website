@@ -9,24 +9,24 @@
         <!-- Background information -->
         <div class="flex flex-col space-y-4 w-full leading-7">
           <p class="text-gray-400">
-            I am a recent graduate from
-            <a href="https://www.falmouth.ac.uk" class="font-semibold text-primary hover:underline">
-              Falmouth University </a
-            >with a BSc in Web Development. Located in Devon, England, my main interests lie in front-end, full-stack,
-            and user interface development and design. Recently, I have been focusing on creating full-stack RESTful
-            APIs with React, Node.js, and TypeScript hosted on the cloud. Additionally, I have been actively marketing
-            myself through my portfolio site and CV."
+            I am a Software Engineer at
+            <a href="https://www.dbsne.com/" class="font-semibold text-primary hover:underline">
+              Direct Business Group,
+            </a>
+            where I contribute, as part of a team, to maintaining existing projects and developing new applications. I
+            aim to create efficient, scalable, and user-friendly solutions whilst enhancing my skills and technical
+            experience. By integrating modern development trends and practices into my work, I strive to solve
+            challenges effectively and contribute to the success of our projects and the development of our team.
           </p>
 
           <p class="text-gray-400">
-            I make use of the latest web development trends and technologies, and I am always looking for new ways to
-            improve my skills. One of my standout achievements is creating an
-            <span class="font-semibold text-primary hover:underline hover:cursor-pointer">e-commerce site</span>
-            as part of a mixed-method study into UX and UI design, and creating a
+            I specialize in full-stack web development, utilizing the latest trends and technologies. My current areas
+            of focus are
             <span class="font-semibold text-primary hover:underline hover:cursor-pointer">
-              real-time messaging system
+              customer-oriented applications
             </span>
-            , both of which received high praise from my peers and instructors.
+            and creating an automation-driven
+            <span class="font-semibold text-primary hover:underline hover:cursor-pointer">CRM system.</span>
           </p>
         </div>
 
@@ -78,13 +78,13 @@
 <script setup lang="ts">
 const technologies: any = [
   {
-    listColumn: [{ label: 'React' }, { label: 'NextJS' }, { label: 'SASS' }],
+    listColumn: [{ label: 'React' }, { label: 'Vue3' }, { label: 'TypeScript' }],
   },
   {
-    listColumn: [{ label: 'TailwindCSS' }, { label: 'TypeScript' }, { label: 'Node.js' }],
+    listColumn: [{ label: 'Express' }, { label: 'Adonis' }, { label: 'GraphQL' }],
   },
   {
-    listColumn: [{ label: 'Web Sockets' }, { label: 'Express' }, { label: 'Heroku' }],
+    listColumn: [{ label: 'Web Sockets' }, { label: 'Node.js' }, { label: 'PostgreSQL' }],
   },
 ];
 </script>
