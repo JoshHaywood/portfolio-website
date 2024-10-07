@@ -27,19 +27,18 @@
           :visible-once="animation(1300)"
           class="block mt-4 tracking-wide text-4xl sm:text-5xl lg:text-6xl font-semibold text-gray-400"
         >
-          An aspiring web developer
+          A Full-Stack Software Engineer
         </h2>
         <p
           v-motion
           :initial="initial()"
           :visible-once="animation(1500)"
-          class="mt-6 tracking-wide text-xl max-w-lg text-gray-400"
+          class="mt-6 tracking-wide text-xl max-w-xl text-gray-400"
         >
-          I'm a recent graduate at
-          <a href="https://www.falmouth.ac.uk/">
-            <span class="font-semibold text-xl text-primary hover:underline">Falmouth University </span>
-          </a>
-          with a BSc in web development. At present, I am focused on specializing in front-end JavaScript development.
+          I build high-quality, impactful applications at
+          <a href="https://www.dbsne.com/">
+            <span class="font-semibold text-xl text-primary hover:underline">Direct Business Group</span> </a
+          >, focused on driving innovation and efficiency in the Energy Sector.
         </p>
       </section>
 
