@@ -34,18 +34,14 @@
         <div class="space-y-5">
           <div class="font-normal text-gray-400">Technologies I have been using recently:</div>
 
-          <div class="grid grid-cols-1 gap-4 xs:grid-cols-3 xs:gap-10 px-5 pt-1 pb-5 bg-tertiary">
-            <ul v-for="(techGroup, index) in technologies" :key="index">
-              <li
-                v-for="(technology, techIndex) in techGroup.listColumn"
-                :key="techIndex"
-                class="flex flex-row mt-5 mb-1 space-x-2.5"
-              >
+          <div class="grid grid-cols-1 xs:grid-cols-3 px-5 pt-1 pb-5 bg-tertiary">
+            <ul v-for="(technology, index) in technologies" :key="index">
+              <li class="flex flex-row mt-5 mb-1 space-x-2.5">
                 <div class="overflow-hidden inline-block mt-[0.175rem]">
                   <div class="h-2 w-2 bg-primary rotate-45 transform origin-top-left"></div>
                 </div>
 
-                <span class="text-sm font-normal text-gray-400">{{ technology.label }}</span>
+                <span class="text-sm font-normal text-gray-400">{{ technology }}</span>
               </li>
             </ul>
           </div>
@@ -76,15 +72,15 @@
 </template>
 
 <script setup lang="ts">
-const technologies: any = [
-  {
-    listColumn: [{ label: 'React' }, { label: 'Vue3' }, { label: 'TypeScript' }],
-  },
-  {
-    listColumn: [{ label: 'Express' }, { label: 'Adonis' }, { label: 'GraphQL' }],
-  },
-  {
-    listColumn: [{ label: 'Web Sockets' }, { label: 'Node.js' }, { label: 'PostgreSQL' }],
-  },
+const technologies: string[] = [
+  'React',
+  'Express',
+  'Web Sockets',
+  'Vue3',
+  'Adonis',
+  'Node.js',
+  'TypeScript',
+  'GraphQL',
+  'PostgreSQL',
 ];
 </script>

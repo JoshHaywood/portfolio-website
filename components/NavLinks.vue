@@ -78,7 +78,7 @@ defineProps<{
 }>();
 defineEmits(['close']);
 
-const links = [
+const links: { id: string; name: string }[] = [
   { id: 'about', name: 'About' },
   { id: 'skills', name: 'Skills' },
   { id: 'projects', name: 'Projects' },

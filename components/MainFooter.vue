@@ -80,13 +80,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
 const store = useProjectsStore();
 
 const src = ref<string>('/images/logo.png');
 
-const mediaIcons = [
+const mediaIcons: { label: string; path: string; svg: string }[] = [
   {
     label: 'LinkedIn',
     path: 'https://www.linkedin.com/in/josh-haywood',
@@ -105,7 +103,7 @@ const mediaIcons = [
   },
 ];
 
-const columns = [
+const columns: { heading?: string; links: { label: string; target: string }[] }[] = [
   {
     heading: 'Sections',
     links: [

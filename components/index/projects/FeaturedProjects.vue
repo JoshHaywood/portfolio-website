@@ -111,7 +111,17 @@ const store = useProjectsStore();
 
 const isMobile = useMediaQuery('(max-width: 768px)');
 
-const cardsData = [
+const cardsData: {
+  image: string;
+  name: string;
+  tagline: string;
+  heading: string;
+  description: string;
+  technologies: string[];
+  githubLink: string;
+  deployLink: string;
+  alignment: string;
+}[] = [
   {
     image: 'portfolio-thumbnail.webp',
     name: 'portfolio',

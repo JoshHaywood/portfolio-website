@@ -4,7 +4,7 @@ export const useProjectsStore = defineStore('project', () => {
   const showSidebar = ref<boolean>(false);
   const activeProject = ref<string>('');
 
-  const projects = [
+  const projects: { projectName: string; heading: string; deployLink?: string; repoLink?: string }[] = [
     {
       projectName: 'customer-portal',
       heading: 'Customer Portal',
@@ -15,8 +15,8 @@ export const useProjectsStore = defineStore('project', () => {
       heading: 'Automated CRM System',
     },
     {
-      projectName: 'auction-website',
-      heading: 'Auction Website',
+      projectName: 'auction-platform',
+      heading: 'Auction Platform',
     },
     {
       projectName: 'portfolio',

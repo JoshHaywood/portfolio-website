@@ -97,7 +97,7 @@
 const store = useProjectsStore();
 
 // Additional fields specific to cards
-const cardFields = [
+const cardFields: { description: string; technologies: { item: string }[] }[] = [
   {
     description:
       'Enabling users to access and monitor their energy meters and sales data through a centralised platform designed for ease of use and efficiency.',

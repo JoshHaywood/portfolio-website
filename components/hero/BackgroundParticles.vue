@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-const options: any = {
+const options: { [key: string]: any } = {
   fullScreen: {
     enable: false,
     zIndex: -1,
