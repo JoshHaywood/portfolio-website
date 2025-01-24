@@ -7,6 +7,20 @@
       <div
         v-for="(card, index) in cards"
         :key="index"
+        v-motion
+        :initial="{
+          opacity: 0,
+          y: 20,
+        }"
+        :visible-once="{
+          opacity: 1,
+          y: 0,
+          transition: {
+            delay: index * 200,
+            type: 'keyframes',
+            ease: 'easeInOut',
+          },
+        }"
         class="relative md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 md:rounded md:border-b md:border-primary bg-tertiary"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-12 h-auto mb-5 sm:my-5 fill-primary">
