@@ -9,7 +9,7 @@
         <!-- Background information -->
         <div class="flex flex-col space-y-4 w-full leading-7">
           <p class="text-gray-400">
-            I am a Software Engineer at
+            I am a Software Engineer at the
             <a href="https://www.dbsne.com/" class="font-semibold text-primary hover:underline">
               Direct Business Group,
             </a>
@@ -22,11 +22,19 @@
           <p class="text-gray-400">
             I specialize in full-stack web development, utilizing the latest trends and technologies. My current areas
             of focus are
-            <span class="font-semibold text-primary hover:underline hover:cursor-pointer">
+            <span
+              class="font-semibold text-primary hover:underline hover:cursor-pointer"
+              @click="store.setSidebar('Customer Portal')"
+            >
               customer-oriented applications
             </span>
             and creating an automation-driven
-            <span class="font-semibold text-primary hover:underline hover:cursor-pointer">CRM system.</span>
+            <span
+              class="font-semibold text-primary hover:underline hover:cursor-pointer"
+              @click="store.setSidebar('Automated CRM System')"
+            >
+              CRM system.
+            </span>
           </p>
         </div>
 
@@ -72,6 +80,8 @@
 </template>
 
 <script setup lang="ts">
+const store = useProjectsStore();
+
 const technologies: string[] = [
   'React',
   'Express',

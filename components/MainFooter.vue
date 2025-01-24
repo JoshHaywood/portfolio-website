@@ -48,7 +48,7 @@
                   v-for="(link, linkIndex) in column.links"
                   :key="linkIndex"
                   class="mb-3 text-sm text-gray-400 cursor-pointer hover:underline"
-                  @click="columnIndex === 0 ? useScrollTo().scrollTo(link.target) : setSidebar(link.label)"
+                  @click="columnIndex === 0 ? useScrollTo().scrollTo(link.target) : store.setSidebar(link.label)"
                 >
                   {{ link.label }}
                 </div>
@@ -122,9 +122,9 @@ const columns: { heading?: string; links: { label: string; target: string }[] }[
   },
   {
     links: [
-      { label: 'Portfolio', target: 'portfolio' },
       { label: 'Tech Terminus', target: 'tech-terminus' },
       { label: 'Realtime Messaging App', target: 'realtime-messaging-app' },
+      { label: 'Portfolio', target: 'portfolio' },
     ],
   },
 ];
@@ -132,11 +132,5 @@ const columns: { heading?: string; links: { label: string; target: string }[] }[
 // Scroll to top
 const scrollToTop = () => {
   window.scrollTo(0, 0);
-};
-
-// Set active project in sidebar
-const setSidebar = (label: string) => {
-  store.showSidebar = true;
-  store.activeProject = label.toLowerCase().replace(/ /g, '-'); // Match formatting expected by sidebar
 };
 </script>

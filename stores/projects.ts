@@ -19,12 +19,6 @@ export const useProjectsStore = defineStore('project', () => {
       heading: 'Auction Platform',
     },
     {
-      projectName: 'portfolio',
-      repoLink: 'https://github.com/JoshHaywood/portfolio-website',
-      deployLink: 'https://www.joshhaywood-portfolio.com/',
-      heading: 'Personal Portfolio Website',
-    },
-    {
       projectName: 'tech-terminus',
       repoLink: 'https://github.com/JoshHaywood/tech-terminus',
       heading: 'Ecommerce website',
@@ -34,7 +28,18 @@ export const useProjectsStore = defineStore('project', () => {
       repoLink: 'https://github.com/JoshHaywood/messaging-app',
       heading: 'Real-Time Messaging App',
     },
+    {
+      projectName: 'portfolio',
+      repoLink: 'https://github.com/JoshHaywood/portfolio-website',
+      deployLink: 'https://www.joshhaywood-portfolio.com/',
+      heading: 'Personal Portfolio Website',
+    },
   ];
 
-  return { showSidebar, activeProject, projects };
+  const setSidebar = (label: string) => {
+    showSidebar.value = true;
+    activeProject.value = label.toLowerCase().replace(/ /g, '-'); // Match formatting expected by sidebar
+  };
+
+  return { showSidebar, activeProject, projects, setSidebar };
 });
