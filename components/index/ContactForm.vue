@@ -69,6 +69,7 @@
         <input
           class="w-full px-3 py-2 text-sm text-gray-400 rounded shadow bg-tertiary focus:outline-none"
           type="text"
+          name="name"
           placeholder="Name"
           required
         />
@@ -79,6 +80,7 @@
         <input
           class="w-full px-3 py-2 text-sm text-gray-400 rounded shadow bg-tertiary focus:outline-none"
           type="email"
+          name="email"
           placeholder="Email"
           required
         />
@@ -88,6 +90,7 @@
         <label class="text-sm font-bold text-white">Message</label>
         <textarea
           class="w-full px-3 py-2 text-sm text-gray-400 rounded shadow bg-tertiary focus:outline-none"
+          name="message"
           placeholder="Message"
           rows="8"
           required
