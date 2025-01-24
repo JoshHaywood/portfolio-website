@@ -96,7 +96,6 @@
           :class="project.alignment === 'right' ? 'md:justify-end' : 'md:justify-start'"
           class="flex flex-row mt-5 space-x-2.5"
         >
-          <GithubLink v-if="project.githubLink" :link="project.githubLink" class="h-5 w-5" />
           <DeployLink v-if="project.deployLink" :link="project.deployLink" class="h-5 w-5" />
         </div>
       </div>
@@ -118,32 +117,28 @@ const cardsData: {
   heading: string;
   description: string;
   technologies: string[];
-  githubLink: string;
-  deployLink: string;
+  deployLink?: string;
   alignment: string;
 }[] = [
   {
-    image: 'portfolio-thumbnail.webp',
-    name: 'portfolio',
-    tagline: 'Portfolio Website',
-    heading: 'Portfolio Website',
+    image: 'portal-featured-thumbnail.jpg',
+    name: 'industrion',
+    tagline: 'Customer Portal',
+    heading: 'Industrion',
     description:
-      "My portfolio website which includes my latest projects and serves as a point of contact for potential clients and employers, it's constantly updated to reflect my development progress.",
-    technologies: ['Handlebars/React', 'ExpressJS', 'NodeJS', 'CSS/Tailwind'],
-    githubLink: 'https://github.com/JoshHaywood/portfolio-website',
-    deployLink: 'https://www.joshhaywood-portfolio.com/',
+      'A centralised platform enabling users to manage energy meters, access key documents, and seamlessly connect with other apps, all designed for clarity and convenience.',
+    technologies: ['Vue3', 'Adonis', 'PostgreSQL'],
+    deployLink: 'https://portal.industrion.io/',
     alignment: 'right',
   },
   {
-    image: 'tech-terminus-thumbnail.jpg',
-    name: 'tech-terminus',
-    tagline: 'Ecommerce Website',
-    heading: 'Dissertation project',
+    image: 'astra-featured-thumbnail.jpg',
+    name: 'astra',
+    tagline: 'Automated CRM System',
+    heading: 'Astra',
     description:
-      'Artefact A of an A/B test used as part of my scientific study on the impact of interfaces and design on user experiences in web-based applications.',
-    technologies: ['React', 'ExpressJS', 'NodeJS', 'Axios', 'MySQL'],
-    githubLink: 'https://github.com/JoshHaywood/tech-terminus',
-    deployLink: 'http://www.tech-terminus.me/',
+      'A CRM built to streamline lead generation and customer management through AI-driven automation, enabling sales teams to focus on client interaction and building relationships.',
+    technologies: ['Vue3', 'GraphQL', 'Hasura'],
     alignment: 'left',
   },
 ];
