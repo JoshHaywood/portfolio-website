@@ -4,12 +4,11 @@
       <SectionHeading heading="Contact" />
 
       <p class="text-gray-400">
-        I am currently available for both project work and full-time employment. Currently im based in South West
-        England with a GMT time zone, I am open to both remote and on-site opportunities.
+        Based on South West England, I'm always open to exploring new opportunities and collaborations.
       </p>
 
       <p class="mt-4 text-gray-400">
-        Please don't hesitate to contact me through this contact form or my
+        Please don't hesitate to contact me through this form or my
         <a href="https://www.linkedin.com/in/josh-haywood" class="font-semibold text-primary hover:underline">
           LinkedIn profile.
         </a>
@@ -30,7 +29,7 @@
               />
             </svg>
 
-            <label class="pt-1 font-semibold text-sm text-gray-400 cursor-pointer"> Josh Haywood </label>
+            <label class="pt-1 font-semibold text-sm text-gray-400 cursor-pointer">Josh Haywood</label>
           </button>
         </a>
 
@@ -70,7 +69,6 @@
         <input
           class="w-full px-3 py-2 text-sm text-gray-400 rounded shadow bg-tertiary focus:outline-none"
           type="text"
-          autoComplete="off"
           placeholder="Name"
           required
         />
@@ -81,7 +79,6 @@
         <input
           class="w-full px-3 py-2 text-sm text-gray-400 rounded shadow bg-tertiary focus:outline-none"
           type="email"
-          autoComplete="off"
           placeholder="Email"
           required
         />
@@ -91,15 +88,13 @@
         <label class="text-sm font-bold text-white">Message</label>
         <textarea
           class="w-full px-3 py-2 text-sm text-gray-400 rounded shadow bg-tertiary focus:outline-none"
-          type="text"
-          autoComplete="off"
           placeholder="Message"
           rows="8"
           required
         />
       </div>
 
-      <input type="hidden" name="_next" defaultValue="https://www.joshhaywood-portfolio.com/message-sent" />
+      <input type="hidden" name="_next" value="https://www.joshhaywood-portfolio.com/message-sent" />
 
       <button
         class="w-1/4 mx-auto p-3 text-sm border-b-2 border-primary rounded text-white bg-tertiary transition-colors hover:bg-tertiary/70"
