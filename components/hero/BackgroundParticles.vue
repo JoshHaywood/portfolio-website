@@ -3,7 +3,17 @@
 </template>
 
 <script setup lang="ts">
-const options: { [key: string]: any } = {
+const options: {
+  fullScreen: { enable: boolean; zIndex: number };
+  particles: {
+    color: { value: string };
+    links: { color: string; distance: number; enable: boolean; opacity: number; width: number };
+    move: { enable: boolean; outModes: string };
+    number: { density: { enable: boolean }; value: number };
+    opacity: { value: number };
+    size: { value: { min: number; max: number } };
+  };
+} = {
   fullScreen: {
     enable: false,
     zIndex: -1,

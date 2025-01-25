@@ -4,7 +4,7 @@ export const useProjectsStore = defineStore('project', () => {
   const showSidebar = ref<boolean>(false);
   const activeProject = ref<string>('');
 
-  const projects: { heading: string; deployLink?: string; repoLink?: string }[] = [
+  const projects: Project[] = [
     {
       heading: 'Customer Portal',
       deployLink: 'https://portal.industrion.io/',

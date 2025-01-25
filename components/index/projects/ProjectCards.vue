@@ -188,7 +188,7 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
 ];
 
 // Combine card fields with store projects
-const cardProjects = store.projects.map((project: any, index: number) => {
+const cardProjects = store.projects.map((project: Project, index: number) => {
   return {
     ...project,
     ...cardFields[index],
