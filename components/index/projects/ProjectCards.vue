@@ -66,7 +66,7 @@
             <!-- Card text -->
             <div
               class="lg:flex flex-col space-y-4 hover:text-primary hover:cursor-pointer"
-              @click="(store.activeProject = project.projectName), (store.showSidebar = true)"
+              @click="store.setSidebar(project.projectName)"
             >
               <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition-colors">
                 {{ project.heading }}
@@ -130,6 +130,21 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
   },
   {
     description:
+      'An internal tool that compiles company data from multiple sources to create potenial prospects, streamlining CRM integration.',
+    technologies: [
+      {
+        item: 'Vue3',
+      },
+      {
+        item: 'Shadcn',
+      },
+      {
+        item: 'Adonis',
+      },
+    ],
+  },
+  {
+    description:
       'A real-time auction platform enabling suppliers to bid on meters, with live data facilitating efficient communication between staff and customers.',
     technologies: [
       {
@@ -139,7 +154,22 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
         item: 'Socket.io',
       },
       {
-        item: 'TypeScript',
+        item: 'Adonis',
+      },
+    ],
+  },
+  {
+    description:
+      'A platform for tracking energy and gas consumption across multiple sites and devices, down to individual meters statistics.',
+    technologies: [
+      {
+        item: 'Vue3',
+      },
+      {
+        item: 'Adonis',
+      },
+      {
+        item: 'PostgreSQL',
       },
     ],
   },
@@ -152,36 +182,6 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
       },
       {
         item: 'TailwindCSS',
-      },
-      {
-        item: 'TypeScript',
-      },
-    ],
-  },
-  {
-    description:
-      'An Ecommerce site developed for my research dissertation, implementing standard ecommerce features using a RESTful API.',
-    technologies: [
-      {
-        item: 'React',
-      },
-      {
-        item: 'Express',
-      },
-      {
-        item: 'MySQL',
-      },
-    ],
-  },
-  {
-    description:
-      'An upgraded real-time messaging app, featuring new functionalities and improvements for instant communication.',
-    technologies: [
-      {
-        item: 'Next.js',
-      },
-      {
-        item: 'Express',
       },
       {
         item: 'TypeScript',

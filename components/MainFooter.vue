@@ -117,13 +117,13 @@ const columns: { heading?: string; links: { label: string; target: string }[] }[
     links: [
       { label: 'Customer Portal', target: 'customer-portal' },
       { label: 'Automated CRM System', target: 'crm-system' },
-      { label: 'Auction Website', target: 'auction-website' },
+      { label: 'Prospecting Tool', target: 'prospecting-tool' },
     ],
   },
   {
     links: [
-      { label: 'Tech Terminus', target: 'tech-terminus' },
-      { label: 'Realtime Messaging App', target: 'realtime-messaging-app' },
+      { label: 'Auction Website', target: 'auction-website' },
+      { label: 'Organisational Energy Tracker', target: 'energy-tracker' },
       { label: 'Portfolio', target: 'portfolio' },
     ],
   },

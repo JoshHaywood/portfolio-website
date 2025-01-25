@@ -15,18 +15,16 @@ export const useProjectsStore = defineStore('project', () => {
       heading: 'Automated CRM System',
     },
     {
+      projectName: 'prospecting-tool',
+      heading: 'Automated Prospecting Tool',
+    },
+    {
       projectName: 'auction-platform',
       heading: 'Auction Platform',
     },
     {
-      projectName: 'tech-terminus',
-      repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-      heading: 'Ecommerce website',
-    },
-    {
-      projectName: 'realtime-messaging-app',
-      repoLink: 'https://github.com/JoshHaywood/messaging-app',
-      heading: 'Real-Time Messaging App',
+      projectName: 'energy-tracker',
+      heading: 'Organisational Energy Tracker',
     },
     {
       projectName: 'portfolio',
