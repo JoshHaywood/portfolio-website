@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia';
+import type { Project } from '@/types';
 
 export const useProjectsStore = defineStore('project', () => {
   const showSidebar = ref<boolean>(false);

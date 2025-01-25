@@ -91,6 +91,8 @@
 </template>
 
 <script setup lang="ts">
+import type { Project } from '@/types';
+
 const store = useProjectsStore();
 
 // Additional fields specific to cards
