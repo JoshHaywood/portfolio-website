@@ -78,33 +78,6 @@ const store = useProjectsStore();
 const sidebarFields: { tagline: string; projectImage: string; overview: string; structure: string[]; role: string }[] =
   [
     {
-      tagline: 'Elevated Energy Management',
-      projectImage: '/images/industrion-thumbnail.png',
-      overview:
-        'An energy management platform built to give users full control over their energy and gas meters. It allows users to manage meter details, access important documents, and update personal information independently, without direct supervision. Acting as the central hub for the ecosystem, the portal connects users to additional applications and introduces features like energy consumption analysis to deliver valuable energy consumption insights.',
-      structure: [
-        'HTML',
-        'Vue3',
-        'Tailwind CSS',
-        'Shadcn',
-        'Typescript',
-        'Adonis',
-        'Node.js',
-        'Cron',
-        'Socket.io',
-        'PostgreSQL',
-      ],
-      role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated CRM integration, automating prospect creation to streamline workflows between sales and support teams.',
-    },
-    {
-      tagline: 'Customer Relationship Management',
-      projectImage: '/images/astra-thumbnail.jpg',
-      overview:
-        'A CRM platform designed to revolutionise how sales staff handle prospects, leads, and customer interactions. Built with a strong focus on automation, the system streamlines data collection, prospect creation, and the entire sales workflow. By integrating AI-generated summaries, internal communication tools, and external systems, it provides staff with up-to-date insights on sales progression and collaboration. Using GraphQL and Hasura, the platform ensures a lightweight backend and fine-grained control over permissions, enabling efficient integration with the PostgreSQL database and flexibility for future development.',
-      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Node.js', 'Socket.io', 'Hasura'],
-      role: 'I started by designing and developing a Kanban-style board to manage prospects, leads, and sales, iterating on it based on staff feedback to improve workflows and usability. I implemented the initial sales flow, allowing staff to create and assign sales while ensuring seamless interaction with existing systems. A key achievement was integrating the CRM with the customer portal, enabling staff to view and manage customer data, update meter details, and upload files during onboarding. Throughout the rollout, I actively maintained and refined the system, applying updates and fixes to address feedback, ensuring the platform met the needs of its users and supported the sales team’s efficiency.',
-    },
-    {
       tagline: 'Streamlining Lead Generation with Intelligent Automation',
       projectImage: '/images/shado-thumbnail.png',
       overview:
@@ -155,6 +128,60 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
         'A personal portfolio website built as both a test of my skills as a new developer and a central place to showcase my experience and projects. Over time, the site evolved significantly, adapting to new technologies and improving maintainability, performance, and readability. Beyond serving as a professional hub, it also provided a space to experiment with different frameworks and refine my development approach.',
       structure: ['HTML', 'NuxtJS', 'React', 'Handlebars', 'TailwindCSS', 'TypeScript', 'Node.js'],
       role: `This project has undergone multiple iterations, reflecting my progression as a developer. Initially built with Handlebars while learning the fundamentals, I later transitioned to React for its component-based structure. As the project grew, I moved to Vue and ultimately Nuxt, taking advantage of its improved maintainability, readability, and built-in server-side rendering. These shifts not only enhanced the site's performance but also refined my approach to structuring applications for scalability and long-term development.`,
+    },
+    {
+      tagline: 'Exploring the science of UX through ecommerce Design',
+
+      projectImage: '/images/tech-terminus-thumbnail.png',
+      overview:
+        'This was an ecommerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited knowledge of developing.',
+      structure: ['HTML', 'React', 'Tailwinds CSS', 'Material UI', 'Javascript', 'Express.js', 'Node.js', 'MySQL'],
+      role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
+    },
+    {
+      tagline: 'Real-time communication, at your fingertips',
+      projectImage: '/images/messaging-app-thumbnail.png',
+      overview:
+        'This project is the second iteration of my real-time messaging app, aimed at improving the user experience and adding new features based on user feedback from the initial version. The app allows users to communicate in real-time, providing a seamless and efficient messaging experience.',
+      structure: [
+        'HTML',
+        'Next.js',
+        'Tailwinds CSS',
+        'Material UI',
+        'TypeScript',
+        'Express.js',
+        'Node.js',
+        'Socket.io',
+        'MySQL',
+      ],
+      role: `As the sole developer of this project, I took on the challenge of enhancing the app's functionality and design. I implemented new features such as friend requests, profiles and settings, and time stamping messages, improving the overall user experience. I also optimized the codebase for better performance and scalability with Next and TypeScript. Throughout the development process, I actively sought user feedback and iterated on the design to meet their needs and preferences.`,
+    },
+    {
+      tagline: 'Elevated Energy Management',
+      projectImage: '/images/industrion-thumbnail.png',
+      overview:
+        'An energy management platform built to give users full control over their energy and gas meters. It allows users to manage meter details, access important documents, and update personal information independently, without direct supervision. Acting as the central hub for the ecosystem, the portal connects users to additional applications and introduces features like energy consumption analysis to deliver valuable energy consumption insights.',
+      structure: [
+        'HTML',
+        'Vue3',
+        'Tailwind CSS',
+        'Shadcn',
+        'Typescript',
+        'Adonis',
+        'Node.js',
+        'Cron',
+        'Socket.io',
+        'PostgreSQL',
+      ],
+      role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated CRM integration, automating prospect creation to streamline workflows between sales and support teams.',
+    },
+    {
+      tagline: 'Customer Relationship Management',
+      projectImage: '/images/astra-thumbnail.jpg',
+      overview:
+        'A CRM platform designed to revolutionise how sales staff handle prospects, leads, and customer interactions. Built with a strong focus on automation, the system streamlines data collection, prospect creation, and the entire sales workflow. By integrating AI-generated summaries, internal communication tools, and external systems, it provides staff with up-to-date insights on sales progression and collaboration. Using GraphQL and Hasura, the platform ensures a lightweight backend and fine-grained control over permissions, enabling efficient integration with the PostgreSQL database and flexibility for future development.',
+      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Node.js', 'Socket.io', 'Hasura'],
+      role: 'I started by designing and developing a Kanban-style board to manage prospects, leads, and sales, iterating on it based on staff feedback to improve workflows and usability. I implemented the initial sales flow, allowing staff to create and assign sales while ensuring seamless interaction with existing systems. A key achievement was integrating the CRM with the customer portal, enabling staff to view and manage customer data, update meter details, and upload files during onboarding. Throughout the rollout, I actively maintained and refined the system, applying updates and fixes to address feedback, ensuring the platform met the needs of its users and supported the sales team’s efficiency.',
     },
   ];
 

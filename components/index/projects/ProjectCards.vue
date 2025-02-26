@@ -99,36 +99,6 @@ const store = useProjectsStore();
 const cardFields: { description: string; technologies: { item: string }[] }[] = [
   {
     description:
-      'Enabling users to access and monitor their energy meters and sales data through a centralised platform designed for ease of use and efficiency.',
-    technologies: [
-      {
-        item: 'Vue3',
-      },
-      {
-        item: 'Adonis',
-      },
-      {
-        item: 'PostgreSQL',
-      },
-    ],
-  },
-  {
-    description:
-      'A CRM developed with a focus on AI and automation, reducing the workload for sales teams and improving lead generation processes.',
-    technologies: [
-      {
-        item: 'Vue3',
-      },
-      {
-        item: 'GraphQL',
-      },
-      {
-        item: 'Hasura',
-      },
-    ],
-  },
-  {
-    description:
       'An internal tool that compiles company data from multiple sources to create potenial prospects, streamlining CRM integration.',
     technologies: [
       {
@@ -187,13 +157,41 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
       },
     ],
   },
+  {
+    description:
+      'An Ecommerce site developed for my research dissertation, implementing standard ecommerce features using a RESTful API.',
+    technologies: [
+      {
+        item: 'React',
+      },
+      {
+        item: 'Express',
+      },
+      {
+        item: 'MySQL',
+      },
+    ],
+  },
+  {
+    description:
+      'An upgraded real-time messaging app, featuring new functionalities and improvements for instant communication.',
+    technologies: [
+      {
+        item: 'Next.js',
+      },
+      {
+        item: 'Express',
+      },
+      {
+        item: 'TypeScript',
+      },
+    ],
+  },
 ];
 
-// Combine card fields with store projects
-const cardProjects = store.projects.map((project: Project, index: number) => {
-  return {
-    ...project,
-    ...cardFields[index],
-  };
-});
+// Combine card fields with store projects, limiting to 6 to slice featured projects
+const cardProjects = store.projects.slice(0, 6).map((project: Project, index: number) => ({
+  ...project,
+  ...cardFields[index],
+}));
 </script>

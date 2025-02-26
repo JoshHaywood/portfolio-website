@@ -7,13 +7,6 @@ export const useProjectsStore = defineStore('project', () => {
 
   const projects: Project[] = [
     {
-      heading: 'Customer Portal',
-      deployLink: 'https://portal.industrion.io/',
-    },
-    {
-      heading: 'Automated CRM System',
-    },
-    {
       heading: 'Automated Prospecting Tool',
     },
     {
@@ -23,9 +16,24 @@ export const useProjectsStore = defineStore('project', () => {
       heading: 'Organisational Energy Tracker',
     },
     {
+      heading: 'Personal Portfolio Website',
       repoLink: 'https://github.com/JoshHaywood/portfolio-website',
       deployLink: 'https://www.joshhaywood-portfolio.com/',
-      heading: 'Personal Portfolio Website',
+    },
+    {
+      heading: 'Ecommerce website',
+      repoLink: 'https://github.com/JoshHaywood/tech-terminus',
+    },
+    {
+      heading: 'Real-Time Messaging App',
+      repoLink: 'https://github.com/JoshHaywood/messaging-app',
+    },
+    {
+      heading: 'Customer Portal',
+      deployLink: 'https://portal.industrion.io/',
+    },
+    {
+      heading: 'Automated CRM System',
     },
   ];
 
