@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This website serves as both a marketing tool and a central hub for showcasing my experience, skills, and projects. It was designed to highlight my development expertise and provide potential employers or industry professionals with insight into my work. Additionally, it links to my social profiles, including GitHub, LinkedIn, and email, making it easy to connect.
+This website serves as both a marketing tool and a central hub for showcasing my experience, skills, and projects. It was designed to highlight my development expertise providing potential employers or industry professionals with insight into my work. Additionally, it links to my social profiles, including GitHub, LinkedIn, and email.
 
 ## Contents
 
