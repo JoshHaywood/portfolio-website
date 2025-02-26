@@ -149,12 +149,12 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       role: 'I led a complete front-end refactor, replacing outdated legacy code and restructuring the interface to improve usability and maintainability. This included implementing a new UI library, Shadcn, to align the design with the customer portal and ensure consistency across the ecosystem. On the back-end, I developed the third-party data fetching system, using Puppeteer to automate logins and retrieve consumption statistics where APIs were unavailable. Additionally, I integrated the platform with the customer portal, allowing users to transition seamlessly between applications while carrying over and configuring their organisational data.',
     },
     {
-      tagline: 'Highlighting my skills and projects',
+      tagline: 'Highlighting My Skills and Projects',
       projectImage: '/images/portfolio-thumbnail.webp',
       overview:
-        'This project was a website that I created to use as a marketing tool to showcase my relevant experience and various projects that I have undertaken. The goal was to demonstrate my range of abilities to potential employers or people of interest, and to serve as a hub for my various social profiles on Github, LinkedIn, and email.',
-      structure: ['HTML', 'NuxtJS', 'TailwindCSS', 'TypeScript', 'Node.js'],
-      role: `I created a personal portfolio website to showcase my skills and experience to potential employers. I faced challenges with Handlebars and difficulties with the design of the page layouts, but overcame them by converting to React, researching other developers' work and using Framer Motion for animations. The end result was a sleek and visually appealing website that effectively highlighted my abilities and experience.`,
+        'A personal portfolio website built as both a test of my skills as a new developer and a central place to showcase my experience and projects. Over time, the site evolved significantly, adapting to new technologies and improving maintainability, performance, and readability. Beyond serving as a professional hub, it also provided a space to experiment with different frameworks and refine my development approach.',
+      structure: ['HTML', 'NuxtJS', 'React', 'Handlebars', 'TailwindCSS', 'TypeScript', 'Node.js'],
+      role: `This project has undergone multiple iterations, reflecting my progression as a developer. Initially built with Handlebars while learning the fundamentals, I later transitioned to React for its component-based structure. As the project grew, I moved to Vue and ultimately Nuxt, taking advantage of its improved maintainability, readability, and built-in server-side rendering. These shifts not only enhanced the site's performance but also refined my approach to structuring applications for scalability and long-term development.`,
     },
   ];
 
