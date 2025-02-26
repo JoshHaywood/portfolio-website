@@ -1,12 +1,15 @@
-module.exports = {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
   theme: {
-    extend: {    
+    extend: {
       colors: {
-        'primary': '#f2584c',
-        'secondary': '#191b29',
-        'tertiary': '#1f2335',
+        primary: '#f2584c',
+        secondary: '#191b29',
+        tertiary: '#1f2335',
+      },
+      screens: {
+        xs: '475px',
       },
     },
   },
-}
+};

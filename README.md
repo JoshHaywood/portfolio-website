@@ -1,38 +1,40 @@
 # Portfolio Website
 
-This project was a website that I created to use as a marketing tool to showcase my relevant experience and various projects that I have undertaken. 
-The goal is to demonstrate my range of abilities to potential employers or people of interest, and to serve as a hub for my various social profiles on Github, LinkedIn, and email.
+This website serves as both a marketing tool and a central hub for showcasing my experience, skills, and projects. It was designed to highlight my development expertise providing potential employers or industry professionals with insight into my work. Additionally, it links to my social profiles, including GitHub, LinkedIn, and email.
 
 ## Contents
+
 - [Portfolio Website](#portfolio-website)
   - [Contents](#contents)
   - [Main Features](#main-features)
   - [Technology Stack](#technology-stack)
   - [Prerequisites](#prerequisites)
   - [Setup Guide](#setup-guide)
-  
+
 ## Main Features
-- One page site with about, skills, projects and contact sections.
-- Links to my socials such as Github, LinkedIn and my email.
-- Detailed descriptions, goals and my role for each project accessed by clicking any project card.
+
+- A single-page site featuring sections for about, skills, projects, and contact.
+- Direct links to social platforms such as GitHub, LinkedIn, and email.
+- Detailed descriptions of each project, including objectives and my contributions, accessible via project cards.
 
 ## Technology Stack
-- React
-- TailwindCSS
-- JavaScript
-- Framer Motion
+
+- Nuxt.js
+- Tailwind CSS
+- TypeScript
 - Node.js
 
 ## Prerequisites
-- Node Package Manager Nodejs
-- File manager (File explorer recommended for windows users.)
-- Web browser (Google Chrome is recommended.)
-- Integrated Development Environment (IDE) (Visual Studio Code is recommended (https://code.visualstudio.com/download))
-- Command Line Interface (CLI) (Git Bash is recommended (https://git-scm.com/downloads))
+
+- **Node.js & npm** – Ensure you have [Node.js](https://nodejs.org/) installed, which includes npm.
+- **File Manager** – A file explorer for navigation (recommended for Windows users).
+- **Web Browser** – Google Chrome is recommended for the best experience.
+- **Command Line Interface (CLI)** – [Git Bash](https://git-scm.com/downloads) is recommended.
 
 ### Setup guide
+
 1. Clone the repository onto your machine or download a zip file of the main branch.
-Open the project folder in the integrated development (IDE) environment of your choice.
+   Open the project folder in the integrated development (IDE) environment of your choice.
 
 2. Run the following in the root folder:
 
@@ -40,6 +42,6 @@ Open the project folder in the integrated development (IDE) environment of your 
 
 `$ npm run dev`
 
-This will start Reacts development sever.
+This will start Reacts development server.
 
 3. If it is not opened automatically navigate too http://localhost:3000 in your browser or https://www.joshhaywood-portfolio.com/ if you wish to see the deployed version.
