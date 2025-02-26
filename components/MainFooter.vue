@@ -103,7 +103,7 @@ const mediaIcons: { label: string; path: string; svg: string }[] = [
   },
 ];
 
-const columns: { heading?: string; links: { label: string; target: string }[] }[] = [
+const columns: { heading?: string; links: { label: string; target?: string }[] }[] = [
   {
     heading: 'Sections',
     links: [
@@ -114,17 +114,13 @@ const columns: { heading?: string; links: { label: string; target: string }[] }[
   },
   {
     heading: 'Projects',
-    links: [
-      { label: 'Customer Portal', target: 'customer-portal' },
-      { label: 'Automated CRM System', target: 'crm-system' },
-      { label: 'Prospecting Tool', target: 'prospecting-tool' },
-    ],
+    links: [{ label: 'Customer Portal' }, { label: 'Automated CRM System' }, { label: 'Automated Prospecting Tool' }],
   },
   {
     links: [
-      { label: 'Auction Website', target: 'auction-website' },
-      { label: 'Organisational Energy Tracker', target: 'energy-tracker' },
-      { label: 'Portfolio', target: 'portfolio' },
+      { label: 'Auction Platform' },
+      { label: 'Organisational Energy Tracker' },
+      { label: 'Personal Portfolio Website' },
     ],
   },
 ];
