@@ -35,11 +35,7 @@
 
         <div class="mt-6 overflow-hidden rounded-lg">
           <div class="max-h-[250px] transition-transform hover:scale-105">
-            <NuxtImg
-              :src="`/images/${activeProject.projectImage}`"
-              alt="Project picture"
-              class="w-full cursor-pointer"
-            />
+            <img :src="`../images/${activeProject.projectImage}`" alt="Project picture" class="w-full cursor-pointer" />
           </div>
         </div>
 
