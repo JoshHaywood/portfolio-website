@@ -35,7 +35,11 @@
 
         <div class="mt-6 overflow-hidden rounded-lg">
           <div class="max-h-[250px] transition-transform hover:scale-105">
-            <NuxtImg :src="activeProject.projectImage" alt="Project picture" class="w-full cursor-pointer" />
+            <NuxtImg
+              :src="`/images/${activeProject.projectImage}`"
+              alt="Project picture"
+              class="w-full cursor-pointer"
+            />
           </div>
         </div>
 
@@ -79,7 +83,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
   [
     {
       tagline: 'Streamlining Lead Generation with Intelligent Automation',
-      projectImage: '/images/shado-thumbnail.png',
+      projectImage: 'shado-thumbnail.png',
       overview:
         'A prospect-finding tool designed to help sales staff identify and target businesses efficiently. By leveraging multiple third-party APIs, the platform gathers comprehensive data on companies, including contact information, location, size, and ownership. Staff can quickly generate detailed prospect previews and seamlessly integrate them into the CRM, enabling them to start working leads with a solid foundation. With robust filtering options, users can target specific business types, simplifying the sales process and improving lead quality.',
       structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'Typescript', 'Adonis', 'Node.js', 'Cron', 'PostgreSQL'],
@@ -87,7 +91,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     },
     {
       tagline: 'Adaptive Auction Platform',
-      projectImage: '/images/adapt-thumbnail.png',
+      projectImage: 'adapt-thumbnail.png',
       overview:
         'A real-time auction platform designed to connect users with energy suppliers, allowing them to receive and compare quotes instantly. Built with a strong focus on interactivity, the platform enables users to track live bids as they are placed, while staff oversee auctions, manage quotes, and handle supplier contracts. By giving users greater control over their options while maintaining staff oversight, the system streamlines the bidding process and enhances transparency in selecting the best energy deals.',
       structure: [
@@ -105,7 +109,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     },
     {
       tagline: 'Granular Insights into Energy and Gas Consumption',
-      projectImage: '/images/spark-lab-thumbnail.png',
+      projectImage: 'spark-lab-thumbnail.png',
       overview:
         'A platform designed for organisations with multiple sites to track and analyse their energy and gas consumption in detail. By providing a site-by-site breakdown, users can compare usage across locations and drill down into individual meters for half-hourly, hourly, or daily consumption statistics. Integrated with third-party providers like Zeus and Npower, the platform retrieves accurate gas and electricity data, equipping businesses with the insights needed to optimise efficiency and reduce costs. Seamless integration with the customer portal ensures users can transition effortlessly between applications while retaining relevant data.',
       structure: [
@@ -123,7 +127,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     },
     {
       tagline: 'Highlighting My Skills and Projects',
-      projectImage: '/images/portfolio-thumbnail.webp',
+      projectImage: 'portfolio-thumbnail.webp',
       overview:
         'A personal portfolio website built as both a test of my skills as a new developer and a central place to showcase my experience and projects. Over time, the site evolved significantly, adapting to new technologies and improving maintainability, performance, and readability. Beyond serving as a professional hub, it also provided a space to experiment with different frameworks and refine my development approach.',
       structure: ['HTML', 'NuxtJS', 'React', 'Handlebars', 'TailwindCSS', 'TypeScript', 'Node.js'],
@@ -132,7 +136,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     {
       tagline: 'Exploring the science of UX through ecommerce Design',
 
-      projectImage: '/images/tech-terminus-thumbnail.png',
+      projectImage: 'tech-terminus-thumbnail.png',
       overview:
         'This was an ecommerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited knowledge of developing.',
       structure: ['HTML', 'React', 'Tailwinds CSS', 'Material UI', 'Javascript', 'Express.js', 'Node.js', 'MySQL'],
@@ -140,7 +144,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     },
     {
       tagline: 'Real-time communication, at your fingertips',
-      projectImage: '/images/messaging-app-thumbnail.png',
+      projectImage: 'messaging-app-thumbnail.png',
       overview:
         'This project is the second iteration of my real-time messaging app, aimed at improving the user experience and adding new features based on user feedback from the initial version. The app allows users to communicate in real-time, providing a seamless and efficient messaging experience.',
       structure: [
@@ -158,7 +162,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     },
     {
       tagline: 'Elevated Energy Management',
-      projectImage: '/images/industrion-thumbnail.png',
+      projectImage: 'industrion-thumbnail.png',
       overview:
         'An energy management platform built to give users full control over their energy and gas meters. It allows users to manage meter details, access important documents, and update personal information independently, without direct supervision. Acting as the central hub for the ecosystem, the portal connects users to additional applications and introduces features like energy consumption analysis to deliver valuable energy consumption insights.',
       structure: [
@@ -177,7 +181,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
     },
     {
       tagline: 'Customer Relationship Management',
-      projectImage: '/images/astra-thumbnail.jpg',
+      projectImage: 'astra-thumbnail.jpg',
       overview:
         'A CRM platform designed to revolutionise how sales staff handle prospects, leads, and customer interactions. Built with a strong focus on automation, the system streamlines data collection, prospect creation, and the entire sales workflow. By integrating AI-generated summaries, internal communication tools, and external systems, it provides staff with up-to-date insights on sales progression and collaboration. Using GraphQL and Hasura, the platform ensures a lightweight backend and fine-grained control over permissions, enabling efficient integration with the PostgreSQL database and flexibility for future development.',
       structure: ['HTML', 'Vue3', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Node.js', 'Socket.io', 'Hasura'],
