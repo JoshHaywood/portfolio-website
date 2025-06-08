@@ -3,7 +3,7 @@
     <BackgroundParticles class="h-screen" />
 
     <!-- Intro -->
-    <container class="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 space-y-5">
+    <div class="absolute lg:max-w-[1100px] lg:left-0 lg:right-0 mx-auto px-5 md:px-10 xl:px-0 space-y-5">
       <section>
         <h1
           v-motion
@@ -64,7 +64,7 @@
           </button>
         </a>
       </div>
-    </container>
+    </div>
 
     <!-- Page scroller -->
     <div
