@@ -35,9 +35,9 @@
           :visible-once="animation(1500)"
           class="mt-6 tracking-wide text-xl max-w-xl text-gray-400"
         >
-          I build high-quality, impactful applications at the
-          <a href="https://www.dbsne.com/">
-            <span class="font-semibold text-xl text-primary hover:underline">Direct Business Group</span> </a
+          I build high-quality, impactful applications at
+          <a href="https://directglobal.com">
+            <span class="font-semibold text-xl text-primary hover:underline">Direct Global</span> </a
           >, focused on driving innovation and efficiency in the Energy Sector.
         </p>
       </section>

@@ -9,10 +9,8 @@
         <!-- Background information -->
         <div class="flex flex-col space-y-4 w-full leading-7">
           <p class="text-gray-400">
-            I am a Software Engineer at the
-            <a href="https://www.dbsne.com/" class="font-semibold text-primary hover:underline">
-              Direct Business Group,
-            </a>
+            I am a Software Engineer at
+            <a href="https://directglobal.com" class="font-semibold text-primary hover:underline"> Direct Global, </a>
             where I contribute, as part of a team, to maintaining existing projects and developing new applications. I
             aim to create efficient, scalable, and user-friendly solutions whilst enhancing my skills and technical
             experience. By integrating modern development trends and practices into my work, I strive to solve
