@@ -79,7 +79,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
   [
     {
       tagline: 'Streamlined Oversight for Sales Administration',
-      projectImage: 'sales-admin-thumbnail.png',
+      projectImage: 'sales-admin-thumbnail.PNG',
       overview:
         'A sister application to the CRM platform, this project was designed to handle the administrative side of sales once they move beyond lead generation. Built from the ground up with a focus on simplifying workflows, it replaces outdated processes and spreadsheets with a dedicated environment where staff can manage submissions, track their status, and access all relevant details in one place. The application emphasises clarity and usability, offering dashboard-style overviews alongside status-based listings so users can quickly find the information they need. Expanded functionality brings together multiple strands of administration such as; commissions, terminations, and complaints into a single tool, helping teams work more efficiently while ensuring greater visibility and consistency across the sales process.',
       structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'Typescript', 'Adonis', 'Node.js', 'PostgreSQL'],
