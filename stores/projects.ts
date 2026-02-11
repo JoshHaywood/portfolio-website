@@ -7,6 +7,9 @@ export const useProjectsStore = defineStore('project', () => {
 
   const projects: Project[] = [
     {
+      heading: 'Sales Submission Admin Suite',
+    },
+    {
       heading: 'Automated Prospecting Tool',
     },
     {
@@ -23,10 +26,6 @@ export const useProjectsStore = defineStore('project', () => {
     {
       heading: 'Ecommerce website',
       repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-    },
-    {
-      heading: 'Real-Time Messaging App',
-      repoLink: 'https://github.com/JoshHaywood/messaging-app',
     },
     {
       heading: 'Customer Portal',

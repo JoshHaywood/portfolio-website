@@ -99,6 +99,21 @@ const store = useProjectsStore();
 const cardFields: { description: string; technologies: { item: string }[] }[] = [
   {
     description:
+      'An application that guides sales submissions with workflow-oriented UX, progress tracking, and customer to staff interaction.',
+    technologies: [
+      {
+        item: 'Vue3',
+      },
+      {
+        item: 'Adonis',
+      },
+      {
+        item: 'PostgreSQL',
+      },
+    ],
+  },
+  {
+    description:
       'An internal tool that compiles company data from multiple sources to create potenial prospects, streamlining CRM integration.',
     technologies: [
       {
@@ -169,21 +184,6 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
       },
       {
         item: 'MySQL',
-      },
-    ],
-  },
-  {
-    description:
-      'An upgraded real-time messaging app, featuring new functionalities and improvements for instant communication.',
-    technologies: [
-      {
-        item: 'Next.js',
-      },
-      {
-        item: 'Express',
-      },
-      {
-        item: 'TypeScript',
       },
     ],
   },

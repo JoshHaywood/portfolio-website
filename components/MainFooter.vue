@@ -114,13 +114,13 @@ const columns: { heading?: string; links: { label: string; target?: string }[] }
   },
   {
     heading: 'Projects',
-    links: [{ label: 'Customer Portal' }, { label: 'Automated CRM System' }, { label: 'Automated Prospecting Tool' }],
+    links: [{ label: 'Customer Portal' }, { label: 'Automated CRM System' }, { label: 'Sales Submission Admin Suite' }],
   },
   {
     links: [
+      { label: 'Automated Prospecting Tool' },
       { label: 'Auction Platform' },
       { label: 'Organisational Energy Tracker' },
-      { label: 'Personal Portfolio Website' },
     ],
   },
 ];

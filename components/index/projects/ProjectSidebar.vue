@@ -78,6 +78,14 @@ const store = useProjectsStore();
 const sidebarFields: { tagline: string; projectImage: string; overview: string; structure: string[]; role: string }[] =
   [
     {
+      tagline: 'Streamlined Oversight for Sales Administration',
+      projectImage: 'sales-admin-thumbnail.png',
+      overview:
+        'A sister application to the CRM platform, this project was designed to handle the administrative side of sales once they move beyond lead generation. Built from the ground up with a focus on simplifying workflows, it replaces outdated processes and spreadsheets with a dedicated environment where staff can manage submissions, track their status, and access all relevant details in one place. The application emphasises clarity and usability, offering dashboard-style overviews alongside status-based listings so users can quickly find the information they need. Expanded functionality brings together multiple strands of administration such as; commissions, terminations, and complaints into a single tool, helping teams work more efficiently while ensuring greater visibility and consistency across the sales process.',
+      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'Typescript', 'Adonis', 'Node.js', 'PostgreSQL'],
+      role: 'As the sole developer through the MVP and beyond, I was responsible for the architecture, implementation, and ongoing evolution of the application. Working from initial design documents, I delivered the first release and continued to design and build new features independently, focusing on how best to improve user experience and eliminate friction in day-to-day workflows. I introduced streamlined forms, automated communications, and status-driven navigation, ensuring staff could complete core processes entirely within the application. By learning from the shortcomings of the previous admin system, I created a more intuitive, performance-oriented tool that continues to scale with the organisation’s needs.',
+    },
+    {
       tagline: 'Streamlining Lead Generation with Intelligent Automation',
       projectImage: 'shado-thumbnail.png',
       overview:
@@ -137,24 +145,6 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
         'This was an ecommerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited knowledge of developing.',
       structure: ['HTML', 'React', 'Tailwinds CSS', 'Material UI', 'Javascript', 'Express.js', 'Node.js', 'MySQL'],
       role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
-    },
-    {
-      tagline: 'Real-time communication, at your fingertips',
-      projectImage: 'messaging-app-thumbnail.png',
-      overview:
-        'This project is the second iteration of my real-time messaging app, aimed at improving the user experience and adding new features based on user feedback from the initial version. The app allows users to communicate in real-time, providing a seamless and efficient messaging experience.',
-      structure: [
-        'HTML',
-        'Next.js',
-        'Tailwinds CSS',
-        'Material UI',
-        'TypeScript',
-        'Express.js',
-        'Node.js',
-        'Socket.io',
-        'MySQL',
-      ],
-      role: `As the sole developer of this project, I took on the challenge of enhancing the app's functionality and design. I implemented new features such as friend requests, profiles and settings, and time stamping messages, improving the overall user experience. I also optimized the codebase for better performance and scalability with Next and TypeScript. Throughout the development process, I actively sought user feedback and iterated on the design to meet their needs and preferences.`,
     },
     {
       tagline: 'Elevated Energy Management',
