@@ -38,7 +38,7 @@
           I build high-quality, impactful applications at
           <a href="https://directglobal.com">
             <span class="font-semibold text-xl text-primary hover:underline">Direct Global</span> </a
-          >, focused on driving innovation and efficiency in the Energy Sector.
+          >, focused on driving innovation and efficiency in the energy sector.
         </p>
       </section>
 
@@ -53,7 +53,7 @@
           <button
             class="max-sm:w-full mx-auto px-7 py-2 rounded border-4 text-white border-tertiary bg-tertiary transition-colors hover:border-tertiary/30 hover:bg-tertiary/30"
           >
-            View my Github
+            View my GitHub
           </button>
         </a>
         <a href="https://www.linkedin.com/in/josh-haywood" class="max-sm:w-full">

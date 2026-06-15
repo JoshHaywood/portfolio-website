@@ -16,7 +16,7 @@ export default defineNuxtConfig({
           hid: 'description',
           name: 'description',
           content:
-            "I'm a recent graduate with a BSc in web development, aspiring to work as a front-end developer. I have a strong skill set in full-stack JavaScript development and here's where I showcase my work.",
+            "I'm a recent graduate with a BSc in web development, aspiring to work as a front-end developer. I have a strong skill set in full-stack JavaScript development, and this is where I showcase my work.",
         },
         { name: 'author', content: 'Josh Haywood' },
         { name: 'google-site-verification', content: 'HdPWnU6uSFkgMmVnx4WWIkD2MX04xKkXY0lXaeSlMHk' },

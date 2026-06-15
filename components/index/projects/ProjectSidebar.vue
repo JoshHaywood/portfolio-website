@@ -65,7 +65,6 @@
         </a>
       </div>
     </div>
-    div
   </div>
 </template>
 
@@ -81,8 +80,8 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       tagline: 'Streamlined Oversight for Sales Administration',
       projectImage: 'sales-admin-thumbnail.PNG',
       overview:
-        'A sister application to the CRM platform, this project was designed to handle the administrative side of sales once they move beyond lead generation. Built from the ground up with a focus on simplifying workflows, it replaces outdated processes and spreadsheets with a dedicated environment where staff can manage submissions, track their status, and access all relevant details in one place. The application emphasises clarity and usability, offering dashboard-style overviews alongside status-based listings so users can quickly find the information they need. Expanded functionality brings together multiple strands of administration such as; commissions, terminations, and complaints into a single tool, helping teams work more efficiently while ensuring greater visibility and consistency across the sales process.',
-      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'Typescript', 'Adonis', 'Node.js', 'PostgreSQL'],
+        'A sister application to the CRM platform, this project was designed to handle the administrative side of sales once they move beyond lead generation. Built from the ground up with a focus on simplifying workflows, it replaces outdated processes and spreadsheets with a dedicated environment where staff can manage submissions, track their status, and access all relevant details in one place. The application emphasises clarity and usability, offering dashboard-style overviews alongside status-based listings so users can quickly find the information they need. Expanded functionality brings together multiple strands of administration such as commissions, terminations, and complaints into a single tool, helping teams work more efficiently while ensuring greater visibility and consistency across the sales process.',
+      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'PostgreSQL'],
       role: 'As the sole developer through the MVP and beyond, I was responsible for the architecture, implementation, and ongoing evolution of the application. Working from initial design documents, I delivered the first release and continued to design and build new features independently, focusing on how best to improve user experience and eliminate friction in day-to-day workflows. I introduced streamlined forms, automated communications, and status-driven navigation, ensuring staff could complete core processes entirely within the application. By learning from the shortcomings of the previous admin system, I created a more intuitive, performance-oriented tool that continues to scale with the organisation’s needs.',
     },
     {
@@ -90,7 +89,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       projectImage: 'shado-thumbnail.png',
       overview:
         'A prospect-finding tool designed to help sales staff identify and target businesses efficiently. By leveraging multiple third-party APIs, the platform gathers comprehensive data on companies, including contact information, location, size, and ownership. Staff can quickly generate detailed prospect previews and seamlessly integrate them into the CRM, enabling them to start working leads with a solid foundation. With robust filtering options, users can target specific business types, simplifying the sales process and improving lead quality.',
-      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'Typescript', 'Adonis', 'Node.js', 'Cron', 'PostgreSQL'],
+      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Cron', 'PostgreSQL'],
       role: 'I led a full-stack rebuild of the platform, reworking both the front-end and back-end to enhance functionality and usability. The front-end received a complete UI overhaul based on marketing team design documents, introducing a large table and accordion layout to present information in a clear and accessible way. On the back-end, I enhanced CRM integration, enabling staff to be assigned to prospects instantly, streamlining the transition from lead generation to active sales. I developed a data-scraping robot that utilised third-party APIs to expand the internal data pool over time, giving staff access to a growing range of prospects. Additionally, I introduced a campaign system where admins could upload CSV files of company data, automatically processing and presenting them as campaign-specific prospects. The filtering system was also expanded, adding a wider array of options to help staff pinpoint high-quality leads more effectively.',
     },
     {
@@ -98,17 +97,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       projectImage: 'adapt-thumbnail.png',
       overview:
         'A real-time auction platform designed to connect users with energy suppliers, allowing them to receive and compare quotes instantly. Built with a strong focus on interactivity, the platform enables users to track live bids as they are placed, while staff oversee auctions, manage quotes, and handle supplier contracts. By giving users greater control over their options while maintaining staff oversight, the system streamlines the bidding process and enhances transparency in selecting the best energy deals.',
-      structure: [
-        'HTML',
-        'Vue3',
-        'Tailwind CSS',
-        'Shadcn',
-        'Typescript',
-        'Adonis',
-        'Node.js',
-        'Socket.io',
-        'PostgreSQL',
-      ],
+      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Socket.io', 'PostgreSQL'],
       role: 'I worked extensively across the full stack, starting with a complete front-end redesign based on marketing team designs. This involved restructuring page layouts, introducing new elements, and refining the user flow from receiving quotes to accepting a final offer. On the back-end, I rebuilt the real-time system from the ground up, transitioning from an overly socket-dependent model to a hybrid approach using a combination of WebSockets and HTTP requests. This significantly improved reliability across both customer and staff-facing frontends, preventing real-time data failures. Additionally, I integrated the platform with Microsoft Calendar, allowing staff to schedule dedicated auction oversight periods within their personal schedules.',
     },
     {
@@ -116,17 +105,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       projectImage: 'spark-lab-thumbnail.png',
       overview:
         'A platform designed for organisations with multiple sites to track and analyse their energy and gas consumption in detail. By providing a site-by-site breakdown, users can compare usage across locations and drill down into individual meters for half-hourly, hourly, or daily consumption statistics. Integrated with third-party providers like Zeus and Npower, the platform retrieves accurate gas and electricity data, equipping businesses with the insights needed to optimise efficiency and reduce costs. Seamless integration with the customer portal ensures users can transition effortlessly between applications while retaining relevant data.',
-      structure: [
-        'HTML',
-        'Vue3',
-        'Tailwind CSS',
-        'Shadcn',
-        'Typescript',
-        'Adonis',
-        'Node.js',
-        'Puppeteer',
-        'PostgreSQL',
-      ],
+      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Puppeteer', 'PostgreSQL'],
       role: 'I led a complete front-end refactor, replacing outdated legacy code and restructuring the interface to improve usability and maintainability. This included implementing a new UI library, Shadcn, to align the design with the customer portal and ensure consistency across the ecosystem. On the back-end, I developed the third-party data fetching system, using Puppeteer to automate logins and retrieve consumption statistics where APIs were unavailable. Additionally, I integrated the platform with the customer portal, allowing users to transition seamlessly between applications while carrying over and configuring their organisational data.',
     },
     {
@@ -134,16 +113,16 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       projectImage: 'portfolio-thumbnail.webp',
       overview:
         'A personal portfolio website built as both a test of my skills as a new developer and a central place to showcase my experience and projects. Over time, the site evolved significantly, adapting to new technologies and improving maintainability, performance, and readability. Beyond serving as a professional hub, it also provided a space to experiment with different frameworks and refine my development approach.',
-      structure: ['HTML', 'NuxtJS', 'React', 'Handlebars', 'TailwindCSS', 'TypeScript', 'Node.js'],
+      structure: ['HTML', 'NuxtJS', 'React', 'Handlebars', 'Tailwind CSS', 'TypeScript', 'Node.js'],
       role: `This project has undergone multiple iterations, reflecting my progression as a developer. Initially built with Handlebars while learning the fundamentals, I later transitioned to React for its component-based structure. As the project grew, I moved to Vue and ultimately Nuxt, taking advantage of its improved maintainability, readability, and built-in server-side rendering. These shifts not only enhanced the site's performance but also refined my approach to structuring applications for scalability and long-term development.`,
     },
     {
-      tagline: 'Exploring the science of UX through ecommerce Design',
+      tagline: 'Exploring the science of UX through e-commerce design',
 
       projectImage: 'tech-terminus-thumbnail.png',
       overview:
-        'This was an ecommerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited knowledge of developing.',
-      structure: ['HTML', 'React', 'Tailwinds CSS', 'Material UI', 'Javascript', 'Express.js', 'Node.js', 'MySQL'],
+        'This was an e-commerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited development knowledge.',
+      structure: ['HTML', 'React', 'Tailwind CSS', 'Material UI', 'JavaScript', 'Express.js', 'Node.js', 'MySQL'],
       role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
     },
     {
@@ -152,16 +131,7 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       overview:
         'An energy management platform built to give users full control over their energy and gas meters. It allows users to manage meter details, access important documents, and update personal information independently, without direct supervision. Acting as the central hub for the ecosystem, the portal connects users to additional applications and introduces features like energy consumption analysis to deliver valuable energy consumption insights.',
       structure: [
-        'HTML',
-        'Vue3',
-        'Tailwind CSS',
-        'Shadcn',
-        'Typescript',
-        'Adonis',
-        'Node.js',
-        'Cron',
-        'Socket.io',
-        'PostgreSQL',
+        'HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Cron', 'Socket.io', 'PostgreSQL',
       ],
       role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated CRM integration, automating prospect creation to streamline workflows between sales and support teams.',
     },

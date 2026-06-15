@@ -18,7 +18,7 @@
           </p>
 
           <p class="text-gray-400">
-            I specialize in full-stack web development, utilizing the latest trends and technologies. My current areas
+            I specialise in full-stack web development, using the latest trends and technologies. My current areas
             of focus are
             <span
               class="font-semibold text-primary hover:underline hover:cursor-pointer"
