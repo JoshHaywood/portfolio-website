@@ -1,8 +1,8 @@
 <template>
   <div v-if="store.activeProject">
-    <div class="fixed left-0 h-screen w-screen opacity-40 bg-black" @click="store.showSidebar = false"></div>
+    <div class="fixed left-0 h-screen w-screen bg-black opacity-40" @click="store.showSidebar = false"></div>
 
-    <div class="fixed top-0 bottom-0 right-0 w-full h-screen sm:w-[550px] p-5 sm:p-10 overflow-y-scroll bg-secondary">
+    <div class="fixed bottom-0 right-0 top-0 h-screen w-full overflow-y-scroll bg-secondary p-5 sm:w-[550px] sm:p-10">
       <!-- Navigation -->
       <div class="flex flex-row justify-between">
         <svg
@@ -11,7 +11,7 @@
           viewBox="0 0 24 24"
           strokeWidth="1.5"
           stroke="currentColor"
-          class="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors"
+          class="h-6 w-6 cursor-pointer text-gray-400 transition-colors hover:text-primary"
           @click="store.showSidebar = false"
         >
           <path
@@ -35,7 +35,7 @@
 
         <div class="mt-6 overflow-hidden rounded-lg">
           <div class="max-h-[250px] transition-transform hover:scale-105">
-            <img :src="`../images/${activeProject.projectImage}`" alt="Project picture" class="w-full cursor-pointer" />
+            <img :src="`/images/${activeProject.projectImage}`" alt="Project picture" class="w-full cursor-pointer" />
           </div>
         </div>
 
@@ -43,11 +43,11 @@
         <p class="mt-2 text-gray-400">{{ activeProject.overview }}</p>
 
         <h3 class="mt-6 text-lg font-semibold text-white">Technologies</h3>
-        <div class="flex flex-wrap mt-1">
+        <div class="mt-1 flex flex-wrap">
           <div
             v-for="technology in activeProject.structure"
             :key="technology"
-            class="mt-2 mr-2 p-2 text-sm rounded text-gray-400 bg-tertiary"
+            class="mr-2 mt-2 rounded bg-tertiary p-2 text-sm text-gray-400"
           >
             {{ technology }}
           </div>
@@ -58,7 +58,7 @@
 
         <a v-if="activeProject.deployLink" :href="activeProject.deployLink">
           <button
-            class="w-full mt-6 p-3 text-sm rounded text-white bg-tertiary transition-colors hover:bg-tertiary/70 hover:underline"
+            class="mt-6 w-full rounded bg-tertiary p-3 text-sm text-white transition-colors hover:bg-tertiary/70 hover:underline"
           >
             View Project
           </button>
@@ -97,7 +97,17 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       projectImage: 'adapt-thumbnail.png',
       overview:
         'A real-time auction platform designed to connect users with energy suppliers, allowing them to receive and compare quotes instantly. Built with a strong focus on interactivity, the platform enables users to track live bids as they are placed, while staff oversee auctions, manage quotes, and handle supplier contracts. By giving users greater control over their options while maintaining staff oversight, the system streamlines the bidding process and enhances transparency in selecting the best energy deals.',
-      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Socket.io', 'PostgreSQL'],
+      structure: [
+        'HTML',
+        'Vue3',
+        'Tailwind CSS',
+        'Shadcn',
+        'TypeScript',
+        'Adonis',
+        'Node.js',
+        'Socket.io',
+        'PostgreSQL',
+      ],
       role: 'I worked extensively across the full stack, starting with a complete front-end redesign based on marketing team designs. This involved restructuring page layouts, introducing new elements, and refining the user flow from receiving quotes to accepting a final offer. On the back-end, I rebuilt the real-time system from the ground up, transitioning from an overly socket-dependent model to a hybrid approach using a combination of WebSockets and HTTP requests. This significantly improved reliability across both customer and staff-facing frontends, preventing real-time data failures. Additionally, I integrated the platform with Microsoft Calendar, allowing staff to schedule dedicated auction oversight periods within their personal schedules.',
     },
     {
@@ -105,7 +115,17 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       projectImage: 'spark-lab-thumbnail.png',
       overview:
         'A platform designed for organisations with multiple sites to track and analyse their energy and gas consumption in detail. By providing a site-by-site breakdown, users can compare usage across locations and drill down into individual meters for half-hourly, hourly, or daily consumption statistics. Integrated with third-party providers like Zeus and Npower, the platform retrieves accurate gas and electricity data, equipping businesses with the insights needed to optimise efficiency and reduce costs. Seamless integration with the customer portal ensures users can transition effortlessly between applications while retaining relevant data.',
-      structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Puppeteer', 'PostgreSQL'],
+      structure: [
+        'HTML',
+        'Vue3',
+        'Tailwind CSS',
+        'Shadcn',
+        'TypeScript',
+        'Adonis',
+        'Node.js',
+        'Puppeteer',
+        'PostgreSQL',
+      ],
       role: 'I led a complete front-end refactor, replacing outdated legacy code and restructuring the interface to improve usability and maintainability. This included implementing a new UI library, Shadcn, to align the design with the customer portal and ensure consistency across the ecosystem. On the back-end, I developed the third-party data fetching system, using Puppeteer to automate logins and retrieve consumption statistics where APIs were unavailable. Additionally, I integrated the platform with the customer portal, allowing users to transition seamlessly between applications while carrying over and configuring their organisational data.',
     },
     {
@@ -131,7 +151,16 @@ const sidebarFields: { tagline: string; projectImage: string; overview: string; 
       overview:
         'An energy management platform built to give users full control over their energy and gas meters. It allows users to manage meter details, access important documents, and update personal information independently, without direct supervision. Acting as the central hub for the ecosystem, the portal connects users to additional applications and introduces features like energy consumption analysis to deliver valuable energy consumption insights.',
       structure: [
-        'HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Cron', 'Socket.io', 'PostgreSQL',
+        'HTML',
+        'Vue3',
+        'Tailwind CSS',
+        'Shadcn',
+        'TypeScript',
+        'Adonis',
+        'Node.js',
+        'Cron',
+        'Socket.io',
+        'PostgreSQL',
       ],
       role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated CRM integration, automating prospect creation to streamline workflows between sales and support teams.',
     },

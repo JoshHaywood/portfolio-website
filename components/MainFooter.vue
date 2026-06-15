@@ -1,14 +1,14 @@
 <template>
   <footer class="bg-tertiary">
-    <div class="max-w-[1100px] mx-auto max-xl:px-5 py-5">
-      <div class="flex max-md:flex-col py-8">
-        <div class="w-full md:flex md:space-x-10 max-md:space-y-10">
+    <div class="mx-auto max-w-[1100px] py-5 max-xl:px-5">
+      <div class="flex py-8 max-md:flex-col">
+        <div class="w-full max-md:space-y-10 md:flex md:space-x-10">
           <!-- Branding -->
-          <div class="md:w-1/3 -ml-6 px-6">
+          <div class="-ml-6 px-6 md:w-1/3">
             <NuxtImg
               :src="src"
               alt="Logo"
-              class="w-[185px] h-auto hover:cursor-pointer"
+              class="h-auto w-[185px] hover:cursor-pointer"
               @mouseenter="src = '/images/logo-hover.png'"
               @mouseleave="src = '/images/logo.png'"
               @click="scrollToTop"
@@ -20,7 +20,7 @@
               <div v-for="(icon, index) in mediaIcons" :key="index" class="mt-2.5">
                 <a :href="icon.path" :aria-label="icon.label">
                   <svg
-                    class="w-4 h-4 fill-gray-400 hover:fill-gray-500 transition-colors"
+                    class="h-4 w-4 fill-gray-400 transition-colors hover:fill-gray-500"
                     xmlns="http://www.w3.org/2000/svg"
                     strokeWidth="1.5"
                     stroke="currentColor"
@@ -35,20 +35,20 @@
 
           <!-- Columns -->
           <div class="md:w-2/3">
-            <div class="sm:grid sm:gap-6 grid-cols-[0.3fr,0.4fr,0.3fr]">
+            <div class="grid-cols-[0.3fr,0.4fr,0.3fr] sm:grid sm:gap-6">
               <div
                 v-for="(column, columnIndex) in columns"
                 :key="columnIndex"
                 :class="columnIndex === 2 && 'sm:flex sm:flex-col sm:justify-end'"
               >
-                <h4 class="max-sm:my-4 sm:mb-4 font-semibold text-gray-300">{{ column.heading }}</h4>
+                <h4 class="font-semibold text-gray-300 max-sm:my-4 sm:mb-4">{{ column.heading }}</h4>
 
                 <!-- Links -->
                 <div
                   v-for="(link, linkIndex) in column.links"
                   :key="linkIndex"
-                  class="mb-3 text-sm text-gray-400 cursor-pointer hover:underline"
-                  @click="columnIndex === 0 ? useScrollTo().scrollTo(link.target) : store.setSidebar(link.label)"
+                  class="mb-3 cursor-pointer text-sm text-gray-400 hover:underline"
+                  @click="columnIndex === 0 ? scrollTo(link.target!) : store.setSidebar(link.label)"
                 >
                   {{ link.label }}
                 </div>
@@ -59,7 +59,7 @@
       </div>
 
       <!-- Footnote -->
-      <div class="flex justify-between py-5 border-t border-primary">
+      <div class="flex justify-between border-t border-primary py-5">
         <a href="https://www.joshhaywood-portfolio.com/" class="text-sm text-gray-400 hover:underline">
           © Josh Haywood {{ new Date().getFullYear() }}
         </a>
@@ -68,7 +68,7 @@
           <span class="text-sm text-gray-400">Back To Top</span>
 
           <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 cursor-pointer">
-            <g fill="none" transform="translate(2 2)" strokeWidth="2" class="stroke-gray-400 fill-none">
+            <g fill="none" transform="translate(2 2)" strokeWidth="2" class="fill-none stroke-gray-400">
               <circle cx="8.5" cy="8.5" r="8" />
               <path d="m11.5 9.5-3-3-3 3" />
             </g>
@@ -81,6 +81,7 @@
 
 <script setup lang="ts">
 const store = useProjectsStore();
+const { scrollTo } = useScrollTo();
 
 const src = ref<string>('/images/logo.png');
 

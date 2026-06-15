@@ -4,10 +4,10 @@
     :key="index"
     :class="
       project.alignment === 'right'
-        ? `md:flex-row-reverse bg-[url('../images/industrion-thumbnail.png')]`
-        : `bg-[url('../images/astra-thumbnail.jpg')]`
+        ? `bg-[url('/images/industrion-thumbnail.png')] md:flex-row-reverse`
+        : `bg-[url('/images/astra-featured-thumbnail.jpg')]`
     "
-    class="group md:bg-none bg-center max-md:shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:flex cursor-pointer"
+    class="group cursor-pointer bg-center max-md:shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:flex md:bg-none"
   >
     <!-- Image -->
     <div
@@ -25,11 +25,11 @@
         },
       }"
       :class="project.alignment === 'right' ? 'order-2' : 'order-1'"
-      class="hidden md:block md:w-3/5 md:relative md:overflow-hidden rounded"
+      class="hidden rounded md:relative md:block md:w-3/5 md:overflow-hidden"
       @click="store.setSidebar(project.tagline)"
     >
-      <div class="group-hover:scale-105 transition">
-        <NuxtImg :src="`/images/${project.image}`" :alt="`${project.tagline} thumbnail`" class="min-w-[650px] h-auto" />
+      <div class="transition group-hover:scale-105">
+        <NuxtImg :src="`/images/${project.image}`" :alt="`${project.tagline} thumbnail`" class="h-auto min-w-[650px]" />
       </div>
     </div>
 
@@ -50,18 +50,18 @@
         },
       }"
       :class="project.alignment === 'right' ? 'md:text-right' : 'md:text-left'"
-      class="md:w-2/5 md:z-10 p-5 sm:px-5 md:px-0 sm:py-16 md:py-10 max-md:backdrop-brightness-[0.3]"
+      class="p-5 max-md:backdrop-brightness-[0.3] sm:px-5 sm:py-16 md:z-10 md:w-2/5 md:px-0 md:py-10"
     >
       <div class="font-normal text-primary" @click="store.setSidebar(project.tagline)">{{ project.tagline }}</div>
       <div
-        class="mb-5 text-3xl font-semibold text-white hover:text-primary transition-colors"
+        class="mb-5 text-3xl font-semibold text-white transition-colors hover:text-primary"
         @click="store.setSidebar(project.tagline)"
       >
         {{ project.heading }}
       </div>
       <p
-        :class="project.alignment === 'right' ? 'md:pl-10 md:pr-5 md:-ml-32' : 'md:pl-5 md:pr-10 md:-mr-32'"
-        class="bg-none md:bg-tertiary sm:pt-5 pb-5 md:shadow-md md:rounded text-gray-300"
+        :class="project.alignment === 'right' ? 'md:-ml-32 md:pl-10 md:pr-5' : 'md:-mr-32 md:pl-5 md:pr-10'"
+        class="bg-none pb-5 text-gray-300 sm:pt-5 md:rounded md:bg-tertiary md:shadow-md"
         @click="store.setSidebar(project.tagline)"
       >
         {{ project.description }}
@@ -84,7 +84,7 @@
         <!-- Technologies -->
         <ul
           :class="project.alignment === 'right' ? 'md:justify-end' : 'md:justify-none'"
-          class="flex flex-row flex-wrap gap-x-2.5 sm:gap-x-0 sm:space-x-5 md:mt-5 text-gray-500"
+          class="flex flex-row flex-wrap gap-x-2.5 text-gray-500 sm:gap-x-0 sm:space-x-5 md:mt-5"
           @click="store.setSidebar(project.tagline)"
         >
           <li v-for="technology in project.technologies" :key="technology">{{ technology }}</li>
@@ -93,7 +93,7 @@
         <!-- Media Icons -->
         <div
           :class="project.alignment === 'right' ? 'md:justify-end' : 'md:justify-start'"
-          class="flex flex-row mt-5 space-x-2.5"
+          class="mt-5 flex flex-row space-x-2.5"
         >
           <DeployLink v-if="project.deployLink" :link="project.deployLink" class="h-5 w-5" />
         </div>

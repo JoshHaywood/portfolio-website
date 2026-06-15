@@ -37,7 +37,7 @@
             },
           }"
           class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
-          @click="useScrollTo().scrollTo(link.id)"
+          @click="scrollTo(link.id)"
         >
           {{ link.name }}
         </li>
@@ -54,7 +54,7 @@
             v-for="link in links"
             :key="link.id"
             class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
-            @click="useScrollTo().scrollTo(link.id), $emit('close')"
+            @click="scrollTo(link.id), $emit('close')"
           >
             {{ link.name }}
           </li>
@@ -73,6 +73,8 @@
 </template>
 
 <script setup lang="ts">
+const { scrollTo } = useScrollTo();
+
 defineProps<{
   sidebar: boolean;
 }>();

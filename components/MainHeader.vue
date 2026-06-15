@@ -74,7 +74,8 @@ const handleScroll = () => {
 
   // Show header if sidebar is open
   if (sidebar.value) {
-    return (showHeader.value = true);
+    showHeader.value = true;
+    return;
   }
 
   // Show header if scrolling up
