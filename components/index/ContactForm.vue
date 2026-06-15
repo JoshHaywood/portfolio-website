@@ -4,7 +4,7 @@
       <SectionHeading heading="Contact" />
 
       <p class="text-gray-400">
-        Based on South West England, I'm always open to exploring new opportunities and collaborations.
+        Based in South West England, I'm always open to exploring new opportunities and collaborations.
       </p>
 
       <p class="mt-4 text-gray-400">

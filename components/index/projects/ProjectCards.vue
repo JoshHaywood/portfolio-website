@@ -114,7 +114,7 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
   },
   {
     description:
-      'An internal tool that compiles company data from multiple sources to create potenial prospects, streamlining CRM integration.',
+      'An internal tool that compiles company data from multiple sources to create potential prospects, streamlining CRM integration.',
     technologies: [
       {
         item: 'Vue3',
@@ -143,8 +143,8 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
     ],
   },
   {
-    description:
-      'A platform for tracking energy and gas consumption across multiple sites and devices, down to individual meters statistics.',
+      description:
+      'A platform for tracking energy and gas consumption across multiple sites and devices, down to individual meter statistics.',
     technologies: [
       {
         item: 'Vue3',
@@ -174,7 +174,7 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
   },
   {
     description:
-      'An Ecommerce site developed for my research dissertation, implementing standard ecommerce features using a RESTful API.',
+      'An e-commerce site developed for my research dissertation, implementing standard e-commerce features using a RESTful API.',
     technologies: [
       {
         item: 'React',
