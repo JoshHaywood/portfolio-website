@@ -3,6 +3,10 @@ module.exports = {
   extends: ['@nuxtjs/eslint-config-typescript', 'plugin:vue/vue3-strongly-recommended', 'plugin:prettier/recommended'],
   rules: {
     'import/first': 'off',
+    'import/named': 'off',
+    'import/no-duplicates': 'off',
+    'import/order': 'off',
+    'import/namespace': 'off',
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
   },
   overrides: [

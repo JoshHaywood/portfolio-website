@@ -3,7 +3,7 @@
   <div class="max-md:pt-8">
     <SectionHeading heading="Skill-Set" />
 
-    <div class="flex max-md:flex-col md:w-full max-md:space-y-5 md:space-x-5 lg:space-x-10">
+    <div class="flex max-md:flex-col max-md:space-y-5 md:w-full md:space-x-5 lg:space-x-10">
       <div
         v-for="(card, index) in cards"
         :key="index"
@@ -21,9 +21,9 @@
             ease: 'easeInOut',
           },
         }"
-        class="relative md:w-1/3 px-5 pt-10 sm:pt-5 lg:pt-10 pb-20 space-y-8 md:rounded md:border-b md:border-primary bg-tertiary"
+        class="relative space-y-8 bg-tertiary px-5 pb-20 pt-10 sm:pt-5 md:w-1/3 md:rounded md:border-b md:border-primary lg:pt-10"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="w-12 h-auto mb-5 sm:my-5 fill-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="mb-5 h-auto w-12 fill-primary sm:my-5">
           <path :d="`${card.path}`" />
         </svg>
 

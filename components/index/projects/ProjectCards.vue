@@ -14,7 +14,7 @@
           ease: 'easeInOut',
         },
       }"
-      class="max-xl:mt-20 mb-12 text-center"
+      class="mb-12 text-center max-xl:mt-20"
     >
       <h3 class="mb-3 text-2xl font-semibold text-white">Other Notable Projects</h3>
       <a href="https://github.com/JoshHaywood?tab=repositories" class="text-primary hover:underline">
@@ -23,8 +23,8 @@
     </div>
 
     <!-- Cards -->
-    <div class="sm:grid grid-rows-2 grid-cols-2 lg:grid-cols-3 max-sm:space-y-4 gap-4">
-      <div v-for="(project, index) in cardProjects" :key="index" class="hover:-translate-y-2 transition-transform">
+    <div class="grid-cols-2 grid-rows-2 gap-4 max-sm:space-y-4 sm:grid lg:grid-cols-3">
+      <div v-for="(project, index) in cardProjects" :key="index" class="transition-transform hover:-translate-y-2">
         <div
           v-motion
           :initial="{
@@ -40,9 +40,9 @@
               ease: 'easeInOut',
             },
           }"
-          class="shadow-lg rounded bg-tertiary"
+          class="rounded bg-tertiary shadow-lg"
         >
-          <div class="relative h-full sm:h-[350px] md:h-[325px] w-full pt-5 pb-16 px-5 md:pb-5 lg:pb-60">
+          <div class="relative h-full w-full px-5 pb-16 pt-5 sm:h-[350px] md:h-[325px] md:pb-5 lg:pb-60">
             <div class="flex justify-between pt-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -65,10 +65,10 @@
 
             <!-- Card text -->
             <div
-              class="lg:flex flex-col space-y-4 hover:text-primary hover:cursor-pointer"
+              class="flex-col space-y-4 hover:cursor-pointer hover:text-primary lg:flex"
               @click="store.setSidebar(project.heading)"
             >
-              <h4 class="mt-5 md:mt-8 font-semibold text-xl text-gray-200 transition-colors">
+              <h4 class="mt-5 text-xl font-semibold text-gray-200 transition-colors md:mt-8">
                 {{ project.heading }}
               </h4>
 
@@ -76,7 +76,7 @@
             </div>
 
             <!-- Technologies list-->
-            <ul class="absolute bottom-5 left-5 flex flex-row space-x-5 mt-8">
+            <ul class="absolute bottom-5 left-5 mt-8 flex flex-row space-x-5">
               <li v-for="(technology, techIndex) in project.technologies" :key="techIndex">
                 <div class="text-sm text-gray-500 hover:cursor-pointer" @click="store.setSidebar(project.heading)">
                   {{ technology.item }}
@@ -143,7 +143,7 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
     ],
   },
   {
-      description:
+    description:
       'A platform for tracking energy and gas consumption across multiple sites and devices, down to individual meter statistics.',
     technologies: [
       {

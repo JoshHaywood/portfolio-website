@@ -8,10 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "heroku-postbuild": "npm run build && npm run generate"
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint .",
+    "format": "prettier --write ."
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@types/node": "^20.10.4",
@@ -21,7 +22,9 @@
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-vue": "^9.19.2",
     "prettier": "3.1.0",
-    "prettier-plugin-tailwindcss": "0.5.9"
+    "prettier-plugin-tailwindcss": "0.5.9",
+    "typescript": "^5.9.3",
+    "unstorage": "^1.17.5"
   },
   "dependencies": {
     "@nuxt/image": "^1.1.0",

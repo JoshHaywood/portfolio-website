@@ -1,6 +1,4 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-
   typescript: {
     shim: false,
   },
@@ -13,7 +11,7 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         {
-          hid: 'description',
+          key: 'description',
           name: 'description',
           content:
             "I'm a recent graduate with a BSc in web development, aspiring to work as a front-end developer. I have a strong skill set in full-stack JavaScript development, and this is where I showcase my work.",
