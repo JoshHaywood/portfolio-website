@@ -9,30 +9,29 @@
         <!-- Background information -->
         <div class="flex w-full flex-col space-y-4 leading-7">
           <p class="text-gray-400">
-            I am a Software Engineer at
-            <a href="https://directglobal.com" class="font-semibold text-primary hover:underline"> Direct Global, </a>
-            where I contribute, as part of a team, to maintaining existing projects and developing new applications. I
-            aim to create efficient, scalable, and user-friendly solutions whilst enhancing my skills and technical
-            experience. By integrating modern development trends and practices into my work, I strive to solve
-            challenges effectively and contribute to the success of our projects and the development of our team.
+            Over the last few years, I’ve progressed from contributing individual features to taking responsibility for
+            larger areas of delivery and ongoing systems. I enjoy taking work from a real requirement through to a
+            shipped feature: understanding what people need, working through the technical problem and writing the code
+            to deliver it.
           </p>
 
           <p class="text-gray-400">
-            I specialise in full-stack web development, using the latest trends and technologies. My current areas of
-            focus are
+            My work has ranged from
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
               @click="store.setSidebar('Customer Portal')"
             >
-              customer-oriented applications
+              customer-facing applications
             </span>
-            and creating an automation-driven
+            to internal tools such as an automation-driven
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
               @click="store.setSidebar('Automated CRM System')"
             >
               CRM system.
             </span>
+            That has included working directly with stakeholders, picking up unfamiliar technologies and moving across
+            different parts of a system.
           </p>
         </div>
 
