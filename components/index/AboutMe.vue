@@ -80,14 +80,14 @@
 const store = useProjectsStore();
 
 const technologies: string[] = [
-  'React',
-  'Express',
-  'Web Sockets',
-  'Vue3',
-  'Adonis',
-  'Node.js',
   'TypeScript',
-  'GraphQL',
+  'Vue 3',
+  'Node.js',
+  'AdonisJS',
   'PostgreSQL',
+  'GraphQL',
+  'Hasura',
+  'Socket.IO',
+  'Git',
 ];
 </script>
