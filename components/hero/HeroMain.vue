@@ -11,8 +11,9 @@
           :visible-once="animation(900)"
           class="text-lg font-normal tracking-wide text-primary"
         >
-          Hi, my name is
+          Hi, I'm
         </h1>
+
         <h2
           v-motion
           :initial="initial()"
@@ -21,24 +22,27 @@
         >
           Josh Haywood
         </h2>
+
         <h2
           v-motion
           :initial="initial()"
           :visible-once="animation(1300)"
           class="mt-4 block text-4xl font-semibold tracking-wide text-gray-400 sm:text-5xl lg:text-6xl"
         >
-          A Full-Stack Software Engineer
+          Full-Stack Software Engineer
         </h2>
+
         <p
           v-motion
           :initial="initial()"
           :visible-once="animation(1500)"
           class="mt-6 max-w-xl text-xl tracking-wide text-gray-400"
         >
-          I build high-quality, impactful applications at
+          For 3+ years at
           <a href="https://directglobal.com">
             <span class="text-xl font-semibold text-primary hover:underline">Direct Global</span> </a
-          >, focused on driving innovation and efficiency in the energy sector.
+          >, I’ve built and supported production software across frontend, backend and data systems, from requirements
+          to release.
         </p>
       </section>
 
