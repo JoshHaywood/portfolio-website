@@ -119,22 +119,21 @@ const cardsData: {
   alignment: string;
 }[] = [
   {
-    image: 'portal-featured-thumbnail.jpg',
-    tagline: 'Customer Portal',
-    heading: 'Industrion',
+    image: 'portal-featured-thumbnail.jpg', // Temporary placeholder
+    tagline: 'Data Processing & Integrations',
+    heading: 'Energy Data Platform',
     description:
-      'A centralised platform enabling users to manage energy meters, access key documents, and seamlessly connect with other apps, all designed for clarity and convenience.',
-    technologies: ['Vue3', 'Adonis', 'PostgreSQL'],
-    deployLink: 'https://portal.industrion.io/',
+      'A platform centralising and processing electricity and gas consumption data from multiple external sources for customer-facing and internal applications.',
+    technologies: ['Vue 3', 'AdonisJS', 'PostgreSQL'],
     alignment: 'right',
   },
   {
-    image: 'astra-featured-thumbnail.jpg',
-    tagline: 'Automated CRM System',
-    heading: 'Astra',
+    image: 'astra-featured-thumbnail.jpg', // Temporary placeholder
+    tagline: 'Sales Operations',
+    heading: 'Sales Administration Platform',
     description:
-      'A CRM built to streamline lead generation and customer management through AI-driven automation, enabling sales teams to focus on client interaction and building relationships.',
-    technologies: ['Vue3', 'GraphQL', 'Hasura'],
+      'An internal application for managing post-sale operations, covering sales submissions, tasks, commissions, complaints, meter administration and change-of-supplier workflows.',
+    technologies: ['Vue 3', 'GraphQL', 'AdonisJS'],
     alignment: 'left',
   },
 ];
