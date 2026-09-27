@@ -115,16 +115,22 @@
 </template>
 
 <script setup lang="ts">
+import { usePreferredReducedMotion } from '@vueuse/core';
+
+const preferredMotion = usePreferredReducedMotion();
+
+const reduceMotion = computed(() => preferredMotion.value === 'reduce');
+
 const initial = () => ({
   opacity: 0,
-  y: 100,
+  y: reduceMotion.value ? 0 : 100,
 });
 
 const animation = (delay: number) => ({
   opacity: 1,
   y: 0,
   transition: {
-    delay,
+    delay: reduceMotion.value ? 0 : delay,
     type: 'keyframes',
     ease: 'easeInOut',
   },
@@ -134,7 +140,7 @@ const scrollDown = () => {
   window.scrollBy({
     top: window.innerHeight,
     left: 0,
-    behavior: 'smooth',
+    behavior: reduceMotion.value ? 'auto' : 'smooth',
   });
 };
 </script>

@@ -1,11 +1,16 @@
 <template>
   <ClientOnly>
-    <vue-particles id="hero-particles" :options="options" />
+    <vue-particles v-if="showParticles" id="hero-particles" :options="options" />
   </ClientOnly>
 </template>
 
 <script setup lang="ts">
 import type { ISourceOptions } from '@tsparticles/engine';
+import { usePreferredReducedMotion } from '@vueuse/core';
+
+const preferredMotion = usePreferredReducedMotion();
+
+const showParticles = computed(() => preferredMotion.value !== 'reduce');
 
 const options: ISourceOptions = {
   fullScreen: {

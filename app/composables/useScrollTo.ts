@@ -1,6 +1,8 @@
-import { useMediaQuery } from '@vueuse/core';
+import { useMediaQuery, usePreferredReducedMotion } from '@vueuse/core';
 
 export function useScrollTo() {
+  const preferredMotion = usePreferredReducedMotion();
+
   return {
     // Scroll to the element with a given id
     scrollTo(id: string) {
@@ -12,7 +14,7 @@ export function useScrollTo() {
 
         window.scrollTo({
           top: element.offsetTop - targetOffset,
-          behavior: 'smooth',
+          behavior: preferredMotion.value === 'reduce' ? 'auto' : 'smooth',
         });
       }
     },
