@@ -89,7 +89,7 @@ interface FooterLink {
   projectId?: ProjectId;
 }
 
-const store = useProjectsStore();
+const { openProject } = useProjectSidebar();
 const { scrollTo } = useScrollTo();
 
 const src = ref<string>('/images/logo.png');
@@ -164,7 +164,7 @@ const handleFooterLink = (link: FooterLink) => {
   }
 
   if (link.projectId) {
-    store.setSidebar(link.projectId);
+    openProject(link.projectId);
   }
 };
 

@@ -66,7 +66,6 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    '@pinia/nuxt',
     '@nuxt/image',
     '@tsparticles/nuxt4',
     '@vueuse/motion/nuxt',

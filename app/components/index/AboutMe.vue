@@ -19,14 +19,14 @@
             My work has ranged from
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
-              @click="store.setSidebar('customer-portal')"
+              @click="openProject('customer-portal')"
             >
               customer-facing applications
             </span>
             to internal tools such as an automation-driven
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
-              @click="store.setSidebar('sales-crm')"
+              @click="openProject('sales-crm')"
             >
               CRM system.
             </span>
@@ -77,7 +77,7 @@
 </template>
 
 <script setup lang="ts">
-const store = useProjectsStore();
+const { openProject } = useProjectSidebar();
 
 const technologies: string[] = [
   'TypeScript',

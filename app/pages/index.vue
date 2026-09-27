@@ -12,13 +12,13 @@
     </div>
 
     <Transition>
-      <ProjectSidebar v-show="store.showSidebar" class="fixed bottom-0 right-0 top-0 z-50 transition-transform" />
+      <ProjectSidebar v-show="isOpen" class="fixed bottom-0 right-0 top-0 z-50 transition-transform" />
     </Transition>
   </div>
 </template>
 
 <script setup lang="ts">
-const store = useProjectsStore();
+const { isOpen } = useProjectSidebar();
 
 const initial = () => ({
   opacity: 0,

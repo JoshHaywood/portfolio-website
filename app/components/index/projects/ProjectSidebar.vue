@@ -1,6 +1,6 @@
 <template>
   <div v-if="activeProject">
-    <div class="fixed left-0 h-screen w-screen bg-black opacity-40" @click="store.showSidebar = false"></div>
+    <div class="fixed left-0 h-screen w-screen bg-black opacity-40" @click="closeProject()"></div>
 
     <div class="fixed bottom-0 right-0 top-0 h-screen w-full overflow-y-scroll bg-secondary p-5 sm:w-[550px] sm:p-10">
       <!-- Navigation -->
@@ -12,7 +12,7 @@
           strokeWidth="1.5"
           stroke="currentColor"
           class="h-6 w-6 cursor-pointer text-gray-400 transition-colors hover:text-primary"
-          @click="store.showSidebar = false"
+          @click="closeProject()"
         >
           <path
             strokeLinecap="round"
@@ -71,19 +71,19 @@
 <script setup lang="ts">
 import { projectsById } from '~/data/projects';
 
-const store = useProjectsStore();
+const { isOpen, activeProjectId, closeProject } = useProjectSidebar();
 
 const activeProject = computed(() => {
-  if (!store.activeProject) {
+  if (!activeProjectId.value) {
     return undefined;
   }
 
-  return projectsById[store.activeProject];
+  return projectsById[activeProjectId.value];
 });
 
 // Disable scroll if sidebar is open
 watch(
-  () => store.showSidebar,
+  isOpen,
   (newVal) => {
     if (newVal) {
       document.body.style.overflow = 'hidden';

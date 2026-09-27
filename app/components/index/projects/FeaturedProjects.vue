@@ -26,7 +26,7 @@
       }"
       :class="project.featured.alignment === 'right' ? 'order-2' : 'order-1'"
       class="hidden rounded md:relative md:block md:w-3/5 md:overflow-hidden"
-      @click="store.setSidebar(project.id)"
+      @click="openProject(project.id)"
     >
       <div class="transition group-hover:scale-105">
         <NuxtImg :src="`/images/${project.featured.image}`" :alt="`${project.tagline} thumbnail`" class="h-auto min-w-[650px]" />
@@ -52,17 +52,17 @@
       :class="project.featured.alignment === 'right' ? 'md:text-right' : 'md:text-left'"
       class="p-5 max-md:backdrop-brightness-[0.3] sm:px-5 sm:py-16 md:z-10 md:w-2/5 md:px-0 md:py-10"
     >
-      <div class="font-normal text-primary" @click="store.setSidebar(project.id)">{{ project.tagline }}</div>
+      <div class="font-normal text-primary" @click="openProject(project.id)">{{ project.tagline }}</div>
       <div
         class="mb-5 text-3xl font-semibold text-white transition-colors hover:text-primary"
-        @click="store.setSidebar(project.id)"
+        @click="openProject(project.id)"
       >
         {{ project.heading }}
       </div>
       <p
         :class="project.featured.alignment === 'right' ? 'md:-ml-32 md:pl-10 md:pr-5' : 'md:-mr-32 md:pl-5 md:pr-10'"
         class="bg-none pb-5 text-gray-300 sm:pt-5 md:rounded md:bg-tertiary md:shadow-md"
-        @click="store.setSidebar(project.id)"
+        @click="openProject(project.id)"
       >
         {{ project.summary }}
       </p>
@@ -85,7 +85,7 @@
         <ul
           :class="project.featured.alignment === 'right' ? 'md:justify-end' : 'md:justify-none'"
           class="flex flex-row flex-wrap gap-x-2.5 text-gray-500 sm:gap-x-0 sm:space-x-5 md:mt-5"
-          @click="store.setSidebar(project.id)"
+          @click="openProject(project.id)"
         >
           <li v-for="technology in project.technologies" :key="technology">{{ technology }}</li>
         </ul>
@@ -106,7 +106,7 @@
 import { useMediaQuery } from '@vueuse/core';
 import { featuredProjects } from '~/data/projects';
 
-const store = useProjectsStore();
+const { openProject } = useProjectSidebar();
 
 const isMobile = useMediaQuery('(max-width: 768px)');
 

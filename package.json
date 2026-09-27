@@ -26,7 +26,6 @@
   "dependencies": {
     "@nuxt/image": "^2.1.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
-    "@pinia/nuxt": "^1.0.2",
     "@tsparticles/engine": "^4.4.0",
     "@tsparticles/nuxt4": "^4.4.0",
     "@tsparticles/slim": "^4.4.0",
@@ -34,7 +33,6 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "nuxt": "^4.5.2",
-    "pinia": "^4.0.3",
     "vue-router": "^5.3.1"
   },
   "overrides": {
