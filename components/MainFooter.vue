@@ -115,13 +115,17 @@ const columns: { heading?: string; links: { label: string; target?: string }[] }
   },
   {
     heading: 'Projects',
-    links: [{ label: 'Customer Portal' }, { label: 'Automated CRM System' }, { label: 'Sales Submission Admin Suite' }],
+    links: [
+      { label: 'Energy Data Platform' },
+      { label: 'Sales Administration Platform' },
+      { label: 'Customer Portal' },
+    ],
   },
   {
     links: [
-      { label: 'Automated Prospecting Tool' },
+      { label: 'Astra CRM' },
+      { label: 'Prospecting Tool' },
       { label: 'Auction Platform' },
-      { label: 'Organisational Energy Tracker' },
     ],
   },
 ];

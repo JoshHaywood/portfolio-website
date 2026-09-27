@@ -140,6 +140,24 @@ const sidebarFields: {
     structure: ['HTML', 'React', 'Tailwind CSS', 'Material UI', 'JavaScript', 'Express.js', 'Node.js', 'MySQL'],
     role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
   },
+  {
+    tagline: 'Data Processing & Integrations',
+    projectImage: 'portal-featured-thumbnail.jpg',
+    overview:
+      'A platform centralising and processing electricity and gas consumption data from multiple external sources for customer-facing and internal applications.',
+    structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'Node.js', 'PostgreSQL'],
+    role:
+      'I took over development early in the project and have worked across both the Vue frontend and AdonisJS backend, building data-processing and integration functionality and supporting the system in production.',
+  },
+  {
+    tagline: 'Sales Operations',
+    projectImage: 'sales-admin-thumbnail.PNG',
+    overview:
+      'An internal application for managing post-sale operations, covering sales submissions, tasks, commissions, complaints, meter administration and change-of-supplier workflows.',
+    structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
+    role:
+      'I set up the application and built the early product through MVP, implementing its core administration workflows while integrating with existing shared backend and data systems. I continued extending and supporting the application as development became collaborative.',
+  },
 ];
 
 // Combine sidebar fields with store projects

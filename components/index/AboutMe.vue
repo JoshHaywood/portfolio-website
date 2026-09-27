@@ -26,7 +26,7 @@
             to internal tools such as an automation-driven
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
-              @click="store.setSidebar('Automated CRM System')"
+              @click="store.setSidebar('Astra CRM')"
             >
               CRM system.
             </span>

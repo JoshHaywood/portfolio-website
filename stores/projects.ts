@@ -28,6 +28,12 @@ export const useProjectsStore = defineStore('project', () => {
       heading: 'Ecommerce website',
       repoLink: 'https://github.com/JoshHaywood/tech-terminus',
     },
+    {
+      heading: 'Energy Data Platform',
+    },
+    {
+      heading: 'Sales Administration Platform',
+    },
   ];
 
   const setSidebar = (label: string) => {
