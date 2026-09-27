@@ -122,11 +122,7 @@ const columns: { heading?: string; links: { label: string; target?: string }[] }
     ],
   },
   {
-    links: [
-      { label: 'Sales CRM' },
-      { label: 'Prospecting Tool' },
-      { label: 'Auction Platform' },
-    ],
+    links: [{ label: 'Sales CRM' }, { label: 'Prospecting Tool' }, { label: 'Auction Platform' }],
   },
 ];
 
