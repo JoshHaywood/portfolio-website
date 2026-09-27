@@ -91,12 +91,13 @@ const sidebarFields: {
       'I initially worked on responsive and mobile frontend improvements before my role expanded into substantial full-stack development across the existing portal. Later, I carried out a major frontend redesign based on project specifications, rebuilding key meter, document, profile, administration and mobile experiences and integrating previously separate consumption-analysis functionality directly into the portal. On the backend, I worked on meter lookup and onboarding routes, customer and account operations, consumption calculations, authenticated WebSockets and integration with the internal sales CRM. I also added automated tests and continued maintaining the portal as these features were released and supported in production.',
   },
   {
-    tagline: 'Customer Relationship Management',
+    tagline: 'Sales Pipeline & Integrations',
     projectImage: 'astra-thumbnail.jpg',
     overview:
-      'An internal sales CRM used to manage prospects, leads, customer information and sales workflows. It combines pipeline management, automation, communication and integrations with other business systems, with GraphQL and Hasura providing controlled access to PostgreSQL data.',
-    structure: ['HTML', 'Vue3', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Node.js', 'Socket.io', 'Hasura'],
-    role: 'I started by designing and developing a Kanban-style board to manage prospects, leads, and sales, iterating on it based on staff feedback to improve workflows and usability. I implemented the initial sales flow, allowing staff to create and assign sales while ensuring seamless interaction with existing systems. A key achievement was integrating the CRM with the customer portal, enabling staff to view and manage customer data, update meter details, and upload files during onboarding. Throughout the rollout, I actively maintained and refined the system, applying updates and fixes to address feedback, ensuring the platform met the needs of its users and supported the sales team’s efficiency.',
+      'Used by around 200 staff, the CRM brought together the day-to-day process of turning prospects into active sales while keeping customer information and related activity in one place. Staff could manage leads through staged pipelines, work with quotes and sales, update customer and meter information, attach supporting files and follow ongoing activity. It also connected with other internal and customer-facing systems, making it a central shared application rather than a standalone sales tool.',
+    structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS'],
+    role:
+      'I became a primary contributor to the CRM’s main sales pipeline within a larger team-owned codebase. I built and extended pipeline behaviour for moving prospects and sales through stages, including quote validation, checklist and submission logic, campaign assignments and handling lost opportunities. My work also covered customer and meter workflows, file attachments, customer-portal integrations and real-time updates. I continued developing and maintaining these areas within the CRM’s established architecture, working alongside other developers on a shared production system.',
   },
   {
     tagline: 'Lead Generation & CRM Integration',
