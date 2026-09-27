@@ -69,7 +69,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from '@/types';
+import type { Project } from '~/types/project';
 
 const store = useProjectsStore();
 
@@ -157,8 +157,7 @@ const sidebarProjects = store.projects.map((project: Project, index: number) => 
 
 // Filter active project
 const activeProject = computed(() => {
-  const filteredProjects = sidebarProjects.filter((project: Project) => project.heading === store.activeProject);
-  return filteredProjects[0];
+  return sidebarProjects.find((project: Project) => project.heading === store.activeProject)!;
 });
 
 // Disable scroll if sidebar is open

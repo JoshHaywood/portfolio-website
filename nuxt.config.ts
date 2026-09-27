@@ -1,6 +1,15 @@
 export default defineNuxtConfig({
   typescript: {
     shim: false,
+    tsConfig: {
+      compilerOptions: {
+        noImplicitOverride: true,
+        noImplicitReturns: true,
+        noFallthroughCasesInSwitch: true,
+        forceConsistentCasingInFileNames: true,
+        skipLibCheck: true,
+      },
+    },
   },
 
   css: ['~/assets/main.css'],
@@ -57,7 +66,7 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@nuxt/image',
-    'nuxt-particles',
+    '@tsparticles/nuxt4',
     '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/eslint-module',

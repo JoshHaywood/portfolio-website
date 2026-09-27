@@ -89,7 +89,7 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from '@/types';
+import type { Project } from '~/types/project';
 
 const store = useProjectsStore();
 

@@ -1,19 +1,13 @@
 <template>
-  <NuxtParticles id="hero-particles" :options="options" />
+  <ClientOnly>
+    <vue-particles id="hero-particles" :options="options" />
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
-const options: {
-  fullScreen: { enable: boolean; zIndex: number };
-  particles: {
-    color: { value: string };
-    links: { color: string; distance: number; enable: boolean; opacity: number; width: number };
-    move: { enable: boolean; outModes: 'bounce' };
-    number: { density: { enable: boolean }; value: number };
-    opacity: { value: number };
-    size: { value: { min: number; max: number } };
-  };
-} = {
+import type { ISourceOptions } from '@tsparticles/engine';
+
+const options: ISourceOptions = {
   fullScreen: {
     enable: false,
     zIndex: -1,
