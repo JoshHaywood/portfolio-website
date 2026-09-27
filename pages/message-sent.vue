@@ -1,7 +1,7 @@
 <template>
   <StatusMessage
     :heading="'Thank you'"
-    :message="'Your message has been sent successfully. You will receive a reply to your email as soon as possible.'"
+    message="Your message has been sent. I'll get back to you as soon as I can."
     :redirect="'/'"
   />
 </template>
