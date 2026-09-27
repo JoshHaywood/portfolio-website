@@ -85,20 +85,10 @@ const sidebarFields: {
     tagline: 'Elevated Energy Management',
     projectImage: 'industrion-thumbnail.png',
     overview:
-      'An energy customer self-service portal for managing electricity and gas meter details, documents and account information. It also provides consumption insights and connects customer activity with the company’s internal sales and support systems.',
-    structure: [
-      'HTML',
-      'Vue3',
-      'Tailwind CSS',
-      'Shadcn',
-      'TypeScript',
-      'Adonis',
-      'Node.js',
-      'Cron',
-      'Socket.io',
-      'PostgreSQL',
-    ],
-    role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated integration with the internal sales CRM, automating prospect creation to streamline workflows between sales and support teams.',
+      'The portal acted as the customer-facing layer for several account and energy-management workflows. During onboarding, customers could look up and confirm electricity and gas meter information, while established users could access documents, update account details and view consumption data over time. Those journeys connected back to internal sales and support systems, allowing customer activity and account information to feed into the workflows used by staff.',
+    structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'Socket.IO', 'PostgreSQL'],
+    role:
+      'I initially worked on responsive and mobile frontend improvements before my role expanded into substantial full-stack development across the existing portal. Later, I carried out a major frontend redesign based on project specifications, rebuilding key meter, document, profile, administration and mobile experiences and integrating previously separate consumption-analysis functionality directly into the portal. On the backend, I worked on meter lookup and onboarding routes, customer and account operations, consumption calculations, authenticated WebSockets and integration with the internal sales CRM. I also added automated tests and continued maintaining the portal as these features were released and supported in production.',
   },
   {
     tagline: 'Customer Relationship Management',
