@@ -3,7 +3,6 @@
     <div
       v-show="sidebar"
       class="fixed top-0 z-40 h-screen w-screen bg-black opacity-70"
-      aria-hidden="true"
       @click="sidebar = false"
     ></div>
 

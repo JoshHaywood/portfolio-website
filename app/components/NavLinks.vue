@@ -4,7 +4,6 @@
       <a
         href="/documents/josh-haywood-cv.pdf"
         target="_blank"
-        rel="noopener noreferrer"
         class="inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         <span
@@ -79,7 +78,6 @@
             <a
               href="/documents/josh-haywood-cv.pdf"
               target="_blank"
-              rel="noopener noreferrer"
               class="inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
               <span

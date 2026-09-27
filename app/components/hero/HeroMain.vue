@@ -91,25 +91,25 @@
           ease: 'easeInOut',
         },
       }"
-      class="absolute bottom-0 left-0 right-0 mb-2 space-y-1 text-center"
+      class="absolute bottom-0 left-0 right-0 mb-2 text-center"
     >
       <button
         type="button"
-        class="text-xl font-medium text-gray-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        class="w-full cursor-pointer space-y-1 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
         @click="scrollDown"
       >
-        View More
+        <span class="block text-xl font-medium text-gray-400 transition-colors hover:text-white">View More</span>
+        <svg
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          class="mx-auto h-5 w-5 fill-primary"
+        >
+          <path
+            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
+          />
+        </svg>
       </button>
-      <svg
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512"
-        class="mx-auto h-5 w-5 fill-primary"
-      >
-        <path
-          d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-        />
-      </svg>
     </div>
   </div>
 </template>
