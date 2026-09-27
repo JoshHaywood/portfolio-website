@@ -15,11 +15,10 @@ The site covers my background as a full-stack software engineer, the systems and
 
 ## Technology Stack
 
-- Nuxt 3
+- Nuxt 4
 - Vue 3
 - TypeScript
 - Tailwind CSS
-- Pinia
 - VueUse
 
 ## Local Development

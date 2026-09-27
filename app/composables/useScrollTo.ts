@@ -10,7 +10,7 @@ export function useScrollTo() {
       if (element) {
         const isMobile = useMediaQuery('(max-width: 768px)');
 
-        const targetOffset = isMobile ? 80 : 120;
+        const targetOffset = isMobile.value ? 80 : 120;
 
         window.scrollTo({
           top: element.offsetTop - targetOffset,
