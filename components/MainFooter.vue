@@ -14,7 +14,7 @@
               @click="scrollToTop"
             />
 
-            <p class="mt-5 text-sm text-gray-400">Contact me via my social media or email for any inquiries.</p>
+            <p class="mt-5 text-sm text-gray-400">Find me on LinkedIn and GitHub, or get in touch by email.</p>
 
             <div class="flex space-x-5">
               <div v-for="(icon, index) in mediaIcons" :key="index" class="mt-2.5">
@@ -65,7 +65,7 @@
         </a>
 
         <button class="flex items-center space-x-1" @click="scrollToTop">
-          <span class="text-sm text-gray-400">Back To Top</span>
+          <span class="text-sm text-gray-400">Back to top</span>
 
           <svg viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 cursor-pointer">
             <g fill="none" transform="translate(2 2)" strokeWidth="2" class="fill-none stroke-gray-400">
