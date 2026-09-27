@@ -16,10 +16,8 @@
       }"
       class="mb-12 text-center max-xl:mt-20"
     >
-      <h3 class="mb-3 text-2xl font-semibold text-white">Other Notable Projects</h3>
-      <a href="https://github.com/JoshHaywood?tab=repositories" class="text-primary hover:underline">
-        View all projects
-      </a>
+      <h3 class="mb-3 text-2xl font-semibold text-white">More Projects</h3>
+      <a href="https://github.com/JoshHaywood?tab=repositories" class="text-primary hover:underline">View GitHub</a>
     </div>
 
     <!-- Cards -->

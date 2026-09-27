@@ -7,7 +7,7 @@
       class="mx-auto rounded border-2 border-primary p-2 text-sm font-semibold text-white transition-colors hover:bg-primary/30"
       @click="handleRedirect"
     >
-      Go Back
+      Back to portfolio
     </button>
   </div>
 </template>
