@@ -1,8 +1,13 @@
 <template>
   <div class="relative">
     <div class="hidden items-center space-x-2.5 md:flex">
-      <a href="/documents/josh-haywood-cv.pdf" target="_blank">
-        <button
+      <a
+        href="/documents/josh-haywood-cv.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+      >
+        <span
           v-motion-fade-visible-once
           :initial="{
             opacity: 0,
@@ -12,10 +17,10 @@
             opacity: 1,
             y: 0,
           }"
-          class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
+          class="inline-block rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
         >
           View my CV
-        </button>
+        </span>
       </a>
 
       <ul class="flex space-x-5">
@@ -37,9 +42,14 @@
             },
           }"
           class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
-          @click="scrollTo(link.id)"
         >
-          {{ link.name }}
+          <a
+            :href="`#${link.id}`"
+            class="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            @click.prevent="scrollTo(link.id)"
+          >
+            {{ link.name }}
+          </a>
         </li>
       </ul>
     </div>
@@ -47,6 +57,7 @@
     <Transition>
       <div
         v-if="sidebar"
+        id="mobile-navigation"
         class="fixed right-0 mt-6 flex h-screen w-[280px] flex-col items-center bg-tertiary pt-40 transition md:hidden"
       >
         <ul class="flex flex-col space-y-10">
@@ -54,18 +65,30 @@
             v-for="link in links"
             :key="link.id"
             class="ml-2.5 text-lg font-semibold text-white transition-colors hover:cursor-pointer hover:text-primary"
-            @click="scrollTo(link.id), $emit('close')"
           >
-            {{ link.name }}
+            <a
+              :href="`#${link.id}`"
+              class="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              @click.prevent="handleNavigation(link.id)"
+            >
+              {{ link.name }}
+            </a>
           </li>
 
-          <a href="/documents/josh-haywood-cv.pdf" target="_blank">
-            <button
-              class="mx-auto rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
+          <li>
+            <a
+              href="/documents/josh-haywood-cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             >
-              View my CV
-            </button>
-          </a>
+              <span
+                class="inline-block rounded border-2 border-primary bg-primary/30 p-2 text-sm font-semibold text-white transition-colors hover:bg-transparent"
+              >
+                View my CV
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
     </Transition>
@@ -78,7 +101,15 @@ const { scrollTo } = useScrollTo();
 defineProps<{
   sidebar: boolean;
 }>();
-defineEmits(['close']);
+
+const emit = defineEmits<{
+  close: [];
+}>();
+
+const handleNavigation = (id: string) => {
+  scrollTo(id);
+  emit('close');
+};
 
 const links: { id: string; name: string }[] = [
   { id: 'about', name: 'About' },
