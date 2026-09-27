@@ -21,7 +21,7 @@ jobs:
       - name: Generate Nuxt 4 dependency lock
         run: |
           npm uninstall nuxt-particles --package-lock-only
-          npm install nuxt@^4.5.2 @nuxt/image@^2.1.0 vue-router@^5.3.1 @tsparticles/nuxt4 @tsparticles/vue3 @tsparticles/engine @tsparticles/slim --package-lock-only
+          npm install nuxt@^4.5.2 @nuxt/image@^2.1.0 vue-router@^5.3.1 pinia@^4.0.3 @pinia/nuxt@^1.0.2 @tsparticles/nuxt4 @tsparticles/vue3 @tsparticles/engine @tsparticles/slim --package-lock-only
 
       - name: Apply migration compatibility changes
         run: |
