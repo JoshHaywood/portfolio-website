@@ -154,10 +154,10 @@ const sidebarFields: {
     tagline: 'Sales Operations',
     projectImage: 'sales-admin-thumbnail.PNG',
     overview:
-      'An internal application for managing post-sale energy operations, covering sales submissions, tasks, commissions, complaints, meter administration and change-of-supplier workflows.',
+      'The platform provided a focused workspace for managing energy contracts after the sale while continuing to use shared customer and sales data from the wider business systems. Staff could bring existing sales records into the application, work through each contract’s administrative stages, manage customer and meter information, communicate with customers and suppliers, and track follow-up activity. It became the new administration system for around 50 staff.',
     structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
     role:
-      'I set up the application and built the early product through MVP, implementing its core administration workflows while integrating with existing shared backend and data systems. I continued extending and supporting the application as development became collaborative.',
+      'I set up the application and was its sole developer through the first usable MVP. I built the authentication, routing, dashboard, task and administration workflows, event feed and API integration needed to bring existing sales records into the application. As the product grew, I added functionality around meter management, commissions, complaints, customer and supplier communications, comments and tracking changes of energy supplier. I integrated the application with the existing shared backend and data systems, and I continued extending and supporting it as development became collaborative.',
   },
 ];
 

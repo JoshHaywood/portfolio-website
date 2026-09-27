@@ -132,7 +132,7 @@ const cardsData: {
     tagline: 'Sales Operations',
     heading: 'Sales Administration Platform',
     description:
-      'An internal application for managing post-sale energy operations, covering sales submissions, tasks, commissions, complaints, meter administration and change-of-supplier workflows.',
+      'An internal application for managing energy contracts after the sale, giving finance, compliance and administration staff one place to handle tasks, commissions, complaints, meter information and changes of energy supplier.',
     technologies: ['Vue 3', 'GraphQL', 'AdonisJS'],
     alignment: 'left',
   },
