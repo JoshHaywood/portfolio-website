@@ -7,14 +7,14 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Josh Haywood | Portfolio',
+      title: 'Josh Haywood | Full-Stack Software Engineer',
       meta: [
         { charset: 'utf-8' },
         {
           key: 'description',
           name: 'description',
           content:
-            "I'm a recent graduate with a BSc in web development, aspiring to work as a front-end developer. I have a strong skill set in full-stack JavaScript development, and this is where I showcase my work.",
+            'Full-stack software engineer with 3+ years of commercial experience building and supporting production software across frontend, backend and data systems.',
         },
         { name: 'author', content: 'Josh Haywood' },
         { name: 'google-site-verification', content: 'HdPWnU6uSFkgMmVnx4WWIkD2MX04xKkXY0lXaeSlMHk' },
