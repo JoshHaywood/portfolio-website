@@ -1,0 +1,42 @@
+name: Nuxt 4 migration validation
+
+on:
+  push:
+    branches: [2026-redesign]
+
+jobs:
+  validate-nuxt-4:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Generate Nuxt 4 dependency lock
+        run: npm install nuxt@^4.0.0 --package-lock-only
+
+      - name: Upload migrated package files
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuxt4-package-files
+          path: |
+            package.json
+            package-lock.json
+
+      - name: Install dependencies from migrated lockfile
+        run: npm ci
+
+      - name: Type check
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
