@@ -71,6 +71,6 @@ export default defineNuxtConfig({
     '@tsparticles/nuxt4',
     '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/eslint-module',
+    '@nuxt/eslint',
   ],
 });
