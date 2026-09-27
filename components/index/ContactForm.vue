@@ -4,15 +4,14 @@
       <SectionHeading heading="Contact" />
 
       <p class="text-gray-400">
-        Based in South West England, I'm always open to exploring new opportunities and collaborations.
+        Based in South West England, I'm open to discussing software engineering roles and other opportunities.
       </p>
 
       <p class="mt-4 text-gray-400">
-        Please don't hesitate to contact me through this form or my
+        You can get in touch using the form, by email or through my
         <a href="https://www.linkedin.com/in/josh-haywood" class="font-semibold text-primary hover:underline">
           LinkedIn profile.
         </a>
-        I will endeavour to reply as soon as possible.
       </p>
 
       <!-- Contact Buttons -->
@@ -102,7 +101,7 @@
       <button
         class="mx-auto w-1/4 rounded border-b-2 border-primary bg-tertiary p-3 text-sm text-white transition-colors hover:bg-tertiary/70"
       >
-        Submit
+        Send message
       </button>
     </form>
   </div>
