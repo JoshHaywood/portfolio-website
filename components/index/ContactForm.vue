@@ -4,7 +4,8 @@
       <SectionHeading heading="Contact" />
 
       <p class="text-gray-400">
-        Based in South West England, I'm open to discussing software engineering roles and other opportunities.
+        Based in South West England, I’m always happy to connect and discuss software engineering and the work I’m
+        building.
       </p>
 
       <p class="mt-4 text-gray-400">
