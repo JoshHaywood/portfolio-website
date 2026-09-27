@@ -11,7 +11,7 @@ export const useProjectsStore = defineStore('project', () => {
       deployLink: 'https://portal.industrion.io/',
     },
     {
-      heading: 'Astra CRM',
+      heading: 'Sales CRM',
     },
     {
       heading: 'Prospecting Tool',

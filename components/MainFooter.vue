@@ -123,7 +123,7 @@ const columns: { heading?: string; links: { label: string; target?: string }[] }
   },
   {
     links: [
-      { label: 'Astra CRM' },
+      { label: 'Sales CRM' },
       { label: 'Prospecting Tool' },
       { label: 'Auction Platform' },
     ],

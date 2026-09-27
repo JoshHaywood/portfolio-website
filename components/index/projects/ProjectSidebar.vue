@@ -85,7 +85,7 @@ const sidebarFields: {
     tagline: 'Elevated Energy Management',
     projectImage: 'industrion-thumbnail.png',
     overview:
-      'An energy management platform built to give users full control over their energy and gas meters. It allows users to manage meter details, access important documents, and update personal information independently, without direct supervision. Acting as the central hub for the ecosystem, the portal connects users to additional applications and introduces features like energy consumption analysis to deliver valuable energy consumption insights.',
+      'An energy customer self-service portal for managing electricity and gas meter details, documents and account information. It also provides consumption insights and connects customer activity with the company’s internal sales and support systems.',
     structure: [
       'HTML',
       'Vue3',
@@ -98,13 +98,13 @@ const sidebarFields: {
       'Socket.io',
       'PostgreSQL',
     ],
-    role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated CRM integration, automating prospect creation to streamline workflows between sales and support teams.',
+    role: 'Initially focused on implementing responsive front-end designs to enhance usability, my role expanded into a complete redevelopment of the portal. This involved reworking the front-end and back-end to support new functionality and improve maintainability, scalability and performance. I developed a postcode-based meter lookup system to simplify user onboarding and integrated energy consumption analysis tools to provide detailed consumption statistics. Additionally, I incorporated integration with the internal sales CRM, automating prospect creation to streamline workflows between sales and support teams.',
   },
   {
     tagline: 'Customer Relationship Management',
     projectImage: 'astra-thumbnail.jpg',
     overview:
-      'A CRM platform designed to revolutionise how sales staff handle prospects, leads, and customer interactions. Built with a strong focus on automation, the system streamlines data collection, prospect creation, and the entire sales workflow. By integrating AI-generated summaries, internal communication tools, and external systems, it provides staff with up-to-date insights on sales progression and collaboration. Using GraphQL and Hasura, the platform ensures a lightweight backend and fine-grained control over permissions, enabling efficient integration with the PostgreSQL database and flexibility for future development.',
+      'An internal sales CRM used to manage prospects, leads, customer information and sales workflows. It combines pipeline management, automation, communication and integrations with other business systems, with GraphQL and Hasura providing controlled access to PostgreSQL data.',
     structure: ['HTML', 'Vue3', 'Tailwind CSS', 'TypeScript', 'GraphQL', 'Node.js', 'Socket.io', 'Hasura'],
     role: 'I started by designing and developing a Kanban-style board to manage prospects, leads, and sales, iterating on it based on staff feedback to improve workflows and usability. I implemented the initial sales flow, allowing staff to create and assign sales while ensuring seamless interaction with existing systems. A key achievement was integrating the CRM with the customer portal, enabling staff to view and manage customer data, update meter details, and upload files during onboarding. Throughout the rollout, I actively maintained and refined the system, applying updates and fixes to address feedback, ensuring the platform met the needs of its users and supported the sales team’s efficiency.',
   },
@@ -112,9 +112,9 @@ const sidebarFields: {
     tagline: 'Streamlining Lead Generation with Intelligent Automation',
     projectImage: 'shado-thumbnail.png',
     overview:
-      'A prospect-finding tool designed to help sales staff identify and target businesses efficiently. By leveraging multiple third-party APIs, the platform gathers comprehensive data on companies, including contact information, location, size, and ownership. Staff can quickly generate detailed prospect previews and seamlessly integrate them into the CRM, enabling them to start working leads with a solid foundation. With robust filtering options, users can target specific business types, simplifying the sales process and improving lead quality.',
+      'A prospect-finding tool designed to help sales staff identify and target businesses efficiently. By leveraging multiple third-party APIs, the platform gathers comprehensive data on companies, including contact information, location, size, and ownership. Staff can quickly generate detailed prospect previews and pass them into the sales CRM, giving the sales team a stronger starting point for working leads. With robust filtering options, users can target specific business types, simplifying the sales process and improving lead quality.',
     structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Cron', 'PostgreSQL'],
-    role: 'I led a full-stack rebuild of the platform, reworking both the front-end and back-end to enhance functionality and usability. The front-end received a complete UI overhaul based on marketing team design documents, introducing a large table and accordion layout to present information in a clear and accessible way. On the back-end, I enhanced CRM integration, enabling staff to be assigned to prospects instantly, streamlining the transition from lead generation to active sales. I developed a data-scraping robot that utilised third-party APIs to expand the internal data pool over time, giving staff access to a growing range of prospects. Additionally, I introduced a campaign system where admins could upload CSV files of company data, automatically processing and presenting them as campaign-specific prospects. The filtering system was also expanded, adding a wider array of options to help staff pinpoint high-quality leads more effectively.',
+    role: 'I led a full-stack rebuild of the platform, reworking both the front-end and back-end to enhance functionality and usability. The front-end received a complete UI overhaul based on marketing team design documents, introducing a large table and accordion layout to present information in a clear and accessible way. On the back-end, I enhanced integration with the internal sales CRM, enabling staff to be assigned to prospects and streamlining the transition from lead generation to active sales. I developed a data-scraping robot that utilised third-party APIs to expand the internal data pool over time, giving staff access to a growing range of prospects. Additionally, I introduced a campaign system where admins could upload CSV files of company data, automatically processing and presenting them as campaign-specific prospects. The filtering system was also expanded, adding a wider array of options to help staff pinpoint high-quality leads more effectively.',
   },
   {
     tagline: 'Adaptive Auction Platform',
@@ -122,7 +122,7 @@ const sidebarFields: {
     overview:
       'A real-time auction platform designed to connect users with energy suppliers, allowing them to receive and compare quotes instantly. Built with a strong focus on interactivity, the platform enables users to track live bids as they are placed, while staff oversee auctions, manage quotes, and handle supplier contracts. By giving users greater control over their options while maintaining staff oversight, the system streamlines the bidding process and enhances transparency in selecting the best energy deals.',
     structure: ['HTML', 'Vue3', 'Tailwind CSS', 'Shadcn', 'TypeScript', 'Adonis', 'Node.js', 'Socket.io', 'PostgreSQL'],
-    role: 'I worked extensively across the full stack, starting with a complete front-end redesign based on marketing team designs. This involved restructuring page layouts, introducing new elements, and refining the user flow from receiving quotes to accepting a final offer. On the back-end, I rebuilt the real-time system from the ground up, transitioning from an overly socket-dependent model to a hybrid approach using a combination of WebSockets and HTTP requests. This significantly improved reliability across both customer and staff-facing frontends, preventing real-time data failures. Additionally, I integrated the platform with Microsoft Calendar, allowing staff to schedule dedicated auction oversight periods within their personal schedules.',
+    role: 'I worked extensively across the full stack, starting with a complete front-end redesign based on marketing team designs. This involved restructuring page layouts, introducing new elements, and refining the user flow from receiving quotes to accepting a final offer. On the back-end, I rebuilt the real-time system from the ground up, transitioning from an overly socket-dependent model to a hybrid approach using a combination of WebSockets and HTTP requests. This significantly improved reliability across both customer and staff-facing frontends, preventing real-time data failures. Additionally, I integrated the platform with Microsoft Graph Bookings, allowing staff to schedule auction oversight periods around staff availability.',
   },
   {
     tagline: 'Highlighting My Skills and Projects',
@@ -153,7 +153,7 @@ const sidebarFields: {
     tagline: 'Sales Operations',
     projectImage: 'sales-admin-thumbnail.PNG',
     overview:
-      'An internal application for managing post-sale operations, covering sales submissions, tasks, commissions, complaints, meter administration and change-of-supplier workflows.',
+      'An internal application for managing post-sale energy operations, covering sales submissions, tasks, commissions, complaints, meter administration and change-of-supplier workflows.',
     structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
     role:
       'I set up the application and built the early product through MVP, implementing its core administration workflows while integrating with existing shared backend and data systems. I continued extending and supporting the application as development became collaborative.',

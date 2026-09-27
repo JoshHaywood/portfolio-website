@@ -97,17 +97,17 @@ const store = useProjectsStore();
 const cardFields: { description: string; technologies: { item: string }[] }[] = [
   {
     description:
-      'A customer self-service portal for managing energy meters, documents and account information, with consumption insights and integrations with internal systems.',
+      'A customer self-service portal for managing energy meters, documents and account information, with consumption insights and integrations with internal sales and support systems.',
     technologies: [{ item: 'Vue 3' }, { item: 'AdonisJS' }, { item: 'Socket.IO' }],
   },
   {
     description:
-      'A shared CRM supporting lead management, sales pipelines and customer workflows, with integrations across internal systems and customer-facing applications.',
+      'A shared sales CRM supporting lead management, sales pipelines and customer workflows, with integrations across internal systems and customer-facing applications.',
     technologies: [{ item: 'Vue 3' }, { item: 'GraphQL' }, { item: 'Hasura' }],
   },
   {
     description:
-      'An internal prospecting tool for finding, enriching and managing leads before passing them into the CRM, with search, campaign and import workflows.',
+      'An internal prospecting tool for finding, enriching and managing business leads before passing them into the sales CRM, with search, campaign and import workflows.',
     technologies: [{ item: 'Vue 3' }, { item: 'TypeScript' }, { item: 'Pinia' }],
   },
   {
