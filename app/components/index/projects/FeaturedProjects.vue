@@ -29,7 +29,14 @@
       @click="openProject(project.id)"
     >
       <div class="transition group-hover:scale-105">
-        <NuxtImg :src="`/images/${project.featured.image}`" :alt="`${project.tagline} thumbnail`" class="h-auto min-w-[650px]" />
+        <NuxtImg
+          :src="`/images/${project.featured.image}`"
+          :alt="`${project.tagline} thumbnail`"
+          width="650"
+          densities="x1 x2"
+          loading="lazy"
+          class="h-auto min-w-[650px]"
+        />
       </div>
     </div>
 
