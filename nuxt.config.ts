@@ -18,23 +18,20 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Josh Haywood | Full-Stack Software Engineer',
+      htmlAttrs: {
+        lang: 'en',
+      },
       meta: [
         { charset: 'utf-8' },
-        {
-          key: 'description',
-          name: 'description',
-          content:
-            'Full-stack software engineer with 3+ years of commercial experience building and supporting production software across frontend, backend and data systems.',
-        },
         { name: 'author', content: 'Josh Haywood' },
         { name: 'google-site-verification', content: 'HdPWnU6uSFkgMmVnx4WWIkD2MX04xKkXY0lXaeSlMHk' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
         {
-          rel: 'canonical',
-          href: 'https://www.joshhaywood-portfolio.com/',
+          rel: 'icon',
+          type: 'image/x-icon',
+          href: '/favicon.ico',
         },
       ],
       script: [

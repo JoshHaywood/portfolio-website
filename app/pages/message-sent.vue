@@ -5,3 +5,10 @@
     :redirect="'/'"
   />
 </template>
+
+<script setup lang="ts">
+useSeoMeta({
+  title: 'Message Sent | Josh Haywood',
+  robots: 'noindex, follow',
+});
+</script>

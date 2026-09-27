@@ -18,6 +18,34 @@
 </template>
 
 <script setup lang="ts">
+const title = 'Josh Haywood | Full-Stack Software Engineer';
+const description =
+  'Full-stack software engineer with 3+ years of commercial experience building and supporting production software across frontend, backend and data systems.';
+const canonicalUrl = 'https://www.joshhaywood-portfolio.com/';
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: canonicalUrl,
+  ogSiteName: 'Josh Haywood',
+  ogLocale: 'en_GB',
+  twitterCard: 'summary',
+  twitterTitle: title,
+  twitterDescription: description,
+});
+
+useHead({
+  link: [
+    {
+      rel: 'canonical',
+      href: canonicalUrl,
+    },
+  ],
+});
+
 const { isOpen } = useProjectSidebar();
 
 const initial = () => ({
