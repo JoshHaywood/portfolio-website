@@ -1,4 +1,6 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2026-09-27',
+
   typescript: {
     shim: false,
     tsConfig: {
