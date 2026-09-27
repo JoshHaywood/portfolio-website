@@ -82,7 +82,7 @@ defineEmits(['close']);
 
 const links: { id: string; name: string }[] = [
   { id: 'about', name: 'About' },
-  { id: 'skills', name: 'Skills' },
+  { id: 'capabilities', name: 'Capabilities' },
   { id: 'projects', name: 'Projects' },
   { id: 'contact', name: 'Contact' },
 ];

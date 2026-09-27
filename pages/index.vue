@@ -6,12 +6,7 @@
       class="mx-auto mb-36 mt-20 max-w-[1100px] space-y-28 px-5 sm:mt-28 md:mb-56 md:space-y-48 lg:mb-64 xl:space-y-56 xl:px-0"
     >
       <AboutMe id="about" v-motion :initial="initial()" :visible-once="animation()" />
-      <EngineeringCapabilities
-        id="engineeringCapabilities "
-        v-motion
-        :initial="initial()"
-        :visible-once="animation()"
-      />
+      <EngineeringCapabilities id="capabilities" v-motion :initial="initial()" :visible-once="animation()" />
       <ProjectContainer id="projects" v-motion :initial="initial()" :visible-once="animation()" />
       <ContactForm id="contact" v-motion :initial="initial()" :visible-once="animation()" />
     </div>
