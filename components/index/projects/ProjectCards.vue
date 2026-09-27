@@ -97,93 +97,33 @@ const store = useProjectsStore();
 const cardFields: { description: string; technologies: { item: string }[] }[] = [
   {
     description:
-      'An application that guides sales submissions with workflow-oriented UX, progress tracking, and customer to staff interaction.',
-    technologies: [
-      {
-        item: 'Vue3',
-      },
-      {
-        item: 'Adonis',
-      },
-      {
-        item: 'PostgreSQL',
-      },
-    ],
+      'A customer self-service portal for managing energy meters, documents and account information, with consumption insights and integrations with internal systems.',
+    technologies: [{ item: 'Vue 3' }, { item: 'AdonisJS' }, { item: 'Socket.IO' }],
   },
   {
     description:
-      'An internal tool that compiles company data from multiple sources to create potential prospects, streamlining CRM integration.',
-    technologies: [
-      {
-        item: 'Vue3',
-      },
-      {
-        item: 'Shadcn',
-      },
-      {
-        item: 'Adonis',
-      },
-    ],
+      'A shared CRM supporting lead management, sales pipelines and customer workflows, with integrations across internal systems and customer-facing applications.',
+    technologies: [{ item: 'Vue 3' }, { item: 'GraphQL' }, { item: 'Hasura' }],
   },
   {
     description:
-      'A real-time auction platform enabling suppliers to bid on meters, with live data facilitating efficient communication between staff and customers.',
-    technologies: [
-      {
-        item: 'Vue3',
-      },
-      {
-        item: 'Socket.io',
-      },
-      {
-        item: 'Adonis',
-      },
-    ],
+      'An internal prospecting tool for finding, enriching and managing leads before passing them into the CRM, with search, campaign and import workflows.',
+    technologies: [{ item: 'Vue 3' }, { item: 'TypeScript' }, { item: 'Pinia' }],
   },
   {
     description:
-      'A platform for tracking energy and gas consumption across multiple sites and devices, down to individual meter statistics.',
-    technologies: [
-      {
-        item: 'Vue3',
-      },
-      {
-        item: 'Adonis',
-      },
-      {
-        item: 'PostgreSQL',
-      },
-    ],
+      'A supplier auction platform for energy meters, combining standard application workflows with real-time bidding, quote management and live status updates.',
+    technologies: [{ item: 'Vue 3' }, { item: 'AdonisJS' }, { item: 'Socket.IO' }],
   },
   {
     description:
       'A portfolio site showcasing my projects, providing easy access to contact information for potential enquiries.',
-    technologies: [
-      {
-        item: 'NuxtJS',
-      },
-      {
-        item: 'TailwindCSS',
-      },
-      {
-        item: 'TypeScript',
-      },
-    ],
+    technologies: [{ item: 'NuxtJS' }, { item: 'TailwindCSS' }, { item: 'TypeScript' }],
   },
   {
     description:
       'An e-commerce site developed for my research dissertation, implementing standard e-commerce features using a RESTful API.',
-    technologies: [
-      {
-        item: 'React',
-      },
-      {
-        item: 'Express',
-      },
-      {
-        item: 'MySQL',
-      },
-    ],
+    technologies: [{ item: 'React' }, { item: 'Express' }, { item: 'MySQL' }],
   },
 ];
 

@@ -7,16 +7,17 @@ export const useProjectsStore = defineStore('project', () => {
 
   const projects: Project[] = [
     {
-      heading: 'Sales Submission Admin Suite',
+      heading: 'Customer Portal',
+      deployLink: 'https://portal.industrion.io/',
     },
     {
-      heading: 'Automated Prospecting Tool',
+      heading: 'Astra CRM',
+    },
+    {
+      heading: 'Prospecting Tool',
     },
     {
       heading: 'Auction Platform',
-    },
-    {
-      heading: 'Organisational Energy Tracker',
     },
     {
       heading: 'Personal Portfolio Website',
@@ -26,13 +27,6 @@ export const useProjectsStore = defineStore('project', () => {
     {
       heading: 'Ecommerce website',
       repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-    },
-    {
-      heading: 'Customer Portal',
-      deployLink: 'https://portal.industrion.io/',
-    },
-    {
-      heading: 'Automated CRM System',
     },
   ];
 
