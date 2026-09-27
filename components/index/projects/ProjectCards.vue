@@ -107,7 +107,7 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
   },
   {
     description:
-      'An internal prospecting tool for finding, enriching and managing business leads before passing them into the sales CRM, with search, campaign and import workflows.',
+      'An internal lead-generation tool for finding and enriching business prospects, organising campaigns and importing selected prospects into a central sales CRM for follow-up and sales management.',
     technologies: [{ item: 'Vue 3' }, { item: 'TypeScript' }, { item: 'Pinia' }],
   },
   {
