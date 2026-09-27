@@ -2,9 +2,7 @@
   <div>
     <MainHeader />
 
-    <NuxtLayout>
-      <NuxtPage />
-    </NuxtLayout>
+    <NuxtPage />
 
     <MainFooter />
   </div>
