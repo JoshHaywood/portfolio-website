@@ -19,15 +19,100 @@ jobs:
           cache: 'npm'
 
       - name: Generate Nuxt 4 dependency lock
-        run: npm install nuxt@^4.0.0 --package-lock-only
+        run: |
+          npm uninstall nuxt-particles --package-lock-only
+          npm install nuxt@^4.5.2 @nuxt/image@^2.1.0 vue-router@^5.3.1 @tsparticles/nuxt4 @tsparticles/vue3 @tsparticles/engine @tsparticles/slim --package-lock-only
 
-      - name: Upload migrated package files
+      - name: Apply migration compatibility changes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          config = Path('nuxt.config.ts')
+          text = config.read_text()
+          text = text.replace("'nuxt-particles',", "'@tsparticles/nuxt4',")
+          config.write_text(text)
+
+          sidebar = Path('components/index/projects/ProjectSidebar.vue')
+          text = sidebar.read_text()
+          text = text.replace('<div v-if="store.activeProject">', '<div v-if="activeProject">', 1)
+          text = text.replace(
+              "const filteredProjects = sidebarProjects.filter((project: Project) => project.heading === store.activeProject);\n  return filteredProjects[0];",
+              "return sidebarProjects.find((project) => project.heading === store.activeProject) ?? null;",
+          )
+          sidebar.write_text(text)
+          PY
+
+          mkdir -p utils
+
+          cat > utils/particlesInit.ts <<'EOF'
+          import type { Engine } from '@tsparticles/engine';
+
+          export async function registerParticles(engine: Engine): Promise<void> {
+            const { loadSlim } = await import('@tsparticles/slim');
+
+            await loadSlim(engine);
+          }
+          EOF
+
+          cat > components/hero/BackgroundParticles.vue <<'EOF'
+          <template>
+            <ClientOnly>
+              <vue-particles id="hero-particles" :options="options" />
+            </ClientOnly>
+          </template>
+
+          <script setup lang="ts">
+          import type { ISourceOptions } from '@tsparticles/engine';
+
+          const options: ISourceOptions = {
+            fullScreen: {
+              enable: false,
+              zIndex: -1,
+            },
+            particles: {
+              color: {
+                value: '#ffffff',
+              },
+              links: {
+                color: '#ffffff',
+                distance: 150,
+                enable: true,
+                opacity: 0.1,
+                width: 1,
+              },
+              move: {
+                enable: true,
+                outModes: 'bounce',
+              },
+              number: {
+                density: {
+                  enable: true,
+                },
+                value: 100,
+              },
+              opacity: {
+                value: 0.25,
+              },
+              size: {
+                value: { min: 1, max: 2 },
+              },
+            },
+          };
+          </script>
+          EOF
+
+      - name: Upload proposed migration files
         uses: actions/upload-artifact@v4
         with:
-          name: nuxt4-package-files
+          name: nuxt4-migration-files
           path: |
             package.json
             package-lock.json
+            nuxt.config.ts
+            components/hero/BackgroundParticles.vue
+            components/index/projects/ProjectSidebar.vue
+            utils/particlesInit.ts
 
       - name: Install dependencies from migrated lockfile
         run: npm ci
