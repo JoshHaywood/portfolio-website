@@ -19,14 +19,14 @@
             My work has ranged from
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
-              @click="store.setSidebar('Customer Portal')"
+              @click="store.setSidebar('customer-portal')"
             >
               customer-facing applications
             </span>
             to internal tools such as an automation-driven
             <span
               class="font-semibold text-primary hover:cursor-pointer hover:underline"
-              @click="store.setSidebar('Sales CRM')"
+              @click="store.setSidebar('sales-crm')"
             >
               CRM system.
             </span>

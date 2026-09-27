@@ -48,7 +48,7 @@
                   v-for="(link, linkIndex) in column.links"
                   :key="linkIndex"
                   class="mb-3 cursor-pointer text-sm text-gray-400 hover:underline"
-                  @click="columnIndex === 0 ? scrollTo(link.target!) : store.setSidebar(link.label)"
+                  @click="handleFooterLink(link)"
                 >
                   {{ link.label }}
                 </div>
@@ -80,6 +80,15 @@
 </template>
 
 <script setup lang="ts">
+import { projectsById } from '~/data/projects';
+import type { ProjectId } from '~/types/project';
+
+interface FooterLink {
+  label: string;
+  target?: string;
+  projectId?: ProjectId;
+}
+
 const store = useProjectsStore();
 const { scrollTo } = useScrollTo();
 
@@ -104,7 +113,7 @@ const mediaIcons: { label: string; path: string; svg: string }[] = [
   },
 ];
 
-const columns: { heading?: string; links: { label: string; target?: string }[] }[] = [
+const columns: { heading?: string; links: FooterLink[] }[] = [
   {
     heading: 'Sections',
     links: [
@@ -116,15 +125,48 @@ const columns: { heading?: string; links: { label: string; target?: string }[] }
   {
     heading: 'Projects',
     links: [
-      { label: 'Energy Data Platform' },
-      { label: 'Sales Administration Platform' },
-      { label: 'Customer Portal' },
+      {
+        label: projectsById['energy-data-platform'].heading,
+        projectId: 'energy-data-platform',
+      },
+      {
+        label: projectsById['sales-administration-platform'].heading,
+        projectId: 'sales-administration-platform',
+      },
+      {
+        label: projectsById['customer-portal'].heading,
+        projectId: 'customer-portal',
+      },
     ],
   },
   {
-    links: [{ label: 'Sales CRM' }, { label: 'Prospecting Tool' }, { label: 'Auction Platform' }],
+    links: [
+      {
+        label: projectsById['sales-crm'].heading,
+        projectId: 'sales-crm',
+      },
+      {
+        label: projectsById['prospecting-tool'].heading,
+        projectId: 'prospecting-tool',
+      },
+      {
+        label: projectsById['auction-platform'].heading,
+        projectId: 'auction-platform',
+      },
+    ],
   },
 ];
+
+const handleFooterLink = (link: FooterLink) => {
+  if (link.target) {
+    scrollTo(link.target);
+    return;
+  }
+
+  if (link.projectId) {
+    store.setSidebar(link.projectId);
+  }
+};
 
 // Scroll to top
 const scrollToTop = () => {

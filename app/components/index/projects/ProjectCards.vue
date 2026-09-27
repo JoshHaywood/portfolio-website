@@ -22,7 +22,7 @@
 
     <!-- Cards -->
     <div class="grid-cols-2 grid-rows-2 gap-4 max-sm:space-y-4 sm:grid lg:grid-cols-3">
-      <div v-for="(project, index) in cardProjects" :key="index" class="transition-transform hover:-translate-y-2">
+      <div v-for="(project, index) in cardProjects" :key="project.id" class="transition-transform hover:-translate-y-2">
         <div
           v-motion
           :initial="{
@@ -47,7 +47,7 @@
                 viewBox="0 0 512 512"
                 alt="Folder icon"
                 class="h-9 w-9 fill-primary hover:cursor-pointer"
-                @click="store.setSidebar(project.heading)"
+                @click="store.setSidebar(project.id)"
               >
                 <path
                   d="M447.1 96h-172.1L226.7 50.75C214.7 38.74 198.5 32 181.5 32H63.1c-35.35 0-64 28.66-64 64v320c0 35.34 28.65 64 64 64h384c35.35 0 64-28.66 64-64V160C511.1 124.7 483.3 96 447.1 96zM463.1 416c0 8.824-7.178 16-16 16h-384c-8.822 0-16-7.176-16-16V96c0-8.824 7.178-16 16-16h117.5c4.273 0 8.293 1.664 11.31 4.688L255.1 144h192c8.822 0 16 7.176 16 16V416z"
@@ -64,20 +64,20 @@
             <!-- Card text -->
             <div
               class="flex-col space-y-4 hover:cursor-pointer hover:text-primary lg:flex"
-              @click="store.setSidebar(project.heading)"
+              @click="store.setSidebar(project.id)"
             >
               <h4 class="mt-5 text-xl font-semibold text-gray-200 transition-colors md:mt-8">
                 {{ project.heading }}
               </h4>
 
-              <p class="text-gray-400">{{ project.description }}</p>
+              <p class="text-gray-400">{{ project.summary }}</p>
             </div>
 
             <!-- Technologies list-->
             <ul class="absolute bottom-5 left-5 mt-8 flex flex-row space-x-5">
-              <li v-for="(technology, techIndex) in project.technologies" :key="techIndex">
-                <div class="text-sm text-gray-500 hover:cursor-pointer" @click="store.setSidebar(project.heading)">
-                  {{ technology.item }}
+              <li v-for="technology in project.technologies" :key="technology">
+                <div class="text-sm text-gray-500 hover:cursor-pointer" @click="store.setSidebar(project.id)">
+                  {{ technology }}
                 </div>
               </li>
             </ul>
@@ -89,47 +89,9 @@
 </template>
 
 <script setup lang="ts">
-import type { Project } from '~/types/project';
+import { secondaryProjects } from '~/data/projects';
 
 const store = useProjectsStore();
 
-// Additional fields specific to cards
-const cardFields: { description: string; technologies: { item: string }[] }[] = [
-  {
-    description:
-      'A customer self-service portal for managing energy meters, documents and account information, with consumption insights and integrations with internal sales and support systems.',
-    technologies: [{ item: 'Vue 3' }, { item: 'AdonisJS' }, { item: 'Socket.IO' }],
-  },
-  {
-    description:
-      'A shared sales CRM supporting lead management, sales pipelines and customer workflows, with integrations across internal systems and customer-facing applications.',
-    technologies: [{ item: 'Vue 3' }, { item: 'GraphQL' }, { item: 'Hasura' }],
-  },
-  {
-    description:
-      'An internal lead-generation tool for finding and enriching business prospects, organising campaigns and importing selected prospects into a central sales CRM for follow-up and sales management.',
-    technologies: [{ item: 'Vue 3' }, { item: 'TypeScript' }, { item: 'Pinia' }],
-  },
-  {
-    description:
-      'An auction platform where energy suppliers could submit competing quotes for customer energy contracts, with real-time bidding, quote management and live status updates.',
-    technologies: [{ item: 'Vue 3' }, { item: 'AdonisJS' }, { item: 'Socket.IO' }],
-  },
-  {
-    description:
-      'A portfolio site showcasing my projects, providing easy access to contact information for potential enquiries.',
-    technologies: [{ item: 'NuxtJS' }, { item: 'TailwindCSS' }, { item: 'TypeScript' }],
-  },
-  {
-    description:
-      'An e-commerce site developed for my research dissertation, implementing standard e-commerce features using a RESTful API.',
-    technologies: [{ item: 'React' }, { item: 'Express' }, { item: 'MySQL' }],
-  },
-];
-
-// Combine card fields with store projects, limiting to 6 to slice featured projects
-const cardProjects = store.projects.slice(0, 6).map((project: Project, index: number) => ({
-  ...project,
-  ...cardFields[index],
-}));
+const cardProjects = secondaryProjects;
 </script>
