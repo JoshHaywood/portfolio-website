@@ -9,9 +9,8 @@
     <Transition name="slide">
       <nav
         v-show="showHeader"
-        aria-label="Primary navigation"
         :class="sidebar ? 'bg-tertiary' : 'bg-transparent'"
-        class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition-transform lg:px-10"
+        class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition-transform motion-reduce:transition-none lg:px-10"
       >
         <button
           type="button"

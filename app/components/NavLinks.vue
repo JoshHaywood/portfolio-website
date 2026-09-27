@@ -57,7 +57,7 @@
       <div
         v-if="sidebar"
         id="mobile-navigation"
-        class="fixed right-0 mt-6 flex h-screen w-[280px] flex-col items-center bg-tertiary pt-40 transition md:hidden"
+        class="fixed right-0 mt-6 flex h-screen w-[280px] flex-col items-center bg-tertiary pt-40 transition motion-reduce:transition-none md:hidden"
       >
         <ul class="flex flex-col space-y-10">
           <li

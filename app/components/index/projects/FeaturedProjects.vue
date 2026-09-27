@@ -33,7 +33,6 @@
           :src="`/images/${project.featured.image}`"
           :alt="`${project.tagline} thumbnail`"
           width="650"
-          densities="x1 x2"
           loading="lazy"
           class="h-auto min-w-[650px]"
         />

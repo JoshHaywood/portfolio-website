@@ -1,6 +1,9 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "start": "node .output/server/index.mjs",
     "dev": "nuxt dev",
@@ -31,9 +34,7 @@
     "@vueuse/core": "^10.9.0",
     "@vueuse/motion": "^2.1.0",
     "nuxt": "^4.5.2",
+    "vue": "^3.5.40",
     "vue-router": "^5.3.1"
-  },
-  "overrides": {
-    "vue": "latest"
   }
 }

@@ -2,14 +2,13 @@ import { useMediaQuery, usePreferredReducedMotion } from '@vueuse/core';
 
 export function useScrollTo() {
   const preferredMotion = usePreferredReducedMotion();
+  const isMobile = useMediaQuery('(max-width: 768px)');
 
   return {
     // Scroll to the element with a given id
     scrollTo(id: string) {
       const element = document.getElementById(id);
       if (element) {
-        const isMobile = useMediaQuery('(max-width: 768px)');
-
         const targetOffset = isMobile.value ? 80 : 120;
 
         window.scrollTo({

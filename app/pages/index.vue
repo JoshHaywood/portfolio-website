@@ -12,7 +12,7 @@
     </div>
 
     <Transition>
-      <ProjectSidebar v-show="isOpen" class="fixed bottom-0 right-0 top-0 z-50 transition-transform" />
+      <ProjectSidebar v-show="isOpen" class="fixed bottom-0 right-0 top-0 z-50 transition-transform motion-reduce:transition-none" />
     </Transition>
   </div>
 </template>

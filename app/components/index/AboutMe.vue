@@ -78,7 +78,6 @@
           src="/images/portrait.webp"
           alt="Developer"
           width="300"
-          densities="x1 x2"
           loading="lazy"
           class="relative bottom-3 right-3 w-full rounded transition-all hover:bottom-0 hover:right-0"
         />
