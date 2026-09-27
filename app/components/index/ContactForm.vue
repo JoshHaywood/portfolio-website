@@ -19,24 +19,23 @@
       <div
         class="flex space-y-5 pt-8 max-sm:flex-col sm:space-x-5 sm:space-y-0 lg:flex-col lg:space-x-0 lg:space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0"
       >
-        <a href="https://www.linkedin.com/in/josh-haywood" class="w-full sm:w-3/5 xl:w-2/5">
-          <button
-            class="flex w-full items-center space-x-5 bg-tertiary px-5 py-2.5 ring-primary ring-opacity-40 transition-colors hover:ring"
-          >
+        <a
+          href="https://www.linkedin.com/in/josh-haywood"
+          class="flex w-full items-center space-x-5 bg-tertiary px-5 py-2.5 ring-primary ring-opacity-40 transition-colors hover:ring focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-3/5 xl:w-2/5"
+        >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 fill-primary">
               <path
                 d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
               />
             </svg>
 
-            <label class="cursor-pointer pt-1 text-sm font-semibold text-gray-400">Josh Haywood</label>
-          </button>
+          <span class="pt-1 text-sm font-semibold text-gray-400">Josh Haywood</span>
         </a>
 
-        <a href="mailto:joshhaywood025@gmail.com" class="w-full sm:w-3/5">
-          <button
-            class="flex w-full items-center space-x-5 bg-tertiary px-5 py-2.5 ring-primary ring-opacity-40 transition-colors hover:ring"
-          >
+        <a
+          href="mailto:joshhaywood025@gmail.com"
+          class="flex w-full items-center space-x-5 bg-tertiary px-5 py-2.5 ring-primary ring-opacity-40 transition-colors hover:ring focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-3/5"
+        >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -52,8 +51,7 @@
               />
             </svg>
 
-            <label class="cursor-pointer pt-1 text-sm font-semibold text-gray-400">joshhaywood025@gmail.com</label>
-          </button>
+          <span class="pt-1 text-sm font-semibold text-gray-400">joshhaywood025@gmail.com</span>
         </a>
       </div>
     </div>
@@ -65,9 +63,10 @@
       method="POST"
     >
       <div class="space-y-2">
-        <label class="text-sm font-bold text-white">Name</label>
+        <label for="contact-name" class="text-sm font-bold text-white">Name</label>
         <input
-          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus:outline-none"
+          id="contact-name"
+          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           type="text"
           name="name"
           placeholder="Name"
@@ -76,9 +75,10 @@
       </div>
 
       <div class="space-y-2">
-        <label class="text-sm font-bold text-white">Email</label>
+        <label for="contact-email" class="text-sm font-bold text-white">Email</label>
         <input
-          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus:outline-none"
+          id="contact-email"
+          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           type="email"
           name="email"
           placeholder="Email"
@@ -87,9 +87,10 @@
       </div>
 
       <div class="space-y-2">
-        <label class="text-sm font-bold text-white">Message</label>
+        <label for="contact-message" class="text-sm font-bold text-white">Message</label>
         <textarea
-          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus:outline-none"
+          id="contact-message"
+          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           name="message"
           placeholder="Message"
           rows="8"

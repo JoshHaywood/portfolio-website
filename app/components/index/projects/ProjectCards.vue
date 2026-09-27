@@ -56,8 +56,18 @@
 
               <!-- Project links -->
               <div class="flex flex-row items-center space-x-2">
-                <GithubLink v-if="project.repoLink" :link="project.repoLink" class="h-5 w-5" />
-                <DeployLink v-if="project.deployLink" :link="project.deployLink" class="h-5 w-5" />
+                <GithubLink
+                  v-if="project.repoLink"
+                  :link="project.repoLink"
+                  :label="`View ${project.heading} source on GitHub`"
+                  class="h-5 w-5"
+                />
+                <DeployLink
+                  v-if="project.deployLink"
+                  :link="project.deployLink"
+                  :label="`Open ${project.heading}`"
+                  class="h-5 w-5"
+                />
               </div>
             </div>
 
@@ -67,7 +77,13 @@
               @click="openProject(project.id)"
             >
               <h4 class="mt-5 text-xl font-semibold text-gray-200 transition-colors md:mt-8">
-                {{ project.heading }}
+                <button
+                  type="button"
+                  class="text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                  @click.stop="openProject(project.id)"
+                >
+                  {{ project.heading }}
+                </button>
               </h4>
 
               <p class="text-gray-400">{{ project.summary }}</p>

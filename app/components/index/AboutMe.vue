@@ -18,15 +18,23 @@
           <p class="text-gray-400">
             My work has ranged from
             <span
-              class="font-semibold text-primary hover:cursor-pointer hover:underline"
+              role="button"
+              tabindex="0"
+              class="font-semibold text-primary hover:cursor-pointer hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               @click="openProject('customer-portal')"
+              @keydown.enter="openProject('customer-portal')"
+              @keydown.space.prevent="openProject('customer-portal')"
             >
               customer-facing applications
             </span>
             to internal tools such as an automation-driven
             <span
-              class="font-semibold text-primary hover:cursor-pointer hover:underline"
+              role="button"
+              tabindex="0"
+              class="font-semibold text-primary hover:cursor-pointer hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               @click="openProject('sales-crm')"
+              @keydown.enter="openProject('sales-crm')"
+              @keydown.space.prevent="openProject('sales-crm')"
             >
               CRM system.
             </span>

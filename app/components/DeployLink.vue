@@ -1,6 +1,12 @@
 <template>
-  <a :href="link">
+  <a
+    :href="link"
+    :aria-label="label"
+    class="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+  >
     <svg
+      aria-hidden="true"
+      focusable="false"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -20,5 +26,6 @@
 <script setup lang="ts">
 defineProps<{
   link: string;
+  label: string;
 }>();
 </script>

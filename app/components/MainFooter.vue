@@ -5,14 +5,20 @@
         <div class="w-full max-md:space-y-10 md:flex md:space-x-10">
           <!-- Branding -->
           <div class="-ml-6 px-6 md:w-1/3">
-            <NuxtImg
-              :src="src"
-              alt="Logo"
-              class="h-auto w-[185px] hover:cursor-pointer"
-              @mouseenter="src = '/images/logo-hover.png'"
-              @mouseleave="src = '/images/logo.png'"
+            <button
+              type="button"
+              aria-label="Back to top"
+              class="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               @click="scrollToTop"
-            />
+            >
+              <NuxtImg
+                :src="src"
+                alt=""
+                class="h-auto w-[185px] hover:cursor-pointer"
+                @mouseenter="src = '/images/logo-hover.png'"
+                @mouseleave="src = '/images/logo.png'"
+              />
+            </button>
 
             <p class="mt-5 text-sm text-gray-400">Find me on LinkedIn and GitHub, or get in touch by email.</p>
 
@@ -44,14 +50,25 @@
                 <h4 class="font-semibold text-gray-300 max-sm:my-4 sm:mb-4">{{ column.heading }}</h4>
 
                 <!-- Links -->
-                <div
-                  v-for="(link, linkIndex) in column.links"
-                  :key="linkIndex"
-                  class="mb-3 cursor-pointer text-sm text-gray-400 hover:underline"
-                  @click="handleFooterLink(link)"
-                >
-                  {{ link.label }}
-                </div>
+                <template v-for="(link, linkIndex) in column.links" :key="linkIndex">
+                  <a
+                    v-if="link.target"
+                    :href="`#${link.target}`"
+                    class="mb-3 block cursor-pointer text-sm text-gray-400 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    @click.prevent="scrollTo(link.target)"
+                  >
+                    {{ link.label }}
+                  </a>
+
+                  <button
+                    v-else-if="link.projectId"
+                    type="button"
+                    class="mb-3 block cursor-pointer text-left text-sm text-gray-400 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                    @click="openProject(link.projectId)"
+                  >
+                    {{ link.label }}
+                  </button>
+                </template>
               </div>
             </div>
           </div>
@@ -156,17 +173,6 @@ const columns: { heading?: string; links: FooterLink[] }[] = [
     ],
   },
 ];
-
-const handleFooterLink = (link: FooterLink) => {
-  if (link.target) {
-    scrollTo(link.target);
-    return;
-  }
-
-  if (link.projectId) {
-    openProject(link.projectId);
-  }
-};
 
 // Scroll to top
 const scrollToTop = () => {

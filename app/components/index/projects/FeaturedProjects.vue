@@ -57,7 +57,13 @@
         class="mb-5 text-3xl font-semibold text-white transition-colors hover:text-primary"
         @click="openProject(project.id)"
       >
-        {{ project.heading }}
+        <button
+          type="button"
+          class="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          @click.stop="openProject(project.id)"
+        >
+          {{ project.heading }}
+        </button>
       </div>
       <p
         :class="project.featured.alignment === 'right' ? 'md:-ml-32 md:pl-10 md:pr-5' : 'md:-mr-32 md:pl-5 md:pr-10'"
@@ -95,7 +101,12 @@
           :class="project.featured.alignment === 'right' ? 'md:justify-end' : 'md:justify-start'"
           class="mt-5 flex flex-row space-x-2.5"
         >
-          <DeployLink v-if="project.deployLink" :link="project.deployLink" class="h-5 w-5" />
+          <DeployLink
+            v-if="project.deployLink"
+            :link="project.deployLink"
+            :label="`Open ${project.heading}`"
+            class="h-5 w-5"
+          />
         </div>
       </div>
     </div>
