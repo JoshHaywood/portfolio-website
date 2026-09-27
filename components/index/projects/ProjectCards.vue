@@ -112,7 +112,7 @@ const cardFields: { description: string; technologies: { item: string }[] }[] = 
   },
   {
     description:
-      'A supplier auction platform for energy meters, combining standard application workflows with real-time bidding, quote management and live status updates.',
+      'An auction platform where energy suppliers could submit competing quotes for customer energy contracts, with real-time bidding, quote management and live status updates.',
     technologies: [{ item: 'Vue 3' }, { item: 'AdonisJS' }, { item: 'Socket.IO' }],
   },
   {
