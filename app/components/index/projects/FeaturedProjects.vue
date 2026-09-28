@@ -66,10 +66,6 @@
               class="w-full rounded-lg bg-white object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.008] motion-reduce:transition-none"
             />
           </button>
-
-          <p v-if="project.id === 'energy-data-platform'" class="mt-3 text-xs leading-5 text-[#8d95a6]">
-            Downstream customer-facing application using consumption data processed by the platform.
-          </p>
         </div>
       </div>
     </article>

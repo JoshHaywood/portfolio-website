@@ -4,7 +4,7 @@
       <div>
         <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">About</p>
         <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-4xl">
-          How I work across systems
+          A broader view of my work
         </h2>
 
         <div class="mt-6 max-w-[650px] space-y-5 text-base leading-7 text-gray-400 sm:leading-8">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="mt-6 border-t border-white/[0.08] pt-4">
-          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">Technologies</p>
+          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">Technologies I work with</p>
           <p class="mt-2 max-w-[650px] font-mono text-[0.7rem] leading-5 text-[#8d95a6]">
             {{ technologies.join(' · ') }}
           </p>
