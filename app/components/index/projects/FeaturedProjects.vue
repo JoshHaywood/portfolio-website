@@ -6,9 +6,17 @@
       class="border-b border-white/[0.08] pb-16 last:border-b-0 last:pb-0"
     >
       <div
-        class="grid items-center gap-8 md:gap-10 lg:grid-cols-[minmax(330px,440px)_minmax(0,1fr)] lg:gap-14 xl:gap-16"
+        class="grid items-center gap-8 md:gap-10 lg:gap-14 xl:gap-16"
+        :class="
+          project.id === 'sales-administration-platform'
+            ? 'lg:grid-cols-[minmax(0,1fr)_minmax(330px,440px)]'
+            : 'lg:grid-cols-[minmax(330px,440px)_minmax(0,1fr)]'
+        "
       >
-        <div class="max-w-[620px]">
+        <div
+          class="max-w-[620px]"
+          :class="project.id === 'sales-administration-platform' ? 'lg:order-2 lg:justify-self-end' : ''"
+        >
           <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">
             {{ project.tagline }}
           </p>
@@ -21,23 +29,11 @@
             {{ project.summary }}
           </p>
 
-          <div class="mt-5 border-l border-primary/50 pl-4">
-            <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.12em] text-[#8d95a6]">
-              Contribution
-            </p>
-            <p class="mt-2 max-w-[500px] text-sm leading-6 text-gray-400">
-              {{ featuredContributions[project.id] }}
-            </p>
-          </div>
-
-          <ul
-            class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.72rem] text-[#8d95a6] sm:text-xs"
-          >
-            <li v-for="(technology, index) in project.technologies" :key="technology" class="flex items-center gap-3">
-              <span>{{ technology }}</span>
-              <span v-if="index < project.technologies.length - 1" aria-hidden="true" class="text-gray-700">·</span>
-            </li>
-          </ul>
+          <p class="mt-5 max-w-[520px] font-mono text-[0.72rem] leading-5 text-[#8d95a6] sm:text-xs">
+            <span class="font-sans font-semibold text-gray-300">{{ featuredRoles[project.id] }}</span>
+            <span aria-hidden="true" class="mx-2 text-gray-700">·</span>
+            {{ project.technologies.join(' · ') }}
+          </p>
 
           <button
             type="button"
@@ -54,7 +50,7 @@
           </button>
         </div>
 
-        <div>
+        <div :class="project.id === 'sales-administration-platform' ? 'lg:order-1' : ''">
           <button
             type="button"
             class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] transition-colors hover:border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
@@ -86,11 +82,9 @@ import { featuredProjects } from '~/data/projects';
 const { openProject } = useProjectSidebar();
 const projects = featuredProjects;
 
-const featuredContributions: Record<string, string> = {
-  'energy-data-platform':
-    'Joined relatively early and later became the sole developer, working across the Vue admin application, AdonisJS backend, external integrations and production data-processing flows.',
-  'sales-administration-platform':
-    'Set up the application and was its sole developer through the first usable MVP, building the core workflows and integrations before development became collaborative.',
+const featuredRoles: Record<string, string> = {
+  'energy-data-platform': 'Later became sole developer',
+  'sales-administration-platform': 'Built first usable MVP as sole developer',
 };
 
 const projectMediaAlt = (projectId: string, heading: string) =>
@@ -100,6 +94,6 @@ const projectMediaAlt = (projectId: string, heading: string) =>
 
 const projectMediaClass = (projectId: string) =>
   projectId === 'sales-administration-platform'
-    ? 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/8.75] sm:object-top'
+    ? 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/9] sm:object-top'
     : 'aspect-[4/3] sm:aspect-[16/10]';
 </script>

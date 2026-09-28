@@ -44,23 +44,23 @@
             <p class="mt-2 text-sm leading-6 text-gray-400">{{ capability.text }}</p>
           </div>
         </div>
+
+        <div class="mt-6 border-t border-white/[0.08] pt-6">
+          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">
+            Technologies
+          </p>
+
+          <ul class="mt-4 flex flex-wrap gap-2">
+            <li
+              v-for="technology in technologies"
+              :key="technology"
+              class="rounded-lg border border-white/[0.08] bg-tertiary px-2.5 py-1.5 font-mono text-[0.66rem] text-gray-400"
+            >
+              {{ technology }}
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-
-    <div class="mt-12 border-t border-white/[0.08] pt-8 sm:mt-14 sm:pt-9">
-      <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">
-        Technologies used across recent work
-      </p>
-
-      <ul class="mt-5 flex flex-wrap gap-2">
-        <li
-          v-for="technology in technologies"
-          :key="technology"
-          class="rounded-lg border border-white/[0.08] bg-tertiary px-3 py-2 font-mono text-[0.68rem] text-gray-400"
-        >
-          {{ technology }}
-        </li>
-      </ul>
     </div>
   </section>
 </template>
