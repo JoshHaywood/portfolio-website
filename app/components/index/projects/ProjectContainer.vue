@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="mb-4 font-mono text-xs font-medium uppercase tracking-[0.16em] text-primary sm:mb-5">Selected Work</p>
+    <h2 class="mb-7 text-2xl font-semibold tracking-[-0.02em] text-white sm:mb-8 sm:text-3xl">Selected Work</h2>
 
     <FeaturedProjects />
 

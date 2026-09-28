@@ -8,7 +8,7 @@
       </div>
     </section>
 
-    <div class="mx-auto max-w-[1100px] space-y-24 px-5 py-24 sm:space-y-28 sm:py-28 md:px-10 md:py-32 xl:px-0">
+    <div class="mx-auto max-w-[1100px] space-y-24 px-5 pb-14 pt-24 sm:space-y-28 sm:pb-16 sm:pt-28 md:px-10 md:pb-20 md:pt-32 xl:px-0">
       <AboutMe id="about" />
       <ContactForm id="contact" />
     </div>

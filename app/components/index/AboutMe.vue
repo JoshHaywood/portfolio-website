@@ -2,7 +2,7 @@
   <section>
     <div class="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_210px_minmax(280px,0.75fr)] lg:items-start lg:gap-12 xl:gap-14">
       <div>
-        <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">Engineering context</p>
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">About</p>
         <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-4xl">
           How I work across systems
         </h2>
@@ -22,8 +22,8 @@
           </p>
         </div>
 
-        <div class="mt-7 border-t border-white/[0.08] pt-5">
-          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">Recent stack</p>
+        <div class="mt-6 border-t border-white/[0.08] pt-4">
+          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">Technologies</p>
           <p class="mt-2 max-w-[650px] font-mono text-[0.7rem] leading-5 text-[#8d95a6]">
             {{ technologies.join(' · ') }}
           </p>
