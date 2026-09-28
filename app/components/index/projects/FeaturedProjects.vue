@@ -37,20 +37,25 @@
           </button>
         </div>
 
-        <button
-          type="button"
-          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] transition-colors hover:border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
-          :aria-label="`Read ${project.heading} case study`"
-          @click="openProject(project.id)"
-        >
-          <NuxtImg
-            :src="`/images/${project.projectImage}`"
-            :alt="`${project.heading} application screenshot`"
-            width="1200"
-            loading="lazy"
-            class="aspect-[4/3] w-full rounded-lg bg-white object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.008] motion-reduce:transition-none sm:aspect-[16/10]"
-          />
-        </button>
+        <div>
+          <button
+            type="button"
+            class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] transition-colors hover:border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
+            :aria-label="`Read ${project.heading} case study`"
+            @click="openProject(project.id)"
+          >
+            <NuxtImg
+              :src="`/images/${project.projectImage}`"
+              alt="Customer-facing application using consumption data processed by the Energy Data Platform"
+              width="1200"
+              loading="lazy"
+              class="aspect-[4/3] w-full rounded-lg bg-white object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.008] motion-reduce:transition-none sm:aspect-[16/9]"
+            />
+          </button>
+          <p class="mt-3 text-xs leading-5 text-[#8d95a6]">
+            Downstream customer-facing application using consumption data processed by the platform.
+          </p>
+        </div>
       </div>
 
       <!-- Sales Administration: wide dashboard evidence after context -->
