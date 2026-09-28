@@ -1,16 +1,13 @@
 <template>
   <section class="border-t border-white/[0.08] pt-12 sm:pt-14">
-    <div class="mb-8 sm:flex sm:items-end sm:justify-between">
-      <div>
-        <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">More professional work</p>
-        <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl">Additional production systems</h3>
-      </div>
+    <div class="mb-8 flex items-end justify-between gap-6">
+      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl">More work</h3>
 
       <a
         href="https://github.com/JoshHaywood?tab=repositories"
         target="_blank"
         rel="noopener noreferrer"
-        class="mt-4 inline-flex text-sm font-medium text-gray-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:mt-0"
+        class="inline-flex shrink-0 text-sm font-medium text-gray-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
       >
         GitHub ↗
       </a>

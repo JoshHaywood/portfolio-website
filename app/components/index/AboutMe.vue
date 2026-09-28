@@ -21,6 +21,13 @@
             across different parts of a system.
           </p>
         </div>
+
+        <div class="mt-7 border-t border-white/[0.08] pt-5">
+          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">Recent stack</p>
+          <p class="mt-2 max-w-[650px] font-mono text-[0.7rem] leading-5 text-[#8d95a6]">
+            {{ technologies.join(' · ') }}
+          </p>
+        </div>
       </div>
 
       <div class="w-[160px] sm:w-[180px] lg:mt-10 lg:w-full">
@@ -43,22 +50,6 @@
             <h3 class="text-sm font-semibold text-white sm:text-base">{{ capability.heading }}</h3>
             <p class="mt-2 text-sm leading-6 text-gray-400">{{ capability.text }}</p>
           </div>
-        </div>
-
-        <div class="mt-6 border-t border-white/[0.08] pt-6">
-          <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">
-            Technologies
-          </p>
-
-          <ul class="mt-4 flex flex-wrap gap-2">
-            <li
-              v-for="technology in technologies"
-              :key="technology"
-              class="rounded-lg border border-white/[0.08] bg-tertiary px-2.5 py-1.5 font-mono text-[0.66rem] text-gray-400"
-            >
-              {{ technology }}
-            </li>
-          </ul>
         </div>
       </div>
     </div>

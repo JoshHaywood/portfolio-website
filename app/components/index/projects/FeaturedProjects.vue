@@ -6,7 +6,7 @@
       class="border-b border-white/[0.08] pb-16 last:border-b-0 last:pb-0"
     >
       <div
-        class="grid items-center gap-8 md:gap-10 lg:gap-14 xl:gap-16"
+        class="grid items-start gap-8 md:gap-10 lg:gap-14 xl:gap-16"
         :class="
           project.id === 'sales-administration-platform'
             ? 'lg:grid-cols-[minmax(0,1fr)_minmax(330px,440px)]'
@@ -29,9 +29,9 @@
             {{ project.summary }}
           </p>
 
-          <p class="mt-5 max-w-[520px] font-mono text-[0.72rem] leading-5 text-[#8d95a6] sm:text-xs">
-            <span class="font-sans font-semibold text-gray-300">{{ featuredRoles[project.id] }}</span>
-            <span aria-hidden="true" class="mx-2 text-gray-700">·</span>
+          <p class="mt-5 max-w-[560px] font-mono text-[0.72rem] leading-5 text-[#8d95a6] sm:text-xs">
+            {{ featuredEvidence[project.id] }}
+            <span aria-hidden="true" class="mx-2 text-gray-700">—</span>
             {{ project.technologies.join(' · ') }}
           </p>
 
@@ -82,9 +82,9 @@ import { featuredProjects } from '~/data/projects';
 const { openProject } = useProjectSidebar();
 const projects = featuredProjects;
 
-const featuredRoles: Record<string, string> = {
-  'energy-data-platform': 'Later became sole developer',
-  'sales-administration-platform': 'Built first usable MVP as sole developer',
+const featuredEvidence: Record<string, string> = {
+  'energy-data-platform': 'External integrations · consumption processing · production support',
+  'sales-administration-platform': 'Application setup · post-sale workflows · system integrations',
 };
 
 const projectMediaAlt = (projectId: string, heading: string) =>

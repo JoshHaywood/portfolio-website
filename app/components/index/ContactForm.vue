@@ -7,11 +7,6 @@
         Get in touch
       </h2>
 
-      <p class="mt-5 max-w-[680px] text-base leading-7 text-gray-400">
-        If you’d like to ask about my work, talk about software engineering, or get in touch about an opportunity,
-        email is the easiest way to reach me.
-      </p>
-
       <div class="mt-8 flex flex-wrap items-center gap-3">
         <a
           href="mailto:joshhaywood025@gmail.com"
