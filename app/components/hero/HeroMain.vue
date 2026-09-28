@@ -22,7 +22,7 @@
         <div class="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3.5">
           <button
             type="button"
-            class="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-secondary transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-secondary transition-[background-color,transform] hover:bg-primary/90 active:translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
             @click="scrollTo('projects')"
           >
             View selected work
@@ -32,7 +32,7 @@
             href="/documents/josh-haywood-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.025] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/25 hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.025] px-5 py-2.5 text-sm font-semibold text-white transition-[border-color,background-color,transform] hover:border-white/25 hover:bg-white/[0.05] active:translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
             View CV
           </a>

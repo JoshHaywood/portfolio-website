@@ -17,7 +17,7 @@
         href="/documents/josh-haywood-cv.pdf"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center rounded-lg border border-white/15 bg-white/[0.035] px-4 py-2 text-sm font-semibold text-white transition-colors hover:border-primary/60 hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        class="inline-flex items-center rounded-lg border border-white/15 bg-white/[0.035] px-4 py-2 text-sm font-semibold text-white transition-[border-color,background-color,transform] hover:border-primary/60 hover:bg-primary/10 active:translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
       >
         View CV
       </a>
@@ -45,7 +45,7 @@
           href="/documents/josh-haywood-cv.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition-colors hover:border-primary/60 hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
+          class="mt-5 inline-flex w-full items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition-[border-color,background-color,transform] hover:border-primary/60 hover:bg-primary/10 active:translate-y-px focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary"
           @click="$emit('close')"
         >
           View CV

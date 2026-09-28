@@ -21,13 +21,19 @@
         v-for="project in projects"
         :key="project.id"
         type="button"
-        class="group grid w-full gap-2 py-5 text-left transition-colors hover:bg-white/[0.015] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary sm:grid-cols-[minmax(180px,0.75fr)_minmax(280px,1.4fr)_auto] sm:items-center sm:gap-6 sm:px-2"
+        class="group relative grid w-full gap-2 py-5 pr-8 text-left transition-colors hover:bg-white/[0.02] active:bg-white/[0.035] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary sm:grid-cols-[minmax(180px,0.75fr)_minmax(280px,1.4fr)_minmax(190px,auto)_20px] sm:items-center sm:gap-6 sm:px-2 sm:pr-2"
         @click="openProject(project.id)"
       >
         <span class="font-semibold text-white transition-colors group-hover:text-primary">{{ project.heading }}</span>
         <span class="text-sm leading-6 text-gray-400">{{ project.tagline }}</span>
-        <span class="font-mono text-[0.68rem] text-[#7f8798] sm:text-right">
+        <span class="font-mono text-[0.68rem] text-[#8d95a6] sm:text-right">
           {{ project.technologies.join(' · ') }}
+        </span>
+        <span
+          aria-hidden="true"
+          class="absolute right-1 top-5 text-sm text-[#8d95a6] transition-transform duration-200 group-hover:translate-x-1 group-hover:text-white motion-reduce:transition-none sm:static sm:inline"
+        >
+          →
         </span>
       </button>
     </div>

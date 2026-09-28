@@ -13,7 +13,7 @@
       <ContactForm id="contact" />
     </div>
 
-    <Transition>
+    <Transition name="project-detail">
       <ProjectSidebar v-show="isOpen" />
     </Transition>
   </div>
@@ -52,3 +52,22 @@ const { isOpen } = useProjectSidebar();
 </script>
 
 
+
+<style scoped>
+.project-detail-enter-active,
+.project-detail-leave-active {
+  transition: opacity 160ms ease;
+}
+
+.project-detail-enter-from,
+.project-detail-leave-to {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-detail-enter-active,
+  .project-detail-leave-active {
+    transition: none;
+  }
+}
+</style>

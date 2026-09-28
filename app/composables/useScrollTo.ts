@@ -9,7 +9,7 @@ export function useScrollTo() {
     scrollTo(id: string) {
       const element = document.getElementById(id);
       if (element) {
-        const targetOffset = isMobile.value ? 80 : 120;
+        const targetOffset = isMobile.value ? 72 : 88;
 
         window.scrollTo({
           top: element.offsetTop - targetOffset,

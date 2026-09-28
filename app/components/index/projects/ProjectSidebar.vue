@@ -1,16 +1,11 @@
 <template>
   <div v-if="activeProject" class="fixed inset-0 z-[60]">
-    <button
-      type="button"
-      aria-label="Close project details"
-      class="absolute inset-0 h-full w-full bg-black/70 backdrop-blur-sm"
-      @click="closeProject"
-    />
+    <div aria-hidden="true" class="absolute inset-0 bg-black/70 backdrop-blur-sm" @click="closeProject" />
 
     <article
       ref="dialogRef"
       tabindex="-1"
-      class="absolute inset-0 overflow-y-auto bg-secondary outline-none md:inset-5 md:rounded-2xl md:border md:border-white/10 md:shadow-[0_30px_100px_rgba(0,0,0,0.45)] lg:inset-8 xl:left-1/2 xl:right-auto xl:w-[min(1320px,calc(100vw-5rem))] xl:-translate-x-1/2"
+      class="absolute inset-0 overflow-y-auto overscroll-contain bg-secondary outline-none md:inset-5 md:rounded-2xl md:border md:border-white/10 md:shadow-[0_30px_100px_rgba(0,0,0,0.45)] lg:inset-8 xl:left-1/2 xl:right-auto xl:w-[min(1320px,calc(100vw-5rem))] xl:-translate-x-1/2"
       role="dialog"
       aria-modal="true"
       :aria-labelledby="`project-${activeProject.id}-title`"
@@ -155,9 +150,46 @@ const projectMediaClass = computed(() =>
     : 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/9]',
 );
 
+const focusableSelector =
+  'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 const handleKeydown = (event: KeyboardEvent) => {
-  if (event.key === 'Escape' && isOpen.value) {
+  if (!isOpen.value) {
+    return;
+  }
+
+  if (event.key === 'Escape') {
     closeProject();
+    return;
+  }
+
+  if (event.key !== 'Tab' || !dialogRef.value) {
+    return;
+  }
+
+  const focusable = Array.from(dialogRef.value.querySelectorAll<HTMLElement>(focusableSelector)).filter(
+    (element) => !element.hasAttribute('disabled') && element.offsetParent !== null,
+  );
+
+  if (!focusable.length) {
+    event.preventDefault();
+    dialogRef.value.focus();
+    return;
+  }
+
+  const first = focusable.at(0);
+  const last = focusable.at(-1);
+
+  if (!first || !last) {
+    return;
+  }
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
   }
 };
 
@@ -175,6 +207,7 @@ watch(isOpen, async (isProjectOpen) => {
   if (isProjectOpen) {
     previouslyFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     await nextTick();
+    dialogRef.value?.scrollTo({ top: 0, behavior: 'auto' });
     dialogRef.value?.focus();
   } else {
     previouslyFocusedElement?.focus();

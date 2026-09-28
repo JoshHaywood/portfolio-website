@@ -61,11 +61,13 @@ onMounted(() => {
   updateHeaderState();
   window.addEventListener('resize', updateSidebarState);
   window.addEventListener('scroll', updateHeaderState, { passive: true });
+  window.addEventListener('keydown', handleKeydown);
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', updateSidebarState);
   window.removeEventListener('scroll', updateHeaderState);
+  window.removeEventListener('keydown', handleKeydown);
   document.body.style.overflow = '';
 });
 
@@ -75,6 +77,12 @@ watch(sidebar, (isOpen) => {
 
 const updateHeaderState = () => {
   isScrolled.value = window.scrollY > 16;
+};
+
+const handleKeydown = (event: KeyboardEvent) => {
+  if (event.key === 'Escape' && sidebar.value) {
+    sidebar.value = false;
+  }
 };
 
 const scrollToTop = () => {

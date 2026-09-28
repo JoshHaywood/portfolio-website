@@ -4,7 +4,7 @@ export const projectsById: Record<ProjectId, Project> = {
   'customer-portal': {
     id: 'customer-portal',
     heading: 'Customer Portal',
-    tagline: 'Elevated Energy Management',
+    tagline: 'Customer Self-Service & Account Workflows',
     summary:
       'A customer self-service portal for managing energy meters, documents and account information, with consumption insights and integrations with internal sales and support systems.',
     technologies: ['Vue 3', 'AdonisJS', 'Socket.IO'],
@@ -44,7 +44,7 @@ export const projectsById: Record<ProjectId, Project> = {
   'auction-platform': {
     id: 'auction-platform',
     heading: 'Auction Platform',
-    tagline: 'Adaptive Auction Platform',
+    tagline: 'Real-Time Supplier Bidding',
     summary:
       'An auction platform where energy suppliers could submit competing quotes for customer energy contracts, with real-time bidding, quote management and live status updates.',
     technologies: ['Vue 3', 'AdonisJS', 'Socket.IO'],
@@ -113,7 +113,7 @@ export const projectsById: Record<ProjectId, Project> = {
     structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
     role: 'I set up the application and was its sole developer through the first usable MVP. I built the authentication, routing, dashboard, task and administration workflows, event feed and API integration needed to bring existing sales records into the application. As the product grew, I added functionality around meter management, commissions, complaints, customer and supplier communications, comments and tracking changes of energy supplier. I integrated the application with the existing shared backend and data systems, and I continued extending and supporting it as development became collaborative.',
     featured: {
-      image: 'astra-featured-thumbnail.jpg',
+      image: 'sales-admin-thumbnail.PNG',
       alignment: 'left',
     },
   },

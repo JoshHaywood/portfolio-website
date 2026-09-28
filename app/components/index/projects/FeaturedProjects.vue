@@ -30,16 +30,16 @@
 
           <button
             type="button"
-            class="mt-6 inline-flex border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            class="group mt-6 inline-flex items-center gap-1.5 border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
             @click="openProject(project.id)"
           >
-            Read case study →
+            Read case study <span aria-hidden="true" class="inline-block transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none">→</span>
           </button>
         </div>
 
         <button
           type="button"
-          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
+          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] transition-colors hover:border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
           :aria-label="`Read ${project.heading} case study`"
           @click="openProject(project.id)"
         >
@@ -78,17 +78,17 @@
 
             <button
               type="button"
-              class="mt-6 inline-flex border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              class="group mt-6 inline-flex items-center gap-1.5 border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
               @click="openProject(project.id)"
             >
-              Read case study →
+              Read case study <span aria-hidden="true" class="inline-block transition-transform duration-200 group-hover:translate-x-1 motion-reduce:transition-none">→</span>
             </button>
           </div>
         </div>
 
         <button
           type="button"
-          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
+          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] transition-colors hover:border-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
           :aria-label="`Read ${project.heading} case study`"
           @click="openProject(project.id)"
         >
