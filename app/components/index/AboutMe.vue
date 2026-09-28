@@ -1,93 +1,85 @@
 <template>
-  <div>
-    <!-- Heading -->
-    <SectionHeading heading="About Me" />
+  <section>
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_210px_minmax(280px,0.75fr)] lg:items-start lg:gap-12 xl:gap-14">
+      <div>
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">Engineering context</p>
+        <h2 class="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-4xl">
+          How I work across systems
+        </h2>
 
-    <!-- Section -->
-    <div class="max-mb:pb-12 flex flex-col items-center justify-between max-lg:space-x-10 md:flex-row md:items-start">
-      <div class="flex flex-col space-y-5 md:w-2/3">
-        <!-- Background information -->
-        <div class="flex w-full flex-col space-y-4 leading-7">
-          <p class="text-gray-400">
+        <div class="mt-6 max-w-[650px] space-y-5 text-base leading-7 text-gray-400 sm:leading-8">
+          <p>
             Over the last few years, I’ve progressed from contributing individual features to taking responsibility for
             larger areas of delivery and ongoing systems. I enjoy taking work from a real requirement through to a
             shipped feature: understanding what people need, working through the technical problem and writing the code
             to deliver it.
           </p>
 
-          <p class="text-gray-400">
-            My work has ranged from
-            <span
-              role="button"
-              tabindex="0"
-              class="font-semibold text-primary hover:cursor-pointer hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              @click="openProject('customer-portal')"
-              @keydown.enter="openProject('customer-portal')"
-              @keydown.space.prevent="openProject('customer-portal')"
-            >
-              customer-facing applications
-            </span>
-            to internal tools such as an automation-driven
-            <span
-              role="button"
-              tabindex="0"
-              class="font-semibold text-primary hover:cursor-pointer hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-              @click="openProject('sales-crm')"
-              @keydown.enter="openProject('sales-crm')"
-              @keydown.space.prevent="openProject('sales-crm')"
-            >
-              CRM system.
-            </span>
-            That has included working directly with stakeholders, picking up unfamiliar technologies and moving across
-            different parts of a system.
+          <p>
+            My work has ranged from customer-facing applications to internal tools such as an automation-driven CRM
+            system. That has included working directly with stakeholders, picking up unfamiliar technologies and moving
+            across different parts of a system.
           </p>
         </div>
+      </div>
 
-        <!-- Technologies list -->
-        <div class="space-y-5">
-          <div class="font-normal text-gray-400">Technologies I have been using recently:</div>
+      <div class="w-[160px] sm:w-[180px] lg:mt-10 lg:w-full">
+        <div class="overflow-hidden rounded-xl border border-white/10 bg-tertiary p-1.5">
+          <NuxtImg
+            src="/images/portrait.webp"
+            alt="Josh Haywood"
+            width="420"
+            loading="lazy"
+            class="aspect-[4/5] w-full rounded-lg object-cover object-center"
+          />
+        </div>
+      </div>
 
-          <div class="grid grid-cols-1 bg-tertiary px-5 pb-5 pt-1 xs:grid-cols-3">
-            <ul v-for="(technology, index) in technologies" :key="index">
-              <li class="mb-1 mt-5 flex flex-row space-x-2.5">
-                <div class="mt-[0.175rem] inline-block overflow-hidden">
-                  <div class="h-2 w-2 origin-top-left rotate-45 transform bg-primary"></div>
-                </div>
+      <div class="lg:mt-10">
+        <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#7f8798]">What that looks like</p>
 
-                <span class="text-sm font-normal text-gray-400">{{ technology }}</span>
-              </li>
-            </ul>
+        <div class="mt-5 divide-y divide-white/[0.08] border-y border-white/[0.08] lg:border-y-0">
+          <div v-for="capability in capabilities" :key="capability.heading" class="py-5 first:pt-0 lg:first:pt-0">
+            <h3 class="text-sm font-semibold text-white sm:text-base">{{ capability.heading }}</h3>
+            <p class="mt-2 text-sm leading-6 text-gray-400">{{ capability.text }}</p>
           </div>
         </div>
       </div>
-
-      <!-- Developer picture-->
-      <div class="relative top-14 w-[275px] rounded border-2 border-primary max-sm:right-3 sm:w-[300px] md:top-3">
-        <NuxtImg
-          v-motion
-          :initial="{ x: 12, y: 12 }"
-          :visible-once="{
-            x: 0,
-            y: 0,
-            transition: {
-              delay: 400,
-              type: 'keyframes',
-              ease: 'easeInOut',
-            },
-          }"
-          src="/images/portrait.webp"
-          alt="Developer"
-          width="300"
-          loading="lazy"
-          class="relative bottom-3 right-3 w-full rounded transition-all hover:bottom-0 hover:right-0"
-        />
-      </div>
     </div>
-  </div>
+
+    <div class="mt-12 border-t border-white/[0.08] pt-8 sm:mt-14 sm:pt-9">
+      <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-primary">
+        Technologies used across recent work
+      </p>
+
+      <ul class="mt-5 flex flex-wrap gap-2">
+        <li
+          v-for="technology in technologies"
+          :key="technology"
+          class="rounded-lg border border-white/[0.08] bg-tertiary px-3 py-2 font-mono text-[0.68rem] text-gray-400"
+        >
+          {{ technology }}
+        </li>
+      </ul>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-const { openProject } = useProjectSidebar();
+const capabilities: { heading: string; text: string }[] = [
+  {
+    heading: 'Software Development',
+    text: 'Building and maintaining application features with an emphasis on readable code, sensible structure and behaviour that fits the wider system.',
+  },
+  {
+    heading: 'Problem Solving & Systems',
+    text: 'Analysing technical problems, understanding how connected parts of a system behave and choosing practical solutions at the right level.',
+  },
+  {
+    heading: 'Delivery & Collaboration',
+    text: 'Working with developers and stakeholders to clarify requirements, communicate trade-offs and keep implementation aligned with what the work actually needs.',
+  },
+];
 
 const technologies: string[] = [
   'TypeScript',

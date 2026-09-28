@@ -1,31 +1,21 @@
 <template>
-  <header>
-    <div
-      v-show="sidebar"
-      class="fixed top-0 z-40 h-screen w-screen bg-black opacity-70"
-      @click="sidebar = false"
-    ></div>
-
-    <Transition name="slide">
-      <nav
-        v-show="showHeader"
-        :class="sidebar ? 'bg-tertiary' : 'bg-transparent'"
-        class="fixed top-0 z-40 flex w-full items-center justify-between p-3 backdrop-blur transition-transform motion-reduce:transition-none lg:px-10"
-      >
+  <header class="fixed inset-x-0 top-0 z-50">
+    <nav
+      :class="
+        isScrolled || sidebar
+          ? 'border-white/10 bg-secondary/95 shadow-[0_10px_35px_rgba(0,0,0,0.18)]'
+          : 'border-transparent bg-secondary/70'
+      "
+      class="border-b backdrop-blur-xl transition-colors duration-200 motion-reduce:transition-none"
+    >
+      <div class="mx-auto flex h-16 max-w-[1100px] items-center justify-between px-5 md:h-[72px] md:px-10 xl:px-0">
         <button
           type="button"
           aria-label="Back to top"
-          class="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          class="group inline-flex items-baseline text-sm font-bold uppercase tracking-[0.16em] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:text-base"
           @click="scrollToTop"
         >
-          <NuxtImg
-            v-motion-fade-visible-once
-            :src="src"
-            alt=""
-            class="h-auto w-[200px] px-2 pr-0 hover:cursor-pointer sm:w-[250px] sm:pr-2"
-            @mouseenter="src = '/images/logo-hover.png'"
-            @mouseleave="src = '/images/logo.png'"
-          />
+          Josh<span class="text-primary transition-colors group-hover:text-white">.</span>
         </button>
 
         <button
@@ -33,103 +23,70 @@
           :aria-expanded="sidebar"
           aria-controls="mobile-navigation"
           :aria-label="sidebar ? 'Close navigation' : 'Open navigation'"
-          class="absolute right-5 block h-5 w-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:hidden"
+          class="relative flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:hidden"
           @click="sidebar = !sidebar"
         >
-          <div
-            :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 rotate-45' : 'absolute top-0'"
-            class="h-0.5 w-6 bg-white transition-transform"
-          />
-          <div
-            :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 opacity-0' : 'absolute top-1/2 -translate-y-1/2'"
-            class="h-0.5 w-6 bg-white transition-opacity"
-          />
-          <div
-            :class="sidebar ? 'absolute top-1/2 -translate-y-1/2 -rotate-45' : 'absolute bottom-0'"
-            class="h-0.5 w-6 bg-white transition-transform"
-          />
+          <span class="sr-only">{{ sidebar ? 'Close navigation' : 'Open navigation' }}</span>
+          <div class="relative h-4 w-5">
+            <span
+              :class="sidebar ? 'top-1.5 rotate-45' : 'top-0'"
+              class="absolute left-0 h-px w-5 bg-white transition-all duration-200 motion-reduce:transition-none"
+            />
+            <span
+              :class="sidebar ? 'opacity-0' : 'opacity-100'"
+              class="absolute left-0 top-1.5 h-px w-5 bg-white transition-opacity duration-200 motion-reduce:transition-none"
+            />
+            <span
+              :class="sidebar ? 'top-1.5 -rotate-45' : 'top-3'"
+              class="absolute left-0 h-px w-5 bg-white transition-all duration-200 motion-reduce:transition-none"
+            />
+          </div>
         </button>
 
         <NavLinks :sidebar="sidebar" @close="sidebar = false" />
-      </nav>
-    </Transition>
+      </div>
+    </nav>
   </header>
 </template>
 
 <script setup lang="ts">
-const src = ref<string>('/images/logo.png');
+import { usePreferredReducedMotion } from '@vueuse/core';
+
+const preferredMotion = usePreferredReducedMotion();
 
 const sidebar = ref<boolean>(false);
-const showHeader = ref<boolean>(true);
-
-const lastScrollY = ref<number>(0);
+const isScrolled = ref<boolean>(false);
 
 onMounted(() => {
+  updateHeaderState();
   window.addEventListener('resize', updateSidebarState);
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', updateHeaderState, { passive: true });
 });
 
 onUnmounted(() => {
   window.removeEventListener('resize', updateSidebarState);
-  window.removeEventListener('scroll', handleScroll);
+  window.removeEventListener('scroll', updateHeaderState);
+  document.body.style.overflow = '';
 });
 
-// Prevent scroll when sidebar is open
-watch(sidebar, (newValue) => {
-  document.body.style.overflow = newValue ? 'hidden' : 'auto';
-
-  if (newValue) {
-    nextTick(() => {
-      showHeader.value = true;
-    });
-  }
+watch(sidebar, (isOpen) => {
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
-// Handle scroll behaviours
-const handleScroll = () => {
-  const newY = window.scrollY;
-
-  // Show header if sidebar is open
-  if (sidebar.value) {
-    showHeader.value = true;
-    return;
-  }
-
-  // Show header if scrolling up
-  if (newY < lastScrollY.value) {
-    showHeader.value = true;
-    // Hide header if scrolling down
-  } else if (newY > lastScrollY.value) {
-    showHeader.value = false;
-  }
-
-  lastScrollY.value = newY;
+const updateHeaderState = () => {
+  isScrolled.value = window.scrollY > 16;
 };
 
-// Scroll to top
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  window.scrollTo({
+    top: 0,
+    behavior: preferredMotion.value === 'reduce' ? 'auto' : 'smooth',
+  });
 };
 
-// Hide sidebar on larger screens
 const updateSidebarState = () => {
-  if (window.innerWidth > 640) {
+  if (window.innerWidth >= 768) {
     sidebar.value = false;
   }
 };
 </script>
-
-<style scoped>
-.slide-enter-active {
-  transform: translateY(0);
-}
-
-.slide-leave-active {
-  transform: translateY(-100%);
-}
-
-.slide-enter-from,
-.slide-leave-to {
-  transform: translateY(-100%);
-}
-</style>

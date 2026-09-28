@@ -1,9 +1,10 @@
 <template>
   <div>
-    <SectionHeading heading="Projects" />
+    <p class="mb-7 font-mono text-xs font-medium uppercase tracking-[0.16em] text-primary sm:mb-8">Selected Work</p>
 
-    <div class="mt-12 space-y-10 lg:space-y-24">
-      <FeaturedProjects />
+    <FeaturedProjects />
+
+    <div class="mt-20 lg:mt-28">
       <ProjectCards />
     </div>
   </div>

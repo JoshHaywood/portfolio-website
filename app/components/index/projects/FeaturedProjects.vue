@@ -1,131 +1,113 @@
 <template>
-  <div
-    v-for="project in cardsData"
-    :key="project.id"
-    :class="
-      project.featured.alignment === 'right'
-        ? `bg-[url('/images/industrion-thumbnail.png')] md:flex-row-reverse`
-        : `bg-[url('/images/astra-featured-thumbnail.jpg')]`
-    "
-    class="group cursor-pointer bg-center max-md:shadow-[inset_0_2000px_0_0_rgba(76,107,193,0.3)] md:flex md:bg-none"
-  >
-    <!-- Image -->
-    <div
-      v-motion
-      :initial="{
-        opacity: 0,
-        y: isMobile ? 0 : 20,
-      }"
-      :visible-once="{
-        opacity: 1,
-        y: 0,
-        transition: {
-          type: 'keyframes',
-          ease: 'easeInOut',
-        },
-      }"
-      :class="project.featured.alignment === 'right' ? 'order-2' : 'order-1'"
-      class="hidden rounded md:relative md:block md:w-3/5 md:overflow-hidden"
-      @click="openProject(project.id)"
+  <div class="space-y-20 lg:space-y-28">
+    <article
+      v-for="project in projects"
+      :key="project.id"
+      class="border-b border-white/[0.08] pb-20 last:border-b-0 last:pb-0"
     >
-      <div class="transition group-hover:scale-105">
-        <NuxtImg
-          :src="`/images/${project.featured.image}`"
-          :alt="`${project.tagline} thumbnail`"
-          width="650"
-          loading="lazy"
-          class="h-auto min-w-[650px]"
-        />
-      </div>
-    </div>
-
-    <!-- Project information -->
-    <div
-      v-motion
-      :initial="{
-        opacity: 0,
-        x: isMobile ? 0 : project.featured.alignment === 'right' ? 20 : -20,
-      }"
-      :visible-once="{
-        opacity: 1,
-        x: 0,
-        transition: {
-          delay: 400,
-          type: 'keyframes',
-          ease: 'easeInOut',
-        },
-      }"
-      :class="project.featured.alignment === 'right' ? 'md:text-right' : 'md:text-left'"
-      class="p-5 max-md:backdrop-brightness-[0.3] sm:px-5 sm:py-16 md:z-10 md:w-2/5 md:px-0 md:py-10"
-    >
-      <div class="font-normal text-primary" @click="openProject(project.id)">{{ project.tagline }}</div>
+      <!-- Energy Data Platform: anchored context + evidence split -->
       <div
-        class="mb-5 text-3xl font-semibold text-white transition-colors hover:text-primary"
-        @click="openProject(project.id)"
+        v-if="project.id === 'energy-data-platform'"
+        class="grid items-center gap-8 md:gap-10 lg:grid-cols-[minmax(320px,430px)_minmax(0,1fr)] lg:gap-16 xl:gap-20"
       >
+        <div class="max-w-[620px]">
+          <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">{{ project.tagline }}</p>
+
+          <h3 class="mt-3 text-3xl font-semibold leading-tight tracking-[-0.025em] text-white sm:text-4xl">
+            {{ project.heading }}
+          </h3>
+
+          <p class="mt-5 max-w-[460px] text-sm leading-6 text-gray-300 sm:text-base sm:leading-7">
+            {{ project.summary }}
+          </p>
+
+          <ul class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.72rem] text-[#7f8798] sm:text-xs">
+            <li v-for="(technology, index) in project.technologies" :key="technology" class="flex items-center gap-3">
+              <span>{{ technology }}</span>
+              <span v-if="index < project.technologies.length - 1" aria-hidden="true" class="text-gray-700">·</span>
+            </li>
+          </ul>
+
+          <button
+            type="button"
+            class="mt-6 inline-flex border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+            @click="openProject(project.id)"
+          >
+            Read case study →
+          </button>
+        </div>
+
         <button
           type="button"
-          class="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          @click.stop="openProject(project.id)"
-        >
-          {{ project.heading }}
-        </button>
-      </div>
-      <p
-        :class="project.featured.alignment === 'right' ? 'md:-ml-32 md:pl-10 md:pr-5' : 'md:-mr-32 md:pl-5 md:pr-10'"
-        class="bg-none pb-5 text-gray-300 sm:pt-5 md:rounded md:bg-tertiary md:shadow-md"
-        @click="openProject(project.id)"
-      >
-        {{ project.summary }}
-      </p>
-
-      <div
-        v-motion
-        :initial="{
-          opacity: 0,
-        }"
-        :visible-once="{
-          opacity: 1,
-          transition: {
-            delay: isMobile ? 0 : 600,
-            type: 'keyframes',
-            ease: 'easeInOut',
-          },
-        }"
-      >
-        <!-- Technologies -->
-        <ul
-          :class="project.featured.alignment === 'right' ? 'md:justify-end' : 'md:justify-none'"
-          class="flex flex-row flex-wrap gap-x-2.5 text-gray-500 sm:gap-x-0 sm:space-x-5 md:mt-5"
+          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
+          :aria-label="`Read ${project.heading} case study`"
           @click="openProject(project.id)"
         >
-          <li v-for="technology in project.technologies" :key="technology">{{ technology }}</li>
-        </ul>
-
-        <!-- Media Icons -->
-        <div
-          :class="project.featured.alignment === 'right' ? 'md:justify-end' : 'md:justify-start'"
-          class="mt-5 flex flex-row space-x-2.5"
-        >
-          <DeployLink
-            v-if="project.deployLink"
-            :link="project.deployLink"
-            :label="`Open ${project.heading}`"
-            class="h-5 w-5"
+          <NuxtImg
+            :src="`/images/${project.projectImage}`"
+            :alt="`${project.heading} application screenshot`"
+            width="1200"
+            loading="lazy"
+            class="aspect-[4/3] w-full rounded-lg bg-white object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.008] motion-reduce:transition-none sm:aspect-[16/10]"
           />
-        </div>
+        </button>
       </div>
-    </div>
+
+      <!-- Sales Administration: wide dashboard evidence after context -->
+      <div v-else class="space-y-8 sm:space-y-10">
+        <div class="grid gap-6 lg:grid-cols-[minmax(300px,0.8fr)_minmax(0,1.2fr)] lg:items-end lg:gap-16 xl:gap-20">
+          <div>
+            <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">{{ project.tagline }}</p>
+
+            <h3 class="mt-3 max-w-[520px] text-3xl font-semibold leading-tight tracking-[-0.025em] text-white sm:text-4xl">
+              {{ project.heading }}
+            </h3>
+
+            <ul class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-2 font-mono text-[0.72rem] text-[#7f8798] sm:text-xs">
+              <li v-for="(technology, index) in project.technologies" :key="technology" class="flex items-center gap-3">
+                <span>{{ technology }}</span>
+                <span v-if="index < project.technologies.length - 1" aria-hidden="true" class="text-gray-700">·</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="lg:max-w-[640px] lg:justify-self-end">
+            <p class="text-sm leading-6 text-gray-300 sm:text-base sm:leading-7">
+              {{ project.summary }}
+            </p>
+
+            <button
+              type="button"
+              class="mt-6 inline-flex border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
+              @click="openProject(project.id)"
+            >
+              Read case study →
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="button"
+          class="group relative w-full overflow-hidden rounded-xl border border-white/10 bg-secondary p-1.5 text-left shadow-[0_20px_60px_rgba(0,0,0,0.16)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:p-2"
+          :aria-label="`Read ${project.heading} case study`"
+          @click="openProject(project.id)"
+        >
+          <NuxtImg
+            :src="`/images/${project.projectImage}`"
+            :alt="`${project.heading} application screenshot`"
+            width="1400"
+            loading="lazy"
+            class="aspect-[4/3] w-full rounded-lg bg-white object-cover object-left-top transition-transform duration-300 group-hover:scale-[1.008] motion-reduce:transition-none sm:aspect-[16/8] sm:object-top"
+          />
+        </button>
+      </div>
+    </article>
   </div>
 </template>
 
 <script setup lang="ts">
-import { useMediaQuery } from '@vueuse/core';
 import { featuredProjects } from '~/data/projects';
 
 const { openProject } = useProjectSidebar();
-
-const isMobile = useMediaQuery('(max-width: 768px)');
-
-const cardsData = featuredProjects;
+const projects = featuredProjects;
 </script>

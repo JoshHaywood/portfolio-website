@@ -1,146 +1,56 @@
 <template>
-  <div class="flex h-screen items-center">
-    <BackgroundParticles class="h-screen" />
+  <section class="bg-secondary pt-16 md:pt-[72px]">
+    <div
+      class="mx-auto flex min-h-[560px] max-w-[1100px] items-center px-5 pb-28 pt-10 sm:min-h-[590px] sm:pb-32 md:min-h-[620px] md:px-10 md:pb-36 lg:min-h-[640px] xl:px-0"
+    >
+      <div class="max-w-[760px]">
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-primary sm:text-sm">Hi, I'm</p>
 
-    <!-- Intro -->
-    <div class="absolute mx-auto space-y-5 px-5 md:px-10 lg:left-0 lg:right-0 lg:max-w-[1100px] xl:px-0">
-      <section>
-        <p
-          v-motion
-          :initial="initial()"
-          :visible-once="animation(900)"
-          class="text-lg font-normal tracking-wide text-primary"
-          style="font-family: 'Raleway', sans-serif"
-        >
-          Hi, I'm
-        </p>
-
-        <h1
-          v-motion
-          :initial="initial()"
-          :visible-once="animation(1100)"
-          class="mt-4 block text-4xl font-semibold tracking-wide text-white sm:text-5xl lg:text-6xl"
-        >
+        <h1 class="mt-5 text-[2.75rem] font-bold leading-none tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl">
           Josh Haywood
         </h1>
 
-        <h2
-          v-motion
-          :initial="initial()"
-          :visible-once="animation(1300)"
-          class="mt-4 block text-4xl font-semibold tracking-wide text-gray-400 sm:text-5xl lg:text-6xl"
-        >
+        <h2 class="mt-4 text-2xl font-semibold leading-tight tracking-[-0.025em] text-gray-100 sm:text-3xl lg:text-4xl">
           Full-Stack Software Engineer
         </h2>
 
-        <p
-          v-motion
-          :initial="initial()"
-          :visible-once="animation(1500)"
-          class="mt-6 max-w-xl text-xl tracking-wide text-gray-400"
-        >
-          For 3+ years at
-          <a href="https://directglobal.com">
-            <span class="text-xl font-semibold text-primary hover:underline">Direct Global</span> </a
-          >, I’ve built and supported production software across frontend, backend and data systems, from requirements
-          to release.
+        <p class="mt-5 max-w-[675px] text-base leading-7 text-gray-400 sm:mt-6 sm:text-lg sm:leading-8">
+          For 3+ years at Direct Global, I’ve built and supported production software across frontend, backend and data
+          systems, from requirements to release.
         </p>
-      </section>
 
-      <!-- Actions -->
-      <div
-        v-motion
-        :initial="initial()"
-        :visible-once="animation(1500)"
-        class="mt-5 flex items-center max-xs:flex-col max-xs:space-y-5 xs:space-x-5"
-      >
-        <a
-          href="https://github.com/JoshHaywood/"
-          class="max-sm:w-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-        >
-          <span
-            class="inline-block rounded border-4 border-tertiary bg-tertiary px-7 py-2 text-center text-white transition-colors hover:border-tertiary/30 hover:bg-tertiary/30 max-sm:w-full"
+        <div class="mt-7 flex flex-wrap items-center gap-2.5 sm:mt-8 sm:gap-3.5">
+          <button
+            type="button"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-secondary transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            @click="scrollTo('projects')"
           >
-            View my GitHub
-          </span>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/josh-haywood"
-          class="max-sm:w-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-        >
-          <span
-            class="inline-block rounded border-2 border-primary px-6 py-2 text-center text-white transition-colors hover:bg-primary/30 max-sm:w-full"
+            View selected work
+          </button>
+
+          <a
+            href="/documents/josh-haywood-cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.025] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/25 hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           >
-            View my LinkedIn
-          </span>
-        </a>
+            View CV
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/josh-haywood"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full px-0 py-2.5 text-sm font-medium text-gray-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary min-[421px]:w-auto min-[421px]:px-2"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
       </div>
     </div>
-
-    <!-- Page scroller -->
-    <div
-      v-motion
-      :initial="{
-        opacity: 0,
-      }"
-      :visible-once="{
-        opacity: 1,
-        transition: {
-          delay: 1500,
-          type: 'keyframes',
-          ease: 'easeInOut',
-        },
-      }"
-      class="absolute bottom-0 left-0 right-0 mb-2 text-center"
-    >
-      <button
-        type="button"
-        class="w-full cursor-pointer space-y-1 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-        @click="scrollDown"
-      >
-        <span class="block text-xl font-medium text-gray-400 transition-colors hover:text-white">View More</span>
-        <svg
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          class="mx-auto h-5 w-5 fill-primary"
-        >
-          <path
-            d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-          />
-        </svg>
-      </button>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">
-import { usePreferredReducedMotion } from '@vueuse/core';
-
-const preferredMotion = usePreferredReducedMotion();
-
-const reduceMotion = computed(() => preferredMotion.value === 'reduce');
-
-const initial = () => ({
-  opacity: 0,
-  y: reduceMotion.value ? 0 : 100,
-});
-
-const animation = (delay: number) => ({
-  opacity: 1,
-  y: 0,
-  transition: {
-    delay: reduceMotion.value ? 0 : delay,
-    type: 'keyframes',
-    ease: 'easeInOut',
-  },
-});
-
-const scrollDown = () => {
-  window.scrollBy({
-    top: window.innerHeight,
-    left: 0,
-    behavior: reduceMotion.value ? 'auto' : 'smooth',
-  });
-};
+const { scrollTo } = useScrollTo();
 </script>

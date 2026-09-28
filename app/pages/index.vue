@@ -2,17 +2,19 @@
   <div>
     <HeroMain />
 
-    <div
-      class="mx-auto mb-36 mt-20 max-w-[1100px] space-y-28 px-5 sm:mt-28 md:mb-56 md:space-y-48 lg:mb-64 xl:space-y-56 xl:px-0"
-    >
-      <AboutMe id="about" v-motion :initial="initial()" :visible-once="animation()" />
-      <EngineeringCapabilities id="capabilities" v-motion :initial="initial()" :visible-once="animation()" />
-      <ProjectContainer id="projects" v-motion :initial="initial()" :visible-once="animation()" />
-      <ContactForm id="contact" v-motion :initial="initial()" :visible-once="animation()" />
+    <section id="projects" class="relative z-10 -mt-12 border-t border-white/[0.06] bg-tertiary pb-24 pt-16 sm:-mt-14 sm:pt-20 lg:-mt-16 lg:pb-32 lg:pt-24">
+      <div class="mx-auto max-w-[1320px] px-5 md:px-10 2xl:px-0">
+        <ProjectContainer />
+      </div>
+    </section>
+
+    <div class="mx-auto max-w-[1100px] space-y-24 px-5 py-24 sm:space-y-28 sm:py-28 md:px-10 md:py-32 xl:px-0">
+      <AboutMe id="about" />
+      <ContactForm id="contact" />
     </div>
 
     <Transition>
-      <ProjectSidebar v-show="isOpen" class="fixed bottom-0 right-0 top-0 z-50 transition-transform motion-reduce:transition-none" />
+      <ProjectSidebar v-show="isOpen" />
     </Transition>
   </div>
 </template>
@@ -47,26 +49,6 @@ useHead({
 });
 
 const { isOpen } = useProjectSidebar();
-
-const initial = () => ({
-  opacity: 0,
-  y: 20,
-});
-
-const animation = () => ({
-  opacity: 1,
-  y: 0,
-  transition: {
-    delay: 200,
-    type: 'keyframes',
-    ease: 'easeInOut',
-  },
-});
 </script>
 
-<style scoped>
-.v-enter-active,
-.v-leave-active {
-  transform: translateX(550px);
-}
-</style>
+

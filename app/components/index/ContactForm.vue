@@ -1,110 +1,94 @@
 <template>
-  <div class="flex max-lg:flex-col max-lg:space-y-16 lg:space-x-10">
-    <div class="w-full lg:w-1/2">
-      <SectionHeading heading="Contact" />
+  <section class="border-t border-white/[0.08] pt-16 sm:pt-20">
+    <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(420px,0.9fr)] lg:gap-16 xl:gap-20">
+      <div>
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">Contact</p>
+        <h2 class="mt-4 max-w-[620px] text-3xl font-semibold leading-tight tracking-[-0.03em] text-white sm:text-4xl">
+          Interested in working together?
+        </h2>
 
-      <p class="text-gray-400">
-        Based in South West England, I’m always happy to connect and discuss software engineering and the work I’m
-        building.
-      </p>
+        <p class="mt-5 max-w-[560px] text-base leading-7 text-gray-400">
+          Based in South West England, I’m always happy to connect and discuss software engineering and the work I’m
+          building.
+        </p>
 
-      <p class="mt-4 text-gray-400">
-        You can get in touch using the form, by email or through my
-        <a href="https://www.linkedin.com/in/josh-haywood" class="font-semibold text-primary hover:underline">
-          LinkedIn profile.
-        </a>
-      </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href="mailto:joshhaywood025@gmail.com"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-secondary transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            Email Josh
+          </a>
 
-      <!-- Contact Buttons -->
-      <div
-        class="flex space-y-5 pt-8 max-sm:flex-col sm:space-x-5 sm:space-y-0 lg:flex-col lg:space-x-0 lg:space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0"
-      >
-        <a
-          href="https://www.linkedin.com/in/josh-haywood"
-          class="flex w-full items-center space-x-5 bg-tertiary px-5 py-2.5 ring-primary ring-opacity-40 transition-colors hover:ring focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-3/5 xl:w-2/5"
-        >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="h-5 w-5 fill-primary">
-              <path
-                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-              />
-            </svg>
+          <a
+            href="https://www.linkedin.com/in/josh-haywood"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-11 items-center justify-center rounded-lg border border-white/15 bg-white/[0.025] px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:border-white/25 hover:bg-white/[0.05] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            LinkedIn ↗
+          </a>
+        </div>
 
-          <span class="pt-1 text-sm font-semibold text-gray-400">Josh Haywood</span>
-        </a>
-
-        <a
-          href="mailto:joshhaywood025@gmail.com"
-          class="flex w-full items-center space-x-5 bg-tertiary px-5 py-2.5 ring-primary ring-opacity-40 transition-colors hover:ring focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-3/5"
-        >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              class="h-5 w-5 text-primary"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
-              />
-            </svg>
-
-          <span class="pt-1 text-sm font-semibold text-gray-400">joshhaywood025@gmail.com</span>
-        </a>
+        <p class="mt-8 text-sm leading-6 text-[#7f8798]">Prefer a form? Send a short message here.</p>
       </div>
+
+      <form
+        class="rounded-xl border border-white/[0.08] bg-tertiary/55 p-5 sm:p-6"
+        action="https://formsubmit.co/joshhaywood025@gmail.com"
+        method="POST"
+      >
+        <p class="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#7f8798]">Send a message</p>
+
+        <div class="mt-5 grid gap-4 sm:grid-cols-2">
+          <div class="space-y-2">
+            <label for="contact-name" class="text-xs font-semibold text-gray-200">Name</label>
+            <input
+              id="contact-name"
+              class="min-h-11 w-full rounded-lg border border-white/[0.08] bg-secondary/70 px-3 text-sm text-gray-200 outline-none transition-colors placeholder:text-[#7f8798] hover:border-white/[0.14] focus:border-primary/70 focus-visible:ring-2 focus-visible:ring-primary/30"
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Your name"
+              required
+            />
+          </div>
+
+          <div class="space-y-2">
+            <label for="contact-email" class="text-xs font-semibold text-gray-200">Email</label>
+            <input
+              id="contact-email"
+              class="min-h-11 w-full rounded-lg border border-white/[0.08] bg-secondary/70 px-3 text-sm text-gray-200 outline-none transition-colors placeholder:text-[#7f8798] hover:border-white/[0.14] focus:border-primary/70 focus-visible:ring-2 focus-visible:ring-primary/30"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="mt-4 space-y-2">
+          <label for="contact-message" class="text-xs font-semibold text-gray-200">Message</label>
+          <textarea
+            id="contact-message"
+            class="w-full rounded-lg border border-white/[0.08] bg-secondary/70 px-3 py-3 text-sm text-gray-200 outline-none transition-colors placeholder:text-[#7f8798] hover:border-white/[0.14] focus:border-primary/70 focus-visible:ring-2 focus-visible:ring-primary/30"
+            name="message"
+            placeholder="What would you like to discuss?"
+            rows="5"
+            required
+          />
+        </div>
+
+        <input type="hidden" name="_next" value="https://www.joshhaywood-portfolio.com/message-sent" />
+
+        <button
+          type="submit"
+          class="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-secondary transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+        >
+          Send message
+        </button>
+      </form>
     </div>
-
-    <!-- Form -->
-    <form
-      class="flex w-full flex-col space-y-4 lg:w-3/5"
-      action="https://formsubmit.co/joshhaywood025@gmail.com"
-      method="POST"
-    >
-      <div class="space-y-2">
-        <label for="contact-name" class="text-sm font-bold text-white">Name</label>
-        <input
-          id="contact-name"
-          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-        />
-      </div>
-
-      <div class="space-y-2">
-        <label for="contact-email" class="text-sm font-bold text-white">Email</label>
-        <input
-          id="contact-email"
-          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-        />
-      </div>
-
-      <div class="space-y-2">
-        <label for="contact-message" class="text-sm font-bold text-white">Message</label>
-        <textarea
-          id="contact-message"
-          class="w-full rounded bg-tertiary px-3 py-2 text-sm text-gray-400 shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-          name="message"
-          placeholder="Message"
-          rows="8"
-          required
-        />
-      </div>
-
-      <input type="hidden" name="_next" value="https://www.joshhaywood-portfolio.com/message-sent" />
-
-      <button
-        class="mx-auto w-1/4 rounded border-b-2 border-primary bg-tertiary p-3 text-sm text-white transition-colors hover:bg-tertiary/70"
-      >
-        Send message
-      </button>
-    </form>
-  </div>
+  </section>
 </template>

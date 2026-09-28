@@ -1,113 +1,42 @@
 <template>
-  <div>
-    <!-- Heading -->
-    <div
-      v-motion
-      :initial="{
-        opacity: 0,
-      }"
-      :visible-once="{
-        opacity: 1,
-        transition: {
-          delay: 200,
-          type: 'keyframes',
-          ease: 'easeInOut',
-        },
-      }"
-      class="mb-12 text-center max-xl:mt-20"
-    >
-      <h3 class="mb-3 text-2xl font-semibold text-white">More Projects</h3>
-      <a href="https://github.com/JoshHaywood?tab=repositories" class="text-primary hover:underline">View GitHub</a>
-    </div>
-
-    <!-- Cards -->
-    <div class="grid-cols-2 grid-rows-2 gap-4 max-sm:space-y-4 sm:grid lg:grid-cols-3">
-      <div v-for="(project, index) in cardProjects" :key="project.id" class="transition-transform hover:-translate-y-2">
-        <div
-          v-motion
-          :initial="{
-            opacity: 0,
-            y: 20,
-          }"
-          :visible-once="{
-            opacity: 1,
-            y: 0,
-            transition: {
-              delay: index * 200,
-              type: 'keyframes',
-              ease: 'easeInOut',
-            },
-          }"
-          class="rounded bg-tertiary shadow-lg"
-        >
-          <div class="relative h-full w-full px-5 pb-16 pt-5 sm:h-[350px] md:h-[325px] md:pb-5 lg:pb-60">
-            <div class="flex justify-between pt-4">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                alt="Folder icon"
-                class="h-9 w-9 fill-primary hover:cursor-pointer"
-                @click="openProject(project.id)"
-              >
-                <path
-                  d="M447.1 96h-172.1L226.7 50.75C214.7 38.74 198.5 32 181.5 32H63.1c-35.35 0-64 28.66-64 64v320c0 35.34 28.65 64 64 64h384c35.35 0 64-28.66 64-64V160C511.1 124.7 483.3 96 447.1 96zM463.1 416c0 8.824-7.178 16-16 16h-384c-8.822 0-16-7.176-16-16V96c0-8.824 7.178-16 16-16h117.5c4.273 0 8.293 1.664 11.31 4.688L255.1 144h192c8.822 0 16 7.176 16 16V416z"
-                />
-              </svg>
-
-              <!-- Project links -->
-              <div class="flex flex-row items-center space-x-2">
-                <GithubLink
-                  v-if="project.repoLink"
-                  :link="project.repoLink"
-                  :label="`View ${project.heading} source on GitHub`"
-                  class="h-5 w-5"
-                />
-                <DeployLink
-                  v-if="project.deployLink"
-                  :link="project.deployLink"
-                  :label="`Open ${project.heading}`"
-                  class="h-5 w-5"
-                />
-              </div>
-            </div>
-
-            <!-- Card text -->
-            <div
-              class="flex-col space-y-4 hover:cursor-pointer hover:text-primary lg:flex"
-              @click="openProject(project.id)"
-            >
-              <h4 class="mt-5 text-xl font-semibold text-gray-200 transition-colors md:mt-8">
-                <button
-                  type="button"
-                  class="text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-                  @click.stop="openProject(project.id)"
-                >
-                  {{ project.heading }}
-                </button>
-              </h4>
-
-              <p class="text-gray-400">{{ project.summary }}</p>
-            </div>
-
-            <!-- Technologies list-->
-            <ul class="absolute bottom-5 left-5 mt-8 flex flex-row space-x-5">
-              <li v-for="technology in project.technologies" :key="technology">
-                <div class="text-sm text-gray-500 hover:cursor-pointer" @click="openProject(project.id)">
-                  {{ technology }}
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <section class="border-t border-white/[0.08] pt-12 sm:pt-14">
+    <div class="mb-8 sm:flex sm:items-end sm:justify-between">
+      <div>
+        <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">More professional work</p>
+        <h3 class="mt-3 text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl">Additional production systems</h3>
       </div>
+
+      <a
+        href="https://github.com/JoshHaywood?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="mt-4 inline-flex text-sm font-medium text-gray-400 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:mt-0"
+      >
+        GitHub ↗
+      </a>
     </div>
-  </div>
+
+    <div class="divide-y divide-white/[0.08] border-y border-white/[0.08]">
+      <button
+        v-for="project in projects"
+        :key="project.id"
+        type="button"
+        class="group grid w-full gap-2 py-5 text-left transition-colors hover:bg-white/[0.015] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary sm:grid-cols-[minmax(180px,0.75fr)_minmax(280px,1.4fr)_auto] sm:items-center sm:gap-6 sm:px-2"
+        @click="openProject(project.id)"
+      >
+        <span class="font-semibold text-white transition-colors group-hover:text-primary">{{ project.heading }}</span>
+        <span class="text-sm leading-6 text-gray-400">{{ project.tagline }}</span>
+        <span class="font-mono text-[0.68rem] text-[#7f8798] sm:text-right">
+          {{ project.technologies.join(' · ') }}
+        </span>
+      </button>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 import { secondaryProjects } from '~/data/projects';
 
 const { openProject } = useProjectSidebar();
-
-const cardProjects = secondaryProjects;
+const projects = secondaryProjects;
 </script>
