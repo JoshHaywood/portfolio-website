@@ -12,10 +12,10 @@
         <button
           type="button"
           aria-label="Back to top"
-          class="group inline-flex items-baseline text-sm font-bold uppercase tracking-[0.16em] text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:text-base"
+          class="text-sm font-semibold tracking-[-0.01em] text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:text-base"
           @click="scrollToTop"
         >
-          Josh<span class="text-primary transition-colors group-hover:text-white">.</span>
+          Josh Haywood
         </button>
 
         <button

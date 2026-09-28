@@ -2,7 +2,7 @@
   <div>
     <HeroMain />
 
-    <section id="projects" class="relative z-10 -mt-12 border-t border-white/[0.06] bg-tertiary pb-24 pt-16 sm:-mt-14 sm:pt-20 lg:-mt-16 lg:pb-32 lg:pt-24">
+    <section id="projects" class="relative z-10 -mt-12 border-t border-white/[0.06] bg-tertiary pb-20 pt-14 sm:-mt-14 sm:pt-16 lg:-mt-16 lg:pb-24 lg:pt-20">
       <div class="mx-auto max-w-[1320px] px-5 md:px-10 2xl:px-0">
         <ProjectContainer />
       </div>
