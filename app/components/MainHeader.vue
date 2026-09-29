@@ -10,10 +10,11 @@
     >
       <div class="mx-auto flex h-16 max-w-[1100px] items-center justify-between px-5 md:h-[72px] md:px-10 xl:px-0">
         <button
+          ref="homeButtonRef"
           type="button"
           aria-label="Back to top"
           class="inline-flex h-10 w-12 items-center justify-start text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
-          @click="scrollToTop"
+          @click="handleHomeClick"
         >
           <svg
             aria-hidden="true"
@@ -32,12 +33,13 @@
         </button>
 
         <button
+          ref="menuButtonRef"
           type="button"
           :aria-expanded="sidebar"
           aria-controls="mobile-navigation"
           :aria-label="sidebar ? 'Close navigation' : 'Open navigation'"
           class="relative ml-auto flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:hidden"
-          @click="sidebar = !sidebar"
+          @click="toggleSidebar"
         >
           <span class="sr-only">{{ sidebar ? 'Close navigation' : 'Open navigation' }}</span>
           <div class="relative h-4 w-5">
@@ -56,7 +58,7 @@
           </div>
         </button>
 
-        <NavLinks :sidebar="sidebar" @close="sidebar = false" />
+        <NavLinks :sidebar="sidebar" @close="closeSidebar" />
       </div>
     </nav>
   </header>
@@ -69,6 +71,11 @@ const preferredMotion = usePreferredReducedMotion();
 
 const sidebar = ref<boolean>(false);
 const isScrolled = ref<boolean>(false);
+const homeButtonRef = ref<HTMLButtonElement>();
+const menuButtonRef = ref<HTMLButtonElement>();
+
+const mobileMenuFocusableSelector =
+  'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
 onMounted(() => {
   updateHeaderState();
@@ -93,9 +100,70 @@ const updateHeaderState = () => {
 };
 
 const handleKeydown = (event: KeyboardEvent) => {
-  if (event.key === 'Escape' && sidebar.value) {
-    sidebar.value = false;
+  if (!sidebar.value) {
+    return;
   }
+
+  if (event.key === 'Escape') {
+    event.preventDefault();
+    closeSidebar();
+    return;
+  }
+
+  if (event.key !== 'Tab') {
+    return;
+  }
+
+  const mobileMenu = document.getElementById('mobile-navigation');
+  const menuItems = mobileMenu
+    ? Array.from(mobileMenu.querySelectorAll<HTMLElement>(mobileMenuFocusableSelector)).filter(
+        (element) => element.offsetParent !== null,
+      )
+    : [];
+
+  const focusable = [homeButtonRef.value, menuButtonRef.value, ...menuItems].filter(
+    (element): element is HTMLElement => Boolean(element && element.offsetParent !== null),
+  );
+
+  const first = focusable.at(0);
+  const last = focusable.at(-1);
+
+  if (!first || !last) {
+    return;
+  }
+
+  if (!focusable.includes(document.activeElement as HTMLElement)) {
+    event.preventDefault();
+    (event.shiftKey ? last : first).focus();
+    return;
+  }
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+};
+
+const toggleSidebar = () => {
+  sidebar.value = !sidebar.value;
+};
+
+const closeSidebar = async () => {
+  if (!sidebar.value) {
+    return;
+  }
+
+  sidebar.value = false;
+  await nextTick();
+  menuButtonRef.value?.focus();
+};
+
+const handleHomeClick = () => {
+  sidebar.value = false;
+  scrollToTop();
 };
 
 const scrollToTop = () => {

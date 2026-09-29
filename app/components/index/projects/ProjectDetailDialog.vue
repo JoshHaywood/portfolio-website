@@ -192,10 +192,18 @@ const handleKeydown = (event: KeyboardEvent) => {
     return;
   }
 
-  if (event.shiftKey && document.activeElement === first) {
+  const activeElement = document.activeElement;
+
+  if (activeElement === dialogRef.value || !(activeElement instanceof Node) || !dialogRef.value.contains(activeElement)) {
+    event.preventDefault();
+    (event.shiftKey ? last : first).focus();
+    return;
+  }
+
+  if (event.shiftKey && activeElement === first) {
     event.preventDefault();
     last.focus();
-  } else if (!event.shiftKey && document.activeElement === last) {
+  } else if (!event.shiftKey && activeElement === last) {
     event.preventDefault();
     first.focus();
   }
