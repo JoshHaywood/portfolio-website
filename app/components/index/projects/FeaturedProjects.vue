@@ -37,6 +37,7 @@
 
           <button
             type="button"
+            :aria-label="`Read ${project.heading} case study`"
             class="group mt-6 inline-flex items-center gap-1.5 border-b-2 border-primary pb-1 text-sm font-semibold text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
             @click="openProject(project.id)"
           >
