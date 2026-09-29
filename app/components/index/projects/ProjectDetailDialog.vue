@@ -53,7 +53,7 @@
 
           <h1
             :id="`project-${activeProject.id}-title`"
-            class="mt-4 text-4xl font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl"
+            class="mt-4 text-[clamp(1.375rem,11.25vw,2.25rem)] font-bold leading-[1.05] tracking-[-0.04em] text-white sm:text-5xl lg:text-6xl"
           >
             {{ activeProject.heading }}
           </h1>

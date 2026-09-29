@@ -21,7 +21,7 @@ export const projectsById: Record<ProjectId, Project> = {
     summary:
       'An internal application for managing energy contracts after the sale, giving finance, compliance and administration staff one place to handle tasks, commissions, complaints, meter information and changes of energy supplier.',
     technologies: ['Vue 3', 'GraphQL', 'AdonisJS'],
-    projectImage: 'sales-admin-thumbnail.PNG',
+    projectImage: 'sales-admin-thumbnail.png',
     overview:
       'The platform provided a focused workspace for managing energy contracts after the sale while continuing to use shared customer and sales data from the wider business systems. Staff could bring existing sales records into the application, work through each contract’s administrative stages, manage customer and meter information, communicate with customers and suppliers, and track follow-up activity. It became the new administration system for around 50 staff.',
     structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],

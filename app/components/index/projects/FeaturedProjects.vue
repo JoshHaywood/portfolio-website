@@ -21,7 +21,7 @@
             {{ project.tagline }}
           </p>
 
-          <h3 class="mt-3 text-3xl font-semibold leading-tight tracking-[-0.025em] text-white sm:text-4xl">
+          <h3 class="mt-3 text-[clamp(1.375rem,9.375vw,1.875rem)] font-semibold leading-tight tracking-[-0.025em] text-white sm:text-4xl">
             {{ project.heading }}
           </h3>
 
