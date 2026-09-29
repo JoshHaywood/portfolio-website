@@ -1,29 +1,37 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2026-09-27',
+
   typescript: {
     shim: false,
+    tsConfig: {
+      compilerOptions: {
+        noImplicitOverride: true,
+        noImplicitReturns: true,
+        noFallthroughCasesInSwitch: true,
+        forceConsistentCasingInFileNames: true,
+        skipLibCheck: true,
+      },
+    },
   },
 
   css: ['~/assets/main.css'],
 
   app: {
     head: {
-      title: 'Josh Haywood | Portfolio',
+      htmlAttrs: {
+        lang: 'en',
+      },
       meta: [
         { charset: 'utf-8' },
-        {
-          key: 'description',
-          name: 'description',
-          content:
-            "I'm a recent graduate with a BSc in web development, aspiring to work as a front-end developer. I have a strong skill set in full-stack JavaScript development, and this is where I showcase my work.",
-        },
         { name: 'author', content: 'Josh Haywood' },
         { name: 'google-site-verification', content: 'HdPWnU6uSFkgMmVnx4WWIkD2MX04xKkXY0lXaeSlMHk' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       ],
       link: [
         {
-          rel: 'canonical',
-          href: 'https://www.joshhaywood-portfolio.com/',
+          rel: 'icon',
+          type: 'image/svg+xml',
+          href: '/favicon.svg',
         },
       ],
       script: [
@@ -55,11 +63,8 @@ export default defineNuxtConfig({
   ],
 
   modules: [
-    '@pinia/nuxt',
     '@nuxt/image',
-    'nuxt-particles',
-    '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/eslint-module',
+    '@nuxt/eslint',
   ],
 });

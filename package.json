@@ -1,6 +1,9 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "engines": {
+    "node": ">=24.11.0 <25"
+  },
   "scripts": {
     "start": "node .output/server/index.mjs",
     "dev": "nuxt dev",
@@ -13,31 +16,21 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config-typescript": "^12.1.0",
-    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxt/eslint": "^1.17.0",
     "@types/node": "^20.10.4",
-    "eslint": "^8.55.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-nuxt": "^4.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-vue": "^9.19.2",
+    "eslint": "^10.11.0",
+    "eslint-config-prettier": "^10.1.8",
     "prettier": "3.1.0",
     "prettier-plugin-tailwindcss": "0.5.9",
     "typescript": "^5.9.3",
-    "unstorage": "^1.17.5",
     "vue-tsc": "^3.3.11"
   },
   "dependencies": {
-    "@nuxt/image": "^1.1.0",
+    "@nuxt/image": "^2.1.0",
     "@nuxtjs/tailwindcss": "^6.10.1",
-    "@pinia/nuxt": "^0.5.1",
     "@vueuse/core": "^10.9.0",
-    "@vueuse/motion": "^2.1.0",
-    "nuxt": "^3.8.2",
-    "nuxt-particles": "^0.1.5",
-    "pinia": "^2.1.7"
-  },
-  "overrides": {
-    "vue": "latest"
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.40",
+    "vue-router": "^5.3.1"
   }
 }

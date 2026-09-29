@@ -4,8 +4,8 @@ module.exports = {
     extend: {
       colors: {
         primary: '#f2584c',
-        secondary: '#191b29',
-        tertiary: '#1f2335',
+        secondary: '#0b0e16',
+        tertiary: '#171b2a',
       },
       screens: {
         xs: '475px',

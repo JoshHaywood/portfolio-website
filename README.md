@@ -1,47 +1,64 @@
 # Portfolio Website
 
-This website serves as both a marketing tool and a central hub for showcasing my experience, skills, and projects. It was designed to highlight my development expertise providing potential employers or industry professionals with insight into my work. Additionally, it links to my social profiles, including GitHub, LinkedIn, and email.
+My personal portfolio website, built to showcase my software engineering experience, technical capabilities and selected professional work.
 
-## Contents
+The site covers my background as a full-stack software engineer, the systems and applications I have worked on, the technologies I use, and ways to get in touch.
 
-- [Portfolio Website](#portfolio-website)
-  - [Contents](#contents)
-  - [Main Features](#main-features)
-  - [Technology Stack](#technology-stack)
-  - [Prerequisites](#prerequisites)
-  - [Setup Guide](#setup-guide)
+## Features
 
-## Main Features
-
-- A single-page site featuring sections for about, skills, projects, and contact.
-- Direct links to social platforms such as GitHub, LinkedIn, and email.
-- Detailed descriptions of each project, including objectives and my contributions, accessible via project cards.
+- Selected professional projects and project information
+- Overview of my engineering capabilities and experience
+- Current technology stack
+- Downloadable CV
+- LinkedIn, GitHub and email contact links
+- Responsive single-page interface
 
 ## Technology Stack
 
-- Nuxt.js
-- Tailwind CSS
+- Nuxt 4
+- Vue 3
 - TypeScript
+- Tailwind CSS
+- VueUse
+
+## Local Development
+
+### Prerequisites
+
 - Node.js
+- npm
 
-## Prerequisites
+### Setup
 
-- **Node.js & npm** – Ensure you have [Node.js](https://nodejs.org/) installed, which includes npm.
-- **File Manager** – A file explorer for navigation (recommended for Windows users).
-- **Web Browser** – Google Chrome is recommended for the best experience.
-- **Command Line Interface (CLI)** – [Git Bash](https://git-scm.com/downloads) is recommended.
+Clone the repository and install the dependencies:
 
-### Setup guide
+```bash
+npm install
+```
 
-1. Clone the repository onto your machine or download a zip file of the main branch.
-   Open the project folder in the integrated development (IDE) environment of your choice.
+Start the development server:
 
-2. Run the following in the root folder:
+```bash
+npm run dev
+```
 
-`$ npm install`
+The site will be available at:
 
-`$ npm run dev`
+```text
+http://localhost:3000
+```
 
-This will start Reacts development server.
+## Available Scripts
 
-3. If it is not opened automatically navigate too http://localhost:3000 in your browser or https://www.joshhaywood-portfolio.com/ if you wish to see the deployed version.
+```bash
+npm run dev
+npm run build
+npm run preview
+npm run typecheck
+npm run lint
+npm run format
+```
+
+## Live Site
+
+[www.joshhaywood-portfolio.com](https://www.joshhaywood-portfolio.com/)
