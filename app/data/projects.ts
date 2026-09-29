@@ -90,13 +90,13 @@ export const projectsById: Record<ProjectId, Project> = {
     summary:
       'A platform centralising and processing electricity and gas consumption data from multiple external sources for customer-facing and internal applications.',
     technologies: ['Vue 3', 'AdonisJS', 'PostgreSQL'],
-    projectImage: 'energy-data-platform-thumbnail.webp',
+    projectImage: 'energy-data-platform-thumbnail.jpg',
     overview:
       'Instead of relying on separate external services to store and process consumption data, the platform centralises millions of electricity and gas readings from multiple sources. It links customers with their meters, processes the incoming data and makes the results available to customer-facing graphs, dashboards and internal tools.',
     structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'PostgreSQL'],
     role: 'I joined the project relatively early and later became its sole developer, taking responsibility for its ongoing architecture, development and maintenance. I work across the Vue admin application and AdonisJS backend, integrating external data sources and building processing flows for electricity, gas and calculated consumption data. My work includes converting cumulative readings into interval data, scheduled processing and batched database writes for larger ingestion workloads. When production data does not match expected values, I trace the source data and processing path, confirm the required behaviour with the relevant teams and implement the fix.',
     featured: {
-      image: 'energy-data-platform-thumbnail.webp',
+      image: 'energy-data-platform-thumbnail.jpg',
       alignment: 'right',
     },
   },
