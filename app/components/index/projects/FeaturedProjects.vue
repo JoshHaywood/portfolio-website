@@ -75,7 +75,7 @@
 <script setup lang="ts">
 import { featuredProjects } from '~/data/projects';
 
-const { openProject } = useProjectSidebar();
+const { openProject } = useProjectDetail();
 const projects = featuredProjects;
 
 const featuredEvidence: Record<string, string> = {

@@ -40,6 +40,6 @@
 <script setup lang="ts">
 import { secondaryProjects } from '~/data/projects';
 
-const { openProject } = useProjectSidebar();
+const { openProject } = useProjectDetail();
 const projects = secondaryProjects;
 </script>

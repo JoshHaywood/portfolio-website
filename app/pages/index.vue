@@ -10,11 +10,11 @@
 
     <div class="mx-auto max-w-[1100px] space-y-20 px-5 pb-12 pt-24 sm:space-y-28 sm:pb-16 sm:pt-28 md:px-10 md:pb-20 md:pt-32 xl:px-0">
       <AboutMe id="about" />
-      <ContactForm id="contact" />
+      <ContactSection id="contact" />
     </div>
 
     <Transition name="project-detail">
-      <ProjectSidebar v-show="isOpen" />
+      <ProjectDetailDialog v-show="isOpen" />
     </Transition>
   </div>
 </template>
@@ -48,7 +48,7 @@ useHead({
   ],
 });
 
-const { isOpen } = useProjectSidebar();
+const { isOpen } = useProjectDetail();
 </script>
 
 

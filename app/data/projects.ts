@@ -1,4 +1,4 @@
-import type { FeaturedProject, Project, ProjectId } from '~/types/project';
+import type { Project, ProjectId } from '~/types/project';
 
 export const projectsById: Record<ProjectId, Project> = {
   'energy-data-platform': {
@@ -13,10 +13,6 @@ export const projectsById: Record<ProjectId, Project> = {
       'Instead of relying on separate external services to store and process consumption data, the platform centralises millions of electricity and gas readings from multiple sources. It links customers with their meters, processes the incoming data and makes the results available to customer-facing graphs, dashboards and internal tools.',
     structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'PostgreSQL'],
     role: 'I joined the project relatively early and later became its sole developer, taking responsibility for its ongoing architecture, development and maintenance. I work across the Vue admin application and AdonisJS backend, integrating external data sources and building processing flows for electricity, gas and calculated consumption data. My work includes converting cumulative readings into interval data, scheduled processing and batched database writes for larger ingestion workloads. When production data does not match expected values, I trace the source data and processing path, confirm the required behaviour with the relevant teams and implement the fix.',
-    featured: {
-      image: 'energy-data-platform-thumbnail.jpg',
-      alignment: 'right',
-    },
   },
   'sales-administration-platform': {
     id: 'sales-administration-platform',
@@ -30,10 +26,6 @@ export const projectsById: Record<ProjectId, Project> = {
       'The platform provided a focused workspace for managing energy contracts after the sale while continuing to use shared customer and sales data from the wider business systems. Staff could bring existing sales records into the application, work through each contract’s administrative stages, manage customer and meter information, communicate with customers and suppliers, and track follow-up activity. It became the new administration system for around 50 staff.',
     structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
     role: 'I set up the application and was its sole developer through the first usable MVP. I built the authentication, routing, dashboard, task and administration workflows, event feed and API integration needed to bring existing sales records into the application. As the product grew, I added functionality around meter management, commissions, complaints, customer and supplier communications, comments and tracking changes of energy supplier. I integrated the application with the existing shared backend and data systems, and I continued extending and supporting it as development became collaborative.',
-    featured: {
-      image: 'sales-admin-thumbnail.PNG',
-      alignment: 'left',
-    },
   },
   'customer-portal': {
     id: 'customer-portal',
@@ -90,10 +82,10 @@ export const projectsById: Record<ProjectId, Project> = {
   },
 };
 
-export const featuredProjects = [
+export const featuredProjects: Project[] = [
   projectsById['energy-data-platform'],
   projectsById['sales-administration-platform'],
-] as FeaturedProject[];
+];
 
 export const secondaryProjects: Project[] = [
   projectsById['customer-portal'],

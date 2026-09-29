@@ -131,7 +131,7 @@
 <script setup lang="ts">
 import { projectsById } from '~/data/projects';
 
-const { isOpen, activeProjectId, closeProject } = useProjectSidebar();
+const { isOpen, activeProjectId, closeProject } = useProjectDetail();
 
 const dialogRef = ref<HTMLElement>();
 let previouslyFocusedElement: HTMLElement | null = null;

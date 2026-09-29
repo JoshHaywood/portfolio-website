@@ -1,6 +1,6 @@
 import type { ProjectId } from '~/types/project';
 
-export const useProjectSidebar = () => {
+export const useProjectDetail = () => {
   const isOpen = useState<boolean>('project-sidebar-open', () => false);
   const activeProjectId = useState<ProjectId | null>('active-project-id', () => null);
 

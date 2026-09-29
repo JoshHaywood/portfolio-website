@@ -64,8 +64,6 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxt/image',
-    '@tsparticles/nuxt4',
-    '@vueuse/motion/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxt/eslint',
   ],
