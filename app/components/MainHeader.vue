@@ -12,10 +12,23 @@
         <button
           type="button"
           aria-label="Back to top"
-          class="inline-flex items-center text-sm font-bold uppercase tracking-[0.08em] text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:text-base"
+          class="inline-flex h-10 w-12 items-center justify-start text-white transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary"
           @click="scrollToTop"
         >
-          <span>J</span><span class="text-primary">H</span>
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 38 30"
+            class="h-[30px] w-[38px] md:h-8 md:w-[41px]"
+          >
+            <path
+              d="M5 5 H15 M15 5 V19 C15 23.8 12.4 26 8.1 26 C5.8 26 4 25.3 2.8 24.1 M22 5 V26 M22 15 H34 M34 5 V26 M15 15 H22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3.2"
+              stroke-linecap="square"
+              stroke-linejoin="round"
+            />
+          </svg>
         </button>
 
         <button
