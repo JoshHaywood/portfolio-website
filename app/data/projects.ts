@@ -34,7 +34,8 @@ export const projectsById: Record<ProjectId, Project> = {
       image: 'sales-admin-thumbnail.PNG',
       alignment: 'left',
     },
-  },  'customer-portal': {
+  },
+  'customer-portal': {
     id: 'customer-portal',
     heading: 'Customer Portal',
     tagline: 'Customer Self-Service & Account Workflows',
@@ -87,7 +88,6 @@ export const projectsById: Record<ProjectId, Project> = {
     structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'Socket.IO', 'PostgreSQL'],
     role: 'I substantially reworked both the customer-facing frontend and supporting backend of the existing full-stack application. On the frontend, I rebuilt responsive layouts, auction and quote views, progress tracking and real-time interactions. I also refactored the application’s real-time architecture so normal application state was loaded through HTTP requests, with WebSockets reserved for live auction events and updates rather than carrying the whole state model. On the backend, I worked on authentication, auction and quote behaviour, socket handling and the supporting booking and meter-linked workflows.',
   },
-
 };
 
 export const featuredProjects = [
