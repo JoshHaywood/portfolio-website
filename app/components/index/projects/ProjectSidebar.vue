@@ -73,13 +73,6 @@
           />
         </div>
 
-        <p
-          v-if="activeProject.id === 'energy-data-platform'"
-          class="mt-3 text-xs leading-5 text-[#8d95a6]"
-        >
-          Downstream customer-facing application using consumption data processed by the platform.
-        </p>
-
         <div class="mt-12 grid gap-10 lg:mt-16 lg:grid-cols-[minmax(0,1.5fr)_minmax(250px,0.5fr)] lg:gap-16">
           <div class="space-y-12">
             <section>
@@ -151,17 +144,19 @@ const activeProject = computed(() => {
   return projectsById[activeProjectId.value];
 });
 
-const projectMediaAlt = computed(() =>
-  activeProject.value?.id === 'energy-data-platform'
-    ? 'Customer-facing application using consumption data processed by the Energy Data Platform'
-    : `${activeProject.value?.heading ?? 'Project'} application screenshot`,
-);
+const projectMediaAlt = computed(() => `${activeProject.value?.heading ?? 'Project'} application screenshot`);
 
-const projectMediaClass = computed(() =>
-  activeProject.value?.id === 'sales-administration-platform'
-    ? 'aspect-[4/3] sm:aspect-[16/8]'
-    : 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/9]',
-);
+const projectMediaClass = computed(() => {
+  if (activeProject.value?.id === 'sales-administration-platform') {
+    return 'aspect-[4/3] sm:aspect-[16/8]';
+  }
+
+  if (activeProject.value?.id === 'energy-data-platform') {
+    return 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[2/1]';
+  }
+
+  return 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/9]';
+});
 
 const focusableSelector =
   'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';

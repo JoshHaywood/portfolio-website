@@ -83,13 +83,17 @@ const featuredEvidence: Record<string, string> = {
   'sales-administration-platform': 'Application setup · post-sale workflows · system integrations',
 };
 
-const projectMediaAlt = (projectId: string, heading: string) =>
-  projectId === 'energy-data-platform'
-    ? 'Customer-facing application using consumption data processed by the Energy Data Platform'
-    : `${heading} application screenshot`;
+const projectMediaAlt = (_projectId: string, heading: string) => `${heading} application screenshot`;
 
-const projectMediaClass = (projectId: string) =>
-  projectId === 'sales-administration-platform'
-    ? 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/9] sm:object-top'
-    : 'aspect-[4/3] sm:aspect-[16/10]';
+const projectMediaClass = (projectId: string) => {
+  if (projectId === 'sales-administration-platform') {
+    return 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[16/9] sm:object-top';
+  }
+
+  if (projectId === 'energy-data-platform') {
+    return 'aspect-[4/3] sm:aspect-[16/9] lg:aspect-[2/1]';
+  }
+
+  return 'aspect-[4/3] sm:aspect-[16/10]';
+};
 </script>
