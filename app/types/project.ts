@@ -1,12 +1,10 @@
 export type ProjectId =
+  | 'energy-data-platform'
+  | 'sales-administration-platform'
   | 'customer-portal'
   | 'sales-crm'
   | 'prospecting-tool'
-  | 'auction-platform'
-  | 'personal-portfolio'
-  | 'ecommerce-website'
-  | 'energy-data-platform'
-  | 'sales-administration-platform';
+  | 'auction-platform';
 
 export interface FeaturedProjectPresentation {
   image: string;

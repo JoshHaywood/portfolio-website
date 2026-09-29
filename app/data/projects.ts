@@ -1,7 +1,40 @@
 import type { FeaturedProject, Project, ProjectId } from '~/types/project';
 
 export const projectsById: Record<ProjectId, Project> = {
-  'customer-portal': {
+  'energy-data-platform': {
+    id: 'energy-data-platform',
+    heading: 'Energy Data Platform',
+    tagline: 'Data Processing & Integrations',
+    summary:
+      'A platform centralising and processing electricity and gas consumption data from multiple external sources for customer-facing and internal applications.',
+    technologies: ['Vue 3', 'AdonisJS', 'PostgreSQL'],
+    projectImage: 'energy-data-platform-thumbnail.jpg',
+    overview:
+      'Instead of relying on separate external services to store and process consumption data, the platform centralises millions of electricity and gas readings from multiple sources. It links customers with their meters, processes the incoming data and makes the results available to customer-facing graphs, dashboards and internal tools.',
+    structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'PostgreSQL'],
+    role: 'I joined the project relatively early and later became its sole developer, taking responsibility for its ongoing architecture, development and maintenance. I work across the Vue admin application and AdonisJS backend, integrating external data sources and building processing flows for electricity, gas and calculated consumption data. My work includes converting cumulative readings into interval data, scheduled processing and batched database writes for larger ingestion workloads. When production data does not match expected values, I trace the source data and processing path, confirm the required behaviour with the relevant teams and implement the fix.',
+    featured: {
+      image: 'energy-data-platform-thumbnail.jpg',
+      alignment: 'right',
+    },
+  },
+  'sales-administration-platform': {
+    id: 'sales-administration-platform',
+    heading: 'Sales Administration Platform',
+    tagline: 'Sales Operations',
+    summary:
+      'An internal application for managing energy contracts after the sale, giving finance, compliance and administration staff one place to handle tasks, commissions, complaints, meter information and changes of energy supplier.',
+    technologies: ['Vue 3', 'GraphQL', 'AdonisJS'],
+    projectImage: 'sales-admin-thumbnail.PNG',
+    overview:
+      'The platform provided a focused workspace for managing energy contracts after the sale while continuing to use shared customer and sales data from the wider business systems. Staff could bring existing sales records into the application, work through each contract’s administrative stages, manage customer and meter information, communicate with customers and suppliers, and track follow-up activity. It became the new administration system for around 50 staff.',
+    structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
+    role: 'I set up the application and was its sole developer through the first usable MVP. I built the authentication, routing, dashboard, task and administration workflows, event feed and API integration needed to bring existing sales records into the application. As the product grew, I added functionality around meter management, commissions, complaints, customer and supplier communications, comments and tracking changes of energy supplier. I integrated the application with the existing shared backend and data systems, and I continued extending and supporting it as development became collaborative.',
+    featured: {
+      image: 'sales-admin-thumbnail.PNG',
+      alignment: 'left',
+    },
+  },  'customer-portal': {
     id: 'customer-portal',
     heading: 'Customer Portal',
     tagline: 'Customer Self-Service & Account Workflows',
@@ -54,69 +87,7 @@ export const projectsById: Record<ProjectId, Project> = {
     structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'Socket.IO', 'PostgreSQL'],
     role: 'I substantially reworked both the customer-facing frontend and supporting backend of the existing full-stack application. On the frontend, I rebuilt responsive layouts, auction and quote views, progress tracking and real-time interactions. I also refactored the application’s real-time architecture so normal application state was loaded through HTTP requests, with WebSockets reserved for live auction events and updates rather than carrying the whole state model. On the backend, I worked on authentication, auction and quote behaviour, socket handling and the supporting booking and meter-linked workflows.',
   },
-  'personal-portfolio': {
-    id: 'personal-portfolio',
-    heading: 'Personal Portfolio Website',
-    tagline: 'Highlighting My Skills and Projects',
-    summary:
-      'A portfolio site showcasing my projects, providing easy access to contact information for potential enquiries.',
-    technologies: ['NuxtJS', 'TailwindCSS', 'TypeScript'],
-    projectImage: 'portfolio-thumbnail.webp',
-    overview:
-      'A personal portfolio website built as both a test of my skills as a new developer and a central place to showcase my experience and projects. Over time, the site evolved significantly, adapting to new technologies and improving maintainability, performance, and readability. Beyond serving as a professional hub, it also provided a space to experiment with different frameworks and refine my development approach.',
-    structure: ['HTML', 'NuxtJS', 'React', 'Handlebars', 'Tailwind CSS', 'TypeScript', 'Node.js'],
-    role: `This project has undergone multiple iterations, reflecting my progression as a developer. Initially built with Handlebars while learning the fundamentals, I later transitioned to React for its component-based structure. As the project grew, I moved to Vue and ultimately Nuxt, taking advantage of its improved maintainability, readability, and built-in server-side rendering. These shifts not only enhanced the site's performance but also refined my approach to structuring applications for scalability and long-term development.`,
-    repoLink: 'https://github.com/JoshHaywood/portfolio-website',
-    deployLink: 'https://www.joshhaywood-portfolio.com/',
-  },
-  'ecommerce-website': {
-    id: 'ecommerce-website',
-    heading: 'Ecommerce website',
-    tagline: 'Exploring the science of UX through e-commerce design',
-    summary:
-      'An e-commerce site developed for my research dissertation, implementing standard e-commerce features using a RESTful API.',
-    technologies: ['React', 'Express', 'MySQL'],
-    projectImage: 'tech-terminus-thumbnail.png',
-    overview:
-      'This was an e-commerce website that served as an artefact in my research into how less experienced developers could use design to improve the user experience of their applications with limited development knowledge.',
-    structure: ['HTML', 'React', 'Tailwind CSS', 'Material UI', 'JavaScript', 'Express.js', 'Node.js', 'MySQL'],
-    role: 'I designed, developed, and hosted the application from the ground up. This involved building all the core features, creating the front-end, writing endpoints for the back-end, creating database tables and hosting the site with Heroku. Additionally, as part of my study, I conducted an A/B test comparing this site to one made with a website builder. After that, I recruited participants for a qualitative study and presented my findings to a panel of academics.',
-    repoLink: 'https://github.com/JoshHaywood/tech-terminus',
-  },
-  'energy-data-platform': {
-    id: 'energy-data-platform',
-    heading: 'Energy Data Platform',
-    tagline: 'Data Processing & Integrations',
-    summary:
-      'A platform centralising and processing electricity and gas consumption data from multiple external sources for customer-facing and internal applications.',
-    technologies: ['Vue 3', 'AdonisJS', 'PostgreSQL'],
-    projectImage: 'energy-data-platform-thumbnail.jpg',
-    overview:
-      'Instead of relying on separate external services to store and process consumption data, the platform centralises millions of electricity and gas readings from multiple sources. It links customers with their meters, processes the incoming data and makes the results available to customer-facing graphs, dashboards and internal tools.',
-    structure: ['Vue 3', 'TypeScript', 'AdonisJS', 'PostgreSQL'],
-    role: 'I joined the project relatively early and later became its sole developer, taking responsibility for its ongoing architecture, development and maintenance. I work across the Vue admin application and AdonisJS backend, integrating external data sources and building processing flows for electricity, gas and calculated consumption data. My work includes converting cumulative readings into interval data, scheduled processing and batched database writes for larger ingestion workloads. When production data does not match expected values, I trace the source data and processing path, confirm the required behaviour with the relevant teams and implement the fix.',
-    featured: {
-      image: 'energy-data-platform-thumbnail.jpg',
-      alignment: 'right',
-    },
-  },
-  'sales-administration-platform': {
-    id: 'sales-administration-platform',
-    heading: 'Sales Administration Platform',
-    tagline: 'Sales Operations',
-    summary:
-      'An internal application for managing energy contracts after the sale, giving finance, compliance and administration staff one place to handle tasks, commissions, complaints, meter information and changes of energy supplier.',
-    technologies: ['Vue 3', 'GraphQL', 'AdonisJS'],
-    projectImage: 'sales-admin-thumbnail.PNG',
-    overview:
-      'The platform provided a focused workspace for managing energy contracts after the sale while continuing to use shared customer and sales data from the wider business systems. Staff could bring existing sales records into the application, work through each contract’s administrative stages, manage customer and meter information, communicate with customers and suppliers, and track follow-up activity. It became the new administration system for around 50 staff.',
-    structure: ['Vue 3', 'TypeScript', 'GraphQL', 'Hasura', 'AdonisJS', 'PostgreSQL'],
-    role: 'I set up the application and was its sole developer through the first usable MVP. I built the authentication, routing, dashboard, task and administration workflows, event feed and API integration needed to bring existing sales records into the application. As the product grew, I added functionality around meter management, commissions, complaints, customer and supplier communications, comments and tracking changes of energy supplier. I integrated the application with the existing shared backend and data systems, and I continued extending and supporting it as development became collaborative.',
-    featured: {
-      image: 'sales-admin-thumbnail.PNG',
-      alignment: 'left',
-    },
-  },
+
 };
 
 export const featuredProjects = [
