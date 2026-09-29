@@ -1,7 +1,7 @@
 <template>
   <section class="border-t border-white/[0.08] pt-12 sm:pt-14">
     <div class="mb-8 flex items-end justify-between gap-6">
-      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl">More work</h3>
+      <h3 class="text-2xl font-semibold tracking-[-0.02em] text-white sm:text-3xl">More projects</h3>
 
       <a
         href="https://github.com/JoshHaywood?tab=repositories"
@@ -18,7 +18,7 @@
         v-for="project in projects"
         :key="project.id"
         type="button"
-        class="group relative grid w-full gap-2 py-5 pr-8 text-left transition-colors hover:bg-white/[0.02] active:bg-white/[0.035] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary sm:grid-cols-[minmax(180px,0.75fr)_minmax(280px,1.4fr)_minmax(190px,auto)_20px] sm:items-center sm:gap-6 sm:px-2 sm:pr-2"
+        class="group relative grid w-full gap-2 py-5 pl-3 pr-8 text-left transition-colors hover:bg-white/[0.02] active:bg-white/[0.035] focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary sm:grid-cols-[minmax(180px,0.75fr)_minmax(280px,1.4fr)_minmax(190px,auto)_20px] sm:items-center sm:gap-6 sm:px-2 sm:pr-2"
         @click="openProject(project.id)"
       >
         <span class="font-semibold text-white transition-colors group-hover:text-primary">{{ project.heading }}</span>

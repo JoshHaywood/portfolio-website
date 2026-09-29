@@ -98,7 +98,7 @@
           </div>
 
           <aside class="border-t border-white/[0.08] pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-            <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">Technology</p>
+            <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">Technologies</p>
             <ul class="mt-4 space-y-2 font-mono text-xs text-gray-400">
               <li v-for="technology in activeProject.structure" :key="technology" class="border-b border-white/[0.06] pb-2">
                 {{ technology }}

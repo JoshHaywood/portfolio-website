@@ -1,7 +1,7 @@
 <template>
   <footer class="border-t border-white/[0.08] bg-secondary">
     <div
-      class="mx-auto flex max-w-[1100px] flex-col gap-4 px-5 py-7 text-sm text-[#7f8798] sm:flex-row sm:items-center sm:justify-between md:px-10 xl:px-0"
+      class="mx-auto flex max-w-[1100px] flex-col gap-3 px-5 py-6 text-sm text-[#7f8798] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:py-7 md:px-10 xl:px-0"
     >
       <p class="font-mono text-[0.68rem]">© {{ new Date().getFullYear() }} Josh Haywood</p>
 

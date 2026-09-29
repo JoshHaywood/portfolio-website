@@ -1,5 +1,5 @@
 <template>
-  <section class="border-t border-white/[0.08] pt-12 sm:pt-14">
+  <section class="border-t border-white/[0.08] pt-10 sm:pt-14">
     <div class="max-w-[760px]">
       <p class="font-mono text-xs font-medium uppercase tracking-[0.14em] text-primary">Contact</p>
 

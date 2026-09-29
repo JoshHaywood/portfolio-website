@@ -23,7 +23,7 @@
           :aria-expanded="sidebar"
           aria-controls="mobile-navigation"
           :aria-label="sidebar ? 'Close navigation' : 'Open navigation'"
-          class="relative flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:hidden"
+          class="relative ml-auto flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/[0.025] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary md:hidden"
           @click="sidebar = !sidebar"
         >
           <span class="sr-only">{{ sidebar ? 'Close navigation' : 'Open navigation' }}</span>

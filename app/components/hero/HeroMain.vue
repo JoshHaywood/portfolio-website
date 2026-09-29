@@ -1,7 +1,7 @@
 <template>
   <section class="bg-secondary pt-16 md:pt-[72px]">
     <div
-      class="mx-auto flex min-h-[560px] max-w-[1100px] items-center px-5 pb-28 pt-10 sm:min-h-[590px] sm:pb-32 md:min-h-[620px] md:px-10 md:pb-36 lg:min-h-[640px] xl:px-0"
+      class="mx-auto flex min-h-[500px] max-w-[1100px] items-center px-5 pb-24 pt-10 sm:min-h-[540px] sm:pb-28 md:min-h-[570px] md:px-10 md:pb-32 lg:min-h-[600px] xl:px-0"
     >
       <div class="max-w-[760px]">
         <p class="font-mono text-xs font-medium uppercase tracking-[0.18em] text-primary sm:text-sm">Hi, I'm</p>
