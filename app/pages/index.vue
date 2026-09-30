@@ -1,17 +1,19 @@
 <template>
   <div>
-    <HeroMain />
+    <main>
+      <HeroMain />
 
-    <section id="projects" class="relative z-10 -mt-12 border-t border-white/[0.06] bg-tertiary pb-20 pt-14 sm:-mt-14 sm:pt-16 lg:-mt-16 lg:pb-24 lg:pt-20">
-      <div class="mx-auto max-w-[1320px] px-5 md:px-10 2xl:px-0">
-        <ProjectContainer />
+      <section id="projects" class="relative z-10 -mt-12 border-t border-white/[0.06] bg-tertiary pb-20 pt-14 sm:-mt-14 sm:pt-16 lg:-mt-16 lg:pb-24 lg:pt-20">
+        <div class="mx-auto max-w-[1320px] px-5 md:px-10 2xl:px-0">
+          <ProjectContainer />
+        </div>
+      </section>
+
+      <div class="mx-auto max-w-[1100px] space-y-20 px-5 pb-12 pt-24 sm:space-y-28 sm:pb-16 sm:pt-28 md:px-10 md:pb-20 md:pt-32 xl:px-0">
+        <AboutMe id="about" />
+        <ContactSection id="contact" />
       </div>
-    </section>
-
-    <div class="mx-auto max-w-[1100px] space-y-20 px-5 pb-12 pt-24 sm:space-y-28 sm:pb-16 sm:pt-28 md:px-10 md:pb-20 md:pt-32 xl:px-0">
-      <AboutMe id="about" />
-      <ContactSection id="contact" />
-    </div>
+    </main>
 
     <Transition name="project-detail">
       <ProjectDetailDialog v-show="isOpen" />

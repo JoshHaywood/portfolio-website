@@ -60,16 +60,16 @@
 <script setup lang="ts">
 const capabilities: { heading: string; text: string }[] = [
   {
-    heading: 'Software Development',
-    text: 'Building and maintaining application features with an emphasis on readable code, sensible structure and behaviour that fits the wider system.',
+    heading: 'Full-Stack Development',
+    text: 'Building and maintaining production features across frontend, backend and data layers, including application workflows, APIs, integrations and data processing.',
   },
   {
-    heading: 'Problem Solving & Systems',
-    text: 'Analysing technical problems, understanding how connected parts of a system behave and choosing practical solutions at the right level.',
+    heading: 'Systems & Integrations',
+    text: 'Tracing behaviour across connected systems and data flows to understand technical problems, work through unfamiliar areas and make changes at the right level.',
   },
   {
     heading: 'Delivery & Collaboration',
-    text: 'Working with developers and stakeholders to clarify requirements, communicate trade-offs and keep implementation aligned with what the work actually needs.',
+    text: 'Working with developers and stakeholders to turn requirements into shipped software, communicate trade-offs and keep implementation aligned with operational needs.',
   },
 ];
 
