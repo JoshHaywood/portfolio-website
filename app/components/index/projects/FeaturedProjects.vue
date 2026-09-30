@@ -80,7 +80,7 @@ const { openProject } = useProjectDetail();
 const projects = featuredProjects;
 
 const featuredEvidence: Record<string, string> = {
-  'energy-data-platform': 'Millions of readings · external integrations · production support',
+  'energy-data-platform': 'Sole technical ownership · millions of readings · external integrations',
   'sales-administration-platform': 'Initial setup through MVP · administration system for 50 staff',
 };
 
