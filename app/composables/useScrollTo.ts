@@ -8,6 +8,7 @@ export function useScrollTo() {
     // Scroll to the element with a given id
     scrollTo(id: string) {
       const element = document.getElementById(id);
+
       if (element) {
         const targetOffset = isMobile.value ? 72 : 88;
 

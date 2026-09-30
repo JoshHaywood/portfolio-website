@@ -80,8 +80,8 @@ const { openProject } = useProjectDetail();
 const projects = featuredProjects;
 
 const featuredEvidence: Record<string, string> = {
-  'energy-data-platform': 'External integrations · consumption processing · production support',
-  'sales-administration-platform': 'Application setup · post-sale workflows · system integrations',
+  'energy-data-platform': 'Millions of readings · external integrations · production support',
+  'sales-administration-platform': 'Initial setup through MVP · administration system for 50 staff',
 };
 
 const projectMediaAlt = (_projectId: string, heading: string) => `${heading} application screenshot`;
