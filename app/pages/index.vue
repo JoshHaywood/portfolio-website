@@ -39,6 +39,7 @@ useSeoMeta({
   twitterCard: 'summary',
   twitterTitle: title,
   twitterDescription: description,
+  robots: 'index, follow',
 });
 
 useHead({
@@ -46,6 +47,25 @@ useHead({
     {
       rel: 'canonical',
       href: canonicalUrl,
+    },
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        '@id': `${canonicalUrl}#person`,
+        name: 'Josh Haywood',
+        url: canonicalUrl,
+        jobTitle: 'Full-Stack Software Engineer',
+        description,
+        image: `${canonicalUrl}images/portrait.webp`,
+        sameAs: [
+          'https://github.com/JoshHaywood',
+          'https://www.linkedin.com/in/josh-haywood',
+        ],
+      }),
     },
   ],
 });
